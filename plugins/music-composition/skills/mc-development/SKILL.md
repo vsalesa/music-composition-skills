@@ -1,509 +1,445 @@
 ---
 name: mc-development
-description: Thematic development (乐思发展层) - what the theme is and what each section does with it. Owns `material` (motif, character, stated_in) and `form[].development`, a closed set of ten operations (repeat/sequence/extend/contract/fragment/vary/augment/counterpoint/new/recap). Covers the line between developing and piling up, each operation with its criterion and cost, motive-to-phrase construction, phrase-to-section-to-whole (overlap, supplement, recapitulation), the variation branch, and where it all lands in a pop song. Use when every section sounds like new material, when a song feels loose, when deciding what the second verse or the last chorus should do, or when filling `material` and `form[].development` in an ARR-SPEC. 乐思发展、动机、主题材料、每段都在写新东西、扩充、减缩、裁截、模进、变奏、再现。
+description: Thematic development layer - what the theme is and what each section does with it. Owns `material` (motif, character, stated_in) and `form[].development`, a closed set of ten operations (repeat/sequence/extend/contract/fragment/vary/augment/counterpoint/new/recap). Covers the line between developing and piling up, each operation with its criterion and cost, motive-to-phrase construction, phrase-to-section-to-whole (overlap, supplement, recapitulation), the variation branch, and where it all lands in a pop song. Use when every section sounds like new material, when a song feels loose, when deciding what the second verse or the last chorus should do, or when filling `material` and `form[].development` in an ARR-SPEC. Keywords: thematic development, motif, thematic material, every section writing new material, expansion, contraction, fragmentation, sequence, variation, recapitulation.
 ---
 
-# 乐思发展层（Thematic Development）
+# Thematic Development Layer
 
-> **一首歌 = 一份主题材料 ＋ 每一段拿它做的一件事。**
-> 这个 skill 只管第二件：**这一段对前面的材料做了什么。**
+> **A song = one body of thematic material + one job each section does with it.**
+> This skill covers only the second part: **what this section does with the material that came before.**
 
-旋律本身怎么写归 `mc-melody`，段落怎么排、多长归 `mc-form` 与 `mc-arrangement-arch`。
-本 skill 拥有规格单里的 `material` 与 `form[].development`，
-它们回答的是规格单以前答不出来的那个问题：**这一段的东西是从哪来的。**
+How the melody itself is written belongs to `mc-melody`; how sections are arranged and how long they are belongs to `mc-form` and `mc-arrangement-arch`.
+This skill owns `material` and `form[].development` in the spec sheet.
+They answer the question the spec sheet could not answer before: **where this section's material comes from.**
 
-## 按任务读哪几节
+## Which sections to read by task
 
-| 症状／任务 | 读 |
+| Symptom / task | Read |
 |---|---|
-| 刚定完曲式，要填材料与发展 | §1 → §3 |
-| 每段都像新歌、听着散 | ★ §2 ＋ §5.1 |
-| 一个动机不知道怎么往下长 | §4 |
-| 一段写到一半想加长 | §3.3 ＋ §3.2 |
-| 第二段主歌照抄第一段 | §7.1 |
-| 预副歌推不上去 | §7.2 ＋ §3.5 |
-| bridge 写成了另一首歌 | §7.3 ＋ §3.9 |
-| 末段副歌该怎么变 | §7.4 ＋ §3.10 |
-| 副歌各遍靠变奏推进 | §6 |
-| 段与段接得生硬 | §5.3、§5.4 |
+| Form just settled, need to fill material and development | §1 → §3 |
+| Every section sounds like a new song, feels scattered | ★ §2 + §5.1 |
+| A motif does not know how to grow further | §4 |
+| Halfway through a section and want to lengthen it | §3.3 + §3.2 |
+| Second verse copies the first | §7.1 |
+| Pre-chorus will not build | §7.2 + §3.5 |
+| Bridge has turned into another song | §7.3 + §3.9 |
+| How should the final chorus change | §7.4 + §3.10 |
+| Choruses advance through variation on each pass | §6 |
+| Sections join awkwardly | §5.3, §5.4 |
 
-## 边界：什么不归这个 skill 管
+## Boundary: what this skill does not cover
 
-| 不归这里 | 归哪 |
+| Not covered here | Covered by |
 |---|---|
-| 旋律线本身怎么走、可唱性、跳进与音域 | `mc-melody` |
-| 动机→乐句→段落的切分成因、呼应、高潮位置 | `mc-melody` §7 |
-| 五种陈述方式、六种结构功能、再现的五种形态、奏鸣曲式 | `mc-form` §6.1–6.2、reference §4.2 |
-| 曲式模板、段落多长、能量曲线 | `mc-form`／`mc-arrangement-arch` |
-| 和弦怎么选、进行怎么配、转调 | `mc-harmony`／`mc-progressions`／`mc-modulation` |
-| 五类对位、模仿、卡农、赋格的本体 | `mc-counterpoint` §7 与 reference §7 |
-| 词那一侧的重复预算与末段微变 | **作词**的事；本 skill 用到的语料数字在 §2.2、§7.4 |
+| How the melodic line itself moves, singability, leaps and range | `mc-melody` |
+| The causes of motive → phrase segmentation, answering, climax placement | `mc-melody` §7 |
+| The five modes of statement, six structural functions, five forms of recapitulation, sonata form | `mc-form` §6.1–6.2, reference §4.2 |
+| Form templates, how long a section should be, energy curves | `mc-form` / `mc-arrangement-arch` |
+| How to choose chords, how to configure progressions, modulation | `mc-harmony` / `mc-progressions` / `mc-modulation` |
+| The nature of the five types of counterpoint, imitation, canon, fugue | `mc-counterpoint` §7 and reference §7 |
+| The repetition budget on the lyric side and the final-section micro-variation | **Lyric writing**; the corpus figures used in this skill are in §2.2 and §7.4 |
 
-> ★ 与 `mc-form` 的分界：**form 管这一段是什么（名称与功能），本 skill 管这一段拿旧材料做了什么。**
-> 同一段可以既是 Chorus、又是收束性陈述、还是 `recap` 的动力形态，三张标签互不替代。
+> ★ Boundary with `mc-form`: **form governs what this section is (its name and function); this skill governs what this section does with old material.**
+> The same section can be a Chorus, a closing statement, and the driving shape of a `recap` at once; the three labels do not substitute for one another.
 
 ---
 
-## 1. 动笔前必填
+## 1. Required before starting
 
-**`material` 三项填不齐，不许往下填 `form[].development`。**
+**If the three `material` items cannot all be filled, do not proceed to fill `form[].development`.**
 
-| 必填 | 问法 | 判据 |
+| Required | The question | Criterion |
 |---|---|---|
-| **① 动机是什么** | 文字写死：音程轮廓、节奏型、长度 | 勋伯格：动机的特征型就是**音程与节奏**，二者结合成一个令人难忘的轮廓（p0025）。写不出这两样，说明还没有动机 |
-| **② 性格一句** | 这个动机是什么脾气 | 李吉提：节奏型按重音位置带性格，扬抑格适合下沉，抑扬格富于动力，扬扬格坚定，抑抑格柔和（p0016–0017） |
-| **③ 原始陈述在哪几段** | 段落 id，可多个 | 杨儒怀：原始陈述是后续一切发展的根源；中途出现、又成为后续发展根源的新乐思同样算（p0110） |
-| **④ 这首歌靠什么推进** | 加工处理／展衍／对比，选一个主导 | 李吉提的三种发展手法（p0020），见 §5.1 |
+| **① What is the motif** | Written out explicitly: interval contour, rhythmic pattern, length | Schoenberg: the characteristic shape of a motif is **interval and rhythm**, combined into one memorable contour (p0025). If you cannot write down these two things, you do not yet have a motif |
+| **② One line of character** | What temperament does this motif have | Li Jiti: rhythmic patterns take on character according to accent placement; a trochaic (falling) pattern suits descent, an iambic (rising) pattern is rich in drive, a spondaic (both-stressed) pattern is firm, and a pyrrhic (both-unstressed) pattern is gentle (p0016–0017) |
+| **③ In which sections the original statement appears** | Section ids; may be several | Yang Ruhuai: the original statement is the root of all subsequent development; a new musical idea that appears midway and becomes the root of later development also counts (p0110) |
+| **④ What drives the song forward** | Elaboration / development / contrast; choose one dominant | Li Jiti's three methods of development (p0020), see §5.1 |
 
-**动机写成什么样算够**：重要乐思须有鲜明的音调特点，即节奏、调式或旋律进行特点的**有机结合**（杨 p0110）。
-李吉提给的是更严的一道门：乐汇要够格叫动机，得具备可独立加工、能让音乐由此生根发芽的价值（p0016–0018）；
-另有理论体系把动机等同于乐汇，两说并存，动笔前先说清用哪一口径。
+**What counts as enough writing for a motif**: an important musical idea must have a distinctive tonal character, that is, an **organic combination** of rhythm, mode, and melodic progression features (Yang p0110).
+Li Jiti sets a stricter gate: a musical figure qualifies as a motif only if it has the value of being independently elaborable, so that music can take root and grow from it (p0016–0018);
+another theoretical system equates motif with musical figure. The two views coexist, so before starting, specify which definition you are using.
 
-★ **动机放在哪**：重要乐思应在乐曲关键处陈述，无引子时在开始，有引子时在主要曲式部分的开始处，
-也可以先在引子里以雏形预示（杨 p0110）。
+★ **Where the motif goes**: an important musical idea should be stated at a key point in the piece; without an introduction, at the beginning; with an introduction, at the start of the main formal section, and it may also be foreshadowed in embryonic form in the introduction (Yang p0110).
 
-★ **适合被发展的动机是简单的**：主题若已包含太多有趣的特征型，就没有余地再增加内容供变奏发挥（勋伯格 p0229–0230）；
-旋律、和声、速度、力度、织体、音区最好都处于中间状态（李 p0165）。
-
----
-
-## 2. ★ 发展与堆砌的分界
-
-> **判据只有一条：听众能不能认出它来自前面。**
-> 扩充、模进、裁截、变奏、对位、再现都满足这一条；换一条新旋律不满足。
-
-### 2.1 认得出的两条底线
-
-**勋伯格的尺度**（p0025）：动机的运用要求变奏，单纯重复会单调；但若把所有特征型都变化掉，
-结果将格格不入、支离破碎，破坏动机的基本形状。正确做法是**变化次要特征型，保留几个较重要的，
-尤其是节奏特征型**，它对连贯性最有效。
-
-**派生的底线**（p0038–0039）：远关系的动机型（同时改节奏又改音程和方向）可能有碍理解；派生出的每个新动机
-**都必须仍具有"真正短句"的性质**，否则产出的是碎片。关系越远，越要靠节奏、辅助音等别的线索维持可辨认性；
-**速度越快，作品能承受的多样化程度越小**（p0040）。
-
-### 2.2 新材料的预算
-
-杨儒怀对出新给了最重的一句警告（p0122）：出新的应用范围比任何手法都广泛，**也最容易被人滥用**；
-不能认为任何无关的新材料都可以拿来出新。李吉提从曲式一侧给出同一件事的机理（p0025）：并列组合靠段落对比
-更新音乐，**局限在于段落过多并列会造成"离心力"、淡化整体结构力**。每段都是新材料，就是把整首歌交给离心力。
-
-- 三条警告在 §9，最重要的一条是**填 `new` 的段数不过半**。
-- 词那一侧有实测参照可对齐（华语歌词语料：歌手榜前 100 位歌手的歌，按段落标签算的非说唱 3631 首）：副歌占全曲两成半到七成、中位近一半，副歌各遍逐字全同的歌占 27%。
-  **副歌整遍交给重复，主歌才有空间往前讲**，翻到曲这一侧就是 `recap` 与 `repeat` 要占掉相当篇幅。
-- 段落比例归 `mc-arrangement-arch` §4。
-
-### 2.3 判据不是铁律
-
-杨儒怀讲完全部衍变形式后专门提醒（p0127）：各种衍变形式之间**可以相互转变过渡、存在各种中介形式**，
-"任何情况下教条主义机械式的分析都会有损于音乐艺术的实际"。所以 `development` 填一个主值加若干次值，
-允许一段同时是扩充与模进；填不进十个值里的东西，归到最近的那个并在 `note` 里写一句，不要自造名字。
+★ **A motif suited to development is simple**: if a theme already contains too many interesting characteristic figures, there is no room left to add content for variation to work with (Schoenberg p0229–0230);
+melody, harmony, tempo, dynamics, texture, and register should ideally all sit in a middle state (Li p0165).
 
 ---
 
-## 3. 十种手法：是什么、什么时候用、代价
+## 2. ★ The boundary between development and piling up
 
-`form[].development` 的取值就是这十个。**每段填一个主值，可加次值**，主值写在前。
-每种的定义、判据、代价、页码整理成一张对照表放在 [reference.md](reference.md) §1，本节只给动笔时用得上的要点。
+> **There is only one criterion: can the listener recognize that it comes from what came before?**
+> Expansion, sequence, fragmentation, variation, counterpoint, and recapitulation all satisfy this; a brand-new melody does not.
 
-### 3.1 `repeat` 重复（原样或换头换尾）
+### 2.1 The two baselines for recognizability
 
-突出被重复的乐思、加深感受；**乐思越短小越重要，越有必要重复**（杨 p0111）。
+**Schoenberg's standard** (p0025): applying a motif calls for variation, since mere repetition is monotonous; but if every characteristic figure is varied, the result is incoherent and fragmented, and the basic shape of the motif is destroyed. The correct approach is to **vary the secondary characteristic figures and keep a few of the more important ones, especially the rhythmic characteristic figures**, which are most effective for coherence.
 
-- **代价**：机械反复只提供统一、不提供对比，次数通常不超过两次，连续三次以上就变成缺点；伴随渐强、渐快、
-  移动音区才不再"单纯"；短小而关键的动机与持续低音是例外，可以反复很多次。乐思常做对偶反复，
-  偶数最易被清晰感受（p0111–0112）。
-- **换头换尾**：合／换不把发展分割成另一段，而是与前后连成一个贯通的长乐思。判据很漂亮：
-  **"合"因为有出新才衬托出吻合，"换"因为有相同的重复才衬托出更换**（p0128）。
+**Baseline for derivation** (p0038–0039): distantly related motif forms (changing rhythm and also interval and direction at the same time) may hinder comprehension; each new motif derived **must still have the quality of a "true short phrase,"** otherwise what results is fragments. The more distant the relation, the more it must rely on rhythm, auxiliary tones, and other cues to remain recognizable;
+**the faster the tempo, the less diversification the work can bear** (p0040).
 
-### 3.2 `sequence` 模进
+### 2.2 The budget for new material
 
-乐思在新的音程度数上重复，或同时改用新调性，是"变化中的统一"（杨 p0115）。
+Yang Ruhuai gives the heaviest warning on introducing new material (p0122): introducing new material has a wider scope of application than any other technique, and **it is also the most easily abused**;
+one must not assume that any unrelated new material may be used for novelty. Li Jiti explains the same thing from the side of form (p0025): juxtaposed combination renews music through contrast between sections, but its limitation is that too many juxtaposed sections create a "centrifugal force" that weakens the structural force of the whole. If every section is new material, the whole song is handed over to centrifugal force.
 
-- **带动力**：向上模进音响高涨，向下削弱；与紧缩、裁截结合时动力更明显（p0115–0116）。
-- ★ **放错阶段就是套路**：最适合旋律进一步发展的阶段（承、向转过渡、高潮前的酝酿），
-  **不宜用于初步陈述阶段，转调模进尤其**（p0116）。
-- **避免刻板**：局部改动某一环节（度数、旋律线、间隔、织体细节），**最后一个环节常做调整以便接住后面的音乐**；
-  五声上的模进不可能严格同度数，方向一致即算严格（p0116）。勋伯格并排的一条（p0092）：自然音阶的模进
-  调性清楚但发展空间有限，用替用音可以转调。
+- The three warnings are in §9; the most important is that **the number of sections labelled `new` should not exceed half.**
+- The lyric side has empirical reference figures to align with (Chinese-language lyric corpus: songs by the top 100 singers on singer charts, 3,631 non-rap songs counted by section labels): choruses make up between a quarter and seven-tenths of the song, with a median close to half, and 27% of songs have every chorus pass identical word for word.
+  **Give whole choruses over to repetition, and verses have room to move the story forward.** On the music side, `recap` and `repeat` must take up a considerable share of space.
+- Section proportions are covered in `mc-arrangement-arch` §4.
 
-### 3.3 `extend` 扩充
+### 2.3 The criterion is not an iron law
 
-反复陈述时**从乐思内部**伸展，伸出的部分与原乐思有机接上，两者之间没有终止感或被有意掩盖（杨 p0131）。
-
-- ★ **与重复的分界判据**：无论扩充从哪里开始、规模多大，**一般都不再回到原来的结束材料**；
-  合首换尾一般不改变乐思总长度，内部扩充会（p0131–0132）。
-- **三型并列**，前两型用得最多：终止式之前的内部扩充、终止式上阻碍解决后的扩充、终止式之后的紧凑扩充（p0131–0133）。
-- **判方向**：同样是内部扩充，看它带来的是新素质的生长还是情绪的消耗，分开展性与收束性（p0132）；
-  扩充也可以转变功能，变成下一段新乐思的准备，这时和声开放、停在属或转调（p0134）。
-- **代价**：内部扩充若不与原始陈述比较，有时不容易辨认（p0133）。
-
-### 3.4 `contract` 减缩
-
-反复时比原始陈述在结构上缩短（杨 p0136）。
-
-- **性格**：收拢，常表现为简略回顾、概括重述或补充，**不带来情绪高涨**，多用于结尾或临近结束处。
-- **三法**：省略中间音调只留首尾；均衡分散地省略以控制起伏；转调减缩（一边转回原调一边把长大陈述压回正常规模）。
-  与扩充相比应用较少、方法更简单（p0136）。**想在结尾制造高涨，这条给不了。**
-
-### 3.5 `fragment` 裁截
-
-把组成乐思的片断独立抽出来，原样或加工后断分使用（杨 p0137）。
-
-- ★ **典型过程是连续、多次、从各个部位来**：被裁下来的片断随即再裁，**愈裁愈短、发展愈来愈紧凑**（p0137）。
-- **用处**：把情绪推上高潮、制造愈来愈活跃或紧张的气氛，同时造成极大的统一性与多层次性；素材既可做主要声部
-  也可做背景陪衬，配合配器加厚造成高涨（p0137–0139）。
-- **代价**：越裁越短会同时抽掉旋律性。极限形态是动机余迹被裁减为单纯的节奏点滴（勋伯格 p0280），
-  到那一步这一段就没有可唱的线了。
-
-### 3.6 `vary` 变奏
-
-保留原始陈述的总轮廓、旋律运动总布局及结构规模，**既带来新面貌又能让人识别出与原型的统一关系**（杨 p0114）。
-两个方向：只让乐思更流动化（加花装饰）或更成型（简化），不脱离基本性格；或保留总轮廓与结构比例、
-靠手法获得另一种性格，即**性格变奏**，须找出该体裁特有的节奏型、音型及速度，**其中节奏型尤其重要**（p0114–0115）。
-
-- **与迭奏的分界**（p0113–0114）：迭奏是反复时保持旋律总面貌、只做局部旋法变动，各遍可各不相同；
-  变奏是在整个过程中展开、强调变化方法的**总体统一**。
-- **勋伯格的四类变奏方法**（改变节奏／改变音程／改变和声／旋律的适应，p0030–0031）是最细的一张清单，
-  整表在 [reference.md](reference.md) §3，七种和声变奏在同一节末。底线一句（p0028）：
-  **产生的动机型不应与基本动机相去太远**。
-
-### 3.7 `augment` 宽放与紧收
-
-在相同或近似的节拍与速度里，把乐思按比例放慢或加快一倍、两倍、三倍再陈述（杨 p0116–0117）。
-
-- ★ **判据是相对时值成倍比**，不是谱面写法的改变，也不是演奏速度快慢的处理：记谱看似放慢一倍、
-  实际单位拍时值却没有真的成倍，就不构成宽放（p0117）。
-- **宽放**：庄严雄伟、稳定有分量；用在结尾能让气氛逐渐平稳安静、速度趋缓。**可以只宽放乐思的一部分**（p0117）。
-- **紧收**：时值缩短，产生更多活动与更强的向前动力；**连续紧收**能积累很大紧张力量，容易把情绪推向高潮
-  或引出新乐思，另有只把原本分隔的乐思凑紧的**时间紧收**（p0118）。紧收形态还可以直接当固定伴奏音型（p0119）。
-
-### 3.8 `counterpoint` 对位式发展
-
-某一声部在某一音高上用乐思的**宽放或紧收形式模仿**原始陈述声部，是复调发展与声部模仿中广泛使用的手法（杨 p0118–0119）。
-**本 skill 只拥有"这一段是对位式发展"这个判定**，模仿、卡农、赋格段、紧接段的做法本体在 `mc-counterpoint` §7
-与 reference §7。**代价**：要求各层都听得出来，频段与深度没安排好，两条线会糊成一条。
-
-### 3.9 `new` 新材料
-
-发展中不维持原始乐思任何定型化的音调和旋律轮廓，也不存在前述手法上的联系，出现新乐思（杨 p0122）。
-**填这个值等于声明"这一段不靠旧材料"，所以它是十个值里唯一要被计数的那个（§9）。**
-
-杨儒怀按性质分三类，从"还连着"到"完全断开"：**继承性出新**（各方面虽换新，但在节奏活动范围、旋律展开幅度、
-速度、风格、调式调性及格调上仍多方面一致）；**合成性出新**（能贯连前后的只剩相同的节拍、速度、调性和表情力度，
-**主题材料的对比占主导**）；**对置性出新**（前后产生阻断关系，但从整体构思的戏剧性发展看仍合乎逻辑，
-分剧烈与缓和两级，其中**闯入性对置**是在乐思尚未结束时突然闯入、同时开始新的曲式部分）。
-判据与用处的细表在 [reference.md](reference.md) §1 末（p0123–0126）。
-
-**李吉提的两分法并排**（p0020–0021）：派生性对比（与原乐思有内在联系）**在制造反差的同时保住材料的血缘统一**；
-并置性对比（材料间无内在联系）**对比度更强，但要另外解决全曲的统一问题**。写 `new` 时先问自己这是哪一种，
-答不出来就是还没想好。勋伯格的插段（p0224）给了篇幅建议：它靠悬置感制造张力，代价是打断连贯性，篇幅通常克制。
-
-### 3.10 `recap` 再现
-
-经过新的、对比性的陈述之后，再次出现之前陈述过的乐思，体现"原始陈述、对比、再一次原始陈述"三阶段；
-作用是使第一次出现的乐思地位突出，起结构与主题材料的概括统一作用（杨 p0112）。
-
-- ★ **填 `recap` 时必须注明是原样还是动力**：静止（原形）再现除织体、配器、力度外不做本质变动，
-  变动再现的结构和内容有本质变动（p0112–0113）；**动力再现**是中部的展开渗透进再现段落
-  （李吉提 p0023–0024，五种形态的完整表在 `mc-form` §6.2）。
-- ★ 杨儒怀一条容易被忽略的观察（p0112–0113）：**规模不大、不间隔独立的再现，在材料统一上的作用反而更明显**。
-  副歌各遍之间的小规模再现就属于这一档。
-- **改多少算过火**（勋伯格 p0188）：变奏可用于再现部的所有要素，但除非结构发生实质性变化，
-  **旋律轮廓不应全部变掉**；装饰性变奏不一定使轮廓实质变化，但**过多的节奏变化或重音移动很可能使人认不出原来面目**。
+After presenting the full set of developmental forms, Yang Ruhuai makes a specific reminder (p0127): the various developmental forms **can transform into one another and have many intermediate forms**, and
+"under any circumstances, dogmatic, mechanical analysis will harm the actual practice of musical art." So `development` takes one primary value plus several secondary values, and a section may simultaneously be an extension and a sequence. Anything that cannot be fitted into the ten values is assigned to the nearest one, with a sentence in `note`; do not invent new names.
 
 ---
 
-## 4. 从动机到乐句
+## 3. The ten techniques: what they are, when to use them, what they cost
 
-### 4.1 尺子：两套并排
+The values of `form[].development` are these ten. **Each section takes one primary value, with optional secondary values, the primary written first.**
+The definition, criterion, cost, and page reference for each are compiled into a comparison table in [reference.md](reference.md) §1; this section gives only the points needed when starting to write.
 
-| | 勋伯格（p0006） | 李吉提（p0016–0019） |
+### 3.1 `repeat` Repetition (verbatim, or with the head or tail changed)
+
+Highlights the repeated musical idea and deepens the impression; **the shorter and more essential the idea, the more it needs repeating** (Yang p0111).
+
+- **Cost**: mechanical repetition provides unity but no contrast; the number of repetitions is usually no more than two, and three or more in succession becomes a weakness. It ceases to be "mere" only when accompanied by crescendo, acceleration, or a shift in register; short but crucial motives and sustained bass lines are exceptions and may repeat many times. Musical ideas are often repeated in pairs, and even-numbered repetitions are the most clearly perceived (p0111–0112).
+- **Head and tail changes**: joining or swapping does not split the development into another section, but connects it with what comes before and after into a single continuous long idea. The criterion is elegant:
+  **"joining" sets off the fit because there is novelty, and "swapping" sets off the replacement because there is identical repetition** (p0128).
+
+### 3.2 `sequence` Sequence
+
+A musical idea is repeated at a new interval degree, or simultaneously in a new tonality; it is "unity within change" (Yang p0115).
+
+- **Carries momentum**: ascending sequences raise the sound, descending ones weaken it; combined with compression or fragmentation, the momentum is more pronounced (p0115–0116).
+- ★ **Using it at the wrong stage becomes formula**: it is most suitable where the melody is to develop further (the continuation, the transitional turn toward the next stage, the build-up before a climax), and **it should not be used at the initial statement stage, especially not for modulating sequences** (p0116).
+- **Avoiding stereotype**: alter one link locally (scale degree, melodic line, interval, textural detail); **the final link is often adjusted so that it can receive the music that follows**; sequences in pentatonic material cannot be strictly on the same scale degree, and consistency of direction counts as strict (p0116). One point Schoenberg sets alongside this (p0092): sequences on the natural scale have clear tonality but limited room for development, and substitute notes allow modulation.
+
+### 3.3 `extend` Extension
+
+When a statement is repeated, the idea is stretched **from within**; the stretched portion joins organically with the original idea, and there is no sense of cadence between them or the join is deliberately concealed (Yang p0131).
+
+- ★ **The criterion that separates it from repetition**: regardless of where the extension begins or how large it is, **it generally does not return to the original closing material**; swapping the head and tail generally does not change the total length of the idea, whereas internal extension does (p0131–0132).
+- **Three types side by side**, the first two most used: internal extension before the cadential formula; extension after an obstructed resolution on the cadence; and compact extension after the cadence (p0131–0133).
+- **Judging direction**: among internal extensions, distinguish whether it brings the growth of new qualities or the expenditure of emotion, separating the developing nature from the concluding nature (p0132);
+  an extension can also change function and become preparation for the next new idea, in which case the harmony is open, halting on the dominant or modulating (p0134).
+- **Cost**: an internal extension is sometimes hard to recognize if not compared with the original statement (p0133).
+
+### 3.4 `contract` Contraction
+
+On repetition, the structure is shortened compared with the original statement (Yang p0136).
+
+- **Character**: gathering in, often expressed as a brief recollection, summary restatement, or supplement; **it does not bring emotional rise**, and is mostly used at endings or near the close.
+- **Three methods**: omit the middle tones and keep only the beginning and end; omit evenly and dispersedly to control fluctuation; contract with modulation (turning back to the original key while compressing a long statement back to normal size).
+  Compared with extension it is used less and is simpler in method (p0136). **If you want to create a rise at the ending, this technique cannot provide it.**
+
+### 3.5 `fragment` Fragmentation
+
+Isolates the fragments that make up the musical idea, and uses them separately, either as they are or after treatment (Yang p0137).
+
+- ★ **The typical process is continuous, repeated, and drawn from different positions**: a fragment that has been cut off is cut again, **shorter and shorter, with development becoming ever more compact** (p0137).
+- **Uses**: to push emotion toward a climax, to create increasingly lively or tense atmosphere, while producing great unity and multiple layers; the material can serve as a principal voice or as background accompaniment, and orchestration can thicken it to build intensity (p0137–0139).
+- **Cost**: cutting shorter also strips out melodic quality at the same time. The extreme form is when the residue of the motif is cut down to pure rhythmic specks (Schoenberg p0280),
+  and at that point the section has no singable line.
+
+### 3.6 `vary` Variation
+
+Retains the overall contour of the original statement, the general layout of the melodic movement, and the structural scale, **bringing a new appearance while still letting the listener recognize the unified relation to the prototype** (Yang p0114).
+Two directions: making the idea more flowing (adding ornamentation) or more formed (simplifying), without departing from its basic character; or retaining the overall contour and structural proportions while achieving another character through technique, that is, **character variation**, which must identify the rhythmic patterns, figurations, and tempo peculiar to the genre, **rhythmic patterns being especially important** (p0114–0115).
+
+- **Boundary with iteration** (p0113–0114): iteration keeps the overall melodic appearance on each repetition and changes only local melodic figuration, so each pass can differ; variation unfolds across the whole process and emphasizes the **overall unity** of the means of change.
+- **Schoenberg's four categories of variation method** (changing rhythm / changing interval / changing harmony / adapting the melody, p0030–0031) form the most detailed checklist; the full table is in [reference.md](reference.md) §3, and the seven harmonic variations are at the end of the same section. The baseline sentence (p0028):
+  **the motif forms produced should not stray too far from the basic motif.**
+
+### 3.7 `augment` Augmentation and Diminution
+
+Within the same or similar meter and tempo, the musical idea is stated in proportion slowed or accelerated by a factor of two or three (Yang p0116–0117).
+
+- ★ **The criterion is a multiple of relative note values**, not a change of how the score is written, nor a matter of how fast the performance is played: if the notation appears to slow things by half but the actual unit beat value has not truly doubled, it does not count as augmentation (p0117).
+- **Augmentation**: solemn, majestic, stable, and weighty; used at an ending, it lets the mood gradually settle into calm and the tempo slow. **Only part of the musical idea may be augmented** (p0117).
+- **Diminution**: note values are shortened, producing more motion and stronger forward drive; **continuous diminution** can accumulate great tension and readily push emotion toward a climax or introduce a new musical idea; there is also **temporal diminution**, which merely compresses musical ideas that were originally separated (p0118). Diminished shapes can also serve directly as a fixed accompaniment figure (p0119).
+
+### 3.8 `counterpoint` Contrapuntal Development
+
+One voice imitates the original statement at a given pitch using an **augmented or diminished form** of the musical idea; this is a widely used technique in polyphonic development and voice imitation (Yang p0118–0119).
+**This skill owns only the determination that "this section is contrapuntal development"**; the substance of imitation, canon, fugal sections, and consequent sections is in `mc-counterpoint` §7 and reference §7. **Cost**: every layer must be audible; if register and depth are not arranged well, the two lines blur into one.
+
+### 3.9 `new` New Material
+
+During development, no fixed tonal and melodic contour of the original musical idea is maintained, and no connection exists through the techniques described above; a new musical idea appears (Yang p0122).
+**Filling in this value amounts to declaring that "this section does not rely on old material," so it is the only one of the ten values that is counted (§9).**
+
+Yang Ruhuai classifies it by nature into three types, from "still connected" to "completely severed": **inherited novelty** (new in many respects, yet still consistent in many ways in the scope of rhythmic activity, the extent of melodic development, tempo, style, mode and tonality, and character); **synthetic novelty** (what links before and after is only the same meter, tempo, tonality, and expressive dynamics, and **contrast of thematic material dominates**); **opposing novelty** (creates a blocking relationship between before and after, yet still logical from the dramatic development of the overall conception, graded into intense and mild levels, of which **intrusive opposition** suddenly bursts in before the musical idea has finished, starting a new formal section at the same time).
+A detailed table of criteria and uses is at the end of [reference.md](reference.md) §1 (p0123–0126).
+
+**Li Jiti's dichotomy, set alongside** (p0020–0021): derivative contrast (with an internal connection to the original idea) **creates contrast while preserving the kinship and unity of the material**; juxtaposed contrast (with no internal connection between materials) **gives stronger contrast but must separately solve the unity of the whole piece**. When writing `new`, first ask yourself which kind this is; if you cannot answer, you have not yet decided. Schoenberg's interpolated sections (p0224) give guidance on length: they create tension through a sense of suspension, at the cost of breaking continuity, so their length is usually restrained.
+
+### 3.10 `recap` Recapitulation
+
+After a new, contrasting statement, a previously stated musical idea reappears, embodying the three stages of "original statement, contrast, and original statement once more"; its function is to make the idea that first appeared stand out, serving as a unifying summary of structure and thematic material (Yang p0112).
+
+- ★ **When filling in `recap`, state whether it is verbatim or dynamic**: a static (original-form) recapitulation makes no essential change beyond texture, orchestration, and dynamics, whereas a varied recapitulation makes essential changes to its structure and content (p0112–0113); a **dynamic recapitulation** is one in which the development of the middle section permeates the recapitulation section (Li Jiti p0023–0024; the complete table of five forms is in `mc-form` §6.2).
+- ★ An observation of Yang Ruhuai's that is easily overlooked (p0112–0113): **a recapitulation that is small in scale and not separated by intervals has a more pronounced effect on the unity of the material**. Small-scale recapitulations between passes of a chorus belong to this category.
+- **How much change is too much** (Schoenberg p0188): variation may be applied to all the elements of the recapitulation, but **unless the structure undergoes a substantial change, the melodic contour should not be altered entirely**; decorative variation does not necessarily change the contour in substance, but **too many rhythmic changes or accent shifts will likely make the original appearance unrecognizable**.
+
+---
+
+## 4. From motif to phrase
+
+### 4.1 The yardstick: two systems side by side
+
+| | Schoenberg (p0006) | Li Jiti (p0016–0019) |
 |---|---|---|
-| 最小 | 动机 motive | 乐汇（环绕一个重音结合成的音组） |
-| ↓ | 单元、要素 | 动机（可独立加工的乐汇） |
-| ↓ | **短句 phrase** | 乐节（2 个乐汇，2–4 小节，只要求旋律停顿） |
-| ↓ | 前句／后句 | 乐句（2 个乐节，4–8 小节，**要求终止**） |
-| ↓ | 片段、段落、分部 | 乐段 → 主题（可大到单二部或单三部） |
+| Smallest | Motive (motif) | Melodic figure (a group of tones built around one accent) |
+| ↓ | Unit, element | Motif (a melodic figure that can be independently elaborated) |
+| ↓ | **Short phrase (phrase)** | Melodic segment (2 figures, 2–4 bars, requiring only a melodic pause) |
+| ↓ | Antecedent / consequent phrases | Phrase (2 segments, 4–8 bars, **requires a cadence**) |
+| ↓ | Fragment, section, part | Passage → theme (can be as large as a simple binary or simple ternary form) |
 
-**乐节与乐句的分界判据是"是否终止"，不是长度**（李 p0018）。两边都强调长度由速度决定：中常速度下一句常为
-4 小节，动机多次模进的长句可达数十小节（李 p0018–0019）；短句极慢时可缩至半小节，极快时八小节以上才构成一个，
-且几乎总跨小节线（勋伯格 p0019）。★ 有些乐句一气呵成，划不出乐汇与乐节，它本身就是最基础的单位（李 p0019）。
+**The criterion separating a segment from a phrase is "whether it cadences," not length** (Li p0018). Both sources emphasize that length is determined by tempo: at a medium-moderate tempo a phrase is often 4 bars, and long phrases built from repeated sequences of a motif can reach several dozen bars (Li p0018–0019); at a very slow tempo a short phrase can shrink to half a bar, and at a very fast tempo it takes eight or more bars to form one, nearly always crossing bar lines (Schoenberg p0019). ★ Some phrases are carried through in a single breath, so that no figure or segment can be marked off; the phrase itself is then the most basic unit (Li p0019).
 
-### 4.2 一个动机能被怎么处理
+### 4.2 How a motif can be treated
 
-勋伯格分三类（p0026）：**精确的重复、变化的重复（变奏）、发展的重复**。精确重复保留全部特征型与音的关系，
-所以**移到另一音级、转位、逆行、逆行转位、缩小、扩展都算精确重复**，判定只看关系是否严格保留，不看表面相似度。
-听感差异很大的操作在这里归为同一类，这一条常被误读。四类变奏方法的整表在 [reference.md](reference.md) §3。
+Schoenberg divides this into three categories (p0026): **exact repetition, varied repetition (variation), and developing repetition**. Exact repetition retains all characteristic figures and the relations among pitches, so **transposition to another scale degree, inversion, retrograde, retrograde inversion, diminution, and augmentation all count as exact repetition**; the judgment rests only on whether the relations are strictly preserved, not on surface similarity.
+Operations that sound very different to the ear are grouped here in one category, a point that is often misread. The complete table of the four categories of variation method is in [reference.md](reference.md) §3.
 
-### 4.3 动机型怎么结合
+### 4.3 How motif forms combine
 
-**能否有逻辑地结合取决于三个因素**（p0036）：共同的内容（派生自同一基本动机）、类似的节奏（起统一作用）、
-连贯的和声（加强关系）。三者缺一，逻辑性就会削弱。配套的一条：
+**Whether they can combine logically depends on three factors** (p0036): common content (derived from the same basic motif), similar rhythm (which serves a unifying function), and coherent harmony (which strengthens the relation). If any of the three is missing, the logic weakens. A companion point:
 
-- **开端决定后续**（p0041）：主题在开始片段中必须清楚呈现基本动机；若开端是两小节短句，
-  第三、四小节可以是无变化或经移位的重复，允许细小变动，**但不能使人看不出这是重复**。
-  第一短句用主和声、第二短句用属和声的"主形式与属形式"关系类似赋格的主题与答题（p0041–0045），
-  和声布局对照表在 [reference.md](reference.md) §5。
+- **The beginning determines what follows** (p0041): the theme must clearly present the basic motif in its opening fragment; if the opening is a two-bar short phrase, bars three and four may be an unchanged or displaced repetition, with minor alterations allowed, **but the repetition must remain recognizable as such**.
+  The relation of "principal form and dominant form," in which the first short phrase uses tonic harmony and the second uses dominant harmony, resembles the subject and answer of a fugue (p0041–0045); the comparison table of harmonic layouts is in [reference.md](reference.md) §5.
 
-### 4.4 乐句怎么收住：冲淡
+### 4.4 How a phrase is brought to rest: liquidation
 
-**冲淡（liquidation）的定义是"逐步去掉特征性的特点，直到只剩下非特征性的特点为止"**，目的是抵销无限制延伸的倾向；
-留下的余迹常与基本动机没什么共同之处，多与终止式结合以划定边界（勋伯格 p0091）。
-★ **代价是主动付的**：动机的可辨认性会被牺牲掉，这是达成目的所需的代价，不算失误。
-这是 §2 那条"认得出"判据唯一被允许的例外，且只允许出现在收束的位置。
+**Liquidation is defined as "gradually removing the characteristic features until only non-characteristic features remain,"** the aim being to counteract the tendency toward unlimited extension; the residue left behind often has nothing in common with the basic motif, and is mostly combined with a cadential formula to mark the boundary (Schoenberg p0091).
+★ **The cost is paid deliberately**: the recognizability of the motif is sacrificed; this is the cost needed to achieve the aim, not an error.
+This is the only permitted exception to the "recognizable" criterion of §2, and it is permitted only in closing positions.
 
-★ **发展这个词在勋伯格那里是双向的**（p0091）：它同时指增长、扩展、延伸、扩张，也指裁减、浓缩、强化。
-这正是本 skill 把 `extend` 与 `contract` 并列成两个值的理由。配套的样板是**发展性变奏**（p0095）：
-一段旋律的所有动机型与短句，都是从开头三个音符、甚至开头两个音符逐渐发展出来的，
-`material.motif` 这个字段就是为了逼出这个源头。
+★ **For Schoenberg, the word development runs in both directions** (p0091): it refers both to growth, expansion, extension, and enlargement, and to cutting down, condensing, and intensifying. This is the reason this skill lists `extend` and `contract` as two separate values. The model for this is **developing variation** (p0095): all the motif forms and short phrases of a melody are gradually developed from the opening three notes, or even the opening two notes; the `material.motif` field exists precisely to force this source to be identified.
 
 ---
 
-## 5. 从乐句到段落到全曲
+## 5. From phrase to section to whole piece
 
-### 5.1 功能链与三条推进路线
+### 5.1 The functional chain and three paths of advance
 
-**杨儒怀的三种运动逻辑并列**（p0093）：四阶段（起承转合）、三阶段（起开合）、两阶段（呼应）。
-★ 阶段划分具有相对性，每个阶段内部还可以再细分，所以全曲层、段落层、乐句层各有一条自己的起承转合，不必对齐。
+**Yang Ruhuai's three logics of movement, set side by side** (p0093): four stages (opening, development, turn, closing), three stages (opening, opposition, closing), and two stages (call and response).
+★ Stage divisions are relative, and each stage may be subdivided further, so the whole-piece level, the section level, and the phrase level each have their own opening-development-turn-closing and need not align.
 
-**李吉提的三种发展手法**（p0020）是填 `material` 第 ④ 项时的选择题：
+**Li Jiti's three methods of development** (p0020) form a multiple-choice question for item ④ of `material`:
 
-| 手法 | 做法 | 落到 `development` 上 |
+| Method | What it does | Mapped to `development` |
 |---|---|---|
-| **加工处理** | 重复、变化重复、变奏、模进、扩大缩小音程或节奏，特点是对原结构作"肢解性加工" | `repeat` `sequence` `vary` `augment` `extend` `contract` `fragment` |
-| **展衍** | 从原乐思出发**逐步更新材料**的陈述方法，在中国传统音乐中尤为多见 | 主值 `vary` 或 `extend`，次值 `new` |
-| **对比** | 更换乐思，分派生性与并置性 | `new` |
+| **Processing** | Repetition, varied repetition, variation, sequence, expanding or contracting intervals or rhythm; characterized by "dismembering" processing of the original structure | `repeat` `sequence` `vary` `augment` `extend` `contract` `fragment` |
+| **Unfolding** | A method of statement that **gradually renews the material**, starting from the original musical idea; especially common in traditional Chinese music | Primary `vary` or `extend`, secondary `new` |
+| **Contrast** | Replacing the musical idea, divided into derivative and juxtaposed types | `new` |
 
-**杨儒怀的三级递进**（p0120–0126）是"离原始乐思多远"的刻度尺，展衍在这套说法里叫演化：
+**Yang Ruhuai's three-level progression** (p0120–0126) is a yardstick measuring "how far from the original musical idea"; in this scheme, unfolding is called evolution:
 
-- **溯型发展**：保持节奏型不变，只改变旋律进行的方向或音程。★ 与模进的区别：溯型的统一性主要靠"节奏雷同"，
-  模进靠音程关系的规律性，所以**想要"呼应感"用溯型，想要"运动推进感"用模进**（p0120–0121）。
-- **演化发展**：保持核心音调和大致旋律轮廓，改动节奏型、音程或结构（也可局部宽放紧收、扩充减缩、转调）。
-  ★ **展开程度更大，若不细致分析有时会误以为是对比性的新乐思**（p0121）。
-- **出新**：见 §3.9。★ 三种出新可以同时存在于一条长大旋律的不同发展阶段中，彼此贯通（p0126）。
+- **Retrograde-type development**: keeps the rhythmic pattern unchanged and alters only the direction or interval of melodic movement. ★ The difference from sequence: retrograde-type unity relies mainly on "rhythmic sameness," whereas sequence relies on the regularity of interval relations; so **for a sense of "call and response," use the retrograde type; for a sense of "forward motion," use sequence** (p0120–0121).
+- **Evolutionary development**: keeps the core tonality and the broad melodic contour while altering rhythmic pattern, intervals, or structure (also possibly local augmentation or diminution, extension or contraction, modulation).
+  ★ **The degree of unfolding is greater, and without detailed analysis it can sometimes be mistaken for a contrasting new musical idea** (p0121).
+- **Novelty**: see §3.9. ★ The three kinds of novelty may coexist at different developmental stages of one long melody, linked to one another (p0126).
 
-### 5.2 贯串：靠什么把全曲扣住
+### 5.2 Threading: what holds the whole piece together
 
-- **合尾**（p0129–0130）：所有主题以同样的旋律片段在同一调性中结束，使全曲在内容与主题材料上都获得统一；
-  ★ 即便中间段落是继承性出新形成的对比段落，用合尾也能把它与其他段落统一起来。
-  配套的**换尾终止呼应**（p0129）：换尾重复时把终止音换到调式主功能音上，前后两次陈述便组成上下句的连贯关系。
-- **头尾合（连环扣）**（p0130–0131）：前一乐思在明显终止式上结束后，下一乐思用重复同样的终止段落作为自己的开始。
-  另一种表现是反复陈述时首尾一致、中间发生迭奏式变化，★ **这种在正中间的较长迭奏变化，
-  常常正是提供乐思再陈述时形成高潮（或超越第一次高潮点）的机会**。
-- **动机贯穿**（p0139）：与一般裁截的区别是，任何裁截形式都保有动机的核心因素。
+- **Joined ending** (p0129–0130): all themes end with the same melodic fragment in the same key, unifying the whole piece in both content and thematic material;
+  ★ even if the middle section is a contrasting section formed by inherited novelty, a joined ending can still unify it with the other sections.
+  Companion device: **swapped-tail cadential answer** (p0129): when a swapped-tail repetition changes the closing tone to the principal functional tone of the mode, the two statements, before and after, form a continuous antecedent-consequent relation.
+- **Head-to-tail linking (chain linking)** (p0130–0131): after a preceding musical idea ends on a clear cadential formula, the next idea begins by repeating that same closing passage as its own opening.
+  Another form is that during repeated statements the beginning and end are consistent while a variation in the manner of iteration occurs in the middle. ★ **A longer iterative variation right in the middle is often precisely the opportunity for a climax to form on restatement (or to surpass the first climax point)**.
+- **Motivic threading** (p0139): what distinguishes it from ordinary fragmentation is that every fragmentary form retains the core elements of the motif.
 
-### 5.3 叠入：段与段之间不留缝
+### 5.3 Overlap: no seam between sections
 
-**叠入（overlap）**：在前后乐思相继陈述中消弭彼此的隔断、紧凑地接连起来，同时又能明显感到两者界限的存在
-及发生了变换（杨 p0139）。四种并列：正板叠入（共同小节）、切分叠入、引子与主题的叠入、伴奏背景的叠入。
+**Overlap**: in the successive statement of one musical idea followed by another, the division between them is dissolved and they are joined compactly, while the existence of a boundary between them and the occurrence of a transformation remain clearly perceptible (Yang p0139). Four types side by side: overlap on a regular downbeat (a shared bar); syncopated overlap; overlap of introduction and theme; and overlap of accompaniment background.
 
-★ 第四种在流行编曲里最有用：与前面结束叠入的是新主题的伴奏音型或持续和声背景，新主题响出片刻后才真正进入；
-效果是渲染气氛、延缓主题进入以制造新鲜感，**同时因主题延迟出现反而增加了听者对主题进入的注意**（p0140–0141）。
-★ 另有**戏剧性闯入**（p0141）：新材料不与前面终止式的主和声相附合就开始，和声上类似阻碍终止、
-材料上类似扩充，但它有自己独立的发展线索。
+★ The fourth type is the most useful in popular arrangements: the accompanying figure or sustained harmonic background of the new theme overlaps the ending of the preceding section, and the new theme does not truly enter until it has sounded for a moment; the effect is to build atmosphere and delay the entry of the theme to create freshness, **and because the theme appears late, the listener pays more attention to its entry** (p0140–0141).
+★ There is also **dramatic intrusion** (p0141): new material begins without conforming to the tonic harmony of the preceding cadence; harmonically it resembles blocking the cadence, and materially it resembles extension, but it has its own independent developmental thread.
 
-### 5.4 补充：终止之后再说一句
+### 5.4 Supplement: a further remark after the close
 
-**补充**：乐思或主题用完满终止或半终止结束**之后**，再接一段内容情绪与前面一致、陈述材料有收束性、
-调性明确并同样落在原调的收尾音乐（杨 p0141）。
+**Supplement**: after a musical idea or theme ends with a perfect or half cadence, a closing passage follows that is consistent in content and mood with what came before, whose stated material is conclusive, whose tonality is clear, and which likewise lands on the original key (Yang p0141).
 
-★ **与扩充的判据区别**（p0142）：扩充在终止式出现**之前**有意掩盖告一段落的感觉、从内部把乐思扩展起来，
-表现为内在的有机生长；补充必须在完满终止或半终止**之后**另行进行，表现为外在的附加和辅助陈述。
-（紧凑扩充是模糊地带：它也在终止之后进行，但典型的补充不像它那样突出节奏紧凑的条件，p0133。）
+★ **The criterion distinguishing it from extension** (p0142): an extension, before a cadential formula appears, deliberately conceals the sense of having come to a close and expands the idea from within, manifesting as internal organic growth; a supplement must come separately **after** a perfect or half cadence and manifests as an external addition or auxiliary statement.
+(Compact extension is a grey area: it also occurs after the cadence, but a typical supplement lacks the emphasized condition of compact rhythm that it has; p0133.)
 
-三种使用情境并列（p0142）：巩固仓促终止；消耗情绪与音响让形象逐渐远去；保持或增强终结时的高潮与亮度。
+Three usage situations side by side (p0142): consolidating a hurried cadence; wearing down emotion and sonority so that the image gradually recedes; maintaining or intensifying the climax and brightness at the close.
 
-★ **补充的转化功能**（p0143–0144）：在音乐形象即将转变处，可以在补充过程中改变其性质，使之转为"继续发展"、
-阻止终止式的到来，此时补充的功能转变为连接过渡。这是把 Outro 改造成 bridge 的那条机理。
-勋伯格并排的一组是延伸、插段、小尾声三个概念（p0224–0225）；尾声的内部时间线则是三件事同时发生：
-**素材大半源自前面的主题、加工方向是重新结构加冲淡、片段一个比一个短**（p0253）。
+★ **The transformative function of a supplement** (p0143–0144): at a point where the musical image is about to change, the supplement can alter its nature during the process, turning it into "continued development" and preventing the cadence from arriving; at this point the supplement's function converts into a connecting transition. This is the mechanism by which an outro is reworked into a bridge.
+Schoenberg sets three concepts side by side: extension, interpolated section, and small coda (p0224–0225); the internal timeline of a coda involves three things happening simultaneously: **most of the material derives from the preceding theme, the direction of working is restructuring plus liquidation, and the fragments grow shorter one after another** (p0253).
 
 ---
 
-## 6. 变奏这一支
+## 6. The variation branch
 
-★ 勋伯格把"变奏"这个词的四个层级说清楚了（p0229）：在主题构造中产生动机型，在中间段中产生对比，
-在重复时产生多样化，在"主题与变奏"这一曲式里则上升为整首作品的结构原则。
+★ Schoenberg makes clear four levels at which the term "variation" operates (p0229): producing motif forms within the construction of a theme, producing contrast in a middle section, producing diversity on repetition, and, in the "theme and variations" form, rising to a structural principle of the entire work.
 
-### 6.1 两大类型（李吉提 p0159、p0166）
+### 6.1 Two main types (Li Jiti p0159, p0166)
 
-- **严格变奏**：在保持原始主题材料和结构轮廓不变的总前提下加工。
-- **自由变奏／性格变奏**：可展开肢解原始主题结构，甚至加入新材料，常导致音乐性格变化。材料处理有三条路：
-  用主题全部基本材料变奏、针对某一材料集中展开、偶尔插入新材料对比，**前提是不改变全曲以变奏为主导的结构**。
+- **Strict variation**: processes the material on the overall premise that the original theme's material and structural contour remain unchanged.
+- **Free variation / character variation**: may dismember the original theme's structure and even introduce new material, often leading to a change of musical character. Material is handled in three ways: varying all of the theme's basic material, concentrating development on one particular material, or occasionally inserting new material for contrast, **provided the structure remains predominantly variational for the whole piece**.
 
-各型的完整表（固定低音／固定和声／固定旋律三型，古典装饰变奏，自由变奏）在 [reference.md](reference.md) §4。
-★ **两条能直接搬进流行歌的判断**：
+The complete table of each type (three types of fixed bass / fixed harmony / fixed melody, classical ornamental variation, and free variation) is in [reference.md](reference.md) §4.
+★ **Two judgments that can be carried directly into popular songs**:
 
-1. **先严格后自由**（p0166）：**开头几个变奏一般需从严格变奏起步**，让听众先记清原始主题的结构框架和音调；
-   发挥到一定程度（如进入高潮后）也可能再现"回归"性的严格变奏，形成内部再一次的波浪起伏。
-   纯自由变奏一开场即可能让听众抓不住主题，纯严格变奏则可能缺乏戏剧性起伏。
-2. **固定的因素越多，变的那个因素被反衬得越突出**（p0169）：《波莱罗》把节奏、和声、调性全部锁死，
-   唯一的变量落在音色配器与力度的层层渐强上。
+1. **Strict first, then free** (p0166): **the opening few variations generally need to begin with strict variation**, so that listeners first memorize the structural framework and tonal characteristics of the original theme;
+   once development has reached a certain degree (for instance after entering a climax), a "returning" strict variation may reappear, forming another internal wave of rise and fall.
+   Pure free variation at the outset may cause listeners to lose track of the theme, while pure strict variation may lack dramatic rise and fall.
+2. **The more factors held fixed, the more conspicuous the one factor that varies** (p0169): *Boléro* locks rhythm, harmony, and tonality entirely; the only variable falls on timbre, orchestration, and the layered crescendo of dynamics.
 
-### 6.2 可辨认的底线（勋伯格 p0231–0234）
+### 6.2 The baseline for recognizability (Schoenberg p0231–0234)
 
-- 主题在每段变奏中都应能被辨认出来；即使性格变化，**事件的进程（片段数量与次序）也不应改变**；
-  节拍、速度可以变，小节数可有规则地翻倍，但各部分的比例、结构关系与主要特征型都保留。
-- 统一性靠系统运用**变奏动机**实现，该动机取自主题本身；获得它的方法是先把一切次要成分省略掉，
-  使基本结构的"骨架"一览无遗（p0232）。它**很少超过两小节，很多情况下只有半小节或更短**，
-  ★ **和声运动越密集，动机能维持的篇幅越短**（p0232–0234）。
+- The theme should be recognizable in every variation; even if the character changes, **the course of events (the number and order of fragments) should not change**;
+  meter and tempo may change, and the number of bars may double in a regular way, but the proportions of the parts, the structural relations, and the main characteristic figures are all retained.
+- Unity is achieved through systematic use of a **variation motive**, which is taken from the theme itself; the method of obtaining it is to first omit all secondary components so that the "skeleton" of the basic structure is laid bare (p0232). It **rarely exceeds two bars and in many cases is only half a bar or shorter**;
+  ★ **the denser the harmonic motion, the shorter the length over which the motive can be sustained** (p0232–0234).
 
-### 6.3 流行歌里怎么用这一支
+### 6.3 How to use this branch in popular songs
 
-- **副歌各遍靠变奏推进**：用七种不加新和弦的变奏做各遍的面孔，同进行改节奏是最弱的一档对比，
-  两段用不同进行且起始和弦不同是最强的一档（[reference.md](reference.md) §3 末）。
-- **固定旋律变奏就是分节歌的解法**（李 p0163–0164）：针对分节歌"歌词段数多、单纯反复易乏味"，保持旋律不变、
-  靠伴奏与配器写出不同情绪背景。**这是"主歌旋律不变、编曲逐段加厚"这条流行常规的来源。**
-- **古典装饰变奏的上限**（李 p0165–0166）：结构与基本和声骨架都不改变，所以很少跳出原主题划定的基本情趣范围；
-  想深挖同一情绪时适用，**追求戏剧性突破的段落不要用它**。
+- **Choruses advance through variation on each pass**: use seven variations that add no new chords to give each pass its face; changing rhythm with the same progression is the weakest grade of contrast, while using different progressions with different starting chords for the two sections is the strongest (end of [reference.md](reference.md) §3).
+- **Fixed-melody variation is the solution for strophic songs** (Li p0163–0164): for strophic songs, which have many lyric stanzas and where plain repetition tends to become tiresome, keep the melody unchanged and create different emotional backgrounds through accompaniment and orchestration. **This is the origin of the popular convention "the verse melody stays the same while the arrangement thickens section by section."**
+- **The ceiling of classical ornamental variation** (Li p0165–0166): neither the structure nor the basic harmonic skeleton changes, so it rarely leaves the basic affective range delimited by the original theme; it applies when you want to dig deeper into the same emotion, and **do not use it in sections that seek a dramatic breakthrough**.
 
 ---
 
-## 7. 流行歌里的落点
+## 7. Where it lands in pop songs
 
-> 本节的默认值（主歌二段 `repeat` 换尾、预副歌 `fragment`、末段 `recap`）是从古典判据推出来的合理默认，**没有在华语或日式流行语料里数过**；词那一侧有实测（华语歌词语料，数字在 §2.2、§7.4），曲这一侧待做。
+> The defaults in this section (the second verse using `repeat` with a swapped tail, the pre-chorus using `fragment`, and the final section using `recap`) are reasonable defaults derived from classical criteria; **they have not been counted in Chinese-language or Japanese pop corpora**. The lyric side has been measured (Chinese-language lyric corpus; figures in §2.2 and §7.4); the music side is still to be done.
 
-### 7.1 主歌二段怎么推进
+### 7.1 How the second verse advances
 
-**默认不是原样重复。** 三条可选，按代价从低到高：
+**The default is not verbatim repetition.** Three options, ordered from lowest to highest cost:
 
-1. **`repeat` 加换尾**：合首换尾不改变乐思总长度（p0131–0132），成本最低，
-   且靠"有相同的重复才衬托出更换"这条判据立住（p0128）。
-2. **`vary` 迭奏**：保持旋律总面貌，做个别音替换、节奏填充、加花或简化。
-   ★ 声乐里因歌词声调更替本来就会自然引出迭奏式变化（p0113–0114），**中文歌这一条几乎是白拿的**。
-3. **`contract`**：第二段主歌比第一段短。段落长度惯例归 `mc-arrangement-arch` §4.4，本 skill 只负责说清
-   这一刀砍下去是减缩，性格上是收拢、不带来高涨（p0136）。
+1. **`repeat` with a swapped tail**: swapping the tail while keeping the head does not change the total length of the musical idea (p0131–0132); this is the lowest cost,
+   and it is grounded by the criterion that "a change is set off only by an identical repetition" (p0128).
+2. **`vary` iteration**: keeps the overall melodic appearance, making individual note substitutions, rhythmic fill-ins, ornamentation, or simplification.
+   ★ In vocal music, changes in the tones of the lyrics naturally lead to iterative variation (p0113–0114), **so this option is almost free for songs in Chinese**.
+3. **`contract`**: the second verse is shorter than the first. Conventions for section length are covered in `mc-arrangement-arch` §4.4; this skill is only responsible for making clear that this cut is a contraction, which in character gathers in and does not bring a rise (p0136).
 
-★ **不要在主歌用转调模进**（p0116）：主歌一二段都还在陈述阶段，模进放在这里就是 `mc-melody` §8
-说的那种套路感的来源。
+★ **Do not use sequences modulating in the verses** (p0116): verses one and two are both still in the statement stage, and placing a sequence here is the source of the formulaic feel that `mc-melody` §8 describes.
 
-### 7.2 预副歌
+### 7.2 Pre-chorus
 
-功能是过渡性陈述：先补充前面的乐思，再转调，最后引出新乐思或停在一个**期待性和弦**上（李 p0022）。
-落到 `development` 上：
+Its function is transitional statement: first supplement the preceding idea, then modulate, and finally introduce a new idea or come to rest on an **expectant chord** (Li p0022).
+Mapped onto `development`:
 
-- 主值多为 `fragment`：**要"越来越急"靠裁截，不靠加速**，被裁下来的片断随即再裁，愈裁愈短（杨 p0137）。
-- 次值常配 `sequence`（这里正是"高潮形成前的酝酿"，是模进的正位，p0115–0116）或 `augment` 的紧收一侧（p0118）。
-  **扩充的功能转换**（p0134）同样落在这里：和声开放、停在属或转调，一面强调前面的乐思，一面把新旧乐思贯连起来。
+- The primary value is usually `fragment`: **to make it "increasingly urgent" relies on fragmentation, not on acceleration**; each fragment that is cut off is cut again, growing shorter and shorter (Yang p0137).
+- A secondary value is often `sequence` (this is precisely "the build-up before the climax forms," the proper place for sequence, p0115–0116) or the diminution side of `augment` (p0118).
+  **The functional conversion of extension** (p0134) also lands here: the harmony is open, halting on the dominant or modulating, emphasizing the preceding idea while linking the old and new ideas together.
 
-### 7.3 bridge
+### 7.3 Bridge
 
-两条路，选一条并写进 `note`：
+Two paths: choose one and write it into `note`:
 
-- **裁截路**：用前面的材料愈裁愈短，造成愈来愈活跃或紧张的气氛，同时保住统一性（p0137）。
-  想让末段副歌再上一档，`counterpoint` 的紧接段比加乐器有效。
-- **出新路**：填 `new`，但**必须先答出是继承性、合成性还是对置性**（§3.9）。答不出就是没想好，
-  这一段大概率会变成另一首歌。
+- **Fragmentation path**: use the preceding material, cutting it shorter and shorter, to create an increasingly lively or tense atmosphere while preserving unity (p0137).
+  If you want the final chorus to rise one more level, the following-section technique of `counterpoint` is more effective than adding instruments.
+- **Novelty path**: fill in `new`, but **you must first answer whether it is inherited, synthetic, or opposing novelty** (§3.9). If you cannot answer, you have not decided, and this section will most likely turn into another song.
 
-★ **进出不对称**（李 p0065）：中部的进入一般不用连接，便于对比界限分明；退出往往采用迂回、逐渐的方式。
-**进要硬切，出要迂回。** 硬切那一头可以直接用闯入性对置（杨 p0125–0126）。
+★ **Asymmetry in entry and exit** (Li p0065): entry into the middle section generally uses no connection, which keeps the boundary of contrast sharply defined; exit often takes an indirect, gradual route.
+**Cut hard on entry, withdraw indirectly on exit.** The hard-cut end can directly use intrusive opposition (Yang p0125–0126).
 
-### 7.4 末段副歌怎么动
+### 7.4 How the final chorus moves
 
-填 `recap`，并注明是原样还是动力。四个具体的动法：
+Fill in `recap`, and state whether it is verbatim or dynamic. Four specific ways to move:
 
-| 动法 | 依据 |
+| Way | Basis |
 |---|---|
-| **原样，只改织体配器力度** | 静止再现（杨 p0112）。语料里末遍与首遍逐字相同的歌占近三成（华语歌词语料，非说唱），这不算偷懒 |
-| **动力再现** | 动机再加工、和声介入、织体加厚，常导致结构扩充甚至成为全曲总高潮（李 p0023–0024，五形态见 `mc-form` §6.2） |
-| **hook 拉成两倍时值** | 宽放：稳定有分量，用在结尾能让气氛平稳下来（杨 p0117）。**可以只宽放一部分**，只拉长 hook 的第一乐节 |
-| **加尾（扩充或补充）** | 回到主调终止之前常有扩充（p0135）；或在完满终止之后接补充，增强终结时的高潮与亮度（p0142） |
+| **Verbatim, changing only texture, orchestration, and dynamics** | Static recapitulation (Yang p0112). In the corpus, songs whose last pass is word-for-word identical to the first pass account for nearly 30% (Chinese-language lyric corpus, non-rap); this is not laziness |
+| **Dynamic recapitulation** | Re-working of the motif, harmonic intervention, and thickening of texture, often leading to structural expansion or even becoming the climax of the whole song (Li p0023–0024; the five forms are in `mc-form` §6.2) |
+| **Stretch the hook to twice its note values** | Augmentation: stable and weighty; used at the ending it calms the mood (Yang p0117). **It may augment only part of it**, lengthening just the first segment of the hook |
+| **Added tail (extension or supplement)** | Extensions often occur before the cadence returning to the main key (p0135); or a supplement follows a perfect cadence, intensifying the climax and brightness at the close (p0142) |
 
-★ **与词那一侧对齐**（华语歌词语料逐首读，国语非说唱 487 首：末遍无变 43%、改字 25%、加尾 21%、重写 4%）：末段处理三分天下，无变、改一到三个字、加尾，
-**整遍重写是少数，重写等于放弃了前两遍攒下的期待**。曲这一侧同理：末段副歌填 `new` 几乎总是错的。
+★ **Aligned with the lyric side** (Chinese-language lyric corpus read song by song, 487 non-rap Mandarin songs: final pass unchanged 43%, one to three characters changed 25%, added tail 21%, fully rewritten 4%): the handling of the final section divides three ways: unchanged, a change of one to three characters, or an added tail;
+**a full rewrite is a minority, and a rewrite means giving up the expectation accumulated in the first two passes.** The same holds on the music side: filling `new` in the final chorus is almost always a mistake.
 
-### 7.5 全曲收尾
+### 7.5 Closing the whole piece
 
-判据先看**这段落之前有没有完满终止**：还没终止，只能靠减缩把陈述本身缩短；
-已经终止但还想再拖一段，才用补充。三条路各自的用法：
+The first criterion is whether **a perfect cadence has already occurred before this passage**: if it has not, the only option is to shorten the statement itself through contraction;
+if it has already cadenced but you still want to extend a passage further, use a supplement. The usage of each of the three paths:
 
-- **减缩**：收拢，不带来情绪高涨，让发展逐渐停顿、音响逐渐寂静，多用于结尾或临近结束处（杨 p0136）。
-  省略中间音调、均衡分散省略、转调减缩三法怎么选，见 [reference.md](reference.md) §2.2。
-- **补充**：完满终止之后再接一段，三种情境三选一而不是都做，终止仓促需要巩固、
-  情绪音响需要逐渐消耗掉、已达到的高潮需要保持或增强（杨 p0142），情境细表见 [reference.md](reference.md) §7.2。
-- **紧收当固定伴奏**：把旋律或 hook 紧收成一个音型，旋律真正进入后音型仍留在下面，
-  就此变成固定伴奏音型（德沃扎克《催眠曲》前奏即此例，杨 p0119）。
-  Outro 的循环音型可以直接从 hook 紧收出来，不必另写。
+- **Contraction**: gathering in, bringing no emotional rise; development gradually pauses and the sound gradually falls silent, mostly used at the ending or near the close (Yang p0136).
+  For choosing among the three methods of omitting middle tones, omitting evenly and dispersedly, and contracting with modulation, see [reference.md](reference.md) §2.2.
+- **Supplement**: a passage added after a perfect cadence. Choose one of three situations rather than doing all of them: a hurried cadence needs consolidating; emotion and sonority need to be gradually worn down; a climax already reached needs to be maintained or intensified (Yang p0142). A detailed table of situations is in [reference.md](reference.md) §7.2.
+- **Compression into a fixed accompaniment**: compress the melody or hook into a figure; once the melody truly enters, the figure stays underneath, thereby becoming a fixed accompaniment figure (the prelude of Dvořák's *Lullaby* is an example, Yang p0119).
+  The looping figure of an outro can be drawn directly from a compressed hook, with no need to write it separately.
 
 ---
 
-## 8. 与 ARR-SPEC 的字段对应
+## 8. Correspondence with ARR-SPEC fields
 
-| 字段 | 类型 | 必填 | 说明 |
+| Field | Type | Required | Notes |
 |---|---|---|---|
-| `material.motif` | str | ✅ | **用文字描述，不写谱**：音程轮廓、节奏型、长度三样齐全。缺音程或缺节奏视为未填（§1） |
-| `material.character` | str | ✅ | 性格一句 |
-| `material.stated_in` | list | ✅ | 原始陈述所在的段落 id，可多个。**中途出现并成为后续发展根源的新乐思也算**（杨 p0110） |
-| `form[].development` | str | ✅ | **封闭集合**，主值在前，次值用 `+` 连接（如 `fragment+sequence`）；写成列表也接受。取值只有这十个：<br>`repeat` `sequence` `extend` `contract` `fragment` `vary` `augment` `counterpoint` `new` `recap` |
+| `material.motif` | str | ✅ | **Described in words, not written as notation**: interval contour, rhythmic pattern, and length, all three present. Missing interval or missing rhythm counts as unfilled (§1) |
+| `material.character` | str | ✅ | One line of character |
+| `material.stated_in` | list | ✅ | The ids of the sections where the original statement appears; may be several. **A new musical idea that appears midway and becomes the root of later development also counts** (Yang p0110) |
+| `form[].development` | str | ✅ | **Closed set**; primary value first, secondary values joined with `+` (e.g. `fragment+sequence`); a list is also accepted. Only these ten values are valid:<br>`repeat` `sequence` `extend` `contract` `fragment` `vary` `augment` `counterpoint` `new` `recap` |
 
-- 填不进这十个的东西，归到最近的那一个，并在 `form[].note` 里写一句说明，不要自造名字（§2.3）。
-- 填 `recap` 时在 `note` 里注明**原样还是动力**（§3.10）；填 `new` 时注明**是哪一类出新**（§3.9）。
+- Anything that cannot be fitted into these ten goes to the nearest one, with a sentence of explanation in `form[].note`; do not invent new names (§2.3).
+- When filling `recap`, state **verbatim or dynamic** in `note` (§3.10); when filling `new`, state **which kind of novelty** it is in `note` (§3.9).
 
 ```yaml
-material: {motif: "四音级进下行后回跳四度，前短后长的抑扬格，一小节半", character: "欲言又止", stated_in: [A1]}
+material: {motif: "four-note stepwise descent, then a leap back up a fourth; short-long iambic figure, one and a half bars", character: "hesitant, held back", stated_in: [A1]}
 form:
-  - {id: A1, name: Verse,      development: repeat, note: "原始陈述，第二句换尾"}
-  - {id: B1, name: Pre-Chorus, development: "fragment+sequence", note: "取动机后半，两次上行模进"}
-  - {id: D,  name: Bridge,     development: new, note: "继承性出新，节拍速度调性不变"}
-  - {id: C3, name: Chorus,     development: "recap+augment", note: "动力再现，hook 首乐节宽放一倍"}
+  - {id: A1, name: Verse,      development: repeat, note: "original statement, second phrase swaps the tail"}
+  - {id: B1, name: Pre-Chorus, development: "fragment+sequence", note: "takes the second half of the motif, two ascending sequences"}
+  - {id: D,  name: Bridge,     development: new, note: "inherited novelty, meter, tempo, and tonality unchanged"}
+  - {id: C3, name: Chorus,     development: "recap+augment", note: "dynamic recapitulation, first segment of the hook doubled in value"}
 ```
 
-| 邻近字段 | 谁拥有 | 与本 skill 的关系 |
+| Adjacent field | Owned by | Relation to this skill |
 |---|---|---|
-| `form[].harmony` | `mc-harmony` | 同一段若填 `vary`，和声那一侧可以用七种不加新和弦的变奏实现（§6.3） |
-| `form[].melody_register` | `mc-melody` | 段落间要有对比；`recap` 的动力形态常同时抬高音区 |
-| `form[].bars` | `mc-form`／`mc-arrangement-arch` | `extend` 与 `contract` 必然改 `bars`；段落名与发展手法是两张标签，末段副歌叫 Chorus 而做 `recap` 不冲突 |
-| `arrangement.energy_curve` | `mc-arrangement-arch` | `fragment` 与连续紧收是能量上行的机理，`contract` 与补充是下行的机理 |
+| `form[].harmony` | `mc-harmony` | If a section is marked `vary`, the harmonic side can be realized with the seven variations that add no new chords (§6.3) |
+| `form[].melody_register` | `mc-melody` | Contrast is needed between sections; the dynamic form of `recap` often also raises the register |
+| `form[].bars` | `mc-form` / `mc-arrangement-arch` | `extend` and `contract` necessarily change `bars`; section names and development techniques are two separate labels, and a final chorus named Chorus that uses `recap` is not a conflict |
+| `arrangement.energy_curve` | `mc-arrangement-arch` | `fragment` and continuous diminution are the mechanisms of rising energy; `contract` and supplement are the mechanisms of falling energy |
 
-★ **顺序**：`material` 与 `form[].development` 在骨架之后、旋律和声之前定，理由是勋伯格那条"开端决定后续"（p0041）
-与杨儒怀那条"原始陈述是后续一切发展的根源"（p0110）。先定材料再写旋律，写出来的每一段才说得出它从哪来。
-
----
-
-## 9. 写完后必过
-
-**材料与每段**
-
-- [ ] `motif` 里**音程轮廓、节奏型、长度三样都在**，没有写谱；`character` 只有一句，说得出脾气
-- [ ] `stated_in` 非空，且那几段的 `development` 不是 `new`
-- [ ] 每一段都填了 `development`，主值在第一位；`extend`、`contract` 都与 `bars` 对得上
-- [ ] 每个 `recap` 都注明了**原样还是动力**
-- [ ] 每个 `new` 都注明了**是哪一类出新**（继承性／合成性／对置性，或派生性／并置性）
-
-**全曲三条警告**（判据不是铁律，越过了要在 `note` 里写明理由。★ 三条阈值是本库自订，底本只给了方向：机械反复不超过两次、出新最易被滥用、变奏主题不超过两个；曲这一侧还没有"每段用了什么手法"的语料统计，等有了再标定）
-
-- [ ] ★ **填 `new` 的段数不超过全曲段数的一半**。越过先怀疑是没发展只是在堆（§2.2）
-- [ ] ★ **全曲至少有一段是 `recap` 或 `repeat`**。一段都没有，说明没有任何东西回来过（杨 p0112）
-- [ ] ★ **副歌各遍的 `development` 不能全是 `new`**。各遍全新等于每遍都在重新教听众一次 hook
-
-**别的**
-
-- [ ] 说得出这首歌主导的是加工处理、展衍、还是对比（§5.1）
-- [ ] 至少有一处贯串装置：合尾、头尾合、动机贯穿，或一条跨段的伴奏音型（§5.2）
-- [ ] 模进没有出现在主歌一二段的初步陈述里（§7.1），末段副歌没有填 `new`（§7.4）
-- [ ] 段与段的接口想过一次：硬切、叠入、还是补充（§5.3、§5.4）
+★ **Order**: `material` and `form[].development` are set after the skeleton and before melody and harmony. The reason is Schoenberg's "the beginning determines what follows" (p0041) and Yang Ruhuai's "the original statement is the root of all subsequent development" (p0110). Set the material first, then write the melody; only then can each section say where it comes from.
 
 ---
 
-## 附：来源
+## 9. Checks to pass after writing
 
-- **杨儒怀《音乐的分析与创作》上册**：§3 十种手法的主干（p0110–0144），§5 的合头合尾、叠入、补充。
-- **勋伯格《作曲基本原理》**：§4 从动机到乐句（p0018–0045、p0091–0099），再现部的改写尺度（p0188），
-  变奏的可辨认底线（p0229–0234），加工部与尾声的动机处理（p0253–0286）。
-- **李吉提《曲式与作品分析》**：动机性格与规模分级（p0016–0019），三种发展手法（p0020），变奏曲式体系（p0159–0171）。
-- **Jimmy Kachulis《流行歌曲写作·和声》**：不加新和弦的七种变奏（p0102–0138）。
-- **华语歌词语料**（华语歌手榜前 100 位歌手的歌词，只统计派生数字）：§2.2 的副歌占比与逐字全同比例（按段落标签算，非说唱 3631 首），§7.4 的末遍处理分布（逐首读，国语非说唱 487 首）。
-- **从别处收拢过来的**：宽放紧收与模进的用法、动机与乐句的另一套说法（`mc-melody`）；乐思怎么发展与曲式怎么组合、
-  扩充三型与减缩三法与裁截（`mc-form`）；不加新和弦的七种变奏（`mc-harmony`）。那几处现在只留指针。
-- **只做指针的**：切分成因与呼应（`mc-melody` §7）；陈述方式、结构功能、再现五形态、奏鸣曲式（`mc-form`）；
-  对位与赋格（`mc-counterpoint`）。
+**Material and each section**
 
-## 附：底本没覆盖的
+- [ ] `motif` contains **all three of interval contour, rhythmic pattern, and length**, with no notation written out; `character` is a single line that conveys a temperament
+- [ ] `stated_in` is non-empty, and the `development` of those sections is not `new`
+- [ ] Every section has a `development` filled in, primary value in first position; `extend` and `contract` both match `bars`
+- [ ] Every `recap` states **verbatim or dynamic**
+- [ ] Every `new` states **which kind of novelty** it is (inherited / synthetic / opposing, or derivative / juxtaposed)
 
-- `counterpoint` 这一支只有杨儒怀一条（模仿用宽放紧收），本体全靠 `mc-counterpoint`；"这一段算不算对位式发展"缺可操作的门槛。
-- 次值的搭配（哪些主值配哪些次值）底本没有，reference §1.1 那几组常见搭配是归纳，不是引用。
-- 三条警告的阈值与 §7 的段落默认值未经流行语料标定。
-- loop、采样、电子类靠加减层与滤波推进的段落，十个值只能勉强归到 `repeat` 或 `vary`；《波莱罗》模型（李 p0169）是唯一够到的一条，其余靠 `mc-arrangement-arch` §5 编制即形式。
-- 说唱的材料发展（flow 的变化算不算 `vary`、verse 之间的材料关系）底本不涉及。
-- 能被记住的 hook 动机该多长，没有一本给数；勋伯格只说变奏动机很少超过两小节（p0232），李吉提只给乐汇乐节乐句的小节区间（p0016–0019）。
+**Three warnings for the whole piece** (the criteria are not iron laws; if a limit is exceeded, state the reason in `note`. ★ The three thresholds are this library's own settings; the source gives only the direction: mechanical repetition no more than twice, novelty is the most easily abused, and no more than two variation themes; on the music side there is not yet a corpus statistic on "which technique each section uses," to be calibrated once one exists)
+
+- [ ] ★ **The number of sections filled with `new` does not exceed half the total number of sections**. If exceeded, first suspect that nothing is developing and it is merely piling up (§2.2)
+- [ ] ★ **At least one section in the whole song is `recap` or `repeat`**. If none is, nothing has returned at all (Yang p0112)
+- [ ] ★ **The `development` of the chorus passes must not all be `new`**. Every pass being new amounts to re-teaching the listener the hook every time
+
+**Other**
+
+- [ ] Can state whether the song is dominated by processing, unfolding, or contrast (§5.1)
+- [ ] At least one threading device is present: joined ending, head-to-tail linking, motivic threading, or an accompaniment figure that runs across sections (§5.2)
+- [ ] Sequences do not appear in the initial statement of verses one and two (§7.1), and the final chorus does not fill in `new` (§7.4)
+- [ ] The joints between sections have been considered once: hard cut, overlap, or supplement (§5.3, §5.4)
+
+---
+
+## Appendix: Sources
+
+- **Yang Ruhuai, *Analysis and Composition of Music*, Vol. I**: the backbone of the ten techniques in §3 (p0110–0144), and the joined and swapped endings, overlap, and supplement in §5.
+- **Schoenberg, *Fundamentals of Musical Composition***: §4 from motif to phrase (p0018–0045, p0091–0099), the standard for rewriting in recapitulations (p0188), the baseline for recognizability in variation (p0229–0234), and the motif treatment of development sections and codas (p0253–0286).
+- **Li Jiti, *Musical Form and Analysis***: the character and scale grading of motifs (p0016–0019), the three methods of development (p0020), and the variation-form system (p0159–0171).
+- **Jimmy Kachulis, *Pop Songwriting: Harmony***: the seven variations that add no new chords (p0102–0138).
+- **Chinese-language lyric corpus** (lyrics of songs by the top 100 singers on singer charts; only derived figures are counted): the chorus proportion and word-for-word identity ratio in §2.2 (counted by section labels, 3,631 non-rap songs), and the final-pass handling distribution in §7.4 (read song by song, 487 non-rap Mandarin songs).
+- **Gathered from elsewhere**: the usage of augmentation, diminution, and sequence, and an alternative account of motif and phrase (`mc-melody`); how to develop musical ideas and how to combine forms, the three types of extension, the three methods of contraction, and fragmentation (`mc-form`); the seven variations that add no new chords (`mc-harmony`). Those points now retain only pointers.
+- **Pointers only**: the causes of syncopation and answering (`mc-melody` §7); modes of statement, structural functions, the five forms of recapitulation, and sonata form (`mc-form`); counterpoint and fugue (`mc-counterpoint`).
+
+## Appendix: Not covered by the source
+
+- The `counterpoint` branch has only one entry, from Yang Ruhuai (imitation using augmentation and diminution), and its substance depends entirely on `mc-counterpoint`; there is no operational threshold for "does this section count as contrapuntal development."
+- The pairing of secondary values (which primary values pair with which secondary values) is absent from the source; the common pairings in reference §1.1 are generalizations, not citations.
+- The thresholds of the three warnings and the section defaults in §7 have not been calibrated against a pop corpus.
+- For sections that advance through layering and filtering in loops, sampling, and electronic music, the ten values can only loosely map to `repeat` or `vary`; the Boléro model (Li p0169) is the only one that reaches, and the rest rely on `mc-arrangement-arch` §5 for arrangement, that is, form.
+- Material development in rap (whether a change in flow counts as `vary`, and the relations of material between verses) is not addressed in the source.
+- No source gives a number for how long a hook motive should be to be memorable; Schoenberg says only that variation motives rarely exceed two bars (p0232), and Li Jiti gives only bar ranges for figure, segment, and phrase (p0016–0019).

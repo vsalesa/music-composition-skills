@@ -1,294 +1,293 @@
 ---
 name: mc-style-jazz
-description: Jazz as a style layer (爵士风格层) - what is specific to jazz and what is merely general music theory wearing a jazz hat. Chord-scale theory and the avoid-note idea, melodic minor harmony and the interchangeability that makes altered dominants work, the diminished and whole-tone resources, comping and voicing conventions, the head-solos-head form, bebop phrasing and accent placement, what a jazz arrangement measurably does differently (smallest roster, fewest entry events in the corpus), and an explicit transfer table saying which of these survive outside jazz. Use when writing or arranging in a jazz idiom, when a progression needs jazz reharmonization, when comping, when adding a solo section, or when deciding whether a jazz device belongs in a pop track. 爵士、bebop、和弦音阶、变化属、二五一、swing、solo、comping。
+description: Jazz as a style layer - what is specific to jazz and what is merely general music theory wearing a jazz hat. Chord-scale theory and the avoid-note idea, melodic minor harmony and the interchangeability that makes altered dominants work, the diminished and whole-tone resources, comping and voicing conventions, the head-solos-head form, bebop phrasing and accent placement, what a jazz arrangement measurably does differently (smallest roster, fewest entry events in the corpus), and an explicit transfer table saying which of these survive outside jazz. Use when writing or arranging in a jazz idiom, when a progression needs jazz reharmonization, when comping, when adding a solo section, or when deciding whether a jazz device belongs in a pop track. Keywords: jazz, bebop, chord-scale, altered dominant, ii-V-I, swing, solo, comping.
 ---
 
-# 爵士风格层（Jazz）
+# Jazz Style Layer
 
-**L3 风格层的每个 skill 都必须先回答一个问题：**
+**Every skill in the L3 style layer must first answer one question:**
 
-> **这个风格里，哪些是"它特有的"，哪些只是通用乐理穿了件这个风格的外套？**
+> **Within this style, which elements are specific to it, and which are just general music theory wearing this style's coat?**
 
-对爵士来说这个问题尤其尖锐，因为**爵士乐理被广泛当作"高级乐理"来教**——
-很多东西其实属于 `mc-harmony`，不属于本 skill。
+For jazz this question is especially sharp, because **jazz theory is widely taught as "advanced theory"**,
+and many of its elements actually belong to `mc-harmony`, not to this skill.
 
-## 按任务读哪几节
+## Which sections to read for each task
 
-| 任务 | 读 |
+| Task | Read |
 |---|---|
-| **判断某个手法该不该搬到别的风格** | ★ §2 移植表（**先读这个**） |
-| 写爵士和声 | §3 和弦–音阶 |
-| 要变化属、要"外"的声音 | §3.3 旋律小调 |
-| 配伴奏（comping） | §4 |
-| 排一首爵士曲的结构 | §5 |
-| 写 solo / 即兴段 | §6 |
-| 爵士编曲和流行编曲实测差在哪 | ★ §7 |
+| **Deciding whether a technique should be carried into another style** | ★ §2 transfer table (**read this first**) |
+| Writing jazz harmony | §3 Chords and scales |
+| Needing altered dominants or an "outside" sound | §3.3 Melodic minor |
+| Writing accompaniment (comping) | §4 |
+| Laying out the structure of a jazz tune | §5 |
+| Writing a solo / improvised section | §6 |
+| Where jazz arrangements measurably differ from pop arrangements | ★ §7 |
 
-## 边界
+## Boundaries
 
-| 不归这里 | 归哪 |
+| Not covered here | Where it lives |
 |---|---|
-| 二五一、副属、裏和弦、张力音的**通用用法** | `mc-harmony` §6、§7（★ **它们不是爵士专有的**） |
-| 教会调式的定义 | `mc-melody` [reference.md](../mc-melody/reference.md) §2 |
-| swing 的量化比例怎么定 | `mc-rhythm-section` §2（百分比量化）；本库不给毫秒值，swing 用比例写进 `groove.quantize_policy` |
-| 曲式的通用原理 | `mc-form` |
-| 乐器法 | `mc-orchestration` |
-| 完整的音阶/和弦/voicing 目录 | [reference.md](reference.md) |
-
----
-
-## 1. 动笔前必填
-
-| 必填 | 问法 |
-|---|---|
-| **① 哪一支爵士** | swing / bebop / modal / bossa / fusion / 爵士味的流行。**"爵士"不是一个风格**。bossa 的律动、编制、换和弦时点在 `mc-style-latin`，这里只管它借走的和声 |
-| **② 这是爵士还是"带爵士味"** | ★ 决定 §2 移植表怎么用 |
-| **③ 有没有即兴段** | 有的话曲式完全不同（§5） |
-| **④ 编制规模** | ★ 实测：爵士语料的 roster 中位数 **22 轨**，流行是 36——**爵士是减出来的** |
+| General usage of ii-V-I, secondary dominants, backdoor chords, and tension notes (★ **these are not specific to jazz**) | `mc-harmony` §6, §7 |
+| Definition of church modes | `mc-melody` [reference.md](../mc-melody/reference.md) §2 |
+| How to set the quantisation ratio for swing | `mc-rhythm-section` §2 (percentage quantisation); this library does not give millisecond values, and swing is written as a ratio in `groove.quantize_policy` |
+| General principles of form | `mc-form` |
+| Instrumentation technique | `mc-orchestration` |
+| Complete catalogue of scales, chords, and voicings | [reference.md](reference.md) |
 
 ---
 
-## 2. ★ 移植表：哪些可搬、哪些不可搬
+## 1. Required before starting
 
-**每个 L3 风格 skill 都带这张表，因为这是防止风格污染的关键。**
+| Required | Question |
+|---|---|
+| **① Which jazz style** | swing / bebop / modal / bossa / fusion / pop with a jazz flavour. **"Jazz" is not a single style**. Bossa grooves, instrumentation, and chord-change timing are covered in `mc-style-latin`; this skill covers only the harmony it borrows |
+| **② Is this jazz or "jazz-flavoured"** | ★ Determines how the §2 transfer table is used |
+| **③ Is there an improvised section** | If so, the form is completely different (§5) |
+| **④ Arrangement size** | ★ Measured: the median roster in the jazz corpus is **22 tracks**, against 36 for pop. **Jazz is achieved by subtraction** |
 
-| 手法 | 可搬吗 | 说明 |
+---
+
+## 2. ★ Transfer table: what can and cannot be carried over
+
+**Every L3 style skill carries this table, because it is the key to preventing style contamination.**
+
+| Technique | Transferable? | Notes |
 |---|---|---|
-| **二五一、副属、裏和弦** | ✅ **完全可搬** | 它们本来就在 `mc-harmony` 里。J-POP、city pop 大量使用 |
-| **张力音（9/11/13）** | ✅ 可搬 | 同上。但**密度要降**——流行里满编张力会变浑 |
-| **和弦–音阶思维** | ⚠️ **半搬** | 作为**选音依据**可搬；作为**即兴框架**不可搬（流行歌没有即兴段） |
-| **旋律小调的四个可用和弦** | ⚠️ 半搬 | 单个使用（如 Lydian Dominant 当色彩）可搬；**成串使用会立刻听成爵士** |
-| **变化属（Altered）** | ❌ **基本不可搬** | 一进流行就是"爵士味"，不是"高级" |
-| **减音阶 lick** | ❌ 不可搬 | 强烈的爵士语汇标记 |
-| **Sus 和弦的爵士用法** | ⚠️ 半搬 | ★ **F/G 这种分数属代理在 city pop 里是主力**（→ `mc-progressions` reference §3） |
-| **Comping 的节奏** | ❌ 不可搬 | 它假设有一个即兴者需要留空间 |
-| **Head–Solos–Head 曲式** | ❌ 不可搬 | 流行歌没有这个结构 |
-| **Swing 律动** | ⚠️ 半搬 | shuffle 在布鲁斯摇滚、R&B 里常见，但**摇摆的比例不同** |
-| **小编制、多留白** | ✅ **可搬，而且该搬** | 见 §7 |
+| **ii-V-I, secondary dominants, backdoor chords** | ✅ **Fully transferable** | They already live in `mc-harmony`. Used heavily in J-POP and city pop |
+| **Tension notes (9/11/13)** | ✅ Transferable | Same as above. But **reduce the density**; in pop, full tension stacks become muddy |
+| **Chord-scale thinking** | ⚠️ **Partly transferable** | Transferable as a **basis for choosing notes**; not transferable as an **improvisational framework** (pop songs have no improvised sections) |
+| **The four usable chords of the melodic minor** | ⚠️ Partly transferable | Used singly (e.g. Lydian Dominant as colour) they transfer; **used in a series they immediately sound like jazz** |
+| **Altered dominants** | ❌ **Largely not transferable** | As soon as they enter pop, they sound "jazzy", not "sophisticated" |
+| **Diminished-scale licks** | ❌ Not transferable | Strong markers of jazz vocabulary |
+| **Jazz use of sus chords** | ⚠️ Partly transferable | ★ **Slash-chord dominant substitutes such as F/G are the mainstay in city pop** (→ `mc-progressions` reference §3) |
+| **Comping rhythm** | ❌ Not transferable | It assumes an improviser who needs room |
+| **Head–Solos–Head form** | ❌ Not transferable | Pop songs do not have this structure |
+| **Swing feel** | ⚠️ Partly transferable | Shuffle is common in blues-rock and R&B, but **the swing ratio differs** |
+| **Small ensembles, lots of space** | ✅ **Transferable, and should be transferred** | See §7 |
 
-★ **一条判据**：
-> **能不能搬，看它假不假设"有一个人正在即兴"。**
-> 假设了的（comping 节奏、solo 结构、外音的处理）不能搬；
-> 没假设的（和声资源、编制哲学）能搬。
+★ **One test**:
+> **Whether something can be carried over depends on whether it assumes "a person is improvising right now".**
+> If it assumes this (comping rhythm, solo structure, the handling of outer-sounding notes), it cannot be carried over;
+> if it does not (harmonic resources, the philosophy of ensemble size), it can.
 
 ---
 
-## 3. 和弦–音阶
+## 3. Chords and scales
 
-### 3.1 核心思路
+### 3.1 Core idea
 
-**每个和弦对应一个（或几个）音阶，音阶决定可用音。**
-这是爵士乐理与古典功能和声最大的思维差异：
-**古典问"这个音要解决到哪"，爵士问"这个和弦上哪些音能用"。**
+**Each chord corresponds to one (or several) scales, and the scale determines the usable notes.**
+This is the biggest difference in thinking between jazz theory and classical functional harmony:
+**classical theory asks "where does this note resolve to?", while jazz asks "which notes are usable over this chord?"**
 
-| 调式 | 和弦 |
+| Mode | Chord |
 |---|---|
 | Ionian | △7 |
 | **Dorian** | m7 |
-| **Mixolydian** | 属7 |
-| Aeolian | m7（自然小调色彩） |
-| **Locrian** | **m7(♭5)**（半减） |
+| **Mixolydian** | Dominant 7 |
+| Aeolian | m7 (natural-minor colour) |
+| **Locrian** | **m7(♭5)** (half-diminished) |
 | **Lydian** | △7(♯11) |
 | Phrygian | Sus♭9 |
 
-### 3.2 避免音（Avoid Note）
+### 3.2 Avoid notes
 
-**不是"不能用"，是"不能停在上面"。**
-最典型：大调 II-V-I 里，**I△7 上的第 4 级**（与三音半音冲突）。
+**Not "cannot be used", but "should not be stopped on".**
+The most typical case: in a major-key ii-V-I, **the 4th degree over I△7** (which clashes a semitone with the major third).
 
-★ **Lydian 的用处就在这里**：把 4 升成 ♯4，**避免音消失**，
-所以 **△7(♯11) 比 △7 更"开"**。属七上的 ♯11 同理。
+★ **This is exactly where Lydian is useful**: raising the 4 to ♯4 makes the **avoid note disappear**,
+which is why **△7(♯11) sounds more "open" than △7**. The same applies to ♯11 on a dominant 7.
 
-> Levine 花了整章讲"**不协和音的再认识**"——爵士的历史就是不断把原本"不能用"的音收编进来。
+> Levine devotes a whole chapter to "**rethinking dissonance**": the history of jazz is the ongoing absorption of notes that were once "not allowed".
 
-### 3.3 ★ 旋律小调和声：爵士最核心的一块
+### 3.3 ★ Melodic minor harmony: the core of jazz
 
-**旋律小调音阶有 7 个调式，其中四个给出爵士的标志性和弦：**
+**The melodic minor scale has seven modes, four of which give jazz its signature chords:**
 
-| 调式 | 和弦 | 用处 |
+| Mode | Chord | Use |
 |---|---|---|
-| 第 1 级 | **小大七（mMaj7）** | 小调主和弦的爵士版 |
-| 第 2 级 | **Sus♭9** | |
-| 第 3 级 | **Lydian Augmented** | |
-| 第 4 级 | **Lydian Dominant**（属7♯11） | ★ 最常用，也**最容易搬到流行里** |
-| 第 6 级 | **半减（m7♭5）** | 小调二五的 II |
-| **第 7 级** | ★ **变化属（Altered）** | **爵士声音的核心** |
+| Degree 1 | **Minor-major 7 (mMaj7)** | The jazz version of the minor tonic chord |
+| Degree 2 | **Sus♭9** | |
+| Degree 3 | **Lydian Augmented** | |
+| Degree 4 | **Lydian Dominant** (dominant 7♯11) | ★ The most common, and also **the easiest to carry into pop** |
+| Degree 6 | **Half-diminished (m7♭5)** | The ii in a minor ii-V |
+| **Degree 7** | ★ **Altered dominant** | **The core of the jazz sound** |
 
-★★ **可互换性（Interchangeability）**：
-**同一个旋律小调音阶生成的这些和弦可以互相替代。**
-这是"调性思维"——你想的不是单个和弦，是**"现在在哪个旋律小调上"**。
+★★ **Interchangeability**:
+**The chords generated by the same melodic minor scale can substitute for one another.**
+This is tonal thinking: you are not thinking of individual chords, but of **"which melodic minor we are currently on"**.
 
-> **这一条是爵士与流行和声最大的分野。**
-> 流行和声是**和弦的序列**；爵士和声是**音阶区域的序列**，和弦只是它的切片。
+> **This is the biggest dividing line between jazz and pop harmony.**
+> Pop harmony is a **sequence of chords**; jazz harmony is a **sequence of scale regions**, with chords as slices through them.
 
-### 3.4 其余资源
+### 3.4 Other resources
 
-| 资源 | 用处 |
+| Resource | Use |
 |---|---|
-| **减音阶** | 配 dim7 与 V7♭9。★ **减七和弦是 V7♭9 的"伪装"**——bebop 之后直接用 V7♭9 替代减和弦。**以小三度重复**的规律让一个 voicing 通用于多个 V7♭9 |
-| **全音音阶** | 配增和弦、V7♯5 |
+| **Diminished scale** | Over dim7 and V7♭9. ★ **The diminished seventh chord is a "disguise" for V7♭9**: after bebop, V7♭9 is used directly in place of diminished chords. The **minor-third repetition** principle lets one voicing serve several V7♭9 chords |
+| **Whole-tone scale** | Over augmented chords and V7♯5 |
 
 ---
 
-### 3.9 ★ 布鲁斯和声：爵士、摇滚、R&B 共用的底座（陈云强）
+### 3.9 ★ Blues harmony: the foundation shared by jazz, rock, and R&B (Chen Yunqiang)
 
-本库以前只有"♭3 ♭5 ♭7 的擦音"一行。布鲁斯和声是一整套，页号出自《爵士和声》。
+The library previously had only one line on "the rasp of ♭3 ♭5 ♭7". Blues harmony is a complete system; page references come from *Jazz Harmony*.
 
-**功能骨架不可动**（p0192）：前四小节主功能 I7，第五六小节下属 IV7，第九十小节终止式。
-★ **只有在布鲁斯里，I 级可以用属七当主功能**（p0187）。
+**The functional skeleton is fixed** (p0192): the first four bars are tonic I7, bars five and six are subdominant IV7, and bars nine and ten form the cadence.
+★ **Only in the blues can the I chord use a dominant 7 as its tonic function** (p0187).
 
-**四种基础进行的演化**（p0186–0187）：只用 I 与 IV 的大三和弦 → 全部属七化 → 后四小节加 IV–V–I → 后四小节改 **V–IV–I**。
-★ **反向终止是布鲁斯独有的特征**。
+**Four stages of evolution of the basic progression** (p0186–0187): major triads on I and IV only → every chord made a dominant 7 → add IV–V–I in the last four bars → change the last four bars to **V–IV–I**.
+★ **Reverse cadences are a distinctive feature of the blues.**
 
-**可以变化的三个位置**（p0192–0193）：和声节奏的弱位、功能段落之间的连接处、和弦与和弦之间。逐小节的常见变化（p0193–0195）：
+**Three positions where change is possible** (p0192–0193): weak positions in the harmonic rhythm, junctions between functional sections, and between one chord and the next. Common bar-by-bar changes (p0193–0195):
 
-| 小节 | 变化 |
+| Bar | Change |
 |---|---|
 | 2 | I7 → IV7 |
-| 4 | I7 → III-7♭5（等于省根音的 I9） |
-| 5 | IV7 之后加 I7 |
-| 6 | IV7 之后加 **♯IV°7**（等于 IV7 加 ♭9 省根音），于是第 7 小节的 I7 用转位、五音作低音，让 IV → ♯IV° → I/5 的低音**半音上行** |
-| 8 | 加什么由第 9 小节第一个和弦决定：是 II-7 就加 V7/II，是 IV7 就加 III-7♭5 |
-| 9–10 | 可变 II-7 – V7 – I7 – ♭VII7 |
-| 11–12 | 加副属或扩展属 |
+| 4 | I7 → III-7♭5 (equivalent to an I9 with the root omitted) |
+| 5 | Add I7 after IV7 |
+| 6 | Add **♯IV°7** after IV7 (equivalent to IV7 with ♭9, root omitted), so that the I7 in bar 7 is used in inversion with the fifth in the bass, making the bass line move up by a **semitone** from IV → ♯IV° → I/5 |
+| 8 | What is added is determined by the first chord of bar 9: if it is II-7, add V7/II; if it is IV7, add III-7♭5 |
+| 9–10 | Variable II-7 – V7 – I7 – ♭VII7 |
+| 11–12 | Add a secondary or extended dominant |
 
-★ **判定与曲式解绑**（p0196）：用了 I7、IV7 加布鲁斯音阶（1 ♭3 4 ♯4 5 ♭7）就是布鲁斯，**不一定十二小节**，八小节十六小节同样常见。
+★ **Identifying the blues is decoupled from the form** (p0196): using I7 and IV7 with the blues scale (1 ♭3 4 ♯4 5 ♭7) makes it blues, **not necessarily twelve bars**; eight-bar and sixteen-bar forms are equally common.
 
-张力：**I7、IV7、V7 的 11 音都不可用**；I7 可把 ♭3 当 ♯9 用（p0189–0190）。
-和声与音阶之间的小二度撞击正是布鲁斯的味道，与 `mc-melody` reference §4 的说法互证。
-`mc-style-rock-band` 与 `mc-harmony` 都从这里取骨架。
+Tension: **the 11th over I7, IV7, and V7 is not usable**; on I7 the ♭3 can be used as ♯9 (p0189–0190).
+The minor-second clash between harmony and scale is precisely the flavour of the blues, and corroborates the account in `mc-melody` reference §4.
+`mc-style-rock-band` and `mc-harmony` both draw their skeletons from here.
 
-## 4. Comping（伴奏）
+## 4. Comping (accompaniment)
 
-**Comping 的全部要义是：为即兴者留空间。**
+**The whole point of comping is to leave room for the improviser.**
 
-| 原则 | 说明 |
+| Principle | Explanation |
 |---|---|
-| **不要填满** | ★ 这是它与流行伴奏最大的差别。流行伴奏在织体里占一个稳定的位置；comping **进进出出** |
-| **回应而非铺垫** | 听即兴者刚拉了什么，做出反应 |
-| **Voicing 省根音** | 低音交给贝斯。**三音和七音是骨架**（guide tones） |
-| **Sus 和弦的排列** | Levine 有专节（p0064）——它是"不解决"的音响 |
+| **Do not fill everything** | ★ This is its biggest difference from pop accompaniment. Pop accompaniment holds a stable place in the texture; comping **comes and goes** |
+| **Respond, do not pad** | Listen to what the improviser has just played and react |
+| **Omit the root in voicings** | Leave the bass line to the bass player. **The 3rd and 7th are the skeleton** (guide tones) |
+| **Arranging sus chords** | Levine has a dedicated section (p0064): they are the "unresolved" sound |
 
-★ **移植警告**（§2）：**comping 的节奏不可搬到流行**。
-流行里没有即兴者，那些空隙会变成洞。
+★ **Transfer warning** (§2): **comping rhythm must not be carried into pop**.
+Pop has no improviser, so those gaps become holes.
 
 ---
 
-### 4.1 导音线：内声部怎么写（陈云强 p0093–0096）
+### 4.1 Guide-tone lines: how to write the inner voices (Chen Yunqiang p0093–0096)
 
-§4 说三音七音是骨架，这一节给做法。
+§4 says the 3rd and 7th are the skeleton; this section gives the method.
 
-**特征音**：七和弦的三音与七音；六和弦是三音与六音；**减七、半减、增七这类五音有变化的和弦，五音也是特征音**。
+**Characteristic notes**: the 3rd and 7th of seventh chords; the 3rd and 6th of sixth chords; **for chords with altered fifths such as diminished-7, half-diminished, and augmented-7, the fifth is also a characteristic note**.
 
-**连接规则**：根音走五度、四度、三度时，作 **3 → 7 或 7 → 3**；根音级进、三度或不动时，作 **3 → 3 或 7 → 7** 同向移动（三度时两种都可选）。
+**Connection rules**: when the root moves by a fifth, a fourth, or a third, the motion is **3 → 7 or 7 → 3**; when the root moves stepwise, or by a third, or stays put, the motion is **3 → 3 or 7 → 7** in the same direction (for a third-related move, either is allowed).
 
-**四种调整**，防止线条单调或声部太高太低：加入根音或五音（必要时加可用扩展音）；和弦持续时作八度跳进；和弦持续时把三音与七音对调；一段和声结束后重新安排起始音。
+**Four adjustments** to stop the line from becoming monotonous or the voices from sitting too high or too low: add the root or the fifth (adding usable extensions where needed); leap by octave while the chord is sustained; swap the 3rd and 7th while the chord is sustained; re-plan the starting note after a harmonic section ends.
 
-★ **它不只是爵士的**：这就是一条内声部或对位线的写法，写副旋律同样能用。All The Things You Are 的旋律主要就由导音线构成。
-`mc-counterpoint` §3 讲相对运动，这里讲选音。
+★ **It is not only for jazz**: this is a general method for writing inner voices or counterpoint lines, and it works equally for writing countermelodies. The melody of *All The Things You Are* is largely built from guide-tone lines.
+`mc-counterpoint` §3 covers relative motion; this section covers the choice of notes.
 
-## 5. 曲式：Head–Solos–Head
+## 5. Form: Head–Solos–Head
 
 ```
-Head（主题，一遍或两遍）
-  → Solo 1（按 head 的和声循环若干遍）
+Head (theme, once or twice)
+  → Solo 1 (cycling the head's harmony several times)
   → Solo 2 …
-  → （4s / 8s：与鼓手交换乐句）
-  → Head（再来一遍）
-  → 尾（tag / 渐弱 / 定型结尾）
+  → (4s / 8s: trading phrases with the drummer)
+  → Head (once more)
+  → Tag (tag / fade / defined ending)
 ```
 
-★ **与流行曲式的根本差别**：
-- **流行的结构是"内容的序列"**（主歌讲这个，副歌讲那个）
-- **爵士的结构是"同一个和声循环被走很多遍"**，内容由即兴者每遍填充
+★ **The fundamental difference from pop form**:
+- **Pop structure is a sequence of content** (verse says this, chorus says that)
+- **Jazz structure is the same harmonic cycle played many times**, with the content filled in on each pass by the improviser
 
-**所以 `form[].bars` 在爵士里的含义不同**：
-它是"一遍 chorus 有多少小节"（32 小节 AABA 是标准），**不是"这一段多长"**。
+**So the meaning of `form[].bars` differs in jazz**:
+it is "how many bars one chorus has" (32-bar AABA is the standard), **not "how long this section is"**.
 
-**常见 head 形式**：AABA（32 小节）、ABAC、12 小节布鲁斯。
-现成曲目见 Fake Book（附：来源）。
+**Common head forms**: AABA (32 bars), ABAC, 12-bar blues.
+For ready-made repertoire, see the Fake Book (source listed below).
 
 ---
 
-## 6. Bebop 的乐句法
+## 6. Bebop phrasing
 
-来自 Valerio：
+From Valerio:
 
-| 要素 | 要点 |
+| Element | Key point |
 |---|---|
-| **和声基础** | 延伸音（Extensions）＋ 变化音（Alterations） |
-| **互锁三和弦与七和弦** | 用上方结构三和弦去表达复杂和弦 |
-| **和声–旋律即兴** | 即兴线条同时是和声的陈述 |
-| **节奏** | — |
-| **乐句（Phrasing）** | — |
-| **重音（Accents）** | ★ bebop 的标志之一是**重音落在反拍** |
-| **轮廓（Contour）** | — |
+| **Harmonic foundation** | Extensions + alterations |
+| **Interlocking triads and sevenths** | Use upper-structure triads to express complex chords |
+| **Harmonic-melodic improvisation** | The improvised line is simultaneously a statement of the harmony |
+| **Rhythm** | — |
+| **Phrasing** | — |
+| **Accents** | ★ One of the hallmarks of bebop is **accents falling on the offbeat** |
+| **Contour** | — |
 
-**历史脉络**：Ragtime → Blues → Swing → Bebop。
-★ 知道这条脉络有用，因为**"爵士"这个词在不同年代指的是不同的音乐**（§1①）。
+**Historical line**: Ragtime → Blues → Swing → Bebop.
+★ Knowing this line is useful, because **the word "jazz" referred to different music in different decades** (§1①).
 
 ---
 
-## 7. ★ 实测：爵士编曲与流行编曲的差别
+## 7. ★ Measured: how jazz arrangements differ from pop arrangements
 
-**Cambridge-MT 语料，jazz-acoustic 10 首 vs 其余：**
+**Cambridge-MT corpus, jazz-acoustic (10 tracks) vs the rest:**
 
-| 指标 | jazz-acoustic | pop | rock | hiphop-rnb |
+| Metric | jazz-acoustic | pop | rock | hiphop-rnb |
 |---|---|---|---|---|
-| **roster 规模（中位）** | ★ **22 轨** | 36 | 30 | 37 |
-| **段落数（中位）** | 9 | 10 | 10 | 9 |
-| **开场就在场的乐器比例** | **16%** | 21% | **8%** | 24% |
-| **中途进场的乐器数** | ★ **20** | 29 | 26 | 26 |
-| **提前退场的乐器数** | ★ **10** | 16 | 18 | 28 |
+| **Roster size (median)** | ★ **22 tracks** | 36 | 30 | 37 |
+| **Number of sections (median)** | 9 | 10 | 10 | 9 |
+| **Share of instruments present at the opening** | **16%** | 21% | **8%** | 24% |
+| **Instruments entering mid-piece** | ★ **20** | 29 | 26 | 26 |
+| **Instruments leaving early** | ★ **10** | 16 | 18 | 28 |
 
-**三条可靠的读法**：
+**Three reliable readings**:
 
-1. ★ **爵士的编制明显更小（22 vs 36）** ——
-   部分因为它是**同期录音**，没有那么多叠录。
-   **这条可以搬**：小编制 + 每件都有事做，是爵士能给流行的最有价值的东西
-2. ★ **爵士的进出场事件也最少（20 进 / 10 退）** ——
-   它的变化不靠"换编制"，靠**同一组人演奏内容的变化**
-3. **hiphop-rnb 的提前退场最多（28）** ——它是最"减法"的风格
+1. ★ **Jazz rosters are clearly smaller (22 vs 36)** —
+   partly because it was **recorded live together**, with less overdubbing.
+   **This can be carried over**: a small ensemble with every part doing something is the most valuable thing jazz can offer pop.
+2. ★ **Jazz also has the fewest entry and exit events (20 entries / 10 exits)** —
+   its changes come not from **changing the ensemble**, but from **the same group of players varying the content**.
+3. **hiphop-rnb has the most early exits (28)** — it is the most "subtractive" style.
 
-> ⚠ **不可靠的读法**：BPM。检测出来 jazz 中位 117、范围 74–162，
-> 但 beat tracking 在摇摆律动上有已知的倍频误判。**不要引用这个数。**
+> ⚠ **Unreliable reading**: BPM. Detected jazz median is 117, range 74–162, but beat tracking has a known double-tempo error on swung grooves. **Do not cite this figure.**
 
 ---
 
-## 8. 与 ARR-SPEC 的字段对应
+## 8. Field mapping to ARR-SPEC
 
-| 字段 | 本 skill |
+| Field | This skill |
 |---|---|
 | `meta.style_layer` | `mc-style-jazz` |
-| `form[].harmony` | §3。★ 爵士里**和声是主角**，级数要写全 |
-| `form[].bars` | ★ §5——含义是"一遍 chorus 的长度" |
-| `arrangement.roster` | §7——**目标 20 轨出头，不是 36** |
+| `form[].harmony` | §3. ★ In jazz **harmony is the protagonist**, so degrees must be written out in full |
+| `form[].bars` | ★ §5 — means "the length of one chorus" |
+| `arrangement.roster` | §7 — **target just over 20 tracks, not 36** |
 | `groove.feel` | `swing16` / `shuffle` |
-| `render.*.style_prompt` | 写清是哪一支爵士（§1①），不要只写 `jazz` |
+| `render.*.style_prompt` | State which jazz style it is (§1①); do not write only `jazz` |
 
 ---
 
-## 9. 写完后必过
+## 9. Checks after writing
 
-- [ ] 说清了是**哪一支**爵士，不是笼统的 "jazz"
-- [ ] 查过 §2 移植表；从爵士搬出去的手法都在"可搬"列
-- [ ] 往爵士里搬东西时，检查过它会不会破坏"有人在即兴"这个前提
-- [ ] 和声写的是**音阶区域**的思维，不只是和弦序列（§3.3）
-- [ ] 编制**明显小于流行**（目标 20 出头，不是 36）
-- [ ] 有即兴段的话，`form[].bars` 的含义标注清楚了
-- [ ] Comping 留了空隙，**没有填满**
-- [ ] 没有把变化属/减音阶 lick 搬进流行歌（除非刻意要爵士味）
+- [ ] Specified **which** jazz style, not a generic "jazz"
+- [ ] Checked the §2 transfer table; every technique carried out of jazz is in the "transferable" column
+- [ ] When carrying something into jazz, checked whether it breaks the premise that "someone is improvising"
+- [ ] Harmony is thought of as **regions of scale**, not just a sequence of chords (§3.3)
+- [ ] Roster is **clearly smaller than pop** (target just over 20, not 36)
+- [ ] If there is an improvised section, the meaning of `form[].bars` is clearly labelled
+- [ ] Comping leaves gaps and **does not fill everything**
+- [ ] Altered dominants and diminished-scale licks have not been carried into pop songs (unless jazz flavour is intended)
 
 ---
 
-## 附：来源
+## Appendix: Sources
 
-- **Mark Levine《The Jazz Theory Book》**——
-  §3 全部主干（和弦–音阶、避免音、旋律小调和声与可互换性、减音阶、全音音阶）。
-- **Valerio《Bebop》**——§6。
-- **Fake Book**——曲目与 head 形式。
-- **Jazz Guitar Groove**——
-  CAGED、音阶模式、4 音符模进、半音修饰、三连音 pattern。
-  ★ **这本原被误归到 `mc-rhythm-section`，实际是即兴词汇，归本 skill 与 `mc-melody`。**
-- **实测数据**：Cambridge-MT 多轨实测（jazz-acoustic 10 首）。
-- 爵士和声钢琴实操
+- **Mark Levine, *The Jazz Theory Book***:
+  all of §3 (chord-scale, avoid notes, melodic minor harmony and interchangeability, diminished scale, whole-tone scale).
+- **Valerio, *Bebop***: §6.
+- **Fake Book**: repertoire and head forms.
+- **Jazz Guitar Groove**:
+  CAGED, scale patterns, four-note sequences, chromatic alterations, triplet patterns.
+  ★ **This book was originally misfiled under `mc-rhythm-section`; it is in fact improvisation vocabulary and belongs to this skill and `mc-melody`.**
+- **Measured data**: Cambridge-MT multitrack measurements (jazz-acoustic, 10 tracks).
+- Jazz harmony piano practice (practical companion to Chen Yunqiang's *Jazz Harmony*)

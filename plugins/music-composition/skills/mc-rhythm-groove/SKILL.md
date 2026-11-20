@@ -1,269 +1,270 @@
 ---
 name: mc-rhythm-groove
-description: Rhythm and groove as musical material (节奏与律动) - what a rhythm is before anyone plays it. Beat feel versus tempo as independent variables, the weight structure of the bar, syncopation and anticipation and the precondition both require, the three ingredients of groove, onbeat versus offbeat feel and bounce, the melody's three possible relationships with the backbeat, and the ways a rhythmic figure can be repeated, displaced, deformed and contrasted. Use when choosing a beat feel or tempo, when a groove is stiff or foursquare, when the melody and the rhythm pattern are fighting, when deciding where accents fall, or when a section needs rhythmic contrast. 节奏、律动、拍子、切分、先现、八beat、十六beat、shuffle、正拍反拍、hemiola。
+description: Rhythm and groove as musical material - what a rhythm is before anyone plays it. Beat feel versus tempo as independent variables, the weight structure of the bar, syncopation and anticipation and the precondition both require, the three ingredients of groove, onbeat versus offbeat feel and bounce, the melody's three possible relationships with the backbeat, and the ways a rhythmic figure can be repeated, displaced, deformed and contrasted. Use when choosing a beat feel or tempo, when a groove is stiff or foursquare, when the melody and the rhythm pattern are fighting, when deciding where accents fall, or when a section needs rhythmic contrast. rhythm, groove, meter, syncopation, anticipation, 8-beat, 16-beat, shuffle, on-beat/off-beat, hemiola.
 ---
 
-# 节奏与律动（Rhythm & Groove）
+# Rhythm and Groove
 
-**这个 skill 管的是：节奏本身是什么。**
-`mc-rhythm-section` 管的是：**怎么把它打出来像人。**
+**This skill covers: what rhythm itself is.**
+`mc-rhythm-section` covers: **how to play it so it sounds human.**
 
-两者的分界很干脆：
-- **"这首歌是 16 beat、贝司抢在反拍上" → 本 skill**
-- **"贝司抢 12 毫秒、hi-hat 量化 60%" → `mc-rhythm-section`**
+The line between them is clean:
+- **"This song is in 16 beat, the bass rushes on the off-beat" → this skill**
+- **"The bass rushes 12 ms, the hi-hat is 60% quantized" → `mc-rhythm-section`**
 
-## 按任务读哪几节
+## Which sections to read for each task
 
-| 任务 | 读 |
+| Task | Read |
 |---|---|
-| 定速度和 beat 感 | §2 |
-| 律动僵硬、四四方方 | §4 ＋ §5 |
-| 旋律和节奏型打架 | §6 |
-| 重音该放哪 | §3 ＋ §7 |
-| 段落之间节奏没对比 | §7 |
-| 想要摇摆/弹跳感 | §5.3 |
-| 变拍子 | §2.4 |
+| Set tempo and beat feel | §2 |
+| Groove is stiff, square | §4 + §5 |
+| Melody and rhythm pattern are fighting | §6 |
+| Where should accents fall | §3 + §7 |
+| No rhythmic contrast between sections | §7 |
+| Want swing / bounce | §5.3 |
+| Changing meter | §2.4 |
 
-## 边界
+## Boundary
 
-| 不归这里 | 归哪 |
+| Not covered here | Covered by |
 |---|---|
-| 量化、velocity 的具体数值、打得像不像人 | `mc-rhythm-section` |
-| 鼓组各件的编配规则、fill 放哪 | `mc-rhythm-section` reference |
-| 贝司与底鼓的搭配形态 | `mc-rhythm-section` §7 |
-| 旋律的时值设计 | `mc-melody` §5 |
-| 和声节奏（一小节几个和弦） | `mc-harmony` §1② |
-| 段落的能量曲线 | `mc-arrangement-arch` |
-| 某风格的典型节奏型 | `mc-style-*`（L3） |
-
----
-
-## 1. 动笔前必填
-
-| 必填 | 问法 |
-|---|---|
-| **① BPM 与 beat 感** | ★ **这是两个独立变量**（§2.1） |
-| **② 正拍感还是反拍感** | omote-nori / ura-nori（§5.2） |
-| **③ 有没有弹跳** | 直的、bounce、还是 shuffle |
-| **④ 旋律与 backbeat 的关系** | §6.2 的三选一 |
+| Quantization, specific velocity values, whether it plays like a human | `mc-rhythm-section` |
+| Arrangement rules for each drum-kit piece, where fills go | `mc-rhythm-section` reference |
+| How the bass and kick drum pair up | `mc-rhythm-section` §7 |
+| Note-value design of the melody | `mc-melody` §5 |
+| Harmonic rhythm (how many chords per bar) | `mc-harmony` §1② |
+| The energy curve of sections | `mc-arrangement-arch` |
+| The typical rhythmic figures of a given style | `mc-style-*` (L3) |
 
 ---
 
-## 2. 拍、拍子、重量结构
+## 1. Required before starting
 
-### 2.1 ★ 速度与 beat 感是两件事
-
-| | 定义 |
+| Required | Question to ask |
 |---|---|
-| **Tempo** | **拍的速度**（BPM = 每分钟拍数。BPM 60 → 1 拍 = 1 秒；BPM 120 → 1 拍 = 0.5 秒） |
-| **Beat 感**（8 beat / 16 beat） | **每一拍被细分得多密**（二等分 → 8 beat，四等分 → 16 beat） |
+| **① BPM and beat feel** | ★ **These are two independent variables** (§2.1) |
+| **② On-beat feel or off-beat feel** | omote-nori / ura-nori (§5.2) |
+| **③ Whether there is bounce** | Straight, bounce, or shuffle |
+| **④ The melody's relationship to the backbeat** | Pick one of the three in §6.2 |
 
-★ **两者独立**：同样的 hi-hat 绝对间隔，在 BPM 120 是 8 beat，在 BPM 60 听起来就是 16 beat。
+---
 
-**这条的实用价值**：想要"更密"不一定要加快，想要"更慢"不一定要减速。
-**先分清你要改的是哪一个。**
+## 2. Beat, meter, and weight structure
 
-### 2.2 4/4 的重量结构
+### 2.1 ★ Tempo and beat feel are two different things
 
-（两层二拍子叠起来：）**第 1 拍最强、第 2 拍弱、第 3 拍中强、第 4 拍最弱。**
+| | Definition |
+|---|---|
+| **Tempo** | **The speed of the beat** (BPM = beats per minute. BPM 60 → 1 beat = 1 second; BPM 120 → 1 beat = 0.5 seconds) |
+| **Beat feel** (8 beat / 16 beat) | **How densely each beat is subdivided** (halved → 8 beat, quartered → 16 beat) |
+
+★ **The two are independent**: the same absolute hi-hat interval is 8 beat at BPM 120, but at BPM 60 it sounds like 16 beat.
+
+**Practical value of this point**: wanting something "denser" does not necessarily mean speeding up; wanting "slower" does not necessarily mean reducing the tempo.
+**First establish which one you are changing.**
+
+### 2.2 The weight structure of 4/4
+
+(Two layers of duple meter stacked together:) **Beat 1 is strongest, beat 2 is weak, beat 3 is medium-strong, beat 4 is weakest.**
 
 ```
-◎    ○    大○   小○
-1    2     3     4
+◎    ○    ◯    ·
+1    2    3    4
+(◎ strongest, ○ weak, ◯ medium-strong, · weakest)
 ```
 
-**用处**：节奏型、**和弦更换的时机**、旋律重音，全都参照强拍来放置。
-★ **贝司必须在换和弦的强拍上放根音**——这是成品听起来"扎实"的原因。
+**Use**: rhythmic figures, **the timing of chord changes**, and melodic accents are all placed by reference to the strong beats.
+★ **The bass must play the root on strong beats where the chord changes** — this is why a finished product sounds "solid".
 
-### 2.3 表拍 / 裏拍
+### 2.3 On-beats / off-beats
 
-**表拍** = 拍点本身；**裏拍** = 拍与拍中间那个点。切多细跟着 §2.1 的 beat 感走：8 beat 里裏拍是八分音符的后半，16 beat 里还能再切出十六分音符的后半。
+**On-beat** = the beat point itself; **off-beat** = the point between beats. How finely you subdivide follows the beat feel in §2.1: in 8 beat, the off-beat is the second half of an eighth note; in 16 beat, you can subdivide further into the second half of a sixteenth note.
 
-这条定义本身不单独展开，它是三处判断的落点：切分／先现靠它区分"弱拍音"和"强拍音"（§3）、hi-hat 的强弱交替靠它排位（§4.1）、オモテノリ／ウラノリ的"动作起点在哪"也靠它定义（§5.2）。
+This definition is not expanded on its own; it is the anchor for three judgments: syncopation and anticipation use it to distinguish "weak-beat notes" from "strong-beat notes" (§3), the alternation of strong and weak hi-hat hits is positioned by it (§4.1), and where the "starting point of the motion" lies in omote-nori / ura-nori is also defined by it (§5.2).
 
-### 2.4 变拍子
+### 2.4 Changing meter
 
-- **段落级的变拍** = 戏剧性，但有裂成两首歌的风险——**用同一个旋律音型保持统一**
-- ★ **局部插一小节 2/4** = 副歌前的タメ，然后发射一个弱起——**这是常备手法**
-- **任何变拍处都要预先想好鼓和贝司要干什么**
+- **Meter changes at the section level** = dramatic, but risk splitting the piece into two songs — **keep it unified by using the same melodic figure**
+- ★ **Inserting one bar of 2/4 locally** = a *tame* (hesitation) before the chorus, then launching an upbeat — **this is a standard technique**
+- **At any meter change, decide in advance what the drums and bass are going to do**
 
 ---
 
-## 3. 切分与先现
+## 3. Syncopation and anticipation
 
-| | 做法 | 效果 |
+| | Method | Effect |
 |---|---|---|
-| **切分（Syncopation）** | 弱拍（或反拍）的音**用连线拉进后面的强拍** → 那个音被"强拍化" → 下一步**被拖后** | **タメ感、从容的滞后** |
-| **先现（Anticipation）** | 强拍的音**提前到前面的弱拍**上弹出 → 进行**提早到达** | **急迫、坐不住、向前冲** |
+| **Syncopation** | A note on a weak beat (or off-beat) is **tied across into the following strong beat** → that note is "made strong" → the next step is **pulled back** | **A *tame* feeling, a relaxed lag** |
+| **Anticipation** | A note belonging on a strong beat is **moved earlier onto the preceding weak beat** → the phrase **arrives early** | **Urgency, restlessness, driving forward** |
 
-### 3.1 ★ 两者共同的前提
+### 3.1 ★ The shared precondition of both
 
-> **听众必须已经清楚地感知到拍子。**
+> **The listener must already clearly perceive the beat.**
 >
-> 在无伴奏处、或歌曲刚开始拍子还没建立时使用，**不但无效，还会破坏拍感**。
+> Using them in an unaccompanied passage, or when the song has just started and the beat is not yet established, **is not only ineffective but also damages the sense of pulse**.
 
-这条解释了一个常见失败：开头就写一堆切分，结果听起来不是"有律动"而是"听不出拍子在哪"。
+This explains a common failure: writing a pile of syncopations at the very start, and the result sounds not like "has groove" but like "you can't tell where the beat is".
 
-### 3.2 无拍状态
+### 3.2 The unmetered state
 
-**无伴奏开场 + 平直时值**容易掉进**无拍状态**（拍子无法成组）——旋律本身音符间隔越均匀、长短对比越少，这个风险越高，要当心。
+**An unaccompanied opening + flat note values** easily falls into an **unmetered state** (the beats cannot be grouped) — the more evenly spaced and the less contrast in note lengths the melody has, the higher this risk, so be careful.
 
-★ 也可以反过来把它当技法用：中文歌曲写作里有专门的"**散板华彩式前奏**"——围绕主题的短小动机，铺开大量琶音或音阶走句，不受小节约束地自由伸展，用来描景或抒情（p0138）。
-两种用法的分界不是"能不能无拍"，是**无拍之后听众能不能等到一个清楚的拍点接住**：接得住是引子，接不住就是编曲事故。
+★ This can also be reversed and used as a technique: Chinese-language song writing has a specific form called the **"free-tempo cadenza-style prelude"** — short motifs built around the theme, spreading out with extensive arpeggios or scalar passages, stretching freely unconstrained by bar lines, used to paint a scene or express lyricism (p0138).
+The dividing line between the two uses is not "whether it is unmetered", but **whether, after the unmetered passage, the listener can wait for a clear beat point to catch it**: if it can be caught, it is an introduction; if not, it is an arrangement accident.
 
 ---
 
-## 4. 律动的三种成分
+## 4. The three ingredients of groove
 
-> **给机械的节拍加上强弱 = 律动的核心。**
+> **Adding strong and weak to a mechanical beat = the core of groove.**
 
-| 成分 | 说明 |
+| Ingredient | Explanation |
 |---|---|
-| **1. Velocity 的强弱** | velocity 字面意思是"击键速度"：越快，起音越尖锐、音越响 |
-| **2. 微小的时间偏移** | 偏离网格的人味 |
-| **3. 音的长度与空隙（休止）** | ★ 最容易被忽略的一条 |
+| **1. Velocity strong/weak** | Velocity literally means "key-striking speed": the faster, the sharper the attack and the louder the note |
+| **2. Small timing offsets** | The human quality of deviating from the grid |
+| **3. Note length and gaps (rests)** | ★ The most easily overlooked ingredient |
 
-### 4.1 8 beat 各件的 velocity 设计
+### 4.1 Velocity design for each piece of the 8-beat kit
 
-1. **Hi-hat**：每一拍内的两个八分音符**交替"强–弱"**
-2. **Snare**：第 2、4 拍在节拍上本是弱位，**故意打重就制造出前进的驱动力**（backbeat）
-3. **Kick**：第 1 拍强、第 3 拍反拍弱。
-   ★ **落在第 2 拍反拍的 kick，如果是"第 3 拍强拍提前一个八分"的先现，就当强的处理**
+1. **Hi-hat**: the two eighth notes within each beat **alternate "strong–weak"**
+2. **Snare**: beats 2 and 4 are inherently weak positions in the meter, but **deliberately hitting them hard creates forward drive** (backbeat)
+3. **Kick**: beat 1 strong, beat 3 weak on the off-beat.
+   ★ **A kick that falls on the off-beat of beat 2, if it is an anticipation of the beat-3 strong beat by an eighth note, is treated as strong**
 
-### 4.2 轻重的另一个来源（相对时间）
+### 4.2 Another source of lightness and weight (relative timing)
 
-> **军鼓比底鼓稍晚 = 重；稍早 = 轻。**
+> **Snare slightly late relative to the kick = heavy; slightly early = light.**
 
-★ 这条与 `mc-rhythm-section` §3 的 push_pull 是同一件事的两个层面：
-**这里说的是"要什么感觉"，那里说的是"偏移几毫秒"。**
+★ This rule and the push_pull in `mc-rhythm-section` §3 are two aspects of the same thing:
+**here it is about "what feeling you want", there it is about "how many milliseconds of offset".**
 
 ---
 
-## 5. 正拍感、反拍感与弹跳
+## 5. On-beat feel, off-beat feel, and bounce
 
-### 5.1 黏着拍子的代价
+### 5.1 The cost of gluing to the beat
 
-> 旋律全程黏着拍子 = 朴素、恳切、有力，但**四四方方**；
-> 而且伴奏就在拍点上敲，**旋律浮不出来**。
+> A melody that is glued to the beat throughout = plain, sincere, forceful, but **square**;
+> and when the accompaniment is hammered right on the beat points, **the melody cannot float up**.
 >
-> ★ **适度脱离拍子（错开起点 + 适时切分）→ 旋律从拍子上浮起来，自由开阔。**
+> ★ **Moderately detaching from the beat (offsetting the starting point + timely syncopation) → the melody floats up from the beat, free and expansive.**
 
-### 5.2 ウラノリ / オモテノリ
+### 5.2 Ura-nori / Omote-nori
 
-一种把**反拍/正拍当作每个动作起点**的律动意识（起 → 解决）。
+A rhythmic awareness that treats **off-beats or on-beats as the starting point of each motion** (initiate → resolve).
 
-| | 感觉 |
+| | Feeling |
 |---|---|
-| **オモテノリ**（正拍感） | 脚踏实地的稳、击打力 |
-| **ウラノリ**（反拍感） | 弹跳、流动的轻盈 |
+| **Omote-nori** (on-beat feel) | Grounded steadiness, striking force |
+| **Ura-nori** (off-beat feel) | Bounce, flowing lightness |
 
-★ **两者没有优劣，但律动决定哪些字被聚焦**
-（反拍感里，从反拍起头的字成为焦点）。
-**要强调某个字，就按律动去调整它的音符位置。**
+★ Neither is superior, but the groove determines **which syllables are brought into focus**
+(in an off-beat feel, syllables that start on the off-beat become the focus).
+**To emphasize a particular syllable, adjust its note position according to the groove.**
 
-- 8 beat 的旋律常在**四分音符的反拍**上动；16 beat 常在**八分音符的反拍**上动
-  → 切分/先现自然产生
+- Melodies in 8 beat often move on the **off-beat of quarter notes**; in 16 beat they often move on the **off-beat of eighth notes**
+  → syncopation and anticipation arise naturally
 
-### 5.3 Bounce 与 Shuffle
+### 5.3 Bounce and Shuffle
 
-| | 定义 |
+| | Definition |
 |---|---|
-| **Bounce** | 反拍的音**往后挪，靠近下一个正拍**（≒ 正拍的音变长）。**速度越慢，bounce 越大** |
-| **Shuffle** | bounce **固定在三连音的值上** |
+| **Bounce** | Off-beat notes are **pushed later, toward the next on-beat** (roughly, on-beat notes get longer). **The slower the tempo, the larger the bounce** |
+| **Shuffle** | Bounce is **fixed at the value of a triplet** |
 
-★ **在一首 bounce 的歌里，旋律用三连音不会违和。**
+★ **In a song with bounce, using triplets in the melody will not feel out of place.**
 
 ---
 
-## 6. 与节奏型的配合
+## 6. Working with rhythmic figures
 
-### 6.1 ★ 写旋律时脑子里要已经有节奏型
+### 6.1 ★ The rhythmic figure must already be in your head when writing the melody
 
-> **让旋律自带节奏型**：作曲时在脑子里播放一个 8 beat/16 beat 的律动，
-> 让旋律的运动在那个律动（ノリ）之内移动——
-> **避免"把旋律硬塞进一个现成的节奏型里"。**
+> **Let the melody carry its own rhythmic figure**: while composing, play an 8 beat / 16 beat groove in your head,
+> and let the melody's motion move within that groove (*nori*) —
+> **avoid "forcing the melody into a ready-made rhythmic figure".**
 
-### 6.2 旋律与 backbeat 的三种关系
+### 6.2 Three relationships between the melody and the backbeat
 
-（8 beat 里第 2、4 拍的军鼓）**三选一，必须选：**
+(The snare on beats 2 and 4 in 8 beat) **Choose one of three; you must choose:**
 
-1. 让旋律在 **backbeat 的位置休止** → 与 backbeat **一问一答**
-2. 不必严格空出，**有意识地让一让**就已经有效
-3. 反过来：旋律的强重音**与 backbeat 齐奏**——可以部分重叠，
-   在旋律休止处让 backbeat 透出来
+1. Let the melody **rest at the backbeat positions** → **call and response** with the backbeat
+2. Not necessarily a strict gap; **deliberately giving way slightly** is already effective
+3. The reverse: the melody's strong accents **play in unison with the backbeat** — they may partly overlap,
+   and where the melody rests, let the backbeat show through
 
-### 6.3 ★ 节奏型属于伴奏
+### 6.3 ★ The rhythmic figure belongs to the accompaniment
 
-> **在旋律里留空隙，让节奏型从空隙里透出来**（立体的音响）；
-> **不要用旋律去描摹/复制节奏型**——冗余、杂乱、互相抵消。
+> **Leave gaps in the melody so the rhythmic figure shows through from the gaps** (a three-dimensional sound);
+> **do not use the melody to trace or duplicate the rhythmic figure** — it is redundant, cluttered, and mutually cancelling.
 
-★ 这条是 `mc-melody` §9 诊断表里"被伴奏盖住"的第二个成因
-（第一个是开头和低音一起落在强拍）。
+★ This rule is the second cause of "being masked by the accompaniment" in the diagnostic table of `mc-melody` §9
+(the first is the opening and the bass landing together on strong beats).
 
 ---
 
-## 7. 节奏本身的运动
+## 7. Motion within the rhythm itself
 
-**节奏 = 成组的时值 + 重音位置。**
-★ **重音位置不同就是不同的节奏**；**高音天然充当重音**——
-光靠放置高音就能构建节奏；**交换正反位置（ウラオモテ）会彻底改变一个节奏的性格**。
+**Rhythm = grouped note values + accent positions.**
+★ **Different accent positions make a different rhythm**; **high notes naturally serve as accents** —
+a rhythm can be built by placing high notes alone; **swapping strong and weak positions (*ura-omote* reversal) completely changes the character of a rhythm**.
 
-| 手法 | 效果 |
+| Technique | Effect |
 |---|---|
-| **平直重复** | 稳定但僵硬。**把重复单元扩大到 2 小节以上可以减少拘谨感**；时值种类越少，重复效果越强、拘谨感越重 |
-| **错位重复** | 4/4 里重复 1.5 拍（附点四分）的单元；3/4 里重复 2 拍的单元 = **hemiola**。★ **错位本身产生张力** |
-| **变形重复** | 整体压缩 = 焦躁、迫切；整体扩张 = 从容安定；**用先现来加长反而更急迫** |
-| **局部重复** | 隔开一段之后从容地回应乐句尾 = **echo**（内省、心残り、自言自语）；把重复部分逐次缩短、逐拍压缩 = **たたみかける**（步步紧逼）= 急迫 |
-| **对比** | ★ **节奏形必须性格鲜明才能被辨认**；最易读的是**短时值组 vs 长时值组**；**把顺序倒过来的潜在对比**能防腻又不显得随意 |
+| **Straight repetition** | Stable but stiff. **Expanding the repeated unit to 2 bars or more reduces stiffness**; the fewer the note-value types, the stronger the repetition effect and the heavier the stiffness |
+| **Displaced repetition** | In 4/4, repeat a unit of 1.5 beats (dotted quarter); in 3/4, repeat a unit of 2 beats = **hemiola**. ★ **Displacement itself generates tension** |
+| **Deformed repetition** | Overall compression = agitation, urgency; overall expansion = unhurried calm; **lengthening with anticipation makes it even more urgent** |
+| **Local repetition** | After a gap, respond calmly to the end of a phrase = **echo** (introspection, lingering feeling, talking to oneself); progressively shortening the repeated part and compressing it beat by beat = ***tatamikakeru*** (pressing in step by step) = urgency |
+| **Contrast** | ★ **A rhythmic figure must have a distinct character to be recognized**; the easiest to read is **a group of short note values vs a group of long note values**; **a latent contrast by reversing the order** avoids monotony without seeming arbitrary |
 
-### 7.1 切分清晰度的两难
+### 7.1 The dilemma of syncopation clarity
 
-> **切分不清楚的节奏 = 啰嗦；切分太显然 = 乏味。**
+> **A rhythm whose syncopation is unclear = wordy; syncopation that is too obvious = dull.**
 >
-> **解法**：用"带钩子的"时值和拍位累积张力，然后在一个平白的位置释放——**开放感**。
+> **Solution**: build tension with "hooked" note values and beat positions, then release it on a plain position — **a sense of openness**.
 
 ---
 
-## 8. 与 ARR-SPEC 的字段对应
+## 8. Correspondence with ARR-SPEC fields
 
-| 字段 | 本 skill |
+| Field | This skill |
 |---|---|
-| `meta.tempo` | §2.1（★ 与 beat 感分开决定） |
-| `meta.meter` | §2.2、§2.4 |
-| `arrangement.groove.feel` | §5（straight / swing16 / shuffle / halftime …） |
-| `form[].note` | 变拍子写在这里 |
+| `meta.tempo` | §2.1 (★ decided separately from beat feel) |
+| `meta.meter` | §2.2, §2.4 |
+| `arrangement.groove.feel` | §5 (straight / swing16 / shuffle / halftime …) |
+| `form[].note` | Meter changes are written here |
 
-★ **`groove.feel` 与 `meta.tempo` 是两个独立字段，正是因为 §2.1 那条。**
-
----
-
-## 9. 写完后必过
-
-- [ ] **BPM 与 beat 感是分别决定的**，不是"快歌就 16 beat"
-- [ ] 正拍感/反拍感选定了，且重要的字落在被该律动聚焦的位置
-- [ ] 用切分/先现的地方，**拍子已经建立**（不在开头无伴奏处）
-- [ ] 旋律与 backbeat 的关系是 §6.2 三种里**选定的一种**
-- [ ] ★ **旋律没有描摹节奏型**，留了空隙让节奏型透出来
-- [ ] 段落之间有**节奏对比**（最易读的是短时值组 vs 长时值组）
-- [ ] 重复的地方用了错位/变形/局部中的至少一种，不是平直重复到底
-- [ ] 变拍处想好了鼓和贝司怎么办
+★ **`groove.feel` and `meta.tempo` are two independent fields, precisely because of §2.1.**
 
 ---
 
-## 和声换得多快也是律动的一部分
+## 9. Must-pass checks after writing
 
-`mc-harmony` 管一小节放几个和弦，这里管它对律动的后果：
+- [ ] **BPM and beat feel are decided separately**, not "fast songs are 16 beat"
+- [ ] On-beat feel or off-beat feel has been chosen, and important syllables land where that groove focuses them
+- [ ] Wherever syncopation or anticipation is used, **the beat is already established** (not in an unaccompanied opening)
+- [ ] The melody's relationship to the backbeat is **one selected** from the three in §6.2
+- [ ] ★ **The melody does not trace the rhythmic figure**; gaps are left for the rhythmic figure to show through
+- [ ] Sections have **rhythmic contrast** (the easiest to read is a group of short note values vs a group of long note values)
+- [ ] Repetitions use at least one of displaced, deformed or local repetition, not straight repetition throughout
+- [ ] At meter changes, it is decided what the drums and bass will do
 
-- **和声节奏加倍是推进，减半是松弛**。同一段 groove，和弦从每两小节一换改成每小节一换，听感速度就上去了，鼓一个音都不用动
-- **主歌与副歌用不同的和声节奏，本身就是段落对比**，而且是最省编制的一种：Kachulis 用同一进行的两种节奏变奏做主副歌（`mc-harmony` reference §6）
-- 和声节奏与鼓的重音周期错位，会产生与 `mc-orchestration` §3.9 节奏性强调同样的"失重"感，可用也可祸，写进规格单说清是哪一种
+---
 
-## 附：来源
+## Harmonic rhythm is also part of groove
 
-- **《できる ゼロからはじめる作曲 超入門》、《もっと！思いどおりに作曲ができる本》第 1 章＋高山博《ポピュラー音楽作曲のための旋律法 増補版》讲音长与节奏的一章**——全部主干。
-- **归别处的部分**：鼓组基本型与 GM 映射、velocity 数值、fill 的扩展规则（1→2→4→8 小节）
-  → `mc-rhythm-section` [reference.md](../mc-rhythm-section/reference.md)；
-  旋律的时值设计 → `mc-melody` §5。
-- **吴祖强《曲式与作品分析》**第二章"节奏与节拍"——古典体系的对照。
-- **朱敬修主编《歌曲写作基础》**——§3.2 的"散板华彩式前奏"。
-- 各风格的具体律动（swing 的比例、trap 的 hi-hat、bossa 的 clave）→ **L3 风格层**。
+`mc-harmony` covers how many chords sit in a bar; here we cover its consequences for groove:
+
+- **Doubling the harmonic rhythm is propulsion; halving it is relaxation.** On the same groove, changing chords from once every two bars to once per bar raises the perceived speed, without moving a single drum hit
+- **Using different harmonic rhythms for verse and chorus is itself a section contrast**, and it is the most economical in lineup: Kachulis uses two rhythmic variations of the same progression for verse and chorus (`mc-harmony` reference §6)
+- When the harmonic rhythm is out of phase with the drums' accent cycle, it produces the same sense of "weightlessness" as the rhythmic emphasis in `mc-orchestration` §3.9; it can be useful or harmful, so state in the spec sheet which one it is
+
+## Appendix: Sources
+
+- **"Zero to Composing: Super Introduction" (できる ゼロからはじめる作曲 超入門), "Compose the Way You Want: Even More!" (もっと！思いどおりに作曲ができる本), Chapter 1, plus Takayama Hiroshi, "Melody Writing for Popular Music, Expanded Edition" (ポピュラー音楽作曲のための旋律法 増補版), the chapter on note length and rhythm** — the entire main body.
+- **Parts covered elsewhere**: basic drum-kit patterns and the GM mapping, velocity values, the fill extension rules (1→2→4→8 bars)
+  → `mc-rhythm-section` [reference.md](../mc-rhythm-section/reference.md);
+  note-value design of the melody → `mc-melody` §5.
+- **Wu Zuqiang, "Musical Form and Analysis"** (曲式与作品分析), Chapter 2 "Rhythm and Meter" — a comparison with the classical system.
+- **Zhu Jingxiu (ed.), "Fundamentals of Song Writing"** (歌曲写作基础) — the "free-tempo cadenza-style prelude" in §3.2.
+- Specific grooves for each style (swing ratios, trap hi-hats, bossa clave) → **L3 style layer**.

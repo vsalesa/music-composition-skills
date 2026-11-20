@@ -1,320 +1,320 @@
 ---
 name: mc-symbolic-score
-description: Compiling ARR-SPEC into symbolic notation (符号乐谱输出) - ABC, MusicXML and MIDI from one emitter. Why the symbolic path matters (it is the only fully reproducible output and the only way YuE2 executes rather than guesses), the field-by-field mapping from spec to ABC headers and body, roman numerals to letter chords, multi-voice and per-part output, what each target format can and cannot carry, MIDI CC and velocity for expression, and the verification loop that catches a bad emit before it reaches a synth. Use when producing ABC for YuE2, when exporting MIDI or MusicXML for a DAW, when a deterministic reference render is needed for A/B, or when an LLM should write notation directly. 符号乐谱、ABC、MusicXML、MIDI、打ち込み、直出乐谱、确定性渲染。
+description: Compiling ARR-SPEC into symbolic notation (symbolic score output) - ABC, MusicXML and MIDI from one emitter. Why the symbolic path matters (it is the only fully reproducible output and the only way YuE2 executes rather than guesses), the field-by-field mapping from spec to ABC headers and body, roman numerals to letter chords, multi-voice and per-part output, what each target format can and cannot carry, MIDI CC and velocity for expression, and the verification loop that catches a bad emit before it reaches a synth. Use when producing ABC for YuE2, when exporting MIDI or MusicXML for a DAW, when a deterministic reference render is needed for A/B, or when an LLM should write notation directly. Keywords: symbolic score, ABC, MusicXML, MIDI, uchikomi (MIDI programming), direct notation output, deterministic rendering.
 ---
 
-# 符号乐谱输出（Symbolic Score）
+# Symbolic Score Output
 
-**一个发射器，四个目标格式，两个用途。**
+**One emitter, four target formats, two purposes.**
 
 ```
-ARR-SPEC（+ meta.upstream.lyrics 的歌词）
+ARR-SPEC (+ lyrics from meta.upstream.lyrics)
    ↓  mc-symbolic-score
-   ├─→ ABC        → YuE2 的 abc= 输入（★ 让规格被"执行"而不是"提示"）；大模型的母语
-   ├─→ MusicXML   → 记谱软件 / 交接给乐手（领奏谱：旋律、和弦、歌词、段落、力度、换气）
-   ├─→ MIDI       → DAW ＋ 音源，确定性渲染
-   └─→ ChordPro   → 吉他手、排练（段落、和弦、歌词）
+   ├─→ ABC        → YuE2's abc= input (★ lets the spec be "executed" rather than "hinted"); the native language of large models
+   ├─→ MusicXML   → notation software / handing to musicians (lead sheet: melody, chords, lyrics, sections, dynamics, breaths)
+   ├─→ MIDI       → DAW + sound source, deterministic rendering
+   └─→ ChordPro   → guitarists, rehearsal (sections, chords, lyrics)
 ```
 
-**为什么是同一个发射器**：ABC ↔ MusicXML ↔ MIDI 可互转，ChordPro 是前三者的子集，
-四者承载的是同一套信息（音高、时值、小节、调号、拍号、力度、和弦、歌词）。
-**分成四个 skill 会让同一份规格产生四份不一致的乐谱。** 规格单可执行字段的拼写就是按这四种格式定的（schema §1.3.1、§4），发射器不需要翻译符号。
+**Why one emitter**: ABC, MusicXML and MIDI can be converted into one another, ChordPro is a subset of the first three,
+and all four carry the same information (pitch, duration, bar, key, time signature, dynamics, chords, lyrics).
+**Splitting this into four skills would produce four inconsistent scores from the same spec.** The spelling of the executable fields in the spec is defined by these four formats (schema §1.3.1, §4), so the emitter does not need to translate notation.
 
-## 按任务读哪几节
+## Which sections to read for each task
 
-| 任务 | 读 |
+| Task | Read |
 |---|---|
-| 给 YuE2 供谱 | §3 ABC ＋ §7 |
-| 出 MIDI 给 DAW | §5 |
-| 出 MusicXML 交给乐手 | §4 |
-| 要一个 AB 的确定性基准 | §2.2 |
-| 级数转字母 | §3.3 |
-| 表情/力度怎么写进 MIDI | §5.2 |
-| 发射完怎么验 | §8 |
+| Supplying a score to YuE2 | §3 ABC + §7 |
+| Exporting MIDI for a DAW | §5 |
+| Exporting MusicXML for musicians | §4 |
+| A deterministic baseline for A/B | §2.2 |
+| Converting roman numerals to letters | §3.3 |
+| How to write expression/dynamics into MIDI | §5.2 |
+| How to verify after emitting | §8 |
 
-## 边界
+## Boundaries
 
-| 不归这里 | 归哪 |
+| Not covered here | Where it lives |
 |---|---|
-| 提示词、段落标签、后端选择 | `mc-render-compile` |
-| 旋律/和声/对位的内容本身 | L1 各 skill |
-| 用什么音源、采样库选型、keyswitch | 不归本包（用哪家音源由制作环境定）；MIDI CC 在配器上的含义归 `mc-orchestration` reference §5 |
-| MIDI CC 在配器上的含义 | `mc-orchestration` reference §5 |
-| 量化、velocity 的**律动**设计 | `mc-rhythm-section` |
-| 记谱法的完整规范（连音线、装饰音写法） | [reference.md](reference.md) |
+| Prompts, section tags, backend selection | `mc-render-compile` |
+| The content of melody, harmony, and counterpoint themselves | The L1 skills |
+| Which sound source to use, sample library selection, keyswitches | Not covered by this package (the production environment decides which sound source to use); the meaning of MIDI CCs in orchestration is covered in `mc-orchestration` reference §5 |
+| The meaning of MIDI CCs in orchestration | `mc-orchestration` reference §5 |
+| The **groove** design of quantisation and velocity | `mc-rhythm-section` |
+| Full notation specification (ties, slurs, ornament notation) | [reference.md](reference.md) |
 
 ---
 
-## 1. 动笔前必填
+## 1. Required before starting
 
-| 必填 | 问法 |
+| Required | Question |
 |---|---|
-| **① 目标格式** | ABC / MusicXML / MIDI / ChordPro。**能承载的不一样**（§6）；`meta.deliverable` 里列了哪些就发哪些 |
-| **② 声部数** | 只发主旋律+和弦？还是全谱？ |
-| **③ 谁来读** | YuE2 / DAW / 人。**决定详细程度** |
-| **④ 这次是不是做基准** | 是的话**所有随机性都要关掉** |
+| **① Target format** | ABC / MusicXML / MIDI / ChordPro. **What each can carry differs** (§6); emit whichever ones are listed in `meta.deliverable` |
+| **② Number of parts** | Only the main melody plus chords? Or the full score? |
+| **③ Who will read it** | YuE2 / DAW / a person. **Determines the level of detail** |
+| **④ Is this run a baseline** | If yes, **turn off all randomness** |
 
 ---
 
-## 2. 为什么要走符号路径
+## 2. Why take the symbolic path
 
-### 2.1 它是唯一能让规格被"执行"的路
+### 2.1 It is the only route by which the spec can be "executed"
 
-其余后端都只能"提示"。YuE2 的合成步骤**直接吃 ABC**——
-`form[].harmony_letters` / `meta.key` / `meta.meter` / `meta.tempo`
-编译成 ABC 之后，**它们就不再是建议了**。
+Every other backend can only "hint". YuE2's synthesis step **takes ABC directly**:
+once `form[].harmony_letters` / `meta.key` / `meta.meter` / `meta.tempo`
+are compiled into ABC, **they are no longer suggestions**.
 
-> 把模型自己的符号规划那一步**整个旁路掉**，把我们的 ABC 直接送进合成步骤。
-> 支持 YuE2 的载体都能这么接（见 `mc-render-compile` §8.2）；怎么接线是用户环境的事。
+> Bypass the model's own symbolic-planning step entirely, and send our ABC directly into the synthesis step.
+> Any host that supports YuE2 can connect this way (see `mc-render-compile` §8.2); how the wiring is done is up to the user's environment.
 
-### 2.2 它是唯一完全可复现的输出
+### 2.2 It is the only fully reproducible output
 
-> **同一份规格渲染出来永远一样。**
+> **The same spec always renders identically.**
 
-这让它成为 **AB 实验的控制变量基准**：
-想知道"改这一个字段到底带来多大差别"，用符号路径渲染两版，差别 100% 来自那个字段。
-生成后端做不到这一点（即使固定种子，改提示词也会改变别的东西）。
+This makes it the **controlled baseline for A/B experiments**:
+to find out exactly how much difference a single field makes, render two versions via the symbolic path, and the difference is 100% attributable to that field.
+Generation backends cannot do this: even with a fixed seed, changing the prompt changes other things too.
 
-### 2.3 日式打ち込み 工作流本来就是这个形态
+### 2.3 The Japanese uchikomi (MIDI programming) workflow already has this shape
 
-LLM 直出 MIDI/MusicXML，进 DAW，配音源。
-★ **这条路没有人声**，人声要另接（或走生成后端做人声、符号路径做伴奏）。
+An LLM writes MIDI/MusicXML directly, which goes into a DAW, and a sound source is attached.
+★ **This route has no vocals**: vocals must be connected separately (or use a generation backend for vocals and the symbolic path for the accompaniment).
 
 ---
 
-## 3. ABC 的映射
+## 3. ABC mapping
 
-### 3.1 头部（Header）
+### 3.1 Header
 
-| ABC 字段 | 来自 | 例 |
+| ABC field | Source | Example |
 |---|---|---|
-| `X:` | 固定 1 | `X:1` |
+| `X:` | Fixed at 1 | `X:1` |
 | `T:` | `meta.title` | `T:Night Drive` |
 | `M:` | `meta.meter` | `M:4/4` |
-| `L:` | 默认单位时值（通常 1/8 或 1/16） | `L:1/8` |
+| `L:` | Default unit note length (usually 1/8 or 1/16) | `L:1/8` |
 | `Q:` | `meta.tempo` | `Q:1/4=112` |
 | `K:` | `meta.key` | `K:D` |
 
-★ **`tempo_map` 有多项时**：`Q:` 取首项，后续变速写成小节内的 `[Q:...]` 内联域。
+★ **When `tempo_map` has several entries**: `Q:` takes the first entry; later tempo changes are written as inline `[Q:...]` fields within the bar.
 
-### 3.2 主体
+### 3.2 Body
 
-| 内容 | 来自 | 写法 |
+| Content | Source | Notation |
 |---|---|---|
-| 小节线 | `form[].bars` / `start_bar` | `|` |
-| 段落标记 | `form[].id` + `name` | ★ **写成注释 `%` 或 `[P:A1]` 分段标记**，见 §7.2 |
-| 和弦 | `form[].harmony_letters` | `"F#m7"` 放在音符前的引号里 |
-| 旋律 | L1 写的旋律 | 标准 ABC 音高记号 |
-| 反复 | 段落重复 | `|:` `:|`。★ **慎用**——见 §3.4 |
+| Barlines | `form[].bars` / `start_bar` | `|` |
+| Section markers | `form[].id` + `name` | ★ **Written as a comment `%` or a `[P:A1]` section marker**; see §7.2 |
+| Chords | `form[].harmony_letters` | `"F#m7"`, placed in quotes before the note |
+| Melody | Melody written at L1 | Standard ABC pitch notation |
+| Repeats | Section repetition | `|:` `:|`. ★ **Use sparingly**; see §3.4 |
 
-### 3.3 ★ 级数 → 字母
+### 3.3 ★ Roman numerals → letters
 
-**ARR-SPEC 里 `harmony` 是级数、`harmony_letters` 是字母，两者双记。
-发射 ABC 时用字母，但必须校验两者一致。**
+**In ARR-SPEC, `harmony` is in roman numerals and `harmony_letters` is in letters; both are recorded.
+When emitting ABC, use the letters, but you must verify that the two agree.**
 
-**校验动作**：把 `harmony_letters` 按 `meta.key` 反推成级数，
-与 `harmony` 逐和弦比对。**对不上就是规格里有笔误**——
-这是 ARR-SPEC 双记号约定的实际用处，不只是为了可读。
+**Verification step**: convert `harmony_letters` back into roman numerals using `meta.key`,
+and compare chord by chord against `harmony`. **A mismatch means there is a typo in the spec**.
+This is what the dual-notation convention in ARR-SPEC is actually for, not only for readability.
 
-移调表见 `mc-progressions` [reference.md](../mc-progressions/reference.md) §8。
+For the transposition table, see `mc-progressions` [reference.md](../mc-progressions/reference.md) §8.
 
-### 3.4 ★ 反复记号的陷阱
+### 3.4 ★ The repeat-sign trap
 
-ABC 的 `|: :|` 会让**两遍完全一样**。
-但本库的 lint #16 要求**副歌逐遍有变化**——
-**所以多数情况下不要用反复记号，要把每一遍展开写。**
+ABC's `|: :|` makes **two passes come out exactly identical**.
+But lint #16 in this library requires **each pass of the chorus to be different**,
+**so in most cases do not use repeat signs; write out every pass.**
 
-★ **例外**：确实完全一样的段落（比如纯器乐的 vamp）可以用反复。
-但**副歌永远展开写**。
+★ **Exception**: sections that really are identical (for example an instrumental vamp) may use repeats.
+**But choruses are always written out in full.**
 
 ---
 
 ## 4. MusicXML
 
-**用途**：交给记谱软件、交给乐手。
+**Purpose**: handing to notation software and to musicians.
 
-**它比 ABC 多能承载的**：
-- 完整的谱表布局、声部分配
-- 演奏法记号（弓法、连音线、articulation）
-- 力度记号（p / mf / f 及渐变）
-- 歌词（逐音节对齐）
+**What it can carry beyond ABC**:
+- Full staff layout and part assignment
+- Performance markings (bowing, slurs, articulation)
+- Dynamic markings (p / mf / f and gradual changes)
+- Lyrics (aligned syllable by syllable)
 
-**它比 MIDI 多能承载的**：**记谱意图**（同一个音高时值，是升记号还是降记号、是三连音还是附点）。
+**What it can carry beyond MIDI**: **notational intent** (the same pitch and duration, whether it is written as a sharp or a flat, as a triplet or a dotted note).
 
-★ **什么时候必须用它**：`mc-orchestration` 的产出要交给真人演奏时。
-ABC 和 MIDI 都表达不了弓法和分谱。
+★ **When it is mandatory**: when the output of `mc-orchestration` is to be played by real musicians.
+Neither ABC nor MIDI can express bowing or separate instrument parts.
 
 ---
 
 ## 5. MIDI
 
-### 5.1 基本映射
+### 5.1 Basic mapping
 
-| 内容 | 来自 |
+| Content | Source |
 |---|---|
-| 音符 | 旋律与和声 |
-| 轨道/通道 | `arrangement.roster[]`，一件一轨 |
-| 音源映射 | `roster[].midi`（`{program, bank, channel}`，GM 号，鼓组 channel 10）；`render.midi.instrument_map` 只放 VST 名等备注 |
-| 速度 | `meta.tempo` / `tempo_map` |
+| Notes | Melody and harmony |
+| Tracks / channels | `arrangement.roster[]`, one instrument per track |
+| Sound source mapping | `roster[].midi` (`{program, bank, channel}`, GM numbers; drum kit on channel 10); `render.midi.instrument_map` holds only notes such as VST names |
+| Tempo | `meta.tempo` / `tempo_map` |
 
-### 5.2 ★ 表情：velocity 与 CC
+### 5.2 ★ Expression: velocity and CC
 
-**MIDI 相对 ABC 的最大优势是能写连续控制。**
+**MIDI's biggest advantage over ABC is that it can write continuous controls.**
 
-| 来自 ARR-SPEC | 写成 |
+| From ARR-SPEC | Written as |
 |---|---|
-| `arrangement.energy_curve` | **CC11（表情）曲线** ＋ velocity 层次 |
-| `vocal.dynamics_by_section` | 人声轨的 CC11（若有人声音源） |
-| `groove.push_pull` | ★ **音符位置的实际偏移**（这是唯一能精确执行 push_pull 的路径） |
-| `groove.quantize_policy` | 逐轨的量化程度 |
-| `roster[].synth_params` | 音源参数或 CC74（亮度）等 |
+| `arrangement.energy_curve` | **CC11 (expression) curve** + velocity layering |
+| `vocal.dynamics_by_section` | CC11 on the vocal track (if there is a vocal sound source) |
+| `groove.push_pull` | ★ **Actual offsets of note positions** (the only route that executes push_pull precisely) |
+| `groove.quantize_policy` | Quantisation amount per track |
+| `roster[].synth_params` | Sound source parameters or CC74 (brightness), etc. |
 
-★ **CC7 与 CC11 的分工不能混**（→ `mc-orchestration` reference §5.1）：
-- **CC7** 定这一轨在配器里的**位置**
-- **CC11** 定**这一句怎么呼吸**
+★ **The division of labour between CC7 and CC11 must not be mixed** (→ `mc-orchestration` reference §5.1):
+- **CC7** sets this track's **position** in the orchestration
+- **CC11** sets **how this phrase breathes**
 
-混用的结果是"推了推子但乐句还是死的"。
+Mixing them produces "the faders were pushed but the phrase is still lifeless".
 
-### 5.3 ★ 符号路径上 push_pull 是 exact
+### 5.3 ★ push_pull is exact on the symbolic path
 
-`backends.yaml` 里 symbolic 后端的 `groove` 相关项是 **exact**——
-因为音符位置可以精确写。
-**这是验证"push_pull 到底有没有用"的唯一可靠手段**：
-同一份谱，一版对齐网格、一版按 push_pull 偏移，直接对比。
+The groove-related entries for the symbolic backend in `backends.yaml` are **exact**,
+because note positions can be written precisely.
+**This is the only reliable way to verify whether push_pull actually makes a difference**:
+for the same score, produce one version aligned to the grid and one offset by push_pull, and compare them directly.
 
 ---
 
-## 6. 四种格式能承载什么
+## 6. What each of the four formats can carry
 
 | | ABC | MusicXML | MIDI | ChordPro |
 |---|---|---|---|---|
-| 音高/时值/小节 | ✅ | ✅ | ✅ | ❌ 只有段落 |
-| 调号/拍号/速度 | ✅ | ✅ | ✅ | ✅ 头部指令 |
-| 和弦符号 | ✅ | ✅ | ⚠ 只能作为文本事件 | ✅ |
-| 歌词 | ✅ 基本 | ✅ 完整 | ⚠ 只能作为文本事件 | ✅ |
-| **记谱意图**（升/降、三连音写法） | 部分 | ✅ | ❌ | ❌ |
-| **演奏法记号**（弓法、articulation） | ❌ | ✅ | ⚠ 只能靠 CC/keyswitch 近似 | ❌ |
-| **连续控制**（CC 曲线） | ❌ | ❌ | ✅ | ❌ |
-| **微时间偏移**（push_pull） | ❌ | ❌ | ✅ | ❌ |
-| **YuE2 直接吃** | ✅ | ❌ | ❌ | ❌ |
+| Pitch / duration / bars | ✅ | ✅ | ✅ | ❌ sections only |
+| Key / time signature / tempo | ✅ | ✅ | ✅ | ✅ header directives |
+| Chord symbols | ✅ | ✅ | ⚠ only as text events | ✅ |
+| Lyrics | ✅ basic | ✅ full | ⚠ only as text events | ✅ |
+| **Notational intent** (sharps/flats, triplet notation) | Partial | ✅ | ❌ | ❌ |
+| **Performance markings** (bowing, articulation) | ❌ | ✅ | ⚠ only approximated via CC/keyswitch | ❌ |
+| **Continuous control** (CC curves) | ❌ | ❌ | ✅ | ❌ |
+| **Micro-timing offsets** (push_pull) | ❌ | ❌ | ✅ | ❌ |
+| **Directly consumed by YuE2** | ✅ | ❌ | ❌ | ❌ |
 
-★ **结论**：
-- **要 YuE2 执行 → ABC**
-- **要交给人 → MusicXML**
-- **要表情与律动 → MIDI**
-- **要给吉他手和排练 → ChordPro**
-- **几个都要就几个都发**，但**从同一份规格发**，不要各写各的
-
----
-
-## 6b. YuE2 方言：实测出来的四条（2026-09-17）
-
-同一份从 ARR-SPEC 编译的谱，三种写法送进 YuE2 的 abc 口，结果差得远：`L:1/16` 单声部出 2:18（谱面 4:00，模型提前停），删掉段落注释更短（1:58），**改成 `L:1/32` 跑满 3:56**。所以给 YuE2 的 ABC 照它自己写谱的样子来：
-
-1. **`L:1/32`**：所有时值按三十二分音符计，四分音符写 8、附点二分写 24、整小节休止 `z32`。用 `L:1/16` 它会把谱当成一半长，提前结束。
-   ⚠ 但只改这一条不够：同一份谱改成 `L:1/32` 后时长跑满，whisper 却一个字都识别不出（直出版 76%，模型自写谱 65%，这版 2%）。原因在旋律本身：每个字的时值太长、音太少、音区比模型自写的谱低一个八度。给 YuE2 的人声线要像它自己写的那样：小写音名区（c 到 a 一带）、每小节四到六个音、单字很少超过一拍。实测：同一份谱整体升八度到小写音名区，whisper 识别率从 2% 到 47%；再加上 w: 歌词行到 56%（直出是 76%）。这就是第 5、6 条的来历：
-2. 带 `w:` 歌词行（见第 6 条）。
-3. **声部头写 `V: Vocal clef=treble name="Vocal Melody" snm="Vocal"`**，段落用 `% intro`／`% verse`／`% pre-chorus`／`% chorus`／`% bridge`／`% outro` 注释；它自写的谱还有一条 `V: Ins` 声部放器乐句，单声部也能跑满。
-4. 标题行 `T:` 可空；调用 `K:D` 这类标准写法，模型自写时倾向关系小调（同一首它写成 `K:Dm`），不影响。
-
-5. **人声线写在小写音名区**（ABC 的 c 到 a，即 C5 到 A5 一带），大写区它会唱成含混的元音；这与真人音域无关，是模型的习惯。
-6. **带 `w:` 歌词行**（每个音符一个字，字数与音符数逐行相等）比只在 lyrics 口给词识别率高；w: 行照带，lyrics 口也照给。
-7. 待做：旋律密度。编译器目前给每个字配长音（附点二分、全音符），模型自写谱每小节四到六个音、单字很少超过一拍；识别率剩下的差距多半在这里。
-
-ABC 表达不了的规格字段（减法事件、残响切断、逐件进退场）只能靠 style 文本，见 `mc-render-compile`。
-
-## 7. 给 YuE2 供谱的实操
-
-### 7.1 接法
-
-```
-[我们的 ABC]  ──→  YuE2GenerateMusic  ──→  音频
-                        ↑
-   （YuE2GenerateABC 被旁路掉）
-```
-
-本 skill 只管左边那一格：把 ARR-SPEC 编译成 ABC 文本。
-右边这条线为什么要接、接了之后规格为何不再只是"提示"、
-用什么载体（官方脚本、ComfyUI 节点）接线，见 `mc-render-compile` §8.2。
-
-### 7.2 方言已经摸清
-
-`YuE2GenerateMusic` 的 abc 输入端吃什么，§6b 已按实测写死：段落用 `%` 注释，和弦用引号里的标准拼写（`"F#m7"`），`V: Vocal` 加可选的 `V: Ins` 两个声部都能跑。仍不确定的东西只剩旋律密度那一刀（§6b 第 7 条）。
-
-### 7.3 上游有官方 skill
-
-YuE2 官方仓库自带 `skills/yue2-music/`（SKILL.md 格式，含"检查音乐不变量"）。
-
-> ★ **不要重写它。** 我们写 ARR-SPEC→ABC 的适配器，模型操作的知识引用它们的。
-> 它的 musical invariants 应该与我们的 20 条自查 **对齐或互补**——
+★ **Conclusions**:
+- **For YuE2 to execute → ABC**
+- **For handing to a person → MusicXML**
+- **For expression and rhythmic feel → MIDI**
+- **For guitarists and rehearsal → ChordPro**
+- **If you need several, emit several**, but **emit them all from the same spec**; do not write each separately
 
 ---
 
-## 8. ★ 发射后的验证回路
+## 6b. YuE2 dialect: four lessons from testing (2026-09-17)
 
-**不要把没验过的乐谱送进合成器。** 三步：
+The same score, compiled from ARR-SPEC, sent into YuE2's abc input in three different forms gave very different results: `L:1/16` with a single voice produced 2:18 (the score is 4:00, and the model stopped early); deleting the section comments made it shorter (1:58); **switching to `L:1/32` ran the full 3:56**. So write the ABC for YuE2 in the way that YuE2 itself writes scores:
 
-| # | 检查 | 怎么做 |
+1. **`L:1/32`**: all durations are counted in thirty-second notes; a quarter note is written as 8, a dotted half note as 24, and a full-bar rest as `z32`. With `L:1/16`, the model treats the score as half as long and ends early.
+   ⚠ But changing this alone is not enough: the same score in `L:1/32` ran to full length, yet whisper recognised not a single word (direct-output version 76%, model-written score 65%, this version 2%). The cause lies in the melody itself: each syllable is held too long, there are too few notes, and the register is an octave lower than in the model's own scores. The vocal line for YuE2 must look like the model's own writing: lowercase note-name range (roughly c to a), four to six notes per bar, and individual syllables rarely longer than one beat. Test result: moving the same score up an octave into the lowercase range raised whisper recognition from 2% to 47%; adding the `w:` lyric line brought it to 56% (direct output was 76%). This is the origin of points 5 and 6:
+2. Include the `w:` lyric line (see point 6).
+3. **Write the voice header as `V: Vocal clef=treble name="Vocal Melody" snm="Vocal"`**, and mark sections with `% intro` / `% verse` / `% pre-chorus` / `% chorus` / `% bridge` / `% outro` comments. The model's own score also has a `V: Ins` voice for instrumental phrases, and it runs to full length even with a single voice.
+4. The `T:` title line may be empty. Standard key forms such as `K:D` are fine: when the model writes its own score it tends toward the relative minor (the same song it wrote as `K:Dm`), which does not matter.
+
+5. **Write the vocal line in the lowercase note-name range** (ABC's c to a, roughly C5 to A5). In the uppercase range it sings indistinct vowels; this has nothing to do with the human vocal range, it is a habit of the model.
+6. **Include the `w:` lyric line** (one syllable per note, with the number of syllables equal to the number of notes line by line). This gives better recognition than supplying words only in the lyrics field; keep the `w:` lines, and keep supplying lyrics in the lyrics field too.
+7. To do: note density. The compiler currently assigns long held notes (dotted half notes, whole notes) to each syllable, whereas the model's own scores have four to six notes per bar, with individual syllables rarely longer than one beat. The remaining gap in recognition is most likely here.
+
+Spec fields that ABC cannot express (subtraction events, reverb cut-offs, per-instrument entries and exits) can only be carried by the style text; see `mc-render-compile`.
+
+## 7. Practical supply of scores to YuE2
+
+### 7.1 Connection
+
+```
+[our ABC]  ──→  YuE2GenerateMusic  ──→  audio
+                     ↑
+   (YuE2GenerateABC is bypassed)
+```
+
+This skill is responsible only for the left-hand box: compiling ARR-SPEC into ABC text.
+Why the right-hand connection should be made, why once it is made the spec is no longer merely a "hint",
+and which hosts (official scripts, ComfyUI nodes) to wire it with, are covered in `mc-render-compile` §8.2.
+
+### 7.2 Dialect now established
+
+The ABC input of `YuE2GenerateMusic` has been fixed by testing, as set out in §6b: sections use `%` comments, chords use standard spelling in quotes (`"F#m7"`), and both the `V: Vocal` voice and the optional `V: Ins` voice run. The one remaining uncertainty is note density (§6b, point 7).
+
+### 7.3 Official upstream skill
+
+The official YuE2 repository includes `skills/yue2-music/` (in SKILL.md format, including "check musical invariants").
+
+> ★ **Do not rewrite it.** We write the ARR-SPEC→ABC adapter, and for model-operation knowledge we refer to theirs.
+> Its musical invariants should **align with or complement** our 20 self-checks.
+
+---
+
+## 8. ★ Verification loop after emitting
+
+**Do not send an unverified score into a synthesiser.** Three steps:
+
+| # | Check | How |
 |---|---|---|
-| **1** | **语法** | ABC → 用解析器过一遍；MusicXML → schema 校验；MIDI → 读回来看轨数与时长 |
-| **2** | **与规格一致** | ★ **小节总数 == `Σ form[].bars`**；调号拍号速度对得上；**字母和弦反推级数 == `harmony`** |
-| **3** | **听一遍最简渲染** | 用任意音源快速渲染，**只听结构对不对**，不听音色 |
+| **1** | **Syntax** | ABC → run through a parser; MusicXML → schema validation; MIDI → read back and check track count and duration |
+| **2** | **Consistency with the spec** | ★ **Total bar count == `Σ form[].bars`**; key, time signature and tempo match; **letter chords converted back to roman numerals == `harmony`** |
+| **3** | **Listen to a minimal render** | Quickly render with any sound source, **listening only to whether the structure is right**, not to the timbre |
 
-★ **第 2 步的小节总数校验最值钱**——
-发射器最常见的 bug 是段落边界算错，而那个错误在音频里表现为"结构乱了"，
-很容易被误判成后端不听话。
+★ **The bar-total check in step 2 is the most valuable**:
+the most common bug in an emitter is a miscalculated section boundary, and in the audio that error shows up as "the structure is scrambled",
+which is easily mistaken for the backend not following instructions.
 
-**这三步用眼睛就能查**。
+**All three steps can be checked by eye.**
 
-实测过的一条路（2026-09）：本 skill 写法的 ABC（含 `w:` 行、引号和弦、`%` 段落注释、`V:` 头）用 music21 解析零警告，能直接转出 MIDI 与 MusicXML，MIDI 配任意 GM 音色就是第 3 步的最简渲染，不经过生成模型，倒字与旋律密度在这一步就能听到。两个注意：music21 不读 `w:` 行，交给乐手的 MusicXML 要用会读 `w:` 的转换器（abc2xml、abcm2ps 一类）或按"每个音符领一个音节"自行贴回；引号和弦默认不发声，想听和声垫底要自己把它们展开成一条钢琴声部。
+A route tested in practice (2026-09): ABC written to this skill's conventions (including `w:` lines, quoted chords, `%` section comments and `V:` headers) parsed with zero warnings in music21, and converted directly into MIDI and MusicXML. Rendering the MIDI with any GM sound is the minimal render in step 3, bypassing the generation model; tone-setting mismatches and melody density can be heard at this stage. Two cautions: music21 does not read `w:` lines, so MusicXML handed to musicians should be produced by a converter that reads `w:` (abc2xml, abcm2ps or similar), or the syllables should be attached by hand, one syllable per note; quoted chords are silent by default, so to hear harmony as a backing pad you must expand them yourself into a piano part.
 
 ---
 
-## 9. 与 ARR-SPEC 的字段对应（四个导出目标）
+## 9. Field mapping to ARR-SPEC (four export targets)
 
-规格单每个字段都有去向（schema §4）。可执行的字段按下表落到四种格式；本 skill 负责其中的发射规则。
+Every field in the spec has a destination (schema §4). The executable fields are mapped to the four formats as follows; this skill is responsible for the emission rules within them.
 
-| ARR-SPEC 字段 | ABC | MusicXML | MIDI | ChordPro | 本 skill |
+| ARR-SPEC field | ABC | MusicXML | MIDI | ChordPro | This skill |
 |---|---|---|---|---|---|
-| `meta.title` | `T:` | work-title | 轨名 | `{title}` | §3.1 |
-| `meta.key` / `mode` | `K:`（`K:Ddor`） | key 的 fifths + mode | 调号 meta | `{key}` | §3.1 |
-| `meta.meter` / `meter_map` | `M:`，行内变拍 | time，逐小节 | 拍号 meta | `{time}` | §3.1 |
+| `meta.title` | `T:` | work-title | track name | `{title}` | §3.1 |
+| `meta.key` / `mode` | `K:` (`K:Ddor`) | key fifths + mode | key signature meta | `{key}` | §3.1 |
+| `meta.meter` / `meter_map` | `M:`, inline metre changes | time, per bar | time signature meta | `{time}` | §3.1 |
 | `meta.tempo` / `tempo_map` | `Q:` | metronome / sound tempo | set_tempo | `{tempo}` | §3.1 |
-| `form[].id` / `name` | `P:` 或 `%` 注释 | rehearsal 记号 + words | marker | `{start_of_verse}` 等 | §3.2 |
-| `form[].bars` / `start_bar` | 小节线 | measure number | tick | | §3.2；§8 第 2 步 |
-| `form[].harmony_letters` | `"F#m7"` | harmony 的 root / kind / bass，映射见 schema §1.3.1 | 和弦轨或 marker 文本 | `[F#m7]` | §3.3 |
-| `material.motif_abc` / `arrangement_hook.abc` | 原样嵌入 | 实际音符 | 实际音符 | | §3 |
-| `roster[].id` / `midi` | `V:` 名 | part-name + midi-instrument | 轨名 + program change | | §5.1 |
-| `roster[].entry` / `exit`、`form[].events` | 段前 `Z` 多小节休止 | 多小节休止 | 轨内容范围 | | §5.1 |
-| `energy_curve`、`vocal.dynamics_by_section` | `!p!` `!f!` 力度记号 | dynamics（映射见 schema §1.5） | 力度缩放 / cc11 | | §5.2 |
-| `groove.push_pull` | 无 | 无 | tick 偏移（★ 唯一 exact 的路径） | | §5.3 |
-| `vocal.breath_points` | `!breath!` | breath-mark | 无 | | §4 |
-| `mix_intent.sound_stage[].pan` | 无 | midi-instrument 的 pan | cc10 | | §5.1 |
-| `depth_map` | 无 | 无 | cc91 | | §5.2 |
-| `meta.upstream.lyrics.sections[].lines` | `w:` 行 | lyric，syllabic=single，中文一字一音节 | 无 | 歌词行 | §3 |
-| `render.yue.abc` | 本体 | | | | §7 |
-| `render.musicxml` / `render.midi` / `render.chordpro` | | 目标开关 | 目标开关 | 目标开关 | §4 §5 |
+| `form[].id` / `name` | `P:` or `%` comment | rehearsal mark + words | marker | `{start_of_verse}` etc. | §3.2 |
+| `form[].bars` / `start_bar` | Barlines | measure number | tick | | §3.2; §8 step 2 |
+| `form[].harmony_letters` | `"F#m7"` | harmony root / kind / bass; mapping in schema §1.3.1 | chord track or marker text | `[F#m7]` | §3.3 |
+| `material.motif_abc` / `arrangement_hook.abc` | Embedded as-is | actual notes | actual notes | | §3 |
+| `roster[].id` / `midi` | `V:` name | part-name + midi-instrument | track name + program change | | §5.1 |
+| `roster[].entry` / `exit`, `form[].events` | `Z` multi-bar rest before the section | multi-bar rest | track content range | | §5.1 |
+| `energy_curve`, `vocal.dynamics_by_section` | `!p!` `!f!` dynamic markings | dynamics (mapping in schema §1.5) | velocity scaling / cc11 | | §5.2 |
+| `groove.push_pull` | None | None | tick offset (★ the only exact route) | | §5.3 |
+| `vocal.breath_points` | `!breath!` | breath-mark | None | | §4 |
+| `mix_intent.sound_stage[].pan` | None | pan on midi-instrument | cc10 | | §5.1 |
+| `depth_map` | None | None | cc91 | | §5.2 |
+| `meta.upstream.lyrics.sections[].lines` | `w:` lines | lyric, syllabic=single, Chinese one character per syllable | None | lyric lines | §3 |
+| `render.yue.abc` | Body | | | | §7 |
+| `render.musicxml` / `render.midi` / `render.chordpro` | | Target switch | Target switch | Target switch | §4 §5 |
 
-仅意图的块（`intent`、`material` 的文字、`mix_intent` 与 `vocal` 的大部分）整块作为文本随文件走：ABC 用 `%` 注释，MusicXML 用 miscellaneous，MIDI 用第一小节的 text 事件。四个目标各给谁、带什么，见 schema §4。
-
----
-
-## 10. 发射完必过
-
-- [ ] 目标格式是按 §6 选的，不是习惯性选 MIDI
-- [ ] **小节总数 == `Σ form[].bars`**
-- [ ] 调号、拍号、速度与 `meta` 一致
-- [ ] ★ **字母和弦反推级数，与 `harmony` 逐和弦对得上**
-- [ ] **副歌各遍是展开写的**，没有用反复记号（lint #16）
-- [ ] MIDI 里 **CC7 与 CC11 分工正确**
-- [ ] 若要验证 push_pull，**做了对齐版和偏移版两份**
-- [ ] 送进合成器前**跑过 §8 三步**
-- [ ] 给 YuE2 供谱时，用的是已确认的 ABC 方言子集
+Blocks that are intent only (`intent`, the prose of `material`, and most of `mix_intent` and `vocal`) travel with the file as text: ABC uses `%` comments, MusicXML uses miscellaneous, and MIDI uses a text event in the first bar. For what each of the four targets receives and carries, see schema §4.
 
 ---
 
-## 附：来源
+## 10. Checks after emitting
 
-- §8 的三步校验是人工的；其中"小节总数"与"和弦级数反推"两项是纯数据校验，不需要听。
-- ⚠ **未确认**：YuE2 的 ABC 方言（§7.2）
-- 记谱法细则、ABC 语法速查、GM 音色表在 [reference.md](reference.md)。
+- [ ] The target format was chosen according to §6, not out of habit (MIDI by default)
+- [ ] **Total bar count == `Σ form[].bars`**
+- [ ] Key, time signature and tempo match `meta`
+- [ ] ★ **Letter chords converted back to roman numerals match `harmony` chord by chord**
+- [ ] **Each pass of the chorus is written out**, without repeat signs (lint #16)
+- [ ] In MIDI, **CC7 and CC11 are assigned their correct roles**
+- [ ] If verifying push_pull, **produced both an aligned version and an offset version**
+- [ ] **Ran the three steps in §8** before sending into a synthesiser
+- [ ] When supplying a score to YuE2, the subset of the ABC dialect used is one that has been confirmed
+
+---
+
+## Appendix: Sources
+
+- The three validation steps in §8 are manual; of these, the "total bar count" and "reverse roman-numeral check of chords" are pure data validation and do not require listening.
+- ⚠ **Unconfirmed**: the YuE2 ABC dialect (§7.2)
+- Notation details, the ABC syntax cheat sheet, and the GM instrument table are in [reference.md](reference.md).

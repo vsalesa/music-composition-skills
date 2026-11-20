@@ -1,301 +1,298 @@
 ---
 name: mc-form
-description: Song form and section design (曲式与段落) - the terminology, the standard templates, and how to build a setsu backwards from the chorus. The Japanese section vocabulary mapped onto Anglo-American terms (and the two that are routinely mistranslated), the two broad families sorted by chorus position, the royal-road template with its repetition-omission rule, ternary form and the recapitulation principle, EDM and club variants, lead-in options, and the classical Chinese/Russian period-and-phrase apparatus for when pop terms run out. Use when laying out a song, when sections blur together, when deciding how many verse-chorus cycles, when a bridge is needed, or when filling the form table of an ARR-SPEC. 曲式、段落、结构、主歌副歌、桥段、乐段、再现、A メロ、サビ。
+description: Song form and section design - the terminology, the standard templates, and how to build a section (setsu) backwards from the chorus. The Japanese section vocabulary mapped onto Anglo-American terms (and the two that are routinely mistranslated), the two broad families sorted by chorus position, the royal-road template with its repetition-omission rule, ternary form and the recapitulation principle, EDM and club variants, lead-in options, and the classical Chinese/Russian period-and-phrase apparatus for when pop terms run out. Use when laying out a song, when sections blur together, when deciding how many verse-chorus cycles, when a bridge is needed, or when filling the form table of an ARR-SPEC. Keywords: song form, sections, verse, chorus, bridge, period, recapitulation, A-melo, sabi.
 ---
 
-# 曲式与段落（Form）
+# Song Form and Sections
 
-**这个 skill 管"这首歌由哪些块组成、每块多长、按什么顺序"。**
+**This skill covers "which blocks make up this song, how long each block is, and in what order".**
 
-它和 `mc-arrangement-arch` 的分工是本库最容易混的一处：
+The division of labor between this skill and `mc-arrangement-arch` is the easiest point in this library to confuse:
 
-> **`mc-form` 管曲式是什么（乐理与惯例）；
-> `mc-arrangement-arch` 管这首歌为什么这么切（决策与非对称）。**
+> **`mc-form` covers what song form is (music theory and convention);
+> `mc-arrangement-arch` covers why this song is cut this way (decisions and asymmetry).**
 
-具体说：**"副歌通常 8 小节"归 form；"这首歌的第二段主歌要 14 小节因为要打破整数"归 arrangement-arch。**
+Concretely: **"the chorus is usually 8 bars" belongs to form; "the second verse of this song is 14 bars because it must break the integer pattern" belongs to arrangement-arch.**
 
-## 按任务读哪几节
+## Which sections to read for each task
 
-| 任务 | 读 |
+| Task | Read |
 |---|---|
-| 排一首歌的结构 | §2 模板 → §5 倒着设计 |
-| 段落术语对不上 | §1 对照表（★ 有两个常被译错） |
-| 段落之间糊成一片 | §4 ＋ `mc-arrangement-arch` §4 |
-| 要不要加 C 段/桥 | §5 的构成选择 |
-| 做 EDM / 俱乐部音乐 | §2.5 |
-| 开头怎么进 | §3 |
-| 流行术语不够用了 | §6 古典曲式装置 |
-| 填 ARR-SPEC 的 form 表 | §7 |
+| Laying out a song's structure | §2 templates → §5 designing backwards |
+| Section terminology does not match | §1 mapping table (★ two terms are routinely mistranslated) |
+| Sections blur together | §4 and `mc-arrangement-arch` §4 |
+| Whether to add a C section or a bridge | Composition options in §5 |
+| Writing EDM / club music | §2.5 |
+| How to start the opening | §3 |
+| Pop terms are not enough | §6 classical form devices |
+| Filling in the form table of an ARR-SPEC | §7 |
 
-## 边界
+## Boundary
 
-| 不归这里 | 归哪 |
+| Not covered here | Where it lives |
 |---|---|
-| 为什么这段要 14 小节而不是 16（非对称设计） | `mc-arrangement-arch` §4 |
-| 能量曲线、进退场事件 | `mc-arrangement-arch` |
-| 动机怎么发展成乐句、一段拿旧材料做什么 | `mc-development`；乐句内部的切分与呼应仍在 `mc-melody` §7 |
-| 段落之间怎么转调 | `mc-modulation` |
-| 副歌的和声怎么配 | `mc-harmony` |
-| 某风格的典型曲式 | `mc-style-*`（L3） |
-| 影视配乐的结构（跟画面不跟曲式） | 配乐（为画面写音乐）的事，不归本包；本包交出去的段落与时长见 `mc-workflow` §5 |
-| 古典曲式的完整分类与谱例 | [reference.md](reference.md) |
+| Why this section is 14 bars rather than 16 (asymmetric design) | `mc-arrangement-arch` §4 |
+| Energy curves, entry and exit events | `mc-arrangement-arch` |
+| How a motif develops into a phrase, and what old material a section reuses | `mc-development`; the internal segmentation and answering of phrases remains in `mc-melody` §7 |
+| How to modulate between sections | `mc-modulation` |
+| How to harmonize the chorus | `mc-harmony` |
+| The typical form of a given style | `mc-style-*` (L3) |
+| Structure of film and TV scores (follows the picture, not the form) | Scoring (writing music for picture) is outside this package; the sections and durations this package hands off are in `mc-workflow` §5 |
+| Full classification and score examples of classical forms | [reference.md](reference.md) |
 
 ---
 
-## 1. 段落术语对照
+## 1. Section terminology mapping
 
-**日式（J-POP）术语与英美术语不是一一对应的**，分析或沟通前先理清。
+**Japanese (J-POP) terms do not map one-to-one onto Anglo-American terms.** Clarify them before analysis or discussion.
 
-| 日式 | 中文／英美 | 功能 |
+| Japanese | English / Anglo-American | Function |
 |---|---|---|
-| **A メロ** | 主歌（Verse，平歌） | 引入段。音域窄、时值短、"語り"式演唱；歌词讲具体故事、铺场景 |
-| **B メロ** | 预副歌（Pre-chorus） | ★ 日本特有的"第二主歌"：介于 A メロ与サビ之间、性格不同的一段，音区逐步抬高、堆积期待 |
-| **サビ** | 副歌（Chorus） | 全曲高潮所在的乐节：音区最高、密度最大、最好记；承载核心信息 |
-| **C メロ / D メロ** | 第三发展段（桥的位置） | 2 番之后出现的全新旋律/和声/节奏，制造"意外发展" |
-| **大サビ** | ≈ 英美的 bridge / middle eight | ★★ **不是"更大的サビ"！** 性格更接近"第二个 B メロ"：内省、收敛，常带半速感；**它后面一定跟一个サビ** |
-| **頭サビ** | 以副歌开场 | 第一秒就是サビ，直接抢占记忆 |
-| **落ちサビ** | "落下"的副歌 | 同一条サビ旋律**突然换成极稀薄的编制**（如只剩钢琴+人声），靠落差打动人 |
-| **キメ** | 齐奏重音 / 收尾句 | 接在サビ末尾约 2 小节的插旗句，伴奏骤停或打标志性节奏，唱出主题词 |
-| **イントロ** | 前奏 | |
-| **間奏** | 间奏 | 英文叫 Second Introduction——"第二轮主副歌的前奏" |
-| **アウトロ／後奏** | 尾奏 | 器乐化的尾声 |
-| **ヴァンプ** | 律动段 | 不奏旋律、只提示节奏型的段落（可以只有打击乐，或加贝司/吉他） |
-| **コーダ** | 尾声 | 最后一轮节结束后追加的**演唱**段落 |
-| **1 番 / 2 番** | 第一轮 / 第二轮 | 一轮主副歌 = 一个"节"；同旋律 + 不同词 + 编制微变——**几代人提炼出的防腻装置** |
-| **ブレイク** | Break | 伴奏完全停止、只剩人声的瞬间 |
-| **フィル** | Fill | 段落接缝处的鼓填充，提前点燃期待 |
+| **A-melo** | Verse (*hira-uta*) | Introductory section. Narrow range, short note values, "*katari*" (narrated) singing; lyrics tell a concrete story and set the scene |
+| **B-melo** | Pre-chorus | ★ A Japanese-specific "second verse": a section between A-melo and sabi with a different character, climbing in range and building expectation |
+| **sabi** | Chorus | The section where the climax of the whole song sits: highest range, greatest density, most memorable; carries the core message |
+| **C-melo / D-melo** | Third development section (bridge position) | Entirely new melody, harmony or rhythm after the second verse, creating an "unexpected development" |
+| **ō-sabi** (big sabi) | ≈ Anglo-American bridge / middle eight | ★★ **Not "a bigger sabi"!** Its character is closer to a "second B-melo": introspective, convergent, often with a half-time feel; **it is always followed by a sabi** |
+| **atama-sabi** (head sabi) | Chorus opening | The sabi arrives in the first seconds, seizing memory directly |
+| **ochi-sabi** (falling sabi) | "Falling" chorus | The same sabi melody **suddenly switches to a very thin lineup** (for example, only piano and voice), moving the listener through the contrast |
+| **kime** | Unison accent / tag phrase | A marker phrase of about 2 bars after the end of the sabi: the accompaniment suddenly stops or hits a signature rhythm, and the title words are sung |
+| **intro** | Intro (prelude) | |
+| **kanso** (interlude) | Interlude | Called "Second Introduction" in English: "the prelude to a second round of verse and chorus" |
+| **outro / kōsō** | Outro (postlude) | An instrumental ending |
+| **vamp** | Groove section | A section that plays no melody and only states a rhythmic pattern (may be percussion alone, or with bass or guitar added) |
+| **coda** | Coda | A **sung** passage appended after the final round of sections ends |
+| **ichi-ban / ni-ban** (verse 1 / verse 2) | First round / second round | One round of verse and chorus = one "*setsu*" section; same melody + different words + slight change in lineup: **a device refined over generations to prevent boredom** |
+| **break** | Break | The moment when the accompaniment stops completely and only the voice remains |
+| **fill** | Fill | A drum fill at a section seam, igniting anticipation in advance |
 
-★★ **两个最容易译错的**：
-1. **大サビ ≠ 大副歌**，它是 bridge
-2. **日文"平行調" = 关系大小调**，不是英文的 parallel key（那是"同主調"）——见 `mc-modulation` §2
+★★ **The two most often mistranslated**:
+1. **ō-sabi ≠ "big chorus"**; it is a bridge
+2. **The Japanese term *heikō-chō* = relative major/minor**, not the English "parallel key" (which the Japanese call *dōshu-chō*, same tonic) — see `mc-modulation` §2
 
-**旋律法的层级**：部分动机 → 动机 → 小乐节 → 乐节 → 节 → 全曲。
-> **サビ 的旋律法定义：在"节"这个大单位内充当高潮的那个乐节。**
-> **每一层级上高潮的大小，与那一层块的大小成正比。**
+**Hierarchy of melodic technique**: partial motif → motif → small phrase → phrase → section → whole song.
+> **Melodic-technique definition of sabi: the phrase within a "section" that serves as the climax.**
+> **At each level, the size of the climax is proportional to the size of the block at that level.**
 
 ---
 
-## 2. 标准模板
+## 2. Standard templates
 
-### 2.1 按副歌位置分两大类
+### 2.1 Two broad families, sorted by chorus position
 
-| 类 | 形状 | 说明 |
+| Family | Shape | Description |
 |---|---|---|
-| **末広がり型**（越往后越开阔） | `[A→B→サビ]` 或 `[A→サビ]` | サビ 以外的段落都是"铺台面"。**现代 J-POP 绝大多数属于这一类** |
-| **循環解決型** | `[A→サビ→A]` 或 `[サビ→B→サビ]` | 末尾回到开头的旋律（三部性，**再现原则**）。1960 年代、演歌/歌谣曲/爵士标准曲常见，今天越来越少 |
+| **Suehirogari type** (widening toward the end) | `[A→B→sabi]` or `[A→sabi]` | Every section except the sabi "lays the table". **The large majority of modern J-POP belongs to this family** |
+| **Junkan kaiketsu type** (cyclic resolution) | `[A→sabi→A]` or `[sabi→B→sabi]` | Ends by returning to the opening melody (ternary form, **recapitulation principle**). Common in the 1960s, in *enka*, *kayōkyoku* and jazz standards; increasingly rare today |
 
-### 2.2 王道全曲模板（末広がり型）
-
-```
-Intro → 1A → 1B → 1サビ → (间奏1)
-     → 2A → 2B → 2サビ → 间奏2
-     → Cメロ(大サビ) → 3サビ(可转调) → (3サビ2) → 尾奏
-```
-
-**要点**：
-
-- **A−B−サビ 三段构成是日本流行最常见的形式**（旋律法：a−b−c 的纯三段构成 = 起 − 换个视角 − 综合解决）
-- **为什么有"2 番"**：同旋律 + 音响略变 + **完全不同的歌词**，防腻装置
-- 2 番之后插 C メロ/桥（可以全新旋律、和声、节奏）继续防腻并推高，再给一遍サビ
-- ★ **省略重复规则**：第 1 节 `A−A'−B−C` → 第 2 节 `A−B−C` → **第 3 节可以直接从サビ开始**
-- 全曲通常 **2–3 个节、3–5 分钟**；慢歌减节数，快歌加节数（BPM 差 3 倍以上靠节数平衡）
-- > **唯一真正的标准：听众既不因为太长而腻，也不因为太短而觉得亏，听完是满足的。**
-
-### 2.3 三部曲式模板（サビ 在中间）
+### 2.2 Royal-road full-song template (suehirogari type)
 
 ```
-A(melo) → B(サビ) → A'(melo)    ×2–3 节
+Intro → 1A → 1B → 1sabi → (interlude 1)
+     → 2A → 2B → 2sabi → interlude 2
+     → C-melo (ō-sabi) → 3sabi (may modulate) → (3sabi 2) → outro
 ```
 
-- 支柱是**再现原则**：B 把 A 的内容更情绪化地展开（或从更宽的视角叙述），
-  回到 A 带来"深切的领悟与怅惘"
-- A 与 B 的连续性通常比 Verse=Chorus 型更强
-- 扩展形 **A−A'−B−A'' = 经典的起承转合构成**
-- 稀见变体 A−B−C：末段不再现 A，而是做成"反复落在同一个音上、边收边静"的旋律，**听起来仍像回家**
+**Key points**:
 
-### 2.4 其他形式速查
+- **The A-B-sabi three-part structure is the most common form in Japanese pop** (melodic technique: the pure three-part structure a-b-c = opening − change of perspective − synthesis and resolution)
+- **Why there is a "second verse"**: same melody + slightly altered sound + **entirely different lyrics**, an anti-boredom device
+- After the second verse, insert a C-melo or bridge (may have a completely new melody, harmony and rhythm) to keep things fresh and build further, then give the sabi once more
+- ★ **Omission-of-repetition rule**: section 1 `A−A'−B−C` → section 2 `A−B−C` → **section 3 may start directly from the sabi**
+- A full song usually has **2–3 sections and runs 3–5 minutes**; slow songs reduce the number of sections, fast songs increase it (when BPM differs by 3× or more, balance with the number of sections)
+- > **The only true standard: the listener is neither bored by its length nor feels shortchanged by its brevity, and finishes satisfied.**
 
-| 形式 | 结构 |
+### 2.3 Ternary form template (sabi in the middle)
+
+```
+A(melo) → B(sabi) → A'(melo)    ×2–3 sections
+```
+
+- The pillar is the **recapitulation principle**: B expands the content of A in a more emotional way (or narrates from a wider perspective), and the return to A brings "a deep sense of insight and wistfulness"
+- The continuity between A and B is usually stronger than in a verse = chorus type
+- The extended form **A−A'−B−A'' = the classic structure of *qi-cheng-zhuan-he* (introduction, development, turn, conclusion)**
+- Rare variant A−B−C: the final section does not recapitulate A; instead it uses a melody that "repeatedly lands on the same note and grows quieter as it closes", **which still sounds like coming home**
+
+### 2.4 Quick reference of other forms
+
+| Form | Structure |
 |---|---|
-| **二部曲式** | A（主歌）− B（副歌）：西方流行/摇滚的基本形 |
-| **插桥形** | A −（短桥）− サビ：不写完整的第二主歌，只插一小段连接（抬音区、加热） |
-| **复三部** | `[A−B−A]−[C−D−C]−[A−B−A]` |
-| **混合形** | `A−B−サビ−A`（Verse=Chorus 之后再现主歌） |
-| **单段构成** | 只有副歌／只有主歌：数え歌、叙事民谣、循环型舞曲 |
-| **广告曲** | 把 A/B/サビ 塞进 15/30 秒；发展必须极其清楚；**用变拍子做"长度调整"** |
+| **Binary form** | A (verse) − B (chorus): the basic form of Western pop and rock |
+| **Bridged form** | A − (short bridge) − sabi: does not write a full second verse, only inserts a short connecting passage (raises the range, builds heat) |
+| **Compound ternary** | `[A−B−A]−[C−D−C]−[A−B−A]` |
+| **Mixed form** | `A−B−sabi−A` (verse = chorus, then the verse returns) |
+| **Single-section structure** | Only chorus, or only verse: counting songs, narrative ballads, looping dance tracks |
+| **Commercial (CM) song** | Squeezes A/B/sabi into 15 or 30 seconds; development must be extremely clear; **uses changing meters to "adjust the length"** |
 
-### 2.5 EDM / 俱乐部音乐变体
+### 2.5 EDM / club music variant
 
-**在比歌曲类音乐长得多的时间尺度上堆积强度：**
+**Accumulating intensity over a time scale far longer than in song-based music:**
 
 ```
-four-on-the-floor 底鼓起
- → 加 hi-hat
- → 加钢琴之类的持续伴奏（以 8+ 小节为单位重复）
- → 正式前奏 → A メロ → サビ
- → 回到只有鼓的段落 → 循环……
+four-on-the-floor kick enters
+ → add hi-hat
+ → add sustained accompaniment such as piano (repeated in units of 8+ bars)
+ → formal intro → A-melo → sabi
+ → return to a drums-only section → loop……
 ```
 
-- 特征：**旋律可有可无**；结构长而大；有只剩鼓或只剩 pad 的段落，
-  所以**厚度落差极其尖锐**；以鼓为中心来编
-- 这个结构成立的两个理由：(1) 慢慢堆更适合跳舞；(2) 只有鼓的段落方便 DJ 接下一首
-- ★ **在家里听觉得啰嗦无聊的结构，在舞池上极其有效——目的决定形式**
-- 舞曲的节构成常是 **A−A−A−…−A'−B**：主歌把一个动机重复很多次 + 一个短副歌
-- 极端形：节内只有一个动机（a a a a）。**重复渗进无意识，唤起半不随意的身体反应——
-  即使没有大高潮，重复本身就构成了堆积**
+- Characteristics: **the melody is optional**; the structure is long and large; there are sections with only drums or only pad,
+  so **the change in thickness is extremely sharp**; the arrangement is built around the drums
+- Two reasons this structure works: (1) gradual accumulation suits dancing; (2) drums-only sections make it easy for a DJ to bring in the next track
+- ★ **A structure that sounds verbose and boring at home is extremely effective on the dance floor: purpose determines form**
+- The section structure of dance music is often **A−A−A−…−A'−B**: the verse repeats one motif many times, followed by a short chorus
+- Extreme form: only one motif within a section (a a a a). **Repetition seeps into the unconscious and evokes a half-involuntary bodily response.
+  Even without a big climax, the repetition itself builds intensity**
 
 ---
 
-## 3. 开头怎么进
+## 3. Starting the opening
 
-在正歌之外、曲子最顶端加一个引入乐节，两大类形式都能用：
+Adding an introductory section before the main song, at the very top, works with both broad families of form:
 
-| 方式 | 做法 |
+| Method | How |
 |---|---|
-| **朗读式前段**（安静导入） | 中音区 + 音高几乎不动 + 简单节奏 + 和声静止的伴奏，甚至自由速度——从"介于朗读与歌唱之间"的状态开始，平滑地把听众领进作品的世界（歌剧与音乐剧极常见）。形式：`D(引子) − [A−B−サビ] − [A−B−サビ]` |
-| **高扬型导入**（反过来） | 引子以高扬的乐节开始（跳进 + 高音区），制造与日常的巨大落差，一把把听众拽进来 |
-| **頭サビ** | 引子直接用サビ——**最常见的选项**。`C−[A−B−C]−[A−B−C]`（Verse=Chorus）；`B−[A−B−A]`（三部）。★ **两种打法**：原样演奏 = 炫目的开场；薄伴奏 + 慢速 + 自由速度 = 平滑的叙述式导入 |
+| **Spoken-style opening** (quiet introduction) | Middle range + pitch almost static + simple rhythm + accompaniment with static harmony, possibly free tempo: start from a state "between speech and song", smoothly leading the listener into the work's world (very common in opera and musical theatre). Form: `D(prelude) − [A−B−sabi] − [A−B−sabi]` |
+| **Soaring introduction** (the opposite) | The prelude starts with a soaring phrase (leaping intervals + high register), creating a sharp contrast with the everyday and pulling the listener in at once |
+| **Head sabi** | The prelude uses the sabi directly: **the most common option**. `C−[A−B−C]−[A−B−C]` (verse = chorus); `B−[A−B−A]` (ternary). ★ **Two ways to play it**: as written = a dazzling opening; thin accompaniment + slow + free tempo = a smooth narrative introduction |
 
 ---
 
-## 4. 段落之间要有对比
+## 4. Contrast between sections
 
-**段落糊成一片的根因是相邻两段在太多维度上相同。**
-对比的具体手段在 [reference.md](reference.md) §1，这里只给判据：
+**The root cause of sections blurring together is that adjacent sections are the same in too many dimensions.**
+The specific techniques for contrast are in [reference.md](reference.md) §1; here only the test is given:
 
-> **自检动作**：把相邻两段在这六项上打勾——
-> **音区 / 节奏密度 / 和声节奏 / 编制厚度 / 演唱方式 / 乐句长度**。
-> **少于两项不同，这两段就会被听成同一段。**
+> **Self-check action**: for two adjacent sections, tick each of these six items—
+> **register / rhythmic density / harmonic rhythm / lineup thickness / vocal delivery / phrase length**.
+> **If fewer than two items differ, the two sections will be heard as one.**
 
 ---
 
-## 5. ★ 倒着设计：从副歌往回推
+## 5. ★ Designing backwards: from the chorus back to the start
 
-**设计原则永远是"以サビ为中心倒推"。**
+**The design principle is always "work backwards from the sabi as the center".**
 
-| 构成 | 怎么设计 |
+| Structure | How to design it |
 |---|---|
-| **A 构成**（单乐节） | 不换性格，朴素简单。舞曲重复同一 riff 时，节内动机甚至只有一个（a a a a） |
-| **A−B 构成**（Verse=Chorus 基本形） | 二段构成原则；欧美摇滚/R&B 常见，抓耳力强。**已有サビ → 倒推"什么样的 A 能领进它"**；已有 A → 想它该接什么样的サビ。★ **サビ 不只开头要有冲击，后半也必须有足够的高潮** |
-| **A−B−C 构成**（日式王道） | ★ **先想サビ(C) 和引入段 A，定中间部分的方案，B 最后写** |
-| **A−B−A 构成**（三部） | 在乐节末尾上演"深切的怅惘"或"解决的开阔"。★ **要让再现效果充分兑现，标准做法是让 B 的性格剧变** |
+| **A structure** (single phrase) | Do not change character; plain and simple. When a dance track repeats the same riff, the motif within a section may even be just one (a a a a) |
+| **A−B structure** (basic verse = chorus form) | Two-section principle; common in Western rock and R&B, strong in catchiness. **If the sabi already exists → work backwards to "what kind of A could lead into it"; if the A already exists → decide what kind of sabi should follow it.** ★ **The sabi must have impact not only at the opening but also needs enough climax in its second half** |
+| **A−B−C structure** (Japanese royal road) | ★ **First think about the sabi (C) and the introductory section A, settle the plan for the middle part, and write B last** |
+| **A−B−A structure** (ternary) | Stage "deep wistfulness" or "open resolution" at the end of the phrase. ★ **For the recapitulation to pay off fully, the standard method is to make B's character change dramatically** |
 
-**B 段的两种写法**（A−B−C 构成里）：
-- **B 当桥**：收敛的 A → 强调节奏的短动机重复、音区逐级上台阶的 B → 有律动的 C
-- **B 当第二主歌**：轻的 A → 内省安静的 B → 靠落差把高扬感加倍的 C
-  （B 的后半个小乐节可以做成往上堆、领出 C 的短桥）
+**Two ways to write section B** (within an A−B−C structure):
+- **B as bridge**: convergent A → B with short repeating rhythmic motifs and a range that steps up gradually → C with a sense of groove
+- **B as second verse**: light A → introspective, quiet B → C that doubles the soaring feeling through contrast
+  (the second half of B can be built to stack upward, leading into a short bridge to C)
 
-### 5.1 ★ 扩展警告
+### 5.1 ★ Warning on expansion
 
-> **在 `A−B−C → A−B−C−D` 这样加元素之前，先考虑用"乐节重复"来扩展。**
-> 元素太多 → 通往サビ的路弯弯绕绕、焦点发散。
+> **Before adding an element in the form `A−B−C → A−B−C−D`, first consider expanding by repeating phrases.**
+> Too many elements → the road to the sabi winds and wanders, and focus scatters.
 
-这是个先后顺序的判据，不是"不许加段落"：先看能不能靠上表里已经列出的手法（比如 A 构成里 riff 的整段重复、A−B−C 里 B 段末尾自带的短桥）把篇幅撑够，撑不够、对比也做不出来了再考虑加新元素。加不加最终还是服从 §8 的时长预算：多一个元素通常意味着多几个小节，超出 3–5 分钟就要说得出理由。
+This is an order-of-operations test, not a rule against adding sections. First check whether the techniques already listed in the table above can stretch the length enough (such as repeating a whole riff in the A structure, or the short bridge built into the end of section B in A−B−C). Only when those cannot fill the length and the contrast still cannot be achieved should you consider adding new elements. Whether to add is ultimately governed by the duration budget in §8: each extra element usually means several more bars, and anything beyond 3–5 minutes needs a stated reason.
 
-### 5.2 加キメ
+### 5.2 Adding a kime
 
-任何构成都可以在乐节末尾或サビ内部加一段约 2 小节的キメ。
-★ **觉得歌曲"缺乏起伏（メリハリ）"时，先考虑这个**，而不是加段落。
+Any structure can have a kime of about 2 bars added at the end of a phrase or inside the sabi.
+★ **When a song feels like it lacks dynamic contrast (*meri-hari*), consider this first**, rather than adding a section.
 
-这是应对"缺乏起伏"的两条处方之一，另一条是 §5.1 的乐节重复扩展；两条都比加新段落轻，所以排在前面试。キメ 本身怎么编排（齐奏、留白还是加花）跟位置、风格强相关，属于编曲执行层，不在曲式这一节铺开。
+This is one of two prescriptions for lacking dynamic contrast; the other is the phrase-repetition expansion in §5.1. Both are lighter than adding a new section, so they come first when trying fixes. How to arrange the kime itself (unison, leaving space, or adding ornaments) depends strongly on its position and style, and belongs to the arrangement execution layer, so it is not expanded in this form section.
 
 ---
 
-## 6. 流行术语不够用时：古典曲式装置
+## 6. When pop terms are not enough: classical form devices
 
-做影视配乐、器乐曲、或需要更细的结构分析时，流行那套"A/B/サビ"不够用。
-中文/俄式体系提供了更细的刻度：
+For film and TV scores, instrumental pieces, or when more detailed structural analysis is needed, the pop vocabulary of "A/B/sabi" is insufficient.
+The Chinese and Russian-influenced systems provide finer gradations:
 
-| 装置 | 用处 |
+| Device | Use |
 |---|---|
-| **乐段（Period）** | 比"段落"更严格的单位。分**一个乐句**、**两个乐句**、**三个及以上乐句**结构 |
-| **复乐段** | 两个乐段构成的更大单位 |
-| **开放乐段** | 结束在非主和弦上的乐段——★ 对应 `mc-melody` reference §5 的**终止开放度 5–8 档** |
-| **乐段前后的引子与补充** | 结构外的附加部分。★ 解释了"为什么这段是 17 小节不是 16" |
-| **单二部曲式** | 有再现 / 没有再现两类 |
-| **单三部、复三部、回旋、变奏、奏鸣** | 见 [reference.md](reference.md) §3 |
+| **Period (*yuèduàn*)** | A unit stricter than "section". Divided into **one-phrase**, **two-phrase** and **three-or-more-phrase** structures |
+| **Compound period** | A larger unit made of two periods |
+| **Open period** | A period ending on a non-tonic chord — ★ corresponds to the **cadence openness levels 5–8** in `mc-melody` reference §5 |
+| **Introductions and supplements around a period** | Additional parts outside the structure. ★ Explains "why this section is 17 bars rather than 16" |
+| **Simple binary form** | Two kinds: with recapitulation / without recapitulation |
+| **Simple ternary, compound ternary, rondo, variation, sonata** | See [reference.md](reference.md) §3 |
 
-★ **作为独立曲式的乐段，与作为曲式一部分的乐段，特征不同**——
-这条区分对判断"这到底是一段还是一首"很有用。
+★ **A period functioning as an independent form and a period functioning as part of a larger form have different characteristics.**
+This distinction is useful for judging "is this one section or a whole piece".
 
-> **本库的用法**：写流行歌用 §1–§5 的术语；
-> 走 `mc-style-cinematic` 或需要做结构分析（`mc-case-studies`）时，切到这一套。
-> **两套不要混着说**，否则交接会乱。
+> **How this library uses it**: when writing pop songs, use the terms in §1–§5.
+> When working on `mc-style-cinematic` or doing structural analysis (`mc-case-studies`), switch to this system.
+> **Do not mix the two vocabularies in the same discussion**, or handoffs become muddled.
 
 ---
 
-### 6.1 ★ 段落在做什么：五种陈述方式与六种结构功能（李吉提）
+### 6.1 ★ What a section is doing: five modes of statement and six structural functions (Li Jiti)
 
-§1 到 §5 用的是段落的**名称**，这一套用的是段落的**行为**，填的是名称与功能之间的空白（李吉提《曲式与作品分析》p0022–0024）。
+§1 to §5 use the **names** of sections; this system uses the **behavior** of sections, and fills the gap between names and functions (Li Jiti, *Musical Forms and Work Analysis*, p0022–0024).
 
-| 陈述方式 | 特征 | 一句话 |
+| Mode of statement | Characteristics | In one line |
 |---|---|---|
-| **显示性** | 调性稳定、材料统一、句法完整 | 把东西摆出来 |
-| **展开性** | 陈述与和声调性都不稳定且越来越动荡，结构分裂，转调频繁，没有完整句法 | 把东西拆开 |
-| **过渡性** | 承前启后：先补充前面的乐思 → 转调 → 引出新乐思，或停在一个**期待性和弦**上 | 搭桥 |
-| **收束性** | 旋律片断化、调性稳定、强调终止式或主持续音 | **只答不问** |
-| **导入性** | 提示后面的调性、速度、织体、旋律概要 | **只问不答** |
+| **Presentational** | Stable tonality, unified material, complete syntax | Lay things out |
+| **Developmental** | Both statement and harmonic tonality are unstable and increasingly turbulent, the structure fragments, modulations are frequent, syntax is incomplete | Take things apart |
+| **Transitional** | Connects what precedes and what follows: first supplements the preceding musical idea → modulates → introduces a new idea, or stops on an **expectant chord** | Build a bridge |
+| **Concluding** | Melody is fragmented, tonality is stable, emphasizes a cadence or a sustained tonic | **Answers only** |
+| **Introductory** | Hints at the following tonality, tempo, texture and melodic outline | **Asks only** |
 
-六种结构功能：引子（导入性；也有"结论式引子"，《国际歌》就是）、开始（显示性）、中间（★ **即使引入新主题用的是显示性陈述，功能仍是对比**）、
-连接（过渡性，大型作品里兼"先展开前面的未尽之言"）、再现（恢复显示性，但目的变成强调主要乐思与恢复平衡；渗入展开因素就是**动力再现**）、
-尾声（收束性；大型作品可在尾声开头先做一次补充性再展开）。
+Six structural functions: introduction (introductory; there is also a "concluding-style introduction", as in *The Internationale*), beginning (presentational), middle (★ **even when a new theme is introduced in a presentational statement, the function is still contrast**),
+connection (transitional, and in large works also "develops earlier unfinished statements"), recapitulation (restores the presentational mode, but its purpose becomes reinforcing the main idea and restoring balance; infusing developmental elements is **dynamic recapitulation**),
+coda (concluding; in large works the coda can begin with one supplementary development).
 
-**用法**：给规格单里每一段写上它是哪种陈述方式。副歌写成了展开性、桥段写成了显示性，就是段落功能错位，换名字救不了。
+**How to use it**: in the spec sheet, write for each section which mode of statement it uses. If a sabi is written in developmental mode and a bridge in presentational mode, the section functions are misaligned, and renaming them will not fix it.
 
-### 6.2 再现部的五种形态（李吉提 p0066、p0070）
+### 6.2 Five forms of recapitulation (Li Jiti p0066, p0070)
 
-| 形态 | 做法 |
+| Form | Method |
 |---|---|
-| 完全（静止）再现 | 原样 |
-| 变化再现 | 改织体或配器，材料不动 |
-| **动力再现** | 动机再加工、不稳定节奏、和声介入、织体加厚、力度加强，常导致结构扩充甚至成为全曲总高潮 |
-| **综合再现** | 同时把中部或引子的材料一起再现 |
-| 减缩再现 | 只再现一部分 |
+| Complete (static) recapitulation | Exactly as before |
+| Varied recapitulation | Change the texture or the orchestration; the material stays the same |
+| **Dynamic recapitulation** | The motif is reworked, rhythm becomes unstable, harmony intervenes, texture thickens, dynamics intensify; this often expands the structure and can even become the climax of the whole song |
+| **Synthetic recapitulation** | Recapitulates material from the middle or the introduction at the same time |
+| Reduced recapitulation | Recapitulates only part of it |
 
-末段副歌"怎么变"的答案就在这张表里；词那一侧末遍常见的改一到三个字、加一句尾，是同一件事在歌词上的做法（语料数字与曲这一侧的对齐见 `mc-development` §7.4）。
-★ 再现不必在主调上：巴赫的再现时常在属调或下属调，只要段落各部分与呈示段相对应就叫再现（赵晓生 p0232）。
+The answer to "how does the final sabi change" is in this table. The lyric side's common practice of changing one to three words or adding a line in the last round is the same thing applied to the words (for the corpus figures and how they align with the melody, see `mc-development` §7.4).
+★ Recapitulation does not have to be in the home key: Bach's recapitulations are often in the dominant or subdominant. As long as the parts of the section correspond to the exposition, it is called a recapitulation (Zhao Xiaosheng p0232).
 
-### 6.3 乐思怎么发展，曲式怎么组合（李吉提）
+### 6.3 How musical ideas develop, and how forms are assembled (Li Jiti)
 
-乐思怎么发展（加工处理、展衍、对比三路，与十种手法的对应）归 **`mc-development`** §5.1；曲式怎么组合仍在本 skill §2 与 reference §4。
+How musical ideas develop (elaboration, expansion and contrast, and their mapping onto ten techniques) belongs to **`mc-development`** §5.1; how forms are assembled remains in this skill's §2 and reference §4.
 
-## 7. 与 ARR-SPEC 的字段对应
+## 7. Mapping to ARR-SPEC fields
 
-| 字段 | 本 skill |
+| Field | This skill |
 |---|---|
-| `form[].id` | §1 的术语体系（I/A1/B1/C1/D/O） |
-| `form[].name` | ★ **用英美术语**（Intro/Verse/Pre-Chorus/Chorus/Bridge/Instrumental/Outro），因为它直接映射后端的段落标签。**日式术语只在笔记和沟通里用** |
-| `form[].bars` | §2 的模板给默认值；**打破默认归 `mc-arrangement-arch`** |
-| `form[].start_bar` | 首尾相接（lint #2） |
-| 段落数 | §2.2 的 2–3 个节 |
+| `form[].id` | The terminology system in §1 (I / A1 / B1 / C1 / D / O) |
+| `form[].name` | ★ **Use Anglo-American terms** (Intro / Verse / Pre-Chorus / Chorus / Bridge / Instrumental / Outro), because they map directly onto the backend's section labels. **Japanese terms are used only in notes and discussion** |
+| `form[].bars` | The templates in §2 give default values; **breaking the defaults belongs to `mc-arrangement-arch`** |
+| `form[].start_bar` | Sections connect end to end (lint #2) |
+| Number of sections | 2–3 sections per §2.2 |
 
-★ **一个映射陷阱**：**大サビ 要映射成 `Bridge`，不是 `Chorus`。**
-映射错了，后端会在那个位置给你一个高能量副歌，而它本该是内省的。
+★ **A mapping trap**: **ō-sabi must map to `Bridge`, not `Chorus`.**
+If it is mapped wrongly, the backend will give you a high-energy chorus at that position, whereas it should be introspective.
 
 ---
 
-## 8. 写完后必过
+## 8. Checklist to pass after writing
 
-- [ ] 术语用的是**英美那套**填 `form[].name`，日式术语只在注释里
-- [ ] **大サビ 映射成了 Bridge**，不是 Chorus
-- [ ] 全曲 **2–3 个节**，时长 3–5 分钟（或说得出为什么不是）
-- [ ] 用了**省略重复规则**（第 2 节省掉开头重复）
-- [ ] 相邻段落在**六项对比里至少有两项不同**
-- [ ] 是**从サビ倒推**设计的，不是从头往后排
-- [ ] 想加段落之前，**先试过乐节重复**
-- [ ] サビ 的**后半也有高潮**，不只是开头有冲击
-- [ ] 若用三部曲式，**B 的性格是剧变的**
+- [ ] Terms use the **Anglo-American set** in `form[].name`; Japanese terms appear only in comments
+- [ ] **ō-sabi is mapped to Bridge**, not Chorus
+- [ ] The song has **2–3 sections**, runs **3–5 minutes** (or a reason is stated for why not)
+- [ ] The **omission-of-repetition rule** is applied (the second section drops the repeated opening)
+- [ ] Adjacent sections **differ in at least two of the six contrast items**
+- [ ] Designed **backwards from the sabi**, not arranged from the beginning forward
+- [ ] Before adding a section, **phrase repetition was tried first**
+- [ ] The **second half of the sabi also has a climax**, not just impact at the opening
+- [ ] If using ternary form, **B's character changes dramatically**
 
 ---
 
-## 附：来源
+## Appendix: Sources
 
-- **《プロの曲作りが分かる本》＋高山博《ポピュラー音楽作曲のための旋律法 増補版》**——§1–§5 主干。
-  **已移出的部分**：段落对比的具体技法 → [reference.md](reference.md)；
-  hook 设计与高潮/结尾 → `mc-arrangement-arch` §7、§8；
-  反予定調和清单 → `mc-melody` §8。
-- **吴祖强《曲式与作品分析》**——§6 古典曲式装置的主干。
-- **伦纳德/论曲式**、
-  **中央音乐学院曲式例集**——谱例来源。
-- **李吉提《曲式与作品分析》**（中央音乐学院远程教育丛书，十六讲；）——
-  中国传统音乐的组织逻辑与西方的"再现原则"根本不同，提纲见 [reference.md](reference.md) §5。
+- ***A Book That Explains How Professionals Write Songs*** together with Takayama Hiroshi, ***Melody Writing for Popular Music Composition*** (expanded edition). The backbone of §1–§5.
+  **Parts moved elsewhere**: specific contrast techniques for sections → [reference.md](reference.md);
+  hook design and climax/ending → `mc-arrangement-arch` §7 and §8;
+  the list of anti-predictability checks → `mc-melody` §8.
+- **Wu Zuqiang, *Musical Forms and Work Analysis***: the backbone of §6 on classical form devices.
+- **Leonard, *On Musical Form***, and the **Central Conservatory of Music form examples collection**: sources of score examples.
+- **Li Jiti, *Musical Forms and Work Analysis*** (Central Conservatory of Music distance-education series, sixteen lectures): Chinese traditional music's organizational logic differs fundamentally from the Western "recapitulation principle"; outline in [reference.md](reference.md) §5.

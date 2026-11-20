@@ -1,452 +1,448 @@
 ---
 name: mc-style-hiphop
-description: Hip-hop and trap as a style layer (嘻哈风格层); beat-first music where the producer is a programmer, not a drummer. Covers the third time-feel from Dilla Time (straight and swung at once) with usable numbers (rushed snare ~65 ms, per-voice swing, shift-timing ticks), the tempo bands for standard / slow / half-time, the 808 as harmony carrier versus the kick, sample-based beat making from Schloss's Making Beats (digging, looping vs chopping, sampling ethics, locking up a beat, sample layers in the roster), and rap vocals from How to Rap 1 & 2 (flow on the grid, rests and breath, delivery dimensions of pitch / volume / timbre / staccato, 16-bar verse and 4- or 8-bar hook, ad-libs, the rap-versus-sung boundary). Use when writing or arranging hip-hop, trap, boom-bap, lo-fi or a rap section inside another style, when a beat sounds stiff, when the 808 fights the kick, or when deciding what to sample and how to chop it. 嘻哈、说唱、trap、boom bap、808、Dilla、半拍、律动、beat、采样、切片、chop、loop、digging、flow、delivery、气口、ad-lib。
+description: Hip-hop and trap as a style layer; beat-first music where the producer is a programmer, not a drummer. Covers the third time-feel from Dilla Time (straight and swung at once) with usable numbers (rushed snare ~65 ms, per-voice swing, shift-timing ticks), the tempo bands for standard / slow / half-time, the 808 as harmony carrier versus the kick, sample-based beat making from Schloss's Making Beats (digging, looping vs chopping, sampling ethics, locking up a beat, sample layers in the roster), and rap vocals from How to Rap 1 & 2 (flow on the grid, rests and breath, delivery dimensions of pitch / volume / timbre / staccato, 16-bar verse and 4- or 8-bar hook, ad-libs, the rap-versus-sung boundary). Use when writing or arranging hip-hop, trap, boom-bap, lo-fi or a rap section inside another style, when a beat sounds stiff, when the 808 fights the kick, or when deciding what to sample and how to chop it. Keywords: hip-hop, rap, trap, boom bap, 808, Dilla, half-time, groove, beat, sampling, chop, loop, digging, flow, delivery, breath, ad-lib.
 ---
 
-# 嘻哈风格层（Hip-hop / Trap）
+# Hip-Hop Style Layer (Hip-hop / Trap)
 
-> **这个风格里，制作者是程序员，不是"碰巧在打鼓机的鼓手"。**
-> 《Dilla Time》对 J Dilla 的定论正是这一句——
-> *"contrary to the trope that he was simply a great drummer who happened to play the drum machine, he was actually a programmer."*（《Dilla Time》作者按；第 8 章又从反面论证：关掉量化只是复制设备，有鼓手反射的人多得是，做出那种律动的只有他一个）
+> **In this style, the producer is a programmer, not "a drummer who happens to play a drum machine."**
+> This is the verdict *Dilla Time* passes on J Dilla, in one line:
+> *"contrary to the trope that he was simply a great drummer who happened to play the drum machine, he was actually a programmer."* (Dilla Time, author's note; Chapter 8 makes the argument from the other side: switching quantization off merely copies the device, plenty of people have a drummer's reflexes, and only he made that groove)
 
-所以本 skill 的立场和别的风格层不同：**律动是被设计的，不是被演奏的。**
-"松"、"醉"、"拖"都是**参数**，不是失误。
+So this skill takes a different position from the other style layers: **the groove is designed, not performed.**
+"Loose," "drunk," and "dragging" are **parameters**, not mistakes.
 
-## 本 skill 覆盖什么
+## What This Skill Covers
 
-| 覆盖 | 不覆盖 |
+| Covers | Does not cover |
 |---|---|
-| 《Dilla Time》——律动理论（§3） | trap 的专门做法（hat 滚奏语法、build/drop 结构） |
-| Schloss《Making Beats》——采样型 hip-hop 的制作逻辑与规则（§6） | 中文说唱的编曲实务 |
-| Edwards《How to Rap》1 & 2——rap 人声在编曲里的位置与 delivery（§7） | 词本身（押韵密度、多音节韵、内容）→ 作词 |
-| 语料 hiphop-rnb **10 首**实测 ARR-SPEC（§6.1–6.2） | 采样的版权与清样 |
-| Drummer's Bible 的鼓型与速度区间（p0089–0090、p0109）；DeSantis、野崎 | |
+| *Dilla Time*: the theory of groove (§3) | Trap-specific technique (hi-hat roll grammar, build/drop structure) |
+| Schloss, *Making Beats*: the logic and rules of sample-based hip-hop production (§6) | Arranging practice for Chinese-language rap |
+| Edwards, *How to Rap* 1 & 2: where rap vocals sit in an arrangement, and delivery (§7) | The lyrics themselves (rhyme density, multisyllabic rhyme, content) → songwriting |
+| Measured ARR-SPEC from the hiphop-rnb corpus, **10 songs** (§6.1–6.2) | Sample copyright and clearance |
+| Drum patterns and tempo ranges from the Drummer's Bible (p0089–0090, p0109); DeSantis; Nozaki | |
 
-★ 语料的 10 首是 **hiphop-rnb 混装**，R&B 一侧的特征已在 `mc-style-citypop-rnb` §7。
+★ The 10 corpus songs are a mixed hiphop-rnb set. The R&B side's characteristics are already covered in `mc-style-citypop-rnb` §7.
 
-## 按任务读哪几节
+## Which Sections to Read for Each Task
 
-| 任务 | 读 |
+| Task | Read |
 |---|---|
-| **判断这些手法能不能搬走 / 搬进来** | ★ §2 移植表 |
-| beat 听着僵、像量化过 | ★ §3 第三种时间感；数字在 §3.6 |
-| 定速度 | §4；club / 个人聆听的差异在 §6.7 |
-| 808 和底鼓打架 | §5 |
-| 编制怎么排（采样型） | §6；roster 怎么写见 §6.6 |
-| **能不能采这个、怎么切** | ★ §6.4 规则、§6.5 搭 loop；步骤表在 `reference.md` §1–§2 |
-| rap 和唱怎么分 | §7.1、§7.6 |
-| rap 段的 `push_pull` / 气口 / ad-lib 怎么写 | §7.2–§7.5；参数表在 `reference.md` §3–§5 |
-| **和旋律型风格混合**（rap + 中国风、rap + city pop） | ★ §8 |
+| **Deciding whether these techniques can be moved out of or into this style** | ★ §2 transplant table |
+| A beat sounds stiff, as if it were quantized | ★ §3 the third time-feel; the numbers are in §3.6 |
+| Setting the tempo | §4; club versus personal listening differences in §6.7 |
+| The 808 and the kick are fighting | §5 |
+| Arranging the lineup (sample-based) | §6; how to write the roster is in §6.6 |
+| **Whether to sample something, and how to chop it** | ★ §6.4 rules, §6.5 building a loop; the step table is in `reference.md` §1–§2 |
+| Dividing rap from sung | §7.1, §7.6 |
+| Writing `push_pull` / breath / ad-libs for a rap section | §7.2–§7.5; parameter tables in `reference.md` §3–§5 |
+| **Mixing with a melody-led style** (rap + Chinese folk, rap + city pop) | ★ §8 |
 
-## 边界
+## Boundaries
 
-| 不归这里 | 归哪 |
+| Not covered here | Where it belongs |
 |---|---|
-| 量化/velocity 的通用原理、幽灵音符、fill | `mc-rhythm-section` |
-| 节奏本身是什么（切分、先现、bounce） | `mc-rhythm-groove` |
-| 808/合成贝斯的**音色设计** | `mc-sound-design`（配方在其 reference §1.1 技法 31） |
-| rap 的**词**：押韵密度、多音节韵的写法、内容与题材 | **作词**的事。★ 本 skill 只管人声的**编曲位置、flow 与拍的关系、delivery 分配、和伴奏的关系** |
-| 演唱的通用语汇（辅音/元音、音准哲学、和声四型） | `mc-vocal-direction`；本 skill §7.3 只写 rap 特有的维度 |
-| R&B 的人声堆叠与和声 | `mc-style-citypop-rnb` §7 |
-| 采样的版权与清样 | 不做。§6.4 写的是制作人社群的**手艺规则**，不是法律 |
-
----
-
-## 1. 动笔前必填
-
-| 必填 | 问法 |
-|---|---|
-| **① 哪一支** | boom-bap / trap / lo-fi / drill / 旋律型说唱。**速度区间和鼓组语法完全不同**（§4） |
-| **② 直的、摇的、还是"第三种"** | §3。这是本风格最重要的一个决定 |
-| **③ 低频归谁** | 808 是贝斯还是底鼓？（§5）**不答这条低频一定糊** |
-| **④ rap 段和唱段的分界** | §7。全曲都 rap 和全曲都唱是两种歌 |
-| **⑤ 采样型还是合成型** | 决定 §6 的编制思路；采样型还要答"采什么、切多碎"（§6.4–6.5） |
+| General quantization and velocity principles, ghost notes, fills | `mc-rhythm-section` |
+| What rhythm itself is (syncopation, anticipation, bounce) | `mc-rhythm-groove` |
+| **Timbre design** of the 808 and synth bass | `mc-sound-design` (recipe in its reference §1.1, technique 31) |
+| The **words** of rap: rhyme density, how to write multisyllabic rhyme, content and subject matter | **Songwriting.** This skill covers only the **arrangement position, the relation of flow to the beat, delivery allocation, and the relation to the backing** of the vocal |
+| General vocal vocabulary (consonants/vowels, pitch philosophy, the four harmony types) | `mc-vocal-direction`; this skill's §7.3 covers only the dimensions specific to rap |
+| R&B vocal stacking and harmony | `mc-style-citypop-rnb` §7 |
+| Sample copyright and clearance | Not handled. §6.4 describes the producer community's **craft rules**, not the law |
 
 ---
 
-## 2. ★ 移植表
+## 1. Required Before You Start
 
-| 手法 | 可搬出去吗 | 说明 |
+| Required | Question |
+|---|---|
+| **① Which style** | Boom-bap / trap / lo-fi / drill / melody-led rap. **Tempo bands and drum grammar differ completely** (§4) |
+| **② Straight, swung, or "the third kind"** | §3. This is the most important decision in this style |
+| **③ Who owns the low end** | Is the 808 the bass or the kick? (§5). **If this is not answered, the low end will certainly turn to mud** |
+| **④ The boundary between rap sections and sung sections** | §7. A song that is all rap and a song that is all sung are two different kinds of song |
+| **⑤ Sample-based or synthesized** | Determines the lineup approach in §6; sample-based also has to answer "what to sample and how finely to chop it" (§6.4–6.5) |
+
+---
+
+## 2. ★ Transplant Table
+
+| Technique | Can it be moved out? | Notes |
 |---|---|---|
-| **第三种时间感**（直拍与摇摆并存） | ✅ ★ **本风格给别的风格最值钱的东西** | neo-soul、lo-fi、甚至流行抒情都在用。见 §3 |
-| **逐件乐器决定量化** | ✅ 可搬 | 它就是 `mc-rhythm-section` §2.2 的极端形态 |
-| **808 作为和声载体** | ⚠ 半搬 | 搬进旋律型风格时**只留低频功能**，滑音和长尾会立刻被认出来 |
-| **半拍感（half-time）** | ⚠ 半搬 | 强标记。搬进流行副歌可做"落ちサビ"式的落差 |
-| **采样切片作为织体** | ⚠ 半搬 | 在别的风格里是"lo-fi 味"的来源，一搬就被认出来 |
-| **trap hi-hat 的三连/32 分滚奏** | ❌ **不可搬** | 最强的风格标记 |
-| **rap 的 delivery** | ⚠ 半搬 | 作为一个段落（主歌）可以搬进任何风格——这正是 §8 的做法；作为全曲则整首就是 hip-hop |
-| **减法结构**（退场最多） | ✅ ★ **该搬** | §6.2 实测 |
+| **The third time-feel** (straight and swung coexisting) | ✅ ★ **The most valuable thing this style gives other styles** | Neo-soul, lo-fi, even pop ballads already use it. See §3 |
+| **Deciding quantization per instrument** | ✅ Can be moved | It is the extreme form of `mc-rhythm-section` §2.2 |
+| **808 as harmony carrier** | ⚠ Partial transplant | When moved into a melody-led style, **keep only the low-frequency function**; slides and long tails will be recognized immediately |
+| **Half-time feel** | ⚠ Partial transplant | A strong marker. Can be used in a pop chorus for an "ochisabi"-style drop (a Japanese pop term for a sudden drop in energy) |
+| **Sample slices as texture** | ⚠ Partial transplant | In other styles this is the source of a "lo-fi flavor"; transplanted as-is, it is recognized at once |
+| **Trap hi-hat triplet / 32nd-note rolls** | ❌ **Not transplantable** | The strongest stylistic marker |
+| **Rap delivery** | ⚠ Partial transplant | As one section (a verse) it can be moved into any style. This is what §8 does. As the whole song it simply is hip-hop |
+| **Subtractive structure** (the most drop-outs) | ✅ ★ **Should be transplanted** | Measured in §6.2 |
 
-★ **判据**：
-> **时间感与减法可以自由借；808 的尾巴、trap hat、采样颗粒是标记，借了就会被认出来。**
+★ **Criterion:**
+> **Time-feel and subtraction can be borrowed freely. The 808 tail, the trap hat, and the sample grain are markers: borrow them and you will be recognized.**
 
 ---
 
-## 3. ★ 第三种时间感：本 skill 的核心
+## 3. ★ The Third Time-Feel: The Core of This Skill
 
-《Dilla Time》引文按**章**定位（epub 无页码；全书 16 章的目录见 `reference-vocal.md` §6）。
+*Dilla Time* quotations are located by **chapter** (the epub has no page numbers; the table of contents for all 16 chapters is in `reference-vocal.md` §6).
 
-### 3.1 定义
+### 3.1 Definition
 
 > *"Before J Dilla, our popular music essentially had two common 'time-feels'—**straight time and swing time**—meaning that musicians felt and expressed time as either even or uneven pulses. What Dilla created was a third path of rhythm, **juxtaposing those two time-feels, even and uneven simultaneously**, creating a new, pleasurable, disorienting rhythmic friction and a new time-feel: Dilla Time."*
-> ——Dan Charnas《Dilla Time》（作者按）
+> ——Dan Charnas, *Dilla Time* (author's note)
 
-**不是"介于直和摇之间"，是"同时是直的和摇的"。**
+**It is not "halfway between straight and swung." It is "both straight and swung at once."**
 
-书在第 8 章把这句话说得更硬：
+Chapter 8 states this more bluntly:
 > *"It is the deliberate juxtaposition of multiple expressions of straight and swing time simultaneously, a conscious cultivation of rhythmic friction for maximum musicality and maximum surprise. It is conflicted time."*
-> 它**不是**直拍和摇摆之间的中点，也不是渐变。
+> It is **not** the midpoint between straight and swung, nor a gradual blend.
 
-### 3.2 它怎么做出来
+### 3.2 How It Is Made
 
-书里拆了一个具体案例（第 8 章，Slum Village《Fantastic, Vol. 2》）：
+The book dissects one concrete case (Chapter 8, Slum Village, *Fantastic, Vol. 2*):
 
-> 底鼓与军鼓在网格上本该等距，现在变成**短–长–短–长**——这是摇摆；
-> **而 hi-hat 同时保持均匀**——这是直拍。
+> The kick and snare, which should sit evenly on the grid, become **short–long–short–long**: that is swing. **Yet the hi-hat stays even**: that is straight.
 > *"So now there were two time-feels fighting each other: straight and swung."*
 
-★ **落到操作上就一句话：不同鼓件用不同的时间感。**
+★ In operational terms, it comes down to one sentence: **different drum voices use different time-feels.**
 
-| 鼓件 | 时间感 | 怎么做 |
+| Drum voice | Time-feel | How to do it |
 |---|---|---|
-| **hi-hat** | 直（守网格） | 量化 100% 或 swing 0 |
-| **kick / snare** | 摇（或提前/拖后） | 不量化，或 swing 55–65% |
-| （或反过来） | | |
+| **Hi-hat** | Straight (stays on the grid) | Quantize 100% or swing 0 |
+| **Kick / snare** | Swung (or pushed early / pulled late) | Unquantized, or swing 55–65% |
+| (or the reverse) | | |
 
-这与 `mc-rhythm-section` §2.2 "只量化部分乐器"是同一个原理，**但 hip-hop 把它推到极端：两套时间感故意打架。**
+This is the same principle as `mc-rhythm-section` §2.2, "quantize only some instruments," but hip-hop pushes it to the extreme: **two time-feels deliberately fighting each other.**
 
-书里还有一个感知细节（第 8 章）：**大脑把 kick 和 snare 当稳定基底**，所以军鼓一抢，**均匀的 hi-hat 反而听起来像摇的**——它其实是直的。这就是为什么"哪一件守网格"要写清楚。
+The book also records a perceptual detail (Chapter 8): **the brain treats kick and snare as the stable foundation**, so when the snare rushes, an even hi-hat actually *sounds* swung, even though it is straight. This is why it must be stated clearly **which element stays on the grid**.
 
-### 3.3 "松"是程序出来的
+### 3.3 "Loose" Is Programmed
 
-> 书里描述 Dilla 律动的六个词：*"Sloppy. Drunken. Limping. Lazy. Dragging. Off."*
-> 但它们全是**关掉 Timing Correct** 之后一件一件手打出来的：
-> *"he programmed it without timing correct, increasing the sense of the unexpected."*（第 7 章，Pharcyde《Runnin'》）
+> The book describes Dilla's groove with six words: *"Sloppy. Drunken. Limping. Lazy. Dragging. Off."*
+> But every one of them was produced by **switching off Timing Correct** and then hand-placing each sound one at a time:
+> *"he programmed it without timing correct, increasing the sense of the unexpected."* (Chapter 7, Pharcyde, *Runnin'*)
 
-**MPC 的 Timing Correct** 就是量化（第 5 章，Amp Fiddler 教 MPC60 时的原话）：
+**The MPC's Timing Correct** is quantization (Chapter 5, Amp Fiddler teaching on the MPC60, in his words):
 > *"If you hit a drum sound too late, or too early, it will automatically put the sound right on time. You can use it on all your sounds, or some of them, or none of them."*
 
-★ **"some of them"就是全部秘密。** 见 §3.2 的表。
+★ **"Some of them" is the whole secret.** See the table in §3.2.
 
-同一块还记了另一句：*"You don't have to make every measure four beats. You can loop around every three beats, or five, or six, or seven if you want."*——奇数小节的 loop 从一开始就是这台机器的正常用法（§6.5、§7.5 会回到它）。
+The same passage also notes: *"You don't have to make every measure four beats. You can loop around every three beats, or five, or six, or seven if you want."* Loops of odd bar lengths were normal usage on this machine from the start (§6.5 and §7.5 return to this).
 
-这些形容词后来成了行话：Robert Glasper 第一次听《Fantastic, Vol. 2》时叫它 *"woozy, drunken rhythms"*（第 9 章）；Kendrick Lamar 在 Knxwledge 的 beat 上直接喊 *"I need that sloppy!"*——把形容词当名词用，指那种还没有名字的时间感（第 15 章）。
+These adjectives later became jargon. Robert Glasper, the first time he heard *Fantastic, Vol. 2*, called it *"woozy, drunken rhythms"* (Chapter 9). Kendrick Lamar, over a Knxwledge beat, shouted *"I need that sloppy!"*, using the adjective as a noun to mean a time-feel that has no name yet (Chapter 15).
 
-### 3.4 一个反直觉的听感
+### 3.4 A Counterintuitive Sensation
 
-> *"The hyperactive kick drum raced ahead of the samba sample, which in turn seemed to be racing ahead of the snare drum—which gave the paradoxical illusion that **the snare was somehow late, making the beat feel oddly relaxed, tumbling endlessly forward**."*（第 7 章，《Runnin'》）
+> *"The hyperactive kick drum raced ahead of the samba sample, which in turn seemed to be racing ahead of the snare drum—which gave the paradoxical illusion that **the snare was somehow late, making the beat feel oddly relaxed, tumbling endlessly forward**."* (Chapter 7, *Runnin'*)
 
-**底鼓抢、军鼓不动 → 听起来是军鼓拖 → 整体"放松地往前翻滚"。**
-所以 `push_pull` 里**要有一件守网格当参照系**（`mc-rhythm-section` §3）——在 hip-hop 里通常是军鼓。
+**Kick rushes, snare stays put → the snare sounds late → the whole thing "tumbles forward relaxed."**
+So `push_pull` **must include one element that stays on the grid as the reference frame**. In hip-hop, that is usually the snare.
 
-同一首歌的另一个细节（第 7 章）：底鼓不是 2 小节或 4 小节循环，而是**线性编到第 20 小节才重复**，每小节都不一样——模拟真人鼓手的自然变化。这是 `mc-rhythm-section` §4 线性鼓在采样型里的形态。
+A further detail from the same song (Chapter 7): the kick pattern does not repeat every 2 or 4 bars. It is **sequenced linearly and does not repeat until bar 20**, so every bar is different, simulating the natural variation of a human drummer. This is the form of the linear drum in sample-based work described in `mc-rhythm-section` §4.
 
-### 3.5 与佐证表的关系
+### 3.5 Relation to the Corroboration Table
 
-「不该全声部严格对齐网格」**62/62**。hip-hop 是这条规则的**发源地**之一——
-DeSantis：*"在大多数 Hip-hop 中，更松散、有机的感觉更合适，因为该风格常直接采样真实鼓手的录音"*（p0154）。
-★ 但 **trap 是例外**：hat 滚奏必须精确量化，松的只有 808 和采样层。**又回到"逐件决定"。**
+"Not every part should align strictly to the grid" **62/62**. Hip-hop is one of the **birthplaces** of this rule.
+DeSantis: *"In most Hip-hop, a looser, more organic feel is more suitable, because the style often samples recordings of real drummers"* (p0154).
+★ But **trap is the exception**: the hat rolls must be quantized precisely, and only the 808 and the sample layers are loose. **Which brings us back to deciding per instrument.**
 
-### 3.6 ★ 把第三种时间感写成数字
+### 3.6 ★ Writing the Third Time-Feel as Numbers
 
-`push_pull` 只写"稍微靠前"等于没写。《Dilla Time》给了几组可以直接抄进 `offset_ms` 的量：
+Writing `push_pull` as only "slightly ahead" says nothing. *Dilla Time* gives several figures that can be copied directly into `offset_ms`:
 
-| 手法 | 数值 | 出处 |
+| Technique | Value | Source |
 |---|---|---|
-| **抢拍军鼓**（rushed snare） | 军鼓比反拍**提前约 65 ms**——比失误或 flam 的偏差大两倍多。hi-hat 守直拍像"55 英里/小时"，军鼓像"70 英里/小时"，两个速度感同时存在 | 第 8 章 |
-| 同一件事按网格算 | 一小节切成 **192** 份，军鼓提前 **5** 份（记谱等于五个 128 分音符三连音）。鼓手数不了这么细，所以真鼓手会退到每拍 5、6、7 等分（七连音）去逼近 | 第 8 章 |
-| **鼓机的 shuffle**（Roger Linn） | 把每个偶数十六分音符延后：50/50 是直拍，**66/34** 是完美三连音摇摆，**58/42、54/46** "不直不摇、在两者之间"，才是真有 groove 的量 | 第 6 章 |
-| 逐件 swing | SP-1200 的 swing 是全序列一根橡皮筋一起拉；MPC 允许**每个声音单独设 swing**，再用 **Shift Timing** 按 tick 把某件整体前后挪 | 第 8 章 |
+| **Rushed snare** | The snare sounds **about 65 ms ahead** of the backbeat, more than twice the deviation of a mistake or a flam. With the hi-hat holding straight it feels like "55 mph," while the snare feels like "70 mph"; both speed senses exist at once | Chapter 8 |
+| The same thing on the grid | Divide one bar into **192** parts; the snare sits **5** parts early (in notation, five 128th-note triplets). Human drummers cannot count this finely, so real drummers fall back to 5-, 6-, or 7-part subdivisions per beat (septuplets) to approximate it | Chapter 8 |
+| **Drum-machine shuffle** (Roger Linn) | Delay every even sixteenth note: 50/50 is straight, **66/34** is a perfect triplet swing, and **58/42 or 54/46**, "neither straight nor swung, in between," are the amounts that actually have groove | Chapter 6 |
+| Per-instrument swing | The SP-1200's swing pulled the whole sequence at once, like a single rubber band. The MPC allows **swing to be set for each sound separately**, and uses **Shift Timing** to move one sound forward or back by ticks | Chapter 8 |
 
-另外几组量——Jazzy Jeff 的配方、"kick is late, snare is early"、两个脉冲相差约 85 ms、人声整体后挪、用 11 ms 延迟做 flam——见 `reference.md` §6.1。
+Other figures (Jazzy Jeff's recipe, "kick is late, snare is early," two pulses about 85 ms apart, shifting vocals as a whole, flams made with an 11 ms delay) are in `reference.md` §6.1.
 
-**怎么写进 ARR-SPEC**：`groove.quantize_policy` 逐鼓件写百分比；`groove.push_pull` 至少三行——一行守网格（0 ms，写明"参照系"）、一行抢（负值，量级参考上表）、一行拖；`vocal.phrasing` 给 rap 段单独一行（§7.2）。
+**How to write this into ARR-SPEC:** `groove.quantize_policy` gives a percentage for each drum voice. `groove.push_pull` has at least three lines: one that stays on the grid (0 ms, marked as the "reference frame"), one that rushes (negative value, magnitude taken from the table above), and one that drags. `vocal.phrasing` gives the rap section its own line (§7.2).
 
-★ **它是编程不是反射**（第 8 章、记者手记）：书专门反驳"Dilla = 关掉量化"的传说——关掉校正的音序器只是在复制设备；抢拍军鼓的**规律性**来自 MPC 的特定用法，不是手快。所以你写的偏移必须**在整段里保持恒定**（第 8 章："这些微小调整必须随时间保持恒定，且与其他元素冲突共存"），不是每小节随机抖。
+★ **It is programming, not reflex** (Chapter 8, and the reporter's notes): the book specifically rebuts the legend that "Dilla = switching off quantization." A sequencer with correction disabled just copies the device; the **regularity** of the rushed snare comes from a specific way of using the MPC, not from quick hands. So the offsets you write must **stay constant across the whole section** (Chapter 8: "these tiny adjustments must remain constant over time, and coexist with and conflict with other elements"), not randomly jitter bar by bar.
 
-### 3.7 Schloss 一侧：采样型制作人怎么看量化
+### 3.7 The Schloss Side: How Sample-Based Producers View Quantization
 
-Schloss 记的是 1990 年代末采样型制作人的共识，和《Dilla Time》**互补而不是对立**，两边并排放：
+Schloss records the consensus of sample-based producers from the late 1990s. It **complements rather than opposes** *Dilla Time*. The two are set side by side:
 
-| 议题 | Schloss《Making Beats》 | 《Dilla Time》 |
+| Issue | Schloss, *Making Beats* | *Dilla Time* |
 |---|---|---|
-| 为什么不量化 | Domino：采样里是真人鼓手本来就不精确，量化反而让你的鼓"不准"；他只敲军鼓、需要时手动调（p0155–0156） | 为了让两套时间感打架；底鼓徒手、军鼓抢拍是**设计**（第 7、8 章） |
-| 松到什么程度 | "机械精确"与"过于松散"之间有一个**很窄的窗口**，偏向任一端都会被同行说；RZA 不量化被批为 sloppy，Prince Paul 却说"但它听起来太好了"（p0156–0158） | 书把 RZA 列为先例，但 Dilla 的位移是**刻意且严重的**，不是微妙效果（第 8 章） |
-| 判据 | "感觉对"（Stein）；**能不能跳**——跳舞多的人知道什么会让人动（p0158）；club 里要有 bounce（p0198） | Jazzy Jeff（作者按）：*"You can follow the method and you won't have the feeling. You can have the feeling but no success because you have no method."* |
-| 适用场合 | DJ 要把这首接进下一首，**节奏不稳会妨碍衔接**（p0201）——club 用途的 beat 要稳一些 | 传统乐手复现它的办法：**鼓手戴掉耳机尽量打直、贝斯手滞后**，张力才保得住（第 9 章） |
+| Why not quantize | Domino: in samples, real drummers were never precise to begin with, and quantizing makes your drums "inaccurate." He only hits the snare and adjusts it by hand when needed (p0155–0156) | To make two time-feels fight each other; the hand-played kick and the rushed snare are **designed** (Chapters 7–8) |
+| How loose to go | There is a **very narrow window** between "mechanically precise" and "too loose," and leaning toward either end gets criticized by peers. RZA's unquantized drums were called sloppy, yet Prince Paul said "but it sounds so good" (p0156–0158) | The book cites RZA as a precedent, but Dilla's displacement is **deliberate and severe**, not a subtle effect (Chapter 8) |
+| Criterion | "It feels right" (Stein); **can you dance to it**, since people who dance a lot know what makes them move (p0158); club use needs bounce (p0198) | Jazzy Jeff (author's note): *"You can follow the method and you won't have the feeling. You can have the feeling but no success because you have no method."* |
+| Context of use | A DJ must mix this track into the next one, and **unstable timing gets in the way of the transition** (p0201). Beats meant for club use should be steadier | The traditional way for musicians to reproduce it: **the drummer plays straight with headphones removed, and the bassist lags behind**, so the tension holds (Chapter 9) |
 
-★ 读法：**Schloss 讲的是"别太松"的行规，《Dilla Time》讲的是"松也要松得有规律"。** 两者都在说同一件事——偏移是写下来的量，不是没管。
+★ How to read it: **Schloss describes the trade rule of "don't go too loose," and *Dilla Time* describes "loose is fine as long as it is loose in a regular way."** Both are saying the same thing: an offset is a quantity that is written down, not something left unmanaged.
 
 ---
 
-## 4. 速度区间
+## 4. Tempo Bands
 
-Drummer's Bible（p0109）：
+Drummer's Bible (p0109):
 
-| feel | BPM |
+| Feel | BPM |
 |---|---|
 | **Standard Hip Hop** | **60–108** |
 | **Slow feel** | 60–80 |
-| **Half-time feel** | **132–172**（军鼓落在 3 拍，听感速度减半） |
+| **Half-time feel** | **132–172** (the snare lands on beat 3, so the perceived tempo halves) |
 
 > *"there is no one standard Hip Hop/Rap groove … each groove can be played with a straight or swung feel, though the swung feel has become more commonly employed."*
 
-★ **半拍感的写法**：`meta.tempo` 写实际 BPM（如 140），`groove.feel: halftime`。**不要把 140 BPM 的 trap 写成 70 BPM**——hat 的细分会算错，后端也会理解错。《How to Rap 2》p0031 的说法一致：70 bpm 和 140 bpm 是一回事，区别只在 hi-hat 的速度。
+★ **How to write half-time:** `meta.tempo` holds the actual BPM (for example 140), and `groove.feel: halftime`. **Do not write a 140 BPM trap as 70 BPM**: the hi-hat subdivisions will be miscalculated, and the back end will misread it too. *How to Rap 2* p0031 says the same thing: 70 bpm and 140 bpm are the same thing; the only difference is the speed of the hi-hat.
 
-**另外两组数**：club 里当代 hip-hop 常态 **88 bpm 或 90 出头**，放 **75–85 bpm** 舞池会清空（Schloss p0200–0201）；按 MC 的感受，**90–100 是中速**、**100 以上算快**（《How to Rap 2》p0025–0027）。
+**Two further figures:** in clubs, contemporary hip-hop is typically **88 bpm or a little over 90**, and playing **75–85 bpm** will empty the dance floor (Schloss p0200–0201). By the feel of MCs, **90–100 is mid-tempo** and **above 100 counts as fast** (*How to Rap 2* p0025–0027).
 
-**语料**：hiphop-rnb 10 首检测 BPM 中位 112，⚠ beat tracking 在半拍感上有倍频误判，**不要引用这个数**。
+**Corpus:** the hiphop-rnb 10-song detected BPM median is 112. ⚠ Beat tracking produces double-tempo errors on half-time feels, so **do not cite this figure.**
 
 ---
 
-## 5. ★ 低频归谁：808 与底鼓
+## 5. ★ Who Owns the Low End: 808 vs. Kick
 
-**hip-hop 最常见的技术失败是 808 和 kick 都在 40–80 Hz 里，谁也听不清。**
+**The most common technical failure in hip-hop: the 808 and the kick both sit in 40–80 Hz, and neither can be heard clearly.**
 
-三种解法，**必须选一种写进 `bass_kick_relation`**：
+There are three solutions, and **one must be chosen and written into `bass_kick_relation`**:
 
-| 解法 | 做法 | 对应 |
+| Solution | Method | Corresponds to |
 |---|---|---|
-| **808 就是 kick** | 808 的起音当底鼓用，没有独立 kick | trap 的标准做法 |
-| **kick 短、808 长** | kick 只负责 20–60 ms 的敲击，808 在它衰减后接管 | boom-bap / 旋律型说唱 |
-| **互答式** | 808 避开 kick 的击点（`mc-rhythm-section` §7.1） | 采样型 |
+| **The 808 is the kick** | The attack of the 808 serves as the kick; there is no separate kick | The standard trap approach |
+| **Short kick, long 808** | The kick handles only the 20–60 ms strike; the 808 takes over after the kick decays | Boom-bap / melody-led rap |
+| **Call-and-response** | The 808 avoids the kick's strike point (`mc-rhythm-section` §7.1) | Sample-based |
 
-### 5.1 808 是和声载体
+### 5.1 The 808 Is the Harmony Carrier
 
-**在没有和弦乐器的段落里，808 的音高就是和声。**
-所以 808 线要写进 `form[].harmony`——它不是"低频"，它是**低音声部**。
+**In passages without a chordal instrument, the pitch of the 808 *is* the harmony.**
+So the 808 line must be written into `form[].harmony`. It is not "low frequency" but a **bass voice**.
 
-★ **差音警告**（`mc-sound-design` §6）：纯正弦的 808 在手机上会消失。
-野崎技法 31 的解法：**OSC2 正弦 +19 半音（第三泛音，十二度）**——*"此泛音大约正好位于低音感与粗厚感的分界点上"*，但**"切忌为了展现气势而过度强调泛音的音量"**（p0113）。
+★ **Difference-tone warning** (`mc-sound-design` §6): a pure-sine 808 disappears on a phone.
+Nozaki's technique 31 solution: **OSC2 sine at +19 semitones (the third harmonic, a twelfth)**: *"This overtone sits roughly at the boundary between the sense of bass and the sense of thickness"*, but **"never overemphasize the overtone's volume in order to show off power"** (p0113).
 
-### 5.2 采样型的低频：Schloss 的两条
+### 5.2 Sample-Based Low End: Schloss's Two Points
 
-- **kick 最难从采样里剥出来**：军鼓、hi-hat 上面叠的东西可以滤掉，kick 是低频，"你不能在它上面放低通"（Schloss p0160–0161）。所以采样型也常常**kick 单独找**（老唱片或鼓机），loop 只出军鼓和 hat。
-- **纯采样在车里会散**：好车载系统上纯采样的低频撑不住，加一个 **808 kick 或键盘贝斯线**会"极大地厚起来"（Schloss p0206–0207）。这就是三选一里"kick 短、808 长"在采样型里的由来。
+- **The kick is the hardest thing to extract from a sample.** Sounds layered over snare and hi-hat can be filtered out, but the kick is low-frequency: "you can't put a low-pass on it" (Schloss p0160–0161). So sample-based producers often **source the kick separately** (from an old record or a drum machine), and the loop supplies only the snare and hat.
+- **Pure samples fall apart in a car:** on a good car stereo, the low end of a pure sample can't hold up. Adding an **808 kick or a keyboard bass line** makes it "thicken considerably" (Schloss p0206–0207). This is where "short kick, long 808" among the three options comes from in sample-based work.
 
 ---
 
-## 6. 编制：采样型的织体
+## 6. Lineup: Sample-Based Texture
 
-### 6.1 实测：织体轨远多于律动轨
+### 6.1 Measured: Texture Tracks Far Outnumber Groove Tracks
 
-语料 10 首的 roster 角色分布：
+Role distribution in the roster across the 10 corpus songs:
 
-| 角色 | 轨数 |
+| Role | Track count |
 |---|---|
-| **织体** | **171** |
-| 色彩 | 100 |
-| 旋律 | 77 |
-| 律动 | 27 |
-| 低频 | 15 |
+| **Texture** | **171** |
+| Color | 100 |
+| Melody | 77 |
+| Groove | 27 |
+| Low end | 15 |
 
-**读法**：hip-hop 的"厚"不来自更多的鼓，来自**大量短的、循环的织体层**（采样切片、vocal chop、pad 片段）；律动轨只有 27——**鼓组本身很简**。
-★ **对 `mc-texture-layering` 的后果**：这些织体层大多是**同一个采样的不同切片**，频段天然重叠——**交替出现**（§4.2 解法③）是主要手段，不是让频。
+**Reading:** hip-hop's "thickness" does not come from more drums. It comes from **a large number of short, looped texture layers** (sample slices, vocal chops, pad fragments). Groove tracks number only 27: **the drum kit itself is very simple.**
+★ **Consequence for `mc-texture-layering`:** these texture layers are mostly **different slices of the same sample**, so their frequency bands naturally overlap. **Alternating appearance** (§4.2 solution ③) is the main tool, not frequency carving.
 
-### 6.2 ★ 实测：最"减法"的风格
+### 6.2 ★ Measured: The Most Subtractive Style
 
-| 指标 | hiphop-rnb | pop | jazz |
+| Metric | hiphop-rnb | pop | jazz |
 |---|---|---|---|
-| **提前退场的乐器比例（中位）** | ★ **71%** | — | — |
-| 提前退场的乐器数（中位） | **28** | 16 | 10 |
-| 开场就在场的比例 | 24% | 21% | 16% |
-| 段落数中位 | 9 | 10 | 9 |
+| **Share of instruments that exit early (median)** | ★ **71%** | — | — |
+| Number of instruments that exit early (median) | **28** | 16 | 10 |
+| Share present at the opening | 24% | 21% | 16% |
+| Median section count | 9 | 10 | 9 |
 
-**读法**：开场铺得最满，但**七成的层会在结束前撤掉**。结构感来自**不断撤东西**，不是加东西。
-→ **`subtraction_events` 在这个风格里要写得比任何风格都多。**
+**Reading:** the opening is the fullest of any style, but **seven in ten layers are removed before the end**. The sense of structure comes from **continually taking things away**, not from adding them.
+→ **`subtraction_events` in this style should be written more densely than in any other style.**
 
-Schloss 把这写成了这个流派的定义（p0151）：制作人的理想是"一个可重复的图形，通过在不同时间**添加或减去**各种元素来改变它"（p0051）。**减法不是修饰，是它唯一的结构手段。**
+Schloss makes this the definition of the genre (p0151): the producer's ideal is "a repeatable figure, changed by **adding or subtracting** various elements at different times" (p0051). **Subtraction is not decoration; it is the only structural tool.**
 
-### 6.3 采样的编曲逻辑
+### 6.3 The Arrangement Logic of Sampling
 
-> Dilla 的日常（《Dilla Time》第 1 章）：*"He listened to entire songs, listened and listened. His vigilance was almost always rewarded by an element deep within a track."*
+> Dilla's daily practice (*Dilla Time*, Chapter 1): *"He listened to entire songs, listened and listened. His vigilance was almost always rewarded by an element deep within a track."*
 
-**采样不是找 loop，是找一个"元素"**——一个和弦、一个人声尾音、一小节鼓。然后**慢放**：把一段吉他放慢一半，"微小的不完美"变成了律动；六拍的采样撞在四拍的 beat 上（第 7 章）；慢到"无法辨认"也不要紧（第 12 章）。★ 这与 `mc-sound-design` §2 "回零点"同理：**素材的不完美是原料，不是要修的东西。**
+**Sampling is not about finding a loop; it is about finding an "element"**: a chord, the tail of a vocal, a single bar of drums. Then **slow it down**: halve the speed of a guitar part, and the "tiny imperfections" become groove; a six-beat sample collides with a four-beat beat (Chapter 7); slowing something until it is "unrecognizable" is also fine (Chapter 12). ★ This is the same logic as "return to zero" in `mc-sound-design` §2: **the imperfections of raw material are the ingredients, not something to fix.**
 
-Schloss 从另一头说同一件事（p0083）：采样自带**和声方向感、节奏感、音色氛围**，而现场乐器"可以演奏任何东西"反而没有可依托的线索——**采样的价值是它带着约束进来**。所以选采样时先问它带来了什么约束（速度、调性、房间感），再决定其余层怎么让。
+Schloss approaches the same point from the other direction (p0083): a sample carries **a sense of harmonic direction, rhythmic sense, and tonal atmosphere**, while a live instrument "can play anything," so it offers no cues to lean on. **The value of a sample is that it arrives carrying constraints.** So when choosing a sample, first ask what constraints it brings (tempo, key, sense of room), then decide how the other layers should respond.
 
-### 6.4 ★ 采样的规则：制作人社群的手艺伦理
+### 6.4 ★ Sampling Rules: The Craft Ethics of the Producer Community
 
-Schloss 第 5 章记的是采样型制作人之间**默认遵守、违反会被同行嘲笑**的一套规则（Vitamin D："They're rules! It's all following rules."，Schloss p0116）。它们不是法律也不是审美——伦理是"入场费"，遵守只保证被尊重，不保证被赞美（Schloss p0147）。两个底层价值：**体力上的努力**（自己去找唱片）与**智力上的努力**（不用现成的、不用已经很好的）（Schloss p0146）。
+Schloss Chapter 5 records a set of rules that sample-based producers among themselves **follow by default, and whose violation gets mocked by peers.** (Vitamin D: "They're rules! It's all following rules," Schloss p0116.) They are neither law nor aesthetics. Ethics is an "entry fee": following them only guarantees being respected, not being praised (Schloss p0147). There are two underlying values: **physical effort** (going out and finding records yourself) and **intellectual effort** (not using ready-made material, and not using material that is already very good) (Schloss p0146).
 
-七条是：**no biting**（不重复别人 loop 过的素材或做过的组合）、**鼓可以重用而采样不行**、**只从黑胶采**、**不采其他 hip-hop 唱片**、**不采你尊敬的唱片**（除非能"以完全惊人的方式 flip 它"）、**不用 breakbeat 合辑**、**同一张唱片不采两个声音**。逐条内容、公认例外与页号见 `reference.md` §2.3（Schloss p0116–0147、p0220）；选材怎么找、目标乐器清单见 §2.1–§2.2。
+The seven are: **no biting** (do not reuse material or combinations that others have already looped), **drums may be reused but samples may not**, **sample only from vinyl**, **do not sample other hip-hop records**, **do not sample records you respect** (unless you can "flip it in a completely astonishing way"), **do not use breakbeat compilations**, and **do not sample two sounds from the same record**. Item-by-item content, recognized exceptions, and page numbers are in `reference.md` §2.3 (Schloss p0116–0147, p0220). How to find material and the target instrument list are in §2.1–§2.2.
 
-★ **对写规格单的意义**：`roster` 里每条采样层都要说得出**它从哪类素材来、和同曲其他采样层是不是同源**（§6.6）；同源的层只能是 chop 出的连续 loop 或鼓件——**艺术的一部分是把通常不会被组合的元素组合起来**（Schloss p0145）。伦理的落点不是"能不能采"，是"用得恰不恰当"（Schloss p0218）。
+★ **Significance for writing the spec:** every sample layer in `roster` must be stated with **what kind of source material it comes from, and whether it shares a source with the other sample layers in the same track** (§6.6). Layers from the same source may only be a continuous loop from chopping, or drum hits. **Part of the art is combining elements that would not normally be combined** (Schloss p0145). The ethical question is not "may you sample it" but "is the use appropriate" (Schloss p0218).
 
-### 6.5 ★ 一个 loop 怎么搭：从 break 到 beat
+### 6.5 ★ Building a Loop: From Break to Beat
 
-**术语先钉死**（Schloss p0121、p0166、p0179）：**looping** = 采一或多小节几乎不改地重复；**chopping** = 切成更小片段重新排序；**flipping** = 任何实质性的创造性改变。1990 年代末 chopping 已取代整段 loop 成为主流（Schloss p0166）——要的是采样的**纹理和声音**而不是原曲的**作曲**（p0179）。
+**Pin the terms down first** (Schloss p0121, p0166, p0179): **looping** = sampling one or more bars and repeating them with almost no change; **chopping** = cutting into smaller fragments and reordering them; **flipping** = any substantial creative change. By the late 1990s chopping had replaced whole-loop sampling as the mainstream (Schloss p0166). What is wanted is the **texture and sound** of the sample, not the **composition** of the original (p0179).
 
-**loop 本身会长出新东西**（Schloss p0152–0153）：乐句结尾反复接到开头是原乐手从未打算的并置；含一次和弦变化的采样在 loop 点上**产生原作曲家从未写过的和弦进行**；旋律变成节奏；**call-and-response 是 loop 自带的**。切碎同样能造新和声（第 7 章）。四条的展开见 `reference.md` §1.3。
+**Loops grow new things of their own** (Schloss p0152–0153): when the end of a phrase repeatedly leads back to its beginning, it creates a juxtaposition the original player never intended; a sample containing one chord change produces, at the loop point, **a chord progression the original composer never wrote**; melody turns into rhythm; **call-and-response is built into the loop**. Chopping can also create new harmony (Chapter 7). The four are expanded in `reference.md` §1.3.
 
-**搭建顺序**（十步的完整表、判据与常见失败见 `reference.md` §1.2、§1.6）：
+**Build order** (the full ten-step table, criteria, and common failures are in `reference.md` §1.2 and §1.6):
 
-> ① **先鼓**（鼓是 backbone，Schloss p0154）→ ② 用唱机**试装**（p0069）→ ③ **truncate** 定死起止点 → ④ **loop & layer** → ⑤ 用**小节数**定各段长度（第 5 章）→ ⑥ **切碎重排**（p0157）→ ⑦ ★ **锁住**（"locking up"，**锁没锁上是有无的问题**，p0154）→ ⑧ 查采样里**自带的 hi-hat** 有没有在和你的鼓打架（p0157–0158）→ ⑨ **统一年代与音色**（p0161）→ ⑩ 按段落**加减层**（§6.2）。
+> ① **Drums first** (drums are the backbone, Schloss p0154) → ② **Trial-fit** with a turntable (p0069) → ③ **Truncate** to fix the start and end points → ④ **Loop & layer** → ⑤ Use **bar counts** to set section lengths (Chapter 5) → ⑥ **Chop and rearrange** (p0157) → ⑦ ★ **Lock up** ("locking up," **whether it locks is a yes-or-no question**, p0154) → ⑧ Check whether the **hi-hat built into the sample** conflicts with your drums (p0157–0158) → ⑨ **Unify era and timbre** (p0161) → ⑩ **Add and remove layers** by section (§6.2).
 
-**几条判断**：
-- **snare 是审美规范不是道德规则**：Mr. Supreme——"hip-hop 没规则，不需要副歌、不需要桥段"，但军鼓是普遍偏好；MC 在无鼓贝斯线上 freestyle 那种"你等 beat 进来、它一直不进"的歌，意义正在于违背这个预期（Schloss p0169–0170）。
-- **拍号可以拗**：5/4 的爵士片段可以 loop 进 4/4 鼓型（Schloss p0181）；同类手法还有 3 拍转 4 拍、6 拍采样撞 4 拍鼓、**7 小节 loop 对 4 小节 beat 使 verse 和 chorus 在不可预测的位置开始**、loop 点不在强拍（第 7、8 章；见 `reference.md` §1.5）。
-- **不为 chop 而 chop**：Jake One——"我在乎的是听起来怎样，不管他 loop 还是 chop"（Schloss p0182）。
+**A few judgments:**
+- **The snare is an aesthetic norm, not a moral rule:** Mr. Supreme says "hip-hop has no rules, no need for a chorus or bridge," but the snare is a widely shared preference. An MC freestyling over a drumless bass line, a track where "you wait for the beat to come in and it never does," has its meaning precisely in defying that expectation (Schloss p0169–0170).
+- **Meter can be bent:** a 5/4 jazz passage can be looped into a 4/4 drum pattern (Schloss p0181). Related techniques include 3 beats turning into 4, a 6-beat sample colliding with a 4-beat drum, **a 7-bar loop against a 4-bar beat so that verse and chorus start at unpredictable places**, and loop points that fall off the strong beats (Chapters 7–8; see `reference.md` §1.5).
+- **Don't chop for the sake of chopping:** Jake One: "What I care about is how it sounds, whether he loops or chops" (Schloss p0182).
 
-### 6.6 采样型 vs 演奏型：roster 怎么写
+### 6.6 Sample-Based vs. Played: How to Write the Roster
 
-Schloss 的核心提醒（p0029–0030）：把一段 hip-hop 录音按乐器分成"鼓、贝斯、钢琴、小号"各一个声部，**是对制作人实际动作的误读**——更可能是：一个采样里带着 upright bass + piano，另一个带着鼓 + Rhodes + 小号，第三个只有萨克斯。**被采样和编排的是整个乐句，不是音高。**
+Schloss's core reminder (p0029–0030): dividing a hip-hop recording into separate "drums, bass, piano, trumpet" parts **misreads what the producer actually does**. It is more likely that one sample contains an upright bass and piano, another contains drums, Rhodes and trumpet, and a third contains only a saxophone. **What gets sampled and arranged is the whole phrase, not the pitches.**
 
-所以采样型的 `roster` 按**采样层**列，不按乐器列：
+So in sample-based work, `roster` is listed by **sample layer**, not by instrument:
 
-| 字段 | 采样型的写法 |
+| Field | How to write it for sample-based work |
 |---|---|
-| `id` / `instrument` | **一个采样层一行**：`loopA: 1970s soul 采样，Rhodes+bass 同源，2 小节，切 4 片`；层里有几件乐器写在 `note`，不拆行 |
-| `role` | 采样层多为 `织体`；**鼓件单独成行**（kick/snare/hat 常来自不同唱片），role 写 `律动` |
-| `band` | 写**处理后**的频段：滤掉高频让爵士采样变得"无形而阴郁"（第 7 章）——写 `中低（低通后）` |
-| `timbre` | ★ 必写**来源年代与介质感**：70 年代唱片的压缩与失真、不同采样不同房间感、被截断的 attack/release、循环接缝处的不连续（Schloss p0085–0086）。混音意图可以就一句：*"I want this to sound like a cassette."*（第 12 章） |
-| 演奏层 | 必须**支持采样里已有的主题**，且**听起来得像采样**（"it's gotta blend in"，Schloss p0085–0087） |
-| `entry` / `exit` | 织体层多、退场多（§6.2）；stabs 之类按段进出 |
-| 同源检查 | ★ 同一张唱片来的两层，只能是 chop 出的连续片段或纯鼓件（§6.4），否则改素材或合并成一层 |
+| `id` / `instrument` | **One row per sample layer**: `loopA: 1970s soul sample, Rhodes+bass from the same source, 2 bars, chopped into 4 slices`. The instruments inside the layer are written in `note`, not split into rows |
+| `role` | Sample layers are mostly `texture`. **Drum voices get their own rows** (kick, snare, and hat often come from different records), with role `groove` |
+| `band` | Write the **processed** frequency band: filtering out the highs makes a jazz sample "invisible and melancholy" (Chapter 7). Write `mid-low (after low-pass)` |
+| `timbre` | ★ **Must state the source era and medium character**: the compression and distortion of a 1970s record, the different room sound of each sample, the cut attack/release, and the discontinuity at the loop seam (Schloss p0085–0086). A mix intent can be a single line: *"I want this to sound like a cassette."* (Chapter 12) |
+| Played layers | Must **support the theme already in the sample**, and **must sound like it belongs to the sample** ("it's gotta blend in," Schloss p0085–0087) |
+| `entry` / `exit` | Texture layers are numerous and exit often (§6.2); stabs and the like enter and leave by section |
+| Same-source check | ★ Two layers from the same record may only be consecutive chopped fragments or pure drum hits (§6.4). Otherwise, change the material or merge them into one layer |
 
-`spectrum_budget` 的 `resolution` 默认写**交替出现**（§6.1）——追求音色来源的异质而不是频段分工的整洁（`reference.md` §1.4）；`depth_map` 里采样层的前景/背景**由滤波决定**。
+The `resolution` of `spectrum_budget` defaults to **alternating appearance** (§6.1). It pursues heterogeneity of timbral source rather than a tidy division of frequency bands (`reference.md` §1.4). In `depth_map`, the foreground/background of sample layers is **determined by filtering**.
 
-### 6.7 给 MC 和 DJ 留的空
+### 6.7 Leaving Room for MCs and DJs
 
-采样型 beat 的最终用户是 MC 和 DJ，他们的要求直接影响 `form` 和 `roster`（Schloss 第 7 章）：
+The end users of sample-based beats are MCs and DJs, and their requirements directly affect `form` and `roster` (Schloss Chapter 7):
 
-- **MC**：速度**既不能快到听不清 MC，也不能慢到没能量**；**采样数量不能太多**，否则 MC 会"在混音里迷失"（p0185–0186）。
-- **club DJ**：四条筛选是速度、节奏一致性、**能不能接进下一首**、压片质量（p0200）；★ **8 或 16 小节的纯器乐 intro、16 小节 outro** 是 DJ 最爱的做法——"那就是衔接机会"，loop 也"留得很开"方便 beat-juggling（p0202）。
-- **耳机听众**：允许**更复杂的节奏结构、不同速度、全频段**；不为跳舞服务的歌放这里（p0206）。
+- **MCs:** the tempo must be **neither so fast that the MC is hard to hear nor so slow that there is no energy**; **the number of samples must not be too large**, or the MC will "get lost in the mix" (p0185–0186).
+- **Club DJs:** four screening criteria are tempo, rhythmic consistency, **whether it can be mixed into the next track**, and quality of the pressing (p0200). ★ **An 8- or 16-bar instrumental-only intro, and a 16-bar outro**, are the DJ's favorite arrangement: "that's the chance to mix," and loops that are "left open" make beat-juggling easier (p0202).
+- **Headphone listeners:** allow **more complex rhythmic structures, different tempos, and full-range sound**; songs not meant for dancing belong here (p0206).
 
-★ **写进规格**：`form` 的 Intro/Outro 至少一处是 8 或 16 小节纯器乐；同时在场的采样层数量对着 MC 的密度算（§7.5）。
+★ **Write into the spec:** at least one Intro or Outro in `form` must be 8 or 16 bars of instrumental-only music; the number of sample layers present at once should be calculated against the density the MC can handle (§7.5).
 
 ---
 
-## 7. 人声：rap 与唱的分界
+## 7. Vocals: Rap vs. Sung
 
-### 7.1 分界表
+### 7.1 Dividing Table
 
-| | rap 段 | 唱段（hook） |
+| | Rap section | Sung section (hook) |
 |---|---|---|
-| 音高 | 无固定音高（语调） | 有 |
-| 与网格 | ★ **flow 本身是律动的一部分**，`push_pull` 要给人声一行 | 按 `mc-vocal-direction` |
-| 倒字 | **不适用**（无旋律音高）——但**重音位置**要和拍对齐 | 适用（中文） |
-| 密度 | 高，一小节 8–16 音节 | 低 |
-| 谁管词 | **作词** | 作词 |
+| Pitch | No fixed pitch (intonation) | Has pitch |
+| Relation to grid | ★ **Flow itself is part of the groove**; `push_pull` must give the vocal its own line | Per `mc-vocal-direction` |
+| Lyric placement | **Not applicable** (no melodic pitch), but **stress positions** must align with the beat | Applicable (for Chinese) |
+| Density | High, 8–16 syllables per bar | Low |
+| Who manages the words | **Songwriting** | Songwriting |
 
-★ **本 skill 只管**：哪几段 rap、哪几段唱、人声在 `roster` 里的进退场、rap 段的 `push_pull`、delivery 怎么分配、人声和伴奏的关系。**flow 的具体节奏只示意**（占位音节 da-da / X 标记，记法见 `reference.md` §3.1）；要不要出词按 `mc-workflow` §2.3 词的三种情况；有同一首歌的歌词就从 `meta.upstream.lyrics` 读。
+★ **This skill handles only:** which sections are rap, which are sung, the entry and exit of vocals in `roster`, the `push_pull` for rap sections, how delivery is allocated, and the relation between vocals and backing. **The specific rhythm of the flow is shown only schematically** (placeholder syllables da-da / X marks; notation in `reference.md` §3.1). Whether to write out words follows the three cases of words in `mc-workflow` §2.3. If the song already has lyrics, read them from `meta.upstream.lyrics`.
 
-《How to Rap》对"rap 是什么"的定义正好是编曲侧的定义：**flow = 歌词里的节奏 + 押韵**，与朗读诗的区别在于"歌词的节奏必须契合音乐的基本节奏"（p0076）；《How to Rap 2》更进一步："**节奏是 MCing 唯一完全不可或缺的元素**"——没节奏、跟不上拍，内容再好也不算 MC（p0018）。Schloss 从制作人侧说了同一件事：gangsta rap 对听众而言不是由歌词定义的，是由合成器和 **MC 的 flow** 定义的（p0214）。
+*How to Rap*'s definition of rap is exactly the arrangement-side definition: **flow = rhythm in the lyrics + rhyme**. It differs from recited poetry in that "the rhythm of the lyrics must fit the basic rhythm of the music" (p0076). *How to Rap 2* goes further: "**Rhythm is the one element MCing cannot do without**." Without rhythm, if you cannot keep time, the content does not make you an MC, however good it is (p0018). Schloss says the same thing from the producer's side: gangsta rap is defined for listeners not by its lyrics but by the synthesizers and the **MC's flow** (p0214).
 
-### 7.2 ★ flow 的要素：它怎么落在网格上
-这一小节写的是 flow **与拍的关系**——它决定 `vocal.phrasing` 和 `groove.push_pull` 里人声那一行怎么写。押韵密度、多音节韵怎么写是作词的事。
+### 7.2 ★ Elements of Flow: How It Lands on the Grid
+This subsection covers the **relation of flow to the beat**. That relation determines how the vocal line in `vocal.phrasing` and `groove.push_pull` is written. How rhyme density and multisyllabic rhyme are built is a matter for songwriting.
 
-**两条地基**：
+**Two foundations:**
 
-★ 全文在 [reference-vocal.md](reference-vocal.md) §8–§11。
+★ The full text is in [reference-vocal.md](reference-vocal.md) §8–§11.
 
-### 7.3 ★ delivery 的维度：分配给哪一段
-《How to Rap 2》把 delivery 拆成可以逐段分配的维度。**声音是听众第一个听到、据此决定听不听下去的东西**（p0072）。八个维度是**总体音高、音高变化量、逐词音高、音量、音色、长短、口吃/重复、气息**——每个维度的档位、效果与例子在 `reference.md` §4.1；个性类型（狂野 / 弹跳 / 权威 / 放松 / 内省 / 愤怒，即 `vocal.persona` 的选项集）在 §4.2；口音与角色声在 §4.3。分配逻辑：
+### 7.3 ★ Dimensions of Delivery: Allocating Them to Sections
+*How to Rap 2* breaks delivery into dimensions that can be allocated section by section. **The sound is the first thing listeners hear, and it is what decides whether they keep listening** (p0072). The eight dimensions are **overall pitch, pitch variation, per-word pitch, volume, timbre, duration, stuttering/repetition, and breath**. The levels, effects, and examples for each dimension are in `reference.md` §4.1. Persona types (wild / bouncy / authoritative / relaxed / introspective / angry, that is, the option set for `vocal.persona`) are in §4.2. Accents and character voices are in §4.3. The allocation logic:
 
-★ 全文在 [reference-vocal.md](reference-vocal.md) §8–§11。
+★ The full text is in [reference-vocal.md](reference-vocal.md) §8–§11.
 
-### 7.4 rap 段的结构：verse、hook、bridge、ad-lib
-**默认数字**：verse **16 小节**（"a 16"，公式是三段 16；story rap 上限 32，《How to Rap》p0206–0209），verse 里最难的是**第 1–2、9–10、15–16 小节**（p0210）；hook **4 或 8 小节**，词比 verse 简单、密度低、拖长一点，**旋律化的 hook 比说唱 hook 更受欢迎**（p0200–0202）；hook 旋律常是第一句升调"提问"、第二句降调"回答"（《How to Rap 2》p0162–0164）；ad-lib 更常见的是**只叠关键词**——Twista 只重叠**每小节最后一个词**（《How to Rap》p0295）。
+### 7.4 Structure of a Rap Section: Verse, Hook, Bridge, Ad-lib
+**Default numbers:** verse **16 bars** ("a 16," the formula is three 16s; story rap caps at 32, *How to Rap* p0206–0209). The hardest parts of a verse are **bars 1–2, 9–10, and 15–16** (p0210). Hook **4 or 8 bars**, with simpler words than the verse, lower density, and slightly stretched. **Melodic hooks are more popular than spoken-rap hooks** (p0200–0202). A hook melody often has its first phrase rise like a "question" and its second fall like an "answer" (*How to Rap 2* p0162–0164). Ad-libs most often **only stack keywords**: Twista doubles only **the last word of each bar** (*How to Rap* p0295).
 
+★ The full text is in [reference-vocal.md](reference-vocal.md) §8–§11.
 
-★ 全文在 [reference-vocal.md](reference-vocal.md) §8–§11。
+### 7.5 ★ Relationship Between Vocals and Backing
+This subsection answers "how the `roster` is assembled for a rap section."
 
-### 7.5 ★ 人声和伴奏的关系
-这一小节回答"rap 段的 `roster` 怎么配"。
+**① The beat leads the writing.** Most MCs write to the final beat. (Dray: "like dancing, the beat is the lead dancer"). "That is the template for everything you will say over it" (*How to Rap* p0181–0183). If the beat already contains a **vocal sample**, it directly steers the content (p0183). **Changing the beat changes the stresses.** If you record vocals and then swap the beat, "the stresses and words are emphasized according to the original music" (p0187).
 
-**① beat 领着写。** 多数 MC 对着最终的 beat 写（Dray："像跳舞，beat 是领舞的"）；"那是你要在上面说的一切的模板"（《How to Rap》p0181–0183）。beat 里若已有**人声采样**，它会直接引导内容（p0183）。**换 beat 就换了重音**——录完人声再换 beat，"重音和词是按原来那首音乐强调的"（p0187）。
+★ The full text is in [reference-vocal.md](reference-vocal.md) §8–§11.
 
+### 7.6 The Transitional Zone Between Rap and Sung
 
-★ 全文在 [reference-vocal.md](reference-vocal.md) §8–§11。
+The boundary is not a clean cut. *How to Rap 2* p0155–0167 lays out a spectrum, and the spec must say which point it falls on (for the practice and examples at each point, see `reference.md` §5.4): **divided by section** → **half-sung chanted section** (overlapping short phrases chanted repeatedly, breaking the "three verses, one chorus" convention) → **switching within a verse** (only certain words half-sung) → **half-sung as the overall style** (from close to actual singing → often half-sung → voice has melodic quality but does not sing) → **singing someone else's song**.
 
-### 7.6 rap 与唱之间的过渡地带
+Two constraints: half-singing often uses **matching patterns** (the same rhythmic figure in every bar, repeated to reinforce the melody, p0165–0166), and **the melody of a half-sung passage must be in the key of the beat** (§7.5 ⑤). Within a group, the division of labor is assigned by vocal range (p0155).
 
-分界不是一刀切，《How to Rap 2》p0155–0167 给了一个谱系，写规格时要说清落在哪一格（每格的做法与例子见 `reference.md` §5.4）：**按段落分** → **半唱吟诵段**（重叠的短句反复吟唱，打破"三段 verse 一个 chorus"的常规）→ **verse 内部切换**（只半唱某几个词）→ **半唱作为整体风格**（接近真唱 → 常半唱 → 声音本身有旋律感但不唱）→ **唱别人的歌**。
-
-两条约束：半唱常配 **matching patterns**（每小节相同的节奏型，重复强化旋律，p0165–0166）；**半唱的旋律要在 beat 的调里**（§7.5 ⑤），组内分工按音域给（p0155）。
-
-★ **写规格**：`vocal.delivery` 逐段写 `rap` / `半唱` / `唱`；`style_layers` 里 `vocal_delivery_verse` 与 `vocal_delivery_chorus` 分开签字（§8）。半唱段落**同时**要写 `push_pull`（它仍是 rap 的时间感）和 `melody_register`（它已经有音高）。
+★ **Writing the spec:** `vocal.delivery` labels each section `rap` / `half-sung` / `sung`. `vocal_delivery_verse` and `vocal_delivery_chorus` in `style_layers` are signed off separately (§8). A half-sung section **must also have** `push_pull` (it is still rap's time-feel) and `melody_register` (it already has pitch).
 
 ---
 
-## 8. ★ 和旋律型风格混合
+## 8. ★ Mixing With Melody-Led Styles
 
-**hip-hop 是最常被拿来混合的风格**（rap + 中国风、rap + city pop、rap + 摇滚）。
-用 `mc-workflow` §2.4 的分工表，**本 skill 通常是 overlay**，拥有：
+**Hip-hop is the style most often mixed with others** (rap + Chinese folk, rap + city pop, rap + rock).
+Using the division-of-labor table in `mc-workflow` §2.4, **this skill is usually the overlay**, and owns:
 
-| 维度 | 归 hip-hop 时意味着 |
+| Dimension | What it means when hip-hop owns it |
 |---|---|
-| `groove` | 第三种时间感（§3）、半拍感 |
-| `low_end` | 808 承担低音声部（§5.1） |
-| `vocal_delivery_verse` | 主歌 rap |
+| `groove` | The third time-feel (§3), half-time feel |
+| `low_end` | The 808 carries the bass voice (§5.1) |
+| `vocal_delivery_verse` | Verse rap |
 
-**通常让出去的**：`harmony`、`melody`、`color_instruments`、`vocal_delivery_chorus`、`form`。
+**Usually given up:** `harmony`, `melody`, `color_instruments`, `vocal_delivery_chorus`, `form`.
 
-### 8.1 《桃花扇》式（rap + 中国风）的分工
+### 8.1 *Taohua Shan* (The Peach Blossom Fan) Style: Rap + Chinese Folk Division of Labor
 
-| 维度 | Owner | 注意 |
+| Dimension | Owner | Note |
 |---|---|---|
-| harmony / melody（副歌五声） | 中国风 | 808 的音高**要跟五声旋律的低音走**，不能自己走一套 |
-| color_instruments（古筝/笛） | 中国风 | ★ **只在人声句缝里，不占律动位**——否则和采样织体抢 |
-| groove / low_end | hip-hop | 半拍感 + 808 |
-| vocal_delivery_verse | hip-hop | rap |
-| vocal_delivery_chorus | 中国风 | 唱 |
-| form | 中国风 | 仍是主歌–副歌，不是 trap 的 build/drop |
+| harmony / melody (pentatonic chorus) | Chinese folk | The 808's pitch **must follow the bass of the pentatonic melody**; it must not run its own line |
+| color_instruments (guzheng / dizi) | Chinese folk | ★ **Only in the gaps between vocal phrases, and not in the groove positions**; otherwise they compete with the sample texture |
+| groove / low_end | Hip-hop | Half-time feel + 808 |
+| vocal_delivery_verse | Hip-hop | Rap |
+| vocal_delivery_chorus | Chinese folk | Sung |
+| form | Chinese folk | Still verse–chorus, not the trap build/drop |
 
-`fusion_note` 的写法：**说清两边在接缝上共有的东西**（例："民乐的句尾花和 rap 的句尾押韵落在同一个位置"）。
+Writing `fusion_note`: **state what the two sides share at the seam** (for example: "the phrase-ending ornament of the folk part and the rhyme at the end of the rap line fall on the same position").
 
-### 8.2 一条实测的边界
+### 8.2 A Measured Boundary
 
-实测中 agent 在没有本 skill 的情况下做过这个混合，
-用 `citypop-rnb` 的 R&B 半边 + `rhythm-section` 顶上——**能做，但 §3 的第三种时间感和 §5 的 808 分工都没提到**。
-**这就是本 skill 存在的理由。**
+In testing, an agent made this kind of mix without this skill. It used the R&B half of `citypop-rnb` with `rhythm-section` on top. **It could be done, but neither the third time-feel of §3 nor the 808 division of labor of §5 was addressed.**
+**That is the reason this skill exists.**
 
 ---
 
-## 9. 与 ARR-SPEC 的字段对应
+## 9. Mapping to ARR-SPEC Fields
 
-| 字段 | 本 skill |
+| Field | This skill |
 |---|---|
-| `meta.style_layer` / `style_layers` | `mc-style-hiphop`，混合时通常是 `overlay`（§8） |
-| `meta.tempo` + `groove.feel` | §4——半拍感写实际 BPM + `halftime` |
-| `groove.quantize_policy` | ★ §3.2——**逐鼓件**写（hat 100 / kick 0 / snare 0…） |
-| `groove.push_pull` | §3.4、§3.6——军鼓守网格做参照，抢/拖用 §3.6 的量级；**rap 段人声要有一行**（§7.2） |
-| `arrangement.bass_kick_relation` | ★ §5——三选一；采样型注意 §5.2 |
-| `form[].harmony` | §5.1——808 线写进去 |
-| `form[].bars` / `form[].note` | §7.4——16/8/4 是默认；奇数小节 loop 与非 4/4 写进 `note`（§6.5、§7.2） |
-| `form` 的 Intro/Outro | §6.7——至少一处 8 或 16 小节纯器乐 |
-| `subtraction_events` | §6.2——比别的风格多 |
-| `roster[]` 各字段 | §6.1、§6.6——按**采样层**列，`timbre` 必写年代与介质感 |
-| `spectrum_budget[].resolution` | §6.1——采样层默认**交替出现** |
-| `vocal.persona` / `delivery` | §7.3、§7.6——个性类型与音高档；逐段写 rap / 半唱 / 唱 |
-| `vocal.phrasing` / `breath_points` | §7.2——逐句抢/拖/lazy tail/staccato；换气写进休止 |
-| `vocal.ad_libs` / `stacking` / `chorus_variation` | §7.4、§7.3——关键词叠、每小节末词叠、hook 层数、每遍换哪个维度 |
-| `mix_intent.mood` | §6.6——采样型常是一句"像磁带" |
+| `meta.style_layer` / `style_layers` | `mc-style-hiphop`; when mixed, usually `overlay` (§8) |
+| `meta.tempo` + `groove.feel` | §4. For half-time, write the actual BPM + `halftime` |
+| `groove.quantize_policy` | ★ §3.2. **Write per drum voice** (hat 100 / kick 0 / snare 0…) |
+| `groove.push_pull` | §3.4, §3.6. The snare stays on the grid as reference; rush/drag use the magnitudes of §3.6. **The rap vocal needs one line** (§7.2) |
+| `arrangement.bass_kick_relation` | ★ §5. Choose one of three; for sample-based, see §5.2 |
+| `form[].harmony` | §5.1. The 808 line goes here |
+| `form[].bars` / `form[].note` | §7.4. 16/8/4 are the defaults. Odd-bar loops and non-4/4 meters go in `note` (§6.5, §7.2) |
+| `form` Intro/Outro | §6.7. At least one 8- or 16-bar instrumental-only passage |
+| `subtraction_events` | §6.2. More than in other styles |
+| `roster[]` fields | §6.1, §6.6. List by **sample layer**; `timbre` must state era and medium character |
+| `spectrum_budget[].resolution` | §6.1. Sample layers default to **alternating appearance** |
+| `vocal.persona` / `delivery` | §7.3, §7.6. Persona types and pitch levels; label each section rap / half-sung / sung |
+| `vocal.phrasing` / `breath_points` | §7.2. Per line: push / pull / lazy tail / staccato. Breaths are written as rests |
+| `vocal.ad_libs` / `stacking` / `chorus_variation` | §7.4, §7.3. Keyword stacking, last-word-of-bar stacking, hook layers, and which dimension changes on each pass |
+| `mix_intent.mood` | §6.6. For sample-based work, often a single line: "like a cassette" |
 
 ---
 
-## 10. 写完后必过
+## 10. Checks Before Finishing
 
-- [ ] 说清是**哪一支**，速度落在 §4 的区间里，半拍感写的是实际 BPM
-- [ ] ★ **量化是逐鼓件写的**，且至少一件直、一件摇（§3.2）
-- [ ] 有一件守网格做参照系（通常是军鼓）；抢/拖的 `offset_ms` 有量级，且**整段恒定**（§3.6）
-- [ ] ★ **低频归属三选一**写进 `bass_kick_relation`；808 的音高写进了和声，纯正弦补了第三泛音
-- [ ] `subtraction_events` **不少于三处**；织体层的频段冲突用**交替出现**解决（§6.1）
-- [ ] 采样型：`roster` 按采样层列，每层写得出来源年代与处理后的频段；**同源的两层只能是连续 chop 或纯鼓件**（§6.4、§6.6）
-- [ ] 采样型：鼓是先搭的、loop 锁上了、采样里没有别人的 hi-hat 在和你的鼓打架（§6.5）；Intro 或 Outro 有一处 8/16 小节纯器乐（§6.7）
-- [ ] rap 段与唱段分界清楚，半唱段落标了格（§7.6）；**词的取舍符合 `mc-workflow` §2.3 词的三种情况**
-- [ ] rap 段：`push_pull` 有人声一行，写明跟哪一件乐器；换气写进了休止（§7.2）
-- [ ] rap 段：delivery 按段分配了音高档 / 音量档 / 音色，hook 与 verse 不同（§7.3）
-- [ ] hook 4 或 8 小节，verse 16（或写明为什么不是）；ad-lib 没有均匀撒（§7.4）
-- [ ] 混合时 `style_layers` 里 hip-hop 拥有的维度**不与 base 重叠**（lint #17）
+- [ ] State **which style** it is. The tempo falls within the bands of §4, and half-time is written with the actual BPM
+- [ ] ★ **Quantization is written per drum voice**, with at least one voice straight and one swung (§3.2)
+- [ ] One element stays on the grid as the reference frame (usually the snare). The rush/drag `offset_ms` values have a magnitude and are **constant across the whole section** (§3.6)
+- [ ] ★ **Low-end ownership** is chosen from the three options and written into `bass_kick_relation`. The 808's pitch is written into the harmony, and a pure sine has been given its third harmonic
+- [ ] `subtraction_events` **at least three**. Frequency clashes between texture layers are resolved with **alternating appearance** (§6.1)
+- [ ] Sample-based: `roster` is listed by sample layer, each layer states its source era and processed frequency band. **Two layers from the same source may only be consecutive chops or pure drum hits** (§6.4, §6.6)
+- [ ] Sample-based: the drums were built first, the loop is locked, and no other hi-hat from the sample is fighting your drums (§6.5). Intro or Outro has one 8/16-bar instrumental-only passage (§6.7)
+- [ ] The boundary between rap and sung sections is clear, and half-sung sections are labeled by level (§7.6). **Word choices conform to the three cases of words in `mc-workflow` §2.3**
+- [ ] Rap sections: `push_pull` has a vocal line, stating which instrument it follows. Breaths are written as rests (§7.2)
+- [ ] Rap sections: delivery is allocated per section by pitch level, volume level, and timbre. Hook and verse differ (§7.3)
+- [ ] Hook is 4 or 8 bars, verse is 16 (or the reason is stated). Ad-libs are not spread evenly (§7.4)
+- [ ] When mixing, the dimensions owned by hip-hop in `style_layers` **do not overlap with the base** (lint #17)
 
 ---
 
-## 附：来源
+## Appendix: Sources
 
-- **Dan Charnas《Dilla Time: The Life and Afterlife of J Dilla》**（按块号引用；16 章目录与块号索引见 `reference.md` §6）——§3 全部引文，§6.3、§6.5、§6.6、§7.3、§7.5。
-- **Joseph G. Schloss《Making Beats: The Art of Sample-Based Hip-Hop》**——§3.7、§5.2、§6.2–§6.7、§7.1；采样处理与选材细则见 `reference.md` §1–§2。
-- **Paul Edwards《How to Rap》**与 **《How to Rap 2》**——§4、§7.1–§7.6；flow 记谱法、delivery 参数表与人声音效清单见 `reference.md` §3–§5。
-- **Drummer's Bible**（p0089–0090、p0109）——§4。**DeSantis《Making Music》** p0154——§3.5。**野崎貴朗** 技法 31（p0111–0113）——§5.1。Cambridge-MT 多轨实测（hiphop-rnb 10 首）——§6.1–6.2。
-- ⚠ 本 skill 不覆盖 trap 的专门做法与中文说唱编曲实务。
+- **Dan Charnas, *Dilla Time: The Life and Afterlife of J Dilla*** (cited by block number; the 16-chapter table of contents and block-number index are in `reference.md` §6). All quotations in §3, plus §6.3, §6.5, §6.6, §7.3, §7.5.
+- **Joseph G. Schloss, *Making Beats: The Art of Sample-Based Hip-Hop***: §3.7, §5.2, §6.2–§6.7, §7.1. Detailed rules on sample processing and selection are in `reference.md` §1–§2.
+- **Paul Edwards, *How to Rap*** and ***How to Rap 2***: §4, §7.1–§7.6. The flow notation, delivery parameter tables, and vocal sound-effect inventory are in `reference.md` §3–§5.
+- **Drummer's Bible** (p0089–0090, p0109): §4. **DeSantis, *Making Music*** p0154: §3.5. **Takaaki Nozaki**, technique 31 (p0111–0113): §5.1. Cambridge-MT multitrack measurements (10 hiphop-rnb songs): §6.1–6.2.
+- ⚠ This skill does not cover trap-specific technique or the arranging practice of Chinese-language rap.

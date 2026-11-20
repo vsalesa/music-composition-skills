@@ -1,221 +1,217 @@
 ---
 name: mc-progressions
-description: Chord progression lookup library (和弦进行速查库) - the eight famous named progressions with their variants and what each one actually does, a mood reverse-lookup, the eight variation techniques that turn one standard progression into ten, and an explicit warning list of the progressions generative models default to. This is a lookup skill, not a teaching skill - it answers "give me a progression that does X". Harmonizing a melody, choosing chords bar by bar, or reharmonizing is mc-harmony, and a full track needs mc-harmony first and this table second. Use when you need a progression for a specific mood or section, when a loop feels stale, when varying a standard progression, or when checking whether a progression is too defaulted-to. 和弦进行、王道进行、卡农、小室、丸サ、循环、套路、换个进行。
+description: Chord progression lookup library - the eight famous named progressions with their variants and what each one actually does, a mood reverse-lookup, the eight variation techniques that turn one standard progression into ten, and an explicit warning list of the progressions generative models default to. This is a lookup skill, not a teaching skill - it answers "give me a progression that does X". Harmonizing a melody, choosing chords bar by bar, or reharmonizing is mc-harmony, and a full track needs mc-harmony first and this table second. Use when you need a progression for a specific mood or section, when a loop feels stale, when varying a standard progression, or when checking whether a progression is too defaulted-to. Keywords: chord progression, progression lookup, canon progression, Komuro progression, loop, cliche, vary progression.
 ---
 
-# 和弦进行速查库（Progressions）
+# Chord Progression Lookup (Progressions)
 
-**这是一个查表 skill，不是教学 skill。**
+**This is a lookup skill, not a teaching skill.**
 
-| 你问 | 去哪 |
+| You ask | Go to |
 |---|---|
-| "给我一个能做出 X 感觉的进行" | **本 skill** |
-| "为什么这个进行成立" | `mc-harmony` |
-| "怎么把这个进行改得更好听" | 本 skill §4 ＋ `mc-harmony` §7 |
+| "Give me a progression that feels like X" | **this skill** |
+| "Why does this progression work" | `mc-harmony` |
+| "How do I make this progression sound better" | this skill §4 + `mc-harmony` §7 |
 
-## 按任务读哪几节
+## Which sections to read for each task
 
-| 任务 | 读 |
+| Task | Read |
 |---|---|
-| 按情绪找进行 | §1 情绪反查表 |
-| 要一个"就是那个味"的进行 | §2 八大名进行 |
-| 按类别翻 | [reference.md](reference.md) |
-| 手上的进行用腻了 | §4 八种变形 |
-| **担心进行太套路** | ★ §3 |
-| 移调 | [reference.md](reference.md) §5 |
+| Find a progression by mood | §1 Mood reverse-lookup table |
+| Want a progression with a specific classic flavor | §2 The eight famous progressions |
+| Browse by category | [reference.md](reference.md) |
+| The progression you have is getting stale | §4 Eight variation techniques |
+| **Worried the progression is too cliche** | ★ §3 |
+| Transposing | [reference.md](reference.md) §5 |
 
-## 边界
+## Boundaries
 
-| 不归这里 | 归哪 |
+| Not covered here | Where it belongs |
 |---|---|
-| 和声的原理、功能、为什么 | `mc-harmony` |
-| 重配和声的九步流程 | `mc-harmony` §7 |
-| 转调 | `mc-modulation` |
-| 某个风格特有的进行语汇 | `mc-style-*`（L3）。★ 本 skill 的语汇偏 **J-POP**；中文流行的和声语汇未单列；**K-POP 与欧美流行没有对应的 L3 skill**，用本 skill 的通用表并在规格单里声明（见 reference.md §11） |
-| 分类全表、名曲索引、移调表 | [reference.md](reference.md) |
-
----
-
-## 1. 情绪反查表
-
-| 情绪 | 首选 |
-|---|---|
-| **明亮／有力** | I–IV–V–I ／ IV–V–I–VIm ／ 流行朋克进行 |
-| **切ない／emo（揪心）** | **王道进行 4536** ／ C–E7–F–Fm ／ IVm 类（C–Fm–C） |
-| **温暖／踏实** | C–Dm–Em–F ／ C–Am–F–G ／ C–Gm7·C7–F |
-| **时髦／都会** | **丸サ进行** ／ 裏和弦进行 ／ 二五一 ／ F/G 属代理 |
-| **忧郁／演歌／歌谣曲** | Am–G–F–E ／ Am–Dm–E7–Am ／ 小调二五 |
-| **壮大／史诗抒情** | C–Bm7(♭5)·E7–Am 类 ／ 8 小节卡农 ／ 下行低音クリシェ |
-| **急转／复杂** | Em–F–Am–G ／ F–Dm–G–Em·E7 ／ C–B7–Em7–E♭ |
-| **可跳舞** | F△7–E7–Am–C7 + four-on-the-floor ／ C7(9,13)–F7(9,13) riff |
+| Harmony principles, function, and reasons | `mc-harmony` |
+| The nine-step reharmonization process | `mc-harmony` §7 |
+| Modulation | `mc-modulation` |
+| Progression vocabulary specific to a style | `mc-style-*` (L3). ★ This skill's vocabulary leans toward **J-POP**; Chinese pop harmonic vocabulary is not broken out separately; **K-POP and Western pop have no corresponding L3 skill**, so use this skill's general table and declare it in the spec sheet (see reference.md §11) |
+| Full category tables, famous-song index, transposition table | [reference.md](reference.md) |
 
 ---
 
-## 2. 八大名进行
+## 1. Mood Reverse-Lookup Table
 
-以下一律 **Key = C**（小调类 Key = Am）。级数是思考用的，字母是交接用的，**双记**。
+| Mood | First choice |
+|---|---|
+| **Bright / powerful** | I–IV–V–I / IV–V–I–VIm / pop-punk progression |
+| **Setsunai (bittersweet ache) / emo (heart-wrenching)** | **Oudou progression 4536** / C–E7–F–Fm / IVm type (C–Fm–C) |
+| **Warm / steady** | C–Dm–Em–F / C–Am–F–G / C–Gm7·C7–F |
+| **Stylish / urban** | **Marusa progression** / ura-chord (backdoor) progression / ii–V–I / F/G dominant substitute |
+| **Melancholy / enka / kayokyoku** | Am–G–F–E / Am–Dm–E7–Am / minor ii–V |
+| **Grand / epic lyrical** | C–Bm7(♭5)·E7–Am type / 8-bar canon / descending bass cliche |
+| **Abrupt turns / complex** | Em–F–Am–G / F–Dm–G–Em·E7 / C–B7–Em7–E♭ |
+| **Danceable** | F△7–E7–Am–C7 + four-on-the-floor / C7(9,13)–F7(9,13) riff |
 
-### 2.1 王道进行（4536）
+---
+
+## 2. The Eight Famous Progressions
+
+Below, all are in **Key = C** (minor-type progressions in Key = Am). Roman numerals are for thinking; letter names are for handoff; **record both**.
+
+### 2.1 Oudou Progression (4536)
 
 ```
 IV△7 – V7 – IIIm7 – VIm7      F△7 – G7 – Em7 – Am7
 ```
-名字就是级数 4-5-3-6。**4 和 5 是大和弦、3 和 6 是小和弦——
-"由明转暗"这个落差正是切なさ的来源。** 与卡农进行并列为两大王牌。
+The name is the numerals 4-5-3-6. **4 and 5 are major chords, 3 and 6 are minor chords — the drop from "bright to dark" is the source of the setsunai (bittersweet ache) feeling.** Together with the canon progression, it is one of the two ace cards.
 
-| 变体 | 效果 |
+| Variant | Effect |
 |---|---|
-| `IV△7–V7–III7–VIm7`（F△7–G7–E7–Am7） | III 变属七 → **哭腔更强**，往 VIm 的拉力更强 |
-| `IV△7–V(onIV)–IIIm7–VI7`（F△7–G/F–Em7–A7） | 第 2 小节的分数和弦是**"キュン"（心动）点** |
+| `IV△7–V7–III7–VIm7` (F△7–G7–E7–Am7) | III becomes a dominant seventh → **stronger weeping quality**, a stronger pull toward VIm |
+| `IV△7–V(onIV)–IIIm7–VI7` (F△7–G/F–Em7–A7) | The slash chord in bar 2 is the **"kyun" (heart-fluttering) point** |
 
-### 2.2 卡农进行
+### 2.2 Canon Progression
 
 ```
 I – V – VIm – IIIm – IV – I – IIm – V      C – G – Am – Em – F – C – Dm – G
 ```
-**转位形** `C–G/B–Am–Em/G–F–C/E–Dm–G` 让低音**沿音阶级进下行**（C-B-A-G-F-E-D-G）
-= 低音线クリシェ。
+**The inversion form `C–G/B–Am–Em/G–F–C/E–Dm–G`** makes the bass **step down along the scale** (C-B-A-G-F-E-D-G) = bass-line cliche.
 
-- 四和弦简化形 `C–G–Am–Em` 同样标准；**结尾 Em→G 更好循环**（末尾的属和弦顺畅流回主和弦）
-- 半音化版本（低音 C–B–B♭–A–A♭–F#–G）见 [reference.md](reference.md) §4
+- The four-chord simplified form `C–G–Am–Em` is equally standard; **ending Em→G loops better** (the final dominant chord flows smoothly back to the tonic).
+- For the chromatic version (bass C–B–B♭–A–A♭–F#–G), see [reference.md](reference.md) §4.
 
-### 2.3 小室进行（6451）
+### 2.3 Komuro Progression (6451)
 
 ```
 VIm – IV – V – I      Am – F – G – C
 ```
-**小调色彩起头 → 稳定的大调解决**。1990 年代 J-POP 黄金期的声音。
-近亲 `Am–G–F–C`（6541，低音级进下行，更抒情）。
+**Starts with minor color → resolves stably to major.** The sound of the J-POP golden age of the 1990s.
+Close relative `Am–G–F–C` (6541; the bass steps downward, more lyrical).
 
-### 2.4 丸サ进行 / Just The Two Of Us（4361）
+### 2.4 Marusa Progression / Just The Two Of Us (4361)
 
 ```
 IV – III7 – VIm – I      F – E7 – Am – C
 ```
-**时髦、都会、emo——city pop / neo-soul 的同义词。**
-E7 是指向 Am 的**副属和弦**，即"emo 点"。
-既可一次性做重音，也可整首循环，**"几乎任何旋律放上去都显得时髦"**。
+**Stylish, urban, emo — synonymous with city pop / neo-soul.**
+E7 is a **secondary dominant** pointing to Am, i.e., the "emo point."
+It can be used once as an accent or looped for the whole song; **"almost any melody sounds stylish over it."**
 
-七和弦强化版 `F△7–E7–Am–C7` 配 four-on-the-floor 底鼓 → techno/dance。
+The seventh-chord enhanced version `F△7–E7–Am–C7` with a four-on-the-floor kick → techno/dance.
 
-### 2.5 流行朋克进行（1564）
+### 2.5 Pop-Punk Progression (1564)
 
 ```
 I – V – VIm – IV      C – G – Am – F
 ```
-明亮、有力、全球通用。
-**同一组和弦换起点**得到常见变体 `4156`（F–C–G–Am）与 `6415`（Am–F–C–G）；
-**首尾和弦是大是小，决定整体明暗。**
+Bright, powerful, universally used.
+**Starting the same set of chords at a different point** yields the common variants `4156` (F–C–G–Am) and `6415` (Am–F–C–G);
+**whether the first and last chords are major or minor determines the overall brightness or darkness.**
 
-### 2.6 循环进行（1625）
+### 2.6 Loop Progression (1625)
 
 ```
 I – VIm – IIm – V      C – Am – Dm – G
 ```
-七和弦版 `C–Am7–Dm7–G7` 同样标准。**今天听来略复古，故意用这份复古是有效的选择。**
-后半的 2→5 就是**二五**：IIm 是 IV 的代理，且低音**上行四度大跳**，比 4→5 更有力。
+The seventh-chord version `C–Am7–Dm7–G7` is equally standard. **It sounds somewhat retro today, and deliberately using that retro quality is an effective choice.**
+The second half's 2→5 is the **ii–V**: IIm stands in for IV, and the bass **leaps up a fourth**, more forceful than 4→5.
 
-> **典型用法**：`C–Am–F–G` 循环三次，**第四次换成这个进行**，做进入下一段的扳机。
+> **Typical use**: loop `C–Am–F–G` three times, **then switch to this progression on the fourth time** as the trigger into the next section.
 
-### 2.7 逆循环（2516）
+### 2.7 Reverse Loop (2516)
 
 ```
 IIm – V – I – VIm      Dm – G – C – Am
 ```
-★ **关键理解**：它不是把和弦倒着排，而是**两组结构**——
-"运动功能组（2→5）在前，主功能组（1→6）在后"。
+★ **Key insight**: it is not the chords arranged backwards, but **two groups of structure** —
+"the motion group (2→5) comes first, the tonic group (1→6) comes after."
 
-七和弦版 `Dm7–G7–C△7–Am7`：**不从主和弦起头**，二五从反方向绕回主和弦。
+Seventh-chord version `Dm7–G7–C△7–Am7`: **it does not start on the tonic**; the ii–V circles back to the tonic from the opposite direction.
 
-### 2.8 ドリカム进行
+### 2.8 Dreams Come True Progression (Dorikamu)
 
 ```
 I△7 – VIIm7 – IIIm7 – IIIm7(onII)      C△7 – Bm7 – Em7 – Em7/D
 ```
-**性格随速度和旋律剧变**。变体 `C△7–B7–Em7–G7`（VIIm7→VII7）更催泪，
-末尾的属七强化了回主的运动。
+**Its character changes dramatically with tempo and melody.** The variant `C△7–B7–Em7–G7` (VIIm7→VII7) is more tear-jerking;
+the closing dominant seventh strengthens the motion back to the tonic.
 
 ---
 
-## 3. ★ 套路警戒线：哪些进行生成模型会默认给你
+## 3. ★ Cliche Warning Line: Which Progressions Generative Models Default To
 
-**这一节是本库特有的，日式底本里没有。**
+**This section is unique to this library; it does not appear in the Japanese source texts.**
 
-生成后端在"pop / emotional / ballad"这类提示下，**高概率默认输出下面这几条**：
+Generation backends, given prompts like "pop / emotional / ballad," **very likely default to outputting the following**:
 
-| 进行 | 为什么危险 |
+| Progression | Why it is risky |
 |---|---|
-| `I–V–VIm–IV`（1564） | **全球最泛滥**的四和弦。模型的第一直觉 |
-| `VIm–IV–I–V`（6415） | 同一组的旋转，一样泛滥 |
-| `I–VIm–IV–V`（1645） | 50 年代起就是模板 |
-| `IV–V–IIIm–VIm`（4536） | J-POP 语境下的第一直觉 |
+| `I–V–VIm–IV` (1564) | The **most overused** four-chord pattern in the world. The model's first instinct |
+| `VIm–IV–I–V` (6415) | A rotation of the same set, equally overused |
+| `I–VIm–IV–V` (1645) | A template since the 1950s |
+| `IV–V–IIIm–VIm` (4536) | The first instinct in a J-POP context |
 
-**这不代表不能用。** 判据是：
+**This does not mean it cannot be used.** The test is:
 
-> **你是"选择"了它，还是"默认"落进了它？**
+> **Did you "choose" it, or did it "default" into place?**
 
-**三条对策**（强度递增）：
+**Three countermeasures** (increasing in strength):
 
-1. **保留进行，改变形**——用 §4 的八种变形至少改两处，尤其是**换起点**和**低音线设计**
-2. **保留进行，改和声节奏**——不要一小节一个。挪动换和弦的位置比换和弦本身更有效
-3. **换掉它**——从 [reference.md](reference.md) 的 §3 感伤类 / §4 爵士都会类里挑一个功能等价的
+1. **Keep the progression, change its form** — use at least two of the §4 variations, especially **changing the starting point** and **bass-line design**
+2. **Keep the progression, change the harmonic rhythm** — don't do one chord per bar. Moving where the chord changes is more effective than changing the chords themselves
+3. **Replace it** — pick a functionally equivalent one from §3 (sentimental type) or §4 (jazz/urban type) of [reference.md](reference.md)
 
-★ **最有效的其实是第 2 条**，因为模型在"和弦是什么"上被大量训练，
-在"和弦什么时候换"上反而弱——**和声节奏是更廉价的差异化手段**。
+★ **The most effective is actually #2**, because models are heavily trained on "what the chords are," but are weak on "when the chords change" — **harmonic rhythm is a cheaper means of differentiation**.
 
-**自检动作**：把你的进行放进上表查一遍。
-命中了就在 ARR-SPEC 的 `form[].note` 里写一句"为什么仍然选它"。
+**Self-check action**: look up your progression in the table above.
+If it matches, write one sentence in `form[].note` of ARR-SPEC explaining "why I still chose it."
 
 ---
 
-## 4. 八种变形：把一个进行变成十个
+## 4. Eight Variations: Turning One Progression into Ten
 
-**这些技巧可以套用到本库任何一个进行上。**
+**These techniques can be applied to any progression in this library.**
 
-| # | 技巧 | 做法 |
+| # | Technique | Method |
 |---|---|---|
-| 1 | **换起点** | 同一组和弦从不同和弦起（1564→4156→6415；1625→2516）。★ **首尾是大是小决定明暗** |
-| 2 | **七和弦化 / add9 化** | 全部加七（Am–Dm–Em→Am7–Dm7–Em7）立刻现代流行感；add9 化（Amadd9–Fadd9–Gadd9）更轻更柔 |
-| 3 | **III→III7（副属化）** | ★ **最快的"哭腔"开关**。任何自然音和弦前面都可以放一个副属（A7/B7/C7/D7/E7） |
-| 4 | **分数和弦化（低音线设计）** | 用转位让低音级进（卡农 C–G/B–Am–Em/G…），或半音化（C–G/B–B♭–F/A–Fm/A♭–D/F#–F/G）。★ 属和弦可换成 **F/G**（= G7sus4(9)），更含蓄精致 |
-| 5 | **插 sus4** | 段末的 V 前插 Vsus4（F→Gsus4→G），强调"这一章结束了"。**只在最后一遍加**也行 |
-| 6 | **二五化** | V 前拆出 IIm7（E7→Bm7(♭5)–E7；G7→Dm7–G7）。指向 IV 的 Gm7–C7 带来温暖的意外 |
-| 7 | **拍数调整与拼接** | 4 小节型可压缩成每和弦 2 拍；**挑合口味的 4 小节型拼成 8 小节，旋律会自然浮现** |
-| 8 | **同主调借用** | IV→IVm，或加 ♭VI/♭VII/♭III，立刻得到切なさ或摇滚粗粝 |
+| 1 | **Change the starting point** | Start the same set of chords from a different chord (1564→4156→6415; 1625→2516). ★ **Whether the first and last chords are major or minor determines brightness** |
+| 2 | **Seventh-ize / add9-ize** | Adding sevenths to all chords (Am–Dm–Em→Am7–Dm7–Em7) instantly gives a modern pop feel; add9 (Amadd9–Fadd9–Gadd9) is lighter and softer |
+| 3 | **III→III7 (secondary dominant)** | ★ **The fastest "weeping" switch.** A secondary dominant (A7/B7/C7/D7/E7) can be placed before any diatonic chord |
+| 4 | **Slash-chord conversion (bass-line design)** | Use inversions to make the bass move stepwise (canon C–G/B–Am–Em/G…), or chromatize (C–G/B–B♭–F/A–Fm/A♭–D/F#–F/G). ★ The dominant chord can be replaced with **F/G** (= G7sus4(9)), which is more subtle and refined |
+| 5 | **Insert sus4** | Insert Vsus4 before the V at the end of a section (F→Gsus4→G) to emphasize "this part is ending." **Adding it only on the last pass** also works |
+| 6 | **ii–V-ize** | Split out IIm7 before V (E7→Bm7(♭5)–E7; G7→Dm7–G7). Gm7–C7 pointing to IV brings a warm surprise |
+| 7 | **Beat adjustment and splicing** | A 4-bar pattern can be compressed to 2 beats per chord; **splice together 4-bar patterns you like into 8 bars, and the melody will naturally emerge** |
+| 8 | **Borrowing from the parallel key** | IV→IVm, or add ♭VI/♭VII/♭III, instantly getting setsunai or rock grit |
 
-> ★ 第 7 条是本节最被低估的：**拼接两个 4 小节型比发明一个 8 小节型容易得多，效果还好。**
+> ★ Technique 7 is the most underrated in this section: **splicing two 4-bar patterns is much easier than inventing one 8-bar pattern, and the results are good.**
 
 ---
 
-## 5. 与 ARR-SPEC 的字段对应
+## 5. Mapping to ARR-SPEC Fields
 
-| 字段 | 说明 |
+| Field | Notes |
 |---|---|
-| `form[].harmony` | 级数记号。**从本 skill 抄的进行要转成级数，不要抄字母** |
-| `form[].harmony_letters` | 字母记号。按 `meta.key` 移调，表见 [reference.md](reference.md) §5 |
-| `form[].note` | ★ 若用了 §3 警戒线上的进行，**在这里写为什么仍然选它** |
-| lint #9 | 至少一段要有调外和弦——§4 的第 3、6、8 条都能满足 |
+| `form[].harmony` | Roman-numeral notation. **Progressions copied from this skill must be converted to Roman numerals; do not copy the letter names** |
+| `form[].harmony_letters` | Letter-name notation. Transpose according to `meta.key`; see the table in [reference.md](reference.md) §5 |
+| `form[].note` | ★ If you used a progression on the §3 warning list, **write here why you still chose it** |
+| lint #9 | At least one section must contain a non-diatonic chord — techniques 3, 6, and 8 in §4 all satisfy this |
 
 ---
 
-## 6. 用完后必过
+## 6. Must Pass After Use
 
-- [ ] 进行转成了**级数**，不是直接抄字母
-- [ ] 字母记号按实际的 `meta.key` 移调过了
-- [ ] 查过 §3 警戒线；命中的话写了理由
-- [ ] **和声节奏不是全曲一小节一个**
-- [ ] 至少用了 §4 的一种变形（除非刻意要那份原始感，且写明）
-- [ ] 副歌和主歌**不是同一个进行原样重复**（同进行不同和声节奏也算变）
+- [ ] The progression has been converted to **Roman numerals**, not copied directly as letters
+- [ ] Letter notation has been transposed to the actual `meta.key`
+- [ ] Checked against the §3 warning list; if it matched, the reason was written down
+- [ ] **Harmonic rhythm is not one chord per bar throughout the piece**
+- [ ] At least one §4 variation was used (unless the original feel is deliberately wanted, and this is stated)
+- [ ] The chorus and verse do **not repeat the same progression verbatim** (the same progression with different harmonic rhythm also counts as a variation)
 
 ---
 
-## 附：来源与偏向声明
+## Appendix: Sources and Bias Statement
 
-- **《もっと！思いどおりに作曲ができる本》、《できる ゼロからはじめる作曲 超入門》、《プロの曲作りテクニック》**——§1、§2、§4 与全部分类表。
-- ★ **偏向声明**：这份语汇**偏 J-POP**（王道、小室、丸サ、ドリカム 都是日本业界的叫法）。
-  它在**华语流行与 city pop 上高度适用**，在 EDM、嘻哈、欧美摇滚上覆盖不足。
-  那些由 **L3 风格层**各自补齐——**不要把这份表当成"全部的流行和声"。**
-- 中文流行的进行语汇：→ `mc-style-chinese-pop`
-- 爵士标准曲的进行： → `mc-style-jazz`
-- 分类全表（王道 J-POP 类 / 感伤类 / 爵士都会类 / 小调类 / クリシェ线条类 / 8 小节大型）、
-  名曲→进行索引、移调表，全部在 [reference.md](reference.md)。
+- **Motto! Omoi Doori ni Sakkyoku ga Dekiru Hon (More! A Book for Composing as You Wish)**, **Dekiru Zero kara Hajimeru Sakkyoku Chō-Nyūmon (Ultra-Beginner Composition, Starting from Zero)**, **Puro no Kyoku-zukuri Tekunikku (Professional Songwriting Techniques)** — §1, §2, §4, and all classification tables.
+- ★ **Bias statement**: this vocabulary **leans toward J-POP** (Oudou, Komuro, Marusa, and Dreams Come True are all names used in the Japanese industry).
+  It is **highly applicable to Mandarin pop and city pop**, but under-covers EDM, hip-hop, and Western rock.
+  Those are covered separately by the **L3 style layer** — **do not treat this table as "all of pop harmony."**
+- Chinese pop progression vocabulary: → `mc-style-chinese-pop`
+- Jazz standard progressions: → `mc-style-jazz`
+- Full category tables (Oudou J-POP type / sentimental type / jazz urban type / minor type / cliche-line type / 8-bar large-scale), famous-song→progression index, and transposition table are all in [reference.md](reference.md).

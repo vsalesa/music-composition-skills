@@ -1,350 +1,347 @@
-# mc-rhythm-section 参考：鼓组各件的编配规则与谱例索引
+# mc-rhythm-section Reference: Arranging Rules for Each Drum-Kit Element and Music-Example Index
 
-> `SKILL.md` 讲怎么让节奏组像人在演奏；本文件放**逐件乐器的编配规则**和谱例位置。
-> 主要来源：**文海良《编曲》**（流行音乐学院系列）、
-> **Dennis DeSantis《Making Music》**、
-> **Mick Berry & Jason Gianni《The Drummer's Bible》**、
-> **Tommy Igoe《Groove Essentials》**。
-
----
-
-## 1. 鼓节奏的三句总则
-
-> **强弱鲜明，切分得当；落错有致，此起彼伏；动静结合，丰满空间。** (p0037)
-
-这三句概括了后面所有逐件规则。拆开看：
-- **强弱鲜明，切分得当** → kick / snare 的骨架（§2.1、§2.2）
-- **落错有致，此起彼伏** → 各件之间的互补（§2 全部）
-- **动静结合，丰满空间** → 横向织体的叠加叠减（§3）
+> `SKILL.md` covers how to make the rhythm section sound like people playing; this file holds the **arranging rules for each individual instrument** and the locations of the music examples.
+> Main sources: **Wen Hailiang, *Bianqu* (Arrangement)** (popular music academy series),
+> **Dennis DeSantis, *Making Music***,
+> **Mick Berry & Jason Gianni, *The Drummer's Bible***,
+> **Tommy Igoe, *Groove Essentials***.
 
 ---
 
-## 2. 逐件编配规则
+## 1. Three General Principles of Drum Rhythm
 
-搭建顺序：**先用底鼓与军鼓搭强弱骨架**，再加镲，最后加色彩件 (p0037)。
+> **Clear contrast of strong and weak, well-placed syncopation; displaced accents that alternate and answer one another; dynamic interplay of motion and stillness, filling out the space.** (p0037)
 
-| 例曲 | 演示内容 |
-|---|---|
-| 2.1.1-1 | 4/4，底鼓与军鼓基础节奏型，强弱骨架 |
-| 2.1.1-2 | 加入八分音符的闭合击镲 |
-| 2.1.1-3 | 开放击镲与军鼓同时发声，增强军鼓力度感 |
-
-### 2.1 底鼓（Kick）(p0037–0038)
-
-| 位置 | 作用 |
-|---|---|
-| 强拍 / 强位 | 加强**节奏规整感**，强调重音 |
-| 弱拍 / 弱位 | 加强**切分感**，形成重音变化 |
-
-谱例：2.1.1-4、2.1.1-5（弱拍底鼓与强拍结合）
-
-### 2.2 军鼓（Snare）(p0038)
-
-- 变化多样化，**强拍强位及弱拍弱位均可出现**
-- 注意与底鼓的**互答性、互补性**，勾画主要架构
-
-谱例：2.1.1-6、2.1.1-7（底鼓与军鼓的互补配合）
-
-> 军鼓之间的**幽灵音符**见 `SKILL.md` §5——那是"像人"的关键，这里的规则是"像编曲"的关键，两者都要。
-
-### 2.3 闭合击镲（Closed Hi-hat）(p0038–0039)
-
-| 用法 | 说明 |
-|---|---|
-| **规整** | 当底鼓和军鼓进行较大范围节奏切分时，用它把节奏拉回规整（谱例 2.1.1-8） |
-| **推进** | 也可以用闭合击镲**演奏切分节奏**，添加前进动力（谱例 2.1.1-9） |
-
-**这两种用法是相反的**——所以 hi-hat 是你调节"整首歌有多稳"的旋钮。
-底鼓军鼓已经很碎时，hat 走规整；底鼓军鼓很方正时，hat 可以切分。
-
-### 2.4 开放击镲（Open Hi-hat）(p0039)
-
-- 与闭合击镲配合构成强弱得当的关系，**代表强拍或强位**（谱例 2.1.1-10）
-- 与军鼓配合**增强军鼓力度**（谱例 2.1.1-11）
-
-### 2.5 吊镲（Crash）(p0039)
-
-- 用于**乐句性强拍**，起句强调或高潮烘托（谱例 2.1.1-12）
-- 整体切分时**增强切分效果**（谱例 2.1.1-13）
-
-### 2.6 通鼓（Tom）(p0040)
-
-- 用于节奏**加花和填充**，增强乐句起止感觉（谱例 2.1.1-14）
-- ★ **注意**：通鼓的推进作用**并非适用所有风格**——
-  **流行音乐中常用军鼓加花替代**
-
-> 这条是个有用的风格判据：满耳朵 tom fill 的流行编曲通常是过时的或做错了。
+These three sentences summarise all the element-by-element rules that follow. Broken down:
+- **Clear contrast of strong and weak, well-placed syncopation** → the skeleton of kick and snare (§2.1, §2.2)
+- **Displaced accents that alternate and answer one another** → complementarity among elements (all of §2)
+- **Dynamic interplay of motion and stillness, filling out the space** → adding and removing layers horizontally (§3)
 
 ---
 
-## 3. 横向织体：两种处理方式 (p0040–0041)
+## 2. Element-by-Element Arranging Rules
 
-### 3.1 情绪适应性
+Build order: **first use kick and snare to set up the strong–weak skeleton**, then add cymbals, and finally add colour elements (p0037).
 
-| 情绪 | 做法 |
+| Example | Content demonstrated |
 |---|---|
-| **抒情** | 节奏舒缓、不密集，选用**原声打击乐器** |
-| **劲爆激烈** | 选用**爆发力强的鼓组音色**，节奏密集化、力度化 |
+| 2.1.1-1 | 4/4, basic kick and snare rhythmic figure, strong–weak skeleton |
+| 2.1.1-2 | Adding closed cymbal strikes on eighth notes |
+| 2.1.1-3 | Open cymbal sounding together with the snare, boosting the snare's sense of force |
 
-### 3.2 叠加叠减式
+### 2.1 Kick (p0037–0038)
 
-**定义**：各打击乐器**非同时演奏**，根据情感起伏添加或减掉乐器。
-
-谱例 2.1.1-15 的完整过程：
-
-| 小节 | 在场 |
+| Position | Function |
 |---|---|
-| 1–2 | 仅闭合/开放击镲 |
-| 3–4 | 加底鼓 |
-| 5–6 | 加军鼓 |
-| 7–8 | **减回**底鼓和军鼓 |
+| Strong beat / strong position | Reinforces **rhythmic regularity** and emphasises accents |
+| Weak beat / weak position | Reinforces **syncopation** and creates shifts in accent |
 
-**作用**：增强音乐层次，丰富情感表现。
+Music examples: 2.1.1-4, 2.1.1-5 (weak-beat kick combined with strong beat)
 
-> ★ 注意第 7–8 小节的"减回"——这正好是本库佐证表里
-> **「至少一件乐器提前退场」59/59 强规则**在鼓组内部的体现。
-> 鼓组自己就该有进有退，不是只有整组开关。
+### 2.2 Snare (p0038)
 
-### 3.3 对比式
+- Varied in character; **may appear on strong beats in strong positions as well as on weak beats in weak positions**
+- Pay attention to its **call-and-response and complementary relationship** with the kick, sketching the main structure
 
-**定义**：前后两个鼓节奏形态不同，差别做在**节奏快慢**或**音色**上（文海良《编曲》p0041–0042）。
+Music examples: 2.1.1-6, 2.1.1-7 (complementary interplay of kick and snare)
 
-横向织体只有两种用法，§3.2 的叠加叠减是一种，对比式是另一种（p0040）。
-叠加叠减改的是**在场的件数**，对比式**件数可以完全不变，改的是形态**。
+> The **ghost notes** between snare hits are covered in `SKILL.md` §5. That is the key to "playing like a human"; the rules here are the key to "arranging like a composer". You need both.
 
-**做法一：快慢对比**（谱例 2.1.1-16）
+### 2.3 Closed Hi-hat (p0038–0039)
 
-| | 前四小节 | 后四小节 |
+| Use | Explanation |
+|---|---|
+| **Regularising** | When kick and snare carry out large-scale rhythmic syncopation, use it to pull the rhythm back into regularity (music example 2.1.1-8) |
+| **Driving forward** | The closed hi-hat can also **play syncopated rhythms**, adding forward momentum (music example 2.1.1-9) |
+
+**These two uses are opposites**, which is why the hi-hat is the knob you adjust for "how steady the whole song is".
+When kick and snare are already very fragmented, the hat keeps things regular; when kick and snare are very square, the hat can syncopate.
+
+### 2.4 Open Hi-hat (p0039)
+
+- Combined with the closed hi-hat to form a well-balanced strong–weak relationship, **representing strong beats or strong positions** (music example 2.1.1-10)
+- Combined with the snare to **boost the snare's force** (music example 2.1.1-11)
+
+### 2.5 Crash Cymbal (p0039)
+
+- Used on **phrase-level strong beats**, to emphasise the start of a phrase or to heighten a climax (music example 2.1.1-12)
+- When the whole texture is syncopated, **enhances the syncopation effect** (music example 2.1.1-13)
+
+### 2.6 Tom (p0040)
+
+- Used for **rhythmic embellishment and fills**, reinforcing the sense of a phrase starting and ending (music example 2.1.1-14)
+- ★ **Note**: the driving function of toms **does not apply to all styles**:
+  **in popular music, snare embellishments are commonly used instead**
+
+> This is a useful stylistic criterion: pop arrangements full of tom fills are usually dated or have been done wrongly.
+
+---
+
+## 3. Horizontal Texture: Two Approaches (p0040–0041)
+
+### 3.1 Emotional Suitability
+
+| Emotion | Approach |
+|---|---|
+| **Lyrical** | Rhythms relaxed and not dense; choose **acoustic percussion instruments** |
+| **Fierce and intense** | Choose **drum-kit timbres with explosive force**; make the rhythm denser and more forceful |
+
+### 3.2 Add-and-Remove Method
+
+**Definition**: the percussion instruments **do not play simultaneously**; instruments are added or removed according to the rise and fall of emotion.
+
+The complete process of music example 2.1.1-15:
+
+| Bars | Present |
+|---|---|
+| 1–2 | Closed/open cymbals only |
+| 3–4 | Kick added |
+| 5–6 | Snare added |
+| 7–8 | Kick and snare **removed again** |
+
+**Effect**: enhances the layering of the music and enriches emotional expression.
+
+> ★ Note the "removal" in bars 7–8. This is exactly the manifestation, within the drum kit, of the **strong rule of "at least one instrument exits early", 59/59**, from this library's corroboration table.
+> The drum kit itself should have entries and exits, not just a single on/off switch for the whole group.
+
+### 3.3 Contrast Method
+
+**Definition**: two consecutive drum rhythm patterns differ, with the difference made in **tempo of rhythm (fast vs. slow)** or in **timbre** (Wen Hailiang, *Arrangement*, p0041–0042).
+
+Horizontal texture has only two uses: the add-and-remove method in §3.2 is one, and the contrast method is the other (p0040).
+Add-and-remove changes **how many parts are present**; the contrast method **can keep the number of parts entirely unchanged and change the shape instead**.
+
+**Approach one: fast–slow contrast** (music example 2.1.1-16)
+
+| | First four bars | Last four bars |
 |---|---|---|
-| 镲 | 八分音符（松） | 十六分音符（紧） |
-| 军鼓 | | 时值缩短 |
-| 底鼓 | | 加密 |
+| Cymbal | Eighth notes (loose) | Sixteenth notes (tight) |
+| Snare | | Note values shortened |
+| Kick | | Made denser |
 
-**做法二：音色对比**（谱例 2.1.1-17）
+**Approach two: timbre contrast** (music example 2.1.1-17)
 
-| | 前四小节 | 后四小节 |
+| | First four bars | Last four bars |
 |---|---|---|
-| 镲 | 闭合击镲 | 开放击镲 |
-| 军鼓 | 边击（Ride） | 正常击 |
-| 底鼓 | 同 | 同 |
+| Cymbal | Closed hi-hat | Open hi-hat |
+| Snare | Rim shot (ride) | Normal stroke |
+| Kick | Same | Same |
 
-★ **第二种最值得记**：**节奏型一个音符都没改**，只换了闭合与开放、边击与正常，
-后四小节的情绪就明显更狂热。
+★ **The second approach is the more memorable**: **not a single note in the rhythmic figure has changed**, yet by switching closed to open and rim to normal stroke, the emotion of the last four bars becomes markedly more frenzied.
 
-**用法判断**：需要推进又不想加东西时用对比式。
-段落已经很满、再叠会糊，这时候换形态比加件数有效。
+**Deciding when to use it**: use the contrast method when you need to push forward but do not want to add anything.
+When a section is already full and layering would only blur it, changing the shape is more effective than adding parts.
 
 ---
 
-## 4. 贝司相关的谱例索引
+## 4. Index of Bass Music Examples
 
-决策规则已提升到 `SKILL.md` §7，这里只留谱例位置：
+The decision rules have been raised to `SKILL.md` §7; only the locations of the music examples are kept here:
 
-| 谱例 | 内容 |
+| Example | Content |
 |---|---|
-| 2.1.2-1 | 贝司**"点"**的形态（4/4，低音谱号） |
-| 2.1.2-2 | 贝司**"线"**的形态（清晰旋律线条） |
-| 2.1.2-3 | **结合式**（Bass 与 Drums 对照谱，节奏重合）——即周杰伦《菊花台》 |
-| 2.1.2-4 | **互答式** |
-| 2.1.2-5 | **交织式**（4/4，Bass 与 Drums 声部） |
+| 2.1.2-1 | Bass **"point"** form (4/4, bass clef) |
+| 2.1.2-2 | Bass **"line"** form (clear melodic line) |
+| 2.1.2-3 | **Locked** (bass and drums score side by side, rhythms coinciding), i.e. Jay Chou's *Chrysanthemum Terrace* (菊花台) |
+| 2.1.2-4 | **Answering** |
+| 2.1.2-5 | **Interlocking** (4/4, bass and drums parts) |
 
-**书中练习**（可当作我们自己的训练题）：
-1. 为《康定情歌》（1=F，2/4，和声 Dm–Gm–Am–Dm–C7–Gm）编两条以上不同风格的贝司旋律
-2. 为《我爱北京天安门》（1=C，2/4，和声 C–Fmaj7–G–Dm–G7–Am–Em）编三种以上贝司与鼓组搭配，
-   **限制只用贝司、鼓组和旋律三个声部**
-3. 分析周杰伦《菊花台》（例曲 2.1.2-3）中贝司与鼓组的搭配
-
----
-
-## 5. 和声乐器：织体的"墙壁"(p0049–0051)
-
-严格说这块跨在 `mc-rhythm-section` 与 `mc-texture-layering` 之间——
-**它的节奏形态归这里，它的频段归那里**。
-
-> 在鼓节奏和贝司构筑的基石与骨架之上，用和声乐器**进一步丰满织体空间，
-> 用其构成织体的"墙壁"**。
-
-| 形态 | 定义 | 谱例 |
-|---|---|---|
-| **和声形态**（静态） | 以**和弦长音**的方式延留、持续，构成相对静态的垫底和声层，用于**融合各种乐器音色** | 2.1.3-1（String 全音符） |
-| **节奏形态**（动态） | 以**节奏型**的形式，用**柱式或和弦分解**填充在内声部层，使音乐获得**前进的推动力** | 2.1.3-2（E.Piano 分解）、2.1.3-3（E.Piano 柱式，**节奏与贝司相同**） |
-
-**厚度选择**：单音、音程、和弦都可以，**看对这个声部层的厚度要求** (p0050)。
-
-> 谱例 2.1.3-3 那句"其节奏与贝司的节奏相同"值得注意——
-> 这是把和声乐器并入节奏组的做法，它会让律动更硬，但会牺牲一层独立性。
+**Exercises from the book** (usable as our own training problems):
+1. Write two or more bass melodies in different styles for *Kangding Qingge* (Kangding Love Song) (1=F, 2/4, harmony Dm–Gm–Am–Dm–C7–Gm)
+2. Write three or more combinations of bass and drum kit for *Wo Ai Beijing Tian'anmen* (I Love Beijing's Tiananmen) (1=C, 2/4, harmony C–Fmaj7–G–Dm–G7–Am–Em),
+   **with the restriction of using only three parts: bass, drum kit, and melody**
+3. Analyse the pairing of bass and drum kit in Jay Chou's *Chrysanthemum Terrace* (music example 2.1.2-3)
 
 ---
 
-### 5.1 ★ 从和弦到钢琴伴奏音型：四步（图解编曲 p0065–0073）
+## 5. Harmonic Instruments: The "Walls" of Texture (p0049–0051)
 
-§5 上面两类是形态分类，这里是做法。
+Strictly speaking, this area straddles `mc-rhythm-section` and `mc-texture-layering`:
+**its rhythmic figures belong here, its frequency bands belong there**.
 
-1. **决定音域**。先定吉他的音域，让钢琴左右手从高低两侧**包围**吉他；★ **只重叠一小部分是对的，完全不重叠反而让钢琴无处发挥**。编曲顺序是吉他贝斯先、钢琴后（p0065–0066）
-2. **左手做出基本律动**。用八度音让重心上下移动：**大鼓时弹低音，小鼓时弹高音**；正拍大鼓同时弹八度，反拍大鼓只弹低音，小鼓只弹高音（p0068–0069）。
-   抒情曲用不叠八度的写法，快歌叠八度。连续八度之间加五度音让转移圆滑，但会弱化硬派；★ **不属于基本律动的音用幽灵音量放进去，就不会瓦解律动**（p0070）
-3. 再加右手
-4. **配合右手对左手微调**。★ **避免两手同时弹反拍**，左手还是八度的话最糟；要强调反拍或处在切分时不受此限（p0072）
+> Above the foundation and skeleton built by the drum rhythm and bass, use harmonic instruments to **further fill out the texture space, forming the "walls" of the texture**.
 
-**背景声部的本体是分解和弦**（含贝斯的和弦分解），两档加料：加少量上下行进让它旋律化；导入趋近音淡化分解感（p0107–0109）。
-
-★ **钢琴和弦的最高音要连得上**（p0110–0111）：换和弦时保留共同音，没有共同音就取最接近的构成音，把最高音的移动压到最小；
-否则"缺乏连贯性、印象散乱"。这条也是 `mc-harmony` 排列的基本规则，那边讲低音，这边讲最高音。
-
-### 5.2 音型的构成：四个旋钮（文海良 p0051–0054）
-
-音型是"和声乐器的一个固定循环的演奏模式"，与和声形态的区别在于它给音乐内在推动力（p0051–0052）。基本形态只有两种，分解与柱式，柱式为主的音型"往往能够给人简单明了的感觉"（p0052）。定了形态之后有四个旋钮：
-
-| 旋钮 | 规则 | 页 |
+| Shape | Definition | Music example |
 |---|---|---|
-| **时值** | 由情绪与风格定：舒缓用八分或更长，激动热烈用十六分让音型加速；★ **不同时值的分解音符组合起来是得到有新意音型的重要途径**，全是等长音符就呆板 | p0053 |
-| **音高距离** | 密集排列让表达更集中；开放排列音域更宽，柱式时更丰满 | p0053 |
-| **和弦外音** | 经过音、辅助音、延留音放进音型里，"获得意外的色彩效果"，**缓解分解的机械呆板** | p0053–0054 |
-| **连接** | 和弦换的时候，音型之间**尽量不超过四度的平稳连接**，少数情况才跳进；另一路是音型模进 | p0054 |
+| **Harmonic shape** (static) | Held and sustained by **the long tones of chords**, forming a relatively static pad layer of harmony, used to **blend the timbres of various instruments** | 2.1.3-1 (strings, whole notes) |
+| **Rhythmic shape** (dynamic) | In the form of **rhythmic figures**, filling the inner layer with **block chords or broken chords**, giving the music **forward momentum** | 2.1.3-2 (electric piano, broken chords), 2.1.3-3 (electric piano, block chords, **with the same rhythm as the bass**) |
 
-**用法**：AI 生成的伴奏音型最常见的病是四个旋钮全在默认位（等时值、密集、纯和弦音、直接跳到下一个和弦的同型）。改一到两个旋钮就能脱开。
+**Choosing density**: single notes, intervals, and chords are all acceptable; **it depends on how thick the requirement is for this layer** (p0050).
 
-### 5.3 琶音化与转位：让分解和弦不跳（Allen 第二十一章）
+> The remark in music example 2.1.3-3 that "its rhythm is the same as the bass's rhythm" is worth noting:
+> this is the practice of folding a harmonic instrument into the rhythm section. It makes the groove harder-edged, but sacrifices a layer of independence.
 
-把柱式改成琶音，节奏感与律动就来了，和声色彩不变（21.1）。三条做法：
-1. **凑拍子**：三音和弦对齐十六分音符要补第四个音，用根音八度 1-3-5-1 或回头 1-3-5-3。
-2. ★ **直接琶音会在换和弦时出大跳**（八度加五度这种），解法是**换排列**：让每个和弦从上一个结束的地方附近开始，根音在顶、下到三音、上到五音、再回根音这类走法把过渡磨平。没有严格规则，通常追求平滑，但大跳也可以是有意的趣味。
-3. **转位琶音**（21.3）：一个和弦在一小节里快速换转位（原位 → 转位 → 另一转位 → 高八度原位），听感像换了几个和弦，和声实际没动；有大跳的那一拍只留两个音。
+---
 
-合成器琶音器的两个主参数就是这些的自动版：Rate（1/8、1/16）对应 §5.2 的时值旋钮，Style（Up、Down、Up then Down、Random）对应方向（21.2）。琶音器不管转位，所以 §5.3 第 2 条它做不到，要自己排。
+### 5.1 ★ From Chord to Piano Accompaniment Figure: Four Steps (Illustrated Arranging p0065–0073)
 
-### 5.4 两件伴奏乐器同时在场时（图解编曲 p0166–0167）
+§5 above sorts the two categories by shape; here is the practice.
 
-★ **一方在弹乐句，另一方就只能维持单纯的伴奏**，齐奏与合音除外（p0166）。
-吉他的合音填在下方，上方会太凸显（p0166）；要让吉他乐句出来，把钢琴的音拉长（p0167）。
-这与 §5.1 第 1 步是同一件事的两面：先定谁在哪个音域，再定谁在这一段说话。
+1. **Decide the range**. First set the range of the guitar, so that the piano's left and right hands **surround** the guitar from above and below; ★ **it is correct to overlap only a small part; complete non-overlap leaves the piano nowhere to contribute**. In the arranging order, guitar and bass come first, then piano (p0065–0066).
+2. **Build the basic groove with the left hand.** Use octaves to shift the centre of gravity up and down: **play low notes on the kick, high notes on the snare**; on downbeat kicks play octaves together, on offbeat kicks play only the low note, and on snare play only the high note (p0068–0069).
+   Lyrical songs use voicings without doubled octaves; fast songs double the octaves. Adding a fifth between consecutive octaves smooths the transitions but weakens a hard-rock feel. ★ **Notes that are not part of the basic groove can be inserted at ghost volume without disintegrating the groove** (p0070).
+3. Then add the right hand.
+4. **Fine-tune the left hand in coordination with the right hand.** ★ **Avoid playing offbeats with both hands at once**; it is worst if the left hand is still playing octaves. The restriction does not apply when you want to emphasise offbeats or when syncopation is present (p0072).
+
+**The essence of the background part is broken chords** (including broken chords in the bass), with two levels of enrichment: add a small amount of ascending and descending motion to make it melodic; introduce approach tones to soften the sense of broken chords (p0107–0109).
+
+★ **The top note of piano chords must connect smoothly** (p0110–0111): when changing chords, keep common tones; if there are no common tones, take the nearest constituent note, minimising the movement of the top voice;
+otherwise the result "lacks coherence and impresses as scattered". This is also a basic rule of voicing in `mc-harmony`: that section discusses the bass, this one discusses the top voice.
+
+### 5.2 Constructing Figures: Four Knobs (Wen Hailiang p0051–0054)
+
+A figure is "a fixed, cyclical playing pattern of a harmonic instrument"; it differs from harmonic shape in that it gives the music internal forward drive (p0051–0052). There are only two basic shapes, broken chords and block chords; figures based mainly on block chords "tend to give a simple and clear impression" (p0052). Once the shape is set, there are four knobs:
+
+| Knob | Rule | Page |
+|---|---|---|
+| **Note value** | Set by emotion and style: slow and gentle uses eighths or longer; agitated and passionate uses sixteenths to accelerate the figure; ★ **combining broken-chord notes of different values is an important route to a fresh figure**; all notes of equal length are dull | p0053 |
+| **Pitch spacing** | Dense voicing concentrates the expression; open voicing widens the range and, with block chords, makes it fuller | p0053 |
+| **Non-chord tones** | Passing tones, auxiliary tones, and suspensions placed into the figure "gain unexpected colour effects" and **relieve the mechanical stiffness of broken chords** | p0053–0054 |
+| **Voice leading** | When chords change, **keep the connection between figures smooth, ideally within a fourth**, leaping only occasionally; the other route is sequencing the figure | p0054 |
+
+**Practical use**: the most common flaw in AI-generated accompaniment figures is that all four knobs sit at default settings (equal note values, dense voicing, only chord tones, and jumping directly to the same shape for the next chord). Changing one or two knobs is enough to break out of this.
+
+### 5.3 Arpeggiation and Inversions: Keeping Broken Chords Smooth (Allen Chapter 21)
+
+Turning block chords into arpeggios brings rhythmic drive and groove, while the harmonic colour stays the same (21.1). Three methods:
+1. **Filling the beat**: a triad aligned to sixteenth notes needs a fourth note to fill the beat, using the root an octave up, 1-3-5-1, or returning with 1-3-5-3.
+2. ★ **Direct arpeggios produce large leaps when chords change** (such as an octave plus a fifth). The solution is to **change the voicing**: have each chord start near where the previous one ended, with patterns such as root at the top, down to the third, up to the fifth, and back to the root, smoothing the transition. There is no strict rule; the usual aim is smoothness, though a large leap can also be an intentional point of interest.
+3. **Inverted arpeggios** (21.3): one chord rapidly changes inversions within a bar (root position → first inversion → another inversion → root position an octave higher); to the ear it sounds like several different chords, though the harmony has not actually moved. On a beat that contains a large leap, only two notes are retained.
+
+The two main parameters of a synthesiser arpeggiator are automated versions of these: Rate (1/8, 1/16) corresponds to the note-value knob in §5.2, and Style (Up, Down, Up then Down, Random) corresponds to direction (21.2). The arpeggiator does not handle inversions, so it cannot do point 2 of §5.3; you have to arrange that yourself.
+
+### 5.4 When Two Accompaniment Instruments Are Present at the Same Time (Illustrated Arranging p0166–0167)
+
+★ **When one party is playing a melodic phrase, the other can only maintain simple accompaniment**; unison and doubling are exceptions (p0166).
+Guitar doubling is placed below, since placing it above would be too prominent (p0166); to bring out a guitar phrase, lengthen the notes of the piano (p0167).
+This is the same thing as the first step of §5.1, seen from the other side: first settle who sits in which register, then settle who speaks in this section.
 
 
-## 6. 鼓编程：松动感、线性、幽灵音符、上下半区（DeSantis）
+## 6. Drum Programming: Looseness, Linear Method, Ghost Notes, Upper and Lower Halves (DeSantis)
 
-### 6.1 松动感：先判风格，再决定松多少
+### 6.1 Looseness: Judge the Style First, Then Decide How Loose
 
-手打的鼓松散，鼠标画或量化过的鼓又太准，两头都不像（p0154）。
-**先做风格判断再动手**：Techno、House、Electro、EDM 里**绝对量化完全合适**，
-力度整齐划一也没问题；大多数 Hip-hop 要松一些、有机一些，因为这个风格本来就常直接采真鼓手（p0154）。
+Hand-played drums are loose, while mouse-drawn or heavily quantised drums are too precise, and both fail to sound right (p0154).
+**Judge the style before doing anything**: in Techno, House, Electro, and EDM, **absolute quantization is entirely appropriate**,
+and uniform dynamics are no problem; most hip-hop should be looser and more organic, because that style often directly samples real drummers (p0154).
 
-要松的时候，四种做法（p0154–0156）：
+When you want looseness, four approaches (p0154–0156):
 
-| 做法 | 怎么用 |
+| Approach | How to use it |
 |---|---|
-| **按百分比量化** | 量化强度 50% 就是把音符往正确位置挪一半距离。**减少而不是消除人的不准**，这是保住人味同时修偏的最好办法 |
-| **只量化一部分乐器** | 常规是整组一起量化。改成挑着量：只量踩镲、底鼓军鼓不动；或者反过来，踩镲留松、底鼓军鼓对齐。两种听感完全不同 |
-| **找自己的自然速度** | 每个人在某个速度区间里打得最准，太慢太快都不准。先找到那个速度，在它上面编，看能不能不量化就得到想要的感觉 |
-| **人性化** | 时间与力度的细微随机 |
+| **Percentage quantization** | A quantisation strength of 50% moves each note halfway toward the correct position. **It reduces rather than eliminates human imprecision**, which is the best way to keep the human feel while correcting drift |
+| **Quantize only some instruments** | The usual practice is to quantise the whole kit together. Instead, be selective: quantise only the hi-hat and leave kick and snare alone; or the reverse, leaving the hi-hat loose and aligning kick and snare. The two produce completely different impressions |
+| **Find your natural tempo** | Everyone plays most accurately within a particular tempo range, and is less accurate both slower and faster. Find that tempo, compose at it, and see whether you get the desired feel without quantising |
+| **Humanisation** | Subtle random variation in timing and dynamics |
 
-★ **一条容易忽略的感知规律**：慢放时时间误差更明显，快放时误差反而不明显（p0156）。
-所以在慢速下编的鼓，提速播放会显得比实际更准。
+★ **A perception rule that is easily overlooked**: timing errors are more noticeable when slowed down, and less noticeable when sped up (p0156).
+So a drum part programmed at a slow tempo sounds more accurate than it really is when played back faster.
 
-### 6.2 线性鼓组：取消计时与重音的分工
+### 6.2 Linear Drum Kit: Cancelling the Division of Timekeeping and Accent Roles
 
-线性模式把**每件乐器看成权重相等**，不靠叠加声部去强调某些拍点（p0163）。
+Linear mode treats **each instrument as equal in weight**, rather than relying on layering parts to emphasise certain beats (p0163).
 
-- 速度变了性格就变：在很快的速度（如 170 bpm）上呈现滚动感，**各声部融合后的复合线条比单个音符更清楚**（p0163）
-- drum and bass 的 groove 常见这种做法（p0163）
-- 可以再加约束玩，比如全用十六分音符、且每个十六分位置都必须有音
-- ★ **它的价值在于"民主化"各件乐器**，取消传统上计时元素与重音元素的角色分工，没有哪一件占主导（p0164）
-- 同一组音符，只改某些音的力度，性格就完全不同（p0164）
-- **不必死守单声部**，某些位置同时发声更好听就同时发（p0164）
+- At very fast tempos (such as 170 bpm) the character changes, presenting a rolling feel, and **the combined line after the parts fuse is clearer than any single note** (p0163)
+- Drum and bass grooves often use this approach (p0163)
+- You can add constraints for further play, such as using only sixteenth notes throughout and requiring a note on every sixteenth position
+- ★ **Its value lies in "democratising" the instruments**, cancelling the traditional division of roles between timekeeping elements and accent elements, so that no single instrument dominates (p0164)
+- With the same set of notes, changing only the dynamics of certain notes completely changes the character (p0164)
+- **There is no need to stick rigidly to one voice**: where sounding simultaneously at some positions sounds better, do so (p0164)
 
-### 6.3 幽灵音符：只在对的音源上才成立
+### 6.3 Ghost Notes: Valid Only on the Right Sound Sources
 
-极轻的音符，通常打在军鼓上，填在显著音符之间的空隙里（p0166）。
-纯电子音乐里各件往往力度恒定，这跟真人鼓手的打法差别很大（p0166）。
+These are extremely soft notes, usually played on the snare, filling the gaps between prominent notes (p0166).
+In purely electronic music, parts often have constant dynamics, which differs greatly from how a human drummer plays (p0166).
 
-**两种用法**（p0167–0168）：
+**Two uses** (p0167–0168):
 
-1. **推动时间向前**。在反拍之间加低力度军鼓，比如第一拍与第三拍的第二、第三个十六分位置
-2. **预示结构点**。用极快的手势引向下拍，那些三十二分音符会和下拍的底鼓被听成一个完整手势。
-   想夸张这个效果，可以把它们打得明显滞后于拍（和 §6.1 的松动感连用）
+1. **Pushing time forward.** Add low-dynamic snare notes between the offbeats, for example at the second and third sixteenth positions between beats one and three
+2. **Foreshadowing structural points.** Use very fast gestures to lead toward a downbeat; those thirty-second notes will be heard together with the downbeat kick as one complete gesture.
+   To exaggerate this effect, play them noticeably behind the beat (used in combination with the looseness in §6.1)
 
-★ **硬约束：幽灵音符只在力度敏感的音源上成立**（p0168–0169）。
-多采样原声鼓有低力度采样，反应得像真鼓；**鼓机往往没有力度变化，加幽灵音符只是变出另一个模式而已**。
-写之前先确认音源吃不吃力度。
+★ **Hard constraint: ghost notes are valid only on dynamics-sensitive sound sources** (p0168–0169).
+Many sampled acoustic drums have low-dynamic samples that respond like real drums; **drum machines often have no dynamic variation, so adding ghost notes merely creates another pattern**.
+Before writing, confirm that the sound source responds to dynamics.
 
-军鼓是惯例位置，但换到别的乐器上也值得试（p0169）。
+The snare is the conventional position, but it is worth trying on other instruments as well (p0169).
 
-### 6.4 上半区与下半区
+### 6.4 Upper Half and Lower Half
 
-把真鼓组理解成物理的东西，能避免编出来的节拍只是凭空猜（p0171）。
+Thinking of the real drum kit as a physical object helps avoid producing beats by pure guesswork (p0171).
 
-| 半区 | 有什么 | 为什么归这里 |
+| Half | What it contains | Why it belongs here |
 |---|---|---|
-| **上半区** | 踩镲、叮叮镲、碎音镲，以及溅水镲、中国镲、锣 | 物理位置在鼓之上，频谱位置也在更高的频段 |
-| **下半区** | 底鼓、军鼓、嗵鼓 | 位置低，频段低 |
+| **Upper half** | Hi-hat, ride, crash-type splash cymbals, along with splash cymbals, china cymbals, and gongs | Physically positioned above the drums, and spectrally positioned in higher frequency bands |
+| **Lower half** | Kick, snare, floor tom | Physically low, and low in frequency |
 
-**军鼓是两可的**，频率上介于上下之间，这里归在下半区（p0171）。
+**The snare is ambiguous**: frequency-wise it lies between upper and lower, but here it is placed in the lower half (p0171).
 
-**用法**：这个二分给的是频段预算的入口。上半区整体占高频，下半区占低中频，
-军鼓那条线是两边的交界，也是最容易和别的东西打架的位置。
+**Usage**: this division provides the entry point for allocating the frequency budget. The upper half generally occupies the high frequencies, the lower half the low-mid frequencies,
+and the snare line is the boundary between the two, and also the position most likely to clash with other elements.
 
-随机性与责任（p0273–0274）在本文 §2.4。
+Randomness and responsibility (p0273–0274) are covered in §2.4 of this document.
 
 ---
 
-## 7. 改道说明
+## 7. Redirect Notes
 
-| 材料 | 原以为归这里，实际归 |
+| Material | Originally assumed to belong here, actually belongs to |
 |---|---|
-| **`jazz-gtr-groove`**（Jazz Guitar Groove） | **L1 旋律/即兴层**——这本书讲的是 CAGED 形态、音阶模式、4 音符模进、半音修饰、三连音 pattern，是**即兴词汇**不是节奏组编配。本 skill 不引用它 |
-| 竹内一弘《EDM 制作》的鼓组音量/定位 | `mc-mix-intent`（意图）／参数是混音的事 |
-| 各风格的具体鼓型库（house / trap / bossa 等模板） | **L3 风格层**的各风格 skill——鼓型是风格的一部分，不是通用技术 |
+| **`jazz-gtr-groove`** (Jazz Guitar Groove) | **L1 melody/improvisation layer**. This book covers CAGED shapes, scale patterns, four-note sequences, chromatic embellishment, and triplet patterns, which are **improvisational vocabulary**, not rhythm-section arranging. This skill does not cite it |
+| Drum kit volume and placement in Takeuchi Kazuhiro's *EDM Production* | `mc-mix-intent` (intent); the parameters are a matter for mixing |
+| Specific drum-pattern libraries for each style (house / trap / bossa and other templates) | The style-specific skills at the **L3 style layer**: drum patterns are part of a style, not general technique |
 
-> ★ 最后一条是有意的取舍：本 skill **不做风格鼓型字典**。
-> 理由是本库分 skill 的判据：按工序切，不按知识领域切（`mc-workflow` 附：这个库为什么这样分层）。
-> "怎么打得像人"是工序，"city pop 的鼓怎么打"是风格。
+> ★ The last item is a deliberate trade-off: this skill **does not provide a style drum-pattern dictionary**.
+> The reason is the library's criterion for splitting skills: divide by procedure, not by knowledge domain (see the appendix of `mc-workflow` on why this library is layered this way).
+> "How to play like a human" is a procedure; "how city pop drums are played" is a style.
 >
-> 与 §8 的关系：§8 给的是**选型入口**——每种风格的鼓型家族（backbeat 在哪、底鼓走什么、镲手打什么细分）、速度区间、feel、标志性处理；
-> 逐小节的鼓型模板仍归各风格 skill。选型是工序的一部分，模板是风格的一部分，两者并存不矛盾。
+> Relationship to §8: §8 provides the **entry point for selection**: the drum-pattern family for each style (where the backbeat falls, what the kick does, what the hi-hat's subdivision is), tempo ranges, feel, and signature treatments;
+> bar-by-bar drum-pattern templates still belong to the individual style skills. Selection is part of the procedure and templates are part of the style; the two coexist without contradiction.
 
 ---
 
-## 8. 按风格的鼓型与速度速查（另一个文件）
+## 8. Drum Patterns and Tempo Quick Reference by Style (Separate File)
 
-见 [reference-styles.md](reference-styles.md)，小节号沿用 §8，引用照旧。
-分出来是因为这一节两万四千字，占了全文一半以上。
+See [reference-styles.md](reference-styles.md); section numbering follows §8 and references remain unchanged.
+It was split out because this section runs to about 24,000 characters, more than half the whole document.
 
 ---
 
-## 9. groove 的分类与感觉（Groove Essentials）
+## 9. Groove Classification and Feel (Groove Essentials)
 
-### 9.1 书的分法
+### 9.1 How the Book Is Organised
 
-- 六章：Rock、Funk、R&B/Hip-Hop、Jazz、World/Specialty、Global Tours（p0008）；每个 groove 各有 SLOW 与 FAST 两档速度（p0003）。
-- **按细分与拍位**：Rock 分八分音符 groove、十六分音符 groove、half-time groove（p0019）；Funk 是概念不是类别，签名是重音移位（p0041）。
-- **按 feel**：Jazz 分 swing（easy / lazy / relaxed / bright / bouncy / driving / up）、shuffle、2-feel、Jazz Waltz in 3 与 in 1（p0064–0078）；R&B/Hip-Hop 里有 swing feel 的 loop 型、重音推向八分的十六分型、half-time shuffle（p0052–0056）。
-- **按地域**：World 章按地域列 Disco、classic 2-beat、2nd line、Reggae、Calypso、Soca、Bossa、Samba（慢/中/快）、Baião、Batucada、Merengue、Cha-Cha、Bolero、Mambo、Songo、Nañigo、Mozambique、Salsa、Tango、Beguine（p0082–0111）；2nd Line 是一种 groove 而非子流派，Zydeco / Cajun / Swamp / Funk / Gospel / Brass Band 里都会出现（p0112）。
-- **速度**：书里故意**不**标 bpm，因为职业谱例很少标；"fast"某晚可能不够快、另一晚太快；用节拍器自己量并记下（p0116）。与 Drummer's Bible 逐风格给区间的做法并排看：**区间是入口，最终速度由"feels good"定。**
+- Six chapters: Rock, Funk, R&B/Hip-Hop, Jazz, World/Specialty, Global Tours (p0008); each groove has a SLOW and a FAST tempo option (p0003).
+- **By subdivision and beat position**: Rock is divided into eighth-note grooves, sixteenth-note grooves, and half-time grooves (p0019); Funk is a concept rather than a category, with shifted accents as its signature (p0041).
+- **By feel**: Jazz is divided into swing (easy / lazy / relaxed / bright / bouncy / driving / up), shuffle, 2-feel, and Jazz Waltz in 3 and in 1 (p0064–0078); R&B/Hip-Hop includes loop types with swing feel, sixteenth types with accents pushed toward eighths, and half-time shuffle (p0052–0056).
+- **By region**: the World chapter lists by region Disco, classic 2-beat, 2nd line, Reggae, Calypso, Soca, Bossa, Samba (slow / medium / fast), Baião, Batucada, Merengue, Cha-Cha, Bolero, Mambo, Songo, Nañigo, Mozambique, Salsa, Tango, Beguine (p0082–0111); 2nd Line is a type of groove rather than a subgenre, and appears in Zydeco / Cajun / Swamp / Funk / Gospel / Brass Band (p0112).
+- **Tempo**: the book deliberately does **not** mark bpm, because professional music examples rarely do; "fast" may not be fast enough one night and too fast another; measure it yourself with a metronome and note it down (p0116). Compare this with the Drummer's Bible's approach of giving a range for each style: **the range is the entry point, and the final tempo is set by "feels good".**
 
-### 9.2 感觉的核心词
+### 9.2 Core Terms of Feel
 
-| 概念 | 内容 | 页 |
+| Concept | Content | Page |
 |---|---|---|
-| Time center | groove 相对共同脉冲的位置：pushing ahead / laying back / dead center；**不是** rushing（加速）和 dragging（减速） | p0028 |
-| Tight / loose | tight = 与乐队一起打出干脆的节奏，不是紧张；loose = sloppy | p0028 |
-| 分层的 time center | 同一首里打击乐 spot on 且非常靠前，贝司稍"胖"（略靠后但不拖），鼓找两者中间（p0035）；贝司比吉他胖、吉他比键盘靠前，这种层次就是人味（p0042） | p0035、p0042 |
-| 与电子鼓同台 | 必须与电子鼓严丝合缝锁定，不许 flam | p0035 |
-| 分层 groove 不许 flam | four-on-the-floor 各件必须完美对齐 | p0022 |
-| Half-time feel | backbeat 在第 3 拍而非 2&4，音乐流动得更快；天然更开放、更多空间；慢速易偷掉空间而抢拍——脑子里一直听所有细分 | p0036、p0038 |
-| Swing 的松紧 | 可明显（紧）也可微妙（松）；ride beat 决定整个乐队的 swing 量，要一致 | p0052、p0056 |
-| Shuffle | 就想成"带某种 backbeat 的 swing"（Drummer's Bible 的定义是每拍三连音的第 1、3 个，p0013——两者并排） | p0072 |
-| 2-feel | 降低强度与音量、增加空间；对时间的承诺不能减 | p0074 |
-| Open hi-hat | 开镲的诀窍是在 groove 内关上；乱关是 groove-killer | p0030 |
-| Hi-hat 音量 | 快 hi-hat 的三条秘诀都是"别打太响" | p0033 |
-| 节奏摩擦 | 底鼓故意与贝司线对抗制造张力；前半小节对齐、后半摩擦 = 同一 groove 里的张力与释放 | p0021、p0034 |
-| 变奏是调料 | 偶尔用；整首都用像过度活跃的鼓机 | p0025、p0027 |
-| 忙 groove 三检 | 内部力度平衡 / 细分准确 / 合奏意识 | p0043 |
-| Ghost 的力度 | 内部音符打太响就是一团乱麻 | p0057 |
-| 无 click 时鼓手提供什么 | 总速度、time center、十六分细分、backbeat 位置、swing 松紧、Samba 起伏、clave、Merengue 驱动力 | p0015 |
-| Groove 是蛋糕 | 怪招是糖霜，groove 才是蛋糕 | p0124 |
+| Time centre | Position of the groove relative to the common pulse: pushing ahead / laying back / dead centre; **not** rushing (speeding up) and dragging (slowing down) | p0028 |
+| Tight / loose | Tight = playing crisp rhythm together with the band, not tension; loose = sloppy | p0028 |
+| Layered time centre | Within one piece, percussion is spot on and placed well forward, bass sits slightly "fat" (a little behind but not dragging), and the drummer finds a point between the two (p0035); bass is fatter than guitar, and guitar is further forward than keys; this layering is what makes it human (p0042) | p0035, p0042 |
+| Sharing the stage with electronic drums | Must lock tightly with electronic drums, with no flams allowed | p0035 |
+| No flams in layered grooves | Elements in a four-on-the-floor pattern must align perfectly | p0022 |
+| Half-time feel | Backbeat on beat 3 rather than 2 and 4; the music flows faster; naturally more open with more space; at slow tempos it is easy to lose space and rush — keep listening to all subdivisions in your head | p0036, p0038 |
+| Swing tightness | Can be obvious (tight) or subtle (loose); the ride pattern determines the amount of swing for the whole band, and it must be consistent | p0052, p0056 |
+| Shuffle | Think of it as "swing with some kind of backbeat" (the Drummer's Bible's definition is the 1st and 3rd of each beat's triplet, p0013 — the two views are presented side by side) | p0072 |
+| 2-feel | Reduce intensity and volume, increase space; the commitment to time must not be reduced | p0074 |
+| Open hi-hat | The trick with the open hi-hat is to close it within the groove; closing it randomly is a groove-killer | p0030 |
+| Hi-hat volume | All three secrets of the fast hi-hat come down to "don't play too loudly" | p0033 |
+| Rhythmic friction | The kick deliberately opposes the bass line to create tension; aligned in the first half of the bar, rubbing in the second half = tension and release within the same groove | p0021, p0034 |
+| Variations as seasoning | Use occasionally; using them all the time sounds like an overactive drum machine | p0025, p0027 |
+| Three checks for a busy groove | Internal dynamic balance / accurate subdivision / ensemble awareness | p0043 |
+| Dynamics of ghost notes | If the internal notes are struck too loudly, the result is a tangle | p0057 |
+| What a drummer provides with no click | Overall tempo, time centre, sixteenth subdivision, backbeat position, swing tightness, samba's undulation, clave, the driving force of Merengue | p0015 |
+| The groove is the cake | Gimmicks are the icing; the groove is the cake | p0124 |
 
-### 9.3 与本 skill 其他节的接口
+### 9.3 Interfaces with Other Sections of This Skill
 
-- time center → `SKILL.md` §3 push/pull：Groove Essentials 说的是各声部相对脉冲的**系统性**位置，与 §3 "不同声部相对网格的系统性偏移"是同一件事；量级仍要写成毫秒。§3 的样本里贝司抢拍、吉他拖，Groove Essentials 的样本里打击乐靠前、贝司稍胖——方向可以不同，**各层不一样**才是共同点。
-- 分层 groove 不许 flam → `SKILL.md` §2.0：four-on-the-floor 类风格鼓组绝对量化有理，但别的声部仍可有自己的 time center。
-- 节奏摩擦 → `SKILL.md` §7.1 交织式：Groove Essentials 的"前半对齐、后半摩擦"就是逐小节的合/分表。
-- half-time → ARR-SPEC `groove.feel: halftime`：判据是 backbeat 落在第 3 拍。
+- Time centre → `SKILL.md` §3 push/pull: Groove Essentials describes the **systematic** position of each part relative to the pulse, which is the same thing as §3's "systematic offset of different parts relative to the grid"; the magnitude must still be written in milliseconds. In §3's sample the bass pushes ahead and the guitar pulls back; in the Groove Essentials sample the percussion is forward and the bass is slightly fat. The directions can differ; **what is common is that each layer is different**.
+- No flams in layered grooves → `SKILL.md` §2.0: for four-on-the-floor style drum kits, absolute quantisation is justified, but other parts may still have their own time centre.
+- Rhythmic friction → `SKILL.md` §7.1 interlocking: Groove Essentials' "aligned in the first half, rubbing in the second half" is exactly the bar-by-bar locked/split table.
+- Half-time → ARR-SPEC `groove.feel: halftime`: the criterion is that the backbeat falls on beat 3.

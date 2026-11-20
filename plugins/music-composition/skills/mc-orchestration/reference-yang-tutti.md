@@ -1,312 +1,318 @@
-# 管弦乐色彩的强化与全奏、音色对比变化与配器布局（杨立青下册第十五、十六章）
+# Reinforcing Orchestral Colour and Tutti; Timbral Contrast Changes and Scoring Layout (Yang Liqing, Vol. 2, Chapters 15–16)
 
-这个文件管「一段音响配好之后还能往上加什么」与「一整首曲子的音色在时间轴上怎么分配」，与 `reference.md` §2.3 弦乐排列、§2.4 木管排列、§2.5 铜管三节并列：那三节定横截面上谁和谁放在一起，这里定纵深上加什么强调与装饰，以及全曲尺度上音色何时变、全奏留到哪里用。
+This file covers two things: what can still be added once a passage of sound has been scored, and how the timbre of a whole piece is distributed along the time axis. It is paired with `reference.md` §2.3 (string arrangement), §2.4 (woodwind arrangement) and §2.5 (the three brass sections side by side). Those three sections decide which parts sit next to which in the cross-section; this file decides what emphasis and ornament to add in depth, and when timbre changes across the whole piece and where tutti should be held back.
 
-## 1. 强调与色彩性装饰
+## 1. Emphasis and Colour Ornamentation
 
-强调五法的定义与分类见 `SKILL.md` §3.9，这里补五法内部的判据，以及另一条主线：色彩性装饰。两者的分界是附着程度。强调是拿异色局部叠在骨架声部的某个点或面上，音高完全跟随；色彩性装饰声部与骨架只有相对松散的音高关联，因而有独立性（p0292）。完全附着、音高上不可分割的一般装饰性声部不在这里。
+The definitions and classification of the five emphasis methods are in `SKILL.md` §3.9. This section adds the criteria within the five methods, and a second main thread: colour ornamentation. The dividing line between the two is degree of attachment. Emphasis lays a contrasting colour locally over a point or surface of a skeleton part, and its pitch follows the skeleton exactly. A colour-ornamentation part has only a relatively loose pitch relationship with the skeleton and therefore some independence (p0292). General decorative parts that are fully attached and inseparable in pitch are not covered here.
 
-### 1.1 五法内部的细化
+### 1.1 Refinements Within the Five Methods
 
-- **节奏性强调的错位用法**：强调点的周期与节拍重音周期错开，造成逻辑重音与节拍重音不一致的失重感，增加节奏趣味，未给代价（p0277，例XV-2：最弱拍插入强奏打破节拍韵律）。
-- **力度性强调分两类**：客观（物理）响度的强调与主观（心理）紧张度的强调（p0282–0283）。这一条决定了强调点不必落在响度高点上。
-- **心理性强调的落点**：被强调点须在旋律或和声上有特殊意义。紧张度通常随上行增长、随下行缓和，顶音自然是心理力度高点，所以异色常叠在冠音或重要骨架音上（p0283，例XV-7）。
-- ★ **心理性强调可与响度反向**：顶音即使出现在渐弱到达的 ppp 上，仍可在该点叠入圆号一类音色，给它心理上的压强（p0284–0285，例XV-8：内声部半音上行到顶音时力度反降一级、同时圆号叠加）。
+- **Off-beat use of rhythmic emphasis**: the period of the emphasis points is offset from the period of the metric accents, so that logical accent and metric accent disagree. This produces a sense of weightlessness and adds rhythmic interest without a cost (p0277, example XV-2: a forte inserted on the weakest beat breaks the metric pulse).
+- **Dynamic emphasis comes in two kinds**: emphasis of objective (physical) loudness and emphasis of subjective (psychological) tension (p0282–0283). This is what allows an emphasized point not to fall on a loudness peak.
+- **Where psychological emphasis lands**: the emphasized point must carry special significance in the melody or harmony. Tension usually rises with an ascending line and eases with a descending one, so the highest note is naturally the psychological dynamic peak. Contrasting colour is therefore often laid over the top note or an important skeleton tone (p0283, example XV-7).
+- ★ **Psychological emphasis can run against loudness**: even when the top note falls on a ppp reached by a diminuendo, a horn-type timbre can still be layered onto it to give it psychological pressure (p0284–0285, example XV-8: an inner voice rises a semitone to the top note while the dynamic drops one level, and horns are added at the same time).
 
-### 1.2 音响动态的强调
+### 1.2 Emphasis of Sonic Dynamics
 
-定义见 `SKILL.md` §3.9。可操作的部分是把起振、稳态持续、衰减三段特性拆开来配（p0287）。
+The definition is in `SKILL.md` §3.9. What can be acted on is to split the three phases of a sound (attack, sustained state, decay) and score each one separately (p0287).
 
-- 特性对照：圆号一类起振不敏捷、持续良好、衰减缓慢；竖琴强拨起振快、瞬态峰值高、衰减偏短。两者结合可让长音和弦有清晰的爆发点（p0288，例XV-12）。
-- 稳态内部用力度对位做微波动：同一和弦的不同层次分开处理力度，一层恒定弱力度，另一层分时段各自渐强渐弱（p0289，例XV-13）。
-- 把强起振乐器分布在不同乐队分组（即不同舞台位置），可得音响位移的空间感（p0291）。
-- 人工残响：用余下的弦乐短暂重叠基本和弦的部分声部充当强起奏的残响。各残响声部要用不同奏法（抛弓与弓震音）、不同力度走向与切入点，力度可递减为 sf、f、mf、mp（p0291）。
+- Trait contrast: horn-type instruments attack sluggishly, sustain well and decay slowly; a harp struck with a plucked attack has a fast attack, a high transient peak and a fairly short decay. Combining the two gives a long chord a clear burst point (p0288, example XV-12).
+- Micro-fluctuation within the sustained state, through dynamic counterpoint: different layers of the same chord are given different dynamics. One layer holds a constant soft level while another swells and fades in its own time segments (p0289, example XV-13).
+- Distributing fast-attack instruments across different orchestral groups (that is, different stage positions) produces a sense of spatial displacement in the sound (p0291).
+- Artificial reverberation: a few strings briefly overlap some parts of the basic chord to serve as the afterglow of a strong attack. Each reverberating part should use a different technique (bow throws and bow tremolo), a different dynamic path and a different entry point. The dynamics can taper through sf, f, mf and mp (p0291).
 
-**编曲含义**：要响得干脆就改起振段（加拨奏或敲击），要余韵长就改衰减段（补弦乐残响层）。直接拉力度记号是这三者里最钝的一种。
+**Arranging implication**: for a crisper sound, change the attack phase (add plucking or percussive strikes); for a longer afterglow, change the decay phase (add a string reverberation layer). Directly pulling on dynamic markings is the bluntest of the three.
 
-### 1.3 色彩性装饰的三类
+### 1.3 Three Types of Colour Ornamentation
 
-三类写法，实践中常结合使用，以后两种为多（p0295）：
+There are three ways of writing. In practice they are often combined, and the latter two are more common (p0295):
 
-| 类 | 做法 | 归属 |
+| Type | Method | Belongs to |
 |---|---|---|
-| a 骨架声部的装饰性变体 | 与骨架完全叠合的加花版本 | 本节 |
-| b 骨架声部局部的色彩性强调 | 异色同度局部叠合 | 见 `SKILL.md` §3.9 |
-| c 个别骨架音的色彩性装饰 | 只装饰个别骨架音，加花音可与被装饰音有相当程度的音高偏离 | 本节 |
+| a. Decorative variant of a skeleton part | An ornamented version that coincides fully with the skeleton | This section |
+| b. Local colour emphasis on part of a skeleton part | Local overlap with a different colour at the same pitch | See `SKILL.md` §3.9 |
+| c. Colour ornamentation of individual skeleton tones | Only individual skeleton tones are ornamented; the embellishing notes may deviate considerably in pitch from the note they decorate | This section |
 
-配套三条（渲染、装饰之上再装饰、骨架音识别）：
+Three supporting rules (rendering, ornament on ornament, and identifying the skeleton):
 
-- 渲染：某种音色作为色彩涂层敷在整幅音响画面上，与骨架除个别音点（多为起讫点）吻合外无音高依附关系，但对总体色调影响很大（p0292–0293）。
-- 装饰之上再装饰：装饰线条自身的关键点（顶点、结束音）可再叠一种奏法或音色，每次手法可各不相同（p0294–0295，例XV-14）。
-- 骨架音的识别判据：音型化背景中哪一条算骨架，标准是该声部音响强度与音型形态的组合关系，其余声部才是强调或装饰（p0299–0300，例XV-17）。装饰与骨架的时间差见 `SKILL.md` §3.6。
+- Rendering: a timbre laid over the whole sound picture as a colour coat. Apart from a few points of coincidence (mostly the beginning and end points), it has no pitch dependence on the skeleton, yet it has a large influence on the overall tonal colour (p0292–0293).
+- Ornament on ornament: the key points of an ornamental line itself (its apex and its final note) can receive a further technique or timbre, and each such treatment can differ (p0294–0295, example XV-14).
+- Identifying the skeleton: in a figurated background, which line counts as the skeleton is judged by the combined relationship between that part's sonic intensity and the shape of its figuration. The remaining parts are then emphasis or ornament (p0299–0300, example XV-17). For the time offset between ornament and skeleton, see `SKILL.md` §3.6.
 
-### 1.4 附加共鸣与平行支声变体
+### 1.4 Added Resonance and Parallel Heterophonic Variants
 
-从严格同步到自由偏离的连续体，四档：
+There is a continuum from strict synchrony to free deviation. It has four grades:
 
-| 档 | 与骨架的关系 | 效果与代价 | 页 |
+| Grade | Relationship to the skeleton | Effect and cost | Page |
 |---|---|---|---|
-| 附加共鸣 | 强力度骨架的上方或下方加若干同时出现、弱力度演奏的平行声部，为丰富共鸣、增强某些分音或结合音 | 附加声部若与骨架频谱不吻合，就是一种强制性改造 | （p0301，例XV-19） |
-| 严格形态 | 按固定音程（如纯四度加增四度）多次叠置于骨架上下方，力度 pp，时值与骨架完全同步、始终同向 | 名副其实的同质性平行声部 | （p0302–0303，例XV-20） |
-| 平行支声变体 | 形态、方向、节奏组合、音响性质与骨架一致，音高只在起讫点或个别主要骨架音相合，过程中可相当自由 | 音区跨度与音密度与骨架不同时，形成若即若离的暧昧和声，色彩复杂黯淡，动荡感增加 | （p0303–0304，例XV-21） |
-| 多重变体的偏离 | 同一骨架附加不止一条变体，各变体在音高（微分音）、节奏划分（如 5:4:3）、线条结构（组成音数目、截段位置与长度）上彼此偏离 | 偏离越丰富，音响越鲜活生动 | （p0304，例XV-22） |
+| Added resonance | Above or below a strongly played skeleton, several parallel parts sound at the same time, played softly, to enrich the resonance and reinforce certain partials or combination tones | If the added parts do not match the spectrum of the skeleton, the result is a forced reshaping | (p0301, example XV-19) |
+| Strict figure | Stacked above and below the skeleton several times at a fixed interval (such as a perfect fourth plus an augmented fourth), at pp, with rhythm identical to the skeleton and always moving in the same direction | A genuinely homogeneous parallel part | (p0302–0303, example XV-20) |
+| Parallel heterophonic variant | Shape, direction, rhythmic grouping and sonic character match the skeleton; pitch coincides only at the start and end points or at a few main skeleton tones, and the course can be quite free | When the register span and note density differ from the skeleton, a loose, ambiguous harmony results; the colour becomes complex and dim, and the sense of unrest grows | (p0303–0304, example XV-21) |
+| Deviation of multiple variants | The same skeleton has more than one added variant, and the variants deviate from one another in pitch (microtones), rhythmic division (such as 5:4:3) and line structure (number of constituent notes, position and length of segments) | The richer the deviation, the more vivid and lively the sound | (p0304, example XV-22) |
 
-**复杂音响的拆解**：把「骨架加同质性平行支声变体」扩大，再结合强调与渲染，可构筑层次复杂的当代音响。分析与设计都按四级拆：骨架和弦、骨架的色彩性装饰、与骨架同构的装饰性经过句、经过句的同质性平行声部（可有多条）。层间可叠复杂节奏比值（3:2 或 4:3:2）增加层次感（p0307–0308，例XV-24）。
+**Decomposing complex sound**: expand "skeleton plus homogeneous parallel heterophonic variant", and combine it with emphasis and rendering, to build a layered, complex contemporary sound. Both analysis and design split it into four levels: skeleton chord, colour ornamentation of the skeleton, decorative passing figure structurally identical to the skeleton, and homogeneous parallel parts of the passing figure (there may be several). Between layers, complex rhythmic ratios (3:2 or 4:3:2) can be superimposed to add a sense of layering (p0307–0308, example XV-24).
 
-## 2. 力度：渐进、突变与力度对位
+## 2. Dynamics: Gradual, Abrupt and Dynamic Counterpoint
 
-### 2.1 渐进型
+### 2.1 Gradual Types
 
-渐强渐弱有三种实现方式：只改演奏力度；只增减乐器声部；两者同时增减（p0310）。后两种情况下，强度的增减常伴随音区与幅度的扩展或削减。
+A crescendo or diminuendo can be realised in three ways: changing only the playing dynamic; adding or removing instrumental parts only; or doing both at once (p0310). In the last two cases the rise or fall in intensity is often accompanied by widening or narrowing of register and amplitude.
 
-各组的力度能力不等（p0310）：弦乐组力度变化的幅度明显大于木管组；铜管与打击乐的力度强化能力强于弦乐组。由此得出投入顺序：大幅渐强时把铜管、打击乐当重武器留到最后一刻投入，渐弱时最早撤出它们。
+The groups differ in dynamic capacity (p0310). The dynamic change of the string group is clearly larger than that of the woodwinds. Brass and percussion are stronger than the strings at boosting dynamics. From this follows the order of entry: in a large crescendo, hold brass and percussion back as heavy weapons and bring them in at the last moment; in a diminuendo, withdraw them first.
 
-| 走向 | 做法 | 数字与条件 | 页 |
+| Direction | Method | Figures and conditions | Page |
 |---|---|---|---|
-| 分散进行（渐强伴随音区扩展） | 不断强化两个外声部造成音区扩张，同时及时填补内声部，避免中音区出现空隙（圆号与第二小号常任填充） | 例XV-25：内声部两次加低八度重复填补中音区 | （p0310–0311） |
-| 集中进行（渐弱伴随音区收缩） | 乐器按各自重要程度依次撤出 | ff 到 p 的渐弱中，音区可从逾六个八度缩到一个半八度左右；两个外声部的幅度分别从四个、两个音组各减到一个音组 | （p0312–0314，例XV-26） |
+| Dispersed process (crescendo with register expansion) | Keep strengthening the two outer parts to widen the register, and promptly fill the inner parts so that the middle register has no gap (horns and the second trumpet are the usual fillers) | Example XV-25: an inner part is doubled an octave lower twice to fill the middle register | (p0310–0311) |
+| Concentrated process (diminuendo with register contraction) | Instruments withdraw one by one in order of their importance | In a diminuendo from ff to p, the register can shrink from more than six octaves to about one and a half octaves. The amplitude of the two outer parts shrinks from four and two octave-groups respectively to one octave-group each | (p0312–0314, example XV-26) |
 
-两条反常规，用来说明惯例并非必须：
+Two counter-convention cases show that the conventions are not compulsory:
 
-- 渐弱不靠减乐器：保留乐器数量，利用中音区不断扩展的空隙让密度稀释，做出在广阔空间中飘散消逝的效果。此时配合渐弱的是音区向两极分散，与通常的集中收缩相反（p0314–0315，例XV-27）。
-- 渐强不靠加乐器：音区大幅收缩（四个多八度压到一个小三度）也能配合大幅渐强，且不增加乐器数目。驱动力来自音质：小提琴下降到发音最浓烈的 G 弦，大提琴与低音提琴上升到发音紧张度最高的最高弦，全部声部触弦点由 sul tasto 经 ord. 渐变到 sul pont.（p0315）。★ 乐器音响的质量可以取代乐器数量成为大幅渐强的驱动手段。
+- A diminuendo without removing instruments: keep the instrument count, and let the widening gaps in the middle register thin out the density, creating an effect of dispersing and fading in a broad space. Here the register splays toward the two extremes to accompany the diminuendo, the opposite of the usual concentration (p0314–0315, example XV-27).
+- A crescendo without adding instruments: a large contraction of register (more than four octaves compressed into a minor third) can still accompany a large crescendo, without adding instruments. The driving force is timbre. The violins descend to the G string, where the tone is richest; the cellos and double basses ascend to their highest strings, where the sense of tension is greatest. All the bowing points move from sul tasto through ord. to sul pont. (p0315). ★ The quality of instrumental sound can replace the number of instruments as the means of driving a large crescendo.
 
-### 2.2 突变型
+### 2.2 Abrupt Types
 
-突强（sf、sfz）与突弱（sub. p）通常只能靠乐器数量的增减、或数量与力度同时变化才能得到理想效果（p0315）。用处集中在重要结构点、语气与色彩转换的关键部位，也用于突出节奏效果。
-反面教材：突强音型所在的伴奏声部若自始至终只由弦乐贯彻、不额外加入乐器，既得不到足够响度和鲜明对比，还会让弦乐产生痉挛般的抽搐感（p0315，例XV-2）。
+A sudden forte (sf, sfz) or sudden piano (sub. p) can usually be made effective only by changing the number of instruments, or by changing number and dynamic together (p0315). These are used at important structural points, and at the key places where mood and colour turn. They are also used to highlight rhythmic effects.
 
-### 2.3 力度对位
+Negative example: if the accompaniment part that carries a sudden-forte figure is played by strings alone throughout, with no extra instruments added, it gets neither enough loudness nor a sharp contrast, and it gives the strings a convulsive, twitching quality (p0315, example XV-2).
 
-定义：在织体的不同层次中按各因素的主次、表现要求与平衡需要采用不同的演奏力度，各层各有自己的力度发展逻辑，形成广义的复调对位效果，目的是增强层次感、使色彩变化细腻（p0318）。
+### 2.3 Dynamic Counterpoint
 
-- 用在持续音束内部：按音高分组（如白键与黑键对应的频段）分别渐强推出或渐弱淡出，可在同一音束上交替呈现不同的和声、乐器与音区色彩（p0325）。这一路带明显的电子音乐思维。
-- 音色资源受限时：只用单一乐器音色，仅靠力度调节在很窄的范围（pp 到 mf）内也能做出色调变化；同一素材以多个力度层次并存（恒定、渐隐、渐强三层叠置）可让简单乐句变得有趣（p0325–0326，例XV-33）。
-- 评价保留：表现主义一路用夸张甚至神经质的力度对比造成突兀色调与梦魇性格（p0318–0322，例XV-29）；序列主义要求相邻单音间也力度对位，甚至在一个八分音符上奏出 fff 到 ppp，「这是再高明的演奏家也难以真正做到的」（p0322–0323，例XV-31）。
+Definition: at different layers of a texture, different playing dynamics are used according to the relative priority of each factor, the expressive demands, and the needs of balance. Each layer has its own dynamic logic, which forms a broad polyphonic counterpoint effect. The aim is to strengthen layering and make colour changes fine-grained (p0318).
 
-来源对分节的记述有出入：一处把力度对位列为第十五章第三节（p0318 起），另一处把「不同类型力度变化的处理」记为第三节（p0309–0315）。两说并排，对取用没有影响。
+- Within a sustained-tone cluster: by pitch groups (for example, the frequency bands that correspond to white keys and black keys), one group swells in while another fades out, so that different harmonic, instrumental and register colours alternate on the same cluster (p0325). This strand shows clear electronic-music thinking.
+- When timbral resources are limited: with a single instrument's timbre only, colour variation can still be made within a very narrow dynamic range (pp to mf). The same material can be presented in several dynamic layers at once (constant, fading and swelling layers stacked), which makes a simple phrase interesting (p0325–0326, example XV-33).
+- Reservations: expressionism uses exaggerated and even neurotic dynamic contrasts to make jarring colour and a nightmarish character (p0318–0322, example XV-29). Serialism requires dynamic counterpoint between adjacent single notes, even playing fff to ppp within one eighth note. This is something "that even the most accomplished performer can hardly truly achieve" (p0322–0323, example XV-31).
 
-## 3. 呼应、回声与转接
+The sources differ on the section numbering. One places dynamic counterpoint as the third section of Chapter 15 (from p0318). The other records "handling of different types of dynamic change" as the third section (p0309–0315). Both are set side by side here; the choice between them does not affect how the material is used.
 
-总定义与横向四法见 `SKILL.md` §3.6。这里是判据细化与当代做法清单。
+## 3. Response, Echo and Transition
 
-### 3.1 呼应与回声的分界
+The overall definition and the four horizontal methods are in `SKILL.md` §3.6. This section gives the refined criteria and a checklist of contemporary practice.
 
-| 项 | 呼应 | 回声 | 页 |
+### 3.1 The Boundary Between Response and Echo
+
+| Item | Response | Echo | Page |
 |---|---|---|---|
-| 力度关系 | 主客体在力度与奏法上大体相当，有区别差距也不宜过大 | 先强后弱且差别很大，以致形成空间感 | （p0327、p0329） |
-| 音色配置 | 对比音色 | 同类音色，常有变异 | （p0330，例XIII-40、例XV-36） |
-| 最小成立条件 | 对比维度可以只落在音色一项，力度、奏法、音区、幅度全一致也能成立 | 见上 | （p0327，例XV-34） |
+| Dynamic relation | Principal and answering voice are broadly equal in dynamic and playing technique; differences should not be too large | The first is strong and the second much weaker, enough to create a sense of space | (p0327, p0329) |
+| Timbre setting | Contrasting timbres | The same family of timbres, often with variation | (p0330, examples XIII-40, XV-36) |
+| Minimum condition | The contrast can rest on timbre alone; a response still holds even if dynamic, technique, register and amplitude are all identical | See above | (p0327, example XV-34) |
 
-★ 回声用同类音色这一条与直觉相反：回声要的是同一个声音在远处，换了音色就变成呼应。
+★ The requirement that an echo use the same family of timbres runs against intuition. An echo means the same sound heard at a distance. Change the timbre and it becomes a response.
 
-### 3.2 人工残响的三条反直觉
+### 3.2 Three Counter-Intuitive Points About Artificial Reverberation
 
-- 简易做法：用较弱力度的长音重叠另一乐器强奏动机乐句的尾音，往往伴随 sfp 一类突变与色彩变异（p0330）。
-- ★ 承担残响的乐器有时反而要以很强的力度吹奏，目的是掩盖两种音色衔接处的断痕，形成音色与力度的平滑过渡（p0330，例XV-37：四支圆号 fff 的尾音由英国管长音重叠并渐弱延续近三小节）。
-- 回声声部提前叠入而非等主声部结束才进入，并随后延留数拍，可使强到弱的突变显得自然（p0331，例XV-38：加弱音器短号提前叠入并延留三拍半）。
+- The simple method: a softer long note overlaps the tail of a motivic phrase played loudly by another instrument. This often comes with an abrupt change such as sfp and some colour variation (p0330).
+- ★ The instrument carrying the reverberation sometimes has to play very loudly. The aim is to hide the seam where two timbres meet, so that timbre and dynamic pass over smoothly (p0330, example XV-37: a long note on the oboe overlaps the fff tail of four horns and then diminuendos over nearly three bars).
+- An echo part that enters before the main part has ended, instead of waiting for it to finish, and then sustains for several beats, can make a strong-to-weak abrupt change sound natural (p0331, example XV-38: a muted short trumpet enters early and sustains for three and a half beats).
 
-### 3.3 同质性转接
+### 3.3 Homogeneous Transition
 
-三种目的，选定目的就决定了配置的松紧（p0335）：
+There are three purposes. Choosing the purpose decides how tight the scoring must be (p0335):
 
-| 目的 | 配置要求 |
+| Purpose | Scoring requirement |
 |---|---|
-| 减少演奏技术或管乐气息上的负担 | 相接各环节用音色相近、且音区与力度与动态特性相对等的乐器 |
-| 解决乐句音区跨度超出单件乐器音域、或跨度影响音质均匀 | 同上；另需逐段核查每件乐器在对应音区能否满足力度与音质要求 |
-| 增加音响上的色彩变化 | 允许各环节间形成差异甚至对比，即瓦西连科所说的对比转接，变化幅度越大对比性越强 |
+| Reduce the technical or breath burden on the wind players | The successive segments use instruments of close timbre, whose register, dynamic and dynamic characteristics are comparable |
+| Solve a phrase whose register span exceeds one instrument's range, or whose span would affect the evenness of tone | As above; in addition, check segment by segment whether each instrument can meet the dynamic and tone requirements in its register |
+| Increase timbral variety | Allow differences between segments, even contrasts. This is what Vasilenko called contrasting transition: the greater the change, the stronger the contrast |
 
-划分点的规则：各环节的划分应与线条整体结构隐含的分界点吻合，否则削弱线条本身的音调与节奏特点（p0335）。逐段换配置见例XV-41：按音区分三段更换木管组合，并保留单簧管一件贯穿始终、以弦乐拨奏强调木管（p0336）。接口两式（交叠式与断口式）见 `SKILL.md` §3.6，对照例是例XV-42 与例XV-43。
+Rule for the dividing points: the division between segments should coincide with the boundaries implied by the overall structure of the line. Otherwise the line loses its own tonal and rhythmic character (p0335). For a segment-by-segment change of scoring, see example XV-41: the woodwind combination is changed in three register bands, and a single clarinet is kept throughout, with pizzicato strings reinforcing the woodwinds (p0336). The two joint types (overlapping and broken joint) are in `SKILL.md` §3.6; the contrasting examples are XV-42 and XV-43.
 
-掩盖接缝的三种手法（p0339–0340，例XV-44、例XV-45）：
+Three methods for hiding the seam (p0339–0340, examples XV-44, XV-45):
 
-1. 相接的两件乐器在交接处重叠两个音，不严丝合缝地断开。
-2. 让转接音型的划分节拍与线条自身的节拍重音错位（线条是 3/4 的特点，转接按 2/4 划分）。
-3. 用不参与转接的固定音色（钟琴、钢片琴、钢琴）持续叠加，加上其余声部的颤音或刮奏遮住接口。
+1. The two instruments that join overlap on two notes at the junction, rather than cutting off exactly at one point.
+2. The beat division of the transition figure is offset from the metric accents of the line itself. (The line is in 3/4, but the transition is divided in 2/4.)
+3. A fixed timbre that takes no part in the transfer (glockenspiel, steel plates, piano) is sustained on top, and trills or scraping in the other parts cover the joint.
 
-★ 换手时机是一对互斥选择（p0342，例XV-45）：要浑然一体，就让音型化织体的各声部在不同位置上轮流转递，不在同一拍点同时换手；要强调某一拍在语气转换与力度上的意义，就让木管与弦乐在同一拍点上同时转接。
+★ The moment of exchange is a pair of mutually exclusive options (p0342, example XV-45). For a seamless whole, let the parts of a figurated texture hand over in turn at different positions, not all on the same beat. To stress the significance of one beat for a change of mood and dynamics, let the woodwinds and strings change over on that same beat.
 
-### 3.4 异质性转接的当代做法
+### 3.4 Heterogeneous Transition: Current Practice
 
-定义见 `SKILL.md` §3.6。以下按接缝可见度从高到低排：
+The definition is in `SKILL.md` §3.6. The methods are listed below from the most visible seam to the least:
 
-| 做法 | 要点 | 页与谱例 |
+| Method | Key points | Page and examples |
 |---|---|---|
-| 断口对比 | 接口不交叠，加强相邻片段的音色与音区对比。即使织体性质与力度水平不变，差异仍可相当鲜明 | （p0342，例XV-46） |
-| 鱼咬尾 | 两个色彩截然不同的段落若共有一个重要骨架音，用某件乐器以强奏长音贯穿其间，把两团音响粘连 | （p0345，例XV-49） |
-| 分阶段化合 | 大跨度、多组音色间的交叠式转接拆成多个中间阶段依次完成：三组混合音束、纯弦乐、弦乐加打击乐、木管弱力度潜入、木管渐强、纯木管音束 | （p0344–0345，例XV-48） |
-| 模糊化 | 背景长音或震音色块交替时不给一刀切的分界：个别声部提前以先现方式进入下一状态，或原色块个别声部短暂延留 | （p0348–0349，例XV-50） |
-| 推子技术 | 各色块依次按渐入、渐显、淡出（p 到 f 到 p）处理。每个以弱力度起始的因素都在前一个因素渐强到高点时悄悄叠入，并在后者渐弱的过程中自己渐强 | （p0350–0351，例XV-52） |
-| 音束内部换层 | 音束不必真正终止，靠内部分层撤除与分层进入换色调：高音弦乐由高及低逐一撤除后以弱力度重新进入，铜管由低及高削减，中低音弦乐稍晚才减。第二个音束的各声部可用参差不齐的力度陆续进入，甚至不必达到完型点 | （p0353–0354，例XV-53） |
-| 支声式合成 | 把单音线条的每个音当成一个由多种音色成分与奏法合成的音响（弹吐、阻塞音、活塞震音、钢琴特强音、齿震音、靠马与震音滑奏），各成分起讫互不同步，有的滞后进入，有的提前淡出，有的作为人工残响延留到下一个音响 | （p0355，例XV-54） |
-| 空间传递 | 把若干独奏乐器编成几个相对独立的小组（如三个以单管木管为核心的独奏组），分置于乐队不同方位，让动机与应答按预设路线在各组间循环传递 | （p0356–0357，例XV-55、图XV-13） |
+| Broken-joint contrast | The joint does not overlap; the timbre and register contrast between adjacent passages is heightened. Even if the texture type and dynamic level stay the same, the difference can still be quite striking | (p0342, example XV-46) |
+| Fish-biting-tail | If two passages of completely different colour share an important skeleton tone, one instrument holds a strong long note through the junction, gluing the two masses of sound together | (p0345, example XV-49) |
+| Staged fusion | An interlocking transition across a large span and several timbre groups is split into several intermediate stages done in turn: three mixed clusters, pure strings, strings plus percussion, a soft entry of woodwinds, a woodwind crescendo, and finally a pure woodwind cluster | (p0344–0345, example XV-48) |
+| Blurring | When alternating background sustained notes or tremolo blocks, do not cut sharply at the boundary. Individual parts enter the next state early, or individual parts of the earlier block sustain briefly | (p0348–0349, example XV-50) |
+| Fader technique | Each colour block is treated in turn as fade-in, emergence and fade-out (p to f to p). Each factor that starts softly is quietly brought in as the previous factor reaches its crescendo peak, and it swells itself as the latter diminuendos | (p0350–0351, example XV-52) |
+| Changing layers within a cluster | The cluster need not really end. The colour shifts through layered withdrawal and entry inside it: the upper strings withdraw one by one from high to low and re-enter softly; the brass reduce from low to high; the middle and lower strings reduce a little later. The parts of the second cluster can enter at uneven dynamics, and need not even reach a point of completion | (p0353–0354, example XV-53) |
+| Heterophonic synthesis | Treat each note of a single-line melody as a sound compound made of several timbral components and techniques (articulated plucking, blocked tones, valve trills, piano fortissimo, teeth-like trills, sul ponticello with tremolo glissando). The components start and end out of step: some enter late, some fade early, and some are held over as artificial reverberation into the next sound | (p0355, example XV-54) |
+| Spatial relay | Form several relatively independent small groups of soloists (for example, three groups each built around a single woodwind), placed in different directions of the orchestra, so that motives and answers circulate among the groups along a preset route | (p0356–0357, examples XV-55, figure XV-13) |
 
-## 4. 全奏
+## 4. Tutti
 
-### 4.1 分类与地位
+### 4.1 Classification and Status
 
-规模两分：乐器组全奏与乐队全奏。完整性两分：完全的全奏与不完全的全奏（省略少量乐器但不影响音响基本性质）（p0358）。
-评价保留：以音响宏大辉煌响亮为主要目标的传统全奏写法，在近现代音乐中已不再具有它在古典浪漫时期那样重要的意义（p0358）。
+By scale, tutti divides into instrument-group tutti and full-orchestra tutti. By completeness, it divides into complete tutti and incomplete tutti (a few instruments are omitted, without changing the basic character of the sound) (p0358).
 
-### 4.2 响度实测六条
+Reservation: the traditional tutti style, whose main goal is a grand, brilliant and loud sonority, no longer has in modern and contemporary music the importance it had in the Classical and Romantic periods (p0358).
 
-声学测试（图XV-14、图XV-15）给出六条结论（p0360），都是带条件的数字，可直接用于平衡判断：
+### 4.2 Six Loudness Findings from Acoustic Tests
 
-| 结论 | 数字与条件 |
+Acoustic tests (figures XV-14 and XV-15) give six conclusions (p0360). All of them are conditional figures that can be used directly in judging balance:
+
+| Conclusion | Figures and conditions |
 |---|---|
-| 1 | 中音区的同度齐奏与多个八度齐奏，响度基本相等 |
-| 2 | 和弦型织体全奏的响度略强于齐奏型，差距仅 1 到 2 个分贝 |
-| 3 | 和弦型织体中密集排列的响度一般略强于开放排列；弦乐组例外，在宽广音区中开放排列反而强于密集 |
-| 4 | 三组之间铜管最强、弦乐次之、木管最弱。铜管与另两组的差距可达 10 到 16 个分贝；弦乐与木管的差距视织体与音区在 2 到 6 个分贝之间 |
-| 5 | 乐队全奏的响度基本由铜管决定：铜管组单独全奏与整个乐队全奏的力度差约 1 个分贝 |
-| 6 | 大鼓、定音鼓一类重型打击乐投入，约可把全奏响度提升 1 到 4 个分贝，甚至更多 |
+| 1 | Unison in the middle register and unison across several octaves have essentially equal loudness |
+| 2 | A chordal-texture tutti is slightly louder than a unison-type tutti, by only 1 to 2 decibels |
+| 3 | In chordal textures, closely packed voicing is generally a little louder than open voicing. Strings are the exception: in a wide register, open voicing is actually louder than close voicing |
+| 4 | Among the three groups, brass is loudest, strings are next and woodwinds are quietest. The brass lead over the other two groups can reach 10 to 16 decibels. The gap between strings and woodwinds lies between 2 and 6 decibels, depending on texture and register |
+| 5 | Full-orchestra loudness is determined essentially by the brass. The dynamic difference between the brass group alone and the whole orchestra in tutti is about 1 decibel |
+| 6 | Bringing in heavy percussion such as the bass drum and timpani can raise the loudness of a tutti by roughly 1 to 4 decibels, or more |
 
-结论 3 与 `reference.md` §2.3.6 的排列色调表合看：那里说同样力度下开放比密集稍低，这里给出弦乐在宽音区的例外。结论 5 是全奏配器的第一判据，所以全奏中铜管的音区选择与声部排列须特别审慎（p0379）。
+Read conclusion 3 together with the colour table in `reference.md` §2.3.6. That section says that at the same dynamic, open voicing is slightly less bright than close voicing. Here the exception for strings in a wide register is given. Conclusion 5 is the first criterion for scoring a tutti, so in a tutti the choice of brass register and the arrangement of its parts must be especially careful (p0379).
 
-### 4.3 四类加两类
+### 4.3 Four Types, Plus Two
 
-埃尔普夫按织体分四类，前两类属同质性织体，后两类属异质性；当代另有多因素复合型；按表现意图则两分为力度性与色彩性全奏（p0358、p0372）：
+Erpf divides tutti by texture into four types. The first two are homogeneous textures and the last two are heterogeneous. Contemporary practice adds a multi-factor composite type. By expressive intent, tutti divides into two kinds: dynamic-oriented and colour-oriented (p0358, p0372):
 
-| 类 | 性质与代价 | 页与谱例 |
+| Type | Nature and cost | Page and examples |
 |---|---|---|
-| 齐奏型 | 响度可以很强，但缺和声支持，饱和度不足 | （p0361，例XV-56） |
-| 和弦动力型 | 纯由和弦构成、无明显主题意义。★ 所有类型中最具威力，因结构单纯、焦距集中，排列得当时和弦音间形成良好共鸣。多见于古典浪漫作品的高潮与结束处 | （p0362，例XIV-30、例XV-57） |
-| 复调型 | 充满内在紧张度与动力，多用于展开、过渡、推向高潮。代价是「受制于力量的分解，影响到洪亮度和力度的极大展现」；若意图在力度与音势，其后往往还需接一个主调性质的全奏，听众才有高潮的满足 | （p0363–0364，例XV-58） |
-| 主题型 | 合唱式分部陈述（接近同质性），或旋律加伴奏的异质性写法，更复杂时兼含对比线条、插句、强调与装饰。古典浪漫时期最常见，多用于主题重复、高潮、再现与结尾 | （p0367） |
-| 多因素复合型 | 与传统构成原则常常完全相悖，古典全奏的力度幅度展现在此变成乐队音响多样化的展示 | （p0372–0374，例XV-63） |
-| 色彩性全奏 | 不着眼于力度与音势，力图通过特殊配器达到特定音色效果 | （p0374） |
+| Unison type | Loudness can be very strong, but it lacks harmonic support, so saturation is insufficient | (p0361, example XV-56) |
+| Chordal-dynamic type | Made purely of chords, with no clear thematic meaning. ★ Of all types it is the most powerful: the structure is simple and the focus is concentrated, and when the chord tones are well arranged they resonate together. Common at the climaxes and endings of Classical and Romantic works | (p0362, examples XIV-30 and XV-57) |
+| Polyphonic type | Full of internal tension and drive, used mostly for development, transition and building toward a climax. The cost is that it is "constrained by the decomposition of force, which affects the full display of loudness and dynamic". If the intent is dynamic force and power, a homophonic tutti usually has to follow, so that listeners feel the satisfaction of a climax | (p0363–0364, example XV-58) |
+| Thematic type | Choral-style sectional statement (close to homogeneous), or a melody with accompaniment (heterogeneous). When more complex, it also contains contrasting lines, interpolated phrases, emphasis and ornament. The most common type in the Classical and Romantic periods, used for theme repetition, climaxes, recapitulations and endings | (p0367) |
+| Multi-factor composite type | Often runs completely against traditional principles of construction. The dynamic breadth of Classical tutti becomes here a showcase of the diversity of orchestral sound | (p0372–0374, example XV-63) |
+| Colour-oriented tutti | Not aimed at dynamics or sonic force, but seeks a particular tonal effect through special orchestration | (p0374) |
 
-三类的具体做法：
+Concrete methods for the three types:
 
-- 主题型：目标若是展示威力，则织体层次愈分明、节奏愈划一、和声结构愈单纯，效果愈强烈（p0367）。和声复杂导致共鸣不足时，可用分部小提琴在极高音区重复旋律线强化泛音、增加亮度（p0368，例XV-60）。
-- 多因素复合型：点描化织体加力度对位，各声部在音区、色彩、奏法上鲜明对比，再配复杂节奏组合，使全奏完全不具传统的合力；高潮瞬间甚至可以把钢琴与部分打击乐撤出，留到高潮之后再用（p0373–0374）。代价是放弃合力式的响度与饱和感。
-- 色彩性：全弦乐（除低音提琴外）加独奏铜管上弱音器，可在 f 的全奏里同时得到强烈而阴暗压抑的色调，是有意的不完全全奏（p0374–0375，例XV-64）。全曲皆由持续长音构成时，全奏不过是区别于其他组合方式的一种色彩（p0376–0378，例XV-65）。
+- Thematic type: if the aim is to show power, the clearer the texture layers, the more uniform the rhythm and the simpler the harmonic structure, the stronger the effect (p0367). When harmonic complexity leaves the resonance weak, sectional violins can repeat the melodic line in the very high register to reinforce the overtones and add brightness (p0368, example XV-60).
+- Composite type: a pointillistic texture with dynamic counterpoint, parts sharply contrasted in register, colour and technique, and complex rhythmic groupings, so that the tutti no longer has traditional cumulative force. At the very moment of climax, piano and some percussion may even be withdrawn and held back for use after the climax (p0373–0374). The cost is giving up the cumulative loudness and saturation.
+- Colour-oriented: all strings (except double basses) with soloist brass fitted with straight mutes can produce, at f in a tutti, a strong, dark and oppressive tone at the same time. This is a deliberately incomplete tutti (p0374–0375, example XV-64). When a whole piece is built from sustained notes, tutti is merely one colour among the other ways of combining (p0376–0378, example XV-65).
 
-### 4.4 全奏织体的三要素与共鸣
+### 4.4 The Three Elements of Tutti Texture, and Resonance
 
-全奏织体可拆成合唱式主题、音型化因素、低音线条三个要素分别配置（p0370）。示范配置：铜管合唱主题在中音到中高音区，低音大管与大号与低音提琴给浓厚的低音支持（不嘹亮但威严），木管与弦乐的音型化因素由低及高交替转接。
-★ 和声层的留空判据：和声因素若只出现在某一组（如铜管组）且集中于中音区，与低音线条及最高旋律声部之间留足空间，就不致影响整体共鸣（p0372，例XV-62）。
+A tutti texture can be split into three elements, a choral theme, figurated factors and a bass line, and each can be scored separately (p0370). A model setup: the brass choral theme in the middle to upper-middle register; the bassoon, contrabassoon, tuba and double basses give thick bass support (not loud, but dignified); and the figurated woodwind and string elements alternate in transfer from low to high.
 
-### 4.5 音域与音区总纲
+★ The criterion for leaving space in the harmonic layer: if the harmonic elements appear in only one group (for example the brass) and cluster in the middle register, leaving enough space between them, the bass line and the highest melodic part, the overall resonance will not be impaired (p0372, example XV-62).
 
-对全部全奏类型都适用的横切规则（p0379）：
+### 4.5 Master Rules for Range and Register
 
-| 目标 | 做法 |
+These cross-cutting rules apply to all tutti types (p0379):
+
+| Goal | Method |
 |---|---|
-| 坚实丰满 | 低声部需至少八度的有力支持；中音区必须加强，通常用密集排列且一般不可有省略音，必要时用声部重叠强化 |
-| 更辉煌 | 适当提高各声部的音区位置，或用适量弦乐或木管在上方（通常八度）加强中音区与中高音区声部的泛音 |
-| 更紧张 | 让若干主要声部处在发音较紧张的音区，可以是高音与极高音区，也可以是晦暗阴沉的低音区；同时可用增紧张度的奏法（弦乐低弦高把位、铜管阻塞音与闭塞音） |
+| Solid and full | The low parts need forceful support of at least an octave. The middle register must be reinforced, usually with close voicing and generally with no omitted notes, using part doubling where necessary |
+| More brilliant | Raise the register of each part somewhat, or add a moderate amount of strings or woodwinds an octave above, to reinforce the overtones of the middle and upper-middle register parts |
+| More tense | Place several main parts in registers that sound tense, either the high and very high registers or the dark, gloomy low register. Also use techniques that increase tension (strings playing on the low strings in high positions; brass with blocked and closed tones) |
 
-配套对照：同等力度下，各声部密集聚集在乐队中音区与均匀分布在宽广音域中，实际响度大体相等，但前者听觉印象更饱满充实，后者亮度略胜（p0379，图XV-15 的 02 与 03A）。
-★ 对一条流行通则的保留：有理论家主张「全奏中各乐器声部应尽可能置于它们发音最佳的音区」，但若所有全奏都照此处理，音响难免千篇一律（p0379）。与 `SKILL.md` §6 合看，最佳音区是默认值，并非目标本身。
+Companion comparison: at the same dynamic, parts gathered in the middle register of the orchestra and parts spread evenly across a wide range have roughly equal actual loudness. The former sounds fuller and more substantial, while the latter is slightly brighter (p0379, figure XV-15, items 02 and 03A).
 
-音色组合三原则（p0378）：分层（按功能分组，以纯音色为特色）、并置（按音区高低把各因素交给对应乐器组，形成多层次混合音色）、混用（两种层次并存于同一全奏内）。效果差异：分层通常色彩较鲜明，并置或混用可能更坚实饱满（p0379）。纯混选择本身见 `SKILL.md` §2。另一处把铜管组与其他组的和声结合列为交织式、分层式、并置式、混合式四种（p0272），与 `SKILL.md` §3.8 的三式并排，取用哪一套都可。
+★ A reservation about a popular general rule. Some theorists hold that "in a tutti, each instrument's part should be placed as far as possible in the register where it sounds best". But if every tutti is treated this way, the sound will inevitably become uniform (p0379). Read together with `SKILL.md` §6: the best register is a default, not the goal in itself.
 
-### 4.6 全奏是要留着用的资源
+Three principles of timbre combination (p0378): layering (group by function, with pure timbre as the feature); juxtaposition (assign each element by register to the matching instrument group, forming a multi-layered mixed timbre); and mixing (two kinds of layering coexist within the same tutti). The effect differs: layering usually gives a more distinct colour, while juxtaposition or mixing may give a firmer, fuller sound (p0379). For the choice between pure and mixed timbre itself, see `SKILL.md` §2. Another passage lists the harmonic combination of the brass group with the other groups as four types, interlaced, layered, juxtaposed and mixed (p0272). This sits alongside the three styles in `SKILL.md` §3.8, and either set may be used.
 
-★ 全奏可以分级，不必当成开关（p0479–0480）。由弱到满：不完全的全奏（规模已浓重，但刻意保留长号、大号不用，打击乐全程不投入）、无打击乐的全奏、含打击乐但不用短笛的全奏、完全全奏。一部作品中先后几次全奏应各具特色，不应重复同一种配置。
+### 4.6 Tutti as a Resource to Hold Back
 
-- 渐进式兑现：先加入含短笛的木管组（同时撤出铜管与打击乐），再逐步加铜管，直到总高潮的关键瞬间才让打击乐全部投入。
-- 临时降亮度：全奏进行中若要降低色彩亮度，可把大管以外的全部木管撤出（p0479）。用在对位织体推进、情绪趋紧而尚未到总高潮处。
-- 框架相似而细节有别：中间各发展段都用「先铜管导入、再全奏」，但每次铜管导入的乐器组合要换（一次圆号加小号，一次小号加大号）（p0480）。
-- 钢琴与打击乐节制使用：平时少用，只在少数阶段启用，就能把两个布局相似的段落区分开；滥用则失去区分力（p0480）。
-- 纯混比例侧重在段落之间做出区别，本身就能促进对比与分段，不必只靠编制或音区变化（p0480）。
-- 织体性格决定换色疏密：复调线条性织体多、气息宽广悠长的段落宜强调大块色彩对比，少用细腻色差过渡与频繁的音色节奏变化（p0480）。
+★ Tutti can be graded and need not be treated as an on/off switch (p0479–0480). From weakest to fullest: an incomplete tutti (already substantial, but with trombone and tuba deliberately held back and percussion not used throughout); a tutti without percussion; a tutti with percussion but without piccolo; and a complete tutti. Several tuttis in one work should each have their own character, and should not repeat the same scoring.
 
-## 5. 音色的节奏
+- Progressive payoff: first add the woodwind group that includes piccolo (withdrawing the brass and percussion at the same time), then add the brass gradually, and bring the percussion in fully only at the decisive moment of the overall climax (p0479–0480).
+- Temporary lowering of brightness: if the colour brightness has to drop during a tutti, all woodwinds except the bassoon can be withdrawn (p0479). This is used where a contrapuntal texture is advancing and the mood is tightening but the total climax has not yet arrived.
+- Similar frame, different detail: the middle development sections each use "brass introduction, then tutti", but the brass combination changes each time (one horn plus trumpet, the next trumpet plus trombone) (p0480).
+- Sparing use of piano and percussion: use them rarely, only in a few stages. This is enough to tell apart two passages with similar layouts. Overuse removes the power to distinguish (p0480).
+- Mixed-timbre proportion as a means of differentiation: the proportion of pure to mixed timbre differentiates passages on its own. It promotes contrast and sectioning without relying only on changes of lineup or register (p0480).
+- Texture character sets how densely colours change: passages with polyphonic, linear textures and a broad, long-breathed quality suit large blocks of colour contrast, with fewer fine colour gradations and fewer rapid changes of timbre (p0480).
 
-### 5.1 概念与基本判据
+## 5. The Rhythm of Timbre
 
-音色的节奏（timbre rhythm）指因音色变化的频度而形成的色彩韵律，概念借自辟斯顿的和声节奏（p0381）。
+### 5.1 Concept and Basic Criteria
 
-- 它受旋律与和声结构形态影响，但多数情况下与后者时分时合、并不完全同步，且常比旋律与和声的节奏略宽舒（p0381、p0383，图XVI-1）。
-- 两端的代价都明说：与音乐性质不符的过缓音色节奏令人沉闷单调，过于活跃则给人杂乱无章的印象（p0383）。
-- 态度保留：获得色彩对比变化的方法无穷无尽，不可能定出固定周期率来规定何时换音色，只能靠聆听与写作获得分寸感（p0381）。风格烙印主要通过变换频度、组合方式、对比方式三方面反映（p0383）。
+Timbre rhythm (timbre rhythm) is the colour rhythm that arises from how often the timbre changes. The concept is borrowed from Piston's harmonic rhythm (p0381).
 
-### 5.2 频度由什么决定
+- It is shaped by the form of the melody and harmony, but in most cases it moves in and out of step with them rather than exactly together, and it is often somewhat slower and more relaxed than the rhythm of melody and harmony (p0381, p0383, figure XVI-1).
+- Both extremes have a cost, stated plainly: a timbre rhythm that is too slow for the nature of the music sounds dull and monotonous, while one that is too active gives an impression of disorder (p0383).
+- A reservation on method: the ways of achieving colour contrast and change are endless, so no fixed periodicity can say when to change timbre. Only listening and writing can give a sense of proportion (p0381). Stylistic traits are reflected mainly in three respects: frequency of change, combination method and contrast method (p0383).
 
-不能绝对化：各时期作曲家都会出于表现意图蓄意削减变化频度，把相当长的段落按大色块处理（p0397）。
+### 5.2 What Determines Frequency
 
-| 变量 | 取向 | 页 |
+This must not be made absolute. Composers of every period deliberately reduce the frequency of change for expressive reasons, handling long passages as large blocks of colour (p0397).
+
+| Variable | Tendency | Page |
 |---|---|---|
-| 结构功能 | 呈示性或总结性段落，音色节奏舒展从容；展开、连接、过渡性段落，音色变换频繁、色调跳动大 | （p0397，例XVI-6：呈示段三支长笛奏旋律长达 10 小节、伴奏几乎不变；例XVI-7：展开段逐小节改配置） |
-| 篇幅 | 长大的作品要节约手段，在变换频度上为后续发展留余地；短小的作品在总体平衡的前提下应适当增加变化 | （p0400） |
-| 速度 | 快速乐曲里过频的音色更换导致听觉甚至心理疲劳，需控制；慢速乐曲适度提高频率常能减低单调感 | （p0400） |
+| Structural function | Presentational or summarising passages have a leisurely, unhurried timbre rhythm. Developmental, connecting and transitional passages change timbre often, with large jumps of colour | (p0397; example XVI-6: in a presentation passage three flutes play a melody lasting 10 bars over almost unchanged accompaniment; example XVI-7: in a development passage the scoring changes bar by bar) |
+| Length | Long, large works must economise on means and leave room in the frequency of change for later development. Short works should add variety in moderation, while keeping overall balance | (p0400) |
+| Tempo | In fast pieces, timbre changes that are too frequent cause auditory and even psychological fatigue, so they must be controlled. In slow pieces, raising the frequency moderately often reduces monotony | (p0400) |
 
-**总原则**：合理安排张与弛、紧与松，形成疏密相间、动静相济的比例，是配器布局的首要原则；这与音高领域里长短音符、长短句造成的周期性变化（斯波索宾所说的综合与分解）是同一件事（p0400，例XVI-8）。宏观描述工具：把全曲音色节奏用分解（频繁更迭）与综合（维持数小节乃至十余小节不变）两种状态交替画成曲线（p0414，图XVI-2 至图XVI-5）。★ 设计要求是两种状态长短相间地交替，而非均匀分布。
+**Overall principle**: arranging tension and release, and tightness and looseness, in a reasonable balance of dense and sparse, and of active and still, is the first principle of scoring layout. It is the same thing as the periodic change produced by long and short notes and phrases in the domain of pitch (Sposobin's synthesis and decomposition) (p0400, example XVI-8). As a macro-level tool, the timbre rhythm of the whole piece can be drawn as a curve that alternates between two states: decomposition (frequent change) and synthesis (unchanged for several bars, or even more than ten) (p0414, figures XVI-2 to XVI-5). ★ The design requirement is that the two states alternate in long and short stretches, not that they be spread evenly.
 
-### 5.3 音色对比变化的三类
+### 5.3 Three Types of Timbre Contrast Change
 
-三类并列，按对比强度由弱到强、由自然到人工排（p0418–0429）：
+The three types are listed side by side, ordered from weakest to strongest contrast and from natural to artificial (p0418–0429):
 
-| 类 | 何时用 | 强度与代价 | 页与谱例 |
+| Type | When to use | Strength and cost | Page and examples |
 |---|---|---|---|
-| 隐含性 | 段落按其陈述类型或结构特点本不要求强烈对比，但又要避免单调：在保持主导基本色调的前提下，只改动个别层次里个别因素的乐器配置 | 色彩变化柔和，只有微度到中度对比 | （p0418，例XVI-7） |
-| 结构性 | 段落的陈述类型或结构本身就显示出对比需求。两种典型场合：呈示型音乐中不同主题因素在性格、音区、力度、节奏、织体上已有明显差异；展开与连接段落里长线条消解为动机分裂与短句移位，织体碎成音点 | 强度可从微度、中度直到异常鲜明强烈 | （p0425，例XVI-11、例XVI-12） |
-| 人工逻辑化 | 按序列原则，或按乐器编号作镜像对称一类的排列 | 评价保留：自成逻辑、饶富趣味，但带明显的人工化印迹；以点描法为基础的逻辑与原曲线条化的本性相矛盾，「但仍有相当的说服力」 | （p0427–0429，例XVI-13、例XVI-14 与图XVI-7） |
+| Implicit | A passage whose kind of statement or structure does not call for strong contrast, but must still avoid monotony. While keeping the dominant basic colour, change the scoring of only a few factors in individual layers | Soft colour change, from slight to moderate contrast | (p0418, example XVI-7) |
+| Structural | The kind of statement or the structure of the passage itself calls for contrast. Two typical cases: in presentation-type music, different thematic factors already differ clearly in character, register, dynamic, rhythm and texture; in development and linking passages, long lines dissolve into motivic splitting and short phrases shifting, and the texture breaks into points | Strength can range from slight and moderate to exceptionally vivid and intense | (p0425, examples XVI-11, XVI-12) |
+| Artificial logic | Arrangement by serial principle, or by mirror symmetry in instrument numbering | Reservation: it has its own logic and is rich in interest, but it bears an obvious trace of artifice. Logic built on pointillism runs against the linear nature of the original, "yet still carries considerable persuasive force" | (p0427–0429, example XVI-13, XVI-14 and figure XVI-7) |
 
-隐含性一类的典型场合是气息悠长、不可分割的旋律线的伴奏层。★ 抒情性呈示型主题不宜用横向变化过频、反差过强的布局，否则破坏旋律深沉如歌的性格；应保持主导音色在总体轮廓上的完整，同时可在纵向组合上较频繁但不张扬地加入新色彩（p0424，图XVI-6）。
+The typical case for the implicit type is the accompaniment layer of a long-breathed, indivisible melodic line. ★ A lyrical presentation-type theme should not use a scoring that changes too often horizontally or contrasts too sharply, because that breaks the deep, song-like character of the melody. Keep the dominant timbre intact in its overall outline, and new colours may be added in the vertical combination more often, but without fuss (p0424, figure XVI-6).
 
-## 6. 局部结构的配器布局
+## 6. Scoring Layout of Local Structures
 
-核心规律一句话：在统一中求变化，于变化中见统一（p0429）。
+The core rule in one sentence: seek variety within unity, and unity within variety (p0429).
 
-### 6.1 呈示型段落
+### 6.1 Presentation-Type Passages
 
-基本出发点是色调统一，音色节奏较舒展平稳。古典浪漫时期典型呈示型多由性质单一、不含明显对比因素的乐段构成，常采用连贯统一的配置，极端情况下整个乐段内部配置始终不变（p0430，例XVI-15）。在此前提下增加趣味的手法，按幅度从小到大：
+The basic starting point is unity of colour, with a timbre rhythm that is leisurely and steady. Typical Classical and Romantic presentation passages are often built from phrases of a single character with no obvious contrasting elements. They commonly use a coherent, unified scoring, and in extreme cases the scoring stays the same throughout a whole phrase group (p0430, example XVI-15). On this basis, the means of adding interest are listed in order of increasing magnitude:
 
-1. 各乐句主体全用相同或基本相似的配置，只在乐句尾部或乐句间的连接处加入新音色（长笛、圆号、弦乐）作色彩调剂，使相同配置多次连续出现时不显冗长单调（p0431，例XVI-16）。
-2. 乐段内的音色发展四法（p0432，例XVI-17）：换用新音色演奏主要旋律，或用不同音色重叠原有音色形成新的混合色调（其中八度重叠见 `SKILL.md` §3.2、§3.3）；在后一乐句的伴奏织体中加入新因素；形成幅度与音区上的变化，如从一个音组的陈述扩大为八度陈述；加入新的对位线条。
-3. 在每个乐句的结尾处引入乐队全奏作色彩调剂与对比（p0434）。
+1. Use the same or nearly the same scoring for the main body of every phrase, and add new timbres (flute, horn, strings) only at the end of phrases or at the links between them, as colour relief. This keeps the same scoring, when it recurs continuously, from sounding long and monotonous (p0431, example XVI-16).
+2. Four means of timbre development within a phrase group (p0432, example XVI-17): play the main melody with a new timbre, or overlay different timbres on the original to form a new mixed colour (octave doubling is covered in `SKILL.md` §3.2 and §3.3); add new elements to the accompaniment texture of the following phrase; create changes of amplitude and register, such as widening a statement from one octave-group to an octave statement; or add new contrapuntal lines.
+3. At the end of each phrase, bring in a full-orchestra tutti as colour relief and contrast (p0434).
 
-★ 贯穿性因素：保持某件或某组固定乐器持续存在，是呈示型结构得到相对统一色调的重要条件；评价偏高，认为近现代作曲家更富创造性的运用「常常可获得令人意想不到的出色效果」（p0433、p0444，例XVI-16 至例XVI-19）。
+★ Running element: keeping one instrument, or one group, present throughout is an important condition for a relatively unified colour in presentation-type structures. It is rated highly, and the more inventive use of it by modern and contemporary composers is said to "often produce astonishingly excellent effects" (p0433, p0444, examples XVI-16 to XVI-19).
 
-例外一种：为突出乐句间的色彩差异，可以不考虑贯穿性，改用对置性配置，不同乐句用完全不同的乐器组合，只让重复出现的乐句共享同一配置，框架仍连贯（p0443，图XVI-8）。同处另有一条顺序设计：和声伴奏层可由多组音色按特定顺序交替镶嵌，把色彩排成由晦暗浊重到明亮轻快再复归黯淡的曲线（案例顺序是 1-2-3-2-1-2-3-2-3-2）。这与 `reference.md` §3 的前景中景背景互补：那里定层次位置，这里定出场顺序。
+One exception: to bring out colour differences between phrases, the running element may be disregarded, and opposing scoring used instead. Different phrases then use completely different instrument combinations, and only repeated phrases share one scoring, while the framework stays coherent (p0443, figure XVI-8). The same passage also gives a sequential design: the harmonic accompaniment layer can be inlaid with several timbre groups alternating in a set order, arranging the colours into a curve that moves from dark and turbid to bright and light, then back to dull (the order used in the example is 1-2-3-2-1-2-3-2-3-2). This complements the foreground, middle ground and background of `reference.md` §3. That section sets the layer positions; this one sets the order of entry.
 
-### 6.2 过渡与展开型段落
+### 6.2 Transitional and Developmental Passages
 
-音色节奏通常活跃，色彩对比与交替频繁。处理的核心是「于变化中见统一」，在跳荡缤纷的音色变换中仍要形成色调层次与连贯有序的发展逻辑，避免色彩兴之所至的恣意挥洒（p0443–0445，例XVI-20）。两条具体做法：
+Timbre rhythm is usually active, with frequent colour contrast and alternation. The core of the treatment is "variety within unity": even amid the leaping, varied changes of timbre, a layer of colour and a coherent, orderly development logic must still be formed, avoiding colour applied at random (p0443–0445, example XVI-20). Two concrete methods:
 
-- 用某一声部的持续长音作贯穿因素，把交替对比的音色统一为一体；随后取消这条长音层，可制造更强烈的直接对照，从而把对比度分出层次（p0445）。
+- Use a sustained long note in one part as a running element to bind the alternating contrasting timbres into one whole. Then remove this long-note layer; that creates a more direct confrontation, and so divides the degree of contrast into levels (p0445).
 
-大型展开结构：要找到能把纷杂音色结为一体的、相对稳定的统一性因素（某一节奏性音型，或某件乐器的持续背景）；展开部常形成若干基本色调不同的段落，各自保持独立特性、彼此对比，由有明确定向的发展逻辑贯穿（p0445–0446，例XVI-21）。快速流动的展开部可用不同乐器组交替进入与叠加，配合奏法变化（拨奏与拉奏交替、弱音踏板），同时用低音的持续音或节奏型音型保持连贯（p0446–0450，奏法与融合度见 `SKILL.md` §3.5）。
+Large developmental structures: find a relatively stable unifying factor that can bind the scattered timbres into one (a rhythmic figure, or a continuous background from one instrument). A development section often forms several passages with different basic colours, each keeping its own independent character and contrasting with the others, held together by a developmental logic with a clear direction (p0445–0446, example XVI-21). A rapidly flowing development section can bring in and layer different instrument groups alternately, combined with changes of technique (alternating plucked and bowed playing, soft pedal), while a sustained bass note or rhythmic figure keeps it coherent (p0446–0450; for techniques and degrees of blend see `SKILL.md` §3.5).
 
-展开部的分阶段设计可按四栏对照来做（p0490，图XVI-10）：织体写法、色彩基调、音色呈现（纯色为主、混合色、纯混相间）、音色节奏（多变、较多变、平稳、舒缓）。★ 各阶段织体写法的不同，正是为音色处理方式的选择提供依据的基础，所以四栏里先定的是织体写法那一栏（织体选型见 `SKILL.md` §1.1）。
+The staged design of a development section can be laid out in four columns (p0490, figure XVI-10): texture writing, colour basis, timbre presentation (mainly pure colour, mixed colour, or alternating pure and mixed), and timbre rhythm (varied, fairly varied, steady, slow). ★ The different texture writing in each stage is the basis for choosing how timbre is handled, so the texture-writing column is the one to settle first (for texture selection, see `SKILL.md` §1.1).
 
-## 7. 整体结构的配器布局
+## 7. Scoring Layout of the Overall Structure
 
-总原则：各类音色与配器手段，只有在顺应总体结构的趋势与走向、并与旋律、调性、和声、音区、力度、织体、节拍、节奏、速度形成谐调一致的关系时，才显现出巨大的潜能（p0492）。总体设计应与作品自身的曲式结构类型及构成原则保持最直接紧密的对应；可用于配器布局分析的曲式类型有展开型、并联型、对置型、循环型、再现型，结构基本构成原则有展开原则、变奏原则、对置对比原则、拱形对称原则（p0492）。
+Overall principle: the various kinds of timbre and orchestration devices reveal their full potential only when they follow the trend and direction of the overall structure and form a consistent, harmonious relationship with melody, tonality, harmony, register, dynamic, texture, metre, rhythm and tempo (p0492). The overall design should correspond as directly and closely as possible to the form type and construction principles of the work. The form types usable for analysing scoring layout are developmental, paratactic, opposing, cyclic and recapitulatory. The basic principles of construction are development, variation, opposing contrast, and arch symmetry (p0492).
 
-### 7.1 乐章之间的七项关系
+### 7.1 Seven Relationships Between Movements
 
-需处理的关系（p0492–0495）：乐章之间的关系、宏观结构关系、基本编制、基本色调、音色处理、音区处理、力度处理。可直接当检查清单用。
+The relationships to be handled (p0492–0495) are: the relationships between movements, the macro-structural relationship, the basic lineup, the basic colour, timbre treatment, register treatment and dynamic treatment. They can be used directly as a checklist.
 
-- **编制**：套曲中通常宁愿为不同乐章选择差异程度不等的编制，从根本上保证各乐章基本色调的反差（p0493，图XVI-11）。★ 即使核心编制只作有限调整，也可以为每个乐章选一套完全不同的特色打击与装饰乐器组合，同样能拉开色彩基调（p0494，与 `SKILL.md` §8 合看）。
-- **音色处理方式**四层面：个别乐器或乐器组的音色效果（含各类演奏技术）的利用；纯混比例侧重及混合音色的组合特点；音色对比变化方式，即选对置性对比还是渐进式柔和对比（见 `SKILL.md` §3.6）；音色节奏频度在各乐章的特色（p0495）。
-- **音区处理方式**两方面：个别乐器的音区使用特点，以及乐队总体音区随时间的宏观走向（见 `SKILL.md` §6）。范例四乐章：辉煌明亮时或尖厉的高音与极高音区；从浓重阴暗的低音区开始、中间大幅扩张、终复归低吟；开掘中高音区精致柔媚的一面；由极低音区向全音域渐次扩展（p0495）。
-- **力度处理方式**两方面：力度范围及其变化幅度与趋向、力度对比。跨乐章的四种力度曲线原型（p0495）：ff 渐弱到 p 再渐强回 ff；pp 渐强到 ff 再渐弱回 pp；全程在 p、pp、ppp 的窄范围内罕有对比；由 ppp 渐强至 fff 的巨大单向直线。可以完全以各乐章落在不同原型上作为整体力度布局逻辑。
-- **幅度与浓度密度**：各乐章在音响幅度、浓度、密度上的异同与对比要形成恰当比例。全奏性织体的分布比例、全奏与其他织体的数量比例、常规与非常规全奏的交替，都应通过音色布局主动调整（p0496）。
+- **Lineup**: in a suite, it is generally preferable to choose lineups that differ to varying degrees for different movements, which fundamentally secures contrast in the basic colour of each movement (p0493, figure XVI-11). ★ Even when the core lineup is only slightly adjusted, each movement can be given a completely different set of characteristic percussion and ornamental instruments. This also differentiates the basic colour (p0494; read together with `SKILL.md` §8).
+- **Timbre treatment**, in four respects: the use of the timbral effects of individual instruments or groups (including various playing techniques); the proportion of pure to mixed timbre, and the features of mixed combinations; the manner of timbral contrast, that is, whether to use opposing contrast or gradual, soft contrast (see `SKILL.md` §3.6); and the frequency of timbre rhythm as a feature of each movement (p0495).
+- **Register treatment**, in two respects: the register use characteristic of individual instruments, and the macro trend of the overall orchestral register over time (see `SKILL.md` §6). An example from a four-movement work: brilliant, bright or shrill high and very high registers at first; starting from dense, dark low registers, expanding widely in the middle and finally returning to a low murmur; exploring the fine, soft side of the middle and upper-middle register; and gradually expanding from the very low register across the full range (p0495).
+- **Dynamic treatment**, in two respects: the range of dynamics and the amplitude, trend and direction of their change; and dynamic contrast. Four archetypal dynamic curves across movements (p0495): ff diminishing to p and then growing back to ff; pp growing to ff and then diminishing back to pp; staying throughout within the narrow range of p, pp and ppp, with almost no contrast; and a huge one-way straight line rising from ppp to fff. Placing each movement on a different archetype can serve as the overall logic of dynamic layout.
+- **Amplitude and density**: the similarities and contrasts among movements in sonic amplitude, density and concentration should form an appropriate proportion. The distribution of tutti-type textures, the ratio of tutti to other textures, and the alternation of conventional and unconventional tuttis should all be adjusted deliberately through timbre layout (p0496).
 
-### 7.2 主要结构段落之间
+### 7.2 Between Main Structural Sections
 
-主要结构段落指有较重要独立曲式功能、且有相当比例长度的段落（主部、副部、连接部、结束部，主题及各变奏，主部及各插部）。为它们作音色布局的考虑基点仍是编制、色彩基调、音色、音区、力度与织体的浓度密度（p0496）。
+The main structural sections are passages with a relatively important independent formal function and a substantial length: the main part, subordinate part, linking part and closing part; the theme and each variation; the main part and the episodes. The starting point for timbre layout in these sections is still lineup, basic colour, timbre, register, dynamic and texture density (p0496).
 
-★ 对比强度是可选的判据，并不要求最大化（p0496–0501，例XVI-23、例XVI-24、图XVI-12 对照两部作品）：一部的主副部对比细微，差别只在主部纯弦乐、副部转为木管与弦乐的呼应对答；另一部则在音色配置、音区、力度、织体写法、音色节奏五个维度上全面不同。
-对置性曲式（三部曲式、回旋曲）里对比可达异常强烈，用无过渡的纯色块并置，效果类似蒙太奇转切（p0501–0502，例XVI-25、例XVI-26：弦乐快速拨奏、木管戏谑主题、铜管进行曲三块彼此不相联系）。
-更抽象的一种布局逻辑：对立项I、对立项II、对立项的相互依赖与转换（整合），不必局限于传统曲式模型（p0508，例XVI-29：用噪音奏法与震音奏法让弦乐与打击乐互相靠拢）。
+★ The degree of contrast is an optional criterion, and it need not be maximised (p0496–0501, examples XVI-23 and XVI-24, figure XVI-12, comparing two works). In one, the contrast between the main and subordinate parts is subtle: the main part is pure strings, and the subordinate part turns into a call-and-response between woodwinds and strings. Another work differs fully along five dimensions: timbre setting, register, dynamic, texture writing and timbre rhythm.
 
-### 7.4 比例与高潮
+In opposing forms (ternary form, rondo), contrast can be exceptionally strong. Pure colour blocks are juxtaposed without transition, with an effect like a montage cut (p0501–0502, examples XVI-25 and XVI-26: fast plucked strings, a scherzo-like woodwind theme, and three march blocks in the brass that have no connection with one another).
 
-- 常见症结：全奏与非全奏段落的比重失调，音响不是过满就是饱和度不足（p0529）。
-- 参照数字：对古典浪漫时期十个乐章的统计，总 2912 小节中弦乐单独演奏 496 小节（17%）、管乐（木管加圆号）单独演奏 136 小节（5%）、弦乐与管乐合奏 2270 小节（78%）（p0529）。
-- 同一素材在不同曲式部位出现时，应在音区、幅度、力度、奏法或音色组合上有所区别，以免雷同（p0529）。
-- **高潮位置**：全曲总高潮一般宜安排在全曲长度后 2/5 到 1/3 处，接近黄金分割点。过于靠前，随之而来的冗长退潮易令人乏味；过于靠后，收尾容易突兀（p0530）。两种例外：把音量绝对值高点前移到不到 1/2 处，靠特定手段（如弦乐群位于两极音区造成的张力与心理压强）维持后续紧张度；或用直线扩展型写法把高潮直接置于结束处。
-- **留有余地**：不要漫无节制地使用铜管与重型打击乐这类重武器或全乐队强奏，把最具威力的发挥留到最重要的高潮段落；大幅音区与力度扩展同样要节制（p0530）。
-- ★ 稀缺而精准的一次强调，可起到任何其他手段都无法取代的画龙点睛式高潮烘托作用（p0530–0531，例XVI-42：全场唯一的一记钹击）。
-- 局部高潮与总高潮的关系靠音色的节约：各高潮段落在音色、幅度或织体写法上各具特色并相互对比，为突出总高潮甚至需要削减次要高潮（p0530）。
+A more abstract layout logic: opposing element I, opposing element II, and the mutual dependence and transformation of the two (integration). It need not be confined to traditional formal models (p0508, example XVI-29: noise and tremolo techniques bring the strings and percussion closer together).
 
-### 7.5 配器逻辑可以自成一套
+### 7.4 Proportion and Climax
 
-★ 配器布局（乐器配置与织体疏密复合程度）在结构逻辑上可以独立于、甚至完全不同于音高、节奏、力度等参数所体现的结构逻辑，两者并存，构成作品结构与形式的多义性（p0523–0529，例XVI-41 与图XVI-13 至图XVI-15：全曲在音程、节奏、力度、配器、奏法上呈镜像拱形，但从乐器配置与织体疏密看却是可分两半的平行结构）。
+- A common problem: the proportion of tutti and non-tutti passages is unbalanced, so the sound is either too full or lacks saturation (p0529).
+- Reference figures: in a count over ten movements from the Classical and Romantic periods, of 2912 bars in total, the strings alone play 496 bars (17%), the winds (woodwinds plus horns) alone play 136 bars (5%), and strings and winds together play 2270 bars (78%) (p0529).
+- The same material, when it appears in different parts of the form, should differ in register, amplitude, dynamic, technique or timbre combination, so that it does not sound the same (p0529).
+- **Climax position**: the overall climax of the whole piece should generally fall about two-fifths to one-third of the way from the end, close to the golden section. Too early, the long decline that follows becomes tedious. Too late, the ending becomes abrupt (p0530). Two exceptions: the absolute peak of loudness can be moved to before half-way, with specific means (such as the tension and psychological pressure of string groups placed at the two extremes of the register) keeping the tension up afterwards; or a straight-line expanding writing can place the climax right at the end.
+- **Leave room**: do not use heavy weapons, such as brass and heavy percussion, or full-orchestra forte, without restraint. Keep the most powerful effects for the most important climactic passage. Large expansions of register and dynamic must likewise be used with restraint (p0530).
+- ★ A single, rare and precise emphasis can give a finishing-touch lift to a climax in a way no other means can replace (p0530–0531, example XVI-42: the only cymbal stroke in the whole piece).
+- The relationship between local and total climaxes depends on economy of timbre. Each climactic passage has its own character in timbre, amplitude or texture writing, and contrasts with the others. To highlight the overall climax, secondary climaxes may even need to be reduced (p0530).
 
-**用法**：配器可以当成一条独立的结构线来设计，与曲式不必同构。做整体布局时先各自画一条线，再决定两条线是重合、错开还是对抗。
+### 7.5 Scoring Logic Can Form Its Own System
+
+★ Scoring layout (the allocation of instruments and the degree of compositeness and density of texture) can be independent of, or even entirely different from, the structural logic shown by pitch, rhythm and dynamic parameters. The two coexist, and this makes the structure and form of the work multi-layered (p0523–0529, example XVI-41 and figures XVI-13 to XVI-15: the whole piece forms an arch that is mirrored in intervals, rhythm, dynamic, scoring and technique, yet seen through instrument allocation and texture density it is a parallel structure that splits into two halves).
+
+**Usage**: scoring can be designed as an independent structural line, which need not be isomorphic with the form. For overall layout, first draw one line for each, then decide whether the two lines coincide, are offset from each other, or oppose each other.

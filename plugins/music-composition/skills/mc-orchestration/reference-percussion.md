@@ -1,309 +1,309 @@
-# 打击乐器：性能、分论与组内组合（Adler 上册打击章；杨立青中册第八、九章）
+# Percussion: Performance, Subtopics, and Intra-Group Combinations (Adler Vol. 1, percussion chapter; Yang Liqing, middle volume, Chapters 8–9)
 
-本节管打击乐组的四类判断：要几名乐手、这一句选哪件、用什么击器打在哪个点上、这一件在当前织体里能不能被听见，另外管组内部怎么拼成色块。它与「为弦乐配器」（§2.3）、「木管组」（§2.4）、「铜管组」（§2.5）并列，同属「一个乐器组的性能与组内配器」这一层；打击乐与别的组之间的叠合、强调、平衡仍走 SKILL §3 与 §4。
+This section covers four kinds of judgment for the percussion group: how many players are needed, which instrument to choose for a given phrase, which implement to strike with and at which point, and whether the instrument can actually be heard in the current texture. It also covers how the group's internal parts combine into blocks of colour. It stands alongside "Writing for Strings" (§2.3), "The Woodwind Section" (§2.4) and "The Brass Section" (§2.5), and sits in the same layer: "performance and intra-group orchestration for one instrument group". Percussion's overlap, emphasis and balance with other groups still follow SKILL §3 and §4.
 
 ---
 
-## 1. 打击乐组的定位：用人、记谱、分类
+## 1. Positioning the Percussion Group: Staffing, Notation, Classification
 
-### 1.1 五种用法（总纲，p0506）
+### 1.1 Five Uses (general outline, p0506)
 
-| 用法 | 拿它换什么 | 条件 |
+| Use | What it buys | Conditions |
 |---|---|---|
-| 一、进行曲活力或异域情调 | 风格标签 | 古典与早期浪漫派的「土耳其乐器」是三角铁、钹、大鼓；定音鼓当时不算这一组成员，不进这类段落（p0506–0509） |
-| 二、强调重音与一般性节奏 | 节奏轮廓的清晰度 | 逐例见 §5.3 |
-| 三、铺垫或建立高潮 | 能量曲线的坡度 | 见 §5.2 |
-| 四、制造戏剧性开始 | 一次性开场冲击 | 大鼓一击即可（p0472） |
-| 五、重复别处的音高或段落，对其着色 | 色彩，不增加新材料 | 见 §5.3 |
+| 1. Marching vitality or exotic colour | A style label | In the Classical and early Romantic periods, the "Turkish instruments" were triangle, cymbals and bass drum; timpani did not count as a member of this group at the time, so it does not enter this type of passage (p0506–0509) |
+| 2. Emphasising accents and general rhythm | Clarity of the rhythmic outline | Case by case; see §5.3 |
+| 3. Setting up or building to a climax | The slope of the energy curve | See §5.2 |
+| 4. Creating a dramatic opening | A one-off opening impact | A single bass drum stroke is enough (p0472) |
+| 5. Repeating pitches or sections heard elsewhere and colouring them | Colour, not new material | See §5.3 |
 
-★ 现代乐队里打击乐组的色彩性最强，有音高打击乐已被当作独立声部与别的组交替使用（p0506）。只当它是节奏部门，等于浪费这一组里最贵的那半。
+★ In modern bands the percussion group has the strongest colouristic character, and pitched percussion has already been used as an independent part, alternating with other groups (p0506). Treating it only as a rhythm department wastes the most valuable half of this group.
 
-**用法**：写之前先认这五档里的哪一档。二三五附着在别人身上，判据在别的声部；一四要自己站出来，判据在段落结构。
+**Usage**: before writing, identify which of these five uses applies. Uses 2, 3 and 5 attach to other parts, so their criteria lie in those parts; uses 1 and 4 must stand on their own, so their criterion lies in the structure of the section.
 
-### 1.2 要几名乐手：两个判据（p0441）
+### 1.2 How Many Players: Two Criteria (p0441)
 
-定音鼓手在组内算独立成员，因为定音鼓长期是固定编制，且定音鼓手通常只奏定音鼓；其余乐手都一人多件，声部由组内首席分配。确定人数只问两件事：某位乐手**有没有足够时间从一件切到另一件**（含从音槌类切到木质鼓键类）；**一人同时能奏几件**（右手锣槌击大锣、左手鼓键击吊钹这一类）。用人应尽可能节省，拿不准先问有经验的乐手。
+The timpanist counts as an independent member of the group, because timpani has long been a fixed part of the lineup and timpanists usually play timpani only. The other players each play several instruments, and the section principal assigns the parts. Deciding the number of players comes down to two questions: whether a player **has enough time to switch from one instrument to another** (including from mallet instruments to wooden-drumstick instruments); and **how many instruments one player can play at once** (for example, the right hand striking a large gong with a gong beater while the left hand strikes a hanging cymbal with a stick). Staffing should be kept as lean as possible; if in doubt, ask an experienced player first.
 
-**编曲含义**：切换时间是硬约束，写之前先在谱上数休止。人数报多了要挨砍，时间留少了则是纸上音乐。
+**Orchestration implication**: switching time is a hard constraint, so before writing, count the rests in the score. Overstaffing will be cut, and too little switching time leaves music that cannot actually be played as written.
 
-### 1.3 记谱：没有统一标准带来的义务
+### 1.3 Notation: The Obligations Created by the Lack of a Standard
 
-打击乐记谱至今无统一标准，写的人因此有义务把话说清（p0441）。四条通例：有音高的用高音谱表或大谱表，无音高的可归为五线谱与一线谱两种，**当今更偏好一线谱**（例 12-1、例 12-2）；无固定音高的乐器专用谱号是方框，以第三线为中心；`l.v.` 标在音符后，让它继续振动、时长不定；演奏工具分三级叫法，键盘类叫音槌、锣类叫锣槌、所有鼓叫鼓键（p0442–0443）。
+Percussion notation still has no unified standard, so the writer is obliged to make things clear (p0441). There are four general conventions. Instruments with pitch use the treble clef or grand staff. Instruments without definite pitch can be written on a five-line or one-line staff, and **today the one-line staff is preferred** (Ex. 12-1, Ex. 12-2). The clef for unpitched instruments is a square, centred on the third line. `l.v.` is placed after the note, letting it keep vibrating for an indeterminate length of time. Performing implements have three names: mallets for keyboard instruments, gong beaters for gongs, and drumsticks for all drums (p0442–0443).
 
-★ 击器的图形符号至今未成规范，各家自定，双槌还用双符号组合表示两硬、两软、一硬一软（p0211）。所以**总谱与分谱开头必须有一份记谱指南**，说明每个符号代表哪件乐器、哪种击器。不写等于把音色的决定权交给乐手的习惯。
+★ Graphic symbols for striking implements still have no standard, and each publisher defines its own. Double-mallet symbols combine paired signs to indicate two hard, two soft, or one hard and one soft (p0211). So **the score and every part must open with a notation guide** stating which symbol stands for which instrument and which implement. Failing to do so hands the decision about timbre over to the players' habits.
 
-### 1.4 分类：两分法乘四分法（p0187、p0443）
+### 1.4 Classification: A Two-Way Split Combined with a Four-Way Split (p0187, p0443)
 
-先按音高精确度分有确定音高与无确定音高，再按发音方式分体鸣、膜鸣、弦鸣、气鸣，两个原则合起来用。★ Adler 特意说明，有无音高这条界线**「并不是非常清楚的」**（p0443），筒子鼓、古钹、牛铃、缝鼓都落在灰带里，见 §3.3。
+First divide by pitch precision into instruments with definite pitch and instruments without, then divide by method of sound production into idiophones, membranophones, chordophones and aerophones. Use both principles together. ★ Adler specifically notes that the line between pitched and unpitched is **"not very clear"** (p0443). Cylinder drums, ancient cymbals, cowbells and sewn drums all fall in the grey zone; see §3.3.
 
-这个分类是决策工具而非目录，因为背后有物理（p0188–0190）：棒振动类（钟琴、颤音琴、马林巴、木琴）近尾端轻击得纵向振动，近中央击得横向振动、频率远低音色更暗，**同一根音条换击点就换音色**；板振动类（锣、钹、钟、响板）的截面厚度决定振动方式，厚度均匀的板泛音极不谐和，**击点即频谱**；膜鸣类靠鼓膜张力发声，改张力即改音高。
+This classification is a decision tool rather than a catalogue, because it rests on physics (p0188–0190). Bar-vibrating instruments (glockenspiel, vibraphone, marimba, xylophone) struck near the end produce longitudinal vibration, while struck near the centre they produce transverse vibration with much lower frequencies and a darker timbre, so **changing the striking point on the same bar changes the timbre**. For plate-vibrating instruments (gong, cymbal, bell, castanets), the cross-sectional thickness determines the mode of vibration; plates of uniform thickness produce extremely inharmonic overtones, so **the striking point is the spectrum**. Membranophones depend on membrane tension for their sound, so changing the tension changes the pitch.
 
-★ 最要紧的一条：**即使有确定音高的体鸣乐器，发音也是多种振动方式复合的结果，泛音不落在常规音程上**（钟琴音条比例约 1 : 2.46 : 5.40 : 8.93，p0188–0189，图 VIII-1 示各振动模式与频率比）。
+★ The most important point: **even idiophones with definite pitch produce sound from a combination of several vibration modes, and their overtones do not fall on conventional intervals.** The partials of a glockenspiel bar are roughly in the ratio 1 : 2.46 : 5.40 : 8.93 (p0188–0189; Fig. VIII-1 shows the vibration modes and their frequency ratios).
 
-**编曲含义**：拿打击乐叠和声层，叠的是一串不在十二平均律上的泛音。它能加光泽、能加根音重量，但它不会像木管那样干净地融进和弦。SKILL §3.3「染色」在这里成立，SKILL §3.1「同度混合」在这里要打折。
+**Orchestration implication**: layering percussion over a harmonic layer means layering a series of overtones that are not on the twelve-tone equal-tempered scale. It can add lustre and root weight, but it will not blend into a chord as cleanly as woodwinds do. SKILL §3.3 ("colouring") holds here, while SKILL §3.1 ("unison blending") must be discounted here.
 
 ---
 
-## 2. 音色的三个可调参数：击器、击点、击法
+## 2. Three Adjustable Parameters of Timbre: Implement, Striking Point, Technique
 
-音色由两件事决定：乐器自身的结构材料这类先天条件；演奏中击器、击点、击法三要素的运用与配合（p0219）。当代作品里再出奇的效果也都在这两个范畴里找突破口。**这三项是配器者的可调参数，选定即选定音色，与选乐器同等重要。**
+Timbre is determined by two things: the instrument's own structural material, which is a given; and the use and coordination of three elements in performance, namely the implement, the striking point and the technique (p0219). Even the most surprising effects in contemporary works find their breakthroughs within these two categories. **These three items are parameters the orchestrator can adjust. Choosing them is choosing the timbre, and it matters as much as choosing the instrument.**
 
-### 2.1 击器：槌头的体积、硬度、重量（p0196）
+### 2.1 Implement: Head Volume, Hardness, Weight (p0196)
 
-| 槌头 | 结果 |
+| Head | Result |
 |---|---|
-| 体积大、质地软 | 易激发基频与低次谐音，抑制高次谐音，发音深沉圆润柔和乃至晦暗 |
-| 体积小、质地硬 | 激发更多高次谐音，发音明亮乃至尖锐 |
-| 细棒形且坚硬 | 连基频与低次谐音都难听到，只剩噪杂的高次泛音 |
-| 分量重 | 受击面振动更充分，谐音数目更多，发音更丰满 |
+| Large volume, soft material | Easily excites the fundamental and low harmonics, suppresses high harmonics; the sound is deep, round, soft, even murky |
+| Small volume, hard material | Excites more high harmonics; the sound is bright or even sharp |
+| Thin rod shape and hard | Even the fundamental and low harmonics are hard to hear; only noisy high overtones remain |
+| Heavy | The struck surface vibrates more fully, with more harmonics and a fuller sound |
 
-总谱上可以指名（「三角铁棒」「定音鼓槌」），也可以只标硬度或质地，把范围内的选择留给乐手；凡是你在乎的那一项就要写死。膜鸣乐器上较少用金属击器，体鸣乐器上换材质的余地大得多（p0202）。
+In the score, the implement can be named ("triangle beater", "timpani stick"), or only its hardness or material can be specified, leaving the choice within that range to the player. Wherever a particular quality matters to you, specify it. On membranophones metal implements are rarely used; on idiophones there is much more room to change the material (p0202).
 
-★ **专属击器不是不能换，换掉就是换音色并同时换掉一部分性能**。定音鼓（p0197）：常规槌强击饱满结实、共鸣良好，可拟枪声（例 VIII-6）；改小鼓棒强奏则发音生硬、共鸣缺失，**必须靠大鼓之类补声势**；小鼓棒弱奏滚奏则鼓膜振不起来，只剩近乎耳不可闻的沙沙噪音（例 VIII-7）。钹的击器谱系最全（p0202–0207）：默认缠皮革木槌；ff 高潮点用大鼓槌借重量取最强共鸣；力度骤落处改定音鼓槌 pp 轻击求柔和；小鼓棒击钹边得极密震音与快速节奏型，明亮清脆但共鸣不大；金属锤强击得非常硬的短时值重音，代价是低频欠缺；金属刷帚得清澈沙沙声，带爵士联想。
+★ **Changing a dedicated implement is possible, but it changes the timbre and at the same time changes part of the instrument's performance capability.** For timpani (p0197): the standard mallet's hard strike gives full, solid, resonant sound and can imitate a gunshot (Ex. VIII-6). Switching to a small drumstick for loud playing produces harsh sound lacking resonance, **and must be supported by a bass drum or similar to build presence**. A small drumstick played softly in a roll does not get the membrane vibrating, leaving an almost inaudible rustle (Ex. VIII-7). The implement range for cymbals is the most complete (p0202–0207): by default, leather-wrapped mallets; at the ff climax, bass-drum beaters for maximum resonance from their weight; where the dynamic suddenly drops, timpani sticks for a soft pp strike; striking the cymbal edge with small drumsticks gives very dense tremolos and fast rhythmic figures, bright and clear but with little resonance; metal hammers give very hard, short accents, at the cost of low frequencies; metal brushes give a clear rustling sound with jazz associations.
 
-**用法**：先定这一击要「深沉圆润」「明亮尖锐」「噪音质感」「丰满」中的哪一个，再反查槌头。先选槌再听效果，等于把音色交给运气。
+**Usage**: first decide which of "deep and round", "bright and sharp", "noise texture" or "full" you want from this stroke, then work backwards to the implement. Choosing the mallet first and then listening to the result leaves the timbre to chance.
 
-### 2.2 击点：每件乐器都有最佳击点（p0211–0212）
+### 2.2 Striking Point: Every Instrument Has Its Best Point (p0211–0212)
 
-与弓弦乐器改触弦点同类。每件打击乐器各有其最佳击点，该点上共鸣最好、泛音最多、个性最足。三条底层规律：**定音鼓**最佳击点约在鼓膜半径靠近边圈那一端的三分之一处，越往中心越沉闷阴暗、共鸣越少，越往边圈越明亮但音量与共鸣同时减弱；**大锣**锣心最薄最易振，锣心敲击最响亮；**钹类**相反，边缘最薄、越近中心越厚，边缘敲击谐音最丰富，最宏大饱满的点约在距钹边三分之一处（p0275）。
+This is similar in kind to changing the bowing point on string instruments. Each percussion instrument has a best striking point, where resonance is strongest, overtones are most abundant and character is most distinct. Three underlying rules apply. On **timpani**, the best point lies about a third of the way from the rim toward the centre of the head's radius. The closer to the centre, the darker, duller and less resonant the sound; the closer to the rim, the brighter, but volume and resonance both drop. On a **large gong**, the centre is the thinnest and most responsive part, so striking the centre is loudest. **Cymbals** work the other way round: the edge is the thinnest part and the thickness increases toward the centre, so edge strikes are richest in harmonics, and the grandest, fullest point lies about a third of the way in from the edge (p0275).
 
-落到各件：大鼓最佳击点约距鼓心一掌，鼓心闷而空、太靠边音量弱（p0355）；堂鼓鼓心坚实富共鸣、越靠外圈越短促单薄（p0385）；邦戈、康嘎、通通鼓都是越靠边基音越弱、泛音越丰、听感越亮。当代作品把可击范围扩到了本非击点的位置：鼓圈、鼓壳，键盘型乐器的共鸣管与金属架（p0217）。
+Applied to individual instruments: the best point on the bass drum is about one hand's width from the centre; the centre sounds dull and hollow, and too close to the rim the volume is weak (p0355). The centre of a tom-tom is solid and resonant, and the further out toward the rim, the shorter and thinner it sounds (p0385). For bongos, congas and tom-toms, the closer to the edge, the weaker the fundamental, the richer the overtones and the brighter the sound. Contemporary works have extended the playable area to positions that were not originally striking points: the hoop and shell of a drum, and the resonator tubes and metal frames of keyboard-type instruments (p0217).
 
-**编曲含义**：击点是**不换乐器就能换音色**的最便宜手段，也是同一件乐器内部做明暗渐变的唯一连续参数（刷帚击点由钹边渐移向钹心，配合力度渐弱，色彩由明至暗，p0216）。写细腻色差先想击点。
+**Orchestration implication**: the striking point is the cheapest way to change timbre **without changing the instrument**, and it is also the only continuous parameter for shifting between light and dark within a single instrument. For brushes, the striking point moves from the cymbal edge toward the centre as the dynamic decreases, so the colour moves from bright to dark (p0216). For subtle tonal contrast, think of the striking point first.
 
-### 2.3 六种基本演奏方式（p0191–0192）
+### 2.3 Six Basic Modes of Playing (p0191–0192)
 
-体鸣与膜鸣两大类的激振方式可归为六种，整套成立：**击奏**（最常见，各类击器以及手掌拍击、手指叩击、拳头锤击）、**碰奏**（成对声源体互击，响棒梆子鞭响板拍板，碰铃铙钹）、**刮奏**（表面刮动，刮响器、缝鼓槽缝，或击器在管钟与键盘型乐器相邻音条间刮过）、**擦奏**（摩擦发声，弓子拉锯琴玻璃琴，双钹互磨，铃鼓拇指搓动滚奏）、**摇奏**（沙槌、槌铃、拨浪鼓，铃鼓摇击）、**拨奏**（较罕见，拨舌簧片，口簧、卡林巴）。
+The excitation methods of idiophones and membranophones can be grouped into six types, and together they form a complete set. **Striking** is the most common, covering all kinds of implements as well as palm slapping, finger tapping and fist hitting. **Clashing** is the sounding of two paired bodies struck against each other: wood blocks, claves, whips, castanets and clappers; finger cymbals and crash cymbals. **Scraping** rubs a surface: a guiro scraper, the groove of a slit drum, or an implement dragged across adjacent bars of tubular bells or keyboard instruments. **Rubbing** is friction sound: bowing a musical saw or glass harmonica, rubbing two cymbals together, and rolling a tambourine with the thumb. **Shaking** covers shakers, rattles, rattle drums and tambourine shaking. **Plucking** is rare, covering plucked reeds, the jaw harp and the kalimba.
 
-每一大类内部还分得出专属技法（光铙钹的碰奏就有轻碰、重碰、磨碰、颤碰、闷碰、亮碰、切碰，p0192），也有两类原则的综合，还有归不进这六类、作者认为需要另立门类的新技法（例 VIII-1、例 VIII-2）。
+Each major category contains its own specialised techniques. Suspended cymbals alone have light clash, heavy clash, grinding clash, tremolo clash, muted clash, bright clash and cut clash (p0192). There are also combinations of the two principles, and new techniques that cannot be classed under these six, for which the author considers a separate category necessary (Ex. VIII-1, Ex. VIII-2).
 
-**用法**：这六类是「这件乐器还能怎么发声」的检索表。同一件乐器换一类激振方式，音色变化通常大于换一件乐器。
+**Usage**: these six categories are a lookup table for "how else can this instrument sound?". Changing the excitation mode on the same instrument usually changes the timbre more than changing to a different instrument does.
 
-### 2.4 非常规击法：一整套（p0221–0225）
+### 2.4 Unconventional Techniques: A Full Set (p0221–0225)
 
-| 击法 | 做法 | 得到什么 |
+| Technique | How it is done | Result |
 |---|---|---|
-| **煞音** Secco | 敲击发声后立即用手掌、手指或身体触碰发声体遏止回响 | 短促干涩（例 VIII-30） |
-| **煞音变体** | 敲击的**同时**另一手接触发声体：按压鼓膜或音条，捏住钹锣边缘、三角铁一端 | 从起音就压住共鸣（例 VIII-31） |
-| **闷击** Dead stick | 敲击后击器不许反弹，带压力停在受击点上 | 近乎僵死的压抑音响（例 VIII-32） |
-| **钹的闷击** Choke | 双钹互击后保持相合不分开 | 闷滞的扑扑声（例 VIII-33） |
-| **泛音** | 定音鼓极靠边圈轻敲；颤音琴右手双槌正常敲击、左手食指同时碰音条中央节点 | 颤音琴得高两个八度的第四分音（例 VIII-34） |
-| **水锣** | 敲锣后立即把仍在振动的锣浸入水中，提出则回升 | 音高略降、色略暗（例 VIII-35） |
+| **Secco** | Immediately after striking, touch the sounding body with the palm, fingers or body to stop the ring | Short and dry (Ex. VIII-30) |
+| **Secco variant** | The other hand touches the sounding body **at the same moment** as the strike: pressing a drumhead or bar, pinching the edge of a cymbal or gong, or holding one end of a triangle | Damps the resonance from the attack (Ex. VIII-31) |
+| **Dead stick** | After striking, the implement may not rebound; it stays on the struck point under pressure | A nearly lifeless, suppressed sound (Ex. VIII-32) |
+| **Choke (cymbals)** | After clashing two cymbals, keep them pressed together rather than separating them | A stuffy, muffled thud (Ex. VIII-33) |
+| **Harmonics** | Timpani: lightly strike very close to the rim. Glockenspiel: the right hand strikes normally with two mallets while the left-hand index finger touches the central node of the bar | The glockenspiel gives the fourth partial, two octaves higher (Ex. VIII-34) |
+| **Water gong** | Strike the gong, then immediately dip it, still vibrating, into water; lifting it out brings the pitch back up | Pitch drops slightly and the colour darkens (Ex. VIII-35) |
 
-配套两项：**弱音器**用绒布毡垫蒙在鼓皮或音条上，缓解冲力，减音量并得柔和朦胧的质地，标 coperto 或 con sordino（p0219–0220）；**鼓膜张力**只适用于膜鸣，靠机械装置调紧调松，或演奏中用手、肘部下压使音高上升，抬起得下行滑音（p0221）。
+Two accessories complete the set. **Mutes**: felt or cloth pads placed on the drumhead or the bars to ease the impact, reduce the volume and give a soft, hazy texture; marked *coperto* or *con sordino* (p0219–0220). **Membrane tension** applies only to membranophones: it is tightened or loosened by mechanical means, or during playing, pressing down with the hand or elbow raises the pitch, and releasing it produces a downward glissando (p0221).
 
-一条负面判据：**弓子在钹、锣或键盘型音条上拉奏效果好，但音量并不大**（p0226）。作者怀疑勋伯格《五首管弦乐曲》里大提琴弓在吊钹边缘奏 pp 渐强至 fff 的震音能否穿过三管乐队全奏的音响屏障，并指出**把这类锣边拉奏音色当作同一面锣弱力度击奏后的泛音来处理显然更合理**。
+A negative criterion: **bowing a cymbal, gong or keyboard-type bar works well, but the volume is not large** (p0226). The author doubts whether the bowed cymbal-edge tremolo in Schoenberg's *Five Pieces for Orchestra*, which crescendos from pp to fff, could cut through the sonic wall of a full orchestral tutti. He points out that **treating such bowed gong-edge timbres as overtones that follow a weak single strike on the same gong is clearly more reasonable**.
 
-**编曲含义**：非常规击法基本都是减法，减共鸣、减延续、减音量。用武之地在稀薄织体与弱力度，放进全奏基本听不见。
+**Orchestration implication**: almost all unconventional techniques are subtractive. They reduce resonance, reduce sustain and reduce volume. Their place is in thin textures and at soft dynamics; placed in a full tutti they are essentially inaudible.
 
-### 2.5 三要素的综合与叠加（p0226–0231）
+### 2.5 Integrating and Layering the Three Parameters (p0226–0231)
 
-三项里任何两项同时取非常规值都可能出意料之外的结果；一件乐器上还可以同时并用两种以上演奏方式，例如同一乐手左右手分持不同槌打不同击点（手鼓左手定音鼓槌击鼓心、右手小鼓棒击近边圈，p0228）。★ 最值钱的一条评价：这些奏法**单项未必惊人，相加后的整体大于部分之和，会产生质的飞跃**（p0230–0231，例 VIII-41、例 VIII-42）。
+When any two of the three parameters take unconventional values at the same time, the results can be unexpected. One instrument may also use two or more playing modes at once, for example one player using different mallets in each hand to strike different points (on a hand drum, the left hand uses a timpani stick on the centre while the right hand uses a small drumstick near the rim; p0228). ★ The most valuable judgment here: these techniques may not be startling individually, but added together **the whole is greater than the sum of its parts and produces a qualitative leap** (p0230–0231; Ex. VIII-41, Ex. VIII-42).
 
-**编曲含义**：打击乐的特殊色彩靠组合堆出来，不靠找到某件冷门乐器。与其翻乐器表，不如在手头这几件上把三个参数排一遍。
+**Orchestration implication**: percussion's special colours are built through combination, not by finding some obscure instrument. Rather than browsing instrument catalogues, run through the three parameters on the instruments you already have.
 
 ---
 
-## 3. 有确定音高的一支
+## 3. Instruments with Definite Pitch
 
-### 3.1 键盘型四件：选哪件
+### 3.1 Four Keyboard Instruments: Which to Choose
 
-| 乐器 | 选它的理由 | 代价 |
+| Instrument | Reason to choose it | Cost |
 |---|---|---|
-| **木琴** | 基音与第一泛音成 1 : 3（十二度而非八度），闭管共鸣管又加强这个谐波，加上多用硬槌，**穿透力最强**，强奏时不会被全奏完全遮掩；最富效果的是快速跑句与单音轮奏（p0233、p0445） | 发音极短促，高音区几无共鸣，写不了长延音；幅度仅约 26 dB |
-| **马林巴** | 圆润深沉，**低音区最动人**；宜用于透明简朴的织体、室内乐式写法或独奏（p0238–0239） | 穿透力远不及木琴，全奏里指望不上；高音区比木琴缺光彩 |
-| **钟琴** | 高次泛音异常丰富，明亮清澈，音量不大但穿透力强；快速演奏时余响融成一片银色光辉（p0241–0242） | 最高音区共鸣小、音高有时判不准，现代琴装制音踏板正是为遏止这层残响 |
-| **颤音琴** | 共鸣筒口装电动转叶产生颤音，铿锵悦耳近似人声，**是唯一能长延音的一件**（共鸣筒开启时 a 音衰减 9 秒、封闭时可达 40 秒）（p0246–0247） | 幅度仅约 25 dB，低音区极易被盖，**全奏中不能指望**；用得过频听来甜腻 |
+| **Xylophone** | The fundamental and first overtone are in a 1 : 3 ratio (a twelfth rather than an octave); the closed resonator tube reinforces this harmonic; combined with mostly hard mallets, it gives the **strongest projection**, not fully masked even in a loud tutti; most effective in fast runs and single-note rolls (p0233, p0445) | Very short sound, almost no resonance in the upper register, so long notes cannot be written; amplitude only about 26 dB |
+| **Marimba** | Round and deep, **most beautiful in the low register**; suited to transparent, plain textures, chamber-style writing or solos (p0238–0239) | Projection far weaker than the xylophone's, so it cannot be relied upon in a tutti; the upper register lacks the xylophone's brilliance |
+| **Glockenspiel** | Very rich high partials, bright and clear; not loud, but it projects well; in fast playing the overlapping overtones blend into a silvery glow (p0241–0242) | Little resonance in the highest register, and pitch is sometimes hard to judge; the damper pedal on modern instruments exists precisely to suppress this lingering resonance |
+| **Vibraphone** | Motor-driven rotating vanes at the openings of the resonator tubes produce a vibrato; the sound is ringing and pleasant, close to the human voice; **the only one of the four that can sustain long notes** (with the tubes open, the a′ decays over 9 seconds, and up to 40 seconds when closed) (p0246–0247) | Amplitude only about 25 dB; the low register is easily masked, so **it cannot be relied upon in a tutti**; overused, it sounds cloying |
 
-击器配套：木琴强音用硬橡胶槌、弱音用毛毡槌；马林巴用软而重的槌，★ **误用木琴硬槌会让低音区音条振不充分，只剩判不出音高的敲击噪音**（p0237）；钟琴用铜槌清越响亮，木质或胶皮槌更像点击。颤音琴的电机开关与转速须在总谱分谱写清（p0447–0448）。
+Mallet pairing: the xylophone uses hard rubber mallets for loud notes and felt mallets for soft notes. The marimba uses soft, heavy mallets. ★ **Misusing hard xylophone mallets on the marimba leaves the low bars under-vibrating, so that only unpitched striking noise remains** (p0237). The glockenspiel uses brass mallets for a clear, ringing sound; wood or rubber mallets sound more like a click. The vibraphone's motor switch and speed must be specified in the score and in the parts (p0447–0448).
 
-**用法**：四件按「要不要被听见」与「要不要延续」两轴切开：要穿透选木琴，要延续选颤音琴，要温暖低音选马林巴，要高处的光选钟琴。四件都不擅长扛强力度的长线条。
+**Usage**: the four instruments divide along two axes, whether the sound must carry and whether it must sustain. For projection, choose the xylophone; for sustain, the vibraphone; for a warm low register, the marimba; for brightness at the top, the glockenspiel. None of the four is good at carrying a long line at high dynamics.
 
-### 3.2 键盘型的演奏限度（p0234–0237）
+### 3.2 Performance Limits of Keyboard Instruments (p0234–0237)
 
-四件通用的一套硬约束：
+These hard constraints apply to all four:
 
-- 基本技巧是双槌交替单击加偶尔连击；音阶、琶音与复杂句型里为调整槌法不得不用连击或交叉槌击。★ **应尽量减少连击与交叉槌击，尤其在没有休止的快速乐句中**
-- 和弦性奏法常见，双音到三音以上、极端可到六音；四音以上时每手各执两支甚至三支槌，**一手持二槌所奏音程不宜超过八度**
-- ★ **连续和弦进行中每换一次音程就要调一次槌距，所以速度不可能很快，最好给一点间歇**
-- 震音可以是同音反复，也可由二到四个不同音构成，用在颤音琴与马林巴上效果最好
-- 颤音琴另加一层：快速经过句或频繁换和声时余响会搅混，需精巧换踏板甚至用手制音（p0247）
+- The basic technique is alternating single strokes with occasional rolls. In scales, arpeggios and complex phrasing, rolls or crossed strokes are needed to adjust the mallet pattern. ★ **Minimise rolls and crossed strokes, especially in fast passages without rests.**
+- Chordal playing is common, from two notes up to three or more, and in extreme cases six notes. With four or more notes, each hand holds two or even three mallets, and **the interval played by one hand holding two mallets should not exceed an octave**.
+- ★ **In continuous chord progressions, the spacing of the mallets must be readjusted at every change of interval, so the tempo cannot be very fast; a little breathing space is best.**
+- Tremolos can repeat a single note or be built from two to four different notes; they work best on the vibraphone and marimba.
+- The vibraphone has one extra layer of difficulty. In fast passing figures or frequent harmonic changes the resonance becomes muddy, requiring precise pedalling or even damping by hand (p0247).
 
-**编曲含义**：键盘型打击乐的写作限度接近「双手各按一个双音」，远不是钢琴。快速换和声的段落写给它们，多半奏不出来或者浑成一片。梅西安在《色彩时阶》里为木琴与马林巴逐音标槌法（例 IX-3），是对这套限度的正面回应。
+**Orchestration implication**: the writing limit for keyboard percussion is close to "each hand playing one double-stop", and is far from the piano. Passages with rapid harmonic changes written for these instruments will mostly be unplayable or will blur into a single mass. Messiaen's writing for xylophone and marimba, which specifies the mallet pattern for each note (Ex. IX-3), is a direct response to these limits.
 
-### 3.3 记谱八度的陷阱与音高的灰带
+### 3.3 Notation Octave Traps and the Grey Zone of Pitch
 
-三处记谱冲突，两家说法并排：
+Three notational conflicts, with the two sources side by side:
 
-| 乐器 | Adler 上册 | 杨立青中册 |
+| Instrument | Adler, Vol. 1 | Yang Liqing, middle volume |
 |---|---|---|
-| **木琴** | 单独用高音谱表，实际发音比记谱**高一个八度**；若按实音记谱须在总谱开头说明（p0445） | 记谱方式不统一，有的按八度移调，有的采用实音记谱，写谱读谱前须先确认（p0234） |
-| **钟琴** | 移调乐器，实际音高总比记谱**高两个八度**；例外是勋伯格一类作曲家坚持实音记谱（Adler p0449） | 当今惯例比实音低两个八度；但浪漫时期与部分近代作品用的是键盘式钟琴，那时按只低一个八度记（p0242） |
-| **管钟** | 实际音高**和记谱一致**（p0450） | 按余响测定的实音记谱，比管身真正基音高约一个八度；且余响会让听感**比实际音高更低沉**（p0258） |
+| **Xylophone** | Written on its own treble staff; the actual sound is **one octave higher** than written. If written at sounding pitch, state this at the start of the score (p0445) | Notation is not uniform: some transpose by the octave, others write at sounding pitch; confirm before writing or reading (p0234) |
+| **Glockenspiel** | A transposing instrument: the actual pitch is always **two octaves higher** than written. The exception is composers such as Schoenberg, who insist on sounding-pitch notation (Adler, p0449) | The current convention is to write two octaves below the sounding pitch. But Romantic-era works and some modern works use a keyboard-type glockenspiel, for which the notation was one octave lower (p0242) |
+| **Tubular bells** | Actual pitch **matches the written pitch** (p0450) | Written at sounding pitch as judged by the resonance, which is about an octave above the tube's true fundamental. The reverberation also makes it **sound lower than its actual pitch** (p0258) |
 
-古钹两家一致：实际发音比记谱高两个八度（p0451、p0264）。
+On ancient cymbals the two sources agree: the actual sound is two octaves higher than written (p0451, p0264).
 
-音高灰带的判据是「说不准时按哪一类处理」。古钹频率极高、难以立即判定音高，德里布、R. 施特劳斯、奥尔夫、布里顿等干脆按无固定音高记谱（p0267）；牛铃衰减快、音高不稳定，一般按无固定音高记（p0303）。筒子鼓与通通鼓是最典型的并排：**Adler** 说它处在固定与非固定之间的灰地带，需要时可调出较准的音高（p0473）；**杨立青**说双膜上下面调成不同音高、非谐音成分大，一般按无固定音高处理，以高中低分类记在单线上，多只组合时各鼓音程距离至少三度以上（p0372）。
+The criterion for the grey zone is "when it is hard to say which category to handle it under". Ancient cymbals have very high frequencies and their pitch is hard to determine immediately, so Delius, R. Strauss, Orff and Britten all notated them as unpitched (p0267). Cowbells decay quickly and their pitch is unstable, so they are generally written as unpitched (p0303). Cylindrical drums and tom-toms are the most typical side-by-side case. **Adler** says they sit in a grey zone between fixed and unfixed pitch, and a reasonably accurate pitch can be drawn from them when needed (p0473). **Yang Liqing** says that the two heads are tuned to different pitches and carry a large non-harmonic component, so they are generally treated as unpitched, classified as high, middle or low and written on a single line. When several are combined, the intervals between the drums should be at least a third apart (p0372).
 
-**编曲含义**：灰带乐器写精确音高要付排练成本，听众却未必收得到。除非这个音高在和声里承担功能，否则按无固定音高写更划算。
+**Orchestration implication**: writing precise pitch for grey-zone instruments costs rehearsal time, and listeners may not perceive the result. Unless the pitch carries a harmonic function, writing them as unpitched is more economical.
 
-### 3.4 定音鼓
+### 3.4 Timpani
 
-**声学底子**：最靠近基音的突出泛音是五度（1 : 1.5）而非八度，实际听到的两音是泛音列的第二、第三分音；理论上真正的基音还要再低一个八度，但惯例仍按实际音高记谱（p0331）。★ **动态范围 pp 约 41 dB 到 ff 约 98 dB，落差可达 57 dB，居全部管弦乐器之首**。击器影响极大：同一音域里软槌约 48 dB、硬槌可达 82 dB。
+**Acoustic basis**: the most prominent overtone nearest the fundamental is a fifth (1 : 1.5), not an octave. The two pitches actually heard are the second and third partials of the harmonic series. In theory the true fundamental lies another octave lower, but convention still notates the actual pitch (p0331). ★ **The dynamic range runs from about 41 dB at pp to about 98 dB at ff, a spread of up to 57 dB, the widest of any orchestral instrument.** The implement has a huge effect: in the same range, a soft mallet gives about 48 dB and a hard mallet up to 82 dB.
 
-**音区**：按鼓身直径分五种规格，合计约两个八度。★ **每种规格在其应用音域的中心地带音质最完美、共鸣最佳；调得太低音准含混、共鸣受损，调得过高发音紧张苍白，甚至失去定音鼓本色**（p0332）。反过来也是手段：声部畸变到正常音域之外，可用来模仿蒂姆巴尔鼓一类无确定音高的鼓（例 IX-77）。
+**Range**: the drums come in five sizes, defined by the diameter of the drum body, covering about two octaves in total. ★ **Each size sounds best, with the purest tone and the best resonance, in the central part of its useful range. Tuned too low, the pitch becomes vague and the resonance suffers; tuned too high, the sound becomes tense and pale, and may even lose the character of the timpani** (p0332). The reverse also works as a tool: when a part is pushed beyond the normal range, the timpani can imitate unpitched drums such as timbales (Ex. IX-77).
 
-**和声上的硬判据**：★ 定音鼓音高若与乐曲所需的正确音高太接近（比如相差二度），会让**管弦乐其余和声成分听起来像是建立在「错误」的定音鼓音高上**（p0443）。另一面，无确定音高的打击乐与周围有确定音高的打击乐融合时，能增强根音、成为和弦中和谐的组成部分。
+**A hard harmonic criterion**: ★ If the timpani pitch is too close to the correct pitch the piece requires (for example, a second away), **the rest of the orchestral harmony will sound as though it is built on a "wrong" timpani pitch** (p0443). On the other hand, when unpitched percussion blends with surrounding pitched percussion, it can reinforce the root and become a harmonious part of the chord.
 
-**演奏限度与技法**：
+**Performance limits and techniques**:
 
-- 调音要提前标（F muta in E 一类）。老式螺旋式改一个大二度需 5 至 10 秒，踏板式可瞬间完成（p0334）。写渐次转调的段落按乐器类型留时间
-- ★ 交叉槌击：音高频繁变换、尤其同向连续跳进的快句里常需右槌打低音、左槌打高音，**速度极快时过于频繁的交叉槌击技术困难极大，甚至根本奏不出来**（例 IX-80）
-- 滚奏震音由逐槌交替单击构成，是乐队音响大幅增强与衰退的常用手段（例 IX-82）。和声性奏法可由一名乐手在两架甚至四架鼓上进行，每手各执两槌（p0335）
-- 加力度用双槌同击一鼓加很重的硬槌；减力度用弱音器奏法（p0336）
-- ★ 级进滑奏是踏板式最有特色的一项，上行效果最明显。**滑奏两音下方标连线表示单击滑奏、尾音不必再击；去掉连线则乐手必须在滑到位后把结尾音明确敲出来**，通常在另一鼓上（p0336–0337，例 IX-84）
-- 记谱：第一小节或之前标明调音，各鼓由大及小编号；两鼓之间的震音要标明是定量还是不定量（p0333、例 12-27）
+- Tuning changes must be marked in advance (for example, *F muta in E*). Older screw-tuned drums need 5 to 10 seconds to change by a major second; pedal drums can do it instantly (p0334). For passages with gradual modulation, allow time according to the instrument type.
+- ★ **Crossed strokes**: in fast passages with frequent pitch changes, especially consecutive leaps in the same direction, the right mallet often has to strike the low note and the left the high note. **At very fast speeds, too-frequent crossed strokes are extremely difficult or simply unplayable** (Ex. IX-80).
+- A roll is alternating single strokes with each mallet, and is a common means of greatly increasing or decreasing the orchestral sound (Ex. IX-82). Harmonic playing can be done by one player on two or even four drums, with two mallets in each hand (p0335).
+- To increase dynamics, use double mallets striking one drum with very heavy hard mallets; to decrease them, use the muted technique (p0336).
+- ★ **Stepwise glissando** is the most distinctive feature of pedal timpani, and it is most effective going up. **A tie beneath a two-note slur marks a single-stroke glissando, in which the final note is not struck again. Without the tie, the player must clearly strike the final note once the slide reaches its target**, usually on another drum (p0336–0337; Ex. IX-84).
+- Notation: state the tuning at or before bar 1, and number the drums from largest to smallest. For a roll between two drums, mark whether it is measured or unmeasured (p0333; Ex. 12-27).
 
-**用法**：定音鼓是组里动态跨度最大、也最能单独扛住一个段落的一件。它的两个限度是调音时间与交叉槌击密度，都能在写谱阶段算清。
+**Usage**: the timpani is the member of the group with the largest dynamic span, and the one that can carry a passage on its own. Its two limits, tuning time and the density of crossed strokes, can both be calculated at the writing stage.
 
-### 3.5 定音鼓外围的有音高鼓类
+### 3.5 Pitched Drums Around the Timpani
 
-| 乐器 | 补什么 | 代价 |
+| Instrument | What it adds | Cost |
 |---|---|---|
-| **可转通通鼓** | 有共鸣箱者音色接近定音鼓而颗粒更清晰、音域更宽，几乎沿用定音鼓全部技巧（p0339、p0457） | ★ 乐手常要腾一只手转鼓圈改调音，**此时只能单槌敲击，也奏不出踏板式那样的快速级进滑音** |
-| **蒂姆巴尔鼓** | 更有金属质感与穿透力；用毡槌可向上扩展定音鼓音域，也可作手鼓音色链的中间环节（p0382） | 可调音域大致只在五度以内，旋律化的鼓语超出就实现不了 |
-| **波般姆鼓** | 手指或软击器敲击时深沉清晰、与马林巴相类（p0342） | ★ 改用硬击器会让高频噪音盖掉本色 |
+| **Pedal tom-toms** (rotatable tom-toms) | Those with a resonating shell approach the timpani's sound, with clearer articulation and a wider range; they can use nearly all timpani techniques (p0339, p0457) | ★ Players often must free a hand to turn the hoop and change pitch, **so they can only strike singly and cannot produce the fast stepwise glissandos of pedal timpani** |
+| **Timbales** | More metallic texture and penetration. With felt mallets, the range can be extended upward beyond the timpani's, and it can serve as a link in a chain of hand-drum timbres (p0382) | The adjustable range is only about a fifth; melodic drum language beyond that cannot be realised |
+| **Bombo drum** | Deep and clear when played with fingers or soft implements, similar to the marimba (p0342) | ★ Switching to hard implements lets high-frequency noise drown out its character |
 
-★ 里盖蒂在《钢琴协奏曲》里用三只最高的可转通通鼓，不定具体音高，只要求彼此相隔四度（p0341）。**这条可迁移：有音高鼓类可以只按音程关系配置，不必钉死绝对音高。**
+★ Ligeti, in his *Piano Concerto*, uses three of the highest pedal tom-toms without specifying their exact pitches, requiring only that they be a fourth apart from each other (p0341). **This is transferable: pitched drums can be configured by interval relations alone, without fixing absolute pitch.**
 
 ---
 
-## 4. 无确定音高的一支
+## 4. Instruments Without Definite Pitch
 
-### 4.1 金属大件：大锣、拱锣、钹、吊钹
+### 4.1 Large Metal Instruments: Tam-Tam, Gong, Cymbals, Suspended Cymbal
 
-先分清名实。★ **拱锣（Gong）与大锣（Tam-tam）是两件东西**（p0261）：拱锣锣面中央有锣帽、锣边深，大锣锣面平或浅碟、无锣帽；同直径下拱锣更深沉、高次谐音更少，且有相对明确的音高，大锣没有。麻烦在于**直径较小的大锣常被径直标成 Gong**，读谱写谱都要辨（p0280）。Adler 一侧并排：大多数锣没有确切定音，但亚洲锣有明确音高（p0465）。
+Start by sorting out the names. ★ **The gong (with boss) and the tam-tam are two different instruments** (p0261). The gong has a boss at the centre of its face and a deep rim, while the tam-tam's face is flat or shallow-dished with no boss. At the same diameter, the gong sounds deeper and has fewer high overtones, and it has a relatively definite pitch, which the tam-tam lacks. The trouble is that **smaller tam-tams are often simply labelled "Gong"**, so both reading and writing must distinguish them (p0280). Adler's side, placed alongside: most gongs have no definite pitch, but Asian gongs have a clear pitch (p0465).
 
-| 乐器 | 性能与判据 |
+| Instrument | Performance and criteria |
 |---|---|
-| **大锣** | 锣面比拱锣薄，高次泛音多得多，色彩咄咄逼人；动态 pp 约 40 到 ff 约 90 dB。★ **起振迟缓，音响的充分展示需要比别的乐器更长的时间**，不适合快速交替与急促节奏点（p0280–0281） |
-| **拱锣** | 起振也慢，★ **强奏点常需提前一点演奏，中速时约提前一个十六分音符**；起振与衰减都长，滚击震音只要稍快一点连续单击即可且常自带渐强；快速或繁复节奏型很容易因余响浑浊（p0262–0263） |
-| **钹（双钹）** | 单击须略倾斜使上缘先触再整体碰合；扬击（击后迅速把钹面向听众扬起）极强烈辉煌，用于最大化强奏威势；弱奏只以钹边轻碰。★ **双钹滚奏强奏时异常强烈但有时不均衡，不及吊钹双槌震音**（p0275–0277） |
-| **吊钹** | 基本技巧只有单击与滚击，但灵活性远胜双钹，能奏十六分音符三连音一类快速节奏型。★ **滚击效果特别好，是渲染气氛、强调乐队渐强渐弱最常见的用法**（p0279–0280）。记谱最好注明敲击部位，否则乐手默认敲边缘（p0462） |
+| **Tam-tam** | Its face is thinner than a gong's, with far more high overtones; the colour is aggressive. Dynamics range from about 40 dB at pp to about 90 dB at ff. ★ **It is slow to start, and its full sound takes longer to develop than that of other instruments, so it is not suited to fast alternation or rapid rhythmic points** (p0280–0281) |
+| **Gong** | Also slow to start. ★ **Strong accents often must be played slightly early, about a sixteenth note ahead at moderate tempo.** Both attack and decay are long. A roll needs only slightly faster successive strokes and often has a natural crescendo. Fast or intricate rhythms easily become muddy with resonance (p0262–0263) |
+| **Cymbals (pair)** | Single strokes are struck at a slight angle so that the top edge touches first and then the whole face meets. The **lift** (after striking, quickly raising the cymbal face toward the audience) is extremely powerful and brilliant, and is used to maximise the impact of loud passages. Soft passages use only a light edge touch. ★ **Rolls on a pair of cymbals at loud dynamics are unusually intense but sometimes uneven, and inferior to a two-stick tremolo on a suspended cymbal** (p0275–0277) |
+| **Suspended cymbal** | Its basic techniques are only single strokes and rolls, but it is far more flexible than a pair of cymbals and can play fast rhythmic figures such as sixteenth-note triplets. ★ **Rolls are especially effective, and are the most common device for creating atmosphere or emphasising the orchestra's crescendos and diminuendos** (p0279–0280). It is best to specify the striking point in the score; otherwise players default to the edge (p0462) |
 
-★ 大锣的击点控制自成一套（p0281–0282）：软重槌在锣心柔和敲击减少高次谐频、发音极深沉近似钟声；击点稍偏离锣心则锣身充分振动，得饱满浑厚乃至严峻的色彩；锣边（尤其硬击器）强击激发大量高次谐频，添强烈刺耳的不谐和成分。制音也分两头，锣心制音先掐掉基音，锣边制音先抑制高频。★ 大锣一般不宜奏过于复杂或过快的节奏型，**例外只有一个**：硬击棒在锣边正反两侧以不很强的力度快速交替敲击，此时激发的多为高频泛音，不威胁清晰度，反而形成生动的色调对比。
+The tam-tam's striking-point control is a separate system (p0281–0282). A soft, heavy mallet striking the centre softens the sound, reducing high overtones and giving an extremely deep sound close to a bell. Striking slightly off-centre lets the body vibrate fully, giving a full, rich or even stern colour. A strong strike on the rim, especially with hard implements, excites many high harmonics and adds intense, harsh dissonant content. Muting also works from two ends: muting the centre first cuts the fundamental, while muting the rim first suppresses the high frequencies. ★ The tam-tam generally should not play overly complicated or overly fast rhythmic figures, **and there is only one exception**: hard sticks alternately striking the rim on its front and back at moderate force. The sound excited is mostly high partials, which does not threaten clarity and instead forms a vivid tonal contrast.
 
-**用法**：大件金属的共同代价是时间，它们要时间起振、展开、衰减。凡是要求节奏点精确对齐的地方，要么提前敲，要么换乐器。
+**Usage**: the common cost of large metal instruments is time, because they need time to start, develop and decay. Where rhythmic points must align precisely, either strike early or change instrument.
 
-### 4.2 三角铁与金属小件
+### 4.2 Triangle and Small Metal Instruments
 
-★ **三角铁是这一族里最反常识的一件**：动态幅度仅约 25 dB（pp 约 48 到 ff 约 73），却是乐队中高次谐频最丰富的乐器之一，700 Hz 到 15500 Hz 之间有不下 39 个谐频、其中至少三分之一有相当强的峰值，**所以即使在强力度全奏中它的敲击声仍清晰可辨**（p0272）。单击理想击点在等腰三角形右边上方约三分之一处；略倾斜角度擦奏而非垂直击打，可减少敲击噪音并激发丰富高频。木质击器会突出低频分音、减少高频激发，色彩柔和精致，是它最有特征的非常规奏法（p0274）。Adler 补一条：弱奏效果比强奏显著，因为强音易让人疲惫且太突出（p0464）。★ 作者对滚奏的评价要留：这一奏法**已被到处滥用成俗套，且与电铃、电话铃声有「不幸的相似」**（辟斯顿语），用宜有节度。
+★ **The triangle is the most counter-intuitive member of this family.** Its dynamic range is only about 25 dB (from about 48 dB at pp to about 73 dB at ff), yet it is one of the orchestra's instruments richest in high harmonics, with no fewer than 39 partials between 700 Hz and 15,500 Hz, at least a third of which have fairly strong peaks. **So even in a loud full tutti, its strike remains clearly audible** (p0272). The ideal single-stroke point is about a third of the way up the right side of the isosceles triangle. Striking at a slight angle with a scraping motion, instead of a vertical hit, reduces striking noise and excites rich high frequencies. Wooden beaters emphasise the low partials and reduce high-frequency excitation, giving a soft, refined colour; this is its most distinctive unconventional technique (p0274). Adler adds that the effect is more striking at soft dynamics than at loud ones, because loud sounds easily become tiring and too prominent (p0464). ★ The author's judgment on the roll should be noted: this technique **has been overused everywhere to the point of cliché, and bears an "unfortunate resemblance" to electric bells and telephone rings** (Piston's phrase), so use it with restraint.
 
-其余金属小件：乐砧清亮短促、穿透力很强，强段落须用很重的金属锤，但**快速节奏型就得换轻击器**（p0313）；踩钹的加号与圈号是两种截然不同的音响，相合时喑哑，分离时余音袅绕（p0309）。
+Other small metal instruments: the anvil is clear and short, with very strong penetration. Strong passages need a very heavy metal hammer, but **for fast rhythmic figures, switch to lighter implements** (p0313). The plus sign and the circle sign for the hi-hat (foot-operated cymbals) are two completely different sounds: closed, the sound is muffled; open, it rings on (p0309).
 
-**编曲含义**：金属小件的判据是穿透力而非音量。三角铁与乐砧能穿过全奏，指钹、风鸣排钟、古钹音量太小，只能活在稀朗织体与静谧段落里（p0318）。
+**Orchestration implication**: for small metal instruments the criterion is penetration rather than volume. The triangle and anvil can cut through a full tutti. Finger cymbals, wind chimes and ancient cymbals are too quiet and can only live in thin textures and quiet passages (p0318).
 
-### 4.3 木质类与摇刮类
+### 4.3 Wood, Shaker and Scraper Types
 
-盒梆与木鱼都极灵活，几乎所有鼓类技巧（含滚击）都适用，主要用来强调重要节奏点或奏固定音型（p0288）。★ Adler 警告：**木鱼不如盒梆结实，硬橡胶、塑料、木质鼓键都不可用**（p0467）。响棒穿透力很强却★ **较少用于快速繁复的节奏花样**（p0287）。响板幅度只有约 13 dB 却极清脆；★ 它惯常带西班牙与拉美联想，**用于纯交响语境时要刻意规避这层联想**（p0284）。
+Wood blocks and temple blocks are both very agile. Almost all drum techniques, including rolls, apply to them, and they are mainly used to emphasise important rhythmic points or to play fixed patterns (p0288). ★ Adler warns that **the temple block is less sturdy than the wood block, and hard rubber, plastic and wooden sticks are all unusable on it** (p0467). Claves have very strong penetration, but ★ **are rarely used for fast, intricate rhythmic patterns** (p0287). Castanets have an amplitude of only about 13 dB but are extremely crisp. ★ **They habitually carry Spanish and Latin American associations, so in a purely symphonic context this association must be deliberately avoided** (p0284).
 
-摇刮类有一处两家相反，并排：**Adler** 说管弦乐里常用刮响器代替摇响器，因为后者在管弦乐片段中显得单薄，「在摇响器上演奏单音是很危险的，使用刮响器演奏单音的效果要好得多」，摇响器宜用于力度很强的段落或滚奏（p0470）；**杨立青**说摇响器靠摇柄转速可以相当精确地奏出各种节奏组合，手指抵住木舌施压还能造成明显力度变化，**在渐强渐弱的震音上特别有效**（p0295）。★ 取舍按用途分：要单个节奏点用刮响器，要渐强渐弱的连续噪音带用摇响器。
+Shakers and scrapers are one point where the two sources diverge, shown side by side. **Adler** says orchestras often use a guiro in place of a maraca, because the maraca sounds thin in orchestral passages. "Playing single notes on a maraca is risky; playing single notes on a guiro works far better." Maracas are best for very loud passages or rolls (p0470). **Yang Liqing** says that, through the speed of the handle, a maraca can produce all kinds of rhythmic combinations with considerable precision, and that pressing a finger against the wooden tongue causes clear changes in dynamics. It is **especially effective on crescendo and diminuendo tremolos** (p0295). ★ The choice follows the purpose: for a single rhythmic point, use a guiro; for a continuous noise band that crescendos and diminuendos, use a maraca.
 
-砂槌两种相反用法都成立（p0298–0299）：作拉美风格的弹性节奏型；或作抽象的纯技术性颜料，多名乐手各执不同规格、各用不同奏法分层。
+Sand blocks have two opposite uses, and both are valid (p0298–0299). They can serve as elastic rhythmic figures in a Latin American style, or as abstract, purely technical colour, with several players each holding different sizes and playing different techniques in layers.
 
-**用法**：木质与摇刮类的定位是节奏点与噪音带，几乎都不适合快速繁复的花样，也几乎都在厚织体里消失（砂槌尤甚，只宜用于透明织体或重奏编制）。
+**Usage**: wood, shaker and scraper types are positioned as rhythm points and noise bands. Almost none suit fast, intricate figures, and nearly all disappear in thick textures. Sand blocks especially are suited only to transparent textures or chamber-scale lineups.
 
-### 4.4 鼓类：小鼓、大鼓、铃鼓
+### 4.4 Drums: Snare Drum, Bass Drum, Tambourine
 
-**小鼓**。上下鼓膜张力总有细微差异，非谐音成分大，判不出明确音高。★ **动态范围很窄**：棒击 pp 56 到 ff 82 差 26 dB，刷帚扫击差 24，刷帚摩擦鼓膜只差 11（p0344–0345）。基本奏法为单击、双击（flam）、三击（drag）、四击（ruff）、滚击（roll）；★ **单击句型不能发挥小鼓特性，听来单调乏味，较少使用**（p0346）。松开响弦得闷暗音色，代价是失去响弦特有的沙沙声。★ **声部若节奏型过于简单，乐手常会按习惯即兴加花，所以要尽可能仔细精确地标明演奏法**（p0346），这与 §1.3 是同一条原则的两面。边圈棒击两种并排（p0352–0354）：标准 rim shot 得清脆枪击声，**但需要准备时间，速度不能太快**；hoop crack 用同一鼓棒同时敲鼓膜与边圈，效果打折，换来演奏便利与可嵌入复杂节奏型。
+**Snare drum.** The tension of the upper and lower heads always differs slightly, and the non-harmonic content is large, so no clear pitch can be determined. ★ **Its dynamic range is very narrow**: stick strikes span 26 dB from pp 56 to ff 82, brush sweeps span 24, and brush rubbing on the head spans only 11 (p0344–0345). The basic techniques are single stroke, flam, drag, ruff and roll. ★ **Single-stroke patterns do not bring out the snare drum's character; they sound monotonous and dull, so they are rarely used** (p0346). Loosening the snares gives a muted, dark tone, at the cost of losing the snares' characteristic rattle. ★ **If a part's rhythm is too simple, players tend to improvise embellishments out of habit, so the playing technique must be marked as carefully and precisely as possible** (p0346); this is the other side of the same principle as §1.3. Two rim-stroke methods are set side by side (p0352–0354). The standard rim shot gives a crisp gunshot-like crack, **but it needs preparation time and cannot be taken too fast**. The hoop crack uses the same stick to strike the head and the rim at once; the effect is diminished, but in return it is easier to play and can be inserted into complex rhythmic patterns.
 
-**大鼓**。★ **强奏时的重音或滚奏会淹没整个乐队其余部分**（p0472）。反应比小鼓慢，适合缓慢的重复音与快速干脆而不连续的击打；只敲一下就能开始或结束一段打击乐段落。为获最佳共鸣须用吊带悬挂让鼓身自由振动（p0354）。★ 它最容易出的问题是浑浊：发音低沉、余响不绝，**复杂节奏花样会糊**（p0356，例 IX-101）；解法是换小军鼓槌弱击，鼓膜振不充分，牺牲共鸣饱满换取清晰（例 IX-102）。滚击震音用双头槌弱力度效果好，强奏时力度不易均匀，所以有时指定两支鼓槌（p0357）。
+**Bass drum.** ★ **Accents or rolls at loud dynamics will swamp the rest of the orchestra** (p0472). It responds more slowly than the snare drum, suiting slow repeated notes and fast, crisp, non-continuous strikes; a single stroke can begin or end a percussion passage. For the best resonance, the drum is hung on straps so that the shell vibrates freely (p0354). ★ Its most common problem is muddiness: the sound is deep and the reverberation lingers, so **complex rhythmic figures blur** (p0356; Ex. IX-101). The remedy is to switch to snare sticks and strike softly; the head then does not vibrate fully, trading full resonance for clarity (Ex. IX-102). Rolls with double-headed mallets at soft dynamics work well, but at loud dynamics the sound is hard to keep even, so two beaters are sometimes specified (p0357).
 
-**铃鼓**。鼓膜受击本身略干枯，真正有穿透力的是鼓身震颤带动金属铃片相撞的哗啦声。动态更窄：手掌拍击差 21 dB，滚击只差约 15（p0359）。两种滚奏分工明确（p0361）：**摇击法**（shake）可用于任何力度与长度，通常用于强力度滚奏；**搓击法**（拇指沿鼓皮边缘回转搓动）得密集强烈的震音，用于弱音滚奏，★ **但有时长上限，强奏一般不超过 3 秒、弱奏约 8 秒**。换鼓棒类击器可奏极快的复杂节奏型，代价是滚击密度不及手法（p0363）。
+**Tambourine.** The strike on the head is itself rather dry; what truly projects is the jingling of the shell's vibration setting the metal jingles knocking together. Its dynamic range is narrower still: a hand slap spans only 21 dB and a roll only about 15 (p0359). The two rolling methods have clearly defined roles (p0361). The **shake** can be used at any dynamic and length, and is usually used for loud rolls. The **rub** (the thumb turning around the edge of the head) gives a dense, intense tremolo and is used for soft rolls. ★ **But there is a duration limit: loud rolls generally should not exceed 3 seconds, and soft rolls about 8 seconds.** Using stick-type implements allows very fast, complex rhythmic figures, at the cost of roll density, which cannot match the hand techniques (p0363).
 
-**编曲含义**：这三件的动态幅度都远小于弦乐管乐，靠力度记号做对比不灵，真正的手段是换击器、换击点、开关响弦。大鼓是唯一一件会盖掉全奏的，写 ff 前先算余量。
+**Orchestration implication**: all three have dynamic ranges far smaller than those of strings or winds, so contrast through dynamic markings is ineffective. The real tools are changing the implement, changing the striking point and opening or closing the snares. The bass drum is the only one of these that can drown out a full tutti, so calculate the headroom before writing ff.
 
-### 4.5 手鼓群、通通鼓与同族色调
+### 4.5 Hand Drum Groups, Tom-Toms and Related Timbres
 
-邦戈与康嘎共用一套技法（p0366–0368）：封闭式（手指击后停留在鼓膜上）与开放式（击后迅即离开）；闷击是一手按住鼓膜、另一手在鼓心奏；变音用拇指在鼓皮边缘施压。邦戈大小两鼓常调成相距四度以上，习惯上仍按无固定音高记在单线上。两条代价：★ **乐队强力度全奏中邦戈必须改用小鼓棒才能取得音量平衡**，失去的是手指演奏的音色细节；★ **用击器敲康嘎常会使它失去本身的色彩个性，无特殊需要时宜慎用**（p0371）。多种手鼓合用时可随力度增涨依次由指击转手击，得音色与音量的双重递进（p0369）。
+Bongos and congas share one set of techniques (p0366–0368): closed (the fingers stay on the head after striking) and open (the fingers leave immediately after striking). A muted stroke has one hand pressing the head while the other plays at the centre; pitch change is achieved by pressing the rim of the head with the thumb. The large and small bongos are often tuned a fourth or more apart, and by convention are still written as unpitched on a single line. Two costs apply. ★ **In a full tutti at strong dynamics the bongos must switch to small drumsticks to balance the volume**, losing the finger-playing timbral detail. ★ **Striking the conga with implements often strips it of its own colouristic character, so use this sparingly unless there is a special need** (p0371). When several hand drums are combined, the playing can progress from finger strokes to hand strokes as the dynamic rises, gaining a double progression in timbre and volume (p0369).
 
-**通通鼓**最常见击器是小鼓棒，多只组合时各鼓音程距离至少三度以上。★ **较弱力度中它的色彩与定音鼓颇相近，常用来扩展定音鼓上方的音域，或与定音鼓直接对照，形成既相类又有细腻微差的呼应**（p0373，例 IX-117）。与定音鼓同谱时须用不同符头区分。同族其余按色调排（p0375–0385）：军鼓只偶作色彩调剂，响弦中鼓更闷暗而共鸣强，中鼓最晦暗。
+**Tom-toms**: the most common implement is the snare stick, and when several are combined, the intervals between drums should be at least a third. ★ **At softer dynamics its colour is quite close to that of the timpani, so it is often used to extend the range above the timpani, or set directly against it to create an echo that is similar yet has subtle differences** (p0373; Ex. IX-117). When written on the same stave as timpani, use different notehead shapes to tell them apart. The rest of the family is ordered by tone colour (p0375–0385): the snare drum is only occasionally used as colour; the snare tenor drum is darker and more resonant; the tenor drum is the darkest.
 
-**用法**：这一族的价值在同类色调里的浓淡。一只中鼓配两只不同规格大鼓做低音层的浓淡（p0378），或大鼓木槌滚击配中音鼓与三只去弦小鼓的上下行交替（p0358），都是同一个思路：不引入新音色，只在一种音色内部分层。
+**Usage**: the value of this family lies in the gradations of shade within a single tone colour. Pairing one tenor drum with two bass drums of different sizes for layered gradations in the bass (p0378), or alternating a bass drum rolled with wooden sticks against a mid-range drum and three snareless small drums ascending and descending (p0358), both follow the same idea: no new timbre is introduced; instead, layers are built within one timbre.
 
-### 4.6 气鸣与噪音类：甩不掉的语义
+### 4.6 Aerophone and Noise Types: Meaning That Cannot Be Shaken Off
 
-这一族使用率低、声部简单，一般交给打击乐手兼奏，所以**声部也不宜写复杂**（p0388）。物理上，音高、力度与滑音被同一个参数联动控制：警报器三者都取决于页片孔洞数与转速，转速变化时必然伴随音高滑动（p0390）。记谱上，哨子必须写清种类，汽笛必须注明音量及类型（p0460、p0476）。
+This family is used infrequently and has simple parts, and is generally handed to percussionists who double on it, so **its parts should not be written complicated either** (p0388). Physically, pitch, dynamics and glissando are controlled by the same parameter: the siren's pitch and volume both depend on the number of holes in the perforated disc and its rotation speed, so a change of speed necessarily brings a pitch glide (p0390). In notation, whistles must specify their type, and the steam whistle must indicate its volume and type (p0460, p0476).
 
-★ 这一族真正的判据是语义。作者的两条评价都要留：其一，亨德米特在《室内音乐第一号》里努力让警报器抽象化、按纯音乐方式处理，**但大多数情况下，警报器给人的听觉印象总也回避不开现实生活赋予它的「法定含义」：威胁、不祥与灾难**（p0391–0392）；其二，汽车喇叭一类效果**必须十分谨慎，因为这种表现手法已经用得太滥了**（p0477）。反过来，认下这层语义再用是成立的，里盖蒂用十二只汽车喇叭整组取代小号长号，换来恶梦般的荒诞（p0394）。
+★ The true criterion for this family is meaning. Two of the author's judgments must be recorded. First, Hindemith, in his *Kammermusik No. 1*, strove to make the siren abstract and to treat it as pure music. **But in most cases, the siren's aural impression still cannot avoid the "legal meaning" that real life has given it: threat, ill omen and disaster** (p0391–0392). Second, effects such as car horns **must be used with great caution, because this expressive device has already been overused** (p0477). Conversely, accepting this layer of meaning and using it deliberately is valid: Ligeti replaces trumpets and trombones with a whole group of twelve car horns, creating a nightmarish absurdity (p0394).
 
-**编曲含义**：选这一族等于同时选了一个具体的现实联想，而这个联想会盖过抽象意图。要么认它，要么别用。
+**Orchestration implication**: choosing this family amounts to choosing a specific real-world association at the same time, and that association will overpower any abstract intention. Either accept it or do not use it.
 
 ---
 
-## 5. 组内组合与进乐队
+## 5. Combinations Within the Group and Entry into the Orchestra
 
-### 5.1 材质色块对置
+### 5.1 Blocks of Material Set Against Each Other
 
-★ 打击乐组内部最有效的组织法是**按材质分块，再让块与块对置**（p0289）：盒梆与木琴、马林巴结合成木质音色块，颤音琴、牧铃、牛铃与铁罐敲击结合成纯金属音色块，两块之间形成极强烈的反差。中国乐器上的版本：多种中国钹以闷击、打边、扬击交替，加拱锣组成金属性色调，与中国大鼓、通通鼓、排鼓的膜鸣色调作呼应性对置，效果「令人难以忘怀」（p0311，例 IX-57）。
+★ The most effective way to organise the inside of the percussion group is **to divide by material into blocks, then set the blocks against each other** (p0289). Wood block with xylophone and marimba combine into a wooden timbral block; vibraphone, pastoral bells, cowbells and metal can sounds combine into a purely metallic timbral block; the two blocks form an extremely strong contrast. A Chinese-instrument version: several Chinese bo cymbals (bó) alternating between muted strokes, edge strikes and lifts, with a gong added, form a metallic tonal colour, set responsively against the membranophonic colour of the Chinese big drum (dàgǔ), tom-toms and pai drums (páigǔ). The effect is "unforgettable" (p0311; Ex. IX-57).
 
-这与 SKILL §3.3「染色」角度不同：染色是两个音色叠在同一条线上，这里是两块音色在时间上交替，接缝的做法仍走 SKILL §3.6。
+This differs from the SKILL §3.3 "colouring" approach. Colouring layers two timbres on the same line; here, two timbral blocks alternate in time, and the seams between them still follow SKILL §3.6.
 
-**用法**：打击乐组超过三件时，先按材质归成两三块，再决定块与块的进出顺序。一件件排是排不出结构的。
+**Usage**: when the percussion group has more than three instruments, first sort them into two or three blocks by material, then decide the order in which the blocks enter and exit. Arranging the instruments one by one cannot produce a structure.
 
-### 5.2 建高潮与撑全奏
+### 5.2 Building a Climax and Supporting the Full Orchestra
 
-**建高潮有两法**（p0522）：用固定音型或别的可重复语汇辅助建立；或把打击乐当保留乐器，一直等到高潮时刻才出现。
+**There are two ways to build a climax** (p0522): support it with a fixed figure or another repeatable vocabulary; or treat percussion as a reserved instrument, withholding it until the moment of the climax.
 
-★ 具体的递进模型值得照抄（p0522，例 14-21，德彪西《夜曲》「节日」）：定音鼓先以很弱而平稳的八分音符打底；律动持续到某处改为一拍一击；随后固定音型结束，定音鼓转为演奏主要节奏型推向高潮；在高潮形成过程中，小军鼓与钹**依次晚于定音鼓进入**。要点是一件乐器先单独扛住铺垫，其余逐层加入协助冲顶，全体一起进就没有坡度。
+★ A concrete escalation model is worth copying (p0522; Ex. 14-21, Debussy's *Nocturnes*, "Fêtes"). The timpani first lays a foundation with very soft, steady eighth notes. The pulse continues until somewhere it changes to one stroke per beat. Then the fixed figure ends, and the timpani switches to playing the main rhythmic figure and pushes toward the climax. During the formation of the climax, the snare drum and cymbals **enter in succession, each later than the timpani**. The key point: one instrument first carries the groundwork alone, and the others join in layers to help push to the peak. If everyone enters together, there is no slope.
 
-**撑全奏**（p0541–0546）：定音鼓与钹在强拍上给节奏骨架；定音鼓也可用固定音型在旋律主题下方支撑，力度上甚至可以压倒整个乐队；定音鼓（硬槌、始终断奏）、大鼓（始终重音）、大锣三件合起来能给整个片段添沉重的行进色彩，与低音木管铜管的长音对比以增厚重感。
+**Supporting the full orchestra** (p0541–0546): the timpani and cymbals provide the rhythmic skeleton on the strong beats. The timpani can also use a fixed figure to support the melodic theme from below, and dynamically can even overpower the whole orchestra. The timpani (hard mallets, always detached), the bass drum (always accented) and the large gong together can add a heavy marching colour to a whole passage, and contrast with sustained notes from the low woodwinds and brass to thicken the weight.
 
-**编曲含义**：打击乐在高潮里负责坡度，顶点靠铜管；坡度来自密度递进与依次进入。
+**Orchestration implication**: percussion is responsible for the slope in a climax, while the peak belongs to the brass. The slope comes from increasing density and from successive entries.
 
-### 5.3 着色与重音强调
+### 5.3 Colouring and Accent Emphasis
 
-用法五的做法（p0547–0549）：有音高打击乐可以重复乐队别处正在奏的踏板音，把某种氛围强化到成为该处最醒目的音色（例 14-29：古钹以 ppp 重复第三圆号的踏板音 E，配竖琴与弦乐拨奏）；★ 打击乐组也可以被写成整体音乐材料的一部分，甚至在某种程度上取代主题材料，**关键在于用得既有创造性又有品位，且运用得节省**（p0549）。
+The practice of usage five (p0547–0549): pitched percussion can repeat a pedal note that the orchestra is playing elsewhere, intensifying an atmosphere until it becomes the most conspicuous colour at that point (Ex. 14-29: an ancient cymbal repeats the third horn's pedal E at ppp, together with harp and string pizzicato). ★ Percussion can also be written as part of the overall musical material, and can even replace thematic material to some extent. **The key is to use it creatively and with taste, and to use it sparingly** (p0549).
 
-逐例的重音强调法（p0515–0520，科普兰《阿帕拉契亚之春》，例 14-16 至例 14-20）：木琴强调弦乐每一个带重音的高音；塔波鼓支持圆号低音区的阻塞音重音；三角铁强调小提琴后半拍的重音，并且在强重音出现前还能起铺垫作用；小军鼓先用刷子、再改鼓键敲鼓边，强调后半拍、弱化强拍。
+Case-by-case accent emphasis (p0515–0520; Copland, *Appalachian Spring*, Ex. 14-16 to Ex. 14-20): the xylophone emphasises each accented high note in the strings. The tabor supports the accented, blocked notes in the low register of the horns. The triangle emphasises the off-beat accents of the violins, and can also serve as a lead-in before a strong accent. The snare drum first uses brushes and then switches to sticks on the rim, emphasising the off-beats and weakening the strong beats.
 
-**用法**：着色是打击乐性价比最高的用途，它不增加新材料、只加光。判据是「这个重音够不够重要到值得加一件乐器」，不是「这里空不空」。
+**Usage**: colouring is the highest-value use of percussion, because it adds no new material and only adds brightness. The criterion is "is this accent important enough to justify adding an instrument?", not "is this spot empty?".
 
-### 5.4 谁能被听见：动态范围表
+### 5.4 Who Can Be Heard: Dynamic Range Table
 
-| 乐器 | pp | ff | 幅差 |
+| Instrument | pp | ff | Span |
 |---|---|---|---|
-| **定音鼓** | 41 | 98 | **57**（居管弦乐器之首） |
-| **管钟** | 35 | 86 | 51 |
-| **大锣** | 40 | 90 | 50 |
-| **大鼓** | 51 | 90 | 近 40 |
-| 小鼓（棒击） | 56 | 82 | 26 |
-| 木琴 | 51 | 77 | 26 |
-| 三角铁 | 48 | 73 | 25 |
-| 颤音琴 | 47 | 72 | 25 |
-| 钟琴（低音区） | 42 | 63 | 21 |
-| 铃鼓（手掌拍击） | 47 | 68 | 21 |
-| 响板 | 57 | 70 | **13** |
-| 小鼓（刷帚摩擦） | 44 | 55 | **11** |
+| **Timpani** | 41 | 98 | **57** (the widest among orchestral instruments) |
+| **Tubular bells** | 35 | 86 | 51 |
+| **Tam-tam** | 40 | 90 | 50 |
+| **Bass drum** | 51 | 90 | nearly 40 |
+| Snare drum (stick strike) | 56 | 82 | 26 |
+| Xylophone | 51 | 77 | 26 |
+| Triangle | 48 | 73 | 25 |
+| Vibraphone | 47 | 72 | 25 |
+| Glockenspiel (low register) | 42 | 63 | 21 |
+| Tambourine (hand slap) | 47 | 68 | 21 |
+| Castanets | 57 | 70 | **13** |
+| Snare drum (brush rub) | 44 | 55 | **11** |
 
-两条读法：
+Two ways to read this table:
 
-1. ★ **幅差小的乐器身上写渐强渐弱是白写**。响板、刷帚小鼓、铃鼓滚击只有十几分贝的余量，力度记号几乎不产生可闻变化，要对比只能换击器或换击点。
-2. ★ **穿透力与音量是两回事**。三角铁只有 25 dB 幅差却能穿过全奏，靠的是那 39 个高频谐峰；颤音琴同样 25 dB 幅差却在全奏里消失，因为能量集中在易被掩盖的频段。选乐器该问「它的频谱在当前织体里有没有空位」，问音量没有用。
+1. ★ **Writing crescendos and diminuendos on an instrument with a small span is wasted effort.** Castanets, brushed snare drum and tambourine roll have only a dozen decibels of range, so dynamic markings produce almost no audible change. To achieve contrast, change the implement or the striking point.
+2. ★ **Penetration and volume are different things.** The triangle has a span of only 25 dB but can cut through a full tutti, thanks to its 39 high-frequency partial peaks. The vibraphone has the same 25 dB span but disappears in a tutti, because its energy is concentrated in a frequency band that is easily masked. When choosing an instrument, ask whether its spectrum has room in the current texture; asking about its volume is not useful.
 
-郭文景《社火》一人多件的写法之所以成立，是因为切换点被安排在音乐的呼吸处（p0311）。
+Guo Wenjing's *Shehuo* works with one player holding several instruments, and this works because the switching points are placed at the breathing places in the music (p0311).
 
 ---
 
-## 6. 不进本节的部分
+## 6. Parts Not Covered in This Section
 
-| 内容 | 处理 |
+| Content | Treatment |
 |---|---|
-| 各件乐器的英寸与厘米规格、型号数量、音域端点 | 用时去原书查，本节只留影响写法的规格差 |
-| 1945 年后先锋派非常规击器的开放清单（硬币、链条、铁尺、蝇拍、手套、布条，以及手掌、指关节、肘部、膝部） | 整套不进。它是开放集合，没有判据可循；需要时按 §2.5 的三要素排列法自行生成 |
-| 小件效果乐器的构造与来历（钢鼓、锯琴、弹音器、水晶杯、玻璃琴、晃铃、叉铃、铃树、手铃、响链、响石、树枝条、纸、风声机、缝鼓、木鼓、克维卡、钦巴龙、口琴、滑管哨笛、咝声钹） | 只留带判据的那几条 |
-| 打击乐主导的重奏合奏曲目清单与练习建议 | 不进 |
-| 频段预算、谁和谁抢频率 | 走织体分层 |
-| 进场退场时机与能量曲线 | 走编配结构一侧 |
-| 采样库的键位切换与打击乐音源选型 | 走制作工具一侧 |
-| 鼓组的真实化打法（底鼓军鼓录制、MIDI 鼓垫） | 走节奏组一侧 |
+| Inch and centimetre sizes, model numbers, range endpoints of each instrument | Look these up in the original book when needed; this section keeps only the size differences that affect writing |
+| The open-ended list of unconventional implements used by avant-garde composers after 1945 (coins, chains, metal rulers, flyswatters, gloves, strips of cloth, as well as palms, knuckles, elbows and knees) | Not included at all. It is an open-ended set with no criterion to follow; when needed, generate it yourself using the three-parameter arrangement method in §2.5 |
+| The construction and history of small effects instruments (steel drum, musical saw, twanger, crystal glasses, glass harmonica, rattles, fork bells, bell tree, hand bells, chain rattle, sounding stones, branch sticks, paper, wind machine, slit drum, wood drum, cuíca, cimbalom, harmonica, slide whistle, sizzle cymbal) | Only the few entries that carry a criterion are kept |
+| Lists and practice suggestions for percussion-led ensemble works | Not included |
+| Frequency-band budgeting and who competes with whom for frequencies | Handled by texture layering |
+| Timing of entries and exits, and energy curves | Handled on the arrangement-structure side |
+| Key switching in sample libraries and selection of percussion sound sources | Handled on the production-tools side |
+| Realistic drum-kit playing (recording bass and snare drums, MIDI drum pads) | Handled on the rhythm-section side |

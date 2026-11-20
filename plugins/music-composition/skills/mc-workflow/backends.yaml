@@ -1,22 +1,22 @@
-# 生成后端能力档案 —— 数据，不是 skill
+# Generation backend capability profiles — data, not a skill
 #
-# 加一个新模型 = 在这里加一个块，**不动任何 skill**。
-# `mc-render-compile` 读这份档案决定怎么编译 ARR-SPEC；
-# 算照做率时读 honors 决定哪些项计分。
+# To add a new model, add a block here; **do not touch any skill**.
+# `mc-render-compile` reads this profile to decide how to compile ARR-SPEC;
+# when computing compliance, `honors` is read to decide which items are scored.
 #
-# ★ honors 的三个取值，决定照做率怎么算：
-#     exact —— 后端能精确执行这个字段 → 计分，不达标就是它没做到
-#     hint  —— 只能作为提示影响生成    → 计分，但权重打折
-#     none  —— 后端根本不接受这个字段  → **排除计分**，标注"本后端不支持"
-#   把 none 的项算成 0 分是错的：Suno 从来没被告知精确和弦，
-#   拿"和弦没跟上"扣它的分等于惩罚它做不到的事。
+# ★ The three values of `honors` determine how compliance is computed:
+#     exact — the backend can execute this field precisely → scored; falling short means it did not do it
+#     hint  — the backend can only influence generation as a suggestion → scored, but down-weighted
+#     none  — the backend does not accept this field at all → **excluded from scoring**, marked "not supported by this backend"
+#   Scoring `none` items as 0 is wrong: Suno was never told exact chords,
+#   so docking its score for "chords not followed" penalizes it for something it cannot do.
 #
-# ★ transport 记录"这个后端通常跑在哪"，是数据，不是前提。
-#   本库的读者是 agent：mc-render-compile 产出的是各后端的输入值（prompt / ABC / 参数），
-#   用户用命令行、Python API 还是 ComfyUI 这类节点式载体去执行，由用户环境决定。
-#   取值：hosted（托管服务）/ local（本地权重）。known_carriers 列出已知能跑它的载体，仅供参考。
+# ★ `transport` records "where this backend usually runs"; it is data, not a precondition.
+#   The readers of this library are agents: mc-render-compile produces each backend's input values (prompt / ABC / parameters),
+#   and whether the user runs them from the command line, the Python API, or a node-based carrier such as ComfyUI is decided by the user's environment.
+#   Values: hosted (managed service) / local (local weights). `known_carriers` lists known carriers that can run it, for reference only.
 #
-# 调研日期：2026-09-15
+# Research date: 2026-09-15
 
 version: 2
 
@@ -27,24 +27,24 @@ backends:
     name: "YuE2 (3B)"
     transport: local
     known_carriers:
-      comfyui: [audio_yue2_text2music, audio_yue2_music_cover]   # 参考：该载体的模板名
+      comfyui: [audio_yue2_text2music, audio_yue2_music_cover]   # reference: template names for this carrier
     note: >
-      ★ 唯一能让 ARR-SPEC 被「执行」而不是「提示」的后端。
-      它分两步：符号规划（模型自己写 ABC）→ 从 ABC 合成音频。
-      **把第一步旁路掉**，把我们从 ARR-SPEC 编译出来的 ABC 直接送进第二步。
-      凡支持 YuE2 的载体都能这样接（官方脚本；ComfyUI 有原生节点）。
-      这是 mc-symbolic-score 的第一落点。
-      ★ 实测（2026-09-17）：注入的 ABC 用 L:1/32、人声线写在小写音名区、带 w: 行；L:1/16 会提前停一半，大写音区词会唱成含混元音。whisper 识别率：直出 76%、编译谱 56%，差距在旋律密度；细则见 mc-symbolic-score §6b。
+      ★ The only backend that lets ARR-SPEC be **executed** rather than **prompted**.
+      It works in two steps: symbolic planning (the model writes ABC itself) → synthesizes audio from that ABC.
+      **Bypass the first step**: feed the ABC we compile from ARR-SPEC directly into the second step.
+      Any carrier that supports YuE2 can be wired this way (official script; ComfyUI has a native node).
+      This is the first landing point for mc-symbolic-score.
+      ★ Measured (2026-09-17): injected ABC uses L:1/32, the vocal line is written in the lowercase note range with w: lines; L:1/16 stops halfway through, and words in the uppercase range come out as muddy vowels. Whisper recognition rate: direct output 76%, compiled score 56%; the gap lies in melodic density. Details in mc-symbolic-score §6b.
     license:
       code: Apache-2.0
       weights: CC-BY-NC-4.0
-      commercial_ok: false        # ★ 权重非商用，出街前必须确认
+      commercial_ok: false        # ★ weights are non-commercial; must be confirmed before release
     model_file: yue2_3b_int8_convrot.safetensors
     accepts:
       style_prompt: prose
       lyrics: text
-      symbolic_score: abc               # ★ 别的后端都没有
-      reference_audio: "cover 模板支持（保留原旋律换风格）"
+      symbolic_score: abc               # ★ no other backend has this
+      reference_audio: "cover template supported (keeps original melody, changes style)"
       seed: true
     honors:
       meta.key: exact
@@ -58,26 +58,26 @@ backends:
       vocal: hint
       mix_intent: none
     upstream_skill: >
-      官方仓库自带 skills/yue2-music/（SKILL.md 格式，含"检查音乐不变量"）。
-      ★ 不要重写——我们写 ARR-SPEC→ABC 的适配器，模型操作的知识引用它们的。
+      The official repo ships skills/yue2-music/ (SKILL.md format, including "check musical invariants").
+      ★ Do not rewrite it: we write the ARR-SPEC→ABC adapter, and the model's operating knowledge references theirs.
 
   # ═══════════════════════════════════════════════════════════
   - id: minimax-music-3
     name: "MiniMax Music 3"
     transport: local
     known_carriers:
-      comfyui: [audio_minimax_music_3]   # 参考：该载体的模板名
+      comfyui: [audio_minimax_music_3]   # reference: template names for this carrier
     note: >
-      托管 API 已对新用户关闭，但存在本地权重版
-      （ComfyUI 等载体原生支持），准入限制对本地版不适用。
-      官方描述：从文本 prompt 生成完整 5 分钟歌曲，结构稳定。
+      The hosted API is closed to new users, but a local-weights version exists
+      (natively supported by carriers such as ComfyUI); access restrictions do not apply to the local version.
+      Official description: generates a complete 5-minute song from a text prompt, with stable structure.
     license:
-      commercial_ok: "权重许可待核"
+      commercial_ok: "weight license under review"
     accepts:
       style_prompt: prose
       lyrics: text
       symbolic_score: false
-      reference_audio: "托管版支持 cover；本地版待核"
+      reference_audio: "hosted version supports cover; local version under review"
     honors:
       meta.tempo: hint
       meta.key: hint
@@ -90,23 +90,23 @@ backends:
 
   # ═══════════════════════════════════════════════════════════
   - id: ace-step-1.5
-    name: "ACE-Step 1.5 XL（Base / Turbo / SFT / 4B-LLM / AIO）"
+    name: "ACE-Step 1.5 XL (Base / Turbo / SFT / 4B-LLM / AIO)"
     transport: local
     templates:
       - audio_ace_step1_5_xl_base
-      - audio_ace_step1_5_xl_turbo      # 蒸馏版，快
-      - audio_ace_step1_5_xl_sft        # 可调 CFG，提示词贴合度最可控
-      - audio_ace_step_1_5_split_4b     # 4B LLM 版，音乐理解更强
+      - audio_ace_step1_5_xl_turbo      # distilled version, fast
+      - audio_ace_step1_5_xl_sft        # adjustable CFG; most controllable prompt adherence
+      - audio_ace_step_1_5_split_4b     # 4B LLM version, stronger musical understanding
       - audio_ace_step_1_5_checkpoint   # AIO
     note: >
-      ★ 容易漏掉的一族。一个模型五个变体，**变体本身就是可调的旋钮**：
-      Turbo 用来快速试规格、SFT 用 CFG 调提示词贴合度、4B-LLM 版理解力最强。
-      做 AB 时这比换模型更好控——同族内变量少。
+      ★ An easily overlooked family. One model, five variants; **the variants themselves are adjustable knobs**:
+      Turbo for quickly trying out specs, SFT uses CFG to tune prompt adherence, and the 4B-LLM version has the strongest understanding.
+      For A/B work this is easier to control than switching models: there are fewer variables within one family.
     accepts:
-      style_prompt: "风格标签 ＋ 散文"
+      style_prompt: "style tags + prose"
       lyrics: text
       symbolic_score: false
-      cfg: true                         # ★ SFT 版可调，直接影响"听不听话"
+      cfg: true                         # ★ adjustable in the SFT version; directly affects how well it follows instructions
       seed: true
     honors:
       meta.tempo: hint
@@ -123,33 +123,33 @@ backends:
     name: "Stable Audio 3.0 Medium"
     transport: local
     known_carriers:
-      comfyui: [audio_stable_audio_3_medium, audio_stable_audio_3_medium_base]   # 参考：该载体的模板名
+      comfyui: [audio_stable_audio_3_medium, audio_stable_audio_3_medium_base]   # reference: template names for this carrier
     note: >
-      偏音效与器乐，不是整歌后端。用途：单独生成 arrangement_hook 用的
-      标志性音色、riser／impact 这类音响事件，再回填进别的后端的编制里。
-      有的载体模板会先用一个 LLM 扩写 prompt。
+      Leans toward sound effects and instrumental music; not a whole-song backend. Use: generate separately the signature timbres
+      used by arrangement_hook, and riser / impact-type sound events, then feed them back into the lineup of other backends.
+      Some carrier templates first use an LLM to expand the prompt.
     accepts:
       style_prompt: prose
-      lyrics: false                     # ★ 没有人声
+      lyrics: false                     # ★ no vocals
       duration: true
       seed: true
       category: true
     honors:
       meta.tempo: hint
       form: none
-      arrangement.hooks: hint           # 只对单个音响事件有意义
+      arrangement.hooks: hint           # only meaningful for individual sound events
       vocal: none
       mix_intent: none
 
   # ═══════════════════════════════════════════════════════════
   - id: suno
     name: "Suno"
-    transport: hosted                   # 托管服务，没有本地权重
+    transport: hosted                   # managed service, no local weights
     note: >
-      控制力最弱、成品最润。只能给散文式风格描述加段落标签；
-      调性、和声、小节数全部只能"提示"，模型爱听不听。
+      Weakest control, most polished output. It can only take section tags added to a prose style description;
+      key, harmony and bar count can only be "suggested", and the model follows them as it pleases.
     license:
-      commercial_ok: "看订阅档位，出街前自行确认"
+      commercial_ok: "depends on subscription tier; confirm yourself before release"
     accepts:
       style_prompt: prose
       lyrics: text
@@ -160,28 +160,28 @@ backends:
       meta.tempo: hint
       meta.key: hint
       meta.meter: none
-      form.bars: none                   # ★ 说不动它，别拿这个扣分
-      form.harmony: none                # ★ 同上
+      form.bars: none                   # ★ cannot be steered; do not dock points for this
+      form.harmony: none                # ★ same as above
       form.name: hint
       arrangement.roster: hint
       arrangement.energy_curve: hint
       vocal: hint
       mix_intent: none
     strategy: >
-      控制不了就别硬控：把精力放在风格描述的信息密度和段落标签序列上，
-      然后靠 best-of-N ＋ 照做率排序来挑，而不是指望一次说服它。
+      Do not force control you cannot have: put effort into the information density of the style description and the sequence of section tags,
+      then select with best-of-N plus compliance ranking, rather than hoping to persuade it in one go.
 
   # ═══════════════════════════════════════════════════════════
   - id: symbolic
-    name: "符号路径：ABC / MIDI / MusicXML → 音源渲染"
+    name: "Symbolic path: ABC / MIDI / MusicXML → sound-source rendering"
     transport: local
     note: >
-      LLM 直出符号乐谱，交给音源渲染。**完全确定、完全可控**，
-      代价是没有人声、音色取决于音源。两个用途：
-      ①日式 MIDI 打ち込み 工作流本来就是这个形态；
-      ②AB 的**控制变量基准**——同一份规格渲染出来永远一样。
-      ABC ↔ MusicXML ↔ MIDI 可互转，所以 mc-symbolic-score 一个发射器
-      同时服务 YuE2 的 ABC 输入和这条路。
+      The LLM outputs the symbolic score directly and hands it to sound-source rendering. **Fully deterministic, fully controllable**;
+      the cost is no vocals, and timbre depends on the sound source. Two uses:
+      ① the Japanese MIDI uchikomi (step-input) workflow already takes this form;
+      ② the **controlled-variable baseline** for A/B: the same spec always renders identically.
+      ABC ↔ MusicXML ↔ MIDI can be converted among each other, so one emitter in mc-symbolic-score
+      serves both YuE2's ABC input and this path.
     license: {commercial_ok: true}
     accepts:
       symbolic_score: [abc, midi, musicxml]
@@ -192,17 +192,17 @@ backends:
       form.bars: exact
       form.harmony: exact
       arrangement.roster: exact
-      arrangement.energy_curve: exact   # velocity / CC 可精确写
+      arrangement.energy_curve: exact   # velocity / CC can be written precisely
       vocal: none
       mix_intent: none
 
 # ═══════════════════════════════════════════════════════════
-# 配套工具（不是生成后端，但属于同一条链路）
+# Companion tools (not generation backends, but part of the same chain)
 tools:
   - id: audio-separation
     transport: any
     known_carriers: {demucs: cli, comfyui: utility-audioseparation}
     note: >
-      ★ 分轨：人声／贝斯／鼓／其余。
-      人声审计的四条 AI 味判据（力度是否全程一致、副歌三遍是否雷同、换气、ad-lib）
-      都要先把人声轨分出来。用哪个分轨工具由用户环境决定。
+      ★ Stem separation: vocals / bass / drums / other.
+      The four AI-flavor criteria of the vocal audit (whether dynamics stay consistent throughout, whether the three chorus passes are identical, breathing, ad-libs)
+      all require separating the vocal track first. Which separation tool to use is decided by the user's environment.

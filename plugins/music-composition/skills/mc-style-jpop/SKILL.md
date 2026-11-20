@@ -1,269 +1,269 @@
 ---
 name: mc-style-jpop
-description: J-pop as a style layer (日式流行风格层) - the chorus-centred design discipline that distinguishes Japanese pop from Western pop. Why the sabi sounds like the sabi and the first-aid kit when it will not lift, the two maximization strategies (exposure and anticipation) and the boredom trade-off that governs them, the internal structure of a chorus and the two ways to build one, the role and the optional nature of the o-sabi, the B-melo as a genuinely Japanese invention, and the transfer table for what survives outside J-pop. Use when writing or arranging J-pop or anime-adjacent pop, when a chorus does not lift, when deciding whether to add a bridge, or when borrowing a J-pop device into another style. 日式流行、Jpop、サビ、副歌、B メロ、大サビ、落ちサビ、动漫歌。
+description: J-pop as a style layer - the chorus-centred design discipline that distinguishes Japanese pop from Western pop. Why the sabi (chorus) sounds like the sabi and the first-aid kit when it will not lift, the two maximisation strategies (exposure and anticipation) and the boredom trade-off that governs them, the internal structure of a chorus and the two ways to build one, the role and the optional nature of the o-sabi, the B-melo as a genuinely Japanese invention, and the transfer table for what survives outside J-pop. Use when writing or arranging J-pop or anime-adjacent pop, when a chorus does not lift, when deciding whether to add a bridge, or when borrowing a J-pop device into another style. Keywords: J-pop, Jpop, sabi, chorus, B-melo, o-sabi, ochi-sabi, anime song.
 ---
 
-# 日式流行风格层（J-POP）
+# J-Pop Style Layer (J-POP)
 
-**J-POP 与欧美流行最根本的差别不在和声，在"整首歌为副歌服务"的程度。**
+**The fundamental difference between J-pop and Western pop is not in the harmony. It lies in how far the whole song serves the chorus.**
 
-> 欧美流行：主歌与副歌是**两个内容**。
-> J-POP：主歌与 B メロ 是**副歌的铺台面（お膳立て）**。
+> Western pop: the verse and the chorus are **two different pieces of content**.
+> J-pop: the verse and the B-melo are **the stage-setting (o-zen-date) for the chorus**.
 
-这个差别产生了一整套 J-POP 特有的设计纪律，就是这个 skill。
+This difference gives rise to a whole set of design disciplines specific to J-pop, and this skill covers them.
 
-## 按任务读哪几节
+## Which sections to read for each task
 
-| 任务 | 读 |
+| Task | Read |
 |---|---|
-| **判断 J-POP 手法能不能搬出去** | ★ §2 移植表 |
-| 副歌"起不来" | ★ §4 急救包 |
-| 副歌听着不像副歌 | §3 |
-| 副歌太多/太少 | §5 曝光与厌腻的权衡 |
-| 进副歌前不够抓人 | §6 期待 |
-| 副歌虎头蛇尾 | §7 |
-| 要不要加 C メロ / 大サビ | ★ §8（**多数情况的答案是不加**） |
+| **Judge whether a J-pop device can be moved out** | ★ §2 transfer table |
+| The chorus "won't lift" | ★ §4 first-aid kit |
+| The chorus does not sound like a chorus | §3 |
+| Too many or too few choruses | §5 exposure versus boredom |
+| Not gripping enough before the chorus | §6 anticipation |
+| The chorus fizzles out at the end | §7 |
+| Whether to add a C-melo / o-sabi | ★ §8 (**in most cases the answer is no**) |
 
-## 边界
+## Boundaries
 
-| 不归这里 | 归哪 |
+| Not covered here | Where it lives |
 |---|---|
-| 段落术语的定义与映射 | `mc-form` §1（★ **大サビ 映射成 Bridge**） |
-| 曲式模板与倒推设计 | `mc-form` §2、§5 |
-| 王道进行、小室、卡农等和声语汇 | `mc-progressions`（★ **它们已经进了通用层**） |
-| 能量曲线、减法、hook 布局 | `mc-arrangement-arch` |
-| 打ち込み 的实现 | `mc-rhythm-section` |
-| 演唱设计 | `mc-vocal-direction` |
-| 词曲对齐（符割り、字余り） | **作词**的事；本 skill 只管旋律与段落，同一首歌的歌词从 `meta.upstream.lyrics` 读 |
+| Definitions and mapping of section terms | `mc-form` §1 (★ **o-sabi maps to Bridge**) |
+| Form templates and reverse-engineered design | `mc-form` §2, §5 |
+| Standard progressions, Komuro-style and canon harmony vocabulary | `mc-progressions` (★ **these have already entered the general layer**) |
+| Energy curves, subtraction, hook placement | `mc-arrangement-arch` |
+| Implementation of programmed drums (uchikomi) | `mc-rhythm-section` |
+| Vocal design | `mc-vocal-direction` |
+| Lyric alignment (fushi-wari, ji-amari) | This is **lyric writing**; this skill covers only melody and sections. The lyrics for the same song are read from `meta.upstream.lyrics` |
 
-> ★ 一个提醒：**日式作曲法里的通用部分都在通用层**（L1 的旋律/和声/曲式，L2 的打ち込み/演唱）。
-> **本 skill 只写"确实是 J-POP 特有"的部分。**
-
----
-
-## 1. 动笔前必填
-
-| 必填 | 问法 |
-|---|---|
-| **① 副歌在哪、长什么样** | ★ **先写副歌**。J-POP 是倒推设计的（`mc-form` §5） |
-| **② 副歌要出现几次** | §5。**这是曝光与厌腻的权衡，要主动决定** |
-| **③ 进副歌前做什么** | §6。**这一处比副歌本身还重要** |
-| **④ 要不要 C メロ** | ★ §8。**默认答案是不要** |
+> ★ A reminder: **the general parts of Japanese compositional technique live in the general layer** (L1 melody, harmony and form; L2 programmed drums and vocals).
+> **This skill writes only what is genuinely specific to J-pop.**
 
 ---
 
-## 2. ★ 移植表
+## 1. Required before starting
 
-| 手法 | 可搬出 J-POP 吗 | 说明 |
+| Required | Question |
+|---|---|
+| **① Where is the chorus, and what does it look like** | ★ **Write the chorus first.** J-pop is designed backwards (`mc-form` §5) |
+| **② How many times the chorus appears** | §5. **This is a deliberate trade-off between exposure and boredom, and it must be decided on purpose** |
+| **③ What happens before the chorus** | §6. **This point matters more than the chorus itself** |
+| **④ Should there be a C-melo** | ★ §8. **The default answer is no** |
+
+---
+
+## 2. ★ Transfer table
+
+| Device | Can it be moved out of J-pop? | Notes |
 |---|---|---|
-| **A–B–サビ 三段构成** | ✅ **可搬，已被华语流行全面采用** | `mc-form` §2.2 |
-| **B メロ（预副歌）** | ✅ ★ **可搬，而且是 J-POP 对世界流行最大的贡献之一** | 它给了"渐强"一个专门的段落 |
-| **和声语汇**（王道/小室/卡农/丸サ） | ✅ 可搬 | 已在 `mc-progressions` |
-| **落ちサビ（稀薄副歌）** | ✅ **可搬，且极有效** | 它是 `mc-arrangement-arch` §3 减法的一个具体形态 |
-| **副歌最大化（曝光策略）** | ⚠️ **半搬** | ★ 欧美流行的副歌重复次数明显更少。搬过去容易显得"啰嗦" |
-| **大サビ（C メロ）** | ⚠️ 半搬 | 它对应英美的 bridge，但**性格更内省、常带半速感** |
-| **キメ（插旗句）** | ⚠️ 半搬 | 在摇滚里通用；在慢歌里是 J-POP 味 |
-| **頭サビ（开场即副歌）** | ✅ 可搬 | 短视频时代反而更通用了 |
-| **"整首为副歌服务"这个哲学本身** | ❌ ★ **不可搬** | 欧美/独立/爵士的主歌是有独立价值的。照搬会让主歌变成空洞的过场 |
+| **A-B-sabi three-part structure** | ✅ **Portable; already fully adopted in Chinese-language pop** | `mc-form` §2.2 |
+| **B-melo (pre-chorus)** | ✅ ★ **Portable, and one of J-pop's biggest contributions to world pop** | It gives "building intensity" a dedicated section |
+| **Harmonic vocabulary** (ōdō / Komuro / canon / maru-sa) | ✅ Portable | Already in `mc-progressions` |
+| **Ochi-sabi (thinned-out chorus)** | ✅ **Portable, and very effective** | It is a concrete form of the subtraction in `mc-arrangement-arch` §3 |
+| **Maximising the chorus (exposure strategy)** | ⚠️ **Half-portable** | ★ Western pop repeats the chorus noticeably fewer times. Moving this across tends to sound "repetitive" |
+| **O-sabi (C-melo)** | ⚠️ Half-portable | It corresponds to the bridge in English-language pop, but **its character is more introspective, and often carries a half-tempo feel** |
+| **Kime (signature phrase)** | ⚠️ Half-portable | Common in rock; in slow songs it carries a J-pop flavour |
+| **Atama-sabi (chorus opening the song)** | ✅ Portable | In the short-video era it has become more universal |
+| **"The whole song serves the chorus" as a philosophy** | ❌ ★ **Not portable** | Verses in Western, independent and jazz music have their own value. Copying this would turn verses into empty filler |
 
-★ **判据**：
-> **可以搬走它的装置（B メロ、落ちサビ、頭サビ），
-> 但不要搬走它的世界观（主歌只是铺垫）。**
+★ **Test:**
+> **You can move out the devices (B-melo, ochi-sabi, atama-sabi),
+> but do not move out the worldview (the verse is only a setup).**
 
 ---
 
-## 3. 副歌为什么听起来像副歌
+## 3. Why a chorus sounds like a chorus
 
-**基本原理**：サビ = 全曲最高扬的点，也是歌词里最需要传达信息的地方。
+**Basic principle:** sabi = the highest, most lifted point of the whole song, and also where the lyrics most need to convey their message.
 
-### 3.1 旋律曲线
+### 3.1 Melodic contour
 
-> **A 段唱得低 → B 段逐步上行 → サビ 跳到高位并停在那里。**
+> **The A section sings low → the B section climbs step by step → the sabi jumps to a high position and stays there.**
 >
-> ★ **在结构典型的歌里，就算清唱也能听出副歌在哪。**
+> ★ **In a typically structured song, you can hear where the chorus is even when the melody is sung unaccompanied.**
 
-**这是一条自检动作**：把旋律清唱一遍。**听不出副歌在哪，副歌就没写成。**
+**This is a self-check action:** sing the melody unaccompanied once. **If you cannot hear where the chorus is, the chorus has not been written.**
 
-### 3.2 伴奏跟着曲线走
+### 3.2 The accompaniment follows the contour
 
-| 轴 | A 段 | サビ |
+| Axis | A section | Sabi |
 |---|---|---|
-| **纵轴（厚度）** | 薄而柔 | **强到不会输给全声的人声**，用满从低到高的音域 |
-| **横轴（时间密度）** | 以四分/八分音符为主 | **加入十六分音符乐句**抬高密度 |
+| **Vertical axis (thickness)** | Thin and soft | **Strong enough not to lose out to the full voice; uses the full range from low to high** |
+| **Horizontal axis (time density)** | Mainly quarter and eighth notes | **Adds sixteenth-note phrases** to raise the density |
 
-### 3.3 ★ 一个容易漏的细节
+### 3.3 ★ A detail that is easy to miss
 
-> **副歌旋律有起有伏时，旋律下行的部分最容易被伴奏埋掉——
-> 在那些位置故意让伴奏留空隙。**
+> **When the chorus melody rises and falls, the descending parts are the most likely to be buried by the accompaniment.
+> At those points, deliberately leave gaps in the accompaniment.**
 
-这条对应 `mc-texture-layering` §3 的深度线索：
-旋律下行时它在"高/快"两条线索上都输了，必须靠留白补回来。
+This corresponds to the depth cue in `mc-texture-layering` §3:
+when the melody descends, it loses on both the "high/fast" cues, and must be compensated by space.
 
-### 3.4 副歌各遍结尾都一样时
+### 3.4 When every repetition of the chorus ends the same way
 
-各遍编曲和结尾都差不多时，最后一遍会显得"到底了却没有再往上"。藤谷给的做法是把最后一遍拆成前后两半做对比：**前半先把热度压下去**（乐器减到只剩钢琴或主奏），听众才会把后半重新冲上来的亮点听成"更高"而不是"又来一次"；**后半配合亮点一次冲上去**，旋律可以不完全照谱、带一点即兴（fake）味，弦乐等声部继续往高音域走（藤谷 p0069）。
+When the arrangement and the ending of each repetition are much the same, the final repetition can sound as if it has reached the end without going any higher. Fujitani's remedy is to split the final repetition into two halves for contrast: **the first half first pulls the heat down** (reducing the instruments to only piano or the lead instrument), so that listeners hear the highlight that comes back in the second half as "higher" rather than "one more time"; **the second half pushes up to the highlight all at once**, with the melody allowed to depart somewhat from the notated line and take on a bit of improvised (fake) flavour, while the strings and other parts keep climbing into the upper register (Fujitani p0069).
 
-篇幅够的话，也可以让最后一遍不与前面等长，做成**两倍长度**，同样是前半安静、后半接近副歌处愈加热闹（藤谷 p0062）。两种做法的共同点是**靠"先压下去再顶上去"制造差异**，不是单靠反复堆同一个音区。
+If there is enough length, the final repetition can instead be made **twice as long**, again quiet in the first half and increasingly busy as it approaches the chorus in the second half (Fujitani p0062). Both approaches share one point: they create difference **by "pressing down first and then pushing back up", not simply by stacking the same register again**.
 
 ---
 
-## 4. ★ 急救包："副歌起不来"
+## 4. ★ First-aid kit: "the chorus won't lift"
 
-**按这个顺序试：**
+**Try these in this order:**
 
-| # | 做法 | 注意 |
+| # | Approach | Note |
 |---|---|---|
-| 1 | 人声上不去 → **叠高音区乐器** | ★ **别埋掉人声：把高音塞进人声的空隙里** |
-| 2 | **加低音区乐器和节奏型乐器**抬密度 | |
-| 3 | ★★ **终极法宝 = "人声"** | 加**和声**或 aah/ooh/hah 式的**合唱**——副歌立刻就像副歌了 |
+| 1 | Vocal cannot reach high enough → **add instruments in the high register** | ★ **Do not bury the voice: fit the high notes into the gaps in the vocal** |
+| 2 | **Add low-register and rhythmic instruments** to raise density | |
+| 3 | ★★ **The ultimate trump card = the voice** | Add **harmony** or **chorus** singing in the style of aah / ooh / hah; the chorus immediately feels like a chorus |
 
-> ★★ **人声的能量效率大约是乐器的 3 倍。**
-> **乐器费很大劲才能达到的高扬，人声轻松就能做到。**
+> ★★ **The energy efficiency of voices is roughly three times that of instruments.**
+> **Heights that instruments need a great deal of effort to reach, voices can reach easily.**
 
-★ 这条是本 skill 最实用的一句。
-**"副歌不够炸"的第一反应不该是加乐器，是加人声。**
+★ This is the most practical line in this skill.
+**The first reaction to "the chorus isn't big enough" should not be to add instruments. It should be to add voices.**
 
-> 冷知识：英文用 "chorus" 指副歌，词源就是**最大高潮处大家一起唱**。
+> Trivia: in English, "chorus" refers to the chorus section, and its etymology is **everyone singing together at the greatest climax**.
 
 ---
 
-## 5. 最大化策略 A：曝光
+## 5. Maximisation strategy A: exposure
 
-**人对反复听到的东西产生依恋，第一策略是让副歌被听到尽可能多次：**
+**People develop attachment to what they hear repeatedly, so the first strategy is to get the chorus heard as many times as possible:**
 
-- 开场用 **頭サビ**
-- **尽量压缩间奏与平歌**
-- 堆 1 サビ、2 サビ、3 サビ、4 サビ
-- 最后一节用 `A−B−C−C（−C−C）`，反复副歌造全曲大高潮
+- Open with **atama-sabi**
+- **Compress the interlude and the verses as much as possible**
+- Stack 1st sabi, 2nd sabi, 3rd sabi, 4th sabi
+- For the last section, use `A−B−C−C (−C−C)`, repeating the chorus to build the song's biggest climax
 
-### 5.1 ★ 但这是一个权衡
+### 5.1 ★ But this is a trade-off
 
-> **"整首都是副歌"会腻——
-> 流行编曲就是"如何让人尽可能多地听到副歌而不厌烦"这个游戏。**
-> **副歌太少记不住，太多则乏味。**
+> **"A song that is nothing but chorus" becomes tiresome.
+> Pop arrangement is the game of "how to get the chorus heard as many times as possible without boring the listener."
+> Too few choruses are not remembered; too many become dull.**
 
-**防腻装置**：
+**Anti-boredom devices:**
 
-| 装置 | 做法 |
+| Device | Approach |
 |---|---|
-| **同旋律换编制** | 第 3 遍副歌突然变安静 = **落ちサビ**；頭サビ 用适合开场的编制（薄伴奏+慢速+自由速度 = 叙述式导入，或原样演奏 = 炫目开场） |
-| **转调** | 同编制下靠换调避免单调（→ `mc-modulation`，★ 但注意它的套路警戒线 §6） |
+| **Same melody, different instrumentation** | Suddenly making the 3rd chorus quiet = **ochi-sabi**; atama-sabi uses instrumentation suited to an opening (thin accompaniment + slow tempo + free tempo = narrated introduction, or played as written = dazzling opening) |
+| **Key change** | Avoiding monotony by changing key within the same instrumentation (→ `mc-modulation`; ★ but mind its formula warning line in §6) |
 
 ---
 
-## 6. ★ 最大化策略 B：期待
+## 6. ★ Maximisation strategy B: anticipation
 
-> **进副歌前的那一段最要紧。**
-> 与其懒洋洋地滑进副歌，**在进入前制造一个变化，抓耳程度高得多。**
+> **The passage just before the chorus matters most.**
+> Rather than sliding lazily into the chorus, **create a change just before entry, which is far more gripping.**
 
-| 做法 |
+| Approach |
 |---|
-| **突然全停（ブレイク）**，然后"砰"地进副歌 |
-| 和弦上加一个小转折 |
-| 简单的八分音符**渐强** |
-| **副歌前的鼓 fill** —— 对熟悉这首歌的听众，情绪会随 fill 提前上来 |
+| **Sudden full stop (break, *bureiku*)**, then a "bang" into the chorus |
+| A small turn added to the chords |
+| Simple eighth-note **crescendo** |
+| **Drum fill before the chorus** — for listeners familiar with the song, the emotion rises ahead of the fill |
 
-> **这些的本质都是制造"来るぞ来るぞ"（来了来了）的期待。**
+> **The essence of all these is to create the feeling of "kuru zo kuru zo" (it's coming, it's coming).**
 
-### 6.1 ★ 一条警告
+### 6.1 ★ One warning
 
-> **副歌的编曲当然要有吸引力，但如果平歌（主歌）没有同等的吸引力，
-> 听众根本撑不到副歌。**
+> **The chorus arrangement should of course be attractive, but if the verse (the A section) is not equally attractive,
+> listeners will not make it to the chorus at all.**
 
-这与 §2 移植表最后一行呼应：**"主歌只是铺垫"这个世界观有它的代价。**
-
----
-
-## 7. 副歌的内部结构
-
-- 副歌作为一个乐节，**内部高潮仍遵守"2/3–3/4 处"规则**
-- ★ **防止竜頭蛇尾**（虎头蛇尾）：即使副歌开头就在高点，
-  也要检查后半是否还有充分的高潮、能否实质地收住——
-  **"重复部分动机、再次推起来，不要让它松掉"**
-
-### 7.1 两种做副歌的方式
-
-| 型 | 说明 |
-|---|---|
-| **口号型** | 建立在**短动机重复**上（摇滚常见，听一遍就记住） |
-| **歌い上げる型**（全声唱上去） | **长旋律**——这是日语"サビ"一词的本意（melo = sabi 形），日本流行与抒情曲常见 |
-
-### 7.2 适合副歌的动机构成
-
-这两种只是给内部乐句排布贴标签，不是另一套独立技法：怎么把动机重复、推起来、在后半收住，仍然按本节开头"2/3–3/4 处"和"防止竜頭蛇尾"两条来做，曲线的走向见 §3.1。
-
-| 构成 | 效果 |
-|---|---|
-| **a a b a** | 最后再现，满足感强 |
-| **a b a c** | a 抓注意力，**c 承担大高潮**（c 落在 2/3–3/4 处附近，呼应上面那条规则） |
-
-### 7.3 ★ 落ちサビ 的实战范例
-
-（抒情曲）
-> 第 2 番副歌之后，后半的伴奏做得**完全满** →
-> 听众预期第 3 番也会轰进来 →
-> **结果只给一个钢琴 + 人声的耳语式副歌** →
-> **2 或 4 小节后乐队一起轰进来** —— 极其动人。
-
-★ **这是"利用期待再翻盘"（`mc-melody` §8.2）的教科书实例。**
+This echoes the last row of the §2 transfer table: **the worldview "the verse is only a setup" comes with its cost.**
 
 ---
 
-## 8. ★ 大サビ（C メロ）：默认不加
+## 7. Internal structure of the chorus
 
-### 8.1 它是什么
+- As a melodic unit, the chorus's internal climax still follows the **"2/3 to 3/4 point" rule**
+- ★ **Guard against a fizzling ending**: even when the chorus opens on its high point,
+  check whether the second half still has enough climax to land the song properly —
+  **"repeat the motif, push it up again, and do not let it go slack"**
 
-| 项 | 说明 |
+### 7.1 Two ways to build a chorus
+
+| Type | Description |
 |---|---|
-| **作用** | 一句"ところで"（话说回来）或"だけど"（可是……）的旁白/另一视角，给歌**层次深度** |
-| **性格** | 常是内省、收敛的旋律；快歌里常把时值拉长，**听起来像只有这一段掉进了半速** |
-| ★ **另一家的说法** | 藤谷（p0060）：D 旋律是**副歌的衍生型**，靠加入若干第一次出现的要素再造一个高潮，**这里的气氛不太可能平静**。两家并排：一个当另一视角的旁白写，一个当第二高潮写。**判据是它后面那个副歌要不要靠对比才有分量**，要就走内省，不要就走衍生 |
-| **手法参考** | 静态的音高运动 + 转调 + 以小三度关系和弦为主的和声 |
-| **位置** | ★ **它的功能是"主歌"，所以后面一定跟一个副歌**。情绪平静下来之后，后面那个副歌的高潮才更有分量 |
+| **Slogan type** (*kuchi-go-gata*) | Built on **repetition of a short motif** (common in rock; memorable after one listen) |
+| **Full-voice climbing type** (*utai-ageru-gata*) | **Long melodic lines**: this is the original meaning of the Japanese word "sabi" (melo = sabi shape), common in Japanese pop and ballads |
 
-### 8.2 ★ 它不是必须的
+### 7.2 Motif structures suited to the chorus
 
-> **大サビ 不是强制的：**
-> **仅仅出于习惯加上的大サビ，反而会削弱歌曲的势头。**
+These two types are simply labels for arranging internal phrases; they are not separate techniques. How you repeat the motif, push it up and resolve it in the second half still follows the two principles at the start of this section: the "2/3 to 3/4 point" and "guard against a fizzling ending". For the direction of the contour, see §3.1.
+
+| Structure | Effect |
+|---|---|
+| **a a b a** | The final return gives a strong sense of closure |
+| **a b a c** | a grabs attention; **c carries the big climax** (c falls near the 2/3 to 3/4 point, consistent with the rule above) |
+
+### 7.3 ★ A worked example of ochi-sabi
+
+(A ballad)
+> After the 2nd chorus, the accompaniment in the second half is made **completely full** →
+> Listeners expect the 3rd verse-chorus to come crashing in too →
+> **The result is only a whispered chorus for piano and voice** →
+> **2 or 4 bars later, the full band comes crashing in together** — extremely moving.
+
+★ **This is a textbook example of "using anticipation and then reversing it" (`mc-melody` §8.2).**
+
+---
+
+## 8. ★ O-sabi (C-melo): not added by default
+
+### 8.1 What it is
+
+| Item | Description |
+|---|---|
+| **Function** | An aside or alternative viewpoint in the form of "tokorode" (by the way) or "dakedo" (but...), giving the song **depth of layers** |
+| **Character** | Often an introspective, restrained melody; in fast songs the note values are often stretched, **so it sounds as if that one section has dropped into half tempo** |
+| ★ **Another school's view** | Fujitani (p0060): the D melody is a **derivative of the chorus**, using a number of elements that appear for the first time to build a second climax, **and the mood here is unlikely to be calm**. Two views side by side: one writes it as a narrated alternative viewpoint, the other as a second climax. **The test is whether the chorus that follows needs contrast to carry its weight**: if so, go introspective; if not, go derivative |
+| **Technique reference** | Static pitch movement + key change + harmony dominated by minor-third related chords |
+| **Position** | ★ **Its function is that of a "verse", so it must always be followed by a chorus.** Once the mood has settled down, the climax of the chorus that follows carries more weight |
+
+### 8.2 ★ It is not required
+
+> **The o-sabi is not mandatory.
+> An o-sabi added merely out of habit can actually weaken the song's momentum.**
 >
-> **先确认各节的副歌重复是否真的让人觉得予定調和，再决定加不加。**
+> **First confirm whether the chorus repetitions truly feel predictable (yotei chowa) for each section, and only then decide whether to add an o-sabi.**
 
-**自检动作**：把 C メロ 拿掉听一遍。**如果没变差，就别加。**
+**Self-check action:** play the song once with the C-melo removed. **If it has not got worse, do not add it.**
 
 ---
 
-## 9. 与 ARR-SPEC 的字段对应
+## 9. Field correspondence with the ARR-SPEC
 
-| 字段 | 本 skill |
+| Field | This skill |
 |---|---|
 | `meta.style_layer` | `mc-style-jpop` |
-| `form[]` | §3、§5；★ **大サビ 的 `name` 填 `Bridge`**（`mc-form` §7） |
-| `energy_curve` | §3.1 的曲线：A 低 → B 升 → サビ 高位 |
-| `subtraction_events` | ★ **落ちサビ 就是一个减法事件**（§7.3） |
-| `vocal.stacking` | §4 的第 3 条——加和声/合唱是副歌起不来的首选解 |
-| `vocal.chorus_variation` | §5.1 防腻装置（lint #16） |
+| `form[]` | §3, §5; ★ **name the o-sabi `Bridge`** (`mc-form` §7) |
+| `energy_curve` | The §3.1 curve: A low → B rising → sabi high position |
+| `subtraction_events` | ★ **Ochi-sabi is itself a subtraction event** (§7.3) |
+| `vocal.stacking` | Point 3 of §4: adding harmony or chorus voices is the first choice when a chorus won't lift |
+| `vocal.chorus_variation` | Anti-boredom devices in §5.1 (lint #16) |
 
 ---
 
-## 10. 写完后必过
+## 10. Checklist after writing
 
-- [ ] **清唱能听出副歌在哪**（§3.1）
-- [ ] 副歌旋律下行处，**伴奏留了空隙**
-- [ ] 副歌起不来时，**先试了加人声**而不是加乐器
-- [ ] 副歌出现次数是**主动决定的**，且配了防腻装置
-- [ ] **进副歌前那一段做了变化**，不是滑进去的
-- [ ] **主歌本身有吸引力**，不是空洞的铺垫
-- [ ] 副歌**后半也有高潮**，没有虎头蛇尾
-- [ ] ★ 加了 C メロ 的话，**拿掉听过一遍确认它有用**
-- [ ] 往别的风格搬时，查过 §2——**没有把"主歌只是铺垫"一起搬走**
+- [ ] **The chorus can be heard unaccompanied** (§3.1)
+- [ ] Where the chorus melody descends, **the accompaniment has left gaps**
+- [ ] When the chorus won't lift, **voices were tried first**, not instruments
+- [ ] The number of chorus repetitions was **decided deliberately**, and paired with anti-boredom devices
+- [ ] **The passage just before the chorus creates a change**, rather than sliding into it
+- [ ] **The verse itself is attractive**, not empty filler
+- [ ] **The second half of the chorus also has a climax**, with no fizzling ending
+- [ ] If a C-melo was added, **it was checked by playing the song with it removed, to confirm it is useful**
+- [ ] When moving to another style, §2 was checked: **the worldview "the verse is only a setup" was not moved along with the devices**
 
 ---
 
-## 附：来源
+## Appendix: Sources
 
-- **《プロの曲作りが分かる本》＋高山博《ポピュラー音楽作曲のための旋律法 増補版》**——本 skill 的全部主干。
-  ★ 这两本书里不只属于 J-POP 的部分在通用 skill：
-  段落术语与曲式模板 → `mc-form`；hook 与结尾 → `mc-arrangement-arch`；
-  反予定調和 → `mc-melody` §8；段落对比与逐段编制表 → `mc-form` [reference.md](../mc-form/reference.md)。
-- 日式风格分类
-- 图解编曲
+- ***Puro no kyoku-zukuri ga wakaru hon*** (*The Book That Explains Professional Songwriting*) and Takayama Hiroshi, ***Popular Music Composition: Melody Methods*** (expanded edition; original Japanese title *Popyurā ongaku sakkyoku no tame no senritsu-hō zōho-ban*): the entire backbone of this skill.
+  ★ Not all the material in these two books that is J-pop-specific is in this general skill:
+  section terminology and form templates → `mc-form`; hooks and endings → `mc-arrangement-arch`;
+  anti-predictable harmony → `mc-melody` §8; section contrast and section-by-section arrangement tables → `mc-form` [reference.md](../mc-form/reference.md).
+- Japanese pop style classification
+- Illustrated arrangement guide

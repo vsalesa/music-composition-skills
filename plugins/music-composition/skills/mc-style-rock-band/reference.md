@@ -1,321 +1,320 @@
-# mc-style-rock-band 参考：riff 分类表、变形手法、谱例索引、术语表
+# mc-style-rock-band Reference: riff taxonomy, repetition patterns, variation techniques, example index, glossary
 
-> [SKILL.md](SKILL.md) §6 讲 riff 怎么写、怎么放、怎么变；本文件放**查表用的细则**。
-> 来源：Rooksby《Riffs》。页号写作 `Riffs p0063`，本文件内省略书名只写页号。
+> [SKILL.md](SKILL.md) §6 covers how to write, place, and vary riffs; this file holds the **detailed lookup tables**.
+> Source: Rooksby, *Riffs*. Page numbers are written as `Riffs p0063`; within this file the book title is omitted and only the page is given.
 
 ---
 
-## 1. Riff 分类表（按 Rooksby 的三组分法）
+## 1. Riff Taxonomy (by Rooksby's three-group division)
 
-Rooksby 用 **RHM 公式**（rhythm / harmony / melody）看 riff：一条 riff 有节奏、暗示或使用某些和弦、由某些音程构成（p0008、p0013）。据此分三组：
-**一、两个单音之间的基本音程；二、常用音阶；三、和弦。三组合计 30 种基本类型**（p0013）。
+Rooksby analyzes riffs with the **RHM formula** (rhythm / harmony / melody): a riff has a rhythm, implies or uses certain chords, and is built from certain intervals (p0008, p0013). On this basis he divides them into three groups: **1. basic intervals between two single notes; 2. scales in common use; 3. chords. The three groups total 30 basic types** (p0013).
 
-两条归类规则：
-- 归到某音阶名下，只表示"riff 的大部分音来自该音阶"，不要求用全（p0052）。
-- 和弦变化算不算 riff：**重复得够频繁、且有定义明确的有力节奏型，就算**（p0013–p0014）。
+Two rules for classification:
+- Filing a riff under a scale name only means that most of its notes come from that scale; it does not require using all of them (p0052).
+- Whether a chord change counts as a riff: **if it repeats often enough and has a clearly defined, forceful rhythmic pattern, it counts** (p0013–p0014).
 
-### 1.1 第一组：音程类
+### 1.1 Group 1: Interval types
 
-| 型 | 页 | 声音特征 | 和声后果 | 书里的例子 |
+| Type | Page | Sound character | Harmonic consequences | Examples in the book |
 |---|---|---|---|---|
-| **半音** | p0017–p0021 | 最简单：同一根弦相邻两品；加休止符即得节奏变体（p0017） | 上方叠五度必须用离调音（G#–A 之上要 D# 而非 D）；叠大三和弦更甚——**任何大调里都不会自然出现两个相距半音的大三和弦**，这就是它的"叛逆"来源（p0018–p0019）。传统走法是导音→主音，近年也常根音→上方半音（p0019） | Summertime Blues；God Save The Queen（p0021）；Kashmir——A–Bb–B–C 在单一和弦上（p0021） |
-| **全音** | p0022–p0027 | 最原始的 riff；**bVII→I 比调内其他全音移位更醒目，因为它抹掉了导音**（p0022） | 结果音阶是 Mixolydian；做成五度不产生半音五度那种离调感；bVII 和弦由此而来（p0023） | You Really Got Me——**军鼓在 riff 间隙重击**（p0024）；Paranoid（p0025）；Fire And Water——滑进上方五度（p0025） |
-| **八度** | p0027–p0029 | 一个音在两个八度奏；比同等的五度序列"空气"更多；最有效的八度 riff 是**与鼓锁定**的（p0027） | 调性中立：上面放大三或小三和弦都行（p0027） | Gimme Some Lovin'、My Sharona（p0028）；Immigrant Song（p0029）。"八度加倍"（每个音都叠八度，Dolly Dagger）与八度 riff 不同（p0029） |
-| **五度**（power chord） | p0030–p0033 | 坚硬、略冷、"空洞"；无三音故非大非小；**能耐受大量失真而保持有效**（p0030） | 其上可配大或小和弦；bVII5→I5 是经典（p0030）。同一五度换低音会被听成不同和弦（With Or Without You，p0033） | Whole Lotta Love（p0031）；Layla（p0031–p0032）；Jailbreak——F# 调让空弦 E 成为 bVII（p0032） |
-| **四度** | p0034–p0038 | 五度的倒置；同样空洞但更含糊，**根音通常是上方那个音**（p0034）；能造出"吉他调得极低"的错觉（p0064） | 调内四度要挑：大调第 7 音下方的四度会离调（p0035）。标准做法：贝司奏根音，或吉他在空弦踏板音上奏四度（p0035） | Smoke On The Water——贝司奏八分音符 G 串（p0036）；Tush——intro 只奏三次不是四次（p0038）；Foxy Lady——隐含和弦是 F#m7（p0038） |
-| **三全音** | p0039–p0043 | 通常不连续奏，而是插在单音／四度／五度进行里（p0039）；"像菜里的辣料"（p0153） | 来自布鲁斯音阶的 b5 或大调的 4–7 | Black Sabbath——G–Db（p0040）；Purple Haze——贝司 E 八度对吉他 Bb 八度（p0041）；Enter Sandman——E–Bb（p0042） |
-| **三度** | p0043–p0048 | 甜、和谐、缺攻击性，摇滚 riff 用得少；**双主音吉他风格的核心**（p0043）；1–2 弦或 3–4 弦最好，低音弦上发浑（p0043、p0096） | 明确大小调；调内三度序列大小交替，全大或全小会出调（p0044）。降三度（蓝调音）对 riff 写作至关重要（p0045） | Come As You Are——极低音区小三度，人声在其上（p0047）；Ace Of Spades（p0046） |
-| **六度** | p0048–p0049 | 三度的倒置，甜度下降；高音六度单独不够"硬"（p0048） | 常与五度／四度混用，给中性音程序列引入大小调暗示（p0048） | Women In Love 开头、Steve Cropper 风格（p0048） |
-| **混合音程** | p0049–p0051 | 八度／五度／四度／三度／六度易于指法组合；**二度、七度手感差**（p0049） | 各段音程各自暗示和弦 | Money For Nothing——八小节（p0050）；Radar Love——贝司稳住 F#，吉他在上奏三度与四度（p0051）；Still Of The Night——四条可区分的 riff（p0051） |
+| **Semitone** | p0017–p0021 | The simplest: two adjacent frets on the same string; adding a rest gives a rhythmic variant (p0017) | A fifth stacked above must use an out-of-key note (above G#–A, use D# rather than D); stacking a major triad is worse—**no major key naturally contains two major triads a semitone apart**, which is the source of its "rebelliousness" (p0018–p0019). The traditional movement is leading tone → tonic; in recent years root → semitone above is also common (p0019) | *Summertime Blues*; *God Save the Queen* (p0021); *Kashmir*—A–Bb–B–C over a single chord (p0021) |
+| **Whole tone** | p0022–p0027 | The most primal riff; **bVII→I stands out more than other whole-tone shifts within the key, because it erases the leading tone** (p0022) | The resulting scale is Mixolydian; made into a fifth, it does not produce the out-of-key tension of a semitone fifth; the bVII chord comes from this (p0023) | *You Really Got Me*—**the snare hits hard in the gaps of the riff** (p0024); *Paranoid* (p0025); *Fire and Water*—slides up to the fifth above (p0025) |
+| **Octave** | p0027–p0029 | One note played in two octaves; more "air" than an equivalent sequence of fifths; the most effective octave riffs are **locked to the drums** (p0027) | Tonally neutral: a major or minor triad may sit above it (p0027) | *Gimme Some Lovin'*, *My Sharona* (p0028); *Immigrant Song* (p0029). "Octave doubling" (every note doubled at the octave, as in *Dolly Dagger*) differs from an octave riff (p0029) |
+| **Fifth** (power chord) | p0030–p0033 | Hard, somewhat cold, "hollow"; no third, so neither major nor minor; **tolerates heavy distortion and stays effective** (p0030) | Major or minor chords may sit above it; bVII5→I5 is the classic (p0030). The same fifth with a different bass note is heard as a different chord (*With or Without You*, p0033) | *Whole Lotta Love* (p0031); *Layla* (p0031–p0032); *Jailbreak*—the F# key makes the open E string a bVII (p0032) |
+| **Fourth** | p0034–p0038 | An inverted fifth; equally hollow but vaguer; **the root is usually the upper note** (p0034); can create the illusion that the guitar is tuned very low (p0064) | Choose fourths carefully within the key: a fourth below the seventh degree of a major key is out of key (p0035). Standard approach: the bass plays the root, or the guitar plays fourths over an open-string pedal note (p0035) | *Smoke on the Water*—bass plays eighth-note G string (p0036); *Tush*—intro played three times, not four (p0038); *Foxy Lady*—the implied chord is F#m7 (p0038) |
+| **Tritone** | p0039–p0043 | Usually not played continuously; inserted within single-note, fourth, or fifth motion (p0039); "like chili in a dish" (p0153) | Comes from the b5 of the blues scale or the 4–7 of the major scale | *Black Sabbath*—G–Db (p0040); *Purple Haze*—bass E octave against guitar Bb octave (p0041); *Enter Sandman*—E–Bb (p0042) |
+| **Third** | p0043–p0048 | Sweet, harmonious, lacking aggression; rarely used in rock riffs; **the core of the twin-lead guitar style** (p0043); best on strings 1–2 or 3–4, turns muddy on the low strings (p0043, p0096) | Clearly major or minor; a sequence of thirds within the key alternates major and minor, and all-major or all-minor would go out of key (p0044). The lowered third (blue note) is crucial to riff writing (p0045) | *Come as You Are*—minor third in the very low register, vocal above it (p0047); *Ace of Spades* (p0046) |
+| **Sixth** | p0048–p0049 | The inversion of a third; less sweet; a high sixth alone is not "hard" enough (p0048) | Often mixed with fifths or fourths, introducing major/minor hints into a neutral interval sequence (p0048) | Opening of *Women in Love*; Steve Cropper style (p0048) |
+| **Mixed intervals** | p0049–p0051 | Octaves, fifths, fourths, thirds, and sixths combine easily in fingering; **seconds and sevenths feel awkward** (p0049) | Each segment's intervals imply their own chords | *Money for Nothing*—eight bars (p0050); *Radar Love*—bass holds F# steady, guitar plays thirds and fourths above (p0051); *Still of the Night*—four distinguishable riffs (p0051) |
 
-### 1.2 第二组：音阶类
+### 1.2 Group 2: Scale types
 
-| 型 | 页 | 特征与用法 | 书里的例子 |
+| Type | Page | Characteristics and use | Examples in the book |
 |---|---|---|---|
-| **小调五声** | p0052–p0057 | 摇滚最重要的音阶。**在大调和弦上奏它，b3／b7 成为蓝调音，声音"硬"；在小调和弦上则融合、失去断言感**（p0053） | Whole Lotta Rosie、Superstition（p0053）；Shakin' All Over——全用空弦音（p0054）；The Warning——12 小节里根音四次、上四度两次、回根音两次、第 9 小节换材料（p0056） |
-| **布鲁斯音阶** | p0057–p0062 | 五声小调加 b5（半音经过音），常靠推弦得到（p0057） | Sunshine Of Your Love——单音 riff 部分和声化（p0058）；Heartbreaker——快速连续移调累积兴奋感（p0058）；Walk This Way——riff 在 E、段落在 C（p0060）；Fire——制音让全弦扫击只响八度对（p0061） |
-| **大调五声** | p0063–p0065 | 明亮；在大调和声上无蓝调张力，放在小调和弦上"相当糟"（p0063）；加降三度得布鲁斯变体 | Spanish Castle Magic——副歌上四度两次（p0063）；My Girl（p0064）；Street Life——"部分演奏"的典范，riff 既是伴奏又是 hook（p0065） |
-| **大调音阶** | p0065–p0069 | 比五声／布鲁斯／Mixolydian 少见，故听感不同于大多数摇滚 riff（p0066） | Here Comes The Night（p0066）；Bohemian Rhapsody——四小节，无 b7（p0068） |
-| **Mixolydian** | p0069–p0073 | 大调降七；比纯大调"硬"、比五声精致；**需要级进运动时用它**（p0069）。riff 缺三音时，由节奏吉他的和弦决定它被听成 Mixolydian 还是五声（Taxman、Paperback Writer，p0071） | Satisfaction——从 B 而非根音开始，下方和弦定义 riff 的声音（p0070）；Jumpin' Jack Flash——b7 三次重复造成和声"拖拽"（p0071）；Now I'm Here——四小节不分句，少见（p0072） |
-| **自然小调 / Aeolian** | p0073–p0076 | 与五声小调差在第 2、6 音，两者极具表现力（p0073） | Seven Nation Army——贝司 riff，吉他进来后转成大三和弦（p0073–p0074）；Last Resort——音之间留清晰间隔，**间隔给了冲击力**（p0076） |
-| **和声小调** | p0074 | 升七，六七音间增二度，异域色彩；进行常以小调里的大 V 暗示 | Muse 多首（p0074） |
-| **Dorian** | p0076–p0080 | 小调升六，比自然小调更有棱角、更外向（p0077）；IV 级可为大三／属七（p0078）。**调式 riff 要被听成调式，必须有不削弱它的和声支持**（5.15 被听成 Mixolydian 而非 Dorian，p0078） | Oye Como Va（p0077）；Shine On You Crazy Diamond（p0078）；Pour Some Sugar On Me——a1 a2 a1 a3（p0079） |
-| **Phrygian** | p0080–p0082 | 小调降二，西班牙味；吉他上最适合 E（空弦布局，p0080）。移到 E 用到吉他与贝司的最低音，力量最大（Perfect Strangers coda，p0082） | Paradise Place（p0081） |
-| **Lydian** | p0082–p0083 | 大调升四（三全音换了个面目）；**更灵活的做法：歌保持纯大调，只在 riff 里用 Lydian**（p0083） | Dancing Days（p0083） |
-| **Locrian** | p0083–p0084 | 首音与五音之间无纯五度，I 级是减三和弦。常见做法：把音阶以五度和声化，riff 从这些五度上奏（p0084） | Everything Ends；Get Free——暗示而非纯 Locrian（p0084） |
-| **半音阶** | p0085–p0088 | 级进为特征；快速时适合写更长的 riff（不必频繁换弦）；给 riff 爵士感或模糊调性。稳定性靠稳定鼓点＋清晰陈述根音（p0085）。从五声做出半音感：在 b3 与 4 之间放经过音（即大三度，p0088） | Money、Space Truckin'（p0085）；Lady Madonna——对位的下行乐句＝反向进行用于 riff（p0085）；Black Dog（p0087） |
+| **Minor pentatonic** | p0052–p0057 | The most important scale in rock. **Played over major chords, b3 and b7 become blue notes and the sound is "hard"; over minor chords it blends in and loses its assertiveness** (p0053) | *Whole Lotta Rosie*, *Superstition* (p0053); *Shakin' All Over*—uses only open-string notes (p0054); *The Warning*—in 12 bars: the root four times, the fourth above twice, the root back twice, and new material in bar 9 (p0056) |
+| **Blues scale** | p0057–p0062 | Minor pentatonic plus b5 (a chromatic passing tone), often obtained by bending (p0057) | *Sunshine of Your Love*—partly harmonized single-note riff (p0058); *Heartbreaker*—rapid successive transpositions build excitement (p0058); *Walk This Way*—riff in E, section in C (p0060); *Fire*—muting so that a full-strum sweep sounds only an octave pair (p0061) |
+| **Major pentatonic** | p0063–p0065 | Bright; no blues tension over major harmony, and "pretty bad" over minor chords (p0063); adding a lowered third gives a blues variant | *Spanish Castle Magic*—the fourth above twice in the chorus (p0063); *My Girl* (p0064); *Street Life*—the model of "part-playing," where the riff is both accompaniment and hook (p0065) |
+| **Major scale** | p0065–p0069 | Less common than pentatonic, blues, or Mixolydian, so it sounds different from most rock riffs (p0066) | *Here Comes the Night* (p0066); *Bohemian Rhapsody*—four bars, no b7 (p0068) |
+| **Mixolydian** | p0069–p0073 | The major scale with the seventh lowered; harder than pure major, more refined than pentatonic; **use it when stepwise motion is needed** (p0069). When a riff lacks a third, the rhythm guitar's chords decide whether it is heard as Mixolydian or pentatonic (*Taxman*, *Paperback Writer*, p0071) | *Satisfaction*—starts from B rather than the root; the chords beneath define the riff's sound (p0070); *Jumpin' Jack Flash*—three repetitions of b7 create a harmonic "drag" (p0071); *Now I'm Here*—four bars unsplit, rare (p0072) |
+| **Natural minor / Aeolian** | p0073–p0076 | Differs from minor pentatonic in the 2nd and 6th degrees; both are highly expressive (p0073) | *Seven Nation Army*—bass riff; once the guitar enters, it turns into major triads (p0073–p0074); *Last Resort*—clear gaps between notes, **the gaps give the impact** (p0076) |
+| **Harmonic minor** | p0074 | Raised seventh; an augmented second between the sixth and seventh degrees, giving an exotic color; progressions often imply the major V of the minor key | Several *Muse* songs (p0074) |
+| **Dorian** | p0076–p0080 | Minor with a raised sixth; more angular and outgoing than natural minor (p0077); the IV degree may be a major or dominant seventh chord (p0078). **For a modal riff to be heard as modal, it needs harmonic support that does not weaken it** (5.15 heard as Mixolydian rather than Dorian, p0078) | *Oye Como Va* (p0077); *Shine On You Crazy Diamond* (p0078); *Pour Some Sugar on Me*—a1 a2 a1 a3 (p0079) |
+| **Phrygian** | p0080–p0082 | Minor with a lowered second; a Spanish flavor; on guitar it suits E best (open-string layout, p0080). Moved to E and using the lowest notes of guitar and bass gives the greatest power (*Perfect Strangers* coda, p0082) | *Paradise Place* (p0081) |
+| **Lydian** | p0082–p0083 | Major with a raised fourth (the tritone in a different guise); **a more flexible approach: keep the song in pure major and use Lydian only in the riff** (p0083) | *Dancing Days* (p0083) |
+| **Locrian** | p0083–p0084 | No perfect fifth between the first and fifth degrees; the I chord is a diminished triad. A common approach: harmonize the scale in fifths and play the riff over these fifths (p0084) | *Everything Ends*; *Get Free*—implies Locrian rather than pure Locrian (p0084) |
+| **Chromatic** | p0085–p0088 | Characterized by stepwise motion; at fast tempos it suits longer riffs (no need to change strings often); gives a riff a jazzy feel or ambiguous tonality. Stability comes from a steady drum pattern plus a clearly stated root (p0085). To create a chromatic feel from pentatonic, place a passing tone between b3 and 4 (that is, a major third, p0088) | *Money*, *Space Truckin'* (p0085); *Lady Madonna*—a contrapuntal descending phrase, i.e. contrary motion, used for the riff (p0085); *Black Dog* (p0087) |
 
-### 1.3 第三组：和弦类
+### 1.3 Group 3: Chord types
 
-| 型 | 页 | 特征与用法 | 书里的例子 |
+| Type | Page | Characteristics and use | Examples in the book |
 |---|---|---|---|
-| **踏板音**（pedal note） | p0089–p0091 | 低处不变的音，上方音或和弦变化；吉他上好用的是空弦 E、A、D，按弦踏板音会锁住左手（p0090）。**名技：贝司奏踏板音、吉他在上奏单音或四度／五度**（ZZ Top，p0090）。D 踏板比 A、E 更轻盈（p0091） | I Can See For Miles、She Sells Sanctuary、Green Grow The Rushes（p0089–p0090） |
-| **持续音**（drone note） | p0092 | 在所奏内容中间或上方保持的音；空弦当根音／三音／五音各有对应调；**空弦不是当前和弦根音时，riff 涉及和弦变化可能不适用**（p0092） | Sunday Bloody Sunday 独奏（p0092） |
-| **琶音** | p0093–p0097 | 和弦音依次奏出；够短、够抓耳、节奏够强就算 riff；暗示和弦但更清晰（power trio 适用）。**低音弦上更有冲击力，高音琶音偏装饰**（p0093）。贝司可只奏根音以突出和弦变化（Badge，p0094） | Sweet Child O' Mine——a1 a2 a3 a1（p0094）；Oh, Pretty Woman——先出缩短版、再出完整版（p0095）；Ain't Talkin' Bout Love——riff 几乎承载整首歌（p0096） |
-| **大调和弦** | p0097–p0099 | 最可能入 riff 的是 I、IV、V；也可由单个和弦的节奏奏法生成（Sex Machine）；超过三个大和弦可能削弱调性（p0097） | Wild Thing（p0098）；Smells Like Teen Spirit——主歌只有贝司奏根音，和弦是暗示的（p0098）；Baba O'Reilly——吉他 riff 延迟进入（p0099）；Queen Bitch——riff 嵌在每句歌词末尾（p0099） |
-| **Mixolydian 和弦** | p0099–p0103 | 核心：I–bVII–IV、I–IV–Vm（p0100）。"每个大调 I–IV–V riff 可能对应两三个 Mixolydian I–bVII–IV riff"（p0097） | Louie Louie——一条两小节 riff 撑整首歌（p0100）；American Idiot——intro/verse 里明确的节奏使之成为 riff，chorus 里同样和弦只是伴奏（p0100）；Back In Black——第一个 A 下贝司用 C#（第一转位，p0100）；The Rocker——小调音阶贝司线置于大三和弦下制造张力（p0103） |
-| **小调和弦** | p0104–p0105 | 全小和弦 riff 少见——摇滚偏爱五度，对小和弦的"过度情感"不安（p0104）；最常见是 I–VII–VI（Am–G–F） | Come Together（p0104）；Driven To Tears（p0105） |
-| **挂留和弦** | p0106–p0111 | sus4 张力大、sus2 更空灵；**几乎总是 riff 的一部分而非全部**（p0106）。A 调"横按 A ＋加 D、F#"的 on/off 图形是一大批经典 riff 的来源（p0107–p0108）；Keith Richards 用 open G 做同类图形（p0109） | Start Me Up（p0108）；All Right Now——两把吉他相似但不同，主歌无贝司（p0111）；Ticket To Ride——静态和声＋重复（p0109） |
-| **三和弦** | p0112–p0113 | 三个音即完整和声；易移动；坐在踏板音上很好（p0112） | Sultans Of Swing——第二转位三和弦滑动（p0113）；Hold Your Head Up——贝司 D 踏板（p0113） |
-| **转位和弦** | p0113–p0115 | 第一转位有"想动"的性质，多用于下行进行；第二转位更梦幻（p0114）。**让贝司手改音比改吉他和弦更容易**（p0115）；贝司若只奏根音，吉他转位效果会弱（p0174） | Desperate People（p0115） |
-| **非常规和弦** | p0115–p0117 | 在标准序列里插一两个调外／意外类型的和弦；**必须节省用——"没有正常，就不知道什么是奇怪"**（p0116） | Red Eyes And Tears（p0116）；One Armed Scissor（p0117） |
+| **Pedal note** | p0089–p0091 | A fixed note in the low register, with the upper notes or chords changing; on guitar, open E, A, and D work well; fretting a pedal note locks up the left hand (p0090). **A signature technique: bass plays the pedal note, guitar plays single notes or fourths/fifths above** (ZZ Top, p0090). A D pedal is lighter than A or E (p0091) | *I Can See for Miles*, *She Sells Sanctuary*, *Green Grow the Rushes* (p0089–p0090) |
+| **Drone** | p0092 | A note held in the middle of or above the played material; an open string used as root, third, or fifth each has corresponding keys; **when the open string is not the root of the current chord, the riff may not apply when chords change** (p0092) | Solo in *Sunday Bloody Sunday* (p0092) |
+| **Arpeggio** | p0093–p0097 | Chord tones played in succession; if short enough, catchy enough, and rhythmically strong enough, it counts as a riff; implies chords but more clearly (suitable for power trio). **More impact on the low strings; high arpeggios tend to be decorative** (p0093). The bass may play only the root to highlight chord changes (*Badge*, p0094) | *Sweet Child O' Mine*—a1 a2 a3 a1 (p0094); *Oh, Pretty Woman*—shortened version first, full version after (p0095); *Ain't Talkin' Bout Love*—the riff carries almost the whole song (p0096) |
+| **Major chords** | p0097–p0099 | The chords most likely to enter a riff are I, IV, and V; a riff can also be generated from a single chord's rhythmic approach (*Sex Machine*); more than three major chords may weaken the tonality (p0097) | *Wild Thing* (p0098); *Smells Like Teen Spirit*—in the verse only the bass plays the root, and the chords are implied (p0098); *Baba O'Reilly*—the guitar riff enters late (p0099); *Queen Bitch*—riff inserted at the end of each lyric line (p0099) |
+| **Mixolydian chords** | p0099–p0103 | Core: I–bVII–IV, I–IV–Vm (p0100). "Every major-key I–IV–V riff may correspond to two or three Mixolydian I–bVII–IV riffs" (p0097) | *Louie Louie*—a two-bar riff carries the whole song (p0100); *American Idiot*—a clear rhythm in the intro/verse makes it a riff, while the same chords in the chorus are merely accompaniment (p0100); *Back in Black*—the bass plays C# under the first A (first inversion, p0100); *The Rocker*—a minor-scale bass line under a major triad creates tension (p0103) |
+| **Minor chords** | p0104–p0105 | All-minor-chord riffs are rare—rock favors fifths and is uneasy with the "excess emotion" of minor chords (p0104); the most common is I–VII–VI (Am–G–F) | *Come Together* (p0104); *Driven to Tears* (p0105) |
+| **Suspended chords** | p0106–p0111 | sus4 carries high tension; sus2 is more ethereal; **almost always part of the riff rather than all of it** (p0106). The on/off figure of "barred A plus D and F# added" is the source of many classic riffs (p0107–p0108); Keith Richards uses open G for similar figures (p0109) | *Start Me Up* (p0108); *All Right Now*—two guitars similar but different; no bass in the verse (p0111); *Ticket to Ride*—static harmony plus repetition (p0109) |
+| **Triads** | p0112–p0113 | Three notes make a complete harmony; easy to move; works well sitting on a pedal note (p0112) | *Sultans of Swing*—sliding second-inversion triads (p0113); *Hold Your Head Up*—bass D pedal (p0113) |
+| **Inverted chords** | p0113–p0115 | The first inversion has a "wants to move" quality and is mostly used in descending progressions; the second inversion is dreamier (p0114). **It is easier to have the bassist change notes than to change the guitar chords** (p0115); if the bass only plays the root, the guitar's inversion effect weakens (p0174) | *Desperate People* (p0115) |
+| **Unconventional chords** | p0115–p0117 | Insert one or two out-of-key or unexpected chords into a standard sequence; **must be used sparingly—"without normal, you don't know what is strange"** (p0116) | *Red Eyes and Tears* (p0116); *One Armed Scissor* (p0117) |
 
 ---
 
-## 2. 长度与重复模式
+## 2. Length and Repetition Patterns
 
-### 2.1 长度（p0007、p0129）
+### 2.1 Length (p0007, p0129)
 
-| 长度 | 说明 |
+| Length | Description |
 |---|---|
-| 1 小节 | 最简单的形式：一个乐句 |
-| 2、4 小节 | 常态。大多数 riff 在 1–4 小节之间；再长就像旋律或独奏（p0007） |
-| 3 小节 | 少见——重复后成 6 小节，违背摇滚"四"的分组；但重复四次可得 12 小节（p0129） |
-| > 4 小节 | 更难被听成单一单元，取决于速度和音符密度（p0129） |
-| 4 小节不分句 | 通常四小节会分成两个应答乐句或更小单位，不分句的少见（Now I'm Here，p0072） |
+| 1 bar | The simplest form: one phrase |
+| 2, 4 bars | The norm. Most riffs fall between 1 and 4 bars; any longer and it sounds like a melody or solo (p0007) |
+| 3 bars | Rare—repeated, it becomes 6 bars, which breaks rock's grouping in fours; but repeating it four times yields 12 bars (p0129) |
+| More than 4 bars | Harder to hear as a single unit; depends on tempo and note density (p0129) |
+| 4 bars, unsplit | Usually four bars are divided into two answering phrases or smaller units; unsplit ones are rare (*Now I'm Here*, p0072) |
 
-### 2.2 重复模式（p0129–p0130）
+### 2.2 Repetition patterns (p0129–p0130)
 
-把一小节 riff 记作 `a1`，变体记作 `a2 a3 a4`；两小节 riff 把 `a` 当成两小节即可。
+Call a one-bar riff `a1`; variants are `a2 a3 a4`. For a two-bar riff, treat `a` as two bars.
 
-| 模式 | 形状 | 说明 |
+| Pattern | Shape | Notes |
 |---|---|---|
-| 基础重复 | `a1 a1 a1 a1` | 以四的倍数重复，周围编曲变化；简单 riff 靠改贝司音增加兴趣（A–C–G 之下低音 A 像 A 小调五声，低音 F 或 C 就完全不同，p0129） |
-| 3+1 | `a1 a1 a1 a2` | 前三小节相同，第四小节轻微变奏 |
-| 八小节 | `a1 a1 a1 a2 / a1 a1 a1 a3` | |
-| 十六小节 | `a1 a1 a1 a2 / a1 a1 a1 a3 / a1 a1 a1 a2 / a1 a1 a1 a4` | **a2、a3 不应比 a4 更"决定性"或"完整"**，因为 a4 是整块的结尾。A 大调里 a2、a3 最好结束在暗示 D 或 E 的音上，或 bIII（C）／bVII（G）（p0130） |
-| 四段各异 | `a1 a2 a3 a4` | 听众可能听成四条 riff 或一条四段的 riff，取决于各小节的相似度 |
-| 问答 | `a1 a2 a1 a3` | 第二、第四小节回答原 riff |
-| 第三小节变奏 | `a1 a1 a3 a1` | 较少见 |
-| 不对称 | `a a a b c`（5 小节） | 第五小节节奏戏剧化，像回到开头前的意外爆发（p0156） |
-| 3 个四小节乐句 | 四次重复得 12 小节主歌而非 16 | p0167 |
+| Basic repetition | `a1 a1 a1 a1` | Repeated in multiples of four, with the surrounding arrangement changing; simple riffs add interest by changing the bass notes (a low A under A–C–G sounds like A minor pentatonic; a low F or C sounds completely different, p0129) |
+| 3+1 | `a1 a1 a1 a2` | The first three bars are identical; the fourth bar is slightly varied |
+| Eight bars | `a1 a1 a1 a2 / a1 a1 a1 a3` | |
+| Sixteen bars | `a1 a1 a1 a2 / a1 a1 a1 a3 / a1 a1 a1 a2 / a1 a1 a1 a4` | **a2 and a3 should not be more "decisive" or "complete" than a4**, because a4 is the ending of the whole block. In A major, a2 and a3 are best ending on notes that imply D or E, or bIII (C) / bVII (G) (p0130) |
+| Four different bars | `a1 a2 a3 a4` | Listeners may hear four riffs or one four-part riff, depending on how similar the bars are |
+| Call and response | `a1 a2 a1 a3` | Bars two and four answer the original riff |
+| Third-bar variation | `a1 a1 a3 a1` | Rarer |
+| Asymmetric | `a a a b c` (5 bars) | The fifth bar's rhythm is dramatic, like an unexpected burst before returning to the start (p0156) |
+| Three four-bar phrases | Four repetitions yield a 12-bar verse rather than 16 | p0167 |
 
-### 2.3 重复次数与"太多／太少"
+### 2.3 Number of repetitions: "too many / too few"
 
-- 重复是 riff 钉进听众脑子的方式，也是驱动力——"往蒸汽机车的炉子里铲煤"（p0007）。
-- 界线：听众觉得"riff 很棒但歌结束得太快"会重播，这是要的效果（p0118）。
-- **intro 只奏三次不是四次**再进主歌（Tush，p0038）；Peter Buck 的建议：重复 4 小节时改成 3 次或 5 次，耳朵会更快听到变化（p0132）。
-- 单小节 riff 只奏四次（约 10 秒）就进歌也成立（Alone, Together，p0056）。
-- 对 riff "不留情的专注"是力量来源，但不无聊地做到很难（Trampled Underfoot，p0047）。
+- Repetition is how a riff nails itself into the listener's head, and it is also the driving force—"shoveling coal into a steam locomotive's firebox" (p0007).
+- The boundary: listeners who feel "the riff is great but the song ended too soon" will replay it, which is the desired effect (p0118).
+- An intro that plays the riff **three times, not four**, before the verse (*Tush*, p0038). Peter Buck's advice: when repeating a 4-bar riff, use 3 or 5 repetitions instead, so the ear notices change sooner (p0132).
+- A one-bar riff played only four times (about 10 seconds) before the song enters also works (*Alone, Together*, p0056).
+- An "unrelenting focus" on the riff is a source of power, but it should be made so that it does not become boring (*Trampled Underfoot*, p0047).
 
 ---
 
-## 3. 变形手法（p0118–p0122、p0134–p0135、p0175）
+## 3. Variation Techniques (p0118–p0122, p0134–p0135, p0175)
 
-> 不要把 riff 当成完成品，而是"只展示了一面的物体"，绕着它走看其他侧面；按 RHM 三个面有意识地改（p0118）。
+> Don't treat a riff as a finished product, but as "an object showing only one side"—walk around it, look at its other sides, and deliberately vary it along the RHM facets (p0118).
 
-| 面 | 手法 | 要点 | 页 |
+| Facet | Technique | Key points | Page |
 |---|---|---|---|
-| 节奏 | 测速度上限 | 逐渐加速直到 riff **失去身份**或手跟不上；目标是不失身份的最快速度，不是能奏的最快。慢 riff 反向测：慢到失去前进动力为止。demo 常偏慢，因为作者还在熟悉歌 | p0118 |
-| 节奏 | 移重音 | 在重复中某处加原本没有的重音 | p0134 |
-| 节奏 | 节奏反转 | 反转某拍的时值顺序（附点八分＋十六分 → 十六分在前） | p0134 |
-| 节奏 | 增时／减时 | 统一改时值，否则形状变太多；**减时在摇滚更有用**：结尾把四小节 riff 压成两小节，听众感觉加速而速度未变；与 4/4 切到对应 12/8 相关 | p0134 |
-| 节奏 | 移一拍或半拍 | 把某些音前后移动一拍或半拍造变体（Jamie's Cryin'） | p0060 |
-| 节奏 | 换拍号 | 4/4 riff 放进 3/4 丢最后一拍；放进 7/8 丢最后一个八分；放进 5/4 多一拍休止——休止可给鼓 fill、静默、新低音或和弦 | p0135 |
-| 节奏 | 跨小节起句 | 一小节 riff 不从下一小节第一拍重复，而从前一小节最后一个反拍开始（连线跨小节），产生"拉扯" | p0134 |
-| 和声 | 重配和声 | 换伴随和弦：大→关系小、小→关系大；riff 只含五度／四度时，不同段落可分别用大、小和弦背景 | p0119 |
-| 和声 | 改贝司音 | 吉他贝司齐奏的 riff，改贝司音以暗示不同和弦或转位；第一转位不如根音齐奏"稳"，可用来**延迟根音齐奏 riff 的出现** | p0119 |
-| 和声 | 换语境不换音 | Androgyny：riff 不动，背景和弦走 Em→G→C→F，产生张力（p0119–p0120）；"通过改变被听见的语境而非改变音符来变化"（p0184）；同一 riff 三遍靠打击乐／鼓／贝司＋管风琴改和弦而各不相同（p0166） | |
-| 和声 | 局部和声化 | 不必全程加和声，在 riff 某一段（如最后一小节）上方加几个音即可；三度／十度、六度／十三度引入大小调色彩，四度／五度／八度保持"空洞"；可三度起、四五度收以暗示终止和弦。选八度时考虑人声线的音高 | p0140 |
-| 音高 | 移调①跟结构 | 副歌里随和弦移调；bridge／独奏里多次移调；结尾移调给听多次的 riff 注入新生命。12 小节里 riff 代替扫弦：先上四度再上五度，一条单小节 riff 三个位置撑完 12 小节；贝司通常低一或两个八度加倍 | p0120–p0121 |
-| 音高 | 移调②不跟结构 | 最常见**上大二度**（重摇滚公式：第二副歌后为独奏上全音）；**小三度**（与五声小调的关系）；可沿五声音阶依次移到 C、D、E、G；更不安的：上下半音、三全音 | p0121–p0122 |
-| 音高 | 移调的空弦问题 | 原 riff 用空弦，多数移调会丢掉它——和弦类、转位类、踏板／持续音类尤其敏感。录音室可用变调夹或重调弦只叠移调版；**更明智（考虑现场）：把它当成写变体的机会，"作曲解决"** | p0122 |
-| 音高 | 八度叠加 | 同一音高叠 2–3 轨后再加不会更响更满，失真越多越明显；改在不同八度叠。riff 在最低把位时上方有两个位置可叠 | p0139 |
-| 形式 | 缩短版先出 | 先只给五个音、停在未解决音上，再给完整版（Oh, Pretty Woman）："写一条 riff，再做一个缩短版来延迟完整版的出现" | p0095 |
-| 形式 | 发展 | "发展在摇滚里几乎不用，所以偶尔做点不寻常的事有机会"；不要整首重复同一 riff，写一个变奏在特定点插入 | p0175 |
+| Rhythm | Testing the tempo ceiling | Gradually speed up until the riff **loses its identity** or the hand can't keep up; the goal is the fastest speed that keeps its identity, not the fastest it can be played. For slow riffs, test in reverse: slow down until it loses forward momentum. Demos are often slow because the writer is still getting to know the song | p0118 |
+| Rhythm | Shifting accents | Add an accent somewhere in the repetition where there was none before | p0134 |
+| Rhythm | Reversing note values | Reverse the order of note values within a beat (dotted eighth + sixteenth → sixteenth first) | p0134 |
+| Rhythm | Augmentation / diminution | Change all note values uniformly, otherwise the shape changes too much. **Diminution is more useful in rock**: at the ending, compress a four-bar riff into two bars so listeners feel acceleration while the tempo stays the same; related to switching 4/4 to the corresponding 12/8 | p0134 |
+| Rhythm | Shifting by a beat or half-beat | Move certain notes earlier or later by a beat or half-beat to make a variant (*Jamie's Cryin'*) | p0060 |
+| Rhythm | Changing meter | Put a 4/4 riff into 3/4 and drop the last beat; into 7/8 and drop the last eighth; into 5/4 with an extra beat of rest—the rest can give drums a fill, silence, a new bass note, or a chord | p0135 |
+| Rhythm | Starting across the bar line | A one-bar riff doesn't repeat from beat one of the next bar, but starts from the last off-beat of the previous bar (linked across the bar line), creating "pull" | p0134 |
+| Harmony | Re-harmonizing | Change the accompanying chords: major → relative minor, minor → relative major; when a riff contains only fifths or fourths, different sections can use major or minor chords underneath | p0119 |
+| Harmony | Changing the bass note | Unison guitar-bass riff: change the bass note to imply different chords or inversions; the first inversion is less "stable" than root-position unison and can be used to **delay the arrival of the root-position unison riff** | p0119 |
+| Harmony | Changing context, not notes | *Androgyny*: the riff stays put while the background chords move Em→G→C→F, creating tension (p0119–p0120); "change the context you hear, not the notes" (p0184). The same riff played three times, with percussion, drums, or bass plus organ changing the chords, sounds different each time (p0166) | |
+| Harmony | Partial harmonization | Add harmony only over part of the riff (e.g., the last bar) by adding a few notes above. Thirds, tenths, sixths, and thirteenths bring major/minor color, while fourths, fifths, and octaves stay "hollow." A line can start on a third and resolve on a fourth or fifth to imply a cadential chord. When choosing octaves, consider the pitch of the vocal line | p0140 |
+| Pitch | Transposition ①: following the structure | Transpose along with the chord changes in the chorus; transpose several times in the bridge or solo; transposing in the ending breathes new life into a riff heard many times. In a 12-bar form, the riff replaces strumming: up a fourth, then a fifth, so one one-bar riff fills 12 bars across three positions; the bass usually doubles one or two octaves lower | p0120–p0121 |
+| Pitch | Transposition ②: not following the structure | Most commonly **up a major second** (the heavy-rock formula: after the second chorus, the solo goes up a whole step); **a minor third** (relation to the minor pentatonic); can step through the pentatonic scale to C, D, E, G; more unsettling: up or down a semitone, or a tritone | p0121–p0122 |
+| Pitch | The open-string problem in transposition | The original riff uses open strings, which most transpositions lose—especially chord-based, inversion-based, and pedal/drone riffs. In the studio, a capo or retuning can layer only the transposed version; **better (considering live performance): treat it as an opportunity to write a variant, "solve it compositionally"** | p0122 |
+| Pitch | Octave layering | Stacking 2–3 tracks at the same pitch adds no more loudness or fullness; the more distortion, the more obvious this is; layer different octaves instead. When the riff is in the lowest position, there are two positions above it for layering | p0139 |
+| Form | Shortened version first | First give only five notes, stopping on an unresolved note, then the full version (*Oh, Pretty Woman*): "write a riff, then make a shortened version to delay the appearance of the full one" | p0095 |
+| Form | Development | "Development is almost never used in rock, so doing something unusual occasionally has an effect." Don't repeat the same riff throughout the whole song; write a variation and insert it at specific points | p0175 |
 
 ---
 
-## 4. 拍号与节奏效果（p0131–p0135）
+## 4. Meter and Rhythmic Effects (p0131–p0135)
 
-| 项 | 要点 |
+| Item | Key points |
 |---|---|
-| 4/4 | 最受欢迎；"四"的魔力体现在乐句长度、重复次数、和弦数量（p0131） |
-| 插入 3/4 | 四小节 intro 的第四小节改 3/4，总拍数 15，下一段早一拍到达——"对称＝美；不对称＝戏剧"（p0132） |
-| 2/4 | 小节太短，riff 展不开；用于过渡、截短或延长乐句、让听众多等两拍（p0132） |
-| 4/4＋2/4 | 暗示 6 拍小节，多出空间放音符或歌词（p0132） |
-| 5/4 | 从 4/4 的稳定里解脱；用于 bridge、独奏下方或 intro，再回 4/4（p0132）；"不是刻意做 5/4，是旋律需要多一拍，拍号得跟着改"（p0144）；5+5+6＝16 拍，与四小节 4/4 等长，在乐句尾加"标签"仍能闭合（p0145） |
-| 7/4 | 强拍六拍才回一次，中部易"下垂"；要强调第一拍（响亮和弦、镲），中部略弱，否则被听成 4/4＋3/4（p0133） |
-| 8/4、9/4 | 会被听成两个 4/4、或 4/4＋5/4（p0133） |
-| 12/8 | 摇滚最常用的复合拍；布鲁斯 shuffle；4/4 里奏三连音可暂时得到同样效果（p0133） |
-| 6/8 | 每小节两拍感；与两小节 3/4 的区别在只有第一个 one 被强调（p0133） |
-| 9/8、3/8 | 9/8 用于以三为基的结构（Manic Depression）；在 12/8 或 6/8 里插 3/8 造不对称（p0133） |
-| 切分 | 重音放反拍，跨拍跨小节；鼓守拍，吉他贝司与之对抗；groove 直接来自切分（p0134） |
-| 3 对 4 | 音以三个一组，在 4/4 上重音落点逐次漂移（Over The Hills And Far Away，p0135） |
-| 三连音 | 八分三连音给"弹跳"；四分三连音让小节被拉伸、音乐漂浮（p0134） |
-| 静默 | 用静默增强 riff 的力量（Messin' With The Mekon，p0134） |
-| 慢速 | Black Sabbath 同名曲"冰川般"的慢速是其影响力的一部分（p0040） |
+| 4/4 | The most popular; the "magic of four" shows up in phrase length, repetition counts, and number of chords (p0131) |
+| Inserting 3/4 | Changing the fourth bar of a four-bar intro to 3/4 gives 15 beats in total, so the next section arrives a beat early—"symmetry = beauty; asymmetry = drama" (p0132) |
+| 2/4 | Bars too short for a riff to develop; used for transitions, for shortening or lengthening phrases, and for making listeners wait two extra beats (p0132) |
+| 4/4 + 2/4 | Implies 6-beat bars, giving extra space for notes or lyrics (p0132) |
+| 5/4 | Escapes the stability of 4/4; used for bridges, under solos, or intros, then back to 4/4 (p0132). "Not a deliberate 5/4; the melody needs an extra beat, so the meter has to change" (p0144). 5+5+6 = 16 beats, equal in length to four 4/4 bars, and a "tag" at the end of a phrase still closes it (p0145) |
+| 7/4 | Strong beats recur only every six beats, and the middle tends to "sag"; emphasize beat one (loud chords, cymbal), with the middle somewhat weaker, or it will be heard as 4/4 + 3/4 (p0133) |
+| 8/4, 9/4 | Will be heard as two 4/4 bars, or as 4/4 + 5/4 (p0133) |
+| 12/8 | The most common compound meter in rock; blues shuffle; playing triplets in 4/4 temporarily gives the same effect (p0133) |
+| 6/8 | A two-beat feel per bar; the difference from two bars of 3/4 is that only the first "one" is stressed (p0133) |
+| 9/8, 3/8 | 9/8 is used for structures based on three (*Manic Depression*); inserting 3/8 into 12/8 or 6/8 creates asymmetry (p0133) |
+| Syncopation | Accents on off-beats, crossing beats and bar lines; drums hold the pulse while guitar and bass push against it; the groove comes directly from syncopation (p0134) |
+| 3 against 4 | Notes grouped in threes, with accent landing points gradually drifting against 4/4 (*Over the Hills and Far Away*, p0135) |
+| Triplets | Eighth-note triplets give "bounce"; quarter-note triplets stretch the bar and make the music float (p0134) |
+| Silence | Using silence to strengthen the riff's power (*Messin' with the Mekon*, p0134) |
+| Slow tempo | The "glacial" slowness of Black Sabbath's title track is part of its influence (p0040) |
 
 ---
 
-## 5. 叠录、双吉他与编制（p0138–p0140）
+## 5. Overdubbing, Twin Guitars, and Lineups (p0138–p0140)
 
-| 项 | 要点 | 页 |
+| Item | Key points | Page |
 |---|---|---|
-| 模拟双吉他 | 直接信号左、右加短延迟；延迟太长右声道像"半睡"跟不上；可只对一侧加失真 | p0138 |
-| 真双轨 | 两次录制的微小时间／音量差把 riff 变厚；可故意稍"糙"增加 feel | p0138 |
-| 同音高双轨的区分 | 不同音箱／踏板／EQ 与混响／拾音器／琴型（双线圈对单线圈）；一把干净一把失真，或一把轻过载一把 60 年代 fuzz | p0138 |
-| 不完全相同的两把 | Helicopter：两把吉他奏同一音阶 riff 但部分音不同（p0139）；All Right Now：两把相似但不同（p0111） | |
-| 换乐器叠 | 放克用合成器、rock'n'roll 用萨克斯、大提琴；先原声吉他引入再电吉他强化；电 12 弦混小声叠在过载六弦上加泛音感 | p0139 |
-| 贝司进入时机 | 别在第一分钟用光弹药：①贝司先低八度叠吉他，稍后再低一个八度；②贝司先奏踏板音再进齐奏；③贝司先奏 riff，吉他再叠上 | p0139 |
-| 边际递减 | 同音高 2–3 轨之后再加不更响；八把吉他不等于八倍响；失真越多越明显 | p0139 |
-| 快五度分两人 | riff 含快速变换的五度，一人难奏干净 → 两把吉他各奏一个单音（Detroit Rock City） | p0139 |
-| 三度和声分两人 | 两把吉他各取一音；只有一把时单独奏三度也容易 | p0178 |
-| power trio／四人（含主唱） | 只有一件和声乐器 → 倾向至少两个音的 riff，和弦类 riff 更有吸引力；有第二把吉他则可和声化，单音 riff 可叠 | p0140 |
-| 有键盘手 | 试更有"切割感"的单音 riff，键盘填和声；**让键盘手限制音数以服务 riff**（Deep Purple） | p0140 |
-| 三度在 power trio | 单音 riff 里给某些音加大／小三度以暗示和弦；两音都不是根音时最好，根音留给贝司 | p0048 |
-| 变调弦与失真 | 开放／改变调弦下共鸣、延音、泛音增强 → 建议降低失真；比五度复杂的和弦、相邻弦上相差全音／半音的密集音需更干净的音色 | p0127 |
-| 三度 riff 的失真 | 三度类 riff 需要较少失真 | p0154 |
-| 只叠 riff 的一部分 | 第三把吉他只叠三全音那几个音、第四把把第一拍高八度叠——用叠加突出 riff 的不同部分 | p0153 |
+| Simulated double guitar | Direct signal panned left and right with a short delay; too long a delay makes the right channel sound "half-asleep" and unable to keep up; distortion can be added to only one side | p0138 |
+| True double-tracking | Two separate recordings with slight timing and volume differences thicken the riff; deliberately being a bit "rough" can add feel | p0138 |
+| Distinguishing same-pitch double tracks | Different amps, pedals, EQ, reverb, pickups, and guitar body shapes (double-coil vs single-coil); one clean and one distorted, or one lightly overdriven and one 60s fuzz | p0138 |
+| Two guitars not quite identical | *Helicopter*: two guitars play the same-scale riff with some notes different (p0139); *All Right Now*: two similar but different (p0111) | |
+| Layering with other instruments | Funk with synth, rock'n'roll with sax or cello; introduce with acoustic guitar first, then reinforce with electric; an electric 12-string mixed quietly over an overdriven six-string adds a sense of overtones | p0139 |
+| When the bass enters | Don't spend all your ammunition in the first minute: ① the bass first doubles the guitar an octave lower, then a further octave lower later; ② the bass first plays a pedal note before the full ensemble; ③ the bass plays the riff first, then the guitar layers over it | p0139 |
+| Diminishing returns | Adding more than 2–3 tracks at the same pitch adds no loudness; eight guitars do not equal eight times the loudness; the more distortion, the more obvious this is | p0139 |
+| Splitting fast fifths between two players | If the riff contains quickly changing fifths, one player struggles to play them cleanly → two guitars each play one single note (*Detroit Rock City*) | p0139 |
+| Splitting thirds harmony between two players | Two guitars each take one note; with only one guitar, playing the third alone is also easy | p0178 |
+| Power trio / four-piece (including vocalist) | Only one harmonic instrument → lean toward riffs with at least two notes; chord-based riffs are more appealing. With a second guitar, harmonization is possible and single-note riffs can be doubled | p0140 |
+| Has a keyboardist | Try single-note riffs with more "cutting" quality, with keyboards filling the harmony; **limit the keyboardist's number of notes to serve the riff** (Deep Purple) | p0140 |
+| Thirds in a power trio | In single-note riffs, add major or minor thirds to some notes to imply chords; best when both notes are not the root, with the root left to the bass | p0048 |
+| Altered tunings and distortion | Under open or altered tunings, resonance, sustain, and overtones increase → reduce distortion; chords more complex than fifths, and dense notes on adjacent strings a whole step or semitone apart, need a cleaner tone | p0127 |
+| Third-based riff distortion | Third-based riffs need less distortion | p0154 |
+| Layering only part of a riff | A third guitar doubles only the notes of the tritone; a fourth doubles the first beat an octave higher—layering highlights different parts of the riff | p0153 |
 
 ---
 
-## 6. 调弦（p0124–p0127）
+## 6. Tuning (p0124–p0127)
 
-| 调弦 | 是什么 | 对写作／编曲的影响 | 页 |
+| Tuning | What it is | Effect on writing / arrangement | Page |
 |---|---|---|---|
-| 整体降半音 | Eb Ab Db Gb Bb Eb；指型不变只是低半音 | 增加"沉重感"；细弦变松利于推弦、不利音准与重击——**每降半音弦号加一级** | p0124 |
-| 降全音／一个半音 | 最低弦到 D 或 Db | "泥浆感"大增；Tony Iommi 是先驱 | p0124 |
-| 七弦 | 加比 E 低四度的 B 弦 | 五度、四度指型不变；再 drop 到 A 得到极低五度 | p0124 |
-| BEADGB | 标准调弦加低 B、去最高弦 | Mike Mushok 用法；其 dropped D 为 BDADGB | p0124 |
-| 模拟降调 | 不改调弦：在 5、6 弦上奏四度而非五度 | 听起来像"从吉他底部掉下去"（Spanish Castle Magic 副歌） | p0124、p0064 |
-| **Dropped D** | 第 6 弦降全音到 D | 吉他偏向从 E 转到 D；低音弦更松易推弦；最低三弦 D–A–D 可单指横按（与 DADGAD 同理） | p0126 |
-| Double dropped D | DADGBD，第 1、6 弦都降到 D | 离 open G 只差一根弦；Cinnamon Girl | p0126–p0127 |
-| **Open G** | DGDGBD | Stones 之声；在横按大三和弦上加 sus4/6/9 的 on/off 图形比标准调弦更有效；3、5、7、10、12 品对应 G 五声小调上的大三和弦（I、bIII、IV、V、bVII） | p0125 |
-| Open E | EBEG#BE | Ronnie Wood 同类 riff；Stay With Me 的模糊双音（p0128） | p0125 |
-| DADGAD | 非开放调弦 | 来自民谣巴洛克、模仿北非持续音；最低三弦纯五度加八度可单指横按；Kashmir | p0125 |
-| EGDGBE | 开放 Em7 | Billy Corgan | p0125 |
-| 记录 | 在改变调弦里写 riff **务必用纸笔（和弦框）记下指型**，否则日后想不起来 | p0127 |
+| Whole-step-down (all strings down a semitone) | Eb Ab Db Gb Bb Eb; fingerings unchanged, just a semitone lower | Adds "heaviness"; thin strings get slack, which helps bending but hurts pitch and heavy attack — **each semitone down calls for one step heavier gauge** | p0124 |
+| Down a whole step / a step and a half | Lowest string to D or Db | Greatly increases "mud"; Tony Iommi was a pioneer | p0124 |
+| Seven-string | Adds a low B string four steps below E | Fifth and fourth fingerings unchanged; dropping further to A gives an extremely low fifth | p0124 |
+| BEADGB | Standard tuning with a low B added and the highest string removed | Mike Mushok's approach; his dropped D is BDADGB | p0124 |
+| Simulated downtuning | Without changing tuning: play fourths instead of fifths on strings 5 and 6 | Sounds like "falling off the bottom of the guitar" (chorus of *Spanish Castle Magic*) | p0124, p0064 |
+| **Dropped D** | Sixth string lowered a whole step to D | Shifts the guitar's center from E to D; looser low strings bend more easily; the lowest three strings D–A–D can be barred with one finger (same principle as DADGAD) | p0126 |
+| Double dropped D | DADGBD, with strings 1 and 6 both lowered to D | Only one string away from open G; *Cinnamon Girl* | p0126–p0127 |
+| **Open G** | DGDGBD | The Stones' sound; the on/off figure of adding sus4/6/9 over a barred major chord is more effective than in standard tuning; frets 3, 5, 7, 10, 12 correspond to major triads on the G minor pentatonic (I, bIII, IV, V, bVII) | p0125 |
+| Open E | EBEG#BE | Similar riffs in the style of Ronnie Wood; the blurred double notes of *Stay With Me* (p0128) | p0125 |
+| DADGAD | Non-open tuning | Derived from folk baroque, imitating North African drones; the lowest three strings form a pure fifth plus octave that can be barred with one finger; *Kashmir* | p0125 |
+| EGDGBE | Open Em7 | Billy Corgan | p0125 |
+| Note | When writing riffs in altered tunings, **always record the fingerings on paper (chord diagrams)**, or you won't recall them later | p0127 |
 
 ---
 
-## 7. 对 riff 友好的调（p0122–p0123）
+## 7. Riff-Friendly Keys (p0122–p0123)
 
-- 同一进行换调，**对吉他影响巨大**：有多少空弦、最低音是什么，决定了声音（p0122）。
-- 硬摇滚／金属首选 **E、A**；**F#、B** 也热门，因为比主音低全音的空弦（F# 下的 E、B 下的 A）正是 bVII（p0122）。
-- 吉他中度敏感于调：空弦 EADGBE 全在 C、G、D 及其关系小调里；允许 Mixolydian 时 A 也全在调内；吉他偏向升号调，F 调就"丢掉"了空弦 B（p0123）。
-- 吉他友好的调大致是 **F、C、G、D、A、E**；变调夹把难的调伪装成这些（p0123）。
-- 硬摇滚和声的替代公式：**取五声小调，在每个音上建大三和弦**——A 五声小调得 A、C、D、E、G 大三和弦，可再加 F（p0123）。等价说法：大调七个和弦扔掉减和弦和三个小和弦，留 I、IV、V，再把 3、6、7 音降半音转成大三和弦，得六个大和弦（p0123）。
-- 降号方向的调横按和弦增多（Bb 大调除 Dm 全横按，p0123）。
-- 听起来像 Eb 的歌，检查：是否整体降半音（E 指型）、是否变调夹一品（D 指型）或三品（C 指型）（p0123）。
-- 不常见的调有其用处：C# 让空弦 E 成为 b3，从根音向下跳六度到 E 使它"听起来更低"（Freedom，p0123）；C# 能强调 E（bIII）、A（bVI）的共鸣（Gods Of War，p0079）；F 调在吉他上不常见（Baba O'Reilly，p0099）。
-
----
-
-## 8. 谱例索引
-
-### 8.1 书中随附示范曲目（页号为该谱例所在页）
-
-| 曲目 | 内容 | 页 |
-|---|---|---|
-| Track 1–2 | 半音移位；加休止符的节奏变体 | p0017 |
-| Track 3–4 | 半音移位做成五度；做成大三和弦 | p0018 |
-| Track 8 | A 踏板音上的三度（A Mixolydian） | p0089 |
-| 琶音 riff 示例 | Em–C–G/B–Am–B–Em/B–Gsus2 | p0094 |
-| Track 11–12 | A 调 sus4/6、sus4/9 图形；移到其他把位 | p0108 |
-| Track 13 | 紧密排列三和弦 | p0112 |
-| 转位示例 | C、G 的转位；用转位和声化 C 大调音阶 | p0114–p0115 |
-| 非常规和弦示例 | D5–G7–C#7–Em7–Amaj7 | p0116 |
-| 移调示例 | 12 小节 G→C→D；带变体的移调 | p0121–p0122 |
-| Track 17 | 半音 riff，a1 a2 a3 b，每根空弦下方按半音 | p0149 |
-| Track 18 | 全音 riff，十六分音符，rock/funk 混合；四把吉他逐小节叠成三和弦 | p0150 |
-| Track 19 | 八度 riff，贝司吉他齐奏 | p0151 |
-| Track 20 | 五度 riff，G 小调下行五度；钢琴勾勒大小和弦而吉他五度不表态 | p0152 |
-| Track 21 | 四度 riff，第 3 拍无音造"拉力" | p0153 |
-| Track 22 | 三全音 riff，drop D，只叠三全音部分的第三把吉他 | p0153 |
-| Track 24 | 六度 riff，a1 a2 b a3；同一 riff 在 Am 与 F 上各不相同 | p0155 |
-| Track 25 | 混合音程，5 小节不对称，a a a b c | p0156 |
-| Track 26 | 五声小调，无支持和声（NC）＝经典硬摇滚声 | p0157 |
-| Track 28 | 三度 riff（p0154）；大调五声＋推弦到 D#（p0158） | |
-| Track 29 | 大调音阶 riff，大七度而非 b7；贝司只重复最后五个音 | p0159 |
-| Track 30 | Mixolydian riff，从第 3 拍反拍起句（p0160）；Locrian riff，全五度，5/4 与 6/4 交替（p0164） | |
-| Track 31 | Aeolian riff，12/8 极慢，a1 a2 | p0160 |
-| Track 32 | Dorian riff，a1 a2 a3 b，强调 F# | p0161 |
-| Track 33 | Phrygian riff，签名音 Bb 在 A7sus4/b9、Gm、Bb 里 | p0162 |
-| Track 34 | Lydian riff，F Lydian 让 G、Cmaj7 成为可能 | p0163 |
-| Track 36 | 半音阶 riff，a1 a2 b1 b2，第 2 小节为第 1 小节下移全音 | p0165 |
-| 踏板音 riff | D 踏板上 D Mixolydian；三遍靠编曲改变 | p0166 |
-| Track 38 | 持续音 riff，E-A-D-F#-B-C# 调弦，三个四小节乐句 | p0167 |
-| Track 39 | 琶音 riff，12/8，E7／A7 图形，第二三遍以六度和声化 | p0167 |
-| Track 40 | 大调和弦 riff，I–IV–V–IV–bVII 末尾换 bIII | p0169 |
-| Track 41 | Mixolydian 和弦 riff，按住 D7 抬放手指 | p0170 |
-| Track 42 | 小调和弦 riff，Bm，Gm6 补充；干净电吉他＋原声 | p0171 |
-| Track 43 | 挂留和弦 riff，A7sus4／G7sus4／Esus4／Fsus2 | p0172 |
-| Track 44 | 三和弦 riff，十六分音符，sus4／add9／madd9 | p0173 |
-| Track 45 | 转位和弦 riff，上行贝司线 E–F#–G–A–B–C–D–E | p0174 |
-| Track 46 | 非常规和弦 riff，5/4→4/4→6/4，同一想法在不同拍号与音高里突变 | p0175–p0176 |
-| Track 47 | 逐遍发展：A5 节奏→加 C→C 变 bIII 和弦→跑句加厚 | p0177 |
-| Track 48 | Mixolydian＋八度跳，3+1，E9 双击收尾 | p0178 |
-| Track 49 | 指弹 riff，高把位三度对反拍拇指低音 | p0178–p0179 |
-| Track 50 | 琶音 riff 加 Dorian 变体（A→G#） | p0179 |
-| Track 51 | G7 厚重 riff，12 小节移调，F→D/F# 半音爬回 | p0180 |
-| Track 52 | 密集八分音符，两条 riff 各带微变奏 | p0182 |
-| Track 53 | 12/8 布鲁斯味，C 琶音变 Cmaj7 | p0183 |
-| Track 54 | 空弦 E 持续音上的三个六度；贝司改音使之暗示 A、E、Dadd9 | p0184 |
-| Track 55 | Drop D，12 小节加 8 小节，b3/3 动机 | p0186 |
-| Track 56 | 12/8 半音阶 riff，C 调，a+b+a+c | p0188 |
-
-### 8.2 书中详析曲目（Riff Gallery）速查
-
-| 想学 | 看 | 页 |
-|---|---|---|
-| 军鼓在 riff 空隙里 | You Really Got Me | p0024 |
-| intro 像从 12 小节的第 9 小节进入 | Mississippi Queen | p0025 |
-| 贝司稳住、吉他在上换音程 | Radar Love；ZZ Top 风格 | p0051、p0090 |
-| 高吉他／低贝司留出人声空间 | Pride (In The Name Of Love) | p0037 |
-| 吉他不动、贝司在下换和弦（隐含和弦） | With Or Without You、Pride | p0033、p0037 |
-| riff 落在歌词句尾 | Queen Bitch | p0099 |
-| 主歌只留贝司奏 riff | Smells Like Teen Spirit；Hate To Say I Told You So（第三段主歌） | p0098、p0131、p0102 |
-| 贝司 riff 撑第一段主歌、上方逐件加入 | We've Gotta Get Out Of This Place | p0070 |
-| riff 移调累积兴奋感 | Heartbreaker（A→B→A→C→D→E） | p0058、p0122 |
-| 一条 riff 在多个音高出现 | Driven To Tears | p0105 |
-| riff 不动、和弦在下变 | Androgyny；Track 54 | p0119、p0184 |
-| 缩短版延迟完整版 | Oh, Pretty Woman | p0095 |
-| 主歌简化、副歌完整 | Ain't Talkin' Bout Love（三种变体） | p0096 |
-| 人声进来时删掉 riff 里的冲突音 | Are You Gonna Go My Way（四度消失） | p0062 |
-| 低音区 riff 不与人声冲突 | Ball Of Confusion | p0056 |
-| 人声"骑在 riff 之上"造对位节奏 | Howlin' Wolf 诸曲 | p0046 |
-| 人声在单一和弦上、随后更忙的 riff | In From The Storm | p0047 |
-| 主歌 riff 无贝司 | All Right Now | p0111 |
-| 拍号不对称 | Perfect Strangers（5/4 插入）；Manic Depression（9/8） | p0082、p0136 |
-| 半速副歌对极速主歌 | Bat Country；Stay With Me | p0043、p0128 |
-| 乐队只剩鼓＋贝司重进主 riff | Bandoliers | p0147 |
-| riff 结尾留空让鼓穿透 | Mind Eraser, No Chaser | p0147 |
+- For the same progression transposed to another key, **the guitar is hugely affected**: how many open strings there are and what the lowest note is determines the sound (p0122).
+- Hard rock and metal favor **E and A**; **F# and B** are also popular, because the open strings a whole step below (F# below E; A below B) are exactly bVII (p0122).
+- Guitar is moderately sensitive to key: the open strings EADGBE all sit in C, G, D and their relative minors; if Mixolydian is allowed, A also has all its open strings in key; the guitar tends toward sharp keys, and F major "loses" the open B (p0123).
+- Guitar-friendly keys are roughly **F, C, G, D, A, E**; a capo disguises difficult keys as these (p0123).
+- Hard-rock harmonic substitution formula: **take the minor pentatonic and build a major triad on each note**—A minor pentatonic gives major triads on A, C, D, E, G, and F may be added (p0123). Equivalently: from the seven major-key chords, discard the diminished chord and the three minor chords, keep I, IV, and V, then lower the 3rd, 6th, and 7th by a semitone to make them major triads, yielding six major chords (p0123).
+- Keys with flats: more barred chords (in B-flat major, every chord except Dm is barred, p0123).
+- To check whether a song that sounds like E-flat is tuned down a semitone (E shapes), uses a capo at fret one (D shapes), or uses a capo at fret three (C shapes), check the fingerings (p0123).
+- Uncommon keys have their uses: C# makes the open E string the b3, and jumping a sixth down to E from the root makes it "sound lower" (*Freedom*, p0123); C# emphasizes the resonance of E (bIII) and A (bVI) (*Gods of War*, p0079); F major is uncommon on guitar (*Baba O'Reilly*, p0099).
 
 ---
 
-## 9. 术语表
+## 8. Example Index
 
-| 术语 | 释义 | 页 |
+### 8.1 Demo tracks included in the book (page numbers are where each example appears)
+
+| Track | Content | Page |
 |---|---|---|
-| **RHM** | rhythm–harmony–melody：检查和发展 riff 的三个面 | p0008、p0118 |
-| **a1 / a2 / b** | 重复模式记号：a1 原型，a2 a3 a4 其变体，b 对比材料 | p0129–p0130 |
-| **3+1** | `a1 a1 a1 a2`——前三遍相同、第四遍变 | p0129 |
-| **tone shift / semitone shift** | 全音移位／半音移位：两个相距全音（半音）的音（或五度、和弦）来回 | p0017、p0022 |
-| **叛逆音（delinquent note）** | 半音移位做成五度或大三和弦时必然出现的离调音，耳朵听作"破规则的音" | p0018 |
-| **导音** | 大调第七音，半音上行到主音；bVII 之所以"硬"是因为抹掉了它 | p0017、p0022 |
-| **bVII** | 降七级大三和弦（A 调的 G），来自 Mixolydian | p0023 |
-| **Mixolydian** | 大调降七；VII 级和弦成大三、V 级成小三 | p0069、p0099 |
-| **蓝调音（blue note）** | b3、b7（在大调和声上）、b5；在大调和弦背景下产生张力 | p0023、p0045、p0053 |
-| **五度 / power chord** | 根音＋纯五度（可加八度），无三音；音色而非和弦 | p0030 |
-| **四度** | 五度的倒置，根音通常在上方 | p0034 |
-| **三全音** | 增四／减五，三个全音；布鲁斯 b5 与大调 4–7 | p0039 |
-| **八度加倍（octave doubling）** | riff 每个音都叠八度（Hendrix 在 power trio 里加厚现场声） | p0029 |
-| **十度 / 复合三度** | 八度加三度，用于和声化 riff | p0140、p0147 |
-| **踏板音（pedal）** | 低处保持不变、上方变化的音 | p0089 |
-| **持续音（drone）** | 在所奏内容中间或上方保持的音 | p0092 |
-| **隐含和弦（implied chord）** | 吉他保持静态图形、贝司在下移动造成和弦变化的错觉；或单音／五度 riff 由下方和弦定义 | p0037、p0070 |
-| **第一／第二转位、斜杠和弦** | 三音／五音在最低；C/E、C/G | p0114 |
-| **sus4 / sus2 / add9 / 5add9** | 三音换成四音／二音；add9 保留三音；5add9 是两个五度叠起（C–G–D） | p0106–p0107 |
-| **sus4/6 图形** | 横按 A 上加 D、F# 的 on/off 图形（Stones、Free 一类） | p0107–p0108 |
-| **jangle** | 12 弦电吉他明亮清脆的风格，sus2/sus4/add9 为核心，通常无失真 | p0107 |
-| **双主音（twin lead）** | 两把吉他奏以三度为主的平行线 | p0043 |
-| **双轨（double-tracking）** | 同一 part 录两遍，微小差异使其变厚 | p0138 |
-| **部分演奏（part-playing）** | 吉他线补充整体编曲而非抢风头；riff 既是伴奏又是 hook | p0065 |
-| **半音经过音** | 不属于当前音阶、连接两音的音（b5 即一例） | p0057 |
-| **增时／减时** | 统一放大／缩小 riff 时值 | p0134 |
-| **半速／倍速** | 拍感减半或加倍而速度不变 | p0134、p0128 |
-| **detuning / dropped D / open G / DADGAD** | 见 §6 | p0124–p0126 |
-| **Hendrix 和弦** | E7#9；但 Foxy Lady、Are You Gonna Go My Way 的隐含和弦其实是小七和弦——听不到大三音时要查 | p0038、p0062 |
-| **hollow sound** | 四度／五度／八度和声化产生的、不带大小调色彩的空洞声 | p0140 |
-| **NC** | 无支持和声（no chords）；单音 riff 无和弦是经典硬摇滚声的一部分 | p0157 |
+| Track 1–2 | Semitone shifts; rhythmic variant with a rest added | p0017 |
+| Track 3–4 | Semitone shift made into a fifth; made into a major triad | p0018 |
+| Track 8 | Third over an A pedal (A Mixolydian) | p0089 |
+| Arpeggio riff example | Em–C–G/B–Am–B–Em/B–Gsus2 | p0094 |
+| Track 11–12 | A-key sus4/6 and sus4/9 figures; moved to other positions | p0108 |
+| Track 13 | Close-voiced triads | p0112 |
+| Inversion examples | Inversions of C and G; C major scale harmonized with inversions | p0114–p0115 |
+| Unconventional chord example | D5–G7–C#7–Em7–Amaj7 | p0116 |
+| Transposition examples | 12-bar G→C→D; transposition with variants | p0121–p0122 |
+| Track 17 | Semitone riff, a1 a2 a3 b, a semitone below each open string | p0149 |
+| Track 18 | Whole-tone riff, sixteenth notes, rock/funk mix; four guitars stacked into triads bar by bar | p0150 |
+| Track 19 | Octave riff, bass and guitar in unison | p0151 |
+| Track 20 | Fifth riff, descending fifths in G minor; piano sketches major and minor chords while the guitar fifths take no position | p0152 |
+| Track 21 | Fourth riff, no note on beat 3 creating "pull" | p0153 |
+| Track 22 | Tritone riff, drop D, third guitar layers only the tritone notes | p0153 |
+| Track 24 | Sixth riff, a1 a2 b a3; the same riff sounds different over Am and F | p0155 |
+| Track 25 | Mixed intervals, 5-bar asymmetry, a a a b c | p0156 |
+| Track 26 | Minor pentatonic, no supporting harmony (NC) = classic hard-rock sound | p0157 |
+| Track 28 | Third riff (p0154); major pentatonic plus bend to D# (p0158) | |
+| Track 29 | Major-scale riff, major seventh rather than b7; bass repeats only the last five notes | p0159 |
+| Track 30 | Mixolydian riff, starting on the off-beat of beat 3 (p0160); Locrian riff, all fifths, alternating 5/4 and 6/4 (p0164) | |
+| Track 31 | Aeolian riff, 12/8 very slow, a1 a2 | p0160 |
+| Track 32 | Dorian riff, a1 a2 a3 b, emphasizing F# | p0161 |
+| Track 33 | Phrygian riff, signature note Bb within A7sus4/b9, Gm, Bb | p0162 |
+| Track 34 | Lydian riff, F Lydian makes G and Cmaj7 possible | p0163 |
+| Track 36 | Chromatic riff, a1 a2 b1 b2, bar 2 is bar 1 shifted down a whole step | p0165 |
+| Pedal-note riff | D Mixolydian over a D pedal; three repetitions differentiated by arrangement | p0166 |
+| Track 38 | Drone riff, E-A-D-F#-B-C# tuning, three four-bar phrases | p0167 |
+| Track 39 | Arpeggio riff, 12/8, E7/A7 figure, harmonized in sixths on the second and third passes | p0167 |
+| Track 40 | Major-chord riff, I–IV–V–IV–bVII ending with a change to bIII | p0169 |
+| Track 41 | Mixolydian chord riff, hold D7 and lift fingers | p0170 |
+| Track 42 | Minor-chord riff, Bm, with Gm6 added; clean electric guitar plus acoustic | p0171 |
+| Track 43 | Suspended-chord riff, A7sus4 / G7sus4 / Esus4 / Fsus2 | p0172 |
+| Track 44 | Triad riff, sixteenth notes, sus4 / add9 / madd9 | p0173 |
+| Track 45 | Inverted-chord riff, ascending bass line E–F#–G–A–B–C–D–E | p0174 |
+| Track 46 | Unconventional-chord riff, 5/4→4/4→6/4, the same idea mutating across meters and pitches | p0175–p0176 |
+| Track 47 | Development across passes: A5 rhythm → add C → C becomes bIII chord → run thickened | p0177 |
+| Track 48 | Mixolydian plus octave leaps, 3+1, E9 double-hit ending | p0178 |
+| Track 49 | Fingerstyle riff, high-position thirds against off-beat thumb bass | p0178–p0179 |
+| Track 50 | Arpeggio riff with a Dorian variant (A→G#) | p0179 |
+| Track 51 | G7 heavy riff, 12-bar transposition, F→D/F# half-steps climbing back | p0180 |
+| Track 52 | Dense eighth notes, two riffs each with a slight variation | p0182 |
+| Track 53 | 12/8 blues flavor, C arpeggio becomes Cmaj7 | p0183 |
+| Track 54 | Three sixths over an open E drone; bass note change makes it imply A, E, Dadd9 | p0184 |
+| Track 55 | Drop D, 12 bars plus 8 bars, b3/3 motif | p0186 |
+| Track 56 | 12/8 chromatic riff, C key, a+b+a+c | p0188 |
+
+### 8.2 Quick index to the Riff Gallery (detailed analyses in the book)
+
+| Want to learn | See | Page |
+|---|---|---|
+| Snare in the gaps of the riff | *You Really Got Me* | p0024 |
+| Intro that enters as if from bar 9 of a 12-bar form | *Mississippi Queen* | p0025 |
+| Bass holds steady, guitar changes intervals above | *Radar Love*; ZZ Top style | p0051, p0090 |
+| High guitar / low bass leave room for the vocal | *Pride (In the Name of Love)* | p0037 |
+| Guitar static, bass changes chords below (implied chords) | *With or Without You*, *Pride* | p0033, p0037 |
+| Riff lands at lyric line-ends | *Queen Bitch* | p0099 |
+| Only the bass plays the riff in the verse | *Smells Like Teen Spirit*; *Hate to Say I Told You So* (third verse) | p0098, p0131, p0102 |
+| Bass riff carries the first verse, other parts added above one by one | *We've Gotta Get Out of This Place* | p0070 |
+| Transposed riff builds excitement | *Heartbreaker* (A→B→A→C→D→E) | p0058, p0122 |
+| One riff appears at several pitches | *Driven to Tears* | p0105 |
+| Riff unchanged, chords below change | *Androgyny*; Track 54 | p0119, p0184 |
+| Shortened version delays the full version | *Oh, Pretty Woman* | p0095 |
+| Simplified verse, full chorus | *Ain't Talkin' Bout Love* (three variants) | p0096 |
+| Delete conflicting riff notes when the vocal enters | *Are You Gonna Go My Way* (fourth disappears) | p0062 |
+| Low-register riff does not clash with the vocal | *Ball of Confusion* | p0056 |
+| Vocal rides over the riff, creating contrapuntal rhythm | Howlin' Wolf songs | p0046 |
+| Vocal on a single chord, then a busier riff | *In from the Storm* | p0047 |
+| No bass under the verse riff | *All Right Now* | p0111 |
+| Asymmetric meter | *Perfect Strangers* (5/4 insert); *Manic Depression* (9/8) | p0082, p0136 |
+| Half-speed chorus against a very fast verse | *Bat Country*; *Stay With Me* | p0043, p0128 |
+| Band reduced to drums and bass before the main riff returns | *Bandoliers* | p0147 |
+| Riff ends with a gap for the drums to punch through | *Mind Eraser, No Chaser* | p0147 |
+
+---
+
+## 9. Glossary
+
+| Term | Definition | Page |
+|---|---|---|
+| **RHM** | Rhythm–harmony–melody: the three facets for checking and developing a riff | p0008, p0118 |
+| **a1 / a2 / b** | Repetition notation: a1 the prototype, a2 a3 a4 its variants, b contrasting material | p0129–p0130 |
+| **3+1** | `a1 a1 a1 a2`—the first three passes identical, the fourth varied | p0129 |
+| **Tone shift / semitone shift** | Whole-tone / semitone shift: two notes (or fifths, chords) a whole step (or semitone) apart, moving back and forth | p0017, p0022 |
+| **Delinquent note** | The out-of-key note that inevitably appears when a semitone shift is made into a fifth or major triad; the ear hears it as "a note that breaks the rules" | p0018 |
+| **Leading tone** | The seventh degree of the major scale, which rises a semitone to the tonic; bVII is "hard" because it erases it | p0017, p0022 |
+| **bVII** | Lowered-seventh major triad (G in the key of A), from Mixolydian | p0023 |
+| **Mixolydian** | Major scale with lowered seventh; the VII chord becomes a major triad, and the V chord a minor triad | p0069, p0099 |
+| **Blue note** | b3, b7 (over major harmony), b5; creates tension against a major-chord background | p0023, p0045, p0053 |
+| **Fifth / power chord** | Root plus perfect fifth (optionally with octave), no third; timbre rather than chord | p0030 |
+| **Fourth** | Inverted fifth, with the root usually on top | p0034 |
+| **Tritone** | Augmented fourth / diminished fifth, three whole tones; the blues b5 and the major 4–7 | p0039 |
+| **Octave doubling** | Every note of the riff doubled at the octave (Hendrix adding thickness to live sound in a power trio) | p0029 |
+| **Tenth / compound third** | An octave plus a third, used in harmonized riffs | p0140, p0147 |
+| **Pedal** | A note held steady in the low register while the upper parts change | p0089 |
+| **Drone** | A note held in the middle of or above the played material | p0092 |
+| **Implied chord** | The illusion created when the guitar holds a static figure while the bass moves below, creating chord changes; or a single-note or fifth riff defined by the chords beneath it | p0037, p0070 |
+| **First/second inversion, slash chord** | Third or fifth in the bass; C/E, C/G | p0114 |
+| **sus4 / sus2 / add9 / 5add9** | Third replaced by fourth / second; add9 keeps the third; 5add9 is two fifths stacked (C–G–D) | p0106–p0107 |
+| **sus4/6 figure** | The on/off figure of barred A with D and F# added (Stones, Free style) | p0107–p0108 |
+| **Jangle** | Bright, crisp 12-string electric guitar style, centerd on sus2/sus4/add9, usually without distortion | p0107 |
+| **Twin lead** | Two guitars playing parallel lines built mainly on thirds | p0043 |
+| **Double-tracking** | The same part recorded twice; small differences make it thicker | p0138 |
+| **Part-playing** | The guitar line supports the overall arrangement rather than grabbing attention; the riff is both accompaniment and hook | p0065 |
+| **Chromatic passing tone** | A note not in the current scale that connects two notes (b5 is one example) | p0057 |
+| **Augmentation / diminution** | Uniformly enlarging / shrinking the note values of a riff | p0134 |
+| **Half-speed / double-speed** | Halving or doubling the felt pulse while the tempo stays the same | p0134, p0128 |
+| **Detuning / dropped D / open G / DADGAD** | See §6 | p0124–p0126 |
+| **Hendrix chord** | E7#9; but the implied chords of *Foxy Lady* and *Are You Gonna Go My Way* are actually minor seventh chords—when you can't hear the major third, check | p0038, p0062 |
+| **Hollow sound** | The empty sound produced by harmonizing in fourths / fifths / octaves, with no major/minor color | p0140 |
+| **NC** | No chord support (no chords); a single-note riff with no chords is part of the classic hard-rock sound | p0157 |

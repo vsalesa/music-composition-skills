@@ -1,307 +1,307 @@
-# 铜管乐器及多乐器组的组合（杨立青下册第十四章）
+# Brass Instruments and Combinations of Multiple Instrument Groups (Yang Liqing, Vol. 2, Chapter 14)
 
-这个文件管两件事：铜管组自己怎么组起来（编制、排列、线条、和弦），以及有铜管在场时整个乐队的音色怎么分配（两组与三组的和声结合、织体各因素的分层、复调与赋格里的音色布局）。它与 reference.md 的 §2.3（为弦乐配器）、§2.4（木管组）、§2.5（铜管组）是并列关系：§2.5 给的是铜管每一件能做什么，这里给的是把它们跟别的组摆在一起时该怎么判断。
+This file covers two things: how the brass group is put together on its own (lineup, arrangement, lines and chords), and how the timbre of the whole orchestra is distributed when brass is present (harmonic combinations of two and three groups, the layering of texture elements, and timbre layout in counterpoint and fugue). It runs alongside `reference.md` §2.3 (scoring for strings), §2.4 (the woodwind group) and §2.5 (the brass group). §2.5 covers what each brass instrument can do; this file covers how to judge them when they are placed together with other groups.
 
-## 1. 铜管组的能力边界与编制
+## 1. Capability Limits and Lineup of the Brass Group
 
-### 1.1 四条能力差，决定铜管什么时候该进（p0138–0141）
+### 1.1 Four Capability Differences That Decide When Brass Should Enter (p0138–0141)
 
-| 维度 | 铜管相对弦乐与木管 | 由此得出的判断 | 页 |
+| Dimension | Brass compared with strings and woodwinds | Judgement that follows | Page |
 |---|---|---|---|
-| 组内融合 | 各声种音质差异远小于木管，几乎任何结合都协调统一 | 组内不必为"能不能融"操心，情况与弦乐组相仿；也因此不同类铜管相互结合不产生严格意义上的混合音色（见 SKILL §2、§3.1） | （p0138）（p0143） |
-| 力度层次 | 细腻度与层次感不及弦乐组和木管组 | 要做细微的力度造型别指望铜管 | （p0138） |
-| 音响幅度 | 低音区（圆号、长号）pp 约 40–42 分贝；高音区 ff 可达 100–106 分贝 | 整组弦乐或木管都够不到这个上限。铜管给的是幅度，层次另找乐器 | （p0138–0139） |
-| 技术灵活性 | 除小号外仍不及多数弦乐木管，差距在缩小 | 快速复杂音型要靠"动机性"写法支撑（例 XIV-2 科汉《第三交响曲》II 演示全组快速十六分音符）；大号声部一律简化 | （p0139–0141） |
+| Blend within the group | The timbres of the different brass instruments differ far less than those of the woodwinds, so almost any combination blends well | Within the group there is no need to worry about whether things blend. The situation is much like the string group. For the same reason, different kinds of brass combined do not produce a true mixed timbre (see SKILL §2, §3.1) | (p0138) (p0143) |
+| Dynamic layering | Fineness and layering are weaker than in the string group and the woodwind group | Do not expect brass to produce delicate dynamic shaping | (p0138) |
+| Sonic amplitude | In the low register (horn, trombone), pp is about 40–42 decibels; in the high register, ff can reach 100–106 decibels | No whole group of strings or woodwinds reaches this ceiling. Brass supplies amplitude; find other instruments for layering | (p0138–0139) |
+| Technical agility | Apart from the trumpet, still less agile than most strings and woodwinds, though the gap is closing | Fast, complex figures must be carried by "motivic" writing (example XIV-2: Kehan's Third Symphony, second movement, shows the whole brass group playing fast sixteenth notes); tuba parts are always simplified | (p0139–0141) |
 
-★ 减负手法：速度很快的主题落到铜管组时，可把它分割成长度不等的截段交给不同声部接替演奏，接口处的局部重叠正好压在乐句重音与最有特征的部位上（例 XIV-3 布里顿《青少年管弦乐队指南》演示小号声部的分割与交接）。横向换色见 SKILL §3.6，此处新增的是"减轻技巧负担"这个动因（p0141）。
+★ A method for reducing the load: when a theme that moves very fast falls to the brass group, it can be split into segments of unequal length and handed over between different parts. The short overlaps at the joins fall on the phrase accents and the most characteristic places (example XIV-3: Britten's *Young Person's Guide to the Orchestra* shows the trumpet part being split and handed over). Horizontal colour change is covered in SKILL §3.6. What is new here is the motive "to reduce the burden on technique" (p0141).
 
-**用法**：铜管进场前先问要的是幅度还是层次。要层次就先别进，要幅度才进。
+**Usage**: before brass enters, ask whether you want amplitude or layering. If you want layering, do not bring brass in yet. Bring it in only when you want amplitude.
 
-### 1.2 铜管一进场，平衡就要重算（p0141–0143）
+### 1.2 Once Brass Enters, the Balance Must Be Recalculated (p0141–0143)
 
-单支木管在弦乐三个八度齐奏、铜管双八度音型与定音鼓持续音的三面夹击下会完全出不来，单簧管、大管落在各自弱音区时更严重（例 XIV-4 贝多芬《第九交响曲》I 原版）。
+A single woodwind instrument, under the three-way pressure of three octaves of unison strings, a double-octave brass figure and a sustained timpani note, will be completely drowned out. The clarinet and bassoon, when they sit in their weak registers, are affected even more (example XIV-4: Beethoven's *Ninth Symphony*, first movement, original scoring).
 
-马勒重配器时的三条修正可当作 SKILL §5"让某一组透出"的实操版（例 XIV-5）：
+Three corrections Mahler made when re-scoring can be treated as a practical version of SKILL §5, "letting one group come through" (example XIV-5):
 
-1. 渐强过程中逐小节增加木管数量，2–4–6–8；
-2. 要求木管组先于其他组分别以 f、ff 进入；
-3. 大幅削减小号与定音鼓的力度。
+1. During a crescendo, add woodwinds bar by bar: 2, 4, 6, 8.
+2. Have the woodwind group enter ahead of the other groups, at f and then ff.
+3. Reduce the dynamic of the trumpets and timpani considerably.
 
-### 1.3 编制四档（p0144–0145）
+### 1.3 Four Grades of Lineup (p0144–0145)
 
-| 档 | 配置 | 用在什么场合 | 页 |
+| Grade | Configuration | Used where | Page |
 |---|---|---|---|
-| 双管 | 古典早期常只有 2 圆号加 2 小号；规范双管为圆号、小号各 2，长号 2–3，无大号；圆号扩到 4 支也常见 | 古典风格与小编制的底线配置 | （p0144） |
-| 三管 | 4 圆号、3（或 2）小号、3 长号加 1 大号；长号早期为中音／次中音／低音各 1，现多为 2 次中音加 1 低音 | 19 世纪中叶后确立，当今职业乐团的标准编制，默认按它写 | （p0144） |
-| 四至五管 | 圆号 6–8（《指环》8 圆号，或 4 圆号加 4 瓦格纳大号），极端至 10–12 支；小号常 4 支，法国一系与西贝柳斯、斯特拉文斯基偏好 2 小号加 2 短号；低音端可用 2 大号 | ★ 超常编制的常见特征是原形乐器与变种混编，单纯加数量并非要点 | （p0144–0145） |
-| 室内化 | 只把 2–4 支圆号并入弦乐、木管，或直接省掉某个声种 | 为避开金属色彩、要亲密音色时用；代价是放弃整组铜管的音量与辉煌 | （p0145） |
+| Double | Early Classical scoring often had only 2 horns and 2 trumpets. The standard double lineup is 2 horns and 2 trumpets, 2–3 trombones and no tuba. Four horns are also common | The basic minimum for Classical style and small lineups | (p0144) |
+| Triple | 4 horns, 3 (or 2) trumpets, 3 trombones and 1 tuba. Early on, the trombones were alto, tenor and bass, one each; today it is usually 2 tenor trombones and 1 bass trombone | Established after the mid-19th century. The standard lineup of today's professional orchestras, and the default when writing | (p0144) |
+| Four to five | 6–8 horns (*The Ring* uses 8 horns, or 4 horns plus 4 Wagner tubas), and extremes of 10–12. Trumpets often 4, with the French school and Sibelius and Stravinsky preferring 2 trumpets plus 2 cornets; the bass end can use 2 tubas | ★ The common feature of oversized lineups is a mix of original instruments and their variants. Simply adding numbers is not the point | (p0144–0145) |
+| Chamber-style reduction | Only 2–4 horns are merged into the strings and woodwinds, or a whole brass type is dropped outright | Used to avoid metallic colour when a more intimate sound is wanted. The cost is giving up the volume and brilliance of the whole brass group | (p0145) |
 
-总谱上铜管组排在木管组与打击乐组中间，组内自上而下为圆号、小号、长号、大号；变种乐器排在其原形乐器下方（p0145–0146）。
+In the score, the brass group sits between the woodwinds and the percussion. Within the group, from top to bottom: horns, trumpets, trombones, tuba. A variant instrument is placed below its original (p0145–0146).
 
-## 2. 铜管纯音色的线条
+## 2. Lines of Pure Brass Timbre
 
-### 2.1 同度（p0146–0147）
+### 2.1 Unison (p0146–0147)
 
-- 多支同类铜管同度齐奏换来更丰富的共鸣与更饱满的音响，代价是牺牲音响纯度与表情，有时甚至显得粗浊（例 XIV-6 亚纳切克《小交响曲》I 演示 9 支小号同度齐奏）。一般判据见 SKILL §3.1。
-- 不同类铜管同度必须有明确目的。典型目的：用长号同度重叠圆号旋律以加重量感、强调悲剧性（例 XIV-7 哈恰图良《第二交响曲》IV，4 圆号 + 1 长号）。
-- ★ 圆号、小号、长号各 2 支在乐队中音区同度结合，得到的是浑厚饱满、高度复合却"没有个性"的音色，坚实沉重，适合魁伟、雄壮、战争气氛一类形象（例 XIV-8 瓦格纳《女武神》）。想要个性时不要选这个配置。
+- Several brass instruments of the same kind playing in unison produce a richer resonance and a fuller sound. The cost is some loss of purity and expression, and sometimes a coarse quality (example XIV-6: Janáček's *Sinfonietta*, first movement, shows nine trumpets in unison). For the general criteria see SKILL §3.1.
+- Different kinds of brass in unison must have a clear purpose. A typical purpose: a trombone doubling the horn melody to add weight and stress the tragic character (example XIV-7: Khachaturian's *Second Symphony*, fourth movement, 4 horns plus 1 trombone).
+- ★ Two horns, two trumpets and two trombones in unison in the middle register of the orchestra give a thick, full sound that is highly compound yet "has no individuality". It is solid and heavy, suitable for imposing, grand images or a war atmosphere (example XIV-8: Wagner's *Die Walküre*). If you want individuality, do not choose this configuration.
 
-### 2.2 八度与多层八度（p0147–0150）
+### 2.2 Octaves and Multi-Level Octaves (p0147–0150)
 
-| 配置 | 判断 | 页 |
+| Configuration | Judgement | Page |
 |---|---|---|
-| 同类铜管八度 | 上下两件音区并不对等，但铜管各音区在音色与力度上的差别不如木管明显，八度下方稍弱也无碍，效果仍出色（例 XIV-9 马勒《第三交响曲》I）。一般判据见 SKILL §3.2 | （p0147–0148） |
-| 不同类铜管八度 | 只要两件的使用音区相对等，平衡就会改善；出音法的细微差异使两层音质略有不同（与小号相比圆号、大号发音略"散"，长号因拉管动作也不尽相同），对总体无大碍。常用小号／长号、小号／圆号、圆号／长号、长号／大号 | （p0148–0149） |
-| 八度两层各自混编 | 上下两层之一或两者都用不同类铜管混合配置时，两层的协调性更好 | （p0149） |
-| 双八度及多层八度 | ★ 只能由不同类铜管配置（除非用两支原形加一支变种），且一般只出现在强力度或高潮段落（例 XIV-10 瓦格纳《女武神》演示从 1 长号／3 长号／1 大号到 3 小号／4 长号／1 大号的逐级演进）。最低层大号强度不足时用低音提琴重叠补足 | （p0149–0150） |
+| Octaves of the same kind of brass | The two layers are not equal in register, but the registers of brass differ less in timbre and dynamic than those of the woodwinds. Being a little softer in the lower octave does no harm, and the effect is still good (example XIV-9: Mahler's *Third Symphony*, first movement). For the general criteria see SKILL §3.2 | (p0147–0148) |
+| Octaves of different kinds of brass | As long as the two instruments are used in comparable registers, the balance improves. Small differences in the way each produces sound make the two layers slightly different in tone (compared with the trumpet, the horn and tuba sound a little "airier"; the trombone differs in its slide action). This does no real harm overall. Common pairings: trumpet/trombone, trumpet/horn, horn/trombone, trombone/tuba | (p0148–0149) |
+| Two octave layers each with a mixed lineup | When one or both layers use a mix of different kinds of brass, the two layers blend better | (p0149) |
+| Double octaves and multi-level octaves | ★ These can only be made from different kinds of brass (except when using two originals plus one variant), and they usually appear only at strong dynamics or in climaxes (example XIV-10: Wagner's *Die Walküre*, showing the step-by-step build from 1 trombone / 3 trombones / 1 tuba to 3 trumpets / 4 trombones / 1 tuba). If the lowest tuba layer is not strong enough, double bass can be added to reinforce it | (p0149–0150) |
 
-多层八度的通用判据见 reference §4.2。
+For the general rule for multi-level octaves, see reference §4.2.
 
-### 2.3 和声性线条（p0150–0151）
+### 2.3 Harmonic Lines (p0150–0151)
 
-铜管的和声性线条多用同类乐器，或原形乐器与其变种的结合（古典自然铜管的"黄金进行"即属此类，例 XIV-11 布里顿《春天交响曲》II）。进阶用法：用两组不同类铜管（如各加弱音器的 3 小号与 3 长号）各构成一条以号角音调为核心的和声性线条，以多调性对置形成对位。
+The harmonic lines of brass mostly use instruments of the same kind, or a combination of an original instrument with its variant. (The "golden progression" of the natural brass of the Classical period belongs to this type; example XIV-11: Britten's *Spring Symphony*, second movement.) A more advanced use: two different kinds of brass (for example, 3 trumpets and 3 trombones, each with mutes) each form a harmonic line built around a horn-call motif, and the two lines form a counterpoint through polytonal opposition.
 
-## 3. 混合音色的线条
+## 3. Lines of Mixed Timbre
 
-### 3.1 铜管在混合线条里的角色定位（p0151–0156）
+### 3.1 The Role of Brass in Mixed Lines (p0151–0156)
 
-★ 这是本章最实用的一条：有铜管参与的混合音色线条，常仅用弦乐和／或木管构成线条主体，铜管只用来强调线条的高点、勾画最有特征的部分、加大动态起伏与空间感（p0154）。铜管从头跟到尾是例外，不是默认。
+★ This is the most practical point in the chapter. In a mixed-timbre line that includes brass, the line's body is often built only from strings and/or woodwinds. The brass is used only to stress the peaks of the line, to outline its most characteristic passages, and to increase dynamic swells and spatial depth (p0154). Brass that carries the line from start to finish is the exception, not the default.
 
-| 判据 | 内容 | 页 |
+| Criterion | Content | Page |
 |---|---|---|
-| 圆号是混合剂 | 圆号音响圆润温暖，与木管和弦乐（尤其大提琴、中提琴）都有密切的音色联系，因此常被当作混合剂（例 XIV-12 德沃夏克《斯拉夫舞曲》Op.46 No.3 演示对位旋律由双簧管加圆号加大提琴转入圆号加大提琴而音响仍均匀）。染色与中和的机制见 SKILL §3.3、§3.4 | （p0151） |
-| 融合看频谱共有成分 | 能否同度融合取决于两件乐器频谱里有没有共同成分：小号中音区能与双簧管、英国管同度结合，是因三者都含程度不等的鼻音成分（例 XIV-13 霍尔斯特《行星》IV） | （p0152） |
-| 木管软化铜管 | 铜管主导时加入木管可软化铜管音质、减少金属色彩（例 XIV-14 瓦格纳《漂泊的荷兰人》序曲演示 2 大管叠加 4 圆号的 f 力度中高音区线条） | （p0152–0153） |
-| 弦乐中和铜管低音 | 3 长号 + 1 大号的强烈粗放低音线条，可用大提琴加低音提琴作中和剂，压住过多金属性，换来浑厚饱满而不刺耳 | （p0153–0154） |
-| 谁来加"硬度" | ★ 同一音区里小号嫌单薄、长号又过于刚烈时，圆号往往是同度重叠弦乐旋律以增强刚性硬度的最佳选择（例 XIV-16 霍尔斯特《行星》IV，6 圆号重叠弦乐中音区旋律） | （p0154） |
+| The horn is a blending agent | The horn's sound is round and warm, and it has close timbral links with the woodwinds and strings (especially cello and viola). It is therefore often used as a blending agent (example XIV-12: Dvořák's *Slavonic Dance* Op. 46 No. 3, shows a contrapuntal melody passed from oboe with horn and cello to horn and cello, while the sound stays even). For the mechanisms of colouring and neutralising, see SKILL §3.3 and §3.4 | (p0151) |
+| Blend depends on shared spectrum | Whether two instruments can blend at unison depends on whether their spectra share common components. The trumpet in its middle register can blend at unison with the oboe and cor anglais because all three contain nasal components to varying degrees (example XIV-13: Holst's *The Planets*, IV) | (p0152) |
+| Woodwinds soften the brass | When brass dominates, adding woodwinds softens its tone and reduces the metallic colour (example XIV-14: Wagner's *Der fliegende Holländer* overture, showing 2 bassoons doubled with 4 horns in a middle-high register line at f) | (p0152–0153) |
+| Strings neutralise the brass bass | A strong, coarse bass line of 3 trombones plus 1 tuba can be softened by cellos plus double basses, which absorb excess metallic quality, giving a full and round sound without harshness | (p0153–0154) |
+| Who supplies "hardness" | ★ In the same register, when a trumpet sounds too thin and a trombone too harsh, the horn is often the best choice for doubling a string melody at unison to add stiff, hard edge (example XIV-16: Holst's *The Planets*, IV, 6 horns doubling a string melody in the middle register) | (p0154) |
 
-铜管可以局部进入：先由圆号进来，随后用小号渲染渐强幅度以加强线条动势（例 XIV-17 西贝柳斯《传奇曲之 3》II，基本音色为木管加弦乐齐奏）。
+Brass can also enter locally. First the horns come in, and then trumpets are used to bring out a crescendo and strengthen the dynamic momentum of the line (example XIV-17: Sibelius's *Lemminkäinen*, 3, second movement, where the basic timbre is woodwinds plus unison strings).
 
-**编曲含义**：混合线条先定主体（通常是弦乐或木管），再决定铜管在哪一小段进、进来干什么。没有这个决定就别加。
+**Arranging implication**: a mixed line first fixes its main body (usually strings or woodwinds), then decides in which short section the brass enters and what it does there. Without that decision, do not add brass.
 
-### 3.2 基本音色层（p0160–0164）
+### 3.2 The Basic Timbre Layer (p0160–0164)
 
-混合音色的八度与多层八度线条，核心问题只有两个：音量平衡与融合度。若上下各层采用同类的音色组合方式，通常不会出平衡与融合问题（见 SKILL §4）。
+In octave and multi-level-octave lines of mixed timbre, the core questions are just two: balance of volume, and degree of blend. If the layers use the same kind of timbre combination, there is usually no problem of balance or blend (see SKILL §4).
 
-★ 新增概念：在混合音色的多层线条里，通常有一种音色均匀分布在各个音组中，构成整个音响的基础与主体，称作**基本音色层**。例 XIV-19 肖斯塔科维奇《第十二交响曲》I 演示最高层短笛加长笛加第一小提琴、中层小号加第二小提琴、最下层 2 圆号加第一中提琴；下方平均配置的弦乐是基本音色层，下两层的铜管作合成剂，最高层短笛负责加强高频泛音、提亮。写多层线条时先指定谁当基本音色层，别让每层各自为政。
+★ A new concept: in a multi-layered mixed-timbre line, one timbre is usually spread evenly across the octaves to form the base and bulk of the whole sound. It is called the **basic timbre layer**. Example XIV-19: Shostakovich's *Twelfth Symphony*, first movement, shows the highest layer as piccolo plus flute plus first violins, the middle layer as trumpets plus second violins, and the lowest layer as 2 horns plus first violas. The strings spread evenly beneath form the basic timbre layer. The two lower brass layers act as blending agents, and the piccolo at the top adds high overtones and brightness. When writing a multi-layered line, first decide which layer is the basic timbre layer, and do not let each layer act on its own.
 
-反面案例（作者判定效果不佳）：例 XIV-20 萨蒂《三首骑乘小曲》II 的线条 2，各层音色与力度特性差异很大又互不相干地各占一个音组，结果响度参差、缺乏连接因素，音响四分五裂；同曲线条 1 把小号分置两层作连接，则尚可。
+Counter-example (the author judges the effect unsatisfactory): in example XIV-20, Satie's *Three Little Riding Songs*, II, line 2, the layers differ greatly in timbre and dynamic and do not relate to one another, each occupying a separate octave group. The result is uneven loudness, no connecting element, and a sound that falls apart. In the same piece, line 1 splits the trumpets across two layers as connectors, and that works reasonably well.
 
-### 3.3 木管与铜管的力度配比（p0163–0164）
+### 3.3 The Dynamic Balance of Woodwinds and Brass (p0163–0164)
 
-★ 这是全章唯一给出数字的平衡判据，条件写在力度范畴上：
+★ This is the only place in the chapter where a figure is given for balance. The condition is stated in terms of dynamic categories:
 
-| 力度范畴 | 铜管︰木管 的数量比 | 页 |
+| Dynamic category | Ratio of brass to woodwinds (number of players) | Page |
 |---|---|---|
-| p 到 mf | 1︰1–2 | （p0164） |
-| f 到 ff | 至少升到 1︰3–4，甚至更多 | （p0164） |
+| p to mf | 1:1–2 | (p0164) |
+| f to ff | Raise to at least 1:3–4, or even more | (p0164) |
 
-例 XIV-22 哈恰图良《斯巴达克》第三组曲 II 演示木管全奏的多层八度旋律里只加 1 支小号，音势与野性就显著增强并染上金属色彩。位于最有利音区或个性最强的乐器往往决定总体音响的基本性质（见 SKILL §5）。
+Example XIV-22: Khachaturian's *Spartacus*, Third Suite, II, shows that adding only one trumpet to a woodwind tutti in a multi-level octave melody makes the energy and wildness noticeably stronger, with a metallic colour. The instrument in the most favourable register, or the one with the strongest individuality, often decides the basic character of the overall sound (see SKILL §5).
 
-### 3.4 混合音色的和声性线条：两种写法并排（p0165–0167）
+### 3.4 Harmonic Lines of Mixed Timbre: Two Methods Side by Side (p0165–0167)
 
-| 写法 | 做法 | 换来什么，代价是什么 | 页 |
+| Method | What it does | What it gains, and what it costs | Page |
 |---|---|---|---|
-| 均匀调配 | 所有和声音程或和弦都用两组以上同类乐器音色演奏（同类木管加同类铜管、同类弦乐加同类铜管，或三者皆同类组合）；多层八度结构时每层都照此配置 | 共鸣好、各层力度均衡，高潮处辉煌浩荡；色彩个性稍欠（例 XIV-23 柴科夫斯基《意大利随想曲》） | （p0165–0166） |
-| 选择性强调（德彪西一路） | 不用另一组同类音色覆盖整个和弦，只用少数乐器重叠最上方那个最有旋律意义的声部，同时在和弦群上方另加一层高八度线条 | 色彩个性比均匀调配鲜明得多（例 XIV-24 德彪西《伊贝利亚》I，主体三声部和弦化线条由 3 长号 p 力度奏出，统一丰满又柔和） | （p0167） |
+| Even distribution | Every harmonic interval or chord is played by two or more groups of same-kind instruments (same-kind woodwinds with same-kind brass, same-kind strings with same-kind brass, or all three in same-kind combinations). In multi-level octave structures, every layer is set up this way | Good resonance, balanced dynamics in each layer, and a brilliant, expansive climax. Individuality of colour is a little weaker (example XIV-23: Tchaikovsky's *Capriccio italien*) | (p0165–0166) |
+| Selective emphasis (the Debussy approach) | Instead of covering the whole chord with another group of the same kind, a few instruments double only the uppermost part, which carries the most melodic significance. In addition, a higher-octave line is set above the chord group | Much more individual colour than even distribution. Example XIV-24: Debussy's *Ibéria*, I, where the main three-part chordal line is played at p by 3 trombones, unified, full and soft | (p0167) |
 
-两组和声层结合的分类见 SKILL §3.8，强调手段清单见 SKILL §3.9。
+The classification of harmonic combination of two layers is in SKILL §3.8. The checklist of emphasis devices is in SKILL §3.9.
 
-## 4. 和声：铜管组内部的结合
+## 4. Harmony: Combinations Within the Brass Group
 
-### 4.1 排列法（p0167）
+### 4.1 Voicing (p0167)
 
-| 情形 | 排列 | 页 |
+| Situation | Voicing | Page |
 |---|---|---|
-| 同类铜管的和声结合 | 常用密集排列，发音十分均衡协调（见 SKILL §3.7、reference §2.3.6） | （p0167） |
-| 长号（加或不加大号），有时圆号 | 开放排列，效果往往相当出色。这是铜管专属的一条 | （p0167） |
-| 同类铜管和弦 | 大多用选置式；★ 唯独圆号因传统分工（I、III 吹高音，II、IV 吹低音）主要用交织式 | （p0167） |
-| 不同类铜管和弦 | 常用选置式的顺序排列，小号、圆号、长号、大号由高及低依次排开；交织式主要用于圆号与长号的结合，偶见于小号与其他铜管 | （p0167） |
+| Harmonic combinations of the same kind of brass | Close voicing is common and gives a very balanced, harmonious sound (see SKILL §3.7 and reference §2.3.6) | (p0167) |
+| Trombones (with or without tuba), sometimes horns | Open voicing. Results are often quite effective. This is peculiar to brass | (p0167) |
+| Chords of the same kind of brass | Mostly selective placement. ★ Only the horn uses mainly interlaced voicing, because of the traditional division of labour (horns I and III play the high parts, II and IV the low parts) | (p0167) |
+| Chords of different kinds of brass | Often selective placement in sequential order, with trumpet, horn, trombone and tuba arranged from high to low. Interlaced voicing is used mainly for the combination of horn and trombone, and occasionally for trumpet with other brass | (p0167) |
 
-不同类铜管的和声结合可能性很多：组内音色统一、力度差异不像木管之间那样大，只要音区相差不太悬殊一般都能成立。
+Many possibilities exist for harmonic combinations of different kinds of brass. The timbre within the group is uniform, and the difference in dynamic is not as large as between woodwinds, so they work as long as the registers are not too far apart.
 
-### 4.2 力度补偿：均衡的组内也要算（p0169–0170）
+### 4.2 Dynamic Compensation: Balance Within a Balanced Group Still Needs Checking (p0169–0170)
 
-即使在音量比例相当均衡的铜管组内，也不能忽视个别乐器在其特殊音区的相对强弱。可操作的做法是给处于相对弱音区的乐器把力度标高一级。
+Even in a brass group whose volumes are fairly balanced, the relative strength of individual instruments in their special registers cannot be ignored. A practical method is to raise the dynamic of an instrument that sits in a relatively weak register by one level.
 
-- 例 XIV-25 舒曼《第四交响曲》IV 演示两支小号音区偏低导致整组坚实有余而辉煌不足；例 XIV-26 贝多芬《第六交响曲》V 演示交织式下长号处在最强音区而圆号相形略软，因此有指挥要求圆号加倍。
-- 反向的一条：圆号处在自己的强音区时，即便要求"尽可能响"，也可以与小号或长号保持 1︰1 而毫不逊色（例 XIV-27 盛宗亮《痕》、例 XIV-28 亨德米特《画家马蒂斯》）。
+- Example XIV-25: Schumann's *Fourth Symphony*, fourth movement, shows two trumpets pitched too low, so that the group is solid but lacks brilliance. Example XIV-26: Beethoven's *Sixth Symphony*, fifth movement, shows that under interlaced voicing the trombone sits in its loudest register while the horn sounds comparatively soft. A conductor's instruction to double the horn is therefore given.
+- The reverse case: when the horn is in its own strong register, it can match a trumpet or trombone at 1:1 even when asked to play "as loudly as possible" and lose nothing (example XIV-27: Sheng Zongliang's *Traces*; example XIV-28: Hindemith's *Mathis der Maler*).
 
-### 4.3 组内重叠的三种做法（p0171–0173）
+### 4.3 Three Methods of Doubling Within the Group (p0171–0173)
 
-| 做法 | 目的与效果 | 页 |
+| Method | Aim and effect | Page |
 |---|---|---|
-| 声部重叠 | 在某种铜管音色构成的和弦中，用另一种铜管音色重叠其中一个或几个声部，意图是强化和弦里的重要声部（旋律、低音）。属 SKILL §3.9 强调五法在铜管内部的细化（例 XIV-29 普罗科菲耶夫《彼得与狼》） | （p0171） |
-| 中音区局部重叠 | 强力度段落中为使铜管组乃至全队更坚实丰满，只在和弦的中音区作局部重叠（例 XIV-30 斯克里亚宾《狂喜之诗》） | （p0172） |
-| 所有声部并置重叠 | ★ 受各件应用音域限制，这种写法不适合音区分布很宽的和弦，主要用于乐队中音区及以下；音响以浑厚、饱满、均匀见长，代价是缺乏金属性的明亮色彩（例 XIV-31 柴科夫斯基《意大利随想曲》，2 小号加 3 长号加 1 大号的六音和弦被 4 圆号加 2 大管逐一重叠，pp 下木管与铜管不会有平衡问题） | （p0173） |
+| Part doubling | In a chord made of one kind of brass, another kind of brass doubles one or more of its parts, usually to strengthen an important part (melody or bass). This is the emphasis method of SKILL §3.9, worked out within the brass group (example XIV-29: Prokofiev's *Peter and the Wolf*) | (p0171) |
+| Local doubling in the middle register | In passages of strong dynamic, the brass group, or the whole orchestra, is made firmer and fuller by doubling only the middle register of the chord (example XIV-30: Scriabin's *Poem of Ecstasy*) | (p0172) |
+| Doubling of all parts in juxtaposition | ★ Because of the playing range of each instrument, this writing does not suit chords with a very wide spread. It is used mainly in the middle register and below of the orchestra. The sound is valued for being thick, full and even; the cost is the lack of the bright, metallic colour (example XIV-31: Tchaikovsky's *Capriccio italien*, where a six-note chord of 2 trumpets, 3 trombones and 1 tuba is doubled note by note by 4 horns and 2 bassoons. At pp, woodwinds and brass cause no balance problem) | (p0173) |
 
-变体：同构和弦可分别由不同乐器组构成，周期性地不同步进出并伴随力度的周期变化，使和弦色彩变幻无常（例 XIV-32 伯特韦瑟尔《诺莫斯》，p0174–0175）。
+Variant: chords of identical structure can be played by different instrument groups, entering and leaving periodically out of step and accompanied by periodic changes of dynamic, so that the colour of the chord keeps changing (example XIV-32: Birtwistle's *Nomos*; p0174–0175).
 
-## 5. 和声：铜管与木管、与弦乐、与三组合写
+## 5. Harmony: Brass with Woodwinds, with Strings, and Three Groups Together
 
-### 5.1 四种结合方式（p0175–0179）
+### 5.1 Four Ways of Combining Harmony (p0175–0179)
 
-本章把铜管组与另一组的和声结合归为四型。**两说并排**：SKILL §3.8 记的是三式；本章第四型"混合式"是前三型在同一个和弦内的并用，所以两说不冲突，按三式检索时混合式落在"以哪一式为主"的判断上。
+This chapter classes the harmonic combination of the brass group with another group into four types. **Two accounts side by side**: SKILL §3.8 lists three styles. The fourth type in this chapter, "mixed", is the use of the first three types together within one chord. So the two accounts do not conflict. When looking up by the three-style scheme, the mixed style falls under the judgement of "which style is dominant".
 
-| 型 | 做法 | 换来什么，代价是什么 | 页 |
+| Type | Method | What it gains, and what it costs | Page |
 |---|---|---|---|
-| 交织式 | 不同的木管与铜管置于同一音区并相互交叉 | 铜管里最适合此法的是圆号，其圆润柔和最具与木管融合的潜质；圆号与大管、单簧管（尤其大管）在中低音区的结合最理想。例 XIV-33 瓦格纳《汤豪瑟》序曲（2 单簧管 + 2 大管 + 4 圆号）演示基本色调仍以木管略占优势，丰满度却明显强于纯木管 | （p0175） |
-| 并置式 | 在主要由铜管构成的基本和声层上，叠一层结构相同或基本相同的木管和声 | 缜密均匀、层次融洽，铜管通常居优势；因相互中和（木管被铜管吸收、铜管金属色被木管软化），色彩个性往往不鲜明。例 XIV-34 柴科夫斯基《意大利随想曲》前三个 ff 和弦浑厚而亮度欠缺，第四个改用分层式后远为辉煌 | （p0176） |
-| 分层式 | 铜管位于乐队中层（或中高、中低层），不同木管以选置方式分置于铜管上下 | 主要用于音域分布较宽的和弦，强力度时木管可酌情加倍。★ 例 XIV-35 德彪西《三首夜曲》II 给出数量比：双簧管、单簧管与圆号取 2︰1，与圆号交织的大管未加倍但有低八度大提琴支持仍够强。★ 例 XIV-36 布鲁克纳《第一交响曲》III 给出另一条：高层木管顶音用 2 长笛而其余不加倍，目的是强化高音泛音，与平衡无关 | （p0176–0177） |
-| 混合式 | 兼有以上几种原则的特点 | 例 XIV-37 斯特拉文斯基《管乐交响曲》终结和弦以分层式为主，含并置重叠与局部交织。作者点出它高低音区皆加倍而中音区相对孱弱，犯了全奏和弦"中空"的大忌，同时给出缓冲判断：整体力度为 p，两处空隙可能靠低音乐器的泛音显露得到一定填补 | （p0178–0179） |
+| Interlaced | Different woodwinds and brass are placed in the same register and cross over one another | Of the brass, the horn suits this method best, and its roundness and softness have the strongest potential for blending with woodwinds. The best results come from horn with bassoon and clarinet (especially bassoon) in the low and middle registers. Example XIV-33: Wagner's *Tannhäuser* overture (2 clarinets, 2 bassoons, 4 horns) shows that the basic colour still leans slightly toward the woodwinds, but the fullness is clearly stronger than pure woodwinds | (p0175) |
+| Juxtaposed | On a basic harmonic layer made mainly of brass, a layer of woodwind harmony with the same or nearly the same structure is laid | Dense and even, with good layering. The brass usually dominates. Because the two groups neutralise each other (the woodwinds absorbed by the brass, and the metallic colour of the brass softened by the woodwinds), the individuality of colour is often not distinct. Example XIV-34: Tchaikovsky's *Capriccio italien*, the first three ff chords are solid but lack brightness; the fourth, using the layered type, is far more brilliant | (p0176) |
+| Layered | The brass sits in the middle layer of the orchestra (or in the middle-high or middle-low layer), and different woodwinds are placed above and below it selectively | Mainly used for chords with a wide range. At strong dynamics the woodwinds may be doubled as needed. ★ Example XIV-35: Debussy's *Trois Nocturnes*, II, gives a ratio: oboe, clarinet and horn 2:1; the bassoon interlaced with the horn is not doubled, but the bass of 8ve-lower cellos is strong enough. ★ Example XIV-36: Bruckner's *Symphony No. 1*, III, gives another point: the top woodwind note is played by 2 flutes while the others are not doubled. The aim is to reinforce the high overtones, not to balance the dynamics | (p0176–0177) |
+| Mixed | Combines the features of several of the principles above | Example XIV-37: Stravinsky's *Symphony of Wind Instruments*, the final chord is mainly layered, with juxtaposed doubling and some local interlacing. The author points out that it doubles at both the high and low registers while the middle register is comparatively thin, which breaks the great taboo of a hollow tutti chord. He also gives a mitigating judgement: with an overall dynamic of p, the two gaps may be partly filled by the overtones of the low instruments | (p0178–0179) |
 
-### 5.2 铜管与弦乐：先承认融合度差一档（p0179–0184）
+### 5.2 Brass with Strings: The Fusion Is One Step Weaker (p0179–0184)
 
-★ 从融合度看，弦乐与铜管的结合比木管与铜管略逊。由此推出的选型规则：二者很少用对融合度要求高的交织式；分层式也用得不多，因为会让本已融合不足的两层更显分离；更常见的是并置式或混合式。
+★ In terms of blend, the combination of strings and brass is a little weaker than that of woodwinds and brass. The selection rule that follows: the two rarely use interlaced voicing, which needs strong blend. Layered voicing is also used little, because it makes two layers that are already poorly blended look more separate. The more common choices are juxtaposed or mixed voicing.
 
-- 并置时弦乐层可柔化铜管、增加暖意与表情能力（例 XIV-39 李斯特《前奏曲》，4 圆号加分部中提琴在中音区并置）。两个并置层在总体轮廓一致的前提下细节可以有差异，例如加高八度重复旋律声部提亮，或用震音让情绪更热烈。
-- 和弦音数目多或音域很宽时，先用一个音色族（通常是铜管）构成完整和声层，再用另一族只重叠其中几个骨架声部，形成部分并置（例 XIV-41 斯特拉文斯基《春之祭》）。
-- 分层式作长音和声背景时，若总力度为 ppp，要选中低音区、彼此共通点多的音色，结合才融洽统一（例 XIV-42 卡拉耶夫《七美人》组曲）。
-- 寻找两组之间的"接触点"见 reference §3。可用的一条纽带：圆号中高音区的丰满音色与大提琴（加中提琴）的胸声色彩有内在联系，据此让两个同构和弦周期性交替，色差明显而转接异常自然（例 XIV-38 布里顿《青少年管弦乐队指南》）。
+- When juxtaposed, the string layer can soften the brass and add warmth and expressive power (example XIV-39: Liszt's *Prélude*, with 4 horns and divisi violas juxtaposed in the middle register). The two juxtaposed layers can differ in detail while their overall outline stays the same. For example, the melodic part can be doubled an octave higher to brighten it, or a tremolo can make the feeling more intense.
+- When a chord has many notes or a very wide range, first use one family of timbres (usually brass) to form a complete harmonic layer, then use another family to double only some of the skeleton parts, forming partial juxtaposition (example XIV-41: Stravinsky's *The Rite of Spring*).
+- When layered voicing is used as a sustained harmonic background, if the total dynamic is ppp, choose timbres in the lower register that share many common features. Only then does the combination blend smoothly and evenly (example XIV-42: Karayev's *Seven Beauties* suite).
+- For finding the "points of contact" between two groups, see reference §3. One usable link: the full timbre of the horn's middle-high register has an inner affinity with the chest-voice colour of cellos (with violas). On that basis, two chords of identical structure can alternate periodically: the colour contrast is clear, yet the transition is exceptionally natural (example XIV-38: Britten's *Young Person's Guide to the Orchestra*).
 
-### 5.3 三组同时上的频率排序与两个陷阱（p0184–0188）
+### 5.3 Three Groups Together: Frequency Ranking and Two Traps (p0184–0188)
 
-★ 木管、铜管、弦乐三组作复杂和声结合时，运用最广的是混合式，并置式次之；纯粹的分层式或交织式相当罕见，传统全奏性和声写法里几乎见不到，典型范例大概只在 20 世纪激进实验派的总谱里才有（例 XIV-43 柴科夫斯基《里米尼的弗兰切斯卡》为混合式全奏）。
+★ When woodwinds, brass and strings combine in complex harmony, the most widely used method is mixed, followed by juxtaposed. Pure layered or interlaced voicing is quite rare. It is almost never seen in traditional tutti harmony, and typical examples probably appear only in the scores of experimental composers of the 20th century (example XIV-43: Tchaikovsky's *Francesca da Rimini* is a mixed-style tutti).
 
-- 同一个全奏和弦内部可以分区并用不同原则（例 XIV-44 勃拉姆斯《第三交响曲》II，c² 以上是分部小提琴加长笛加双簧管的交织式，e¹ 以下是铜管加木管加弦乐并置）。
-- 陷阱一，标记力度失真：全奏和弦即使标 p，只要乐器都集中在中低音区且各声部多倍重叠，实际响度会远超总谱标示。陷阱二是中空，见 §5.1 混合式一栏。
+- Within a single tutti chord, different principles can be used in different regions. Example XIV-44: Brahms's *Third Symphony*, II, shows that above c² the division parts of the violins, with flute and oboe, form an interlaced voicing, and below e¹ brass, woodwinds and strings are juxtaposed.
+- Trap one, distorted dynamic marking: even if a tutti chord is marked p, when the instruments are all concentrated in the low and middle registers and each part is doubled several times, the actual loudness will far exceed what the score indicates. Trap two is the hollow centre, described in the mixed-style entry of §5.1.
 
-## 6. 织体因素的音色分配三原则
+## 6. Three Principles for Assigning Timbre to Texture Elements
 
-### 6.1 三原则总纲（p0188–0191、p0272）
+### 6.1 The Three Principles (p0188–0191, p0272)
 
-这是全章的方法论骨架，整套采纳。为织体各结构因素分配音色的基本原则只有三条：
+This is the methodological backbone of the chapter, and it is adopted in full. There are only three basic principles for assigning timbre to the structural elements of a texture:
 
-| 原则 | 名称 | 做法 | 结果 | 页 |
+| Principle | Name | Method | Result | Page |
 |---|---|---|---|---|
-| a | 音色分层（功能分组配器法） | 把功能不同的成分（旋律、对比线条、和声背景等）分别交给不同乐器或乐器组 | 各层次都是纯音色，对比明显。例 XIV-46 武满彻《梦／窗》演示木管、弦乐、装饰因素三层音色绝无重叠 | （p0188–0189） |
-| b | 音色并置 | 把各因素按音区高低分配给音区相匹配的若干乐器组 | 每层都由不同组合成的混合音色构成。例 XIV-47 米约《第二交响曲》IV 演示四声部每个因素都由三组并置，发音异常坚实 | （p0189–0190） |
-| c | 分层与并置的混用 | 一部分因素按分层处理，另一部分按并置处理 | 纯音色层与混合音色层同时存在，对比更丰富；这种情况比比皆是。例 XIV-48 陈怡《歌墟》，旋律与低音由木管加弦乐并置，和声伴奏音型用纯铜管 | （p0191） |
+| a | Timbral layering (scoring by functional grouping) | Assign elements with different functions (melody, contrasting line, harmonic background and so on) to different instruments or groups | Each layer is a pure timbre, and the contrast is clear. Example XIV-46: Takemitsu's *Dream/Window* shows woodwinds, strings and decorative elements in three layers that never overlap in timbre | (p0188–0189) |
+| b | Juxtaposed timbres | Assign elements by register to several groups whose registers match | Each layer is made of a mixed timbre built from different groups. Example XIV-47: Miyoshi's *Second Symphony*, IV, shows four voice parts, each element juxtaposed across three groups, with an exceptionally solid sound | (p0189–0190) |
+| c | Mixing layered and juxtaposed | Some elements are treated as layers, others as juxtapositions | Pure-timbre layers and mixed-timbre layers coexist, and the contrast is richer. This is very common. Example XIV-48: Chen Yi's *Xu Xu* (*Ruins of the Ridge*), where the melody and bass are juxtaposed in woodwinds with strings, and the harmonic accompaniment figure uses pure brass | (p0191) |
 
-配套一条：并置式写法里为突出乐句高潮点或降低某音区浓度，可用声部延迟进入、旋律轮廓局部调整、某声部短暂休止（p0191）。这是 SKILL §3.9 之外的补充手段。
+A companion rule: in juxtaposed writing, to bring out a climax point in a phrase, or to reduce the concentration of a certain register, parts can enter late, the melodic outline can be adjusted locally, or a part can rest briefly (p0191). This is a supplementary means beyond SKILL §3.9.
 
-### 6.2 三原则的选型条件
+### 6.2 Conditions for Choosing Among the Three Principles
 
-- 结构因素越多，越要靠音色与音区的双重差异维持可辨识度；几个主要因素分处不同音区又用不同音色时，才得到干净的间离（例 XIV-67 德彪西《春天的轮舞》，p0226–0228）。
-- ★ 同一因素内部各声部音区互相重叠时，音区分工已经无效，只能靠乐器配置的主次分明与力度上的细腻差别维持层次（p0226–0228）。这与 SKILL §4 按数量与音区求平衡是两个维度。
-- ★ 不同子结构的各声部音区经常交叉时，必须用原则 a（分层），否则各因素的个性与清晰度必然受损；同曲中位于最低音区的因素则按原则 b，用各组（可含打击乐）的全部低音乐器混合配置取雄浑（例 XIV-81 亨德米特《画家马蒂斯》交响曲 I，p0256）。
-- ★ 多层次织体里各主要因素的力度标记按主次地位分配，不按实际响度的平衡来定（例 XIV-81 同时标 ff、f、mf 对应三个主次不同的因素，p0256）。力度记号在这里服务于结构层级，与 SKILL §4 的声学平衡互补。
+- The more structural elements there are, the more they must rely on both timbre and register differences to stay recognisable. Only when several main elements sit in different registers and use different timbres is a clean separation achieved (example XIV-67: Debussy's *Rondes de printemps*, p0226–0228).
+- ★ When the parts of one element overlap in register with one another, the division of register has already lost its effect. Only the clear priority of instrumentation and fine differences in dynamic can then keep the layers apart (p0226–0228). This is a different dimension from SKILL §4, which balances by number and register.
+- ★ When the registers of the parts of different substructures cross often, principle a (layering) must be used. Otherwise the individuality and clarity of each element inevitably suffer. In the same piece, an element in the lowest register follows principle b, using all the low instruments of the groups (percussion may be included) mixed together for a rich, powerful sound (example XIV-81: Hindemith's *Mathis der Maler*, Symphony I, p0256).
+- ★ In a multi-layered texture, the dynamic markings for the main elements are assigned according to their primary and secondary status, not according to the balance of actual loudness. Example XIV-81 marks ff, f and mf at the same time for three elements of different priority (p0256). Here the dynamic markings serve the level of structure, and complement SKILL §4's acoustic balance.
 
-### 6.3 因素内部还能再分层（p0224–0228）
+### 6.3 Each Element Can Be Layered Further (p0224–0228)
 
-每个结构因素（主旋律／副旋律或对位线条／和声背景／纯节奏因素）内部还可以再叠加节奏性、和声性、线条性、混合性的音型化装饰层。只要所有音型化因素与骨架声部在音区和音色上作对比处理，分离度与清晰度就有保障（叠合分类见 SKILL §3.7，织体总开关见 SKILL §1.1）。
+Within each structural element (main melody, secondary melody or counter-line, harmonic background, or pure rhythmic element), figurated decorative layers of rhythmic, harmonic, linear and mixed types can be added. As long as all the figurated elements are contrasted in register and timbre with the skeletal parts, separation and clarity are assured (for layer classification see SKILL §3.7; for the master switch of texture see SKILL §1.1).
 
-- 静态因素（持续和声长音、踏板）可同时叠多个装饰性音型化层，背景色彩缤纷而结构功能不变；伴奏性因素常可拆成静态和声长音层与动态音型化层两类互补层，互为支撑。任何骨架因素都能再衍生若干装饰性、强调性的附加层，形成骨架与卫星式的支持网络。
-- ★ 成立与否的判据：各因素之间存在合理的主从与互补关系时，声部再多、音响再密也能杂而不乱；缺了这个前提，多层次结构就流于无目的的堆砌（例 XIV-66 阿尔贝尼兹《伊贝利亚》为正面范例，例 XIV-69 布索蒂《水晶》是作者点名的反例）。
+- Static elements (sustained harmonic notes, pedal points) can carry several decorative figurated layers at once. The background becomes colourful while its structural function stays the same. Accompaniment elements can often be split into two complementary layers, a static harmonic-note layer and a dynamic figurated layer, each supporting the other. Any skeletal element can generate several decorative or emphasising added layers, forming a support network of skeleton and satellites.
+- ★ The test for whether this works: when there are sound reasons for main-and-subordinate or complementary relationships among elements, the more parts there are and the denser the sound, the more it can be many-sided without disorder. Without this condition, a multi-layered structure degenerates into a purposeless pile-up (example XIV-66: Albéniz's *Iberia* as the positive model; example XIV-69: Bussotti's *Crystal*, which the author names as a counter-example).
 
-## 7. 同质性织体里的铜管
+## 7. Brass in Homophonic Textures
 
-### 7.1 齐奏型与和弦型的两个新问题（p0192–0196）
+### 7.1 Two New Problems for Unison and Chordal Textures (p0192–0196)
 
-铜管投入以融合统一为宗旨的齐奏型、和弦型织体时，新问题只有两个：铜管在特定乐句上的技术适应性，以及组间音量平衡。
+When brass takes part in unison or chordal textures, whose purpose is fusion and unity, there are only two new problems: the technical suitability of the brass for particular phrases, and the balance of volume between groups.
 
-- 技术适应性的历史解法是"齐奏不齐"：自然铜管时代把铜管声部简化或局部改写以避开音域与技术难点（例 XIV-1 贝多芬《第九交响曲》I）。20 世纪把这个权宜之计变成了有创新意味的齐奏变体；近现代的常规解法是不同铜管声部之间的转接与交替（见 SKILL §3.6）。
-- ★ 平衡的反向解法：想要旋律饱满又不愿铜管喧宾夺主时，给铜管声部单独标一个远低于其他乐器的力度（长号 ppp 而其余乐器 f），让弦乐组的浓重色彩略占优势成为线条主体（例 XIV-51 V. 丹狄《伊斯塔尔》）。这与 SKILL §5 靠加强让某组透出是同一问题的两个方向。
+- The historical solution to technical suitability was "unison, but not exact unison". In the period of natural brass, the brass parts were simplified or partly rewritten to avoid range and technical difficulties (example XIV-1: Beethoven's *Ninth Symphony*, first movement). In the 20th century this expedient became a creative variant of unison. The modern standard solution is alternating and handing over between different brass parts (see SKILL §3.6).
+- ★ The reverse solution for balance: when you want a full melody but do not want the brass to take over, mark the brass part with a dynamic far below that of the other instruments (trombones ppp while the rest play f). Then the dense colour of the strings is slightly dominant and becomes the main body of the line (example XIV-51: V. d'Indy's *Istar*). This is the same problem as SKILL §5, "letting one group come through by reinforcement", viewed from the opposite direction.
 
-### 7.2 分部写作与圆号的内部分工（p0196–0198）
+### 7.2 Part Writing and Internal Division of the Horns (p0196–0198)
 
-自然铜管时代很少用纯铜管写旋律性较强的分部织体，偶见的只有圆号与木管的组合；活塞铜管出现后铜管才真正进入分部写作（例 XIV-53 瓦格纳《齐格弗里德的葬礼》）。
+In the period of natural brass, melodic part-writing for brass alone was rare. The few exceptions were combinations of horns and woodwinds. Only with the invention of valve brass did the brass really enter part-writing (example XIV-53: Wagner's *Siegfried's Funeral March*).
 
-★ 圆号内部的实际分工（谱面常不标）：最低音区的乐句由擅长低音的圆号 IV 担任；该声部若转入高音区成为主要旋律乐器，实际演奏时常换由擅吹高音的圆号 I 或 III 接任（p0198）。
+★ The actual division of labour among horns (often not marked in the score): a phrase in the lowest register is taken by Horn IV, who is good at low playing. If that part moves to the high register to become the main melodic instrument, the performers often hand it to Horn I or III, who are better at high playing (p0198).
 
-## 8. 异质性织体：复调、卡农与赋格的音色布局
+## 8. Heterogeneous Textures: Scoring for Counterpoint, Canon and Fugue
 
-### 8.1 对比性复调：靠铜管把线条剥离（p0199–0204）
+### 8.1 Contrasting Counterpoint: Using Brass to Separate Lines (p0199–0204)
 
-活塞铜管问世后用纯铜管写复杂对比性复调已属可能，但用铜管与其他组的鲜明对置来强化线条间既有的对比，对声部剥离更有利。可用的三条做法：
+After the invention of valve brass, it became possible to write complex contrasting counterpoint with pure brass. But using the contrast between brass and other groups to reinforce the existing contrast between lines is more effective for separating the parts. Three usable methods:
 
-- 在全由铜管组成的色块上，用弦乐在中低音区重叠除最上方旋律以外的全部基本声部，把主旋律从音色上剥离出来。
-- 音色与奏法的双重反差：加弱音器小号的纯音色三吐，对上弦乐加木管混合音色的常规奏法（例 XIV-54 穆索尔斯基／拉威尔《图画展览会》两个犹太人主题）。
-- 极弱段落的动态控制：用低音提琴与定音鼓分别滞后的渐次进入强调渐强，用弦乐声部的渐次撤离、最终只剩拨奏做渐弱。
+- On a block made entirely of brass, use strings in the low and middle register to double all the basic parts except the top melody. This separates the main melody from the others in timbre.
+- A double contrast in timbre and playing: the pure timbre of a muted trumpet played in triple-tongued passages, set against the conventional playing of strings with a mixed woodwind timbre (example XIV-54: Mussorgsky/Ravel's *Pictures at an Exhibition*, the two Jewish themes).
+- Control of dynamics in very soft passages: the crescendo is emphasised by double basses and timpani entering one after another, each deliberately delayed. The diminuendo is carried by the strings withdrawing gradually until only pizzicato remains.
 
-多线条对比的复杂结构，四条判据整套采用（例 XIV-55 R. 施特劳斯《英雄的生涯》展开部演示八条独立旋律线加一条节奏线加震音和声背景）：
+For a complex structure of multiple contrasting lines, four criteria are used together (example XIV-55: R. Strauss's *Ein Heldenleben*, the development section, which shows eight independent melodic lines, one rhythmic line and a tremolo harmonic background):
 
-1. ★ 除少数线条允许用同组内的混合音色外，其余各线条都应按分层原则由纯音色承担，以保住每条线的音响个性。线条越多，越需要铜管与打击乐加入才能拉开色彩分离度（p0203）。
-2. 陈述规模：遵循旋律声部向上高八度重复、低音声部向下低八度重复的古典原则（见 SKILL §3.2），只在乐队两极音区用双八度或八度陈述，中间各声部保持一个音组的规模，以免线条交错、声部混杂（p0203）。
-3. 音区安排：尽量让不同线条各占不同音区；被迫同区或近区时，改用极强烈的音色反差或鲜明对比的节奏来增加分离度；处在易被掩盖音区的线条，用加强密度（多支同类乐器齐奏）补偿（p0203，与 SKILL §5 互补）。
-4. 力度对位：各因素在力度走向上可各自独立发展，例如某线条恒定强奏、某线条随乐器陆续加入渐强、其余线条渐弱，段落层次感由此增强（p0203）。
+1. ★ Apart from a few lines that may use a mixed timbre within the same group, each of the other lines should be carried by pure timbre, according to the principle of layering, in order to preserve the individuality of each line. The more lines there are, the more brass and percussion are needed to make the colour separation clear (p0203).
+2. Statement scale: follow the classical principles of the melody part repeated an octave higher and the bass part repeated an octave lower (see SKILL §3.2). Use double-octave or octave statements only at the two extremes of the orchestra, and keep the middle parts at one octave-group, so that the lines do not tangle and the parts do not mix (p0203).
+3. Register arrangement: as far as possible, give each line its own register. Where lines are forced into the same or close registers, increase the degree of separation with very strong contrasts of timbre or clearly contrasting rhythms. A line in a register that is easily masked is compensated by increased density (several instruments of the same kind in unison) (p0203; complements SKILL §5).
+4. Dynamic counterpoint: each element may develop its dynamic independently. For example, one line may be held constantly loud, another may grow as instruments enter one by one, and the rest may diminuendo. The layers of the passage are thus enhanced (p0203).
 
-### 8.2 模仿性复调与卡农的四条要点（p0204–0212）
+### 8.2 Four Key Points for Imitative Counterpoint and Canon (p0204–0212)
 
-先按对比程度选路线：
+First choose a route according to the degree of contrast:
 
-| 路线 | 适用 | 页 |
+| Route | Suitable for | Page |
 |---|---|---|
-| 同类音色（纯铜管） | 规模不大、要强调主题色调同一性的段落（例 XIV-56 盛宗亮《痕》，2 圆号 fff 奏和声性主题、2 长号自由模仿，色调冷峻统一） | （p0204） |
-| 性质相近的混合音色 | 先行与和应声部都用三组音色合成；若某件乐器兼奏主题及其和应，更有助两条线色调一体化（例 XIV-57 肖斯塔科维奇《第五交响曲》I 低音区二声部卡农） | （p0205） |
-| 对比音色 | 对比程度按表现需要定，可以只是中等反差（例 XIV-58 福特纳《交响曲》IV） | （p0206） |
+| Same kind of timbre (pure brass) | Shorter passages where the unity of the theme's colour needs to be stressed (example XIV-56: Sheng Zongliang's *Traces*: 2 horns at fff play a harmonic theme, and 2 trombones imitate freely, giving a cold and unified colour) | (p0204) |
+| Mixed timbres of similar character | Both the leading and answering parts use a mixed synthesis of three groups. If one instrument plays both the theme and its answer, this helps unify the colour of the two lines (example XIV-57: Shostakovich's *Fifth Symphony*, I, a canon of two parts in the low register) | (p0205) |
+| Contrasting timbres | The degree of contrast depends on the expressive need, and it can be only a moderate difference (example XIV-58: Fortner's *Symphony*, IV) | (p0206) |
 
-★ 卡农音色布局四要点（整套采用，p0211–0212）。反面情形是各次进入不形成强反差，听感单调、线条缠绕难辨；例 XIV-59 马勒《第一交响曲》III 的卡农十一次进入全在 d 小调同一音区、曲调本身无展开，完全靠音色反差取胜：
+★ Four key points for scoring the timbre of a canon (used in full, p0211–0212). The opposite case: when the successive entries do not form a strong contrast, the effect is monotonous and the lines are hard to tell apart. Example XIV-59: Mahler's *Symphony No. 1*, III, has eleven entries in the canon, all in D minor in the same register, with no development of the tune itself. It relies entirely on timbral contrast to succeed:
 
-1. 相邻主题进入采用对比极鲜明的（不同组）音色配置；
-2. 主题多数情况下用纯音色承担，若用混合音色也只限同一乐器组内的结合，以最大限度保住音色个性；
-3. 先行声部与和应声部历次进入所用音色应几乎无一雷同，即便音色相同也要在幅度、弱音器上做出差异；
-4. 附加的对位声部应与主要线条形成鲜明对比的音色配置。
+1. Successive themes use timbre settings that contrast strongly (from different groups).
+2. The theme is mostly carried by pure timbre. If a mixed timbre is used, it is limited to a combination within a single instrument group, to preserve individuality of timbre as far as possible.
+3. The leading and answering parts should have almost no repeated timbres across all their entries. Even where the timbre is the same, the entries must differ in amplitude or mutes.
+4. Any added counter-part should be scored in a timbre that contrasts sharply with the main line.
 
-### 8.3 规模决定铜管的投入时机（p0212–0219）
+### 8.3 Scale Decides When Brass Enters (p0212–0219)
 
-★ 铜管是重武器，投入时机按结构规模分两档：
+★ Brass is a heavy weapon, and the timing of its entry depends on the scale of the structure, in two grades:
 
-| 规模 | 布局 | 页 |
+| Scale | Scoring | Page |
 |---|---|---|
-| 小型自由赋格段 | 主题与答题前几次呈现只用弦乐纯音色及弦乐加木管的简单混合；铜管留到接近高潮或答题出现时才投入，随后推向全奏（例 XIV-60 柏辽兹《幻想交响曲》V）。过早投入就失去了蓄势的留白 | （p0212–0216） |
-| 大型赋格曲与赋格段 | 呈示性段落只用纯音色（弦乐或木管）；展开性段落引入混合音色；复杂混合音色与铜管留到高潮或总结性段落（展开部结尾、再现部开始、尾声）。整体呈由简及繁的渐进型 | （p0216） |
+| Short free fugal passage | The subject and the first few entries of the answer use only pure strings, or a simple mix of strings and woodwinds. Brass is held back until close to the climax or the entry of the answer, and then pushed to a full tutti (example XIV-60: Berlioz's *Symphonie fantastique*, V). Entering too early loses the silence that builds tension | (p0212–0216) |
+| Large fugues and fugal sections | Expository passages use pure timbre only (strings or woodwinds). Developmental passages bring in mixed timbre. Complex mixed timbre and brass are held for the climax or for the summarising passages (the end of the development, the start of the recapitulation, the coda). The whole runs as a progressive plan from simple to complex | (p0216) |
 
-例 XIV-61、XIV-62 雷格尔《莫扎特主题变奏曲》是完整范本：呈示部主题前三次纯弦乐，第四次才加木管而弦乐仍居优势；展开部的铜管起初只作动机模进的一环，多支圆号 fff 的正式呈现留到第一个高潮，定音鼓拖到展开部近结束才以极弱力度预示再现部；尾声全奏，原主题由铜管八度陈述。
+Example XIV-61 and XIV-62: Reger's *Variations on a Theme of Mozart* is a complete model. In the exposition, the theme's first three entries are pure strings. The fourth brings in woodwinds, but the strings still dominate. In the development, the brass at first serves only as one link in a motivic sequence. The formal fff entry of several horns is held back until the first climax. The timpani wait until near the end of the development before foreshadowing the recapitulation at a very soft dynamic. The coda is a full tutti, and the original theme is stated by the brass in octaves.
 
-## 9. 多元复合型织体
+## 9. Multi-Element Composite Textures
 
-### 9.1 定义与二元性原则（p0241–0246）
+### 9.1 Definition and the Principle of Duality (p0241–0246)
 
-多元复合型织体是异质性结构里最复杂的一种，本身含两个以上异质子结构；子结构可分属不同织体类型（主调加复调），也可同属一类。它们各自有一定独立性，同时又都是整体不可缺的部分。二重或三重赋格是典型形态，主调结构里带副旋律的写法已经是它的雏形。
+A multi-element composite texture is the most complex kind of heterogeneous texture. It contains two or more heterogeneous substructures. The substructures may belong to different texture types (homophonic plus polyphonic), or to the same type. Each has a degree of independence, and each is also indispensable to the whole. Double or triple fugue is the typical form. A homophonic structure with a secondary melody is already the early form of this type.
 
-★ 多重赋格配器的**二元性原则**（整套采用）：
+★ The **principle of duality** for scoring a multiple fugue (used in full):
 
-- a）不同子结构的主题同时呈现时，按对比性复调的配器原则处理，尽量用音色反差强化各主题在音调、节奏、音区上已有的对比，造成纵向层次间鲜明的间离；
-- b）每个子结构主题自身的呈示与发展，按模仿性复调的配器原则处理，用相关联的音色互相呼应，使主题及其答题在横向展开中体现同一性、形成有序的音色发展线索。
+- a) When the themes of different substructures appear together, treat them by the scoring principles of contrasting counterpoint. Use timbral contrast as far as possible to reinforce the difference already present in the themes in pitch, rhythm and register, creating a sharp separation between the vertical layers.
+- b) Each substructure's own theme, in its presentation and development, is treated by the scoring principles of imitative counterpoint. Related timbres answer one another, so that the theme and its answers show a unity in horizontal development and form an orderly thread of timbral development.
 
-例 XIV-78、XIV-79 R. 施特劳斯《家庭交响曲》：呈示阶段给两个主题截然不同的音色特性，同一主题的历次进入则用同类音色此呼彼应。
+Example XIV-78 and XIV-79: R. Strauss's *Symphonia domestica*. In the presentation stage, the two themes are given completely different timbral characters. Successive entries of the same theme are answered by timbres of the same kind.
 
-### 9.2 音色上的奏鸣展开式（p0245）
+### 9.2 A Sonata-Style Development in Timbre (p0245)
 
-★ 一条可复制的宏观布局，四阶段整套采用：
+★ A macro layout that can be copied. Four stages, used in full:
 
-1. 引子：两个（或多个）主题先用相近似的混合音色配置，埋下关联的伏笔；
-2. 呈示部：各自用纯音色呈现，制造强烈反差；
-3. 展开或中间部：音色由单一逐渐发展为两组、三组结合的混合音色（质的变化），音区由同度扩展为八度（量的变化），甚至让两个主题的音色个性靠拢、转化、互换；
-4. 结尾：各主题趋于相近的混合音色配置，渐趋一致，象征对立的化解。
+1. Introduction: the two (or more) themes first use similar mixed timbre settings, planting the seed of their connection.
+2. Exposition: each is presented in pure timbre, creating a strong contrast.
+3. Development or middle section: the timbre develops from a single one into combinations of two and then three groups (a qualitative change). The register expands from unison to octaves (a quantitative change). The timbral identities of the two themes may even move toward each other, change into each other, or swap.
+4. Coda: the themes move toward a similar mixed timbre setting and gradually become alike, symbolising the resolution of opposition.
 
-条件与代价：它适合承载"对立呈现、矛盾展开、在更高水平上统一"这条奏鸣式弧线，需要足够的时间跨度铺陈，短小段落走不完整条弧线。
+Conditions and cost: this suits carrying the sonata-type arc of "opposition presented, conflict developed, unity achieved at a higher level". It needs enough time span to unfold. Short passages cannot complete the whole arc.
 
-★ 配套一条：子结构的数目与音色层次的数目不必相等（p0253–0254）。两个子结构在音乐性质上相近时，可让它们用几乎相同的音色组合，把二者的对比交给音区、节奏与声音的空间传播方向承担；真正性质不同的第三个子结构才用截然不同的音色类别剥离出来（例 XIV-80 威尔第《安魂曲》"圣哉经"三重卡农）。三个子结构只呈现两个音色层次是合理的，可以免掉手段的浪费与杂乱。要让两个异质子结构既有鲜明色彩落差又保持内在聚合力，需同时调动音区、音色、力度与织体形态四个维度（例 XIV-82 凯尔特博恩《幻影》，p0260）。
+★ A related point: the number of substructures need not equal the number of timbral layers (p0253–0254). When two substructures are close in musical character, they can use almost the same timbre combination, leaving their contrast to register, rhythm and the direction of sound propagation in space. Only a third substructure of truly different character is separated out with a completely different timbre family (example XIV-80: Verdi's *Requiem*, "Sanctus", a triple canon). Three substructures presented in only two timbral layers is a reasonable choice, and it avoids wasted and cluttered means. To give two heterogeneous substructures a clear colour difference while keeping an inner cohesion, four dimensions must be used together: register, timbre, dynamic and texture form (example XIV-82: Kelterborn's *Phantasie*, p0260).
 
-### 9.3 铜管作稳定层（p0219–0223）
+### 9.3 Brass as a Stable Layer (p0219–0223)
 
-铜管进入主调音乐的音型化写法后，不再只是和声填充。
+Once brass enters a homophonic texture written in figuration, it is no longer merely harmonic filler.
 
-- 在铜管长音和弦背景上叠另一部分铜管以八度奏旋律音型化，音响饱满、情感浓烈（例 XIV-63 柴科夫斯基《罗密欧与朱丽叶幻想序曲》爱情主题，小号长号大号作背景、4 圆号奏旋律）。
-- ★ 铜管在音型化织体里常作稳定性因素，以持续长音或和弦构成起踏板作用的静态和声层；按并置原则在它上面叠一重和声轮廓大体或完全相同、由别组音色担任的动态音型化层。二者在多数情况下应始终保持基本重合。
-- 特例：铜管和声位于中低音区、旋律位于中高音区且中间留有较大空间时，可用弦乐分部声部逐一转接（大提琴、中提琴、第二小提琴、第一小提琴）构成波状上行的分解和弦式音型，填充两者之间的空隙起链接作用。此时音型层与铜管层只是部分重合，配置已更接近分层（例 XIV-65 勃拉姆斯《第三交响曲》II）。转接手法见 SKILL §3.6。
-- 现代织体里铜管的音型化技巧难度高，往往要与弦乐组的同一音型衔接并保持速度同步（例 XIV-64 陈其钢《大提琴协奏曲，逝去的时光》）。配套一条：用分层配置让颤音背景与音型化织体分处不同音区，色彩会异常鲜亮。
+- A melody in figuration, doubled in octaves by another part of brass, over a sustained brass chord background gives a full and emotionally intense sound (example XIV-63: Tchaikovsky's *Romeo and Juliet* fantasy overture, the love theme: trumpets, trombones and tuba as the background, with 4 horns playing the melody).
+- ★ In figurated textures, brass often serves as a stable element. A sustained note or chord forms a static harmonic layer that acts like a pedal. Over it, according to the principle of juxtaposition, a dynamic figurated layer is set whose harmonic outline is largely or entirely the same, but which is carried by another group's timbre. The two should stay almost entirely in step in most cases.
+- Special case: when the brass harmony sits in the low and middle registers, the melody is in the middle-high register, and there is a large space in between, the strings can be passed from one section to another (cellos, violas, second violins, first violins) to form a wave-like rising arpeggio figure that fills the gap and links the two. In this case the figure layer and the brass layer overlap only partly, and the scoring is already closer to layering. For the handing-over techniques, see SKILL §3.6.
+- In modern textures, figuration for brass is technically demanding. It often has to join with the same figure in the string group and keep the same tempo (example XIV-64: Chen Qigang's *Cello Concerto*, *Passing Time*). A companion point: use layered scoring to place a trill background and a figurated texture in different registers, and the colour becomes exceptionally bright.
 
-## 10. 风格分期：各时期铜管写法的默认值
+## 10. Stylistic Periods: Default Brass Writing by Period
 
-这一节用于反查：定了要写哪个风格，就能读出该风格下铜管的默认判断。
+This section is for reverse lookup. Once you decide which style you are writing in, you can read off the default judgements for brass in that style.
 
-| 时期 | 默认判断 | 页 |
+| Period | Default judgement | Page |
 |---|---|---|
-| 文艺复兴至巴罗克 | 铜管未形成独立乐器组，多作增强力度的手段或依附声乐（长号常重复所有合唱声部）；巴罗克的铜管独奏吹的仍是与弦乐木管同性质的线条，尚不成组 | （p0261） |
-| 自然铜管时代 | 受泛音列极大限制，换调要换变调管，小号最常用 C 调与 D 调管，为满足和声有时须同时用两种以上不同调的铜管；低音区某些音（如比第 2 分音低四度者）只能靠嘴唇极松弛加阻塞音勉强奏出，发音很不稳定 | （p0261）（p0198） |
-| 浪漫主义 | 编制定型为 4 圆号、3 小号、3 长号、1 大号（与 reference §2.5.1 一致）。★ 韦伯确立的分组方式按音色性质分两类：柔和音色（圆号）与尖锐音色（小号、长号）；柔和一类以密集排列集中于中音区，其余以开放位置排列。与常见的高音／低音铜管两分法不同，写浪漫派时按这一条排 | （p0262–0263） |
-| 后期浪漫派 | 阻塞音从补足泛音列缺音的技术补丁转为音色手段，用于阴暗气氛或强调金属性尖锐；弱音器同样从减音量转为色彩手段；喇叭口向上频繁出现。编制扩大到可用纯圆号（6–8 支）或纯长号、纯小号（4–5 支）独立承担某个复杂织体因素 | （p0263）（p0267） |
-| 印象主义 | ★ 默认加弱音器（圆号可用阻塞音），即便用开放音也多要求柔和；小号作旋律乐器时很少用明亮辉煌的高音区，以中低音区为主；长号多加弱音器、以轻柔音色与密集排列作背景因素；大号多只作低音区柔和的乐队踏板。数据佐证：《海》全曲铜管参与约 490 小节中 pp 到 p 占近六成，mf 很少，f 到 ff 不足弱奏段落的一半，且强奏也常配弱音器 | （p0264）（p0264–0267） |
-| 表现主义 | ★ 加弱音器或阻塞音出于色彩而非音量目的，且常同时标 f，求一种被强行挤压出来的、有穿透性的尖利凄切声音，与常规弱音器用法相反；偏爱两极音区（圆号、小号写在各自最高或最低音区），使发音勉强、音色怪诞紧张，配合焦虑绝望的情绪，代价是演奏难度极高 | （p0267–0268） |
-| 点描一路（威伯恩） | ★ 核心原则是拒绝任何明显的音色混合与叠置，以及同度或八度的简单重复。写这一路时要主动避开 SKILL §3.1、§3.2 的常规手法 | （p0268） |
-| 新古典主义 | 很少用弹吐、滑奏、闭塞音、喇叭口向上等特殊技巧，多用不加修饰的自然音；铜管多处在共鸣良好的中音区，少用两极；偏好纯音色、段落式对比与阶梯式力度对置；对位织体里的音色讲实用性，保证每条线独立 | （p0268–0269） |
+| Renaissance to Baroque | Brass did not yet form an independent instrument group. It was used mainly to increase dynamic or to accompany voices (the trombone often doubled all the choral parts). Baroque brass solos still played lines of the same character as the strings and woodwinds, and the brass did not yet form a group | (p0261) |
+| Natural brass period | Strongly limited by the harmonic series. Changing key meant changing crooks. The trumpet most often used the keys of C and D. To satisfy harmony, two or more crooks in different keys were sometimes needed at once. Some notes in the low register (such as the note four perfect fourths below the second partial) could be sounded only with very loose lips plus stopping, so they were very unstable | (p0261) (p0198) |
+| Romantic | The lineup settled as 4 horns, 3 trumpets, 3 trombones and 1 tuba (consistent with reference §2.5.1). ★ The grouping established by Weber sorts the instruments by sound quality into two classes: soft timbre (horn) and sharp timbre (trumpet, trombone). The soft class is set in dense arrangement and concentrated in the middle register, and the others are set in open positions. This differs from the common high/low division of brass, so when writing in a Romantic style, sort by this rule | (p0262–0263) |
+| Late Romantic | Stopping moved from a technical patch that filled gaps in the harmonic series to a timbral device, used for gloomy atmospheres or to emphasise metallic sharpness. Mutes likewise changed from a means of reducing volume to a means of colour. Bells raised upward appear often. The lineup expanded so that pure horns (6–8), or pure trombones or pure trumpets (4–5), could carry a complex texture element independently | (p0263) (p0267) |
+| Impressionism | ★ Mutes are used by default (horn may use stopped playing). Even when open tones are used, a soft quality is usually asked for. When the trumpet has a melodic role it seldom uses the bright, brilliant high register, staying mainly in the middle and low registers. Trombones often use mutes, and provide a soft, light colour and dense arrangement as a background element. The tuba is mostly used only as a soft orchestral pedal in the low register. Supporting data: in *La mer*, about 490 bars of brass participate, of which pp to p account for nearly sixty per cent. mf is rare. f to ff is less than half of the soft passages. Even loud passages often use mutes | (p0264) (p0264–0267) |
+| Expressionism | ★ Mutes or stopping are used for colour rather than volume, and often marked f at the same time. The aim is a piercing, plaintive sound that seems forced out, with penetrating power. This is the reverse of the normal use of mutes. A preference for the extreme registers (horn and trumpet written at their highest or lowest), which makes the sound strained and the timbre grotesque and tense, matching anxious and desperate emotion. The cost is very high difficulty in performance | (p0267–0268) |
+| Pointillist strand (Webern) | ★ The core principle is to reject any obvious timbre mixing or doubling, as well as simple repetition at unison or octave. When writing in this strand, consciously avoid the usual techniques of SKILL §3.1 and §3.2 | (p0268) |
+| Neoclassicism | Seldom uses special effects such as articulated tonguing, glissando, stopping, or bells raised upward. Mostly uses plain natural tones. Brass is placed mainly in the middle register, where resonance is good, and rarely in the extremes. Prefers pure timbre, sectional contrast and stepwise dynamic opposition. In contrapuntal textures, timbre is treated practically, to ensure that each line remains independent | (p0268–0269) |
 
-★ 通用提醒：同一件技法在不同风格语境下用途完全不同。弹吐在 R. 施特劳斯笔下是自然写实手段，在拉威尔笔下是色彩涂饰，在勋伯格笔下带凶险不祥的意味。套用技法之前先判断该风格的表现诉求（p0264–0268）。
+★ General reminder: the same technique serves quite different purposes in different stylistic contexts. Articulated tonguing is a naturalistic device in R. Strauss, a colouristic embellishment in Ravel, and carries a sinister, ominous meaning in Schoenberg. Before borrowing a technique, decide what expressive aim the style pursues (p0264–0268).

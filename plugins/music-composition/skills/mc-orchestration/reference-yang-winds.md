@@ -1,296 +1,296 @@
-# 木管乐器的组合（杨立青中册第七章）
+# Woodwind Combinations (Yang Liqing, Middle Volume, Chapter 7)
 
-这个文件管木管组内部、以及木管与弦乐之间的音色组合决策：某种组合在什么条件下成立、换来什么、代价是什么。它与 reference.md §2.4（木管组编制与各件音区）、§4.1–§4.3（十五度线条、多层八度、气息轮换）并列，那几节给乐器与排列的基本事实，这里给选与不选的判据。
+This file covers timbral combination decisions within the woodwind group and between woodwinds and strings: under what conditions a given combination holds, what it gains, and what it costs. It runs alongside reference.md §2.4 (woodwind lineup and each instrument's range) and §4.1–§4.3 (fifteenth-lines, multi-octave layers, breath rotation). Those sections give the basic facts about instruments and layouts; this file gives the criteria for choosing and rejecting combinations.
 
-## 1. 木管组的底子：它扛得动什么
+## 1. The Woodwind Foundation: What It Can Carry
 
-### 1.1 定性与力度天花板
+### 1.1 Character and Dynamic Ceiling
 
-| 事实 | 判据 | 页 |
+| Fact | Criterion | Page |
 |---|---|---|
-| 木管组没有弦乐组那样高度统一均匀的色调，长处在色彩丰富、层次细腻 | 要均质铺底找弦乐，要多彩分层找木管 | p0020 |
-| 长笛、单簧管的灵敏机动几乎不亚于弦乐，但受气息与唇舌肌肉的生理限制，持续演奏能力仍不能与弦乐抗衡 | 长时间无间断的快速织体必须预留轮换，见 reference §4.3 | p0020 |
-| 绝对强度不及弦乐组，更远不及铜管与打击乐 | 突强（sf）与高潮强调处木管单独承担不了，须结合其他组 | p0020 |
+| The woodwind group lacks the uniformly even tone of the string group; its strength is rich colour and fine layering | For an even tonal bed, use strings; for multicoloured layering, use woodwinds | p0020 |
+| Flute and clarinet are nearly as agile as strings, but breath and lip/embouchure physiology limit sustained performance, which still cannot match strings | Sustained fast textures with no break must allow for rotation; see reference §4.3 | p0020 |
+| Absolute loudness falls short of the string group and is far below brass and percussion | Woodwinds alone cannot carry sf and climactic emphasis; combine them with other groups | p0020 |
 
-动态范围的实测差（p0020）：长笛高音区 pp 与 ff 之差仅约 10 分贝；双簧管低音区约 15 分贝；长笛低音区几乎奏不出强烈的 ff；双簧管、大管的最低音区以及几乎所有木管的极高音区都很难奏出柔和的 pp。★ 写力度记号之前先确认这一档音区做不做得出这个力度。
+Measured dynamic range differences (p0020): on flute, the gap between pp and ff in the high register is only about 10 dB; on oboe in the low register, about 15 dB. Flute in the low register can barely produce a strong ff. Oboe and bassoon in their lowest registers, and almost all woodwinds in their extreme high registers, can hardly produce a soft pp. ★ Before writing a dynamic marking, first confirm that the register can actually produce that level.
 
-★ 音区的表情等级，两说并排（p0020–0021）：里姆斯基-科萨科夫与瓦西连科按音区高低划分"表情区域"的高下大小；杨立青不赞同，认为每个音区都有各自最擅长的表情范围，音区之间并无高下之分。SKILL §6 按前一路数给出各音区的性格清单，用的时候记住后一条：某个音区"弱"说的只是响度。
+★ Expressive grades by register, two views side by side (p0020–0021): Rimsky-Korsakov and Vasilenko rank the "expressive zones" by register height and size; Yang Liqing disagrees, holding that every register has its own best expressive range and that registers are not ranked against each other. SKILL §6 gives each register a character inventory on the first view; when using it, remember the second: when a register is called "weak," that only means it is quieter.
 
-### 1.2 响度数值与横向转接
+### 1.2 Loudness Figures and Horizontal Transfer
 
-- 数值参照（p0021–0022）：长笛独奏约 72 分贝，a2 齐奏约 75；第一小提琴线条约 83.5。单件木管都强于单件弦乐独奏，弦乐靠群体数量才与木管独奏或齐奏持平（见 SKILL §4）。★ 木管线条移高两个半八度以上，长笛独奏反而可略强于小提琴（约 82 比 79.5）：**抬音区比加乐器便宜**。
-- 泛音会破坏按分贝算出来的平衡（p0021）：音量绝对值相近时，泛音较丰富、个性最强的那件在和声性结合中仍会冒尖。
-- 个性音区加距离（p0022）：某件木管处在自己发音最有个性的音区、又与其他组保持足够音区距离时，音量绝对值远不及对方也能抗衡。与 SKILL §5 对照用。
-- ★ 转接的量化判据（p0023）：承接乐器所在音区的响度上限若明显低于前一乐器，势头就断了。大管（≥80 分贝）转长笛（上限 72–75）显得无力，换双簧管或单簧管合理。做法见 SKILL §3.6，这里补的是挑承接乐器的门槛。
-- 增减一支乐器（p0125）对力度的影响至多约 3 分贝，对音色的改善却很明显，属"得多于失"。同量级的另一条：弦乐分部齐奏比不分部每线条约弱 3 分贝（p0035），这是让某件乐器退到染色位置最省力的手段。
+- Numerical reference (p0021–0022): solo flute at about 72 dB, two-flute unison at about 75; first violin line at about 83.5. Any single woodwind is louder than a single string solo; strings match woodwind solos or unisons only through numerical mass (see SKILL §4). ★ When a woodwind line is raised more than two and a half octaves, a solo flute can actually be slightly louder than a violin (about 82 vs. 79.5): **raising the register is cheaper than adding instruments.**
+- Overtones upset a balance calculated in decibels (p0021): at similar absolute volume, the instrument with richer overtones and the strongest individuality still stands out in a harmonic blend.
+- Individual register plus distance (p0022): when a woodwind sits in the register where it is most individual, and keeps adequate register distance from other groups, it can hold its own even at much lower absolute volume. Compare with SKILL §5.
+- ★ Quantitative criterion for transfer (p0023): if the loudness ceiling of the receiving instrument's register is clearly below that of the preceding instrument, momentum breaks. A bassoon (≥80 dB) handing off to flute (ceiling 72–75) sounds weak; switching to oboe or clarinet is reasonable. The method is in SKILL §3.6; what is added here is the threshold for choosing the receiving instrument.
+- Adding or removing one instrument (p0125) changes dynamics by at most about 3 dB, but the timbral improvement is clear: a gain outweighs the loss. A related point of the same order: a divided string section playing in unison is about 3 dB softer per line than an undivided one (p0035). This is the least costly way to push an instrument back into a colouring role.
 
-平衡本身是相对概念（p0024，引勋伯格《色彩》）：除均质和弦结构外，管弦乐织体不需要也不存在绝对的音量平衡；该突出处已在配器上作过处理，指挥不必再调，各乐器精确按标明力度演奏即可（例 VII-3）。
+Balance is itself a relative concept (p0024, citing Schoenberg's *Colour*): apart from homophonic chord structures, orchestral texture neither needs nor has absolute volume balance. Where something should stand out, the orchestration has already handled it; the conductor need not adjust further, and each instrument need only play its marked dynamic precisely (example VII-3).
 
-**编曲含义**：木管的平衡先看音区档位，再看件数，最后才看力度记号。力度记号改不了音区做不出的事。
+**Arranging implication**: for woodwind balance, check register level first, then the number of players, and only last the dynamic marking. A dynamic marking cannot change what a register cannot do.
 
-## 2. 混合音色：三级效果、接触点、复杂度的代价
+## 2. Blended Timbre: Three Grades, Points of Contact, and the Cost of Complexity
 
-### 2.1 音区与力度差决定落在哪一级
+### 2.1 Register and Dynamic Difference Determine the Grade
 
-同样两件乐器结合，结果落在哪一级由音区对等程度与力度差决定（p0034–0036）。里姆斯基-科萨科夫的原则是"最好最自然的结合由音区最相接近的乐器构成"，作者接受它并往下切三级：
+When two instruments combine, the result falls into one of three grades, determined by how closely their registers match and by their dynamic difference (p0034–0036). Rimsky-Korsakov's principle is that "the best and most natural blend is formed by instruments whose registers are closest"; the author accepts it and then cuts it into three grades:
 
-| 级别 | 触发条件 | 结果 | 页 / 谱例 |
+| Grade | Trigger condition | Result | Page / example |
 |---|---|---|---|
-| 均衡的混合 | 两件都处在各自中高音区、音量势均力敌 | 各成分响度相当，得到真正的新色彩 | p0034，例 VII-12 |
-| 不均衡的混合（染色） | 音区相同，但其中一件降一级力度或分部（每线条约弱 3 分贝） | 未降级的一方音色占优势，另一方只起染色作用 | p0035，例 VII-13 |
-| 悬殊的混合（吸收） | 音区、数量、质量差距达 10 分贝以上 | 弱势一方被完全吸收，毫无显露 | p0036，例 VII-14 |
+| Balanced blend | Both instruments sit in their own mid-to-upper registers, with evenly matched volume | Each component has comparable loudness, producing a genuinely new colour | p0034, example VII-12 |
+| Unbalanced blend (colouring) | Same register, but one instrument is a dynamic level lower or is a divided part (about 3 dB softer per line) | The non-reduced instrument dominates the timbre; the other only colours it | p0035, example VII-13 |
+| Lopsided blend (absorption) | Register, number, or quality differ by 10 dB or more | The weaker side is completely absorbed and does not show at all | p0036, example VII-14 |
 
-★ 第三级是反面判据：想让某件乐器透出色彩时不能用这种配置，它只适合纯粹的音量填充、或明知会被吸收仍要的场合。融合后双方都变钝、反衬第三方的情形见 SKILL §3.4（例 VII-15，10 支木管与第二小提琴同度，木管互相抵消反把小提琴衬亮）。
+★ The third grade is the negative criterion: do not use this configuration when a given instrument's colour should come through. It suits only pure volume filling, or cases where absorption is known and accepted. The situation where a blend dulls both sides and makes a third party stand out by contrast is covered in SKILL §3.4 (example VII-15, where 10 woodwinds in unison with second violins cancel one another out and make the violins stand out).
 
-### 2.2 接触点：不同组混合的选材判据
+### 2.2 Points of Contact: Criteria for Choosing Material in Mixed Groups
 
-同组混合处理不困难，相近音色作同度结合时最自然融洽（见 SKILL §3.1，例 VII-11）。不同组混合没有那么简单（p0033）：★ **先找两种音色的"接触点"**。传统的典型配方（大管加大提琴、单簧管或英国管加中提琴、长笛或双簧管加小提琴）之所以成为配方，正因为这些组合的接触点最多。
+Blending within the same group is not difficult; similar timbres in unison combine most naturally (see SKILL §3.1, example VII-11). Blending across groups is harder (p0033). ★ **First find the "points of contact" between the two timbres.** The traditional standard pairings (bassoon with cello; clarinet or English horn with viola; flute or oboe with violin) became standard precisely because these combinations have the most points of contact.
 
-接触点也能串成链：加弱音器的小号、双簧管、加弱音器的弦乐都略带鼻音，所以小号→小号加双簧管→双簧管加小提琴→小提琴这条"远关系转调"式的过渡接得上（p0064–0066，例 VII-47、VII-48）。
+Points of contact can also be chained: muted trumpet, oboe, and muted strings all carry a slightly nasal quality, so a progression running trumpet → trumpet with oboe → oboe with violin → violin, in the manner of a "distant-key modulation," connects smoothly (p0064–0066, examples VII-47, VII-48).
 
-### 2.3 复杂度的代价，以及作者的限度声明
+### 2.3 The Cost of Complexity, and the Author's Limit Statement
 
-- 瓦西连科的"混合剂"越复杂，丧失音色个性的危险越大。四种木管在乐队中音区作极复杂的同度结合，音色浓郁却难以言表，音色与表情的多样性反受限制、个性及内在性较差，须极端审慎（p0043–0044，例 VII-21）。分类见 SKILL §3.7。
-- 反向用途：复杂混合剂（低音单簧管加大管加大提琴一类）正好用来做浑暗阴郁厚重的低音区主题，强调主题的首尾两次进入（p0122–0124，例 VII-92）。
-- 近现代的限度（p0041）：混合音色在浪漫时期极为风行，但近世不少作曲家认为它危及音色个性，使乐器失去独特细腻的表情与力度速度上的灵活性，因此使用有限度，先锋派作品中甚至完全排斥。**追求乐器个性化表达与灵活力度速度变化时，减少混合音色。**
-- ★ 作者的限度声明（p0042）：木管的音色结合远比弦乐复杂，任何混合都会因音区、力度、奏法、速度、线条形态综合影响而千变万化，开列"万应验方"式的配方表做不到；某种混合是否恰当，一定程度上取决于经验、修养与审美趣味，属"不可教"之列。所以这里给的全是条件与代价，不给配方。
+- The more complex Vasilenko's "blending agent," the greater the danger of losing timbral individuality. Four woodwinds in extremely complex unison in the orchestra's middle register produce a rich sound that is hard to describe, but timbral and expressive variety is then restricted, individuality and inwardness are weaker, and it must be used with extreme caution (p0043–0044, example VII-21). For the classification, see SKILL §3.7.
+- Reverse use: complex blends (such as bass clarinet with bassoon and cello) are exactly what is needed for a dark, murky, heavy low-register theme, with emphasis on the theme's first and last entries (p0122–0124, example VII-92).
+- Modern limits (p0041): blended timbre was very fashionable in the Romantic era, but many composers in recent times have considered that it endangers timbral individuality, depriving instruments of distinctive, delicate expression and of flexibility in dynamics and tempo; they therefore use it sparingly, and avant-garde works sometimes exclude it altogether. **When pursuing individualized instrumental expression and flexible changes of dynamic and tempo, reduce blended timbre.**
+- ★ The author's limit statement (p0042): woodwind timbral combinations are far more complex than string combinations; any blend changes endlessly through the combined influence of register, dynamic, playing technique, tempo, and line shape, so a "universal prescription" table of recipes is impossible. Whether a given blend is appropriate depends to a degree on experience, cultivation, and aesthetic taste, and falls into the category of things that "cannot be taught." Therefore, what is given here is only conditions and costs, not recipes.
 
-### 2.4 一次完整的权衡：《未完成交响曲》主题的七个方案
+### 2.4 A Complete Weighing: Seven Alternatives for the Theme of the *Unfinished* Symphony
 
-原书用双簧管 I 加单簧管（A）I 同度这个原配置，逐案比较七种替代（p0043，例 VII-20）。这张表的价值在于它示范了"为主题定基调音色"该怎么想：
+The original uses the basic configuration of oboe I with clarinet (A) I in unison, comparing seven alternatives one by one (p0043, example VII-20). The value of this table lies in showing how to think about setting the basic timbre for a theme:
 
-| 方案 | 结果 |
+| Alternative | Result |
 |---|---|
-| 长笛独奏 | 该音区柔弱，音色苍白 |
-| 双簧管独奏 | 色调过于明亮，与怅惘忧郁的气氛不符 |
-| 单簧管独奏（普劳特建议） | 胜于前两者，但过于暗淡郁闷 |
-| 长笛加双簧管 | 双簧管突出，长笛软化其鼻音使之圆润，但缺原有的郁郁寡欢 |
-| 长笛加单簧管 | 排除了双簧管咄咄逼人的音色，单簧管稍占优势并被长笛充实，但缺个性与神秘感 |
-| 英国管加单簧管 | 英国管音区过高，带来不必要的紧张度 |
-| 各类八度结合 | 作为主题的初始陈述不恰当，会给音色的进一步发展带来困难 |
+| Solo flute | The register is weak and the timbre pale |
+| Solo oboe | The tone is too bright and does not fit the wistful, melancholy mood |
+| Solo clarinet (Prout's suggestion) | Better than the first two, but too dim and gloomy |
+| Flute with oboe | The oboe comes forward; the flute softens its nasal quality and makes it round, but the original melancholy is lost |
+| Flute with clarinet | Removes the oboe's aggressive timbre; the clarinet takes slight precedence and is enriched by the flute, but lacks individuality and mystery |
+| English horn with clarinet | The English horn's register is too high, introducing unnecessary tension |
+| Various octave combinations | Inappropriate as the initial statement of the theme; they make further development of timbre difficult |
 
-**用法**：定基调音色时先把主题要的情绪写成一句话（此例是"怅惘忧郁又略含神秘"），再逐个组合记它把色彩偏到哪一侧。★ 最后一行最容易忽略：**初始陈述要留发展余地**，一上来就用掉八度结合，后面没有可加的东西。
+**Method**: when setting the basic timbre, first write in one sentence the mood the theme requires (in this example, "wistful and melancholy, with a hint of mystery"), then test each combination by noting which way it tilts the colour. ★ The last row is the easiest to overlook: **leave room for development in the initial statement.** If the octave combination is used at the outset, there is nothing left to add later.
 
-## 3. 线条：宽度与上下顺序
+## 3. Lines: Width and Vertical Order
 
-### 3.1 同度与八度
+### 3.1 Unisons and Octaves
 
-同度线条选择余地最大的范围在乐队的中音区及中高音区（p0042，见 SKILL §3.1）。八度线条分两种情况：
+Unison lines have the widest choice in the orchestra's middle register and upper-middle register (p0042, see SKILL §3.1). Octave lines come in two cases:
 
-| 情况 | 判据与代价 | 页 / 谱例 |
+| Case | Criterion and cost | Page / example |
 |---|---|---|
-| 同类木管的八度 | 两件处在特性颇不相同的音区，音色力度有时不够均衡；但中等力度（mp–mf）内不均衡不明显，仍可用。两支大管八度奏低音线条已是通例；原型与其变种乐器的八度通常也好 | p0044，例 VII-22 |
-| 不同类木管的八度 | 每层只用一种音色时共鸣一般很好，音区对等条件下任何力度级都能均衡。可按音色亲缘配（长笛加单簧管为圆润的"胸声"，双簧管加大管为明亮的"鼻音"），也可按乐器自然顺序；每层内部还可再做混合 | p0044–0045，例 VII-23、VII-24 |
+| Octaves within the same woodwind type | The two instruments sit in registers of quite different character, so timbre and volume are sometimes unevenly matched; but within moderate dynamics (mp–mf) the imbalance is not obvious, so it can still be used. Two bassoons in octaves playing a low line is already standard practice; octaves of an original instrument and its variant are usually also good | p0044, example VII-22 |
+| Octaves across different woodwind types | When each layer uses only one timbre, resonance is generally very good, and at matched register levels the balance holds at any dynamic level. Pairing can follow timbral kinship (flute with clarinet gives a round "chest voice"; oboe with bassoon gives a bright "nasal" sound), or follow the instruments' natural order; each layer can also be blended internally | p0044–0045, examples VII-23, VII-24 |
 
-### 3.2 逆序组合：本章最实用的一条
+### 3.2 Inverted Combinations: The Most Practical Rule in This Chapter
 
-由不同音色叠合的八度线条里，把通常在上方的乐器放到下方、反之亦然，称逆序组合（inverted combination），木管组最常用于双簧管与单簧管（p0046）。★ 作者在此反驳里姆斯基-科萨科夫对逆序"音区混杂""不自然共鸣"的责难，认为未必正确，并给出机理：
+In octave lines layering different timbres, placing the instrument normally above in the lower position, and vice versa, is called an inverted combination; in the woodwind group it is most often used with oboe and clarinet (p0046). ★ The author here rebuts Rimsky-Korsakov's objection to inversion as "mixed registers" and "unnatural resonance," holding that the objection is not necessarily correct, and gives the mechanism:
 
-- 单簧管中音区稍弱，c² 以上的"小号音区"饱满明亮、力度特性好，置于高八度可以发扬这一优势，效果不亚于双簧管在同一音区。
-- 双簧管中低音区比同音区的单簧管饱满得多，用它支持上方八度的单簧管，比两者按自然顺序结合更鲜明有力（例 VII-25，R. 施特劳斯《莎乐美》）。
+- The clarinet's middle register is somewhat weak; above c², its "trumpet register" is full and bright with good dynamic character. Placing it an octave higher lets it show this strength, with an effect no less than that of the oboe in the same register.
+- The oboe's low-middle register is much fuller than the clarinet's in the same register; using it to support an upper-octave clarinet is more vivid and forceful than combining the two in their natural order (example VII-25, R. Strauss, *Salome*).
 
-三种用得上的场合：
+Three situations where this is useful:
 
-1. **为力度与饱满度**：如上；另见例 VII-33，双簧管与单簧管逆序以获更坚实的发音，全部木管都在最辉煌或最富刺激力的音域，且与弦乐和弦伴奏的音区互不重合。
-2. **纯为色彩**：德彪西总谱中的逆序与力度无关（p0046，例 VII-26，八度线条内独奏音色与齐奏、混合音色细腻交替，长笛始终位于下方）。
-3. **为救不利音区**：模仿性复调中若按常规顺序排列会让某声部落进薄弱音区（如单簧管的喉音区），或相邻声部音区过近难以分离，可作**局部逆序**，把单簧管排到双簧管之上、大管排到单簧管之上，借单簧管的芦笛区、小号区与大管高音区的紧张表情增加分离度（p0114–0116，例 VII-87）。
+1. **For dynamic strength and fullness**: as above; see also example VII-33, where oboe and clarinet are inverted to gain a firmer sound, with all the woodwinds in the most brilliant or most incisive range and their register not overlapping the string chordal accompaniment.
+2. **Purely for colour**: inversion in Debussy's scores is unrelated to dynamics (p0046, example VII-26, where solo timbre within the octave line alternates delicately with unison and blended timbres, and the flute stays below).
+3. **To rescue an unfavourable register**: in imitative polyphony, if the normal order would place a part in a weak register (such as the throaty region of the clarinet), or if adjacent parts are too close in register to separate, a **partial inversion** can be used: put the clarinet above the oboe and the bassoon above the clarinet, borrowing the reed-like tension of the clarinet's chalumeau register, the trumpet register, and the high register of the bassoon to increase separation (p0114–0116, example VII-87).
 
-先锋派把它推到极端：音区倒错的逆序（长笛声部下移，单簧管与低音单簧管、大管与低音大管交叉）用来给总音响增添紧张度（p0068，例 VII-49）。
+The avant-garde pushed this to the extreme: inversion with registers reversed (flute parts moved downward, clarinet and bass clarinet, bassoon and contrabassoon crossed) to add tension to the overall sound (p0068, example VII-49).
 
-### 3.3 十五度与多层八度
+### 3.3 Fifteenths and Multi-Layer Octaves
 
-十五度线条见 reference §4.1，多层八度见 reference §4.2。本章补三条：
+For fifteenth-lines, see reference §4.1; for multi-layer octaves, see reference §4.2. This chapter adds three points:
 
-- 十五度不止用于诙谐（例 VII-27）。例 VII-28 用短笛中高音区十五度重复长笛低音区的旋律骨架音渲染惆怅凄婉；例 VII-29 里短笛与大管相距三个八度，"使主题染上与东方乐器合奏相近的色彩"（p0048）。
-- 同类乐器的多层八度颇罕见，同一类乐器在不同音区的特性差异使各层很难均衡；木管里也许只有单簧管尚差强人意，且仍可能有某层落在不利音区，需靠与别的声部（如合唱）重叠来掩饰（p0052，例 VII-31）。
-- 不同类乐器的多层八度目的在于展示整组丰满统一的音响；强力度全奏中，木管组只有以这一形式出现才有足够响度与其他组抗衡，此时要为每件挑发音最有利的音区（p0053，例 VII-32、VII-33）。
+- Fifteenths are not used only for humour (example VII-27). Example VII-28 uses piccolo fifteenths in the upper-middle register to repeat the melodic skeleton of the flute's low register, evoking melancholy and sorrow; in example VII-29, piccolo and bassoon are three octaves apart, "giving the theme a colour close to that of an Eastern instrumental ensemble" (p0048).
+- Multi-layer octaves within a single instrument type are rare: the differing character of one type across registers makes the layers hard to balance; among the woodwinds, perhaps only the clarinet is reasonably satisfactory, and some layer may still fall in an unfavourable register, requiring concealment by doubling with another part (such as the chorus) (p0052, example VII-31).
+- Multi-layer octaves across different instrument types aim to display a full, unified sonority for the whole group; in full-force tutti, the woodwinds can only compete with the other groups in loudness if they appear in this form, and each instrument should then be chosen in the register most favourable to it (p0053, examples VII-32, VII-33).
 
-**用法**：同度求融、八度求亮、十五度求分离与空间感。上下顺序是可调参数，先按乐器在该音区的实际状态排。
+**Method**: unisons seek fusion, octaves seek brightness, fifteenths seek separation and sense of space. The vertical order is an adjustable parameter; first arrange it by each instrument's actual state in that register.
 
-## 4. 和声性线条与和弦配置
+## 4. Harmonic Lines and Chord Voicing
 
-木管组的和声排列五式与三条规则已在 reference §2.4.5（叠置、交织、包围、交接、并置；小二度不给同音色、三管制用一对同类加变种、除单管制外少把和弦各音分给不同音色）。这里只补该表以外的判据。
+The five harmonic arrangement patterns and three rules for woodwind groups are already set out in reference §2.4.5 (superposition, interweaving, surrounding, joining, and juxtaposition; minor seconds should not be given to the same timbre, a three-player section uses a pair of the same type plus a variant, and apart from single-player sections, chord tones are seldom distributed among different timbres). This section adds only criteria beyond that table.
 
-### 4.1 平行线条的紧张度
+### 4.1 Tension in Parallel Lines
 
-和声性线条在木管组中一般由同类乐器演奏，可以用不同紧张度的音程配置来调线条的音响张力（p0054）：大六度（例 VII-34）、小三度与大三度（VII-35）、小七度（VII-36）、纯五度（VII-37）各成一档。小二度平行进行可赋予音乐幽默、热情的性格；★ 这条线条**若有八度支持，发音格外清晰、共鸣极好**（p0056–0057，例 VII-38）。
+Harmonic lines in the woodwind group are generally played by instruments of the same type, and the tension of the lines can be adjusted through intervals of differing tension (p0054): major sixths (example VII-34), minor and major thirds (VII-35), minor sevenths (VII-36), and perfect fifths (VII-37) each form a separate level. Parallel motion in minor seconds can give music a humorous and enthusiastic character; ★ if this line has **octave support, its sound is exceptionally clear and resonates very well** (p0056–0057, example VII-38).
 
-原型乐器与其变种乐器"合成"的和声性线条音色异常统一，可达到与同型乐器结合相差无几的融洽度（p0057，例 VII-39，见 reference §2.4）。★ 只有在室内性的单管编制里，作曲家才会考虑用不同类音色（如长笛与单簧管）配置和声性线条（p0057，例 VII-40）：**非单管编制下这不是首选**。
+A harmonic line "synthesized" from a prototype instrument and its variant has an exceptionally unified timbre, achieving a blend barely different from that of two instruments of the same type (p0057, example VII-39, see reference §2.4). ★ Only in the chamber-like single-player lineup would a composer consider using different types of timbre (such as flute and clarinet) for a harmonic line (p0057, example VII-40): **outside single-player lineups this is not the first choice.**
 
-### 4.2 平行和弦：最佳配置与那个例外
+### 4.2 Parallel Chords: The Best Configuration and Its Exception
 
-以平行和弦形态出现的和声性线条，通常用同类乐器音色（原型加变种，或清一色原型）配置效果最佳（p0058，例 VII-41，极弱力度下柔和神秘）。★ 例外值得单记（p0059，同例 [Z] 处）：平行四六和弦的线条化进行交给三种不同乐器时，可用**长笛代替第二双簧管**，避开双簧管低音区音量难控、音色粗糙的问题；只要长笛被两支鼻音乐器（双簧管与英国管）夹在中间，总体音响的基本性质不受影响。同样的替换在四声部合唱式写法里也成立（p0100，例 VII-76）。
+Harmonic lines appearing as parallel chords usually sound best when voiced with instruments of the same type (prototype plus variant, or all prototypes) (p0058, example VII-41, soft and mysterious at very weak dynamics). ★ The exception deserves separate note (p0059, same example at [Z]): when a parallel six-four chord line is passed to three different instruments in linear fashion, **flute may replace the second oboe**, avoiding the oboe's low-register problems of hard-to-control volume and coarse timbre; so long as the flute sits between two nasal instruments (oboe and English horn), the basic character of the overall sound is unaffected. The same substitution also holds in four-part chorale-style writing (p0100, example VII-76).
 
-### 4.3 三个时期的和弦排列取向（p0067）
+### 4.3 Chord-Voicing Orientations in Three Periods (p0067)
 
-作者先声明和声写法上的原则并非僵死教条，都与特定历史风格及艺术个性相联系：
+The author first states that the principles of harmonic writing are not rigid dogma; they are tied to specific historical styles and artistic personalities:
 
-| 取向 | 做法 | 得到什么 |
+| Orientation | Method | Result |
 |---|---|---|
-| 巴洛克 | 上方声部间留空隙，低音远离上三声部；各和弦音交给音色力度差异很大的乐器 | 融合度低、音响分离，线条化思维的产物；要不要融合取决于风格意图 |
-| 古典浪漫 | 和弦音均匀分布，音区安排合理，成对木管（及弦乐）交叉排列并相互叠合 | 融洽度高、共鸣良好，主调写法的标准处理 |
-| 20 世纪 | 反传统地把和弦最低几个音分给三种不同音色的乐器 | 换来色彩性，代价是平衡不如传统做法（如 2 单簧管加低音单簧管）好把握 |
+| Baroque | Leave gaps between the upper voices; keep the bass far from the upper three voices; assign each chord tone to instruments with very different timbres and dynamics | Low fusion, separated sonority; a product of linear thinking; whether to seek fusion depends on the stylistic intent |
+| Classical–Romantic | Distribute chord tones evenly, with sensible register placement; paired woodwinds (and strings) cross and overlap one another | High fusion, good resonance; the standard treatment for homophonic writing |
+| Twentieth century | Unconventionally assign the lowest few notes of a chord to instruments of three different timbres | Gains colour, at the cost that balance is harder to manage than in traditional practice (such as two clarinets plus bass clarinet) |
 
-混合排列的三音和弦交给双簧管、单簧管、大管，在和弦带线条化意味、或要与传统配置形成色彩对比时可行（p0073，例 VII-55）。
+Three-note chords in mixed arrangements, assigned to oboe, clarinet, and bassoon, are workable when the chord has a linear character or when a colour contrast with traditional voicing is wanted (p0073, example VII-55).
 
-## 5. 木管与弦乐的配合
+## 5. Coordinating Woodwinds with Strings
 
-### 5.1 和声层三式的补充判据
+### 5.1 Supplementary Criteria for the Three Harmonic-Layer Methods
 
-三式（并置组合、局部重叠组合、分层组合）见 SKILL §3.8。本章补的是选哪一式的后果：
+The three methods (juxtaposed combination, partial-overlap combination, and layered combination) are covered in SKILL §3.8. This section adds the consequences of choosing each:
 
-- 局部重叠时，**哪一组构成完整均匀的和声层，哪一组的色调就占优势**；被重叠的通常是骨架声部（p0075，例 VII-57 管乐完整、弦乐局部重叠；例 VII-58 反过来）。它不必所有声部都复合，只在重要的基本声部上重叠即可；没被重叠的木管声部只起强化低音泛音的作用（p0101，例 VII-77）。
-- 分层组合在总体色调均匀度上比前两式稍逊，稍有闪失就出现音响或力度失调，处理得当才能出奇制胜（p0078，例 VII-59 四层带）。配套两条：要极轻柔就让弦乐全部加弱音器并用靠指板奏法，木管省略发音明亮的短笛与双簧管；★ 即使某组理应因布满整个音域而占绝对优势，仍可在其音域里局部"凿"出一个色彩断层，让另一组从中流泻而出（p0079）。
+- In partial overlap, **whichever group forms a complete, evenly distributed harmonic layer will dominate the colour**; the overlapped part is usually the skeletal voice (p0075, example VII-57, where winds are complete and strings partly overlap; example VII-58, the reverse). It need not double every part, only the important foundational voices; woodwind parts that are not doubled serve only to strengthen the low-register overtones (p0101, example VII-77).
+- Layered combination is slightly less even in overall colour than the first two methods; any slip produces imbalance in sonority or dynamics, and it succeeds only when handled well, producing surprising effects (p0078, example VII-59, a four-layer band). Two accompanying rules: for an extremely soft texture, have all strings use mutes and bowing near the fingerboard, and omit the bright-sounding piccolo and oboe from the woodwinds; ★ even where one group should be absolutely dominant because it fills the whole range, a colour break can still be "carved" locally within its range, so that the other group flows through the gap (p0079).
 
-### 5.2 并置组合的标准对应
+### 5.2 Standard Correspondences for Juxtaposed Combination
 
-要强调各声部主题材料的同质性、又要比纯弦乐更丰满的发音时，在每个弦乐声部上叠一层音区对应的木管，标准对应是（p0120，例 VII-91）：
+When emphasizing the homogeneity of each part's thematic material while wanting a fuller sound than strings alone, add a register-matched woodwind layer to each string part. The standard correspondences are (p0120, example VII-91):
 
-| 弦乐 | 叠加的木管 |
+| Strings | Woodwind doubling |
 |---|---|
-| 小提琴 I | 长笛（或短笛） |
-| 小提琴 II | 双簧管 |
-| 中提琴 | 单簧管 |
-| 大提琴与低音提琴 | 大管 |
+| Violin I | Flute (or piccolo) |
+| Violin II | Oboe |
+| Viola | Clarinet |
+| Cello and double bass | Bassoon |
 
-代价是木管音色常被弦乐吸收中和，各声部发音带上相对统一的色调（见 SKILL §3.4）。
+The cost is that the woodwind timbre is often absorbed and neutralised by the strings, so each part sounds with a relatively uniform tonal colour (see SKILL §3.4).
 
-### 5.3 同质性织体里的三种色彩关系（p0092–0102）
+### 5.3 Three Colour Relationships in Homogeneous Texture (p0092–0102)
 
-这是与 SKILL §3.7、§3.8 不同维度的分类，别与那两套混在一起：
+This is a classification along a different dimension from SKILL §3.7 and §3.8; do not mix it with those two systems:
 
-1. **对置对比**：把乐句的不同环节分别用纯木管与纯弦乐配置，形成音色（有时含音区）上的鲜明对置，常见于展开性段落、呼应式句型、动机多次模仿的结构（p0092，例 VII-69、VII-70）。急速交替会让线条色彩闪烁不定，高音木管与弦乐的音区差及重音不规则交错会加深闪烁感（p0094，例 VII-71）。★ 两个特性迥异的织体因素反复对置时，在交接点上用短促的铜管和弦强调，效果显著（p0094，例 VII-72，与 SKILL §3.9 对照）。
-2. **统一基调加局部染色**：用某一组的音色决定段落的总体性质，再用另一组的个别乐器加强其中某些声部，在统一色调中做出局部色差（p0097，例 VII-73）。★ 它与 SKILL §3.4 的中和有别：中和讲的是融合后辨识度降低，这条是宏观分层策略。
-3. **均匀的混合色调**：所有声部都用弦乐与相应木管相互重叠（p0098，例 VII-75、VII-76）。现代写法里还有**异质化处理**：给重叠的音色赋予不同形态以增加分离度，如木管奏连奏的和声性线条、弦乐用短小跳跃的十六分音符加强音头（p0102，例 VII-78）。
+1. **Alternating contrast**: assign different segments of a phrase to pure woodwinds and pure strings, creating a sharp alternation in timbre (sometimes also in register). This is common in developmental passages, call-and-response phrase structures, and structures where a motif is imitated several times (p0092, examples VII-69, VII-70). Rapid alternation makes the line's colour flicker; the high-register difference between woodwinds and strings, combined with irregular accents, increases the flicker (p0094, example VII-71). ★ When two texturally very different elements alternate repeatedly, emphasizing the junctions with short brass chords is very effective (p0094, example VII-72, compare SKILL §3.9).
+2. **Uniform tone with local colouring**: use one group's timbre to set the overall character of a passage, then use individual instruments from the other group to reinforce certain parts, creating local colour differences within a unified tone (p0097, example VII-73). ★ This differs from the neutralisation in SKILL §3.4: neutralisation concerns reduced recognisability after blending, whereas this is a macro-level layering strategy.
+3. **Even blended tone**: all parts are doubled by strings and the corresponding woodwinds (p0098, examples VII-75, VII-76). Modern writing also includes **heterogeneous treatment**: giving the doubled timbres different shapes to increase separation, such as woodwinds playing legato harmonic lines while strings use short, leaping sixteenth notes to emphasise attacks (p0102, example VII-78).
 
-★ 一条可量化的比重判据（p0097，例 VII-74）：木管声部数量增加、与弦乐**不构成同度重复而以八度重叠**、又处于发音有利的音区时，木管的音色比重可与弦乐组平分秋色。
+★ A quantifiable criterion for proportion (p0097, example VII-74): when the number of woodwind parts increases, they double the strings **in octaves rather than in unison**, and sit in a register favourable to their sound, the woodwinds' timbral weight can rival that of the string group.
 
-### 5.4 音型化织体：把什么音型写给谁
+### 5.4 Figurated Texture: Which Figures to Give to Whom
 
-| 乐器 | 该给什么音型 | 页 |
+| Instrument | Figures to assign | Page |
 |---|---|---|
-| 短笛、长笛、单簧管 | 飞速下行的断奏琶音等炫技型音型交给它们 | p0080 |
-| 长笛、短笛 | 中低音区缺乏光彩和力度，音型要写得比单簧管更短小、活动范围更窄 | p0080–0081 |
-| 双簧管 | 音色鲜明会让背景因素过于突出，给它更简单的音型；但不能省，★ **缺了它和声框架的清晰完整度会下降** | p0081 |
+| Piccolo, flute, clarinet | Virtuosic figures such as rapidly descending staccato arpeggios go to them | p0080 |
+| Flute, piccolo | The middle-low register lacks brilliance and power, so figures should be shorter and cover a narrower range than for clarinet | p0080–0081 |
+| Oboe | Its distinct timbre would make the background too prominent, so give it simpler figures; but it cannot be omitted: ★ **without it, the clarity and completeness of the harmonic framework decline** | p0081 |
 
-配套三条：某些指法音型单独出现尚可演奏，反复出现在快速音型化进行中就变得无法演奏（p0079）；极高音区强力度持续演奏会引起气息与肌肉紧张，快速连续跳进对唇部控制是巨大挑战，乐手常自行更动难句（p0080，例 VII-60）；气息问题靠声部交替解决（见 reference §4.3），★ 交替时若同步改变和声配置与背景音色，这一手就兼作音色手法（p0081–0085，例 VII-62）。
+Three accompanying rules: some fingering figures can be played when they appear alone, but become unplayable when repeated within a rapid figurated progression (p0079); sustained forte playing in the extreme high register causes breath and muscle tension, and rapid successive leaps are a major challenge to lip control, so players often alter difficult passages on their own (p0080, example VII-60); breath problems are solved by rotating parts (see reference §4.3). ★ If the harmonic setting and background timbre change simultaneously during a rotation, the manoeuvre doubles as a timbral device (p0081–0085, example VII-62).
 
-### 5.5 木管与弦乐音型的三种关系（p0085–0089）
+### 5.5 Three Relationships Between Woodwind and String Figures (p0085–0089)
 
-- **完全同型**：音响十分丰满缜密，但适合弦乐的音型未必发挥木管特长，要按乐器性能调整结构。快速十六分音符回转音型对双方都不难，结合后结实有动力；密集和弦式音型木管奏得出，却没有效果，也无从展示力度（p0085，例 VII-66）。
-- **自行其是**：两组各展所长时，可用踏板音（如加弱音器的圆号长音）把不同音型化声部熔铸为一体；某音型若某组奏来既难又伤效果，换摇荡音型做同样的重复（p0087–0088，例 VII-67）。
-- **总体互补**：音高节奏都不重合，只在总的形态及音型性质上保持共同特征，靠各自织体中不同功能的发挥形成互补（p0088–0089，例 VII-68）。
+- **Fully identical figures**: the sound is very full and tight, but figures suited to strings do not necessarily show off woodwind strengths, so the structure must be adjusted to each instrument's capabilities. Rapid sixteenth-note turn figures are equally manageable for both, and sound sturdy and driving when combined; dense chord-type figures are playable on woodwinds but have no effect and offer no way to show dynamics (p0085, example VII-66).
+- **Each going its own way**: when each group displays its own strengths, a pedal note (such as sustained muted horn) can fuse the different figurated parts into one; if a figure is difficult and ineffective on one group, substitute a rocking figure doing the same repetition (p0087–0088, example VII-67).
+- **Overall complementarity**: pitches and rhythms do not coincide at all; only the overall shape and figure character share common features, and complementarity emerges from different functional roles within each texture (p0088–0089, example VII-68).
 
-**用法**：木管音型别照搬弦乐。全用跳音去模仿弦乐既增加难度，又很可能失去木管连音与断音相间所带来的有趣微差（p0149，例 VII-108）。
+**Method**: do not simply copy string figures onto woodwinds. Writing everything in staccato to imitate strings adds difficulty, and is likely to lose the interesting micro-contrast that woodwinds get from alternating legato and detached playing (p0149, example VII-108).
 
-## 6. 分离与融合：两个相反的取向
+## 6. Separation and Fusion: Two Opposing Orientations
 
-### 6.1 对比性复调：把线条剥开
+### 6.1 Contrapuntal Contrast: Peeling the Lines Apart
 
-出发点是尽可能调动一切手段强调各线条之间的相互区分与剥离，音色对比是其中最重要的手法（p0102–0103）。音色对比有三条途径：组内或组间的纯音色对比、混合音色对比、纯音色与各类混合音色的对比（p0103，呼应 SKILL §2）。
+The starting point is to mobilise every available means to emphasise the mutual distinction and separation of the lines, with timbral contrast being the most important technique (p0102–0103). Timbral contrast has three routes: pure timbral contrast within or between groups, blended timbral contrast, and contrast between pure timbres and various blended timbres (p0103, echoing SKILL §2).
 
-辅助手段与判据：
+Auxiliary means and criteria:
 
-- 奏法差异（双簧管连奏、大管与单簧管断奏、长笛断奏加非连奏）、力度差异（双簧管 mf、其余 p）、幅度差异（同度、八度）都用来增加分离度（p0103，例 VII-79，呼应 SKILL §3.5、§3.9）。
-- 某线条从最有特色的高音区进入"中性"的中音区、又与其他线条距离过远时，加一支高八度重复的乐器予以强调；某线条向高音区展衍、担心与主要线条脱节时，加一支低八度重复的乐器把联系拉回来（p0103）。
-- **动机配器原则**（p0105，例 VII-80）：大多数动机应一以贯之用同样的音色配置以获得独特的音色标识；各动机在音区、节奏、旋法、奏法上的区别保证线条个性；需特别强调或容易被掩盖的，用八度重叠加强。
-- **声部倒错**（p0106，例 VII-81）：把一件乐器夹在另一族两个声部之间（长笛夹在两支单簧管之间），外围两声部音区极度分离、力度差别大（mf 与 p）时形成强烈对比，被夹的那件反而分外突出。★ 与 reference §2.4.5 的包围式做法相通但目的相反：那里是为融合，这里是为对比。
-- 木管与弦乐并用时的主次分工（p0107–0108，例 VII-82）：★ **主部主题始终用混合音色**，并可在幅度上展开（同度→八度→双八度）；**其余线条只用独奏纯音色、基本只用一个音组陈述**。线条通常应保持音色单纯性，只有出现局部强调时才让音色组合变复杂。
-- 调色板只有弦乐、木管加圆号，而多条线条音区又相近时（p0113，例 VII-85）：让**没有任何线条在音色配置上相雷同**，并按"音区愈相接近的线条，色彩对比度愈大"分配纯音色与混合音色。
+- Differences in articulation (oboe legato, bassoon against clarinet staccato, flute staccato against non-legato), differences in dynamic (oboe mf, the rest p), and differences in interval (unison, octave) are all used to increase separation (p0103, example VII-79, echoing SKILL §3.5 and §3.9).
+- When a line moves from a highly characteristic upper register into a "neutral" middle register and sits too far from the other lines, add an instrument doubling it an octave higher to emphasise it; when a line extends into the upper register and risks losing contact with the main lines, add an instrument doubling it an octave lower to pull the connection back (p0103).
+- **The motivic orchestration principle** (p0105, example VII-80): most motifs should consistently use the same timbral setting to acquire a distinctive timbral identity; differences in register, rhythm, melodic contour, and articulation among the motifs secure the individuality of each line; anything that needs special emphasis or is easily masked is reinforced with octave doubling.
+- **Inverted voice placement** (p0106, example VII-81): placing one instrument between two parts from another family (flute between two clarinets), with the outer two parts far apart in register and different in dynamic (mf against p), produces strong contrast, and the enclosed instrument stands out all the more. ★ This is related to the surrounding technique in reference §2.4.5, but its aim is opposite: there it serves fusion, here it serves contrast.
+- Division of primary and secondary roles when woodwinds and strings are used together (p0107–0108, example VII-82): ★ **the principal theme is always in blended timbre**, and may expand in dynamic (unison → octave → double octave); **the remaining lines use only solo pure timbres and basically state their material within one register group.** Lines should generally keep their timbre simple, becoming complex only when a local emphasis calls for it.
+- When the palette is only strings and woodwinds with horns, and several lines sit in similar registers (p0113, example VII-85): ensure that **no two lines share the same timbral setting**, and assign pure and blended timbres according to the principle that "the closer the registers of two lines, the greater the colour contrast between them."
 
-### 6.2 模仿性复调
+### 6.2 Imitative Polyphony
 
-木管在色调均匀统一上不如弦乐，在音响的鲜明及多彩上独擅胜场，因此特别适合强调声部对比，尤其是模仿性复调（p0114）。可用的手段：
+Woodwinds are inferior to strings in even, unified colour, but excel in vivid and multicoloured sonority, so they are especially suited to emphasising part contrast, particularly in imitative polyphony (p0114). Means available:
 
-- 落在不利音区的那次主题进入，用 a2 齐奏加强（p0116，例 VII-88），或按 §3.2 第 3 条作局部逆序。
-- 相邻陈述若用同类乐器叠加且音区相距不远，音色反差柔和；改用不同乐器组直接对置则强烈得多（p0116–0117）。
-- ★ **高反差的音色切割**：用强烈的对比色把主题相邻的、尤其音区毗邻的各次进入切开，得到"剪影"式反差（p0117–0119，例 VII-89、VII-90）。作者的判断是，不用这种切割很难把复杂的声部关系交代清楚。
-- 收尾那次陈述换乐器时要掂量它的音色有没有"总结性"意味：例中若交给大管会缺乏总结感，还会让随后的大管音色失去新鲜，因此改用圆号独奏（p0116）。
+- For an entry of the theme that falls in an unfavourable register, reinforce it with a2 unison (p0116, example VII-88), or apply a partial inversion as in §3.2, point 3.
+- If adjacent statements are doubled by the same type of instrument and their registers are not far apart, the timbral contrast is soft; switching to a different instrument group for direct alternation is much stronger (p0116–0117).
+- ★ **Sharp-contrast timbral cutting**: use strongly contrasting colours to separate the entries next to one another in the theme, especially those whose registers are adjacent, producing a "silhouette"-style contrast (p0117–0119, examples VII-89, VII-90). The author's judgement is that without such cutting, complex part relationships are hard to make clear.
+- When changing instrument for the closing statement, weigh whether its timbre carries a "summarising" quality: in the example, giving it to the bassoon would lack a sense of conclusion and would also dull the bassoon's timbre in what follows, so a solo horn is used instead (p0116).
 
-### 6.3 反向：把对比压到最低
+### 6.3 The Reverse: Reducing Contrast to a Minimum
 
-当线条在狭窄空间里高密度聚集时，复调的本性会被扭曲、向同质性的音束转化；★ 此时配器的出发点是**尽量用同组甚至同类音色的结合，把层次间的对比与清晰度压低到最低限度**，与通常追求色调分离的原则正相反（p0125，例 VII-94）。代价是声部的可辨识度与独立性。
+When lines cluster densely in a narrow space, the nature of polyphony is distorted and turns toward a homogeneous sound-mass; ★ at this point the orchestrator's starting point is to **combine as far as possible within one group or even one type of timbre, reducing contrast and clarity between layers to a minimum**, the exact opposite of the usual principle of pursuing colour separation (p0125, example VII-94). The cost is the recognisability and independence of the parts.
 
-两种做法：各声部在音区、力度、奏法乃至线条形态上都彼此相似，只靠复杂节奏维持"对位"的名义，使双簧管与单簧管的区别几乎无从分辨（p0126，例 VII-95）；各声部以半音音程、相隔半拍依次进入并在特定节点一刀齐切，听感上变成"一个音量不断增长、体积急剧膨胀的音束"（p0127，例 VII-96）。作者对代价的原话是"复调的灵魂，各声部线条独立不羁的发展，几已荡然无存"。
+Two methods: each part is similar to the others in register, dynamic, articulation, and even line shape, so that the name of "counterpoint" is maintained only by complex rhythm, leaving the difference between oboe and clarinet nearly impossible to distinguish (p0126, example VII-95); or each part enters successively at semitone intervals, half a beat apart, and at a specific point all are cut off together, so that to the ear it becomes "a sound-mass whose volume keeps growing and swells sharply" (p0127, example VII-96). The author's own words on the cost are that "the soul of polyphony, the free development of independent lines, has nearly vanished."
 
-### 6.4 段落级的色调走向
+### 6.4 Colour Direction at the Level of the Passage
 
-主调织体最根本的原则仍是让不同层次的色调尽可能分离以取得清晰性，最简单的做法是把旋律、和声伴奏、节奏背景分交不同乐器组（p0128，例 VII-97，见 reference §3）。在这之上有四条段落级的走向：
+The most basic principle of homophonic texture is still to separate the different layers' colours as much as possible in order to achieve clarity; the simplest method is to assign melody, harmonic accompaniment, and rhythmic background to different instrument groups (p0128, example VII-97, see reference §3). On top of this there are four passage-level directions:
 
-| 走向 | 做法 | 页 / 谱例 |
+| Direction | Method | Page / example |
 |---|---|---|
-| 先分后合 | 按木管（加定音鼓）→弦乐→弦乐加木管的顺序叠加，配合线条由高到低与渐强，从清朗走向浑厚阴暗 | p0124–0125，例 VII-93 |
-| 先分后融 | 开场各因素用鲜明对比的音色分置，随后让主要旋律逐渐与其他声部完全叠合，色差减小、归于均匀 | p0130–0131，例 VII-98 |
-| 统一基调加异色勾勒 | 所有因素用同类音色构成均匀柔和的基调，只用某种"异类"音色勾勒最重要的声部 | p0132，例 VII-100 |
-| 基调渐次转换 | 先由一组乐器定基调、各因素用纯音色区分，中途用另一组加强某个关键声部染上新色，再让主旋律自然接替给另一件乐器，整体性格由暗淡转向清朗 | p0135，例 VII-101（见 SKILL §3.6） |
+| Separate first, then combine | Layer in the order woodwinds (with timpani) → strings → strings with woodwinds, with lines and crescendo proceeding from high to low, moving from clear and bright to full and dark | p0124–0125, example VII-93 |
+| Separate first, then fuse | At the opening, the elements are placed in sharply contrasting timbres; the main melody then gradually merges completely with the other parts, colour differences diminish, and the texture becomes even | p0130–0131, example VII-98 |
+| Unified ground with coloured outline | All elements form an even, soft ground in the same type of timbre; only one "alien" timbre is used to outline the most important part | p0132, example VII-100 |
+| Gradual transition of ground | First one group sets the ground, with elements distinguished by pure timbres; midway, another group reinforces a key part with new colour; then the main melody passes naturally to another instrument, and the overall character shifts from dull to bright | p0135, example VII-101 (see SKILL §3.6) |
 
-两条相反的原则（强调色块分离、追求音响均匀）可以在同一段落内交替使用，★ 但配器处理方式的每次变化都须与音乐形象的转换配合得天衣无缝（p0136–0137，例 VII-102，与 SKILL §1.1 对照）。
+The two opposing principles (emphasising separation of colour blocks versus pursuing even sonority) can alternate within the same passage. ★ However, every change in orchestral treatment must be coordinated seamlessly with the transformation of the musical image (p0136–0137, example VII-102, compare SKILL §1.1).
 
-极端一侧：20 世纪不少作曲家出于对结构清晰性的追求，较少甚至完全拒绝混合音色，把色调分离推到底；在因素繁多、要形成"音响绣幔"效果的复杂织体中，这种以纯音色为主导的手法甚至是必需的（p0131，例 VII-99）。同处还有一条少见做法：和声性因素也可以不用稳定贯通的色彩，而在各乐器声部之间不断游移传递，不作任何同度重复（p0131–0132）。
+At the extreme: many twentieth-century composers, pursuing structural clarity, used blended timbres sparingly or rejected them altogether, pushing colour separation to its limit; in complex textures with many elements aimed at a "sound tapestry" effect, this technique dominated by pure timbres is even necessary (p0131, example VII-99). A rarer practice also exists here: harmonic elements need not use a stable, continuous colour, but can keep shifting and passing between instrumental parts without any unison repetition (p0131–0132).
 
-### 6.5 点描型织体
+### 6.5 Pointillistic Texture
 
-木管的自然音源多样、各件不同音域间音区特色差异明显，天然适合以色调跳跃为根本特征的点描型织体；但在演奏技术的多样性与音响畸变的可能性上略逊于弦乐组，★ 因此长时间只用木管独挡点描织体未必有利，与其他组对置结合时才更显魅力（p0137，例 VII-103）。常见写法是在很宽的力度范围（如 pppp–mf）内频繁变化力度，配合音区的大幅跳动与奏法的细腻差别。
+The woodwinds' natural sound sources are varied, and the register characters differ markedly across instruments' ranges, so they are naturally suited to pointillistic texture, whose essential feature is colour leaping; but they are slightly inferior to the string group in the variety of playing techniques and in the possibility of distorted sound. ★ Therefore, using woodwinds alone for a pointillistic texture over a long period is not necessarily advantageous; it becomes more appealing when set against other groups (p0137, example VII-103). A common approach is to change dynamics frequently over a very wide range (such as pppp–mf), combined with large register leaps and fine differences in articulation.
 
-两种相反的处理并存。要**鲜明分离**：各相邻音在音色、力度、时值、奏法上几乎无一雷同，这些参数划一时靠音区拉开，并大量用休止加剧对比（p0141，例 VII-104）。要**貌似点描而实为一体**：同一音色的乐器在邻近音区接续同一线条的相邻音，力度级对比收窄到很窄的区间（如 p–ppp）且允许连用同一力度级，奏法上大量用泛音（p0142，例 VII-105）。音色原料被有意收窄时（如木管只用 3 支长笛），对比更多靠音区、力度、奏法及节奏错位制造（p0143）。
+Two opposite treatments coexist. To **separate sharply**: adjacent notes should be almost entirely distinct in timbre, dynamic, duration, and articulation; when these parameters are uniform, separation is achieved through register, and rests are used heavily to intensify contrast (p0141, example VII-104). To **appear pointillistic while actually being one body**: instruments of the same timbre continue adjacent notes of the same line in neighbouring registers, with dynamic contrast narrowed to a very small range (such as p–ppp), consecutive use of the same dynamic level is permitted, and harmonics are used extensively in playing (p0142, example VII-105). When the timbral material is deliberately narrowed (for instance, woodwinds using only three flutes), contrast is created more through register, dynamic, articulation, and rhythmic displacement (p0143).
 
-## 7. 派生声部与变化叠合
+## 7. Derived Parts and Varied Superimposition
 
-叠合三类与变化叠合五型见 SKILL §3.7（例 VII-109、VII-110）。本章补的是做法与失败条件。
+For the three classes of superimposition and the five types of varied superimposition, see SKILL §3.7 (examples VII-109, VII-110). This chapter adds methods and failure conditions.
 
-### 7.1 派生线条
+### 7.1 Derived Lines
 
-分部写作织体中，从骨架声部派生的木管新声部有两类（p0145–0146，例 VII-106）：一类只是骨架某个环节的原样重复（同度或八度，可局部简化或自由八度移位）；另一类由若干骨架声部的截段拼接而成，更具独立意义。后者不改变音乐的基本性质，却能提升织体的复调化程度、丰富色彩与声部进行的灵活性。更进一步是让派生声部自始至终与骨架线条扭缠、时分时合，不断改变线条间的音色组合关系（p0147，例 VII-107）。
+In divided-part texture, there are two classes of new woodwind parts derived from skeleton parts (p0145–0146, example VII-106): one is simply an unchanged repetition of one link in the skeleton (in unison or octaves, possibly locally simplified or freely shifted by octaves); the other is assembled from segments of several skeleton parts and has more independent significance. The latter does not change the basic character of the music, but raises the polyphonic density of the texture, enriches colour, and increases the flexibility of part motion. A further step is to have the derived part twist and intertwine with the skeleton line throughout, sometimes joining and sometimes separating, constantly changing the timbral combination relationship between the lines (p0147, example VII-107).
 
-★ **同质异构**（p0148–0149，例 VII-108）：木管派生线条从同一个弦乐声部里依次轮流取音，按不同顺序重排组成新的旋律线。这样既最大程度节约材料，又避开了把木管与弦乐各声部逐一同度完全重复所导致的音响沉滞、缺乏光彩及个性。
+★ **Homogeneous variation** (p0148–0149, example VII-108): a derived woodwind line takes its notes in turn from the same string part, rearranged in different orders to form a new melodic line. This both saves material to the greatest extent and avoids the sonic stagnation, lack of brilliance, and loss of individuality that result from duplicating each string part note-for-note in unison with the woodwinds.
 
-### 7.2 简化变体
+### 7.2 Simplified Variants
 
-- 浪漫主义时期为形态复杂的音型化织体做踏板作用的持续和声层，通常处理为各音型化声部的简化变体，并用不同类的音色把两层区分开（p0154，例 VII-113）。低音线条可由三种形态的层次合成（动力层、重量层、强调层），各类乐器发挥自身特性互补；声部划一写法做不到这种表现力。
-- ★ **力度要降一级**（p0155，例 VII-114）：与动态性声部轮廓一致但大幅简化的稳态和声层，常用对比性音色（木管、圆号）构成以求丰满集中；简化变体的力度标低动态性声部一级，否则整体音响偏于厚重。
-- 两条细做法：声部力度变化的转折点可与叠合声部某个音的撤出精确对位，如渐强的最高点正是某叠合音撤出的时刻（p0152，例 VII-110）；用更高更亮的木管以双八度简化叠合跟随快速弦乐音流，木管连奏的稳定音响增强音势与张力，最高层的短笛加亮度，两个音色层在音区上拉开距离（p0152–0153，例 VII-111）。
-- 叠合各声部可按各自技术性能写成简繁不一的形态，以降低个别乐器的演奏难度（p0153，例 VII-112）。
+- In the Romantic period, the sustained harmonic layer that serves as a pedal beneath a figurated texture of complex shape is usually treated as a simplified variant of each figurated part, with different types of timbre used to distinguish the two layers (p0154, example VII-113). The bass line can be synthesised from three layers of differing shape (a dynamic layer, a weight layer, and an emphasis layer), with each instrument type contributing complementary qualities; a uniform part-writing approach cannot achieve this expressiveness.
+- ★ **The dynamic must be lowered by one level** (p0155, example VII-114): a steady harmonic layer that matches the dynamic part's outline but is greatly simplified is often built with contrasting timbres (woodwinds, horns) to achieve fullness and concentration; the simplified variant's dynamic is marked one level below the dynamic part, otherwise the overall sound becomes heavy.
+- Two finer methods: the turning point in a part's dynamic change can be precisely aligned with the withdrawal of a particular note from the superimposed part, such as the highest point of a crescendo being exactly the moment one superimposed note drops out (p0152, example VII-110); and higher, brighter woodwinds, in double octaves, simplify the superimposition to follow the fast string stream, with the sustained sound of legato woodwinds heightening the sense of momentum and tension, while the highest layer's piccolo adds brightness, the two timbral layers separated in register (p0152–0153, example VII-111).
+- Superimposed parts may be written in shapes of varying complexity according to each one's technical capabilities, to reduce the playing difficulty for individual instruments (p0153, example VII-112).
 
-### 7.3 装饰变体
+### 7.3 Ornamental Variants
 
-基本声部及其装饰变体的叠合在各类变化叠合中使用率最高；两者不仅节奏不同，通常也应在音色上形成对比（p0155）。
+The superimposition of basic parts and their ornamental variants is the most frequently used form among all varied superimpositions; the two not only differ in rhythm but should usually also contrast in timbre (p0155).
 
-- 写法与随之而来的麻烦（p0155，例 VII-115、VII-116）：以骨架声部为原型加入助音、倚音、经过音构成更复杂的新旋律线；外音会在结合处造成不协和摩擦，★ **用对比性音色去冲淡这种碰撞的尖锐程度，是配器的"古典原则"**。
-- 冲突也可以变成收益（p0161–0162，例 VII-120）：装饰变体的倚音与骨架中的解决音同时出现，每拍首音形成小二度直接冲突，但由于音色上的鲜明反差，摩擦不觉刺耳，反倒增添神秘魅力。**前提是音色反差足够鲜明**，这一条不普适。
-- 多层同时装饰（p0160–0161，例 VII-119）：旋律层、低音层、和声伴奏层可同时各用一种性质的装饰变体（旋律性、节奏性、和声性），各骨架与其变体大多用对比音色；★ 若某一层被迫用同类音色，靠音区位置分离仍能保持层次鲜明。
-- 任何织体因素都可以用和声性变体来装饰，即在骨架的主干音上加入旋律和声内涵所暗示的填充声部（p0159–0160，例 VII-118）。
-- ★ 通例与例外并排（p0163–0165，例 VII-121）：无论骨架与装饰变体在音色、音区、节奏、形态上反差多大，二者总在声部进行的趋向上如影随形，这几乎已成通例；勃拉姆斯《第四交响曲》II 让装饰变体演化为方向相反、由高及低大幅下落的独立线条，造成"乍听之下与骨架声部毫不相干"的独立结构错觉，作者称其十分独到，意即这是有意背离通例的非常规操作。
+- The method and the trouble it brings (p0155, examples VII-115, VII-116): using the skeleton part as a prototype, add auxiliary, appoggiatura, and passing notes to form a more complex new melodic line; the added notes cause dissonant friction at the points of combination, and ★ **using contrasting timbres to dilute the sharpness of this collision is the "classical principle" of orchestration**.
+- Conflict can also become gain (p0161–0162, example VII-120): an appoggiatura in the ornamental variant sounds at the same moment as the resolution note in the skeleton, so that on each beat the first notes form a direct minor-second clash; but because of the striking timbral contrast, the friction is not perceived as harsh and instead adds a mysterious charm. **The precondition is that the timbral contrast be sufficiently sharp**; this rule is not universal.
+- Multi-layer simultaneous ornamentation (p0160–0161, example VII-119): the melodic layer, bass layer, and harmonic accompaniment layer may each use an ornamental variant of a different nature (melodic, rhythmic, harmonic) at once; each skeleton and its variant mostly use contrasting timbres. ★ If one layer is forced to use the same type of timbre, clear layering can still be maintained by separation in register position.
+- Any textural element can be ornamented with a harmonic variant, that is, by adding filler parts to the main notes of the skeleton, implied by the harmonic content of the melody (p0159–0160, example VII-118).
+- ★ General rule and exception side by side (p0163–0165, example VII-121): however greatly the skeleton and its ornamental variant differ in timbre, register, rhythm, and shape, the two almost always follow each other in the direction of part motion, which is nearly a universal rule; in the second movement of Brahms's *Fourth Symphony*, the ornamental variant evolves into an independent line falling sharply from high to low in the opposite direction, creating the illusion of an independent structure that "at first hearing seems entirely unrelated to the skeleton parts"; the author calls it highly distinctive, meaning this is an unconventional operation that deliberately departs from the general rule.
 
-### 7.4 为什么 20 世纪还留着这套手法
+### 7.4 Why Twentieth-Century Music Kept This Set of Techniques
 
-★ 变化叠合给基本上排斥混合音色的许多 20 世纪作曲家提供了一条出路：既在一定限度内利用不同音色的结合，又让相互重叠的声部不至于完全丧失各自的个性（p0165–0167）。例 VII-122 里，长笛与小提琴同度重叠但一个弹吐震音、一个拨奏，动态特性的对比使它们不可能真正融为一体。这正是 SKILL §3.5「演奏法决定融合度」的反向用法：**用奏法差异阻止融合**。例 VII-123 另演示把它用于推进，依次加密装饰变体（六连音到八连音）并让音型自身的和声变得极度不协和，配合渐强、声部渐增与音区扩展把紧张度推向高潮。
+★ Varied superimposition offered a way out for many twentieth-century composers who largely rejected blended timbre: it allows the combination of different timbres within certain limits, while keeping superimposed parts from losing their individuality entirely (p0165–0167). In example VII-122, flute and violin double each other in unison, but one plays a tongued trill and the other pizzicato; the contrast in dynamic character makes it impossible for them to truly fuse. This is the reverse use of SKILL §3.5, "playing technique determines degree of fusion": **use differences in playing technique to prevent fusion**. Example VII-123 further demonstrates using the method to drive momentum: the ornamental variants are progressively densified (from sextuplets to octuplets) and the harmony of the figures becomes extremely dissonant, with crescendo, growing part numbers, and register expansion pushing tension toward a climax.
 
-## 8. 编制的选择与时期风格
+## 8. Choosing the Lineup and Period Style
 
-### 8.1 四类编制及其取舍
+### 8.1 Four Types of Lineup and Their Trade-offs
 
-双管与三管编制见 reference §2.4（三管的弹性原则是每声种至少两支原型加一支变型，必要时增减或改用清一色原型）。另外三类：
+For double and triple woodwind lineups, see reference §2.4 (the flexible principle for triple lineups is at least two prototypes plus one variant per voice type, with players added or removed, or prototypes only, as needed). Three other types:
 
-| 类型 | 形态 | 用在什么意图上 | 页 |
+| Type | Form | Intended use | Page |
 |---|---|---|---|
-| 四管、五管以上 | 后期浪漫派至早期斯特拉文斯基的鸿篇巨制，1920–1960 年代一度冷落，此后在先锋派与"新浪漫主义"中复苏 | ★ 当代扩充木管编制的着眼点已从"宏大音响"转向音色的细腻变幻，在复杂织体中求更多同类纯音色的可能 | p0041 |
-| 室内化 | 三种方式：保留乐器组形式但数目锐减（完整单管制、扩充单管制、或省略某些声种）；打破传统框架按创作意图重新分组；取消"乐器组"观念，把各类乐器混编作单个色彩因素 | 无一定规范，由表现意图决定 | p0041–0042 |
-| 复合型 | 两个以上木管组并置对比，可都属正规编制，也可规模不同（如乐队 I 为完整双管制加短笛，乐队 II 为省略长笛类的单管编制） | 要的是组与组之间的对置 | p0042 |
+| Four, five, or more players per type | Grand works from the late Romantic period to early Stravinsky, neglected in the 1920s–1960s and revived afterward in the avant-garde and "neo-Romanticism" | ★ Contemporary expansion of woodwind lineups focuses no longer on "grand sound" but on the subtle variation of timbre, seeking more possibilities for pure timbres of the same type within complex textures | p0041 |
+| Chamberised | Three approaches: keep the instrument-group format but cut the numbers sharply (full single-player lineup, expanded single-player lineup, or omit certain voice types); break the traditional framework and regroup according to the creative intent; abolish the concept of "instrument groups" and mix all types of instrument into a single colour element | No fixed norm; determined by expressive intent | p0041–0042 |
+| Compound | Two or more woodwind groups juxtaposed in contrast; both may be standard lineups, or they may differ in size (such as Orchestra I as a full double lineup plus piccolo, Orchestra II as a single-player lineup omitting the flute family) | The goal is alternation between groups | p0042 |
 
-### 8.2 时期风格作为配置预设
+### 8.2 Period Style as a Preset Configuration
 
-选定一种时期风格等于选定了一组默认配置。这张表按"该时期的木管写法默认是什么"来读：
+Choosing a period style is equivalent to choosing a set of default configurations. This table is read by asking "what is the default for woodwind writing in that period":
 
-| 时期 | 默认配置 | 页 |
+| Period | Default configuration | Page |
 |---|---|---|
-| 古典 | 木管地位高于铜管打击但仍屈居弦乐之下：长笛几乎总在高音部（与小提琴同度或高八度），双簧管与旋律成平行三度六度或构成和声层，大管多作低音强调、间或以"男高音"音色重复上方旋律。海顿晚期起出现无弦乐支持的纯木管片段，并废弃"木管一旦投入必须奏到织体变换"的教条 | p0169 |
-| 浪漫 | 双管编制确立；单簧管自贝多芬《第一交响曲》成为正式成员，短笛与低音大管同期进入交响乐队，低音单簧管是最晚划入标准编制的一件。写法突破：单簧管低音区的魅力、大管高音区的表现力、快速单双三吐、滑奏 | p0171–0173 |
-| 瓦格纳 | 三管编制原则的创立者，也是力图用相同音色或"直系"亲缘音色来强调完整和声结构的第一人 | p0173 |
-| 后期浪漫与印象主义 | 前者：弹吐震音、滑奏、混合音色合成、音色的横向"转调"、复杂的线条化织体，编制膨胀到 16–18 支。后者以木管为核心，偏爱透明纯净、多用纯音色，很少用浪漫派那种多重同度八度重叠的"色彩厚涂"，喜欢中音区的柔和发音并发掘低音区（见 SKILL §2） | p0174–0176 |
-| 表现主义 | 编制重新变得灵活（威伯恩偏好由不同独奏乐器组成的单管编制）。音响异化的手段：扩展到极高音区（与印象派偏嗜低音区相反）、高音木管低吟与低音木管嘶吼的角色反串、音区频繁跳跃与力度急剧变化。★ 威伯恩很少用不同木管音色的同度或八度重叠，难得让多于 2–3 支乐器同时演奏 | p0177 |
-| 斯特拉文斯基 | 织体回到古典式的简单明了；喜欢纯净原始音色远甚于混合，废弃弹吐、滑奏、泛音等特殊技术。大胆启用两极音区，常得生硬干冷甚至怪诞的色调；纵向排列常用极特殊的逆序（见 SKILL §6） | p0178 |
-| 先锋与当代 | 50 年代后靠不定型的"弹性编制原则"追求新音色；60 年代前后以微分音与复音奏法为核心的试验彻底废弃传统混合音色写法。★ 70 年代后期以来的取向是把特殊奏法从音响游戏转为音乐表现中的有机组成部分 | p0181 |
+| Classical | Woodwinds rank above brass and percussion but remain subordinate to strings: flute almost always sits in the high register (in unison or an octave above the violins); oboe moves in parallel thirds or sixths with the melody or forms a harmonic layer; bassoon mostly emphasises the bass and occasionally repeats the upper melody in a "tenor" timbre. From late Haydn onward, passages of pure woodwinds without string support appear, abandoning the dogma that "once woodwinds are introduced, they must be carried through texture changes" | p0169 |
+| Romantic | The double woodwind lineup is established; the clarinet becomes a regular member from Beethoven's *First Symphony*; piccolo and contrabassoon enter the symphony orchestra in the same period; bass clarinet is the last to be admitted to the standard lineup. Writing breakthroughs: the charm of the clarinet's low register, the expressiveness of the bassoon's high register, rapid single, double, and triple tonguing, and glissandi | p0171–0173 |
+| Wagner | Founder of the principle of triple lineups, and also the first to seek to emphasise a complete harmonic structure by using identical timbres or timbres of "direct" kinship | p0173 |
+| Late Romantic and Impressionist | The former: tongued trills, glissandi, blended-timbre synthesis, horizontal "modulation" of timbre, and complex linear textures, with lineups swelling to 16–18 players. The latter centres on the woodwinds, favouring transparency and purity and using mostly pure timbres; they rarely use the Romantic "thick colour layering" of multiple unisons and octaves, prefer the soft sound of the middle register, and explore the low register (see SKILL §2) | p0174–0176 |
+| Expressionism | Lineups become flexible again (Webern favoured single-player lineups made up of different solo instruments). Means of sonic alienation: extension into the extreme high register (the opposite of Impressionism's preference for the low register), role reversal between high woodwinds growling low and low woodwinds shrieking, and frequent register leaps with abrupt dynamic changes. ★ Webern rarely used unisons or octaves across different woodwind timbres, and seldom had more than two or three instruments playing at once | p0177 |
+| Stravinsky | Texture returns to classical simplicity and clarity; he preferred pure, primitive timbres far more than blends, abandoning special techniques such as tonguing, glissando, and harmonics. He boldly used the extreme registers, often producing a harsh, dry, even grotesque tone colour; vertical arrangements often use highly unusual inversions (see SKILL §6) | p0178 |
+| Avant-garde and contemporary | After the 1950s, the pursuit of new timbres relied on an indeterminate "flexible lineup principle"; around the 1960s, experiments centred on microtones and polyphonic playing thoroughly abandoned traditional blended-timbre writing. ★ Since the late 1970s, the direction has been to turn special techniques from sonic games into organic components of musical expression | p0181 |
 
-一条影响读谱与改编的事实（p0169）：古典时期弦乐组规模远小于当代（至多 20 多人），而木管组按惯例常用数量加倍的乐器演奏总谱声部，因此不应拿当代乐队的音响比例去衡量那个时期的平衡。同期还有一条具体手法：大管及长笛与小提琴先后以八度演奏的旋律，可在某些小节"分道扬镳"，以避开木管在该音区的不良发音（p0169，例 VII-124、VII-125）。
+One fact that affects score reading and arrangement (p0169): in the Classical period the string group was much smaller than today's (at most twenty-odd players), while the woodwind group conventionally doubled its numbers to play the score's parts, so the balance of that period should not be measured against the sonic proportions of a modern orchestra. A concrete technique from the same period: melodies played by bassoon and flute in octaves with the violins may, in certain bars, "part ways," so as to avoid the poor sound of the woodwinds in that register (p0169, examples VII-124, VII-125).
 
-**编曲含义**：先选风格，按这张表拿默认配置，再只在有理由的地方偏离。偏离本身就是风格信息。
+**Arranging implication**: choose the style first, take the default configuration from this table, and deviate only where there is good reason. The deviation itself is stylistic information.

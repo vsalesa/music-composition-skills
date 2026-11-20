@@ -1,309 +1,304 @@
 ---
 name: mc-style-cinematic
-description: Cinematic and hybrid orchestral music as a style layer (影视管弦与 hybrid 风格层) - the library's landing point for what "film grade" actually means. The three colour-configuration principles (pure-timbre layering, juxtaposition, and the mixed use of both), unison-that-is-not-unison and rhythmic heterophony as tension devices, why cinematic harmony is often non-functional and what replaces function, the orchestral-plus-electronic hybrid stack, the difference between scoring to picture and writing a song, and the transfer table. Use when writing orchestral or hybrid cues, when a track needs scale rather than volume, when an orchestral mockup sounds fake, or when borrowing cinematic devices into song-form music. 影视配乐、管弦、hybrid、氛围、电影级、trailer、齐奏不齐。
+description: Cinematic and hybrid orchestral music as a style layer - the library's landing point for what "film grade" actually means. The three color-configuration principles (pure-timbre layering, juxtaposition, and the mixed use of both), unison-that-is-not-unison and rhythmic heterophony as tension devices, why cinematic harmony is often non-functional and what replaces function, the orchestral-plus-electronic hybrid stack, the difference between scoring to picture and writing a song, and the transfer table. Use when writing orchestral or hybrid cues, when a track needs scale rather than volume, when an orchestral mockup sounds fake, or when borrowing cinematic devices into song-form music. Keywords: film score, cinematic, orchestral, hybrid, atmosphere, trailer, unison that is not unison.
 ---
 
-# 影视管弦与 hybrid 风格层（Cinematic）
+# Cinematic and Hybrid Orchestral Layer (Cinematic)
 
-**本库把这个 skill 定为"★『电影级』的落点"。**
-所以先把"电影级"这个词说清楚：
+**This library defines this skill as "the landing point of 'cinematic.'"**
+So first pin down what the word means:
 
-> **它不是"更响、更厚、更多弦乐"。**
-> **它是：同一时刻有多个层次各自成立，且它们的关系是被设计过的。**
+> **It is not "louder, thicker, more strings."**
+> **It is: several layers each holding up at the same moment, and the relationships between them are designed.**
 
-★ 一个反例：把弦乐 pad 推满 + 加铜管 + 加打击 = **响**，不是**电影级**。
-真正的差别在 §3 那三条配置原则。
+★ A counterexample: push a string pad to the max, add brass, add percussion = **loud**, not **cinematic**.
+The real difference lies in the three configuration principles of §3.
 
-## 按任务读哪几节
+## Which sections to read by task
 
-| 任务 | 读 |
+| Task | Read |
 |---|---|
-| **判断这些手法能不能搬走** | ★ §2 移植表 |
-| **"电影级"到底要做什么** | ★ §3 三条配置原则 |
-| 齐奏听起来死板 | ★ §4 齐奏不齐 |
-| 和声推不动 | §5（★ **这里的和声常常是非功能的**） |
-| 管弦 + 电子怎么叠 | §6 hybrid |
-| 配画面 vs 写歌 | ★ §7 |
-| 管弦 mockup 听着假 | §8 |
+| **Judge whether these techniques can be carried over** | ★ §2 transfer table |
+| **What "cinematic" actually requires** | ★ §3 three configuration principles |
+| Unison sounds rigid | ★ §4 unison that is not unison |
+| Harmony won't drive | §5 (★ **the harmony here is often non-functional**) |
+| How to stack orchestra + electronics | §6 hybrid |
+| Scoring to picture vs. writing a song | ★ §7 |
+| Orchestral mockup sounds fake | §8 |
 
-## 边界
+## Boundaries
 
-| 不归这里 | 归哪 |
+| Not covered here | Where it goes |
 |---|---|
-| 乐器法、音域、演奏法 | `mc-orchestration`（★ **本 skill 假设你已经读过它**） |
-| 混合音色的机理（中和、染色、透出三条件） | `mc-orchestration` §3 |
-| 对位与多线叙事的技术 | `mc-counterpoint`（★ **双线叙事是这个风格的核心之一**） |
-| 频段预算 | `mc-texture-layering` |
-| MIDI CC 的配器含义 | `mc-orchestration` [reference.md](../mc-orchestration/reference.md) §5.1 |
-| 采样库产品选型、keyswitch | 不归本包（用哪家音源由制作环境定） |
-| **跟画面走的结构、spotting、cue sheet** | ★ **配乐**（为画面写音乐）的事，不归本包。见 §7 |
-| 音效、拟音、空间设计 | **声音**（音效、拟音）的事 |
-
----
-
-## 1. 动笔前必填
-
-| 必填 | 问法 |
-|---|---|
-| **① 纯管弦还是 hybrid** | ★ 决定整个叠法（§6） |
-| **② 这段音乐在为什么服务** | 画面？情绪？还是它自己就是主体？（§7） |
-| **③ 规模从哪来** | ★ **不是从音量来**。是从音区跨度、层数、还是节奏密度？ |
-| **④ 三条配置原则用哪条** | ★ §3。**这是本 skill 的核心决策** |
+| Instrument techniques, ranges, playing techniques | `mc-orchestration` (★ **this skill assumes you have already read it**) |
+| The mechanics of mixed timbres (neutralization, coloring, emergence conditions) | `mc-orchestration` §3 |
+| Counterpoint and multi-line narrative techniques | `mc-counterpoint` (★ **two-line narrative is one of the core features of this style**) |
+| Frequency budget | `mc-texture-layering` |
+| The orchestration meaning of MIDI CC | `mc-orchestration` [reference.md](../mc-orchestration/reference.md) §5.1 |
+| Sample-library product choice, keyswitches | Not in this package (which library to use is decided by the production environment) |
+| **Structure driven by picture, spotting, cue sheets** | ★ **Scoring** (writing music for picture), which is not in this package. See §7 |
+| Sound effects, foley, spatial design | **Sound** work (sound effects, foley) |
 
 ---
 
-## 2. ★ 移植表
+## 1. Required before starting
 
-| 手法 | 可搬进流行吗 | 说明 |
+| Required | Question |
+|---|---|
+| **① Pure orchestra or hybrid** | ★ Decides the entire layering approach (§6) |
+| **② What this music serves** | The picture? An emotion? Or is it itself the subject? (§7) |
+| **③ Where the scale comes from** | ★ **Not from volume**. From the span of the register, the number of layers, or the density of rhythm? |
+| **④ Which of the three configuration principles** | ★ §3. **This is the core decision of this skill** |
+
+---
+
+## 2. ★ Transfer table
+
+| Technique | Can it carry over to pop? | Notes |
 |---|---|---|
-| **纯音色层 / 混合音色层的分层思维** | ✅ ★ **可搬，而且该搬** | 它就是 `mc-texture-layering` §2 深度三层的管弦版本 |
-| **齐奏不齐 / 节奏异化** | ✅ ★ **可搬，极有效** | §4。在流行里它表现为"同一条线多件乐器微错开" |
-| **非功能和声**（平行三和弦、调式色彩） | ⚠️ **半搬** | 一进流行就是"电影感"标记 |
-| **大规模渐强（铜管叠入）** | ⚠️ 半搬 | 强标记，且极易变成 trailer 味 |
-| **弦乐群的分部写作** | ✅ 可搬 | 但流行里通常只用到两三个分部 |
-| **打击乐的规模堆积** | ⚠️ 半搬 | ★ epic trailer 的默认动作，生成模型最爱给 |
-| **双线叙事（对比复调）** | ✅ ★ **可搬** | → `mc-counterpoint` §2 |
-| **"跟画面走"的结构** | ❌ **不可搬** | 它需要画面。歌没有画面（§7） |
+| **Layered thinking: pure-timbre layers / mixed-timbre layers** | ✅ ★ **Transferable, and it should be** | It is the orchestral version of the three-depth layering in `mc-texture-layering` §2 |
+| **Unison that is not unison / rhythmic variation** | ✅ ★ **Transferable, extremely effective** | §4. In pop it appears as "one line, several instruments slightly offset in time" |
+| **Non-functional harmony** (parallel triads, modal color) | ⚠️ **Partially transferable** | Once in pop, it becomes a "cinematic" marker |
+| **Large-scale crescendo (brass stacked in)** | ⚠️ Partially | A strong marker, and it very easily turns into trailer flavor |
+| **Section-wise writing for string groups** | ✅ Transferable | But pop usually uses only two or three sections |
+| **Stacked percussion for scale** | ⚠️ Partially | ★ The default move of epic trailers; generative models love to add it |
+| **Two-line narrative (contrapuntal dialogue)** | ✅ ★ **Transferable** | → `mc-counterpoint` §2 |
+| **Structure that follows the picture** | ❌ **Not transferable** | It needs a picture. A song has no picture (§7) |
 
-★ **判据**：
-> **可以搬走它的织体思维（分层、齐奏不齐、双线），
-> 不要搬走它的规模手段（铜管堆积、打击乐轰炸）——那些在歌里只会盖掉人声。**
+★ **Criterion**:
+> **You can carry away its texture-thinking (layering, unison that is not unison, two lines),
+> but do not carry away its scale devices (brass stacking, percussion bombardment). In a song, those only drown out the vocal.**
 
-★★ **一条给本库的特别提醒**：
-`example-01` 的 `exclude` 里明确排除了 `orchestral epic`。
-**生成模型在任何"情绪化"提示下都倾向于加管弦**——
-所以在**不是**这个风格的歌里，要主动排除它。
+★★ **A special warning for this library**:
+`example-01`'s `exclude` explicitly excludes `orchestral epic`.
+**Generative models lean toward adding orchestra under any "emotional" prompt**,
+so in a song that is **not** this style, exclude it actively.
 
 ---
 
-## 3. ★ 三条配置原则
+## 3. ★ Three configuration principles
 
-**这是杨立青配器教程给出的、判断织体如何配置的三分法。**
-它是本 skill 最核心的决策工具。
+**This is the three-way classification, from Yang Liqing's orchestration course, for judging how a texture is configured.**
+It is the core decision tool of this skill.
 
-| 原则 | 做什么 |
+| Principle | What it does |
 |---|---|
-| **a. 音色分层** | 织体的各结构因素**各用一个纯音色层**（旋律给木管、和声给弦乐、低音给低音提琴） |
-| **b. 音色并置** | 各结构因素用**混合音色**（旋律由木管 + 弦乐并置而成） |
-| **c. 分层—并置的混用** | ★ **前两者的综合** |
+| **a. Timbre layering** | Each structural element of the texture uses a single pure timbre layer (melody to woodwinds, harmony to strings, bass to double basses) |
+| **b. Timbre juxtaposition** | Each structural element uses a mixed timbre (a melody formed by woodwinds + strings sounding together) |
+| **c. Mixed layering and juxtaposition** | ★ **A synthesis of the first two** |
 
-### 3.1 原则 c 的定义（原文）
+### 3.1 Principle c, definition (original text)
 
-> **出于音乐表现的需要，将织体中的某些结构因素按音色分层的原则进行组合，
-> 而另一些结构因素则按音色并置的原则处理，
-> 从而使该织体既包含了纯音色层次，也有混合音色层次，
-> 形成更复杂的组合关系和丰富多样的对比。** (p0191)
+> **For the needs of musical expression, some structural elements of the texture are combined according to the principle of timbre layering,
+> while other structural elements are handled according to the principle of timbre juxtaposition,
+> so that the texture contains both pure-timbre levels and mixed-timbre levels,
+> forming more complex combinatorial relationships and a rich variety of contrasts.** (p0191)
 
-> **采用这种配置法的情况比比皆是。**
+> **Cases of this configuration method are everywhere.**
 
-**谱例 XIV-48（陈怡《歌墟》）**：
-**旋律与低音均由木管与弦乐音色的并置构成，而和声伴奏音型则用纯铜管音色演奏。**
+**Score example XIV-48 (Chen Yi, *Gexu*)**:
+**The melody and the bass are both formed by juxtaposing woodwind and string timbres, while the harmonic accompaniment figure is played by pure brass.**
 
-★ **注意这个例子的结构**：
-- 旋律 = 混合（木管+弦乐）
-- 低音 = 混合（木管+弦乐）
-- 和声 = **纯**（铜管）
+★ **Note the structure of this example**:
+- Melody = mixed (woodwinds + strings)
+- Bass = mixed (woodwinds + strings)
+- Harmony = **pure** (brass)
 
-**混合的两层反而是主角，纯的那层是背景。**
-这正好反了直觉——**纯音色不等于突出**。
+**The two mixed layers are the leads; the pure layer is the background.**
+This is the reverse of intuition: **pure timbre does not mean prominence**.
 
-### 3.2 怎么用这三条原则做决策
+### 3.2 Using the three principles to decide
 
-**自检动作**：把你的织体拆成"旋律 / 和声 / 低音 / 装饰"四个结构因素，
-**逐个标出它是纯音色还是混合音色**。
+**Self-check action**: break your texture into four structural elements (melody / harmony / bass / ornament),
+and **mark each one as pure timbre or mixed timbre**.
 
-- **全是纯音色** → 清晰但可能单薄（原则 a）
-- **全是混合** → 厚但容易糊，各层辨认不出（原则 b）
-- ★ **混着来** → 原则 c，**这才是"同一时刻有多个层次各自成立"**
+- **All pure** → clear but possibly thin (principle a)
+- **All mixed** → thick but muddy; the layers are hard to tell apart (principle b)
+- ★ **A mix of both** → principle c, **this is what makes "several layers each holding up at the same moment"**
 
-> ★★ **这就是"电影级"的可操作定义。**
-> 不是加多少东西，是**你说得出每一层用的是纯音色还是混合音色，以及为什么**。
-
----
-
-## 4. ★ 齐奏不齐
-
-**齐奏型织体最容易死板。三种破法：**
-
-### 4.1 简化或局部改写
-
-古典—早期浪漫派用自然铜管时，作曲家常**把铜管声部简化或局部改写**
-来解决音域与技术难点，从而形成了 **"齐奏不齐"** 的特殊齐奏形态 (p0192)。
-
-★ **本来是妥协，后来成了手法**：
-> **对 20 世纪以来的作曲家来说，"齐奏不齐"成了齐奏型织体中颇富创新意味的一种变体形式。**
-
-### 4.2 转接与交替
-
-近现代作曲家**采用不同铜管声部的转接、交替**来降低演奏难度 (p0192)。
-同一条线由不同乐器接力，音色在线内变化。
-
-**它跟 §4.1 是同一个问题的两个解**：铜管齐奏遇到音域与体力的坎，
-古典早期浪漫派的解法是简化改写（齐奏不齐），近现代的解法是换人接力。
-
-**怎么接**：
-
-- **接棒的提前进，交棒的多奏一个音**，两端有重叠，线才不断
-- 接点选在**乐句内部而不是乐句边界**。放在边界上听起来就是两句，放在内部才听成一条线换了颜色
-- 这一招不只用来救难度。**同一条线中途换乐器，本身就是一个可听见的色彩事件**，
-  写 cue 时可以拿它当"情绪转了但没换段"的标记
-
-### 4.3 发音散点化：一个音也能做出戏剧性
-
-★ 这是配乐最该偷的一招。同一个音高，在持续过程中**不断换音区、换音色配置**，
-让色彩本身产生类似旋律的运动（p0192）。勋伯格学派早期"音色旋律"实验的直接后果就是
-**齐奏性因素的发音散点化**：齐奏不再是同时发音，而是散成许多进入点。
-
-**贝尔格《沃采克》第三场（例 XIV-49，p0193）示范了它的极端形态**：
-一个持续近五小节、大幅渐强的同度长音，由**十七个乐器声部相继进入**构成。
-三条变量同时在走：
-
-1. **音色**：独奏 → 群体 → 全奏，加弱音器 → 不加弱音器
-2. **力度**：从 *pppp* 一路展开到 *fff*
-3. **织体**：发音点逐渐密集
-
-结果是一个本身毫无事件的长音，获得了强烈的戏剧性力量。
-
-**杨立青《荒漠暮色》（例 XIV-50，p0194）是省力版**：
-弦乐组的背景和弦以散点发音演奏，每个和弦音的出音点用铜管并置强调，
-打击乐滚奏渲染力度起落。织体写法本身异常简单，层次感靠散点做出来。
-
-**落到我们的产出上**：
-
-- 一个长音或一个 pad，不要一次性铺满。**拆成若干进入点**，每个进入点换一件乐器或换一个音区
-- 三条变量（音色、力度、发音密度）**同时单向推进**，戏剧性才立得住。只推力度就只是渐强
-- 这一招与 §4.4 的节奏异化是一对：**节奏异化让齐奏内部在动，散点化让齐奏的开始在动**
-
-**和弦型织体同理**（p0193）：二十世纪后半叶的和弦音束型织体也用节奏异化与散点化，
-与后期浪漫派、印象派"同质性织体结构的异质化处理"一脉相承，
-审美取向是**于单一中求变异**。这句话可以直接当 cue 写作的口诀。
-
-### 4.4 ★ 节奏异化的齐奏
-
-**谢德林《海鸥》起始处（例 IV-85）**：
-> 采用"**节奏异化的齐奏奏法**"（亦可称"**节奏性支声复调**"）的特殊写法，
-> 使开始时的"齐奏"持续长音 G **充满了动力和内在的紧张度**。
-
-★★ **这条是本 skill 最值得搬走的一招**：
-**同一个音、同一条线，让各声部的节奏细节不同**——
-听起来仍是一个齐奏，但**内部在动**。
-
-**在流行/电子里的等价物**：同一条 pad 由三层组成，
-每层的 attack、颤音速率、或 16 分音符的细分各不相同。
-→ 这与 `mc-rhythm-section` §2.2"只量化部分乐器"是同一个道理的不同层面。
+> ★★ **This is the operational definition of "cinematic."**
+> It is not about how much you add; it is that **you can say which timbre each layer uses, pure or mixed, and why.**
 
 ---
 
-## 5. 和声：常常是非功能的
+## 4. ★ Unison that is not unison
 
-**影视配乐的和声经常不走功能进行。** 替代功能的是：
+**A unison texture is the easiest to make rigid. Three ways to break it:**
 
-| 替代物 | 说明 |
+### 4.1 Simplification or partial rewriting
+
+In the Classical and early Romantic periods, when natural brass was used, composers often **simplified or partially rewrote the brass parts** to deal with range and technical difficulty, which produced a special form of unison, **"unison that is not unison"** (p0192).
+
+★ **What began as a compromise became a technique:**
+> **For composers since the twentieth century, "unison that is not unison" became an innovative variant of the unison texture.**
+
+### 4.2 Relay and alternation
+
+Modern composers **use relay and alternation among different brass parts** to reduce the difficulty of playing (p0192).
+The same line is passed on between instruments, so the timbre changes within the line.
+
+**This and §4.1 are two answers to the same problem**: a brass unison meets the limits of range and endurance.
+The early-Romantic answer was simplified rewriting (unison that is not unison); the modern answer is to hand the line from player to player.
+
+**How to connect**:
+
+- **The incoming instrument enters early, and the outgoing instrument plays one note extra**, so the two ends overlap and the line does not break
+- Place the handover **inside the phrase, not at its boundary**. On a boundary it sounds like two phrases; inside, it is heard as one line that changes color
+- This technique is not only for solving difficulty. **Switching instruments mid-line is itself an audible color event**;
+  when writing a cue, you can use it as a marker for "the emotion has turned but the section has not changed"
+
+### 4.3 Scattering the attack: one pitch can also be dramatic
+
+★ This is the technique in scoring that you should most steal.
+The same pitch, sustained, **keeps changing register and timbre configuration**, so the color itself moves like a melody (p0192).
+The direct consequence of the early "timbre melody" experiments of the Schoenberg school is **the scattering of attacks in unison elements**: the unison no longer sounds all at once but breaks into many entry points.
+
+**Berg's *Wozzeck*, Act III (example XIV-49, p0193) shows its extreme form**: a unison sustained note of nearly five bars, growing strongly louder, built from **seventeen instrument parts entering one after another**.
+Three variables move at once:
+1. **Timbre**: solo → group → full ensemble, with mutes → without mutes
+2. **Dynamics**: unfolds from *pppp* to *fff*
+3. **Texture**: the attack points gradually become denser
+
+The result: a long note with no event in itself gains tremendous dramatic force.
+
+Yang Liqing's *Desert Dusk* (example XIV-50, p0194) is the economical version:
+the background chords of the string section are played as scattered attacks, the attack point of each chord tone is emphasized by juxtaposed brass, and rolling percussion drives the rise and fall of the dynamics.
+The writing itself is exceptionally simple; the sense of layering comes from the scattered attacks.
+
+**Applied to our output**:
+
+- A long note or a pad should not be filled all at once. **Split it into several entry points**, each changing the instrument or the register
+- The three variables (timbre, dynamics, attack density) **advance together in one direction**; only then is the drama convincing. Pushing dynamics alone is just a crescendo
+- This pairs with §4.4's rhythmic variation: **rhythmic variation keeps the inside of a unison moving; scattering keeps the beginning of a unison moving**
+
+**Chord textures work the same way** (p0193): in the second half of the twentieth century, chord-cluster textures also used rhythmic variation and scattered attacks.
+They belong to the same line as the "heterogenized treatment of homogeneous textures" of late Romantic and Impressionist music,
+and the aesthetic aim is **to create variation within unity**. This sentence can be used directly as a motto for writing cues.
+
+### 4.4 ★ Rhythmically varied unison
+
+**Shchedrin's *The Seagull*, the opening (example IV-85)**:
+> Using the special writing of "**rhythmically varied unison playing**" (also called "**rhythmic heterophony**"),
+> the sustained G that opens as a "unison" **is filled with energy and inner tension**.
+
+★★ **This is the technique in this skill most worth carrying over**:
+**the same note, the same line, but each part has different rhythmic detail.**
+It still sounds like a unison, but **its interior is moving**.
+
+**The pop/electronic equivalent**: the same pad made of three layers, each with a different attack, vibrato rate, or 16th-note subdivision.
+→ This is the same principle as the "quantize only some of the instruments" in `mc-rhythm-section` §2.2, at a different level.
+
+---
+
+## 5. Harmony: often non-functional
+
+**Film-score harmony often does not move by function.** What takes its place:
+
+| Substitute | Description |
 |---|---|
-| **调式色彩** | 多利亚、利底亚、弗里几亚的特征音（→ `mc-melody` [reference.md](../mc-melody/reference.md) §2） |
-| **平行和弦** | 三和弦整体平移。★ **没有功能，只有色彩的移动** |
-| **持续低音（pedal）** | 上方换和弦，低音不动——**张力来自距离而不是解决** |
-| **音程关系而非和弦关系** | 小三度、三全音的和弦关系（→ `mc-modulation` §4） |
-| **音簇与不协和的持续** | 张力靠**维持**不靠**解决** |
+| **Modal color** | The characteristic notes of Dorian, Lydian, and Phrygian (→ `mc-melody` [reference.md](../mc-melody/reference.md) §2) |
+| **Parallel chords** | Triads moved in parallel as a whole. ★ **No function, only the movement of color** |
+| **Pedal bass** | Chords change above while the bass holds; **tension comes from distance, not resolution** |
+| **Interval relationships instead of chord relationships** | Chord relations built on minor thirds and tritones (→ `mc-modulation` §4) |
+| **Clusters and sustained dissonance** | Tension is kept by **maintaining**, not by **resolving** |
 
-★ **这与流行和声最大的差别**：
-**流行和声靠"不稳定 → 解决"推进；配乐和声常常靠"不解决"制造持续压力。**
+★ **The biggest difference from pop harmony**:
+**Pop harmony drives forward through "instability → resolution"; score harmony often creates sustained pressure through "non-resolution."**
 
-**失效条件**：抒情段落、主题曲、片尾曲仍然用功能和声。
-**判据是这段音乐是不是"歌"。**
+**Failure condition**: lyrical passages, theme songs, and closing songs still use functional harmony.
+**The criterion is whether this music is a "song."**
 
 ---
 
-## 6. Hybrid：管弦 + 电子
+## 6. Hybrid: orchestra + electronics
 
-**本库的"电影级"落点在这里，因为纯管弦我们做不出（需要真乐团）。**
+**This library's "cinematic" landing point lies here, because pure orchestra is out of reach (it requires a real orchestra).**
 
-### 6.1 分层思路
+### 6.1 Layering approach
 
-| 层 | 用什么 | 为什么 |
+| Layer | What to use | Why |
 |---|---|---|
-| **低频基底** | 合成低频 / 808 / sub | ★ 采样管弦的低音提琴下潜不够 |
-| **打击** | 管弦打击 + 电子打击**混合** | 这是 hybrid 最标志性的一层 |
-| **和声铺底** | 弦乐群 + pad **并置**（原则 b） | pad 补上采样弦乐缺的连绵感 |
-| **旋律** | 纯音色（独奏乐器）或混合 | 按 §3 决定 |
-| **色彩/音效** | 处理过的采样、reverse、riser | ★ 它是"电影感"的很大一部分 |
+| **Low-frequency base** | Synthesized low frequency / 808 / sub | ★ Sampled double basses do not extend low enough |
+| **Percussion** | Orchestral percussion + electronic percussion **blended** | The most characteristic layer of hybrid |
+| **Harmonic bed** | String section + pad **juxtaposed** (principle b) | The pad supplies the continuous sustain that sampled strings lack |
+| **Melody** | Pure timbre (solo instrument) or mixed | Decided by §3 |
+| **Color / sound design** | Processed samples, reverse, risers | ★ A large part of the "cinematic" feeling |
 
-### 6.2 ★ 差音警告
+### 6.2 ★ Difference-tone warning
 
-**合成低频基底如果用纯正弦，在手机上会消失**
-（→ `mc-sound-design` §6 差音）。
-**hybrid 尤其容易犯这个错**，因为监听环境通常很好。
-
----
-
-## 7. ★ 配画面 vs 写歌：本库到此为止
-
-本 skill 写的音乐：**结构由曲式决定，时长自己定，裁判是听感**，交出去的是 ARR-SPEC（段落与时长怎么读：`mc-workflow` §5）。
-结构由画面决定（spotting、时间码、剪辑点）、时长由画面给定、裁判是导演与剪辑的，是**配乐**（为画面写音乐）的事。
-
-★ **本 skill 只做"cinematic 风格的音乐"，不做"给画面配的音乐"。**
-后者不在本包。
-
-**判据**：
-> **这段音乐的段落边界，是由音乐自己决定的，还是由画面决定的？**
-> 后者 → 配乐的事，不归本包。只给了总时长和几处要卡的点、段落仍由曲式定的，照 `meta.upstream.picture` 写，还在本包。
+**If the synthesized low-frequency base uses a pure sine wave, it disappears on phones**
+(→ `mc-sound-design` §6, difference tones).
+**Hybrid is especially prone to this mistake**, because the monitoring environment is usually very good.
 
 ---
 
-## 8. 管弦 mockup 听着假的六个成因
+## 7. ★ Scoring to picture vs. writing a song: where this library stops
 
-**这是用采样库做管弦时最常见的问题，按可能性排序：**
+The music this skill writes: **the structure is determined by the form, the duration is set by itself, and the judge is listening.** What is handed over is ARR-SPEC (how sections and durations are read: `mc-workflow` §5).
+A structure determined by the picture (spotting, timecodes, edit points), with a duration given by the picture and a judge who is the director and editor, is **scoring** (writing music for picture), which is outside this package.
 
-| # | 成因 | 解法 |
+★ **This skill covers only "music in the cinematic style," not "music made for a picture."**
+The latter is not in this package.
+
+**Criterion**:
+> **Are the section boundaries of this music decided by the music itself, or by the picture?**
+> If the latter → it is the work of scoring, not this package. If only a total duration and a few points to hit are given, with the sections still set by the form, write it from `meta.upstream.picture`; that case stays in this package.
+
+---
+
+## 8. Six causes of a fake-sounding orchestral mockup
+
+**This is the most common problem when making orchestra with sample libraries, ranked by likelihood:**
+
+| # | Cause | Fix |
 |---|---|---|
-| **1** | **CC11（表情）是平的** | ★ 最常见。每一句都要有呼吸曲线（→ `mc-orchestration` reference §5.1） |
-| **2** | **所有声部完全对齐** | → §4.4 节奏异化；或逐声部微偏移 |
-| **3** | **只用长音 patch** | 换演奏法（弓法），→ `mc-orchestration` reference §2.1 |
-| **4** | **音域写错** | 写到了乐器的极限区或不自然区，→ `mc-orchestration` reference §2.2 |
-| **5** | **齐奏时人数感不对** | 独奏 patch 叠出来 ≠ 群奏；群奏 patch 写独奏线 ≠ 独奏 |
-| **6** | **混响一个吃到底** | 不同组应该在声场的不同深度（→ `mc-mix-intent` §4.2：**深度要一致不要平衡**） |
+| **1** | **CC11 (expression) is flat** | ★ The most common. Every phrase needs a breath curve (→ `mc-orchestration` reference §5.1) |
+| **2** | **All parts are perfectly aligned** | → §4.4 rhythmic variation; or offset each part slightly |
+| **3** | **Only long-note patches are used** | Change the playing technique (bowing) → `mc-orchestration` reference §2.1 |
+| **4** | **Wrong range** | Writing in the extreme or unnatural register of the instrument → `mc-orchestration` reference §2.2 |
+| **5** | **Wrong sense of number in unison passages** | Solo patches stacked ≠ a group; group patches playing a solo line ≠ a soloist |
+| **6** | **One reverb swallows everything** | Different groups should sit at different depths in the sound field (→ `mc-mix-intent` §4.2: **depth should be consistent, not balanced**) |
 
-★ **第 1 条单独拿出来说**：
-**CC7 与 CC11 混用**是 mockup 假的头号原因——
-CC7 定位置，CC11 定呼吸。**混用的结果是"推了推子但乐句还是死的"。**
+★ **Item 1 singled out**:
+**Mixing CC7 and CC11** is the number-one cause of a fake mockup:
+CC7 sets the position, CC11 sets the breath. **The result of mixing them is "you pushed the fader, but the phrase is still dead."**
 
 ---
 
-## 9. 与 ARR-SPEC 的字段对应
+## 9. Mapping to ARR-SPEC fields
 
-| 字段 | 本 skill |
+| Field | This skill |
 |---|---|
 | `meta.style_layer` | `mc-style-cinematic` |
-| `arrangement.depth_map` | ★ §3 —— **纯音色层/混合音色层的分配写在这里** |
-| `roster[].instrument` | §3、§6 |
-| `roster[].note` | ★ 标明这一层是"纯"还是"混合的一部分" |
-| `groove.quantize_policy` | §4.4 节奏异化 |
-| `render.midi` | ★ §8 —— **这个风格基本只能走符号路径**（`mc-symbolic-score`） |
-| `render.*.exclude` | ★ **不是这个风格时**，要排除 `orchestral epic` |
+| `arrangement.depth_map` | ★ §3 — **the allocation of pure-timbre and mixed-timbre layers is written here** |
+| `roster[].instrument` | §3, §6 |
+| `roster[].note` | ★ State whether this layer is "pure" or "part of a mix" |
+| `groove.quantize_policy` | §4.4 rhythmic variation |
+| `render.midi` | ★ §8 — **this style can basically only go the symbolic route** (`mc-symbolic-score`) |
+| `render.*.exclude` | ★ **When this is not the style**, exclude `orchestral epic` |
 
 ---
 
-## 10. 写完后必过
+## 10. Checklist before finishing
 
-- [ ] 说得出**每一层是纯音色还是混合音色**，以及为什么（§3.2）
-- [ ] ★ **规模不是靠音量来的**
-- [ ] 齐奏段落用了 §4 三种破法中的至少一种
-- [ ] 和声是功能的还是非功能的，**是有意选的**
-- [ ] hybrid 的低频基底**补了泛音**（§6.2）
-- [ ] 每一句的 **CC11 有呼吸曲线**，且 CC7/CC11 分工正确
-- [ ] 不同乐器组在**声场的不同深度**，但**组内一致**
-- [ ] 若结构由画面决定 → **这是配乐的事，不归本包**
-- [ ] 往流行搬时，查过 §2——**没有把铜管堆积和打击乐轰炸一起搬走**
+- [ ] Can say **for each layer whether it is pure or mixed timbre, and why** (§3.2)
+- [ ] ★ **Scale does not come from volume**
+- [ ] Unison passages use at least one of the three breaks in §4
+- [ ] Harmony is functional or non-functional, **chosen on purpose**
+- [ ] The hybrid low-frequency base **includes harmonics** (§6.2)
+- [ ] Every phrase has a **CC11 breath curve**, and the CC7/CC11 division of labor is correct
+- [ ] Different instrument groups sit at **different depths in the sound field**, but **are consistent within a group**
+- [ ] If the structure is determined by the picture → **this is scoring, not in this package**
+- [ ] When carrying this over to pop, checked §2 — **did not carry orchestral stacking and percussion bombardment across together**
 
 ---
 
-## 附：来源
+## Appendix: Sources
 
-- **杨立青《管弦乐配器教程》**（/2/3，三册全读）——§3、§4 的全部主干。
-  相关章节：第十四、十五章（铜管组合与管弦色彩强化）、第十六章（音色的对比变化与配器布局）。
-  谱例 XIV-47（米约《第二交响曲》IV 织体分析）、XIV-48（陈怡《歌墟》）、
-  IV-85（谢德林《海鸥》）可回原书核对。
-- **Adler《配器法教程》**——乐器法基础。
-  改编（从钢琴稿到管弦）不在本 skill。
-- 本 skill 建立在**管弦配器 + 通用层 + hybrid 实务推演**之上。
-  ★ 真正的配乐知识（spotting、与画面的关系、cue 的写法）属于**配乐**（为画面写音乐），不在本包。
+- **Yang Liqing, *Orchestration Course*** (Guanxianyue peiqi jiaocheng; /2/3, all three volumes read) — the main body of §3 and §4.
+  Related chapters: Chapters 14 and 15 (brass combinations and orchestral color enhancement), Chapter 16 (timbre contrast and orchestral placement).
+  Score examples XIV-47 (Milhaud, *Symphony No. 2*, IV texture analysis), XIV-48 (Chen Yi, *Gexu*), and IV-85 (Shchedrin, *The Seagull*) can be checked against the original book.
+- **Adler, *Study of Orchestration*** (Peiqifa jiaocheng) — the basics of instrument technique.
+  Arrangement (from piano score to orchestra) is not covered by this skill.
+- This skill is built on **orchestration + general layering + hybrid practical inference**.
+  ★ Real scoring knowledge (spotting, the relationship to picture, how to write cues) belongs to **scoring** (writing music for picture), which is not in this package.

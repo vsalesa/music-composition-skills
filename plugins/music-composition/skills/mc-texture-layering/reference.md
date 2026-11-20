@@ -1,429 +1,427 @@
-# mc-texture-layering 参考：频段划分、分离目标与掩蔽
+# mc-texture-layering Reference: Frequency Bands, Separation Targets, and Masking
 
-> `SKILL.md` 讲怎么分配空间；本文件放**分配时要用的那把尺子**——频段怎么划、
-> 分离到什么程度算够、掩蔽是怎么发生的。
+> `SKILL.md` covers how to allocate space; this file holds **the ruler you use when allocating**:
+> how to divide the bands, how far separation must go to be enough, and how masking happens.
 >
-> 主要来源：**Roey Izhaki《Mixing Audio》**；
-> 听觉依据：**Howard & Angus《音乐声学与心理声学》**。
+> Main source: **Roey Izhaki, *Mixing Audio***;
+> auditory basis: **Howard & Angus, *Acoustics and Psychoacoustics***.
 
 ---
 
-## 1. 四段划分法
+## 1. Four-band division
 
-> 对频率的处理相当于**混音一半的工作内容** (p0092)。
-> 人类可闻频段 20 Hz–20 kHz。
+> Handling frequency accounts for **roughly half of the mixing work** (p0092).
+> The human audible range is 20 Hz–20 kHz.
 
-混音上常用的 **4 段式划分**，分割点大体在 **250 Hz、2 kHz、6 kHz** (p0092)：
+The **4-band division** commonly used in mixing has its dividing points roughly at **250 Hz, 2 kHz, and 6 kHz** (p0092):
 
-| 段 | 范围 |
+| Band | Range |
 |---|---|
-| **低频段** | 20 Hz – 250 Hz |
-| **中低频段** | 250 Hz – 2 kHz |
-| **中高频段** | 2 kHz – 6 kHz |
-| **高频段** | 6 kHz – 20 kHz |
+| **Low band** | 20 Hz – 250 Hz |
+| **Low-mid band** | 250 Hz – 2 kHz |
+| **High-mid band** | 2 kHz – 6 kHz |
+| **High band** | 6 kHz – 20 kHz |
 
-> 分辨中低频段与中高频段的能力**需要一定的实践过程** (p0093)。
+> Being able to tell the low-mid and high-mid bands apart **takes a certain amount of practice** (p0093).
 
-**本库的用法**：ARR-SPEC 的 `roster[].band` **就填这四段之一**，
-只有确实需要更细时才写具体 Hz。四段够用，而且四段是所有人都能对齐的语言。
+**How this library uses it**: the `roster[].band` field in ARR-SPEC **takes one of these four bands**,
+and only when more detail is genuinely needed should a specific Hz value be written. Four bands are enough, and they are a language everyone can align on.
 
-（图 6.1 基本的 4 段频谱划分方法，p0093）
+(Figure 6.1, the basic 4-band spectral division method, p0093)
 
-### 1.1 各声部的基频在哪（竹内 p0242）
+### 1.1 Where the fundamentals of each part sit (Takeuchi p0242)
 
-| 声部 | 基频范围 |
+| Part | Fundamental range |
 |---|---|
-| 女声 | 165–587 Hz |
-| 男声 | 110–392 Hz |
-| 吉他（伴奏） | 82–494 Hz |
-| 钢琴／合成器（伴奏） | 220–523 Hz |
-| 底鼓 | 41–220 Hz |
-| 贝斯 | 41–123 Hz |
+| Female voice | 165–587 Hz |
+| Male voice | 110–392 Hz |
+| Guitar (accompaniment) | 82–494 Hz |
+| Piano / synth (accompaniment) | 220–523 Hz |
+| Kick drum | 41–220 Hz |
+| Bass | 41–123 Hz |
 
-★ **基频不等于听感所在的频段**。表里人声吉他钢琴的基频全挤在 250 Hz–2 kHz 这一段，但它们的辨识度与"刺耳"都在倍频区，
-4 kHz 是人耳最敏感、最容易被刺痛的位置（p0242）。频段预算表按基频画得整整齐齐，仍然打架，多半是倍频区撞了。
-预算时两行都要写：基频落在哪一段，主要倍频落在哪一段。
+★ **The fundamental is not the same as the band where the sound is perceived.** In the table, voice, guitar, and piano fundamentals all cluster in the 250 Hz–2 kHz band, but their recognisability and their "harshness" lie in the harmonic-overtone region,
+and 4 kHz is the position where the ear is most sensitive and most easily stung (p0242). A band budget drawn neatly by fundamentals can still clash, usually because the overtone regions collide.
+When budgeting, write down both: which band the fundamental falls in, and which band the main overtones fall in.
 
-### 1.2 临界频带：这把尺子的最小刻度
+### 1.2 Critical bands: the smallest graduation on this ruler
 
-四段是沟通用的粗刻度；听觉真正的分辨单位是**临界频带**（Howard & Angus p0083）——
-两个音落在同一个临界频带内，就会互相掩蔽、产生粗糙感。带宽用 ERB 估算：
-ERB = 24.7 × (4.37 × f_c + 1) Hz，f_c 以 kHz 计，适用 100 Hz–10 kHz（p0083）。
+The four bands are a coarse scale for communication; the ear's real unit of resolution is the **critical band** (Howard & Angus p0083).
+When two tones fall within the same critical band, they mask each other and produce a sense of roughness. Bandwidth is estimated with ERB:
+ERB = 24.7 × (4.37 × f_c + 1) Hz, with f_c in kHz, valid for 100 Hz–10 kHz (p0083).
 
-| 中心频率 | 临界带宽 |
+| Centre frequency | Critical bandwidth |
 |---|---|
-| 200 Hz | 约 46 Hz（p0084） |
-| 790 Hz | 约 110 Hz（p0130） |
-| 2 kHz | 约 241 Hz（p0084） |
+| 200 Hz | about 46 Hz (p0084) |
+| 790 Hz | about 110 Hz (p0130) |
+| 2 kHz | about 241 Hz (p0084) |
 
-大致相当于 1/3 倍频程（p0086）。**低频区一个临界频带占的音程更宽**，所以低音区两件乐器要隔得比高音区更远
-（四声部写作的"低音与次中音不小于四度"就是这条的经验版，p0146）。
-两纯音频率差在临界带宽的 5%–50% 之间听起来不谐和，差 1/4 带宽时最粗糙，超过一个带宽才谐和（p0141–0142）；
-同一音程越往低音区走，落入"极不谐和"的谐波对越多（p0146）。
+This is roughly equivalent to a 1/3-octave band (p0086). **In the low register, one critical band spans a wider interval**, so two instruments in the low register need to be spaced further apart than in the high register
+(the "bass and tenor at least a fourth apart" rule in four-part writing is the practical version of this, p0146).
+Two pure tones whose frequencies differ by between 5% and 50% of a critical bandwidth sound dissonant; the difference is roughest at 1/4 of a bandwidth, and only beyond one full bandwidth does it sound consonant (p0141–0142).
+The further down into the low register an interval goes, the more harmonic pairs fall into the "highly dissonant" category (p0146).
 
-**两把尺子并用**：`roster[].band` 填四段；判断"是否真在打架"用临界频带——
-同一段里隔着好几个临界频带的两件乐器未必打架；分属两段但挨着分割点（例如 2 kHz 两侧）的照样打架。
+**Use both rulers together**: fill `roster[].band` with the four bands; use critical bands to judge whether two parts are actually fighting.
+Two instruments several critical bands apart within the same band may not clash; two instruments in adjacent bands but close to the dividing point (for example, either side of 2 kHz) will clash just the same.
 
 ---
 
-## 2. 四种典型的失衡
+## 2. Four typical imbalances
 
-> 频率平衡（又称**音色平衡**）是混音中最主要的一个挑战。
-> **最常见的问题是处理得过于极端。** (p0093–0094)
+> Frequency balance (also called **timbral balance**) is the main challenge in mixing.
+> **The most common problem is handling it too extremely.** (p0093–0094)
 
-| 失衡 | 听感 |
+| Imbalance | Perceived result |
 |---|---|
-| 低频过多 | **浑浊** |
-| 低频不足 | **单薄** |
-| 高频不足 | **黯淡** |
-| 高频过多 | **刺耳** |
+| Too much low frequency | **Muddy** |
+| Too little low frequency | **Thin** |
+| Too little high frequency | **Dull** |
+| Too much high frequency | **Harsh** |
 
-**两条实践观察** (p0094)：
-- **新手常犯的错误：把所有乐器的声音都变得很亮**，导致最终信号高频过多
-- **低频是最不容易保持稳定的频段**，因为重放系统（书架式音箱等）对低频重放有缺陷
-- **中低频段是大部分乐器基频所在的频段**，混入其他不重要的频率成分会导致混音混乱
+**Two practical observations** (p0094):
+- **A common beginner mistake: making every instrument bright**, which ends up with too much high frequency in the final signal
+- **The low frequencies are the hardest band to keep stable**, because playback systems (bookshelf speakers and the like) have deficiencies in low-frequency reproduction
+- **The low-mid band is where most instruments' fundamentals sit**; mixing in other, unimportant frequency content here makes the mix chaotic
 
-> ★ 第三条解释了为什么 250 Hz–2 kHz 是最拥挤、最需要预算管理的一段——
-> `SKILL.md` §4 的冲突清单里，多数冲突会落在这里。
+> ★ The third observation explains why 250 Hz–2 kHz is the most crowded band and the one most in need of budget management:
+> in the conflict list in `SKILL.md` §4, most conflicts land here.
 
-低频过多／不足的判断要在固定监听音量下做：音量降低时低频与高频相对中频被抑制，声音变薄变暗
-（等响曲线，Howard & Angus p0091）。"把所有乐器变亮"的另一个成因是听觉心理疲劳——
-适应之后在同一频带继续提升（p0342）。
+Judgements of too much or too little low frequency must be made at a fixed monitoring level: when the level drops, low and high frequencies are suppressed relative to the midrange, and the sound thins and darkens
+(equal-loudness contours, Howard & Angus p0091). Another cause of "making everything bright" is auditory fatigue:
+after adaptation, people keep boosting the same band (p0342).
 
-**参考音轨**（Izhaki 配套，歌曲 *Hero*）：
-6.11 平衡良好 / 6.12 低频过多 / 6.13 低频不足 / 6.14 高频过多 / 6.15 高频不足（p0094–0095）
+**Reference tracks** (accompanying Izhaki, the song *Hero*):
+6.11 well balanced / 6.12 too much low frequency / 6.13 too little low frequency / 6.14 too much high frequency / 6.15 too little high frequency (p0094–0095)
 
 ---
 
-## 3. ★ 分离：频率领域的关键问题
+## 3. ★ Separation: the key issue in the frequency domain
 
-> **频率领域的关键问题是实现乐器之间频率上的「分离」** (p0095)。
+> **The key issue in the frequency domain is achieving frequency "separation" between instruments** (p0095).
 
-**一个理想排列顺序（从低到高）** (p0095)：
+**An ideal ordering (from low to high)** (p0095):
 
-> 贝司 → 底鼓 → 钢琴 → 军鼓 → 人声 → 吉他 → 镲类
+> Bass → kick drum → piano → snare → vocal → guitar → cymbals
 
-> 但——**乐器之间具体的排列顺序并不重要，重要的是在频率上把彼此分离开来** (p0095)。
+> But: **the specific ordering of instruments does not matter; what matters is separating them from one another in frequency** (p0095).
 
-**要检查两件事** (p0095)：
-1. 乐器频率范围之间是否存在**空白区域**
-2. 是否**严格分离**
+**Two things to check** (p0095):
+1. Whether there are **gaps** between the frequency ranges of the instruments
+2. Whether they are **strictly separated**
 
-图 6.2 的三张图把标准说得很清楚 (p0096)：
+Figure 6.2's three diagrams make the standard very clear (p0096):
 
-| 图 | 状态 |
+| Diagram | State |
 |---|---|
-| **a** | 频率**不平衡**：乐器频率范围彼此**交叠**（没有分离），且存在部分频率上的**空洞** |
-| **b** | 频率**平衡**：各乐器都有确定的频率范围，**彼此不交叠**，构成**完整、连续**的频率响应 |
-| **c** | 各乐器**实际**的频率范围分布 |
+| **a** | Frequency **imbalance**: the instruments' frequency ranges **overlap** one another (no separation), and there are **holes** at some frequencies |
+| **b** | Frequency **balance**: each instrument has a defined frequency range, **with no overlap**, forming a **complete, continuous** frequency response |
+| **c** | The **actual** frequency range distribution of each instrument |
 
-> ★ 注意 b 图同时满足两个条件：**不交叠** 且 **连续**。
-> 只做到不交叠会留下空洞（听起来会"缺一块"），只做到连续会交叠（听起来糊）。
-> 这就是"预算"这个词的准确含义——**把频谱铺满，但每一块只有一个主人。**
+> ★ Note that diagram b satisfies two conditions at once: **no overlap** and **continuity**.
+> Avoiding overlap alone leaves holes (it sounds as if "a piece is missing"); achieving continuity alone creates overlap (it sounds muddy).
+> That is the precise meaning of the word "budget": **cover the whole spectrum, but give each slice only one owner.**
 
-**这张图是 `SKILL.md` §1 那张必填表的验收标准**：
-你的频段归属表画出来应该像 b 图，而不是 a 图。
-
----
-
-## 4. 掩蔽
-
-### 4.1 基本原则 (p0038)
-
-> - 响度高的声音会掩蔽响度低的声音
-> - 一件乐器的频率范围会掩蔽另一件乐器的频率范围
-
-Howard & Angus p0238–0240 的量化版：掩蔽程度取决于两者的频率和幅度（p0239）；
-**掩蔽向上延展——低频容易掩蔽高频**，因为听觉滤波器的响应曲线不对称（p0239）；
-掩蔽声所在临界频带内的掩蔽阈比掩蔽声低约 20 dB，往上每个临界频带再降 5–13 dB，往下的斜率陡得多（p0239–0240）。
-→ 频段预算里"谁在下面"比"谁更响"更要紧：低音区的元素是全曲的掩蔽源。
-
-### 4.2 ★ 时间维度的推论（更有用）
-
-> - **打击乐器（如底鼓）发声时间短，掩蔽作用较小**
-> - **持续发声的乐器（如锯齿波 Pad）会占满频谱和立体声空间，掩蔽作用大**
-> - **提升密集 Pad 声部的电平，比提升底鼓电平带来更多的掩蔽；
->   Pad 掩蔽底鼓是持续发生的大问题** (p0038)
-
-时间维度 Howard & Angus 也给了数字：掩蔽声停止后 100–200 ms 前掩蔽才消失，掩蔽声不到 50 ms 时掩蔽随其时长增大；
-后掩蔽约 10 ms，几乎不存在（p0241）。响度本身也对 200 ms 以内的声音按时长打折（p0095）——
-这就是"短打击掩蔽小、持续音掩蔽大"的原因。
-
-**用法**：诊断"糊"时**先查持续音**。详见 `mc-mix-intent` §5——
-那边讲的是同一件事在混音意图层面的后果，这边讲的是它在织体设计层面的成因。
-
-### 4.3 声像设置与掩蔽
-
-Izhaki 有专节讨论「声像设置与掩蔽」(p0250)——
-**把两件抢频的乐器分开声像，是第四种解法**，
-但它不在 `SKILL.md` §4.2 的三解里，因为**它是"改混"不是"改写"**，归 `mc-mix-intent`。
-
-> 记住这条分界：本 skill 只给**改写型**解法（让频 / 错开音区 / 交替出现）。
-> 声像、侧链、动态处理的意图一律归 mix-intent，参数是混音的事。
-
-Howard & Angus 给这第四种解法划了边界：声像电位器只提供声级差（p0112），而声级差主要对高频定位有效，
-时间差管低频，700 Hz–2.8 kHz 是定位最弱的过渡区（p0108）。所以分开声像对镲、吉他高频这类冲突有效，
-对 250 Hz–2 kHz 这段最拥挤的中低频冲突帮助有限——那里还是得改写。
-
-### 4.4 听觉编组：融合与分离的另一把手
-
-频率相近、走向相似的元素会被听觉编成一组（p0244）；音色差别大且速度快（超过每秒约 10 个音符）时改按音色编组，
-一条线会被听成两条（p0245）。混响也使不同乐器融合（p0261）。
-→ 想让两件乐器**融合**：音区相近、同步进入、共用混响；想让它们**分开**：拉开音区、拉大音色差、错开进入。
-主角要独占一个音区，否则会被编进旁边的组里。
+**This diagram is the acceptance criterion for the mandatory table in §1 of `SKILL.md`**:
+when you plot your band-assignment table, it should look like diagram b, not diagram a.
 
 ---
 
-## 5. 深度与立体声的章节索引
+## 4. Masking
 
-这些属于 `mc-mix-intent`，列在这里只为查找方便：
+### 4.1 Basic principles (p0038)
 
-| 主题 | 页 |
+> - A loud sound masks a quiet sound
+> - One instrument's frequency range can mask another instrument's frequency range
+
+The quantified version from Howard & Angus p0238–0240: the degree of masking depends on the frequency and amplitude of both sounds (p0239).
+**Masking spreads upward: low frequencies readily mask high frequencies**, because the response curve of the auditory filter is asymmetric (p0239).
+The masking threshold within the critical band of the masker sits about 20 dB below the masker; each critical band further up drops by a further 5–13 dB, while the slope downward is much steeper (p0239–0240).
+→ In the band budget, "who is below" matters more than "who is louder": elements in the low register are the masking sources for the whole piece.
+
+### 4.2 ★ Implications along the time dimension (more useful)
+
+> - **Percussion instruments (such as the kick drum) sound for a short time, so their masking effect is small**
+> - **Continuously sounding instruments (such as a sawtooth pad) fill the spectrum and stereo space, so their masking effect is large**
+> - **Raising the level of a dense pad part creates more masking than raising the level of the kick drum;
+>   a pad masking the kick drum is a major problem that happens continuously** (p0038)
+
+Howard & Angus also give figures for the time dimension: after the masker stops, masking persists for 100–200 ms before it disappears; when the masker lasts under 50 ms, masking grows with its duration;
+post-masking lasts about 10 ms and is nearly negligible (p0241). Loudness itself is also discounted for sounds shorter than 200 ms according to their duration (p0095).
+That is why "short percussive hits mask little, and sustained sounds mask a lot."
+
+**Usage**: when diagnosing "muddiness", **check the sustained sounds first**. See `mc-mix-intent` §5:
+that section covers the same phenomenon's consequences at the mix-intent level, whereas this one covers its causes at the texture-design level.
+
+### 4.3 Stereo placement and masking
+
+Izhaki has a dedicated section on "stereo placement and masking" (p0250).
+**Separating two instruments that compete for the same frequencies by stereo placement is a fourth resolution**,
+but it does not appear among the three resolutions in `SKILL.md` §4.2, because **it is "remixing", not "rewriting"**, and so belongs to `mc-mix-intent`.
+
+> Remember this boundary: this skill provides only the **rewriting-type** resolutions (yield / separate registers / alternate).
+> Intent for panning, sidechaining, and dynamics processing all belong to mix-intent; the parameters are a matter for mixing.
+
+Howard & Angus set the boundary for this fourth resolution: a panpot provides only a level difference (p0112), and level difference mainly works for high-frequency localisation;
+time difference governs low frequencies, and 700 Hz–2.8 kHz is the weakest transition zone for localisation (p0108). So separating by panning works for high-frequency conflicts such as cymbals against guitar,
+but offers limited help for the most crowded low-mid conflicts in the 250 Hz–2 kHz range, where you still have to rewrite.
+
+### 4.4 Auditory grouping: the other lever for fusion and separation
+
+Elements that are close in frequency and move in similar directions are grouped together by the ear (p0244). When timbres differ greatly and the tempo is fast (over roughly 10 notes per second), the ear groups by timbre instead,
+and a single line is heard as two (p0245). Reverb also fuses different instruments together (p0261).
+→ To make two instruments **fuse**: put them in similar registers, have them enter together, and share reverb. To make them **separate**: widen the register gap, increase the timbral contrast, and stagger their entries.
+The lead needs a register of its own, or it will be grouped into the neighbouring group.
+
+---
+
+## 5. Chapter index for depth and stereo
+
+These belong to `mc-mix-intent`, and are listed here only for convenient lookup:
+
+| Topic | Page |
 |---|---|
-| 6.4 立体声领域 | — |
-| 6.4.1 立体声声像的标准 | — |
-| 6.4.2 立体声平衡 | — |
-| 6.4.3 立体声声像中的其他问题及处理目标 | — |
-| **6.5 深度** | — |
-| 7.3.4 早期反射声 | — |
-| 相位表与立体声监测 | p0136 |
-| 界外立体声技巧（Out of Phase Stereo） | — |
-| 13 声像（Panning）全章 | p0240– |
-| 13.2.3 **声像电位器的工作法则（Pan Laws）** | — |
-| **13.4.1 声像设置与掩蔽** | p0250 |
-| 13.4.3 效果信号的声像设置 | p0253 |
+| 6.4 Stereo field | — |
+| 6.4.1 Standards for stereo image | — |
+| 6.4.2 Stereo balance | — |
+| 6.4.3 Other issues in the stereo image and processing goals | — |
+| **6.5 Depth** | — |
+| 7.3.4 Early reflections | — |
+| Phase meter and stereo monitoring | p0136 |
+| Out of Phase Stereo technique | — |
+| Chapter 13 Panning (full chapter) | p0240– |
+| 13.2.3 **Pan laws** | — |
+| **13.4.1 Panning and masking** | p0250 |
+| 13.4.3 Panning of effect signals | p0253 |
 
 ---
 
-## 5a. 一件乐器自己的听觉规律（Howard & Angus）
+## 5a. A single instrument's own auditory rules (Howard & Angus)
 
-第 2 节讲的是两件乐器之间怎么互相干扰（掩蔽、定位、编组、协和度），那些归 `mc-mix-intent`。
-这一节讲**一件乐器单独存在时音色是怎么成立的**，它决定分层时谁能进同一层、谁必须错开。
+Section 2 covers how two instruments interfere with each other (masking, localisation, grouping, consonance); those belong to `mc-mix-intent`.
+This section covers **how an instrument's timbre is established when it exists on its own**, which determines who can share a layer and who must be offset during layering.
 
-### 5a.1 起振阶段是音色的身份证
+### 5a.1 The onset is the timbre's identity card
 
-**去掉起振与衰减之后，小提琴和小号很难区分**（p0222–0223）。
-稳态频谱决定不了辨识度，辨识度几乎全在头几十毫秒。
+**With the attack and decay removed, a violin and a trumpet are hard to tell apart** (p0222–0223).
+The steady-state spectrum does not determine recognisability; recognisability lies almost entirely in the first few tens of milliseconds.
 
-书里点名的六条声学线索（p0223）：弓与弦的摩擦声、铜管辅音式的起振、吹管者的呼吸噪声、
-簧片起振时的拍打声、钢琴琴锤的沉闷击打、琴弦回落声。
+The six acoustic cues the book names (p0223): the friction of bow on string, the consonant-like onset of brass, the breath noise of the player blowing, the slapping sound of a reed starting to vibrate, the muffled strike of a piano hammer, and the falling sound of a string decaying.
 
-**落到编曲上的三条**：
+**Three takeaways for arrangement**:
 
-1. **要辨识度就把起振留出来。** 一层里塞进两件起振特征相近的乐器，等于自愿放弃两者的身份。
-2. **合成音色缺的往往不是频谱是起振。** 采样听着"假"多半因为循环段取自稳态，起振被切掉或被统一了（p0217）。
-3. **起振不受房间染色。** 第一次反射通常发生在起振结束之后（p0217），所以起振传递的是未经染色的信息。混响加得再多也救不回一个被削平的起振。
+1. **If you want recognisability, leave room for the onset.** Packing two instruments with similar onset characteristics into one layer amounts to voluntarily giving up both of their identities.
+2. **What synthesized timbres often lack is not the spectrum but the onset.** A sample that sounds "fake" is often because its loop was taken from the steady state, so the attack was cut off or homogenised (p0217).
+3. **The onset is not coloured by the room.** The first reflection usually arrives after the onset has ended (p0217), so the onset carries uncoloured information. No amount of reverb can rescue an onset that has been flattened.
 
-### 5a.2 各族的起振时间差，决定谁能做快句子
+### 5a.2 Onset timing across families determines who can play fast phrases
 
-| 乐器 | 起振特征 | 编曲含义 |
+| Instrument | Onset characteristics | Arrangement implication |
 |---|---|---|
-| 铜管（小号、圆号、长号、大号） | 四种全是**基频先行**，起振极短，迅速进入周期（p0221） | 最适合做硬切入的节奏性进入 |
-| 单簧管、高音萨克斯 | 基频先行（p0220） | 同上，但能量弱得多 |
-| 双簧管 | **二次谐波先行**，约 5 ms 后三四次谐波，约 8 ms 后才是基频（p0220） | 音头带一层非基频的"芯"，叠在别的中音层上会互相抢 |
-| 长笛 | 基频之前有约 **70 ms 的呼吸噪声**（2 kHz 以上），基频后约 80 ms 高次谐波才陆续进来（p0221） | ★ **起振阶段长，不适合写快速断奏**。写了也会糊成一片气声 |
-| 小提琴 | 起振约 160 ms，衰减约 250 ms；**颤音要到起音后约 250 ms 才出现**（p0221） | 短于 250 ms 的音符得不到颤音，音色与长音完全是两回事 |
+| Brass (trumpet, French horn, trombone, tuba) | All four are **fundamental-first**, with a very short attack that quickly settles into periodic vibration (p0221) | Best suited to hard-edged, rhythmic entries |
+| Clarinet, soprano sax | Fundamental-first (p0220) | Same as above, but much weaker in energy |
+| Oboe | **Second harmonic first**; third and fourth harmonics come in after about 5 ms, and the fundamental only after about 8 ms (p0220) | The note head carries a non-fundamental "core", which competes with other middle-register layers when stacked on them |
+| Flute | About **70 ms of breath noise** (above 2 kHz) before the fundamental; higher harmonics only gradually enter about 80 ms after the fundamental (p0221) | ★ **The long onset stage makes it unsuitable for fast staccato writing**. If you write it anyway, it will blur into a mass of breathy sound |
+| Violin | Attack about 160 ms, decay about 250 ms; **vibrato does not appear until about 250 ms after the note begins** (p0221) | Notes shorter than 250 ms get no vibrato, so their timbre is entirely different from that of long notes |
 
-### 5a.3 5–7 次谐波是"明亮"与"暗淡"的分界
+### 5a.3 Harmonics 5–7 mark the boundary between "bright" and "dull"
 
-无论基频多少，**第 5 至 7 次以上的谐波一般分辨不出来，以下的能分辨**（p0223）。
-稳态频谱里有显著 5–7 次以上谐波的（管风琴簧管组、高音萨克斯、小号、小提琴、专业歌声）
-听感被描述为明亮、辉煌、刺耳；没有的（单簧管、双簧管、长笛、长号、圆号、大号）
-被描述为暗淡、柔和、单调（p0223–0224）。
+Regardless of the fundamental, **harmonics from the 5th to 7th and above are generally not distinguishable, while lower ones are** (p0223).
+Sounds with significant harmonics above the 5th–7th in their steady state (the reed stops of a pipe organ, soprano sax, trumpet, violin, professional singing voice)
+are described as bright, brilliant, and harsh; those without them (clarinet, oboe, flute, trombone, French horn, tuba)
+are described as dull, soft, and monotonous (p0223–0224).
 
-**七次谐波是听觉不能分辨的最低谐波，没有它的声音明显柔和得多**（p0224）。
+**The seventh harmonic is the lowest harmonic the ear cannot distinguish, and without it a sound is noticeably softer** (p0224).
 
-**编曲含义**：频段预算表里"这一层要亮还是要暗"，可以直接换算成"这件乐器有没有显著的 5–7 次以上谐波"，
-不必等到混音才用 EQ 去救。想要一层亮又不想加高频，换乐器比加 EQ 干净。
+**Arrangement implication**: the "should this layer be bright or dark" decision in the band budget table can be translated directly into "does this instrument have significant harmonics above the 5th–7th",
+rather than waiting until mixing to fix it with EQ. If you want a layer to be bright without adding high frequencies, changing instruments is cleaner than adding EQ.
 
-### 5a.4 打击乐的音色来自非谐波关系
+### 5a.4 Percussion timbre comes from non-harmonic relationships
 
-击棒、膜、板类打击乐器的音色独特性，来自各振动模式频率之间的**非谐波关系**，
-由此产生铿锵与叮当感（p0224）。击打是脉冲声源，非周期、连续谱，把乐器能支持的所有振动模式一次性全部激发（p0194–0195），
-这一点和弦乐器、管乐器靠周期性振动稳定在一串整数倍谐波上正好相反。
+The distinctive timbre of mallet, membrane, and plate percussion instruments comes from **non-harmonic relationships** between their vibration mode frequencies,
+which produce a clanging, ringing quality (p0224). A strike is an impulsive source with an aperiodic, continuous spectrum that excites all the vibration modes the instrument can support at once (p0194–0195).
+This is the opposite of string and wind instruments, which settle onto a series of whole-number multiples of the fundamental through periodic vibration.
 
-**差多远算"非谐波"，书里有数字**：木琴一类自由放置的棒，第二振动模式是第一模式的 2.758 倍，
-换算成音程是 17.56 个半音，既不是纯八度也不是纯五度（p0195–0196，表 4.1）；
-一端固定的棒（如金属键琴）差得更远，第二模式是第一模式的 6.267 倍，合 31.77 个半音（p0195）。
-鼓膜更极端：理想圆膜的头几个模式频率比是 1、1.59、2.14、2.30……换成半音是 0、8.1、13.1、14.4，
-没有一个落在整数倍谐波该在的位置上（p0198，表 4.2）。这就是"非谐波关系"在数字上的样子，
-不是笼统地"音高不明确"，是振动模式之间的比例本身就不成整数比。
+**The book gives figures for how far "non-harmonic" goes**: for a freely suspended bar such as the xylophone, the second vibration mode is 2.758 times the first mode,
+which in interval terms is 17.56 semitones, neither a pure octave nor a pure fifth (p0195–0196, Table 4.1).
+A bar fixed at one end (such as the metallophone) differs even more: its second mode is 6.267 times the first, or 31.77 semitones (p0195).
+Membranes are more extreme: for an ideal circular membrane, the first few mode frequency ratios are 1, 1.59, 2.14, 2.30…, which in semitones are 0, 8.1, 13.1, 14.4,
+none of which falls where a harmonic would be (p0198, Table 4.2). This is what "non-harmonic relationship" looks like in numbers:
+not vaguely "unclear pitch", but a ratio between vibration modes that is not a whole-number ratio at all.
 
-**唯一的例外，也说明规律为什么成立**：定音鼓和木琴、马林巴这类"有调"打击乐器，
-是靠调音手段把某几个模式硬拉回接近谐波的位置：定音鼓靠鼓膜背后的空腔改变模式频率
-使其接近同一谐波列（p0200），木琴、马林巴靠把音棒底部削成弧形改变模式比例，
-马林巴/电颤琴通常把第二模式调到比第一模式高两个倍频程，木琴调到高十二度左右（p0197）。
-调音调的就是这些非谐波关系，调不动的乐器（军鼓、镲片、大鼓）就只能是无调打击乐器。
+**The exceptions also explain why the rule holds**: pitched percussion instruments such as timpani, xylophone, and marimba
+are tuned to pull certain modes back to near harmonic positions. Timpani use the air cavity behind the membrane to shift the mode frequencies so they approach a single harmonic series (p0200);
+xylophone and marimba bars are shaped by carving the underside of the bar into an arc, which changes the mode ratios.
+Marimba and vibraphone usually tune the second mode to two octaves above the first, and xylophone to roughly a twelfth above (p0197).
+Tuning works by adjusting exactly these non-harmonic relationships; instruments that cannot be tuned this way (snare drum, cymbals, bass drum) can only be unpitched percussion.
 
-**编曲含义**：打击乐默认不参与和声层的频段预算，它的"音高"不在和声体系里，
-把镲片与弦乐高层放进同一条预算线是算错了帐，除非这件打击乐器本身经过调音（定音鼓、木琴、
-马林巴、电颤琴），这时它的基频确实能进和声，占用的频段才该按音高算。
+**Arrangement implication**: by default, percussion does not take part in the band budget for the harmonic layer, since its "pitch" is not part of the harmonic system.
+Placing cymbals on the same budget line as high strings miscalculates the budget, unless the percussion instrument itself is tuned (timpani, xylophone,
+marimba, vibraphone). Only then does its fundamental genuinely participate in the harmony, and only then should the band it occupies be calculated by pitch.
 
-### 5a.5 归 `mc-mix-intent` 的部分，列在这里只为查找
+### 5a.5 Items that belong to `mc-mix-intent`, listed here for lookup only
 
-| 主题 | 页 |
+| Topic | Page |
 |---|---|
-| 2.2 临界频带与 ERB | p0082–0086 |
-| 2.4 响度：等响曲线、+10 dB、200 ms、跨临界频带 | p0090–0097 |
-| 2.6 定位：时间差／声级差／优先效应 | p0102–0110 |
-| 3.3.2 谐和与临界带宽、低音区音程 | p0141–0146 |
-| 5.5.2 掩蔽：同时与非同时 | p0238–0241 |
-| 5.5.3 听觉编组 | p0244–0245 |
-| 7.2.3 均衡与掩蔽（人声 1.5 kHz 例） | p0342–0343 |
+| 2.2 Critical bands and ERB | p0082–0086 |
+| 2.4 Loudness: equal-loudness contours, +10 dB, 200 ms, across critical bands | p0090–0097 |
+| 2.6 Localisation: time difference / level difference / precedence effect | p0102–0110 |
+| 3.3.2 Consonance and critical bandwidth; intervals in the low register | p0141–0146 |
+| 5.5.2 Masking: simultaneous and non-simultaneous | p0238–0241 |
+| 5.5.3 Auditory grouping | p0244–0245 |
+| 7.2.3 Equalisation and masking (example: vocal at 1.5 kHz) | p0342–0343 |
 
-## 6. 深度与密度（DeSantis）
+## 6. Depth and density (DeSantis)
 
-### 6.1 三层深度图：在写的时候就分层，不留给混音
+### 6.1 The three-layer depth map: layer while writing, do not leave it to the mix
 
-治的是"听上去扁、二维、没有纵深"这个毛病（p0111）。
-办法是借视觉艺术的三层来规划：**前景**离得最近、焦点清楚、细节多；**背景**最远、能辨认但模糊、细节少；
-**中景**居中，不是焦点但比背景突出（p0112）。
+This addresses the problem of sounding "flat, two-dimensional, with no sense of depth" (p0111).
+The remedy is to plan with the three layers borrowed from the visual arts: **foreground** is nearest, with clear focus and rich detail; **background** is farthest, recognisable but blurred, with little detail;
+**middle ground** sits between them, not the focus but more prominent than the background (p0112).
 
-★ **关键在于这是作曲阶段的决定，不是混音阶段的补救。**
-混音能做的是更响更亮更干（拉近）与更轻更暗更多混响（推远）（p0112–0113），
-那些归 `mc-mix-intent`。本 skill 关心的是另一半：**哪些写法本身就会让一层往前跑**。
+★ **The key point is that this is a decision made at the composition stage, not a remedy applied at the mixing stage.**
+What mixing can do is make things louder, brighter, and drier (to bring closer), or quieter, darker, and more reverberant (to push back) (p0112–0113);
+those belong to `mc-mix-intent`. This skill is concerned with the other half: **which writing choices by themselves make a layer move forward**.
 
-**听觉把什么听成前景**（p0113）：**高、响、快，以及变化率快**。
+**What the ear hears as foreground** (p0113): **high, loud, fast, and rapidly changing**.
 
-这四条里**变化率最容易被忽略，也最好用**：
+Of these four, **rate of change is the easiest to overlook and the most useful**:
 
-- 鼓通常很响，但因为稳定不变，一般被听成中景或背景
-- 一个鼓花（drum fill）让密度与复杂度突然改变，**鼓就临时跳到前景**，过后又退回去
-- ★ **反过来就是陷阱**：合成器线如果比人声高八度，或者节奏更复杂、跳动更剧烈，
-  听众会不自觉把合成器当成主角。**你以为的主角和听众听到的主角不是一个**，
-  这正是规格单里"主角序列"要逐段写清楚的原因
+- Drums are usually loud, but because they stay constant, they are generally heard as middle ground or background
+- A drum fill makes density and complexity change suddenly, so **the drums temporarily jump to the foreground**, then recede again
+- ★ **The reverse is a trap**: if a synth line sits an octave above the vocal, or has more complex rhythm and more violent leaps,
+  listeners will subconsciously hear the synth as the lead. **The lead you think you wrote and the lead the listener actually hears are not the same thing**;
+  this is exactly why the "lead sequence" in the spec must be written out section by section
 
-**两条可执行的**（p0113–0114）：
+**Two actionable points** (p0113–0114):
 
-1. 写每一件的时候就问它该在三层图的哪一层
-2. **中景与背景的变化率要压到最低，前景才有运动的自由**。所有层都在变，等于没有层
+1. When writing each part, ask which layer of the three-layer map it belongs in
+2. **Keep the rate of change in the middle ground and background to a minimum, so that the foreground has freedom to move**. If every layer is changing, there are no layers at all
 
-> 值得注意的一处印证：Adler 讲弦乐配器时用的也是前景、中景、背景这同一套三分
-> （见 `mc-orchestration` reference §2.3.1）。一边是管弦乐传统，一边是电子音乐制作，
-> 落到同一个模型上。它不是某一派的说法。
+> A corroborating point worth noting: Adler, discussing string orchestration, uses this same three-part division of foreground, middle ground, and background
+> (see `mc-orchestration` reference §2.3.1). One comes from the orchestral tradition, the other from electronic music production, and both converge on the same model. It is not the position of any one school.
 
-### 6.2 最大密度法：不从左往右写
+### 6.2 The maximal-density method: do not write from left to right
 
-治的是"第一段写完了，写第二段像重开一个项目"（p0265）。
+This addresses the problem where, after the first section is written, writing a second section feels like starting a new project from scratch (p0265).
 
-做法（p0265–0266）：
+Method (p0265–0266):
 
-1. **先做一个最大密度段**。把所有可能同时出现的元素真的同时堆上去，一开始多半是一团乱
-2. **逐个减**，减到既密又成立为止。**这一段就是全曲的高潮点**
-3. 复制这个峰值段，靠静音或删轨做出若干个密度更低的版本
-4. 挑出喜欢的组合，各自成为一个新段落
-5. **编曲于是变成把不同密度的段落排成起伏的过程**，不再是从头往后长
+1. **First make a maximum-density section**: stack up every element that could possibly sound together, actually all at the same time. At first this is usually a jumbled mess
+2. **Subtract elements one at a time** until the section is both dense and musically coherent. **This section becomes the song's climax**
+3. Copy this peak section, and make several lower-density versions by muting or deleting tracks
+4. Pick the combinations you like, each becoming a new section
+5. **The arrangement then becomes the process of arranging sections of different densities into a rise and fall**, rather than growing forward from the beginning
 
-**与减法编曲的区别**：减法编曲动的是编曲阶段，最大密度法动的是**作曲阶段**。
-它不要求把材料铺满全曲长度，而是先纵向堆出一个密集段，再往下减（p0266）。
+**Difference from subtractive arrangement**: subtractive arrangement works at the arrangement stage, while the maximal-density method works at the **composition stage**.
+It does not require filling the entire length of the song with material; instead it first stacks a dense section vertically, then subtracts from it (p0266).
 
-**适用边界**（p0266）：
+**Boundaries of applicability** (p0266):
 
-- 段落之间本来就不求大反差的类型（比如 minimal techno），这套可以照字面用
-- 需要反差的类型，**给每个段落各做一个最大密度版本**，各自作为该段若干变体的母版
+- For genres where sections are not meant to contrast strongly with each other (such as minimal techno), this approach can be used literally
+- For genres that need contrast, **build a separate maximum-density version of each section**, each serving as the master for several variants of that section
 
-减法的那一侧（擦除的力量、过度分层的代价，p0286–0288）在本文 §4.3、§4.4。
+The subtractive side (the power of erasing and the cost of over-layering, p0286–0288) is covered in §4.3 and §4.4 of this document.
 
 ---
 
-## 7. 聚焦度与优先级（图解流行乐团编曲）
+## 7. Focus and priority (Illustrated Pop Band Arrangement)
 
-前面几节讲的是频段与深度怎么分，这一节讲**每一小节谁是焦点**，以及焦点怎么调。
+The preceding sections covered how to divide frequency and depth; this section covers **who is the focus in each bar** and how to adjust that focus.
 
-这本书把编曲看成四则运算（p0019–0020）：加法与减法是加减层（本文 §4），
-**乘法是综效，除法是优先性**。乘除这两项本文其余各节都没有覆盖。
+The book treats arrangement as arithmetic (p0019–0020): addition and subtraction are the additive and subtractive layers (this document §4),
+**multiplication is synergy and division is priority**. The rest of this document does not cover multiplication or division.
 
-### 7.0 ★ 聚焦度怎么调：五个旋钮与四层层级
+### 7.0 ★ Adjusting focus: five knobs and four levels of hierarchy
 
-§7.2 讲先决定强调谁，这一节讲**手上有哪几个旋钮能把一条乐句的聚焦度拧高拧低**（图解编曲 p0082–0106）。
+§7.2 covers deciding first whom to emphasise; this section covers **which knobs you have for turning the focus of a phrase up or down** (illustrated arrangement, p0082–0106).
 
-**五个旋钮**（p0084–0094），越往右越抢注意力：
+**Five knobs** (p0084–0094), with the further right, the more attention they attract:
 
-| 旋钮 | 低 → 高 |
+| Knob | Low → High |
 |---|---|
-| **节奏** | 与基本律动的**落差**越大越高 |
-| **动向** | 直线行进 < 上下行进；级进 < 跳进；下行 < 上行 |
-| **声音使用** | 和弦音 < 趋近音 < **引申音** |
-| **音域** | 越高越高，**但太高反而掉下来** |
-| **乐句长度** | 越长越高 |
+| **Rhythm** | The greater the **deviation** from the basic groove, the higher the focus |
+| **Direction of motion** | Straight-line motion < up-and-down motion; stepwise < leaps; descending < ascending |
+| **Sound usage** | Chord tones < approach tones < **extension tones** |
+| **Register** | The higher, the higher the focus, **but too high and it drops away again** |
+| **Phrase length** | The longer, the higher the focus |
 
-★ **前三项是"三大支柱"**。动向对鼓组同样成立：音高序是 钹 > 小鼓 > 高音中鼓 > 低音中鼓 > 落地鼓 > 大鼓，
-**鼓组基本不会有直线上行乐句**，中鼓过门以下行为基本型（p0088–0089）。
+★ **The first three are the "three pillars"**. Direction of motion also applies to the drum kit: the pitch order is cymbal > snare > high tom > low tom > floor tom > kick drum,
+**the drum kit almost never has straight ascending phrases**, and tom fills are basically descending by default (p0088–0089).
 
-**四层层级**（p0082、p0095–0096）：
+**Four levels of hierarchy** (p0082, p0095–0096):
 
-1. 主旋律，第一聚焦
-2. **间隙乐句**，要"稍微比主旋律弱一点"
-3. **背景乐句**，落在间隙乐句与明快节拍之间
-4. 明快节拍
+1. Main melody: first focus
+2. **Gap phrases**, which should be "slightly weaker than the main melody"
+3. **Background phrases**, which sit between the gap phrases and the lively beat
+4. The lively beat
 
-**修法**（p0082）：一条乐句太抢戏，**不要整句拿掉**，留下精华、拧低旋钮，降到第二或第三聚焦处。
+**The fix** (p0082): if a phrase is stealing the show, **do not remove the whole phrase**; keep its essence, turn down the knobs, and drop it to the second or third level of focus.
 
-三条配套：间隙乐句用与主旋律音域相近的乐器，吉他钢琴为主，贝斯只作辅助（p0099）；
-★ 间隙乐句与主旋律长音重叠时，**重叠音不能不协和，并且尽量避开三度**，全曲只有这一处有三度会被听成"半调子的三度和声"，教材曲改用五度叠加（p0100–0101）；
-背景声部的动态推荐顺序 **贝斯 > 吉他 > 钢琴**（p0106）。
+Three supporting points: gap phrases should use instruments with a register close to the main melody, mainly guitar or piano, with bass only as support (p0099);
+★ when a gap phrase overlaps the sustained notes of the main melody, **the overlapping notes must not be dissonant, and should avoid thirds where possible**; the only place in the piece where a third would be heard as a half-baked third harmony, so the teaching examples use stacked fifths instead (p0100–0101);
+and the recommended dynamic order for background parts is **bass > guitar > piano** (p0106).
 
-### 7.1 综效：组合起来大于各自相加
+### 7.1 Synergy: the whole is greater than the sum of its parts
 
-**综效**指一个要素与其他要素融合之后，产生超过单一要素的效果（p0134）。
-几件乐器凑在一起，**聚焦度会比单独一件明显高出许多**（p0135）。
+**Synergy** refers to the effect produced when one element merges with others, exceeding the effect of any single element (p0134).
+When several instruments play together, **their focus is noticeably higher than that of any one of them alone** (p0135).
 
-三种做法（p0135）：**齐奏**、**合音**、**同一节奏**。
+Three methods (p0135): **unison**, **doubling**, and **same rhythm**.
 
-★ **适用边界写得很死，值得照抄**（p0135）：
+★ **The boundaries of applicability are stated very firmly, and are worth quoting directly** (p0135):
 
-- **只对间隙乐句用**，而且是全曲里你希望最华丽的那一句，**过门式乐句最合适**
-- **对背景乐句用会适得其反**，会变得太过醒目
+- **Use only on gap phrases**, and only on the phrase you most want to be ornate in the whole piece; **a fill-style phrase is most suitable**
+- **Using it on background phrases backfires**; they become too conspicuous
 
-这条正好解释了一个常见毛病：把齐奏、合音这类"加乘"手段铺在垫底声部上，
-结果背景往前跑，主角反而糊了。
+This rule explains a common flaw: spreading "amplifying" techniques such as unison or doubling across the lowest-ranking parts
+results in the background moving forward while the lead becomes muddy.
 
-### 7.2 优先级：先决定强调谁，再排聚焦度
+### 7.2 Priority: decide whom to emphasise first, then rank focus
 
-**优先性**要解决的是这种情况：每一轨单听都完美，叠起来整体却混乱（p0134）。
-办法是**有意识地决定强调哪一个分部，再排出聚焦度的排序**（p0153）。
+**Priority** addresses the situation where every track sounds perfect on its own but the whole becomes chaotic when stacked (p0134).
+The remedy is to **deliberately decide which section to emphasise, then rank the focus accordingly** (p0153).
 
-**聚焦度**指听众注意力在某件乐器上的集中程度。
+**Focus** refers to how concentrated the listener's attention is on a given instrument.
 
-★ **排序必须逐小节变化**，不变就单调（p0153）。
-书里给的副歌前四小节示意是这样走的：人声始终最高，但钢琴、两把吉他、贝斯与鼓的相对位置
-每小节都在换，**没有任何一件是从头到尾固定在同一档的**。
+★ **The ranking must change bar by bar**, otherwise it becomes monotonous (p0153).
+The book's sketch of the first four bars of a chorus runs like this: the vocal is always the highest, but the relative positions of piano, two guitars, bass, and drums
+change every bar, **and none of them is fixed at the same level from start to finish**.
 
-### 7.3 ★ 调聚焦度只能靠减，不能靠加
+### 7.3 ★ Adjusting focus can only be done by subtraction, not by addition
 
-这是整套框架里最该记住的一条（p0154）：
+This is the single most important point in the whole framework (p0154):
 
-> **不是把高优先级分部的聚焦度调高，而是把低优先级分部的聚焦度调低。**
+> **Rather than raising the focus of the high-priority section, lower the focus of the low-priority sections.**
 
-压低次要声部之后，高优先级声部的聚焦度**相对地**就升上来了。
-反过来硬抬次级声部，它会**越过主旋律**，主次就乱了（p0154）。
+Once the secondary parts are pulled down, the focus of the high-priority part **rises relatively**.
+Conversely, forcibly lifting a secondary part will make it **overtake the main melody**, and the hierarchy falls into disorder (p0154).
 
-这条与本文 §4 的减法策略是同一个逻辑在不同层面：
-**§4 减的是密度，§7.3 减的是注意力。**
-它也给了 ARR-SPEC 里"主角序列"一个可执行的写法：
-**逐段（最好逐小节）写出聚焦度排序，而且写清楚这一档是靠压低谁得到的。**
+This is the same logic as the subtractive strategy in §4 of this document, applied at a different level:
+**§4 subtracts density; §7.3 subtracts attention.**
+It also gives the "lead sequence" in ARR-SPEC an executable form:
+**write out the focus ranking section by section (ideally bar by bar), and state clearly whose focus was lowered to achieve each level.**
 
-### 7.4 伴奏乐器让路的具体手段（p0166–0171）
+### 7.4 Concrete means of making way for accompaniment (p0166–0171)
 
-| 手段 | 做什么 |
+| Means | What it does |
 |---|---|
-| **延长钢琴音** | 把钢琴拉成长音，空出动态给吉他 |
-| **填补空隙** | 伴奏只在主奏的空隙里出声 |
-| **节奏抑制** | 压掉伴奏的节奏活跃度，不减音量也能降聚焦度 |
-| **主奏切换** | 两件轮流当主角，靠动态平衡交接 |
-| **八度齐奏** | 主奏吉他与另一件八度齐奏，整体抬一档 |
-| **贝斯动态同步** | 贝斯跟着主奏的动态走，不自己另起一套 |
+| **Extend the piano notes** | Stretch the piano into long notes to free up dynamic space for the guitar |
+| **Fill the gaps** | The accompaniment sounds only in the gaps left by the lead |
+| **Rhythmic suppression** | Reduce the rhythmic activity of the accompaniment; focus can drop without reducing volume |
+| **Lead switching** | Two instruments take turns as the lead, with the handover balanced by dynamics |
+| **Octave doubling** | Lead guitar doubled at the octave with another instrument, raising the whole by one level |
+| **Bass dynamic tracking** | The bass follows the dynamics of the lead rather than setting its own course |
 
-★ **注意这六条全都不是音量操作**，是写法操作。音量归 `mc-mix-intent`，
-**能在写法上解决的让路，不要留到混音去解决**。
+★ **Note that none of these six is a volume operation; they are all writing operations.** Volume belongs to `mc-mix-intent`,
+and **making way that can be solved in the writing should not be left to the mix to solve**.
 
 ---
 
-## 8. 不在本 skill 的部分
+## 8. Parts outside this skill
 
-| 内容 | 去哪 |
+| Content | Where it goes |
 |---|---|
-| 均衡器的作用与类型（第 14 章起，p0258–） | 混音的事，不归本包 |
-| 声像、深度、混响的**实操** | 混音的事；**意图**归 `mc-mix-intent` |
-| 用哪件乐器占这个频段 | `mc-orchestration` ／ `mc-sound-design` |
-| 什么时候进场退场 | `mc-arrangement-arch` |
+| The function and types of equalisers (from Chapter 14 onward, p0258–) | A matter for mixing; not part of this package |
+| The **practical application** of panning, depth, and reverb | A matter for mixing; the **intent** belongs to `mc-mix-intent` |
+| Which instrument occupies this band | `mc-orchestration` / `mc-sound-design` |
+| When to enter and exit | `mc-arrangement-arch` |

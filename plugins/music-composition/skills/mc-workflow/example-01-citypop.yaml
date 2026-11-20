@@ -1,56 +1,56 @@
-# ARR-SPEC 示例 ①：City Pop《末班电车》
-# 用途：正面样本，20 条自查全过；AB 实验的 B 组素材。
-# 这份规格刻意在每一条自查上都做出了明确选择，可当作"该写到多细"的标尺。
+# ARR-SPEC example ①: City Pop "Last Train" (《末班电车》)
+# Purpose: positive sample, all 20 self-check items pass; material for the B group in the AB experiment.
+# This spec deliberately makes an explicit choice on every self-check item, and can serve as a yardstick for "how detailed to be".
 
 spec_version: "1.0"
 
 meta:
-  title: "末班电车"
+  title: "Last Train (末班电车)"
   style_layer: "mc-style-citypop-rnb"
   key: "D major"
   mode: "ionian"
   meter: "4/4"
   tempo: 112
-  target_duration: "4:04"        # 114 小节 × 4 拍 ÷ 112 BPM = 244 s
+  target_duration: "4:04"        # 114 bars × 4 beats ÷ 112 BPM = 244 s
   deliverable: [full_mix, stems, midi, musicxml]
 
 intent:
-  one_thing: "一个人坐末班车回家时，忽然不想到站。"
+  one_thing: "A person takes the last train home, and suddenly doesn't want to get off at their stop."
   reference_pair:
-    - track: "山下達郎 - Sparkle"
-      borrow: "只借前奏那把 16 分音符干净吉他的持续织体，不借它的明亮情绪"
-    - track: "竹内まりや - Plastic Love"
-      borrow: "只借副歌人声与和声之间那层距离感（人声不贴脸），不借它的和声走向"
-  listener_situation: "夜里戴耳机通勤，听第一遍；注意力被窗外分走一半，所以记忆点必须在 20 秒内出现一次。"
+    - track: "Tatsuro Yamashita - Sparkle"
+      borrow: "only borrows the sustained texture of the clean guitar playing 16th notes over the intro, not its bright mood"
+    - track: "Mariya Takeuchi - Plastic Love"
+      borrow: "only borrows the sense of distance between the chorus vocal and the harmonies (the vocal does not sit in your face), not its harmonic movement"
+  listener_situation: "Commuting at night with headphones on, first listen; the window outside takes away half the attention, so a memorable point must appear within the first 20 seconds."
   emotional_arc:
-    - {section: I,  mood: "悬空、未定",         value: 2}
-    - {section: A1, mood: "克制的日常叙述",     value: 3}
-    - {section: B1, mood: "开始不安分",         value: 5}
-    - {section: C1, mood: "放任",               value: 8}
-    - {section: A2, mood: "退回日常，但回不去", value: 4}
-    - {section: B2, mood: "更急",               value: 6}
-    - {section: C2, mood: "彻底放任",           value: 9}
-    - {section: D,  mood: "空掉，后悔的一瞬",   value: 3}   # ← 转折在这里
-    - {section: C3, mood: "不后悔了",           value: 10}
-    - {section: O,  mood: "车门关上",           value: 4}
+    - {section: I,  mood: "suspended, undecided",            value: 2}
+    - {section: A1, mood: "restrained everyday narration",    value: 3}
+    - {section: B1, mood: "starts getting restless",          value: 5}
+    - {section: C1, mood: "letting go",                       value: 8}
+    - {section: A2, mood: "back to the everyday, but can't go back", value: 4}
+    - {section: B2, mood: "more urgent",                      value: 6}
+    - {section: C2, mood: "fully letting go",                 value: 9}
+    - {section: D,  mood: "emptied out, a moment of regret",  value: 3}   # ← the turn is here
+    - {section: C3, mood: "no regret anymore",                value: 10}
+    - {section: O,  mood: "car door closes",                  value: 4}
 
 material:
-  motif: "主歌首句的下行四音动机：级进两音后跳进三度，二拍长，起在第二拍的后半"
-  character: "松弛、往后靠"
+  motif: "Descending four-note motif of the first verse line: two stepwise notes, then a leap of a third; two beats long, starting in the second half of beat two"
+  character: "relaxed, leaning back"
   stated_in: [A1]
 
 form:
   - id: I
     name: "Intro"
-    bars: 6                       # ★ 非 8 的倍数：让开头就不对称
+    bars: 6                       # ★ not a multiple of 8: makes the opening asymmetric from the start
     start_bar: 1
     harmony: "|IVmaj7 |III7 |VIm7 |%  |IVmaj7 |V |"
     harmony_letters: "|Gmaj7 |F#7 |Bm7 |%  |Gmaj7 |A |"
-    melody_register: "中高"
+    melody_register: "mid-high"
     development: new
     energy: 2
     events: [ep_in, syn_lead_in]
-    note: "6 小节而非 8——第 5–6 小节是被砍掉一半的乐句，进人声时听感是'提前了'"
+    note: "6 bars rather than 8 — bars 5–6 are a phrase with half cut off, so when the vocal enters it sounds 'early'"
 
   - id: A1
     name: "Verse"
@@ -58,23 +58,23 @@ form:
     start_bar: 7
     harmony: "|Imaj7 |IIIm7 |IVmaj7 |V |VIm7 |IIIm7 |IVmaj7 |V |x2"
     harmony_letters: "|Dmaj7 |F#m7 |Gmaj7 |A |Bm7 |F#m7 |Gmaj7 |A |x2"
-    melody_register: "中低"
+    melody_register: "mid-low"
     development: new
     energy: 3
     events: [drums_in, bass_in, gtr_in, vocal_in]
-    note: "人声全程在中低音区，为副歌留出 6 度的抬升空间"
+    note: "The vocal stays in the mid-low register throughout, leaving room for a sixth-interval lift into the chorus"
 
   - id: B1
     name: "Pre-Chorus"
-    bars: 6                       # ★ 非 8：抬升句故意短，把副歌提前推出来
+    bars: 6                       # ★ not 8: the lift phrase is deliberately short, to push the chorus forward early
     start_bar: 23
     harmony: "|IIm7 |IIIm7 |IVmaj7 |#IVm7b5 |V |%  |"
     harmony_letters: "|Em7 |F#m7 |Gmaj7 |G#m7b5 |A |%  |"
-    melody_register: "中"
+    melody_register: "mid"
     development: sequence
     energy: 5
     events: [strings_teaser]
-    note: "#IVm7♭5 是全曲第一个调外和弦，作用是让副歌的 I 听起来像'终于到了'"
+    note: "#IVm7♭5 is the first out-of-key chord in the song; its role is to make the chorus's I feel like 'finally arrived'"
 
   - id: C1
     name: "Chorus"
@@ -82,23 +82,23 @@ form:
     start_bar: 29
     harmony: "|IVmaj7 |V |IIIm7 |VIm7 |IVmaj7 |V |Imaj7 |%  |x2"
     harmony_letters: "|Gmaj7 |A |F#m7 |Bm7 |Gmaj7 |A |Dmaj7 |%  |x2"
-    melody_register: "中高"
+    melody_register: "mid-high"
     development: new
     energy: 8
     events: [strings_in, syn_hook_returns]
-    note: "王道 4536。第一个字就是全段最高音，不铺垫"
+    note: "The 'royal road' (wangdao) progression, 4-5-3-6. The first syllable is the highest note of the whole section, with no lead-in."
 
   - id: A2
     name: "Verse"
-    bars: 12                      # ★ 比 A1 短 4 小节：第二段不许原样复制
+    bars: 12                      # ★ 4 bars shorter than A1: the second verse must not be a verbatim copy
     start_bar: 45
     harmony: "|Imaj7 |IIIm7 |IVmaj7 |V |VIm7 |IIIm7 |IVmaj7 |V |IIm7 |IIIm7 |IVmaj7 |V |"
     harmony_letters: "|Dmaj7 |F#m7 |Gmaj7 |A |Bm7 |F#m7 |Gmaj7 |A |Em7 |F#m7 |Gmaj7 |A |"
-    melody_register: "中低"
+    melody_register: "mid-low"
     development: vary
     energy: 4
     events: [gtr_out_half, strings_out]
-    note: "砍掉 A1 的第二遍前半，靠第 44 小节的 fill 掩盖接缝"
+    note: "Cut the first half of A1's second pass; cover the seam with the fill at bar 44"
 
   - id: B2
     name: "Pre-Chorus"
@@ -106,11 +106,11 @@ form:
     start_bar: 57
     harmony: "|IIm7 |IIIm7 |IVmaj7 |#IVm7b5 |V |%  |"
     harmony_letters: "|Em7 |F#m7 |Gmaj7 |G#m7b5 |A |%  |"
-    melody_register: "中高"
+    melody_register: "mid-high"
     development: repeat
     energy: 6
     events: [drums_build]
-    note: "与 B1 同和声，但人声高八度、鼓换成 16 分连击"
+    note: "Same harmony as B1, but the vocal is an octave higher and the drums switch to continuous 16th-note hits"
 
   - id: C2
     name: "Chorus"
@@ -118,35 +118,35 @@ form:
     start_bar: 63
     harmony: "|IVmaj7 |V |IIIm7 |VIm7 |IVmaj7 |V |Imaj7 |%  |x2"
     harmony_letters: "|Gmaj7 |A |F#m7 |Bm7 |Gmaj7 |A |Dmaj7 |%  |x2"
-    melody_register: "中高"
+    melody_register: "mid-high"
     development: repeat
     energy: 9
     events: [full_band, gtr_exit_after]
-    note: "进入前的最后半拍全体静止（见 subtraction_events）"
+    note: "The final half-beat before entry, all parts silent (see subtraction_events)"
 
   - id: D
     name: "Bridge"
-    bars: 10                      # ★ 非 8
+    bars: 10                      # ★ not 8
     start_bar: 79
     harmony: "|bVImaj7 |bVII |IIIm7 |VI7 |bVImaj7 |bVII |Imaj7 |V/V |V |%  |"
     harmony_letters: "|Bbmaj7 |C |F#m7 |B7 |Bbmaj7 |C |Dmaj7 |E7 |A |%  |"
-    melody_register: "低"
+    melody_register: "low"
     development: fragment
-    energy: 3                     # ★ 能量曲线的下降点
+    energy: 3                     # ★ the drop point of the energy curve
     events: [drums_out, bass_out, sax_in]
-    note: "★ 全曲唯一的离调段：♭VI/♭VII 借自同主音小调，VI7 与 V/V 是副属。鼓贝全撤，只剩电钢＋人声＋萨克斯"
+    note: "★ The only key-change section in the whole song: ♭VI/♭VII borrowed from the parallel minor of the same tonic; VI7 and V/V are secondary dominants. Drums and bass fully pulled out, leaving only electric piano + vocal + sax"
 
   - id: C3
     name: "Chorus"
-    bars: 18                      # ★ 比 C1/C2 多 2 小节的 tag
+    bars: 18                      # ★ 2 bars more tag than C1/C2
     start_bar: 89
     harmony: "|IVmaj7 |V |IIIm7 |VIm7 |IVmaj7 |V |Imaj7 |%  |x2 |IVmaj7 |V |"
     harmony_letters: "|Gmaj7 |A |F#m7 |Bm7 |Gmaj7 |A |Dmaj7 |%  |x2 |Gmaj7 |A |"
-    melody_register: "高"
+    melody_register: "high"
     development: recap
     energy: 10
     events: [all_in, vocal_ad_lib]
-    note: "末尾 2 小节 tag 不解决，直接挂在 V 上进 Outro"
+    note: "The tag in the last 2 bars does not resolve; it hangs on V and goes straight into the Outro"
 
   - id: O
     name: "Outro"
@@ -154,75 +154,75 @@ form:
     start_bar: 107
     harmony: "|IVmaj7 |III7 |VIm7 |%  |IVmaj7 |III7 |VIm7 |%  |"
     harmony_letters: "|Gmaj7 |F#7 |Bm7 |%  |Gmaj7 |F#7 |Bm7 |%  |"
-    melody_register: "中高"
+    melody_register: "mid-high"
     development: fragment
     energy: 4
     events: [vocal_out, sax_solo, fade_none]
-    note: "回到 Intro 的和声但停在 VIm——出发时是 D，回来是 Bm，'没到站'。不淡出，硬切"
+    note: "Returns to the Intro's harmony but stops on VIm — set out from D, came back to Bm: 'didn't reach the stop'. Not faded out; hard cut."
 
 arrangement:
   roster:
-    - {id: drums_acoustic, midi: {program: 0, bank: 0, channel: 10}, instrument: "70 年代收音的原声鼓＋gated snare", role: "律动",     band: "60 Hz–12 kHz", entry: A1, exit: end,  note: "D 段整段静默"}
-    - {id: bass_el,        midi: {program: 33, bank: 0, channel: 2}, instrument: "Precision Bass，指弹，短延音",     role: "低频",     band: "40–250 Hz",    entry: A1, exit: end,  note: "抢拍 12 ms"}
-    - {id: ep_rhodes,      midi: {program: 4, bank: 0, channel: 3}, instrument: "Rhodes Mk I ＋ 轻 chorus",         role: "和声铺底", band: "200 Hz–2 kHz", entry: I,  exit: end,  note: "音区限 C3–C4"}
-    - {id: gtr_clean_16th, midi: {program: 27, bank: 0, channel: 4}, instrument: "Strat 单线圈，16 分音符闷音刷弦",  role: "织体",     band: "1–3 kHz",      entry: A1, exit: C2,   note: "★ D 段之后不再出现，把空间让给萨克斯"}
-    - {id: syn_lead_saw,   midi: {program: 81, bank: 0, channel: 5}, instrument: "Prophet 类锯齿单音，慢滑音",       role: "记忆点",   band: "1.5–4 kHz",    entry: I,  exit: end,  note: "只弹 hook，不做垫底"}
-    - {id: strings_pad,    midi: {program: 48, bank: 0, channel: 6}, instrument: "弦乐群，高把位长音",               role: "色彩",     band: "400 Hz–6 kHz", entry: C1, exit: end,  note: "A2 退出一次，C2 再回来"}
-    - {id: sax_tenor,      midi: {program: 66, bank: 0, channel: 7}, instrument: "次中音萨克斯",                     role: "旋律",     band: "250 Hz–4 kHz", entry: D,  exit: O,    note: "★ 全曲过半才进场，Outro 是它的"}
-    - {id: vocal_lead,     midi: {program: 53, bank: 0, channel: 1}, instrument: "女声，气声偏多，不贴脸",           role: "旋律",     band: "200 Hz–8 kHz", entry: A1, exit: C3,   note: "★ Outro 无人声"}
+    - {id: drums_acoustic, midi: {program: 0, bank: 0, channel: 10}, instrument: "70s-recorded acoustic drums + gated snare", role: "groove",         band: "60 Hz–12 kHz", entry: A1, exit: end,  note: "D section entirely silent"}
+    - {id: bass_el,        midi: {program: 33, bank: 0, channel: 2}, instrument: "Precision Bass, fingerstyle, short sustain", role: "low end",     band: "40–250 Hz",    entry: A1, exit: end,  note: "rushes the beat by 12 ms"}
+    - {id: ep_rhodes,      midi: {program: 4, bank: 0, channel: 3}, instrument: "Rhodes Mk I + light chorus",              role: "harmonic bed", band: "200 Hz–2 kHz", entry: I,  exit: end,  note: "register limited to C3–C4"}
+    - {id: gtr_clean_16th, midi: {program: 27, bank: 0, channel: 4}, instrument: "Strat single-coil, muted 16th-note strumming", role: "texture",  band: "1–3 kHz",      entry: A1, exit: C2,   note: "★ does not appear after section D, giving the space to the sax"}
+    - {id: syn_lead_saw,   midi: {program: 81, bank: 0, channel: 5}, instrument: "Prophet-style sawtooth monophonic line, slow glide", role: "memory point", band: "1.5–4 kHz", entry: I, exit: end,  note: "plays only the hook, not a pad"}
+    - {id: strings_pad,    midi: {program: 48, bank: 0, channel: 6}, instrument: "string section, long notes in high position", role: "color",     band: "400 Hz–6 kHz", entry: C1, exit: end,  note: "exits once in A2, returns in C2"}
+    - {id: sax_tenor,      midi: {program: 66, bank: 0, channel: 7}, instrument: "tenor saxophone",                         role: "melody",     band: "250 Hz–4 kHz", entry: D,  exit: O,    note: "★ enters only past the halfway point of the song; the Outro belongs to it"}
+    - {id: vocal_lead,     midi: {program: 53, bank: 0, channel: 1}, instrument: "female voice, breathy, not in your face", role: "melody",     band: "200 Hz–8 kHz", entry: A1, exit: C3,   note: "★ no vocal in the Outro"}
 
-  depth_map: {vocal_lead: 前景, syn_lead_saw: 前景, sax_tenor: 前景, gtr_clean_16th: 中景, drums_acoustic: 中景, bass_el: 背景, ep_rhodes: 背景, strings_pad: 背景}
-  bass_kick_relation: {mode: 交织式, detail: "A/B 段贝斯避开底鼓点（互答），C 段与底鼓重合加厚（结合）；D 段无鼓"}
+  depth_map: {vocal_lead: foreground, syn_lead_saw: foreground, sax_tenor: foreground, gtr_clean_16th: midground, drums_acoustic: midground, bass_el: background, ep_rhodes: background, strings_pad: background}
+  bass_kick_relation: {mode: interlocking, detail: "In the A/B sections the bass avoids the kick hits (answering each other); in the C section it coincides with the kick and thickens (combining); no drums in section D"}
 
   spectrum_budget:
-    - {band: "40–120 Hz",   owner: bass_el,        competitors: [drums_acoustic], resolution: "Kick 侧链 Bass 30 ms 释放，Bass 在 Kick 击点让出 3 dB"}
-    - {band: "200–500 Hz",  owner: ep_rhodes,      competitors: [strings_pad, vocal_lead], resolution: "错开音区：ep 限 C3–C4，strings 只写 C4 以上"}
-    - {band: "1–3 kHz",     owner: gtr_clean_16th, competitors: [syn_lead_saw],   resolution: "交替出现：gtr 只在 A/B 段，syn_lead 只在 I/C/O 段的句尾空档"}
-    - {band: "6–12 kHz",    owner: drums_acoustic, competitors: [strings_pad],    resolution: "strings 高频滚降 8 kHz，把空气感留给 hihat"}
+    - {band: "40–120 Hz",   owner: bass_el,        competitors: [drums_acoustic], resolution: "Kick sidechains the bass; bass releases over 30 ms and yields 3 dB on the kick hit"}
+    - {band: "200–500 Hz",  owner: ep_rhodes,      competitors: [strings_pad, vocal_lead], resolution: "Stagger the registers: ep limited to C3–C4, strings written only above C4"}
+    - {band: "1–3 kHz",     owner: gtr_clean_16th, competitors: [syn_lead_saw],   resolution: "Alternating: gtr appears only in the A/B sections, syn_lead only in the phrase-end gaps of the I/C/O sections"}
+    - {band: "6–12 kHz",    owner: drums_acoustic, competitors: [strings_pad],    resolution: "strings roll off above 8 kHz, leaving the air to the hi-hat"}
 
   energy_curve: {I: 2, A1: 3, B1: 5, C1: 8, A2: 4, B2: 6, C2: 9, D: 3, C3: 10, O: 4}
 
   subtraction_events:
-    - {at: {section: C2, bar_offset: -1, beat: 4.5}, what: "进入前最后半拍全体静止（含鼓）", why: "第二段副歌不能靠更响赢第一段，靠前面那个洞"}
-    - {at: {section: D}, what: "鼓与贝斯整段撤出，只剩电钢＋人声＋萨克斯", why: "全曲能量最低点必须在 C3 之前，否则 C3 不成立"}
-    - {at: {section: A2}, what: "弦乐与半数吉他退出", why: "第二段主歌要比第一段更空，而不是更满"}
+    - {at: {section: C2, bar_offset: -1, beat: 4.5}, what: "entire band (including drums) fully silent for the final half-beat before entry", why: "The second chorus cannot win over the first by being louder; it wins through the hole before it"}
+    - {at: {section: D}, what: "drums and bass fully removed for the whole section, leaving only electric piano + vocal + sax", why: "The lowest energy point of the song must come before C3, otherwise C3 does not hold"}
+    - {at: {section: A2}, what: "strings and half the guitars exit", why: "The second verse must be emptier than the first, not fuller"}
 
   hooks:
     vocal_hook:
-      where: "C1 第 1–2 小节"
-      shape: "第一个字直接落在全段最高音，随后 5→3 下行，不做铺垫"
+      where: "C1 bars 1–2"
+      shape: "The first syllable lands directly on the highest note of the section, then steps down 5→3, with no lead-in"
     arrangement_hook:
-      what: "syn_lead_saw 的三音上行 riff：D–E–F#，末音延长一拍半后慢滑下小三度"
+      what: "syn_lead_saw three-note ascending riff: D–E–F#; the last note is held for a beat and a half, then slides slowly down a minor third"
       first_at: I
       recurs_at: [C1, C2, C3, O]
 
   groove:
     feel: "straight16"
     push_pull:
-      - {part: bass_el,        offset_ms: -12, note: "贝斯抢拍，是这首歌'往前赶'的唯一来源"}
-      - {part: gtr_clean_16th, offset_ms: 8,   note: "刷弦略拖，与贝斯拉开，产生宽度错觉"}
-      - {part: drums_acoustic, offset_ms: 0,   note: "鼓守网格，做参照系"}
+      - {part: bass_el,        offset_ms: -12, note: "bass rushes the beat; the only source of the song's 'driving forward' feel"}
+      - {part: gtr_clean_16th, offset_ms: 8,   note: "strumming dragged slightly, separated from the bass, producing an illusion of width"}
+      - {part: drums_acoustic, offset_ms: 0,   note: "drums hold the grid as the reference frame"}
     fill_policy:
       bars: [22, 28, 44, 62, 78, 88, 106]
-      rationale: "只在段落切换前一小节；第 44 小节是唯一的段中 fill，用来掩盖 A2 比 A1 短 4 小节的接缝。刻意不等距。"
+      rationale: "Only in the bar before section changes; bar 44 is the only mid-section fill, used to cover the seam where A2 is 4 bars shorter than A1. Deliberately unevenly spaced."
 
 vocal:
-  persona: "二十多岁的女声，中低音区为主（副歌抬到中高），气声偏多、不贴脸，八十年代东京 city pop 的都会质感"
-  delivery: "气声偏多的半声，咬字松，不追求字正腔圆——这首歌是自言自语不是宣告"
+  persona: "Female voice in her twenties, mainly lower-mid register (lifted to mid-high in the chorus), breathy and not in your face, with the urban texture of 1980s Tokyo city pop"
+  delivery: "Half-voiced with plenty of breath; loose diction, not aiming for crisp pronunciation — this song is talking to oneself, not making a declaration"
   dynamics_by_section: {I: 0, A1: 3, B1: 5, C1: 7, A2: 4, B2: 6, C2: 8, D: 2, C3: 9, O: 0}
   phrasing:
-    - {line: "C1 第一句", timing: "抢 40ms", why: "副歌第一个字就是最高音，抢进来才不像在铺垫"}
-    - {line: "A2 每句句尾", timing: "拖 80ms", why: "第二段主歌要比第一段更懒，靠拖不靠减音符"}
-    - {line: "D 段末两句", timing: "自由", why: "鼓贝已撤，让人声脱离网格"}
+    - {line: "C1 first line", timing: "rushed 40 ms", why: "The first syllable of the chorus is the highest note; rushing it in keeps it from sounding like a lead-in"}
+    - {line: "end of each A2 line", timing: "dragged 80 ms", why: "The second verse must be lazier than the first; achieved by dragging rather than cutting notes"}
+    - {line: "last two lines of D", timing: "free", why: "Drums and bass have been pulled, so let the vocal leave the grid"}
   breath_points:
-    - {section: C1, line: 1, after_syllable: 8, note: "第 2 小节后换气，换气声保留，不剪掉"}
-    - {section: D, line: 4, after_syllable: 0, note: "D 段最后 2 小节完全不唱（留白处，见 self_audit）"}
+    - {section: C1, line: 1, after_syllable: 8, note: "Breathe after bar 2; keep the breath sound, don't cut it"}
+    - {section: D, line: 4, after_syllable: 0, note: "The last 2 bars of section D are not sung at all (the silence, see self_audit)"}
   ad_libs:
-    - {at: {section: C2}, what: "句尾一声极轻的上滑，只此一次"}
-    - {at: {section: C3, bar_offset: 12}, what: "第 13–16 小节的 tag 上叠即兴，与主旋律错开"}
-  chorus_variation: "C1 直白；C2 尾音拖长半拍；C3 第 3 句改唱低八度、第 4 句才回到原音区"
-  stacking: "C1 无和声；C2 加三度一层；C3 加三度＋六度两层，仅在'不想到站'那一句"
-  register_arc: "A 段中低 → C 段中高 → D 段回落到低 → C3 全曲最高"
+    - {at: {section: C2}, what: "one very light upward slide at the end of a phrase, only once"}
+    - {at: {section: C3, bar_offset: 12}, what: "improvised ad-libs layered on the tag in bars 13–16, offset from the main melody"}
+  chorus_variation: "C1 straightforward; C2 last note held an extra half-beat; C3 line 3 sung an octave lower, line 4 returns to the original range"
+  stacking: "C1 no harmony; C2 one layer of thirds added; C3 two layers of thirds plus sixths, only on the line 'doesn't want to get off'"
+  register_arc: "A section mid-low → C section mid-high → D section falls back to low → C3 highest of the whole song"
 
 mix_intent:
   ducking_map:
@@ -234,22 +234,22 @@ mix_intent:
   dynamics:
     target_DR_dB: 10
     notes:
-      - "D 段必须比 C2 低 6 dB（短时响度），这是全曲唯一允许的大落差"
-      - "C3 只比 C2 高 1.5 dB，多出来的冲击靠编制和 18 小节的长度，不靠音量"
+      - "Section D must be 6 dB lower than C2 (short-term loudness); this is the only large drop allowed in the song"
+      - "C3 is only 1.5 dB louder than C2; the extra impact comes from the lineup and the 18-bar length, not from volume"
   width_map: {I: medium, A1: narrow, B1: medium, C1: wide, A2: narrow, B2: medium, C2: wide, D: narrow, C3: wide, O: medium}
   loudness_target: "-10 LUFS integrated"
 
 render:
   suno:
     style_prompt: "1980s Japanese city pop, 112 BPM, D major, Rhodes electric piano, 16th-note muted clean guitar, electric bass playing ahead of the beat, gated reverb snare, analog saw synth lead riff, tenor saxophone solo in the bridge and outro, female vocal with breathy tone mixed back, warm tape saturation"
-    # section_tags 由 form[].name 派生，不手填
+    # section_tags are derived from form[].name, not filled in by hand
     exclude: ["EDM drop", "trap hi-hats", "modern sidechain pumping", "orchestral epic", "fade out ending"]
     knobs: {model: "v4.5+", weirdness: "35%", style_influence: "65%"}
   yue:
     genre_tags: "city pop, japanese, female vocal, rhodes electric piano, clean guitar, tenor saxophone, analog synth lead, 112 bpm, D major, nostalgic, night drive"
     structure: ["intro", "verse", "pre-chorus", "chorus", "verse", "pre-chorus", "chorus", "bridge", "chorus", "outro"]
     ref_audio: null
-    abc: null   # 由 mc-symbolic-score 编译；端到端跑通前留空
+    abc: null   # Compiled by mc-symbolic-score; left empty until the end-to-end pipeline runs
   midi:
     instrument_map:
       drums_acoustic: {name: "Standard Kit", program: 0, bank: 0, channel: 10}
@@ -259,21 +259,21 @@ render:
       syn_lead_saw: {name: "Lead 2 (sawtooth)", program: 81, bank: 0, channel: 5}
       strings_pad: {name: "String Ensemble 1", program: 48, bank: 0, channel: 6}
       sax_tenor: {name: "Tenor Sax", program: 66, bank: 0, channel: 7}
-      vocal_lead: {name: "Voice Oohs（Suno/YuE 生成，MIDI 基准里占位）", program: 53, bank: 0, channel: 1}
+      vocal_lead: {name: "Voice Oohs (generated by Suno/YuE; placeholder in the MIDI baseline)", program: 53, bank: 0, channel: 1}
 
 checks:
   self_audit:
-    - "[x] one_thing 念出来是一句话——'不想到站'，不是两件事"
-    - "[x] 两个参照各借的点不重叠：一个借织体，一个借人声距离感"
-    - "[x] arrangement_hook 不看谱能哼出来：三个音的上行"
-    - "[x] melody_register 有对比：A 段中低，C 段中高，D 段低，C3 高"
-    - "[x] 留白处：D 段最后 2 小节人声停住不唱，只有萨克斯——'后悔的那一瞬'不说出来"
+    - "[x] one_thing reads as one sentence — 'doesn't want to get off' — not two things"
+    - "[x] the points each reference borrows do not overlap: one borrows texture, the other the distance of the vocal"
+    - "[x] arrangement_hook can be hummed without reading the score: an ascending three-note riff"
+    - "[x] melody_register has contrast: A section mid-low, C section mid-high, D section low, C3 high"
+    - "[x] Silence: in the last 2 bars of section D the vocal stops singing and only the sax remains — the 'moment of regret' is not spoken"
   exemptions: []
 
-# 消息通道（schema §5.3）：给混音的一条，示范写法
+# Message channel (schema §5.3): one message to the mixing stage, showing how to write one
 messages:
   - from: music
     to: sound
     about: ["mix_intent.dynamics", "arrangement.subtraction_events"]
-    says: "D 段比 C2 低 6 dB 是全曲唯一的大落差，C2 前最后半拍的全体静止也是有意的；-10 LUFS 的目标下请留住这两处，别让总线压缩把它们填平。留不住的话回一句，本包改 C3 的编制来补"
+    says: "The D section sitting 6 dB below C2 is the only large drop in the whole song, and the full-band silence in the final half-beat before C2 is also deliberate. At the -10 LUFS target, please keep these two points and do not let bus compression fill them in. If they cannot be kept, reply with a note, and this package will change the C3 lineup to compensate."
     status: open

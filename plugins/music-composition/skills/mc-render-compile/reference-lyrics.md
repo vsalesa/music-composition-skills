@@ -1,75 +1,75 @@
-# mc-render-compile 参考：歌词进后端的格式
+# mc-render-compile Reference: Lyric Format Sent to the Backend
 
-> [SKILL.md](SKILL.md) §5.3 讲歌词从哪来、怎么按段落 id 分块；本文件放**分好的块送进后端时的格式规则**：换行、换气、拖腔、标点与括号、注释、纯器乐段，以及交之前查什么。
-> 歌词原文在 `meta.upstream.lyrics.sections`，本包只读。下面说的"加标记""去掉"都只落在送进后端的那一份（写回 `render.<backend>`），原文不动。
+> [SKILL.md](SKILL.md) §5.3 covers where lyrics come from and how they are chunked by section id. This file holds **the formatting rules for the chunked blocks as they are sent to the backend**: line breaks, breath points, held notes, punctuation and brackets, comments, instrumental sections, and what to check before sending.
+> The original lyric text lives in `meta.upstream.lyrics.sections`, which this package only reads. The "add markers" and "remove" steps below apply only to the copy sent to the backend (written back to `render.<backend>`); the original is left untouched.
 >
-> ⚠ 这是通用经验：拖腔写法、标点与括号、空行与单换行在各后端上的实际反应，以实测为准。
+> ⚠ These are general lessons: how each backend actually reacts to held-note notation, punctuation and brackets, and blank lines versus single line breaks should be decided by testing.
 
 ---
 
-## 1. 换行是指令，不是排版
+## 1. Line breaks are instructions, not layout
 
-歌词栏里段落内的每个换行，后端都当成乐句边界读（SKILL §5.3）。后果：
+Every line break inside a section's lyric block is read by the backend as a phrase boundary (SKILL §5.3). The consequences:
 
-| 送进去的样子 | 后端理解成 |
+| What is sent | What the backend understands |
 |---|---|
-| 一句拆成两行 | **两个乐句**，中间会换气 |
-| 两句并成一行 | **一个长乐句**，中间不换气 |
-| 空一行 | 更长的停顿 |
+| One line split into two | **Two phrases**, with a breath between them |
+| Two lines merged into one | **One long phrase**, with no breath between them |
+| A blank line | A longer pause |
 
-所以 `meta.upstream.lyrics.sections[].lines` 的一个元素就是送进去的一行：照原样分行，不合并、不拆开。
+So each element of `meta.upstream.lyrics.sections[].lines` is one line as sent: keep the lines exactly as they are, neither merging nor splitting them.
 
-## 2. 换气点要落在换行处
+## 2. Breath points must fall on line breaks
 
-`vocal.breath_points` 记的是第几行、第几个音节之后换气。只吃文本歌词的后端，换气只能靠换行表达，两边对不上时：
+`vocal.breath_points` records after which line and which syllable a breath is taken. For backends that accept only plain-text lyrics, breathing can be expressed only through line breaks. When the two do not match:
 
-- **换气点在行中** → 后端不会在那儿换气，唱的人会一口气憋到行末
-- **换行处没有换气点**（设计上要连唱的两行）→ 后端照样在换行处停，多出一处停顿
+- **Breath point inside a line** → the backend will not breathe there, and the singer has to hold the breath until the end of the line
+- **No breath point at a line break** (two lines that are meant to be sung without stopping) → the backend still pauses at the break, adding an extra pause
 
-对不上的，在 `checks.exemptions` 记一条（这个后端表达不了），需要改词的分行就写一条 `messages` 给 `lyrics`，说清哪一段哪一行。领奏谱与符号路径能把行中换气写成 breath-mark（`mc-symbolic-score`），不受这条限制。
+Record each mismatch as an entry in `checks.exemptions` (this backend cannot express it). If a line division needs to change, write a `messages` entry for `lyrics` saying which section and which line. The lead-sheet and symbolic paths can write mid-line breaths as breath marks (`mc-symbolic-score`), so this limitation does not apply to them.
 
-★ **自检动作**：把要送进去的歌词按行念一遍，每行末尾吸一口气。念不下来，就是分行和换气没对上。
+★ **Self-check action**: read the lyrics to be sent aloud, line by line, taking a breath at the end of each line. If you cannot read it through, the line divisions and breath points do not match.
 
-## 3. 拖腔
+## 3. Held notes
 
-后端看不出你想让哪个字拖长。要拖腔，就在送进后端的那份歌词里显式写：常见的是重复元音（`a-a-ah`）或用连字符，不同后端的写法不同，以实测为准。走符号路径时时值已经在谱面上，不用另加。
+The backend cannot tell which syllable you want stretched. To hold a note, write it explicitly in the lyrics copy sent to the backend. The usual methods are repeating a vowel (`a-a-ah`) or using hyphens; the notation differs between backends, so decide by testing. On the symbolic path the durations are already on the score, so nothing needs to be added.
 
-## 4. 标点与括号
+## 4. Punctuation and brackets
 
-| 元素 | 后端通常怎么处理 | 编译时 |
+| Element | How backends usually handle it | At compile time |
 |---|---|---|
-| **逗号、句号** | 多数忽略，但可能被当作轻微停顿 | 能不带就不带，停顿靠换行表达更可靠 |
-| **圆括号 `()`** | ★ 常被理解为和声、伴唱（backing vocal） | 只留给伴唱与和声应答；**不用括号做注释** |
-| **方括号 `[]`** | ★ 保留给段落标签 | 歌词正文里不出现 |
-| **省略号、破折号** | 行为不确定 | 避免 |
-| **大写**（英文） | 可能影响强调 | 按正常书写 |
-| **注释、创作说明** | ★ 会被当成词唱出来 | ★★ 不进歌词栏，见 §5 |
+| **Commas, full stops** | Mostly ignored, though sometimes read as a slight pause | Leave them out where possible; line breaks are a more reliable way to express pauses |
+| **Round brackets `()`** | ★ Often read as harmony or backing vocals | Reserve them for backing vocals and vocal responses only; **do not use brackets for comments** |
+| **Square brackets `[]`** | ★ Reserved for section labels | Do not appear in the lyric text |
+| **Ellipses, dashes** | Behaviour is unpredictable | Avoid |
+| **Capitalisation** (English) | May affect emphasis | Write normally |
+| **Comments, performance notes** | ★ Will be sung as words | ★★ Keep out of the lyric block; see §5 |
 
-## 5. 注释不进歌词栏
+## 5. Comments stay out of the lyric block
 
-歌词栏里的每个字都会被唱出来。在词里写一句"这里要重复三遍"，后端会**把这句话唱出来**，这是最常见的事故。
+Every character in the lyric block gets sung. If you write a line such as "repeat this three times" in the lyrics, the backend will **sing that sentence aloud**. This is the most common accident.
 
-- 编曲、演唱上的要求写进 style_prompt、`vocal`、`form[].note`，不写进歌词栏
-- 读进来的歌词里混着说明：说明不送进歌词栏，它要求的事照 `form[]` 编（该重复的段落在分块里照写）；再写一条 `messages` 给 `lyrics`
+- Requirements for the arrangement or the vocal go in `style_prompt`, `vocal`, or `form[].note`, not in the lyric block
+- If the source lyrics contain notes mixed in with the text, do not send the notes to the lyric block. Carry out what they ask through `form[]` (a section that should repeat is written out in full in the chunks). Then write a `messages` entry for `lyrics`
 
-## 6. 纯器乐段
+## 6. Instrumental sections
 
-`[Instrumental]` 下面不放词：后端按标签分配段落位置，塞了词会被当成要唱的乐句。
-★ 但**标签要留着**：少了这一格，后面的段落整体前移，后端拿下一个标签去顶这一段的位置。前奏、间奏、尾奏在 `form[]` 里有 id、在歌词里没有，编译时照 `form[]` 放标签、不放词。
+Put no words under `[Instrumental]`. The backend assigns section positions by label, and any words placed there will be sung as if they were a phrase.
+★ However, **keep the label**. If this slot is removed, all later sections shift forward, and the backend uses the next label to fill this section's position. Intros, interludes, and outros have ids in `form[]` but none in the lyrics, so at compile time place the label from `form[]` and place no words.
 
-## 7. 哪些后端接受歌词，倒字在哪儿算数
+## 7. Which backends accept lyrics, and where the character-to-note alignment counts
 
-接不接受看 `backends.yaml` 的 `accepts.lyrics`：`false` 的（Stable Audio）没有人声，歌词不送。符号路径不走歌词栏，歌词随谱走（ABC 的 `w:` 行、MusicXML 逐音节；MIDI 只能当文本事件，见 `mc-symbolic-score`）。
+Whether a backend accepts lyrics is determined by `accepts.lyrics` in `backends.yaml`. Backends where it is `false` (Stable Audio) have no vocals, so lyrics are not sent. The symbolic path does not use the lyric block; lyrics travel with the score (the `w:` line in ABC, syllable by syllable in MusicXML; MIDI can carry them only as text events, see `mc-symbolic-score`).
 
-★ **中文词的倒字检查只在旋律被执行时兑现。** 倒字是对着规格里的旋律查的。能同时吃词和谱的后端（YuE2 注入 ABC）唱的就是这条旋律，查过的结果在生成前就锁住了；其余后端只能提示旋律，旋律由模型自己写，查过的结果在它们那儿不保证兑现。
+★ **The Chinese tone-setting check only takes effect when the melody is executed.** The tone-setting check is run against the melody in the spec. For backends that accept both lyrics and score (YuE2 injects ABC), the melody being sung is the one that was checked, so the result is locked in before generation. Other backends can only be given the melody as a hint, and the model writes the melody itself, so the checked result is not guaranteed to hold for them.
 
-## 8. 交给后端之前必过（接 SKILL §11）
+## 8. Checks before handing off to the backend (links to SKILL §11)
 
-- [ ] 目标后端**确实接受歌词**（`accepts.lyrics` 不是 `false`）
-- [ ] 分行照 `meta.upstream.lyrics.sections[].lines` 原样，没有合并或拆开
-- [ ] 按行念过，每行末尾能换气；行中的换气点记了豁免或发了消息
-- [ ] `[Instrumental]` 段**留了标签但没放词**
-- [ ] ★★ 歌词栏里**没有任何注释、创作说明**
-- [ ] 圆括号只用于**伴唱**，方括号只用于**段落标签**
-- [ ] 标点尽量少，停顿靠换行
-- [ ] 中文：若后端只能提示旋律，**知道倒字检查的结果不保证兑现**
+- [ ] The target backend **does accept lyrics** (`accepts.lyrics` is not `false`)
+- [ ] Line divisions match `meta.upstream.lyrics.sections[].lines` exactly, with no merging or splitting
+- [ ] Read aloud line by line, with a breath possible at the end of each line; mid-line breath points are recorded as exemptions or raised as messages
+- [ ] `[Instrumental]` sections **keep their label but have no words**
+- [ ] ★★ The lyric block contains **no comments or performance notes**
+- [ ] Round brackets are used only for **backing vocals**, and square brackets only for **section labels**
+- [ ] Punctuation is kept to a minimum; pauses are handled through line breaks
+- [ ] Chinese: if the backend can only be given the melody as a hint, **know that the tone-setting check is not guaranteed to hold**

@@ -1,280 +1,280 @@
-# mc-style-hiphop 参考：采样处理、flow 记谱、delivery 参数、术语表
+# mc-style-hiphop Reference: Sample Processing, Flow Notation, Delivery Parameters, Glossary
 
-> [SKILL.md](SKILL.md) 讲判断与取舍；本文件放**查表用的细则**。
-> 引用约定：Schloss《Making Beats》写作 `Schloss p0163`；Edwards 两本写作 `《How to Rap》p0142`、`《How to Rap 2》p0031`；Charnas《Dilla Time》无页号，按**章**写作 `第 8 章`，全书章目录见 reference-vocal.md §6。
+> [SKILL.md](SKILL.md) covers judgment and trade-offs; this file holds the **detailed lookup tables**.
+> Citation conventions: Schloss, *Making Beats*, is cited as `Schloss p0163`; Edwards's two books as `How to Rap p0142` and `How to Rap 2 p0031`; Charnas, *Dilla Time*, has no page numbers and is cited by **chapter** as `Chapter 8`. The full chapter table of contents is in reference-vocal.md §6.
 
 ---
 
-## 1. 从 break 到 beat：搭建步骤表
+## 1. From Break to Beat: Build Step Table
 
-### 1.1 三个动词先钉死
+### 1.1 Pin Down Three Verbs First
 
-| 动词 | 定义 | 出处 |
+| Verb | Definition | Source |
 |---|---|---|
-| **looping** | 采一或多小节，几乎不改地重复 | Schloss p0121 |
-| **chopping** | 把采样切成更小片段重新排序，让连续的演奏听起来像拼贴；可以用碎片拼出原曲没有的旋律 | Schloss p0166 |
-| **flipping** | 任何实质性的创造性改变（包含但不限于 chop） | Schloss p0179 |
+| **looping** | Sample one or more bars and repeat them with almost no change | Schloss p0121 |
+| **chopping** | Cut a sample into smaller fragments and reorder them so that continuous performance sounds like collage; fragments can be used to assemble a melody the original never had | Schloss p0166 |
+| **flipping** | Any substantial creative change (including, but not limited to, chopping) | Schloss p0179 |
 
-**chopping 已经取代整段 loop 成为主流做法**（Schloss p0166）。理由有两层：
-- 审美——Vitamin D 要的是采样的**纹理和声音**，不是原曲的**作曲**；作曲背后有别人的情感和意图（Schloss p0179）。
-- 务实——旧唱片被采得差不多了（Domino，Schloss p0179）；四小节整 loop 的 beat"留着也卖不掉"（King Otto，Schloss p0195）。
+**Chopping has replaced whole-loop sampling as the mainstream practice** (Schloss p0166). There are two reasons:
+- Aesthetic: Vitamin D wants the **texture and sound** of the sample, not the **composition** of the original; a composition carries someone else's feeling and intent (Schloss p0179).
+- Practical: old records have been mostly sampled out (Domino, Schloss p0179); a four-bar straight loop "won't sell even if you keep it" (King Otto, Schloss p0195).
 
-★ 但**不为 chop 而 chop**：Jake One——"我在乎的是听起来怎样，不管他 loop 还是 chop"（Schloss p0182）。
+★ But **don't chop for the sake of chopping**: Jake One: "What I care about is how it sounds, whether he loops or chops" (Schloss p0182).
 
-### 1.2 十步流程
+### 1.2 The Ten-Step Process
 
-| 步 | 做什么 | 判据 / 细节 | 出处 |
+| Step | What to do | Criterion / detail | Source |
 |---|---|---|---|
-| **① 先鼓** | Mr. Supreme：*"Usually you start with the drums … that's the backbone and the heart of it."* | 鼓搭对了，底下放什么都对 | Schloss p0154 |
-| **② 试装** | 找到一段觉得对的声音，先在 downbeat 上**切进去跟着跑**，听合不合再决定采不采 | 这是 DJ 技能对制作人的直接用处 | Schloss p0069 |
-| **③ 截断** | **truncate**：定死每个采样的起点与终点 | 起止点决定 attack 有没有被削掉、尾巴留多长 | 第 5 章 |
-| **④ 循环与叠层** | loop & layer：让几个采样层同时跑 | 层与层之间是"关系"，不是"配器" | 第 5 章；Schloss p0165 |
-| **⑤ 定段长** | **用小节数定 intro / verse / chorus 的长度** | MPC 允许非四拍循环："You can loop around every three beats, or five, or six, or seven if you want."（第 5 章） | 第 5 章 |
-| **⑥ 切碎重排** | DJ Topspin：只要一个**一拍半**的片段，就想"怎么把它变成十六拍、听起来像现场"；四个一拍半可以拼出六拍 | 碎片长度不必是整拍 | Schloss p0157 |
-| **⑦ 锁住** | "locking up" a beat：各元素进入自我维持的关系 | ★ **锁没锁上是有无的问题**——没锁上就不是 beat | Schloss p0154 |
-| **⑧ 检查垂直干扰** | 采样里从来不止一个声音（八九个人在演奏）；采键盘音色时里面可能带着一个小 hi-hat | **它不在你的拍上，会干扰你的鼓**——这是采样型最常见的隐性冲突 | Schloss p0157–0158 |
-| **⑨ 统一音色** | 军鼓来自 70 年代摇滚唱片、hat 来自 50 年代爵士、kick 来自 80 年代鼓机，要让它们**听起来自然** | Prince Paul：采 60 年代的东西就不能配 *Planet Rock* 那种激光鼓，"一切保持同一种纹理" | Schloss p0161、p0081 |
-| **⑩ 加减层** | 按段落引入和撤走 loop 与 stabs | 这是这个流派**唯一的结构手段**（SKILL §6.2） | Schloss p0051、p0151 |
+| **① Drums first** | Mr. Supreme: *"Usually you start with the drums … that's the backbone and the heart of it."* | Get the drums right, and whatever goes underneath is right | Schloss p0154 |
+| **② Trial fit** | Find a sound you like, first cut it in on the downbeat and run it along, check whether it fits, then decide whether to sample it | This is the direct use of DJ skills for producers | Schloss p0069 |
+| **③ Truncate** | **Truncate**: fix the start and end point of each sample | The start and end points decide whether the attack gets clipped and how long the tail is | Chapter 5 |
+| **④ Loop and layer** | Loop & layer: let several sample layers run together | The relation between layers is a "relationship," not "orchestration" | Chapter 5; Schloss p0165 |
+| **⑤ Set section lengths** | **Use bar counts to set the lengths of intro / verse / chorus** | MPC allows non-four-beat loops: "You can loop around every three beats, or five, or six, or seven if you want." (Chapter 5) | Chapter 5 |
+| **⑥ Chop and rearrange** | DJ Topspin: give him only a **one-and-a-half-beat** fragment and he wants to "turn it into sixteen beats that sound like a live performance"; four one-and-a-half-beat pieces can be assembled into six beats | Fragment length need not be a whole number of beats | Schloss p0157 |
+| **⑦ Lock up** | "Locking up" a beat: the elements enter a self-sustaining relationship | ★ **Whether it locks is a yes-or-no matter**: if it doesn't lock, it isn't a beat | Schloss p0154 |
+| **⑧ Check vertical interference** | A sample never contains just one sound (eight or nine people playing); when sampling a keyboard tone, a small hi-hat may be embedded in it | **It is not on your beat, and it interferes with your drums**: the most common hidden conflict in sample-based work | Schloss p0157–0158 |
+| **⑨ Unify timbre** | The snare comes from a 1970s rock record, the hat from a 1950s jazz record, the kick from an 80s drum machine; they must **sound natural together** | Prince Paul: if you sample 1960s material you can't pair it with the laser drums of *Planet Rock*; "keep everything in one texture" | Schloss p0161, p0081 |
+| **⑩ Add and remove layers** | Bring in and pull out loops and stabs by section | This is the **only structural tool** of the genre (SKILL §6.2) | Schloss p0051, p0151 |
 
-### 1.3 loop 自己会长出来的东西（Schloss p0152–0153）
+### 1.3 What the Loop Grows on Its Own (Schloss p0152–0153)
 
-这几条解释了"为什么 loop 不是偷懒"，也是选 loop 点的判据：
+These explain why looping is not laziness, and they are also the criteria for choosing loop points:
 
-| 现象 | 说明 |
+| Phenomenon | Explanation |
 |---|---|
-| **非预期的并置** | 乐句结尾反复接到开头，这是原乐手从未打算的衔接；几次重复后它"开始具有必然性" |
-| **新和弦进行** | 取一段含一次和弦变化的爵士采样，loop 点上第二个和弦直接回到第一个——**产生原作曲家从未写过的进行** |
-| **旋律变节奏** | "Melodies become rhythms"：重复到一定次数，耳朵不再听旋律走向，只听它的节奏轮廓 |
-| **自带呼应** | break 的结尾建立张力、由它自己的开头解决——**call-and-response 是 loop 自带的** |
-| **养 loop** | DJ Kool Akiem：一个 loop 放两三天，"你会听到乐手没试图放进去的东西" |
+| **Unintended juxtaposition** | When the end of a phrase repeatedly leads into its beginning, this is a join the original player never intended; after several repetitions it "starts to feel inevitable" |
+| **New chord progression** | Take a jazz sample that contains one chord change: at the loop point, the second chord goes straight back to the first, **producing a progression the original composer never wrote** |
+| **Melody becomes rhythm** | "Melodies become rhythms": after enough repetitions, the ear stops following the melodic contour and listens only to its rhythmic outline |
+| **Built-in call and response** | The end of a break builds tension that its own beginning resolves; **call-and-response is built into the loop** |
+| **Let a loop grow** | DJ Kool Akiem: leave one loop running for two or three days, and "you'll hear things the musician didn't try to put in" |
 
-切碎也能造新和声：Dilla 用 Kool & the Gang《Summer Madness》切出"完全不同的和声进行"（第 7 章）；Busta《Enjoy Da Ride》同理（第 8 章）。这与 loop 点造新和弦是同一件事的两个层级。
+Chopping can also create new harmony: Dilla used Kool & the Gang's *Summer Madness* to chop out "a completely different harmonic progression" (Chapter 7); Busta's *Enjoy Da Ride* works the same way (Chapter 8). This and creating new chords at loop points are the same thing at two levels.
 
-### 1.4 采样能做、现场演奏做不到的三件事（Schloss p0165–0166）
+### 1.4 Three Things Sampling Can Do That Live Performance Cannot (Schloss p0165–0166)
 
-选"采样型"而不是"演奏型"，换到的是这三样，写 `roster` 时应当明确用上其中至少一样：
+Choosing the "sample-based" rather than the "played" approach gets you these three things. When writing `roster`, you should explicitly use at least one of them:
 
-1. **并置不同录音环境的房间感**（ambient qualities）——一层满混响的吉他和一层很干的贝斯同时在场。
-2. **精确重复同一个音符**——力度、attack 完全一致的重复，人手做不到。
-3. **组织声学乐器因物理限制难以现场演奏的 pattern**。
+1. **Juxtaposing the room sound of different recording environments** (ambient qualities): a fully reverberant guitar and a very dry bass present at the same time.
+2. **Repeating the same note exactly**: identical repetition of velocity and attack, which human hands cannot do.
+3. **Organizing patterns that acoustic instruments struggle to play live** because of physical limits.
 
-这背后是 Olly Wilson 的 **heterogeneous sound ideal**（异质声音理想）：*"The desirable musical sound texture is one that contains a combination of diverse timbres."*（Schloss p0165）——**理想的织体是多种音色的组合，不是一个乐队的统一音色。** 这条直接决定 `spectrum_budget` 的写法：采样型不追求频段分工的整洁，追求音色来源的异质。
+Behind this is Olly Wilson's **heterogeneous sound ideal**: *"The desirable musical sound texture is one that contains a combination of diverse timbres."* (Schloss p0165). **The ideal texture is a combination of many timbres, not the uniform tone of one band.** This directly determines how `spectrum_budget` is written: sample-based work does not pursue a tidy division of frequency bands; it pursues heterogeneity of timbral source.
 
-### 1.5 拍号与长度可以拗
+### 1.5 Meter and Length Can Be Bent
 
-| 手法 | 例 | 出处 |
+| Technique | Example | Source |
 |---|---|---|
-| 5/4 的爵士片段 loop 进 4/4 鼓型 | "它是 loop，但以完全不同的方式播放"（Stroman） | Schloss p0181 |
-| 3 拍转 4 拍 | 《King Heroin》 | 第 8 章 |
-| 6 拍采样撞 4 拍鼓 | 采样在每隔一小节的强拍前一点触发 | 第 7 章 |
-| **7 小节 loop 对 4 小节 beat** | 使 verse 和 chorus 在不可预测的位置开始 | 第 8 章 |
-| loop 点不在强拍 | 《The Light》 | 第 8 章 |
+| A 5/4 jazz passage looped into a 4/4 drum pattern | "It's a loop, but played in a completely different way" (Stroman) | Schloss p0181 |
+| 3 beats turned into 4 | *King Heroin* | Chapter 8 |
+| A 6-beat sample colliding with a 4-beat drum | The sample triggers just before the strong beat of every other bar | Chapter 7 |
+| **7-bar loop against a 4-bar beat** | Makes verse and chorus start at unpredictable positions | Chapter 8 |
+| Loop point off the strong beat | *The Light* | Chapter 8 |
 
-→ 这些都要写进 `form[].note`，并注明韵式已按它调整（§3 最后一行）。
+→ All of these must be written into `form[].note`, with a note that the rhyme scheme has been adjusted to match (§3 last row).
 
-### 1.6 常见失败
+### 1.6 Common Failures
 
-| 失败 | 症状 | 解 |
+| Failure | Symptom | Fix |
 |---|---|---|
-| 没锁上 | 各层各跑各的，听着像几段音乐叠着 | 回到 ①，重搭鼓 |
-| 采样里的隐形 hi-hat | 鼓听着"脏"、拍点糊，但每一轨单听都对 | ⑧：滤掉或换切点 |
-| 年代不统一 | 一层像 60 年代、一层像 80 年代鼓机 | ⑨：统一处理（低通、加噪、统一压缩） |
-| kick 剥不出来 | kick 是低频，"你不能在它上面放低通" | kick 单独找（老唱片或鼓机），loop 只出军鼓和 hat（Schloss p0160–0161） |
-| 纯采样在车里散架 | 好车载系统上低频撑不住 | 加一个 808 kick 或键盘贝斯线"极大地厚起来"（Schloss p0206–0207） |
+| Not locked | Layers run each on their own, sounding like several pieces of music stacked | Return to ①, rebuild the drums |
+| Hidden hi-hat in the sample | Drums sound "dirty," beats blur, yet each track sounds correct on its own | ⑧: filter it out or change the cut point |
+| Mismatched eras | One layer sounds like the 1960s, another like an 80s drum machine | ⑨: process uniformly (low-pass, add noise, unify compression) |
+| Kick can't be extracted | The kick is low-frequency; "you can't put a low-pass on it" | Find the kick separately (old record or drum machine); the loop supplies only snare and hat (Schloss p0160–0161) |
+| Pure samples fall apart in a car | On a good car stereo the low end can't hold up | Add an 808 kick or keyboard bass line, which "thickens considerably" (Schloss p0206–0207) |
 
 ---
 
-## 2. 采样的选材与规则
+## 2. Sample Selection and Rules
 
-### 2.1 digging：四级技能
+### 2.1 Digging: Four Levels of Skill
 
-`roster` 里每条采样层的 `timbre` 写得出不出来，取决于选材停在哪一级（Schloss p0097–0099）：
+The choice of `timbre` for each sample layer in `roster` depends on the level at which selection stops (Schloss p0097–0099):
 
-| 级 | 依据什么选 | 典型做法 |
+| Level | Basis for selection | Typical practice |
 |---|---|---|
-| **一、家里的唱片** | 父母的收藏 | 一批 1970 年代的核心唱片，确立了这个风格的听感参数 |
-| **二、照着别人采过的找** | 已知被采过的原曲 | Shepard：多数人从"找别人用过的"开始，后来才转向"找**我**可能想采的" |
-| **三、看封面与曲名判断 vibe** | 封面、乐队名、曲名 | 曲名里的 "freak / freaky" 几乎总是有货，"funk" 不保证 |
-| **四、看人员表与音色** | 演奏者名单、厂牌、录音音色 | Samson S.："那是 Billy Cobham 在打鼓吗？这个人有个人专辑吗？"；高级阶段能按声音认出制作人或厂牌 |
+| **1. Records at home** | The parents' collection | A batch of 1970s core records established the sonic parameters of the style |
+| **2. Search for what others have sampled** | Known, previously sampled originals | Shepard: most people start with "finding what others have used," and only later turn to "finding what **I** might want to sample" |
+| **3. Judge the vibe from cover and title** | Cover art, band name, song title | "Freak / freaky" in a title almost always has something; "funk" guarantees nothing |
+| **4. Read the personnel list and the timbre** | Player credits, label, recorded sound | Samson S.: "Is that Billy Cobham on drums? Does this guy have his own album?"; at an advanced level you can recognize a producer or label by sound |
 
-★ **第四级的判据是鼓**（Oliver Wang，Schloss p0099）：*"如果你不想用地球上其他所有人都用过的鼓，在摇滚唱片或爵士唱片上挑一个特定 break 是有一门科学的。你希望你的军鼓听起来是某个样子，你的低频底鼓、你的踩镲也是。"* 新手 demo 的破绽永远是**鼓采样和别人一样**，或者纯用数字鼓机声——"听起来就是假的"。
+★ **The criterion at level 4 is the drums** (Oliver Wang, Schloss p0099): *"If you don't want to use drums that everyone else on earth has used, there is a science to picking a specific break from a rock or jazz record. You want your snare to sound a certain way, and your low kick and your ride cymbal too."* The giveaway in a beginner's demo is always that **the drum sample is the same as everyone else's**, or that the drums are pure digital drum-machine sounds: "it just sounds fake."
 
-→ 写进 `roster`：鼓件的 `timbre` 不写"军鼓"，写**来源类型 + 年代 + 处理**（"70 年代摇滚唱片的军鼓，中频重、带房间"）。
+→ Written into `roster`: for drum voices, `timbre` should not say "snare" but should give **source type + era + processing** ("snare from a 1970s rock record, midrange-heavy, with room").
 
-### 2.2 找什么：目标清单与试听流程
+### 2.2 What to Look For: Target List and Listening Process
 
-| 项 | 内容 | 出处 |
+| Item | Content | Source |
 |---|---|---|
-| **常见采样目标** | breaks、单独的鼓声、贝斯线、Fender Rhodes、管乐、"ill" 吉他音色（007 那种）、人声（嘶吼一类） | Schloss p0103 |
-| **专项搜寻** | 有时专门找某一件乐器：大号、竖琴、大提琴 | Schloss p0103 |
-| **不限流派** | 资深的人不待在 soul 区，整个店都翻——任何流派都可能有料 | Schloss p0103 |
-| **看沟槽** | 黑胶上 break 段落的沟槽宽窄不同，**肉眼能看出来**，唱针落上去听几秒即可判断 | Schloss p0102 |
-| **"老土"的唱片也采** | 两个理由：① 再老土的唱片也可能有真诚有价值的片段；② 从老土唱片里做出好 beat 本身是技巧的展示。Samson S.："你几乎可以用任何东西，哪怕只是一个 hi-hat" | Schloss p0164 |
-| **不是反讽** | 采"老土"唱片不是后现代反讽，是**解释过程**——Prince Paul：*"那就是一首好歌！"* | Schloss p0163–0165 |
+| **Common sample targets** | Breaks, isolated drum hits, bass lines, Fender Rhodes, horns, "ill" guitar tones (like the ones in 007), vocals (shouts and the like) | Schloss p0103 |
+| **Targeted search** | Sometimes you search for one specific instrument: flugelhorn, harp, cello | Schloss p0103 |
+| **Any genre** | Experienced diggers don't stay in the soul section; they flip through the whole store, since any genre may have something | Schloss p0103 |
+| **Look at the grooves** | On vinyl, the groove width of a break section differs and **can be seen with the naked eye**; dropping the needle and listening for a few seconds is enough to judge | Schloss p0102 |
+| **Sample "corny" records too** | Two reasons: ① even the corniest record may contain a sincere, valuable passage; ② making a good beat from a corny record is itself a display of skill. Samson S.: "You can use almost anything, even just a hi-hat" | Schloss p0164 |
+| **Not irony** | Sampling corny records is not postmodern irony; it is **explaining the process**. Prince Paul: *"That's a good song!"* | Schloss p0163–0165 |
 
-★ 对写规格的意义：`roster` 里采样层的来源描述**不要写成风格标签**（"jazz 采样"），写**它带来什么**（"一段带房间感的 Rhodes 和弦，两拍，尾音被截断"）。
+★ For writing the spec: do not describe a sample layer's source as a style label ("jazz sample"). Describe **what it brings** ("a Rhodes chord with room, two beats long, tail cut short").
 
-### 2.3 规则表：制作人社群的手艺伦理
+### 2.3 Rule Table: The Craft Ethics of the Producer Community
 
-Schloss 第 5 章记的是采样型制作人之间**默认遵守、违反会被同行嘲笑**的一套规则（Vitamin D："They're rules! It's all following rules."，Schloss p0116）。它们不是法律，也不是审美——**伦理是"入场费"，遵守只保证被尊重，不保证被赞美**（Schloss p0147）；审美另有一套（§1）。规则的两个底层价值：**体力上的努力**（自己去找唱片）和**智力上的努力**（不用现成的、不用已经很好的）（Schloss p0146）。
+Schloss Chapter 5 records the set of rules that sample-based producers among themselves **follow by default, and whose violation gets them mocked by peers** (Vitamin D: "They're rules! It's all following rules," Schloss p0116). They are not law and not aesthetics. **Ethics is an "entry fee": following them only guarantees you are respected, not praised** (Schloss p0147). Aesthetics is a separate matter (§1). The two underlying values of the rules are **physical effort** (going out and finding records yourself) and **intellectual effort** (not using ready-made material, and not using material that is already very good) (Schloss p0146).
 
-| 规则 | 内容 | 公认例外 | 出处 |
+| Rule | Content | Recognized exceptions | Source |
 |---|---|---|---|
-| **No biting** | 不拿别人已经 loop 过的东西再 loop 一遍；不拿别人已经组合过的两个元素（例：别人用了某段 James Brown 配 "Substitution" 鼓，你不能再这么配） | ① 你把它 **flip** 了（实质性改造）；② 明显的**戏仿/回应**（Premier 把《Player's Anthem》的贝斯切碎重排成《Ya Playin' Yaself》，改了旋律轮廓和重音）；③ 无意撞车 | Schloss p0120–0124 |
-| **鼓可以重用，采样不行** | Strath Shepard：*"Drums can get reused, but samples can't get reused … unless you chop it up really good."* | 单独的鼓击（kick/snare/hat）几乎不受限 | Schloss p0122、p0142 |
-| **只从黑胶采** | 哲学（digging 传统）、审美（模拟音质）、实用（唱针能秒定位 break；内存不够时 45 转采再放慢）、素材本来只在黑胶上 | Negus I：要干净的声音就用 CD，逐案决定；The Angel：CD 上取干净的再加黑胶噪音 | Schloss p0124–0128 |
-| **不采其他 hip-hop 唱片** | 那是在用别人 digging 的劳动 | ① 制作人故意留的"open" kick/snare（Q-Tip 在《The World Is Yours》remix 里留了）；② 人声短句作致敬——但 Vitamin D 要求必须**用唱机现场切进来**，不能采样器采；③ 明确的戏仿（Ice Cube《Jackin' For Beats》） | Schloss p0129–0134 |
-| **不采你尊敬的唱片** | 除非能加东西或"以完全惊人的方式 flip 它"；三个理由：不敬、已经太好改不了、没挑战 | 反对方：Samson S."我尊敬就狠狠采"；DJ Kool Akiem"采样是最高的赞美"；Negus I：必须投入自己的精神去改变它，不能只把旋律铺上鼓 | Schloss p0134–0135 |
-| **不用 breakbeat 合辑** | 走捷径、没有教育、剥削前辈的劳动；合辑标签上写"谁采过"是 snitching。Beni B 还能**听出来**：合辑版本轻微失真 | ① 只取鼓件、不 loop 整段（Negus I）；② 你本来就 dig 过、有原盘，为躲收藏家抬价买合辑（Mr. Supreme、Stroman）；③ 最早那套 *Ultimate Breaks and Beats* 年头够久，本身已算"原始录音"（Samson S.） | Schloss p0135–0144、p0220 |
-| **同一张唱片不采两个声音** | "Thou shall not sample two sounds from the same record"——贝斯线、管乐、Rhodes 都从一张唱片上取叫作弊，因为"把本来就在一起的东西放在一起"没有创意；**艺术的一部分是把通常不会被组合的元素组合起来**（DJ Kool Akiem） | 连续的 loop（chop 时）；只是鼓或很小的片段；一张专辑里同一艺人最多用一次 | Schloss p0145–0146 |
-| **TR-808 例外** | 采样"机器的声音"不算剥削：人演奏各不相同、要费力去找，鼓机声音都一样，采唱片上的 808 等同于用机器本身 | — | Schloss p0220 |
+| **No biting** | Do not loop again something another person has already looped; do not reuse a combination of two elements another person has already combined (e.g., someone has used a certain James Brown passage over the "Substitution" drums; you may not pair them the same way) | ① You **flip** it (substantial transformation); ② an obvious **parody / answer** (Premier chopped and rearranged the bass from *Player's Anthem* into *Ya Playin' Yaself*, changing the melodic contour and accents); ③ an accidental collision | Schloss p0120–0124 |
+| **Drums may be reused, samples may not** | Strath Shepard: *"Drums can get reused, but samples can't get reused … unless you chop it up really good."* | Individual drum hits (kick / snare / hat) are almost unrestricted | Schloss p0122, p0142 |
+| **Sample only from vinyl** | Philosophy (the digging tradition), aesthetics (analog sound quality), practicality (the needle locates a break instantly; when memory is short, sample at 45 rpm and slow it down), and the material existed only on vinyl | Negus I: use CD for clean sound, decided case by case; The Angel: take the clean sound from CD and add vinyl noise | Schloss p0124–0128 |
+| **Do not sample other hip-hop records** | That uses other people's digging labor | ① An "open" kick or snare the producer deliberately left (Q-Tip left one in the remix of *The World Is Yours*); ② a short vocal phrase as tribute, but Vitamin D requires that it be **cut in live from a turntable**, not sampled on a sampler; ③ a clear parody (Ice Cube, *Jackin' For Beats*) | Schloss p0129–0134 |
+| **Do not sample records you respect** | Unless you can add something or "flip it in a completely astonishing way"; three reasons: disrespect, it is already too good to change, no challenge | Opposing views: Samson S., "If I respect it, I sample it hard"; DJ Kool Akiem, "Sampling is the highest compliment"; Negus I: you must invest your own spirit in changing it, not just lay a drum beat under the melody | Schloss p0134–0135 |
+| **Do not use breakbeat compilations** | A shortcut, no education, exploits the labor of predecessors; writing "who sampled it" on a compilation label is snitching. Beni B can even **hear it**: the compilation version is slightly distorted | ① Take only the drum hits, not the whole loop (Negus I); ② you already dug it up and have the original disc, and bought the compilation to avoid collectors' price hikes (Mr. Supreme, Stroman); ③ the earliest *Ultimate Breaks and Beats* is old enough to count as an "original recording" in itself (Samson S.) | Schloss p0135–0144, p0220 |
+| **Do not sample two sounds from the same record** | "Thou shall not sample two sounds from the same record": bass line, horns, and Rhodes all taken from one record counts as cheating, because "putting together what already belonged together" has no creativity; **part of the art is combining elements that would not normally be combined** (DJ Kool Akiem) | Continuous loops (when chopping); only drums or very small fragments; within one album, the same artist used at most once | Schloss p0145–0146 |
+| **TR-808 exception** | Sampling "the sound of the machine" is not exploitation: people play differently each time and it takes effort to find, while drum machines sound identical every time; sampling an 808 from a record is the same as using the machine itself | — | Schloss p0220 |
 
-★ **伦理的落点不是"能不能采"，是"用得恰不恰当、有没有创造性"**（Schloss p0218）。对写规格单的意义：`roster` 里每条采样层都要说得出**它从哪类素材来、和同曲其他采样层是不是同源**；同源的层只能是 chop 出的连续 loop 或纯鼓件，否则按这套规则就是作弊。
+★ **The ethical question is not "may you sample it," but "is the use appropriate and creative"** (Schloss p0218). For writing the spec: every sample layer in `roster` must be stated with **what kind of source material it comes from, and whether it shares a source with the other sample layers in the same track**. Layers from the same source may only be a continuous loop from chopping, or drum hits; otherwise, under these rules, it is cheating.
 
-### 2.4 采样型 vs 演奏型：为什么默认是采样
+### 2.4 Sample-Based vs. Played: Why Sampling Is the Default
 
-| 论点 | 内容 | 出处 |
+| Argument | Content | Source |
 |---|---|---|
-| **偏好的是"采样的声音"，不是"采样这个动作"** | 即使用现场乐器，要达到的理想也是 the sound of the sample；用现场乐器被视为需要"情有可原的情况"，是第二选择 | Schloss p0093 |
-| **"live instrumentation" 的定义** | 指不使用先前录制声音的乐器——**唱机和采样器之外的几乎所有东西**；有的制作人连键盘都不算，因为键盘更常用来触发采样而不是演奏长乐句 | Schloss p0218 |
-| **加演奏层的条件** | 必须**支持采样里已有的主题**（loop 底下跟一条贝斯线加厚可以；换成大管乐组就只是"hip-hop based"），且**听起来得像采样**（Domino："it's gotta blend in"）；The Angel 干脆把现场乐手录下来再采样 | Schloss p0085–0088 |
-| **cyclic sensibility** | 即使不用 loop 技术，形式结构也专门设计成造出循环的印象——*"不知道原曲的情况下，通常无法判断一个采样是被大幅处理过还是仅仅被 loop 了。"* | Schloss p0220 |
-| **"beat" 这个词** | 语义从"鼓采样"滑到"整首作品"，说明打击乐与节奏在这个风格里就是作曲本身 | Schloss p0220 |
-| **"live" 这个词** | 在这里意思是**节奏上令人兴奋**，不是"用真乐器演奏的" | Schloss p0221 |
+| **The preference is for "the sound of the sample," not for "the act of sampling"** | Even with live instruments, the ideal sought is *the sound of the sample*; using live instruments is treated as a "forgivable circumstance" and a second choice | Schloss p0093 |
+| **Definition of "live instrumentation"** | Instruments that do not use previously recorded sounds: almost everything apart from turntables and samplers. Some producers don't even count keyboards, because keyboards are more often used to trigger samples than to play long phrases | Schloss p0218 |
+| **Conditions for adding a played layer** | It must **support the theme already in the sample** (adding a bass line under a loop to thicken it works; swapping in a full horn section only makes it "hip-hop based"), and it **must sound like the sample** (Domino: "it's gotta blend in"). The Angel goes further and records live musicians, then samples the result | Schloss p0085–0088 |
+| **Cyclic sensibility** | Even without loop technology, the formal structure is designed to create an impression of cycling: *"Without knowing the original, you usually cannot tell whether a sample has been heavily processed or merely looped."* | Schloss p0220 |
+| **The word "beat"** | Its meaning slid from "a drum sample" to "a whole work," showing that percussion and rhythm are the composition itself in this style | Schloss p0220 |
+| **The word "live"** | Here it means **rhythmically exciting**, not "played on real instruments" | Schloss p0221 |
 
 ---
 
-## 3. flow：记谱法与要素表
+## 3. Flow: Notation and Element Tables
 
-### 3.1 flow diagram：把 flow 写下来的记谱法
+### 3.1 Flow Diagram: Notation for Writing Flow Down
 
-《How to Rap 2》p0014–0015 用的记法可以直接拿来写 `vocal.phrasing` 的示意：
+The notation used in *How to Rap 2* p0014–0015 can be used directly to write schematic `vocal.phrasing`:
 
-| 记号 | 含义 |
+| Mark | Meaning |
 |---|---|
-| **顶部的 1 2 3 4** | 一小节的四个拍，用来标歌词相对拍的位置 |
-| **每一新行** | 音乐的一个新小节 |
-| **拍号正下方的音节加粗** | 重音音节，与该拍**同时发出**；这是词与音乐同步的锚点 |
-| **拍号下方空着** | 该拍是休止 |
-| **(MM:SS)** | 例子在参考曲目里出现的时间 |
+| **1 2 3 4 at the top** | The four beats of a bar, used to mark where words fall relative to the beat |
+| **Each new line** | A new bar of music |
+| **Bold syllable directly under the beat number** | A stressed syllable, sounded **at the same time** as that beat; the anchor where words and music synchronize |
+| **Empty space under a beat number** | That beat is a rest |
+| **(MM:SS)** | The time in the reference track where the example appears |
 
-示例（《How to Rap 2》p0014–0015 用 Pharcyde《Drop》00:26 演示）：重音落在 "**Let** me freak the **funk**, obso-**lete** is the **punk** that talks"，四个加粗音节正对 1/2/3/4 拍；第二小节的 3 拍与第四小节的 2 拍下方无词，即休止。
+Example (*How to Rap 2* p0014–0015, demonstrated with Pharcyde's *Drop* at 00:26): the stresses fall on "**Let** me freak the **funk**, obso-**lete** is the **punk** that talks"; the four bold syllables line up with beats 1/2/3/4; under beat 3 of the second bar and beat 2 of the fourth bar there are no words, meaning rests.
 
-★ **写进规格单**：rap 段不必给词，但要给**这张图**——四拍一行、标出哪几个音节压在拍上、哪一拍空着。占位音节（da / X）就够，编曲侧要的只是重音与休止的位置。
+★ **Write into the spec:** a rap section does not need the words, but it does need **this diagram**: one line per four beats, marking which syllables sit on the beats and which beats are empty. Placeholder syllables (da / X) are enough; what the arrangement side needs is the position of stresses and rests.
 
-### 3.2 先定 flow 再填词：占位音节是正规做法
+### 3.2 Set the Flow First, Then Fill in Words: Placeholder Syllables Are Standard Practice
 
-这条是"本 skill 不出词也能把 rap 段写清楚"的依据：
+This is the basis for "this skill can specify a rap section clearly without writing out the words":
 
-| 说法 | 出处 |
+| Claim | Source |
 |---|---|
-| 专业 MC 通常**先构思 flow 和 delivery，再写词**（Royce Da 5'9"：我在写下任何东西之前先想出 flow） | 《How to Rap 2》p0011 |
-| Schoolly D：我不写歌词，**我用声音代替单词**。只要有感觉、有节奏，最后我才加词 | 《How to Rap 2》p0018 |
-| Masta Ace：放着 beat **胡言乱语**（mumbling），直到找到押韵进拍的弹跳感，再把它变成真词 | 《How to Rap 2》p0022 |
-| Thes One：在 beat 上 flow 无意义音节，直到拿到喜欢的 groove，**得到的是音节数和停顿位置**，然后才填词 | 《How to Rap 2》p0022 |
-| Tech N9ne：先定"风格"（这首我想听起来像乒乓球），再填词 | 《How to Rap 2》p0021 |
-| 先想节奏"往往是高级 flow 的 MC 与普通 MC 的关键区别" | 《How to Rap 2》p0021 |
+| Professional MCs usually **work out flow and delivery before writing words** (Royce Da 5'9": I come up with the flow before I write anything down) | *How to Rap 2* p0011 |
+| Schoolly D: I don't write lyrics, **I use sound instead of words**. As long as there's a feel and a rhythm, I add words last | *How to Rap 2* p0018 |
+| Masta Ace: play the beat and **mumble** until you find a bounce that rhymes and fits the beat, then turn it into real words | *How to Rap 2* p0022 |
+| Thes One: flow meaningless syllables over the beat until you get a groove you like; what you end up with is **the syllable count and the pause positions**, and only then do you fill in words | *How to Rap 2* p0022 |
+| Tech N9ne: first decide the "style" (this one I want to sound like ping-pong), then fill in words | *How to Rap 2* p0021 |
+| Thinking of rhythm first is "often the key difference between high-level flow MCs and ordinary MCs" | *How to Rap 2* p0021 |
 
-**人声打击乐的观点**（《How to Rap 2》p0020–0021）：rap 的节奏技巧更接近打击乐而不是诗。Mighty Casey——"你的声音就是拍子上的鼓，每个音节是一种不同的鼓声"；Del 能"像写鼓谱一样把歌词写出来"；Shock G 把词的位置当**打击乐声部**记住。
-→ 所以 rap 段在 `roster` 里可以按一条打击乐声部来配平（§5 与 SKILL §7.5）。
+**The percussion view of the voice** (*How to Rap 2* p0020–0021): rap's rhythmic skill is closer to percussion than to poetry. Mighty Casey: "Your voice is the drum on the beat, and each syllable is a different drum sound"; Del can write lyrics "the way you'd write a drum score"; Shock G memorizes the positions of words as a **percussion part**.
+→ So in `roster`, a rap section can be balanced as a single percussion part (§5 and SKILL §7.5).
 
-**pocket 优先于内容**（《How to Rap 2》p0019）：Crooked I——在"非常巧妙的内容"与"在 pocket 里"之间选，通常后者胜；Mighty Casey 为了精确贴拍牺牲过很多妙喻。**编曲侧的取舍照此：节奏位置先定死，词后配。**
+**Pocket over content** (*How to Rap 2* p0019): Crooked I: between "very clever content" and "being in the pocket," the latter usually wins; Mighty Casey gave up many clever metaphors for precise placement on the beat. **The arrangement-side trade-off follows the same principle: fix the rhythmic positions first, then fit the words.**
 
-### 3.3 flow 要素表：它怎么落在网格上
+### 3.3 Flow Element Table: How It Lands on the Grid
 
-押韵密度、多音节韵的写法是作词的事；这张表只写 flow **与拍的关系**。
+Rhyme density and how to write multisyllabic rhyme are matters for songwriting. This table covers only the **relation of flow to the beat**.
 
-| 要素 | 内容 | 出处 |
+| Element | Content | Source |
 |---|---|---|
-| **重音落拍** | 除非该拍休止，**重音音节必须与 1、2、3、4 拍同时发出**；口语重音和落拍重音可以不一致，但只有落在四拍上的重音负责让词和音乐同步——这叫 **in the pocket** | 《How to Rap》p0084–0085 |
-| **基本网格** | 最常见的 rap 节奏把一小节切成 **16 份**；自 1980 年前后至今都是大多数 rap 节奏的基础，听的时候可以跟着数 1–16 | 《How to Rap 2》p0023–0024 |
-| **16ths 的速度效果** | 中速上它听起来像**对话和日常说话**；快拍上就是快嘴 | 《How to Rap 2》p0025–0027 |
-| **32nds** | double-time；也用于短促的快速爆发 | 《How to Rap 2》p0029–0032 |
-| **三连音** | 在两个 16 分的时间里放三个音节。用途：对话式 flow 里的点缀、**开启一段**（像鼓手进段前的小 roll）、带重复短语、被额外音节打断、慢拍上做出摇摆感、跨四个 16 分、非常规位置 | 《How to Rap 2》p0033–0045 |
-| **flam** | 两个音节挨得够近融成一个声音：弱-强（the-pain）、强-弱（when-I）、弱-弱-强、强-弱-弱——直接对应鼓的 flam / ruff / drag | 《How to Rap 2》p0045–0048 |
-| **每拍一个音节** | 突然放慢，打断快嘴，聚焦某个词（ho-tel, mo-tel） | 《How to Rap 2》p0049 |
-| **lazy tails** | 整体在拍上，只让句尾某个词**滑出拍**、拖长首辅音（cccooking）——西海岸 gangsta rap 的标志 | 《How to Rap 2》p0050–0053 |
-| **下一音节滑上拍** | 滑得够多时，本该落拍的音节滑出去，**前一个音节反而落在拍上**（One, two, three, and to **the** four） | 《How to Rap 2》p0053 |
-| **staccato** | 缩短每个音节，"choppy"，能清楚听到音节打在拍点上；越 staccato 越像打击乐；快嘴必须 staccato 才听得清 | 《How to Rap 2》p0129–0131 |
-| **跨小节** | verse 不必从 1 拍开始，也不必在小节末结束（N.O.R.E. 在上一小节末尾起句，Clipse 在 2 拍后进、3 拍休止，O.C. 在 4 拍进） | 《How to Rap》p0088、p0092 |
-| **抢与拖** | 整体略前于拍 → 急促、紧张；略后于拍 → 放松、漫不经心（Snoop、Evidence）；Evidence：能一直**留在拍后**是一种天赋，很多能精准踩鼓的人做不到 | 《How to Rap》p0269–0270 |
-| **重复短语换节奏** | 同一句词用不同节奏重复，是段落内部的变化手段 | 《How to Rap 2》p0064–0070 |
-| **3/4 与其他拍号** | 拍号不是 4/4 时 flow 得重写（韵落 3 拍） | 《How to Rap 2》p0070 |
-| **3 小节 loop** | beat 若是 3 小节循环，词必须专门为它写——用 3 行的 multi-liner 或"一对 + 一个 single-liner"，偶数小节的韵式会和音乐的重启点错开 | 《How to Rap 2》p0203–0204 |
+| **Stresses on the beat** | Unless the beat is a rest, **stressed syllables must sound at the same time as beats 1, 2, 3, and 4**. Spoken stress and beat stress may differ, but only stresses that land on the four beats make words and music synchronize. This is called **in the pocket** | *How to Rap* p0084–0085 |
+| **Basic grid** | The most common rap rhythm divides a bar into **16 parts**. Since about 1980 this has been the basis of most rap rhythms; you can count 1–16 along while listening | *How to Rap 2* p0023–0024 |
+| **Speed effect of 16ths** | At mid tempo it sounds like **conversation and everyday speech**; at fast tempos it becomes rapid-fire talk | *How to Rap 2* p0025–0027 |
+| **32nds** | Double-time; also used for short, rapid bursts | *How to Rap 2* p0029–0032 |
+| **Triplets** | Three syllables placed in the space of two sixteenths. Uses: embellishments in conversational flow, **launching a section** (like a drummer's small roll before a section), repeated phrases, interruption by extra syllables, creating swing over slow beats, spanning four sixteenths, and unusual positions | *How to Rap 2* p0033–0045 |
+| **Flam** | Two syllables placed close enough to merge into one sound: weak-strong (the-pain), strong-weak (when-I), weak-weak-strong, strong-weak-weak, corresponding directly to drum flam / ruff / drag | *How to Rap 2* p0045–0048 |
+| **One syllable per beat** | Suddenly slowing down to interrupt rapid-fire talk and focus on a word (ho-tel, mo-tel) | *How to Rap 2* p0049 |
+| **Lazy tails** | The phrase is on the beat, but the final word of the phrase **slides off the beat**, stretching its initial consonant (cccooking). The hallmark of West Coast gangsta rap | *How to Rap 2* p0050–0053 |
+| **The next syllable slides onto the beat** | When the slide is large enough, the syllable that should have landed slides off, and **the preceding syllable lands on the beat instead** (One, two, three, and to **the** four) | *How to Rap 2* p0053 |
+| **Staccato** | Shorten each syllable so it is "choppy," so each syllable is clearly heard hitting a beat point; the more staccato, the more it sounds like percussion; rapid-fire talk must be staccato to be understood | *How to Rap 2* p0129–0131 |
+| **Crossing bars** | A verse need not start on beat 1 or end at the end of a bar (N.O.R.E. starts at the end of the previous bar; Clipse enters after beat 2 and rests on beat 3; O.C. enters on beat 4) | *How to Rap* p0088, p0092 |
+| **Pushing and pulling** | Phrase generally slightly ahead of the beat → hurried, tense; slightly behind → relaxed, nonchalant (Snoop, Evidence). Evidence: being able to **stay behind the beat** consistently is a talent, and many people who can hit the drums precisely cannot do it | *How to Rap* p0269–0270 |
+| **Repeated phrase with changed rhythm** | Repeating the same line with a different rhythm is a means of internal variation within a section | *How to Rap 2* p0064–0070 |
+| **3/4 and other meters** | When the meter is not 4/4, the flow must be rewritten (rhymes land on beat 3) | *How to Rap 2* p0070 |
+| **3-bar loop** | If the beat cycles every 3 bars, the words must be written specifically for it: use a three-line multi-liner, or a "pair plus a single-liner." Even-bar rhyme schemes will fall out of step with the music's restart points | *How to Rap 2* p0203–0204 |
 
-### 3.4 休止：四个用途与常见位置
+### 3.4 Rests: Four Uses and Common Positions
 
-| 项 | 内容 | 出处 |
+| Item | Content | Source |
 |---|---|---|
-| **定义** | 在 1/2/3/4 拍上不发音节 | 《How to Rap 2》p0055 |
-| **四个用途** | ① 换气；② 划分段落（Eminem《Yellow Brick Road》第二段前 8 小节无休止、第 8 小节末休止后换 flow）；③ 加节奏变化；④ 强调内容——重要一句之后在下一小节 1 拍休止让听众消化 | 《How to Rap》p0140–0143 |
-| **1 拍休止 + couplet** | 第二行放 punch line，两行一组被 1 拍的休止隔开 | 《How to Rap 2》p0055–0057 |
-| **2 拍休止** | 做短的开场陈述（Public Enemy "Bass!"） | 《How to Rap 2》p0057 |
-| **连续三拍休止** | 只在 4 拍说一个词，会有 sing-songy 感 | 《How to Rap 2》p0062 |
-| **分内容与换韵式** | 在 16 小节的**第 8 或 9 小节**放休止来分内容或换韵式 | 《How to Rap 2》p0058–0060 |
-| **强调弱拍** | 在 4 拍休止，把注意力推到弱拍上的词（2Pac《Dear Mama》的 Mama） | 《How to Rap 2》p0063；《How to Rap》p0143 |
-| **换气写进休止** | Gift of Gab：押韵时你在呼气，找到停顿就快速吸一口继续；Masta Ace：试唱后喘不过来就删词造空；写作时就得留换气位，"不这样韵听起来就不对" | 《How to Rap》p0141、p0285 |
+| **Definition** | No syllable is sounded on beats 1/2/3/4 | *How to Rap 2* p0055 |
+| **Four uses** | ① Breathing; ② dividing sections (Eminem's *Yellow Brick Road*: the first eight bars of the second verse have no rests, then the flow changes after a rest at the end of bar 8); ③ adding rhythmic variation; ④ emphasizing content: after an important line, rest one beat in the following bar so listeners can absorb it | *How to Rap* p0140–0143 |
+| **One-beat rest + couplet** | The second line holds the punch line; two lines are grouped and separated by a one-beat rest | *How to Rap 2* p0055–0057 |
+| **Two-beat rest** | Makes a short opening statement (Public Enemy's "Bass!") | *How to Rap 2* p0057 |
+| **Three consecutive beats of rest** | Landing a single word only on beat 4 creates a sing-songy feel | *How to Rap 2* p0062 |
+| **Separating content or changing rhyme scheme** | Place a rest on **bar 8 or 9 of a 16-bar section** to separate content or change the rhyme scheme | *How to Rap 2* p0058–0060 |
+| **Emphasizing weak beats** | Rest on beat 4 to push attention onto a word on a weak beat (the word "Mama" in 2Pac's *Dear Mama*) | *How to Rap 2* p0063; *How to Rap* p0143 |
+| **Write breaths into rests** | Gift of Gab: while rhyming you are exhaling; when you find a pause, take a quick breath and continue. Masta Ace: after trying it out, if you run out of breath you delete words to make space; when writing, you have to leave breath points, otherwise "the rhyme doesn't sound right" | *How to Rap* p0141, p0285 |
 
-### 3.5 押韵落点（编曲侧）
+### 3.5 Rhyme Landing Positions (Arrangement Side)
 
-| 位置 | 效果 | 出处 |
+| Position | Effect | Source |
 |---|---|---|
-| 落 **4 拍** | 最常见、最显眼 | 《How to Rap》p0120–0122 |
-| 落**弱拍** | 不那么显眼，更像对话 | 《How to Rap》p0120–0122 |
-| **整段挪位** | Tajai：scoot it over——开头加几个词、结尾删几个，韵就落到意外位置 | 《How to Rap》p0121 |
-| couplet 常见配置 | 第一行韵落 4 拍、第二行韵落 4 拍后的弱拍（punch line 更有冲击）；2 拍和 4 拍都押；3 拍与 4 拍交替 | 《How to Rap 2》p0189–0194 |
-| **结束信号** | 结尾一行缩短（韵落 3 拍后弱拍），作为段落结束的标记 | 《How to Rap 2》p0189–0194 |
-| **押韵密度突变** | 从每小节少韵切到每小节多韵再切回，**本身就是段落信号** | 《How to Rap 2》p0203 |
+| Lands on **beat 4** | Most common, most prominent | *How to Rap* p0120–0122 |
+| Lands on a **weak beat** | Less prominent, more conversational | *How to Rap* p0120–0122 |
+| **Shifting a whole phrase** | Tajai: scoot it over: add a few words at the start and remove a few at the end, and the rhyme lands in an unexpected place | *How to Rap* p0121 |
+| Common couplet setups | First line rhymes on beat 4, second line rhymes on the weak beat after beat 4 (punch lines hit harder); rhymes on both beats 2 and 4; alternating beats 3 and 4 | *How to Rap 2* p0189–0194 |
+| **End signal** | A shortened final line (rhyme on the weak beat after beat 3) marks the end of a section | *How to Rap 2* p0189–0194 |
+| **Sudden change in rhyme density** | Switching from few rhymes per bar to many and back again **is itself a section signal** | *How to Rap 2* p0203 |
 
 ---
 
-## 4. delivery 参数表
+## 4. Delivery Parameter Tables
 
-**声音是听众第一个听到、据此决定听不听下去的东西**（《How to Rap 2》p0072）。另有三类非词的声音可当 delivery 用（p0149–0151）：笑着或哭着把词说出来；吐口水、亲吻、喷嚏、打嗝这类身体声音；**把大声吸气当成一个音节放进节奏里**。以下维度可以逐段分配，写进 `vocal.delivery` 与 `vocal.chorus_variation`。
+**The sound is the first thing listeners hear, and it decides whether they keep listening** (*How to Rap 2* p0072). Three further kinds of non-word sound can be used as delivery (p0149–0151): saying words while laughing or crying; bodily sounds such as spitting, kissing, sneezing, or hiccupping; and **loud inhalation treated as a syllable placed inside the rhythm**. The dimensions below can be allocated section by section, and written into `vocal.delivery` and `vocal.chorus_variation`.
 
-### 4.1 八个维度
+### 4.1 The Eight Dimensions
 
-| 维度 | 选项与效果 | 分给哪种段落 | 出处 |
+| Dimension | Options and effect | Which sections to assign it to | Source |
 |---|---|---|---|
-| **总体音高** | 高：容易**穿透**伴奏中的其他元素，常用于俏皮的段（B-Real、Q-Tip）；中：普通说话声；低：**重量与权威**，严肃题材（Chuck D、Scarface） | 伴奏密的段落给高音高的人声；严肃段落给低 | 《How to Rap 2》p0078–0079 |
-| **音高变化量** | 单调（monotone）：平静、对话感、**更像打击乐**（鼓也是重复同一音高）、不压过 beat、避免滑稽；变化多：加个性与情感 | 展示 beat 的段落单调；情感段落多变 | 《How to Rap 2》p0080–0081 |
-| **逐词音高** | 单词/音节提高：加变化、强调论点、说服、恐惧、提问；降低：严肃/权威、**行尾降调 = 终结感**；整句由低到高 = 逐渐的紧迫感、**滑入 verse**；整句由高到低 = 强陈述、**结束 verse**；沙哑感常与压低音高一起出现 | verse 首行用上行，末行用下行 | 《How to Rap 2》p0112–0123 |
-| **音量** | 响而有力：穿透满的伴奏（Chuck D）、现场、派对 call-and-response、权威；**略高于说话**：保持对话感但有能量、适合长而炫技的 verse（需要好的气息）；安静：放松、laid-back 的曲子、为后面提高留余地；耳语：加变化、氛围/诡异 | ★ 不写"大声点"；写的是**哪一段用哪一档** | 《How to Rap 2》p0082–0091 |
-| **音色** | 鼻音（B-Real）、沙哑不可预测（Lil Wayne）、粗犷（Method Man、DMX，暗示成熟）、平滑（Q-Tip、Snoop；**与轨道其他乐器融合得更好**）、刺耳（Mystikal，狂躁能量）、气声（MCA，放松慵懒） | 平滑的 beat 配平滑的声；Crooked I：伴奏乐器多时把声音调成"像乐器之一"，**随 beat 流动而不是切过它** | 《How to Rap 2》p0093–0096 |
-| **长短** | 拉长个别词 = 强调、加个性（2Pac enemiiies）、**拉长句首词开启一段**（Beastie Boys Nooooow）、拉长句尾词让声音停留；**拉长会把后面的词往后推，改变节奏**；缩短见 §3.3 staccato | 段落入口用拉长的句首词 | 《How to Rap 2》p0125–0131 |
-| **口吃 / 重复 / 颤音** | 口吃第一个音开启一段（St-St-St-Straight），像小鼓 roll；重复词以特定节奏、或**配合 drum fill**（Andy Cat 把 Fast, fast, fast, fast 对着鼓 fill，把曲子从半速带回主速）；颤音作为延长音上的装饰 | 段落入口、fill 位 | 《How to Rap 2》p0132–0140 |
-| **气息** | 吸气声当一个音节（Method Man）；叹气开句；通过某个词呼气；故意上气不接下气（作为风格）；**一口气录完整段时呼吸必须适应节奏**，吸气声更突出 | 长 verse 要先算气 | 《How to Rap 2》p0151–0153 |
+| **Overall pitch** | High: easily **cuts through** other elements in the backing, often used for playful sections (B-Real, Q-Tip). Mid: ordinary speaking voice. Low: **weight and authority**, for serious subjects (Chuck D, Scarface) | Give high-pitched voice to dense backing sections; give low pitch to serious sections | *How to Rap 2* p0078–0079 |
+| **Pitch variation** | Monotone: calm, conversational, **more like percussion** (the drum also repeats the same pitch), does not overpower the beat, avoids sounding silly. Varied: adds personality and emotion | Monotone for sections that showcase the beat; varied for emotional sections | *How to Rap 2* p0080–0081 |
+| **Per-word pitch** | Raising a word or syllable: adds variety, emphasizes a point, persuades, expresses fear or asks a question. Lowering: serious or authoritative; **falling pitch at the end of a line = sense of finality**; a whole line from low to high = gradual urgency, **sliding into a verse**; a whole line from high to low = strong statement, **ending a verse**; hoarseness often appears together with lowered pitch | First line of a verse uses rising pitch; last line uses falling | *How to Rap 2* p0112–0123 |
+| **Volume** | Loud and forceful: cuts through a dense backing (Chuck D), live shows, party call-and-response, authority. **Slightly above speech**: keeps a conversational feel with energy, suits long, showy verses (requires good breath control). Quiet: relaxed, laid-back tracks, leaves room to raise volume later. Whisper: adds variation, atmosphere or eeriness | ★ Do not write "louder"; write **which section uses which level** | *How to Rap 2* p0082–0091 |
+| **Timbre** | Nasal (B-Real), unpredictably gravelly (Lil Wayne), rough (Method Man, DMX, suggesting maturity), smooth (Q-Tip, Snoop; **blends better with the other instruments on the track**), shrill (Mystikal, frenetic energy), breathy (MCA, relaxed and lazy) | A smooth beat pairs with smooth voice. Crooked I: when the backing has many instruments, tune the voice to sound "like one of the instruments," **flowing with the beat instead of cutting across it** | *How to Rap 2* p0093–0096 |
+| **Duration** | Stretching individual words = emphasis, adds character (2Pac, "enemiiies"); **stretching the first word of a phrase to launch a section** (Beastie Boys, "Nooooow"); stretching the last word of a phrase so the sound lingers. **Stretching pushes the following words later, changing the rhythm.** For shortening see staccato in §3.3 | Use a stretched opening word at the entry to a section | *How to Rap 2* p0125–0131 |
+| **Stuttering / repetition / trills** | A stutter on the first sound launches a section (St-St-St-Straight), like a small drum roll; repeated words in a specific rhythm, or **synchronized to a drum fill** (Andy Cat set "Fast, fast, fast, fast" against a drum fill to bring the track from half-speed back to full speed); trills as ornament on a held note | Section entries, fill positions | *How to Rap 2* p0132–0140 |
+| **Breath** | Inhalation as a syllable (Method Man); sighing to open a line; exhaling through a word; deliberately running out of breath (as a style); **when recording a whole section in one take, breathing must adapt to the rhythm**, and inhalation sounds stand out more | Long verses require planning breath first | *How to Rap 2* p0151–0153 |
 
-### 4.2 情绪与个性类型（`vocal.persona` 的选项集）
+### 4.2 Emotional and Persona Types (The Option Set for `vocal.persona`)
 
-六类都出自《How to Rap 2》p0168–0170：
+All six types come from *How to Rap 2* p0168–0170:
 
-| 类型 | 声音做法 |
+| Type | Vocal approach |
 |---|---|
-| 精力 / 狂野 | Busta、ODB：音量、音色、音高都变，加噪音 |
-| 有趣 / 弹跳 | B-Real、Pharcyde：偏高的音高、拟声 |
-| 严肃 / 权威 | KRS、Chuck D：大音量、深沉、用升降调做陈述与提问 |
-| 冷静 / 放松 | Snoop、Slick Rick：常规音量、平滑音色、大量半唱旋律 |
-| 内省 / 诗意 | 2Pac、Nas：音量与音色克制，关键处用受控的音高 |
-| 愤怒 | Ice Cube、Mystikal：大音量、粗糙、特定词上提高音高 |
+| Energetic / wild | Busta, ODB: volume, timbre, and pitch all vary; noise added |
+| Playful / bouncy | B-Real, Pharcyde: higher pitch, onomatopoeia |
+| Serious / authoritative | KRS, Chuck D: loud volume, deep tone, uses rising and falling pitch for statements and questions |
+| Cool / relaxed | Snoop, Slick Rick: normal volume, smooth timbre, lots of half-sung melody |
+| Introspective / poetic | 2Pac, Nas: restrained volume and timbre, controlled pitch at key moments |
+| Angry | Ice Cube, Mystikal: loud volume, rough, raised pitch on particular words |
 
-**情绪规则**（《How to Rap 2》p0172–0175）：情绪要靠音高、音量、音色、颤音、旋律的变化**让人从声音里听到**——用轻柔的声音表达愤怒，听众不会知道；也可以故意让声音的情绪与内容相反。情绪段落用一次录成的 take，节奏稍偏可以 punch-in 修。
+**Emotional rule** (*How to Rap 2* p0172–0175): emotion must be **audible in the voice** through changes in pitch, volume, timbre, vibrato, and melody. Expressing anger with a soft voice means listeners won't know it is anger. You can also deliberately make the emotion of the voice oppose the content. Emotional sections use a single take recorded in one go; if the rhythm drifts slightly, it can be fixed with punch-in.
 
-### 4.3 口音与角色声
+### 4.3 Accents and Character Voices
 
-换声的动机与做法（《How to Rap 2》p0100–0111）：**原生口音**在内容关于真实经历时维持可信度；**换口音**用于造分身、给叙事角色不同风格、幽默；**地区口音**传达不同场景（城市 vs 开阔乡村），换他国口音通常连俚语与措辞一起换；叙事歌里还有男/女声、电话效果与自我对话。
+Motives for switching voice and how to do it (*How to Rap 2* p0100–0111): **the native accent** keeps credibility when the content concerns real experience. **Switching accent** creates an alter ego, gives narrative characters distinct styles, or serves humor. **Regional accents** convey different settings (city vs. open countryside); when switching to a foreign accent, slang and phrasing usually change along with it. Story songs also include male and female voices, telephone effects, and self-dialogue.
 
-★ 写进 `vocal.persona` / `form[].note`：**哪一段换声、换成谁**——这是 punch-in 的位置，也决定这一段要不要单开一条 `roster` 人声轨。
+★ Write into `vocal.persona` / `form[].note`: **which section switches voice, and to whom.** This is where punch-in happens, and it also determines whether this section needs its own vocal track in `roster`.
 
-### 4.4 录音与 take 的几条
+### 4.4 Recording and Take Notes
 
-- hook 可以频繁换声，verse 保持一致（Yukmouth，《How to Rap》p0263）。
-- 不同角色 / 不同情境用 **punch-in** 换声（Slick Rick 的叙事，《How to Rap》p0289）。
-- 一次录完的 take 保留破音等瑕疵，"更真、更原始"（《How to Rap》p0293）。
-- 混音侧的同一条：加太多元素会拥堵、互相掩蔽、变成泥——**少即是多**（《How to Rap 2》p0145）。
+- A hook can change voice frequently; the verse stays consistent (Yukmouth, *How to Rap* p0263).
+- Use **punch-in** to change voice for different roles or situations (Slick Rick's narrative, *How to Rap* p0289).
+- A take recorded in one go keeps its cracks and other flaws, which makes it "more real, more raw" (*How to Rap* p0293).
+- On the mix side, the same principle: adding too many elements gets cluttered, they mask one another, and it turns to mud. **Less is more** (*How to Rap 2* p0145).
 
 ---
 
-## 5–7. 人声、《Dilla Time》引文定位与术语表（另一个文件）
+## 5–7. Vocals, *Dilla Time* Citation Locations, and Glossary (The Other File)
 
-段落结构、ad-lib 与人声音效、引文定位、术语表都在 [reference-vocal.md](reference-vocal.md)，编号沿用 §5–§7；SKILL §7 的 flow 要素、delivery 维度、rap 段结构、人声与伴奏关系的全文也在那里（§8–§11）。
+The section structure, ad-libs and vocal sound effects, citation locations, and the glossary are in [reference-vocal.md](reference-vocal.md), numbered to match §5–§7. The full text of the flow elements, delivery dimensions, rap section structure, and vocal-backing relationship from SKILL §7 is also there (§8–§11).

@@ -1,157 +1,150 @@
-# mc-arrangement-arch 参考：段落术语、常见曲式与实测数据
+# mc-arrangement-arch Reference: Section Terminology, Common Forms, and Measured Data
 
-> `SKILL.md` 讲结构决策；本文件放**术语定义、曲式目录、以及本库的实测数据全表**。
+> `SKILL.md` covers structural decisions; this file holds **term definitions, a catalogue of forms, and the full table of this library's measured data**.
 >
-> 来源：**Dennis DeSantis《Making Music》**，
-> 以及本库自己在 Cambridge-MT 多轨上跑的规则佐证统计（§3）。
+> Source: **Dennis DeSantis, *Making Music***,
+> plus this library's own rule-corroboration statistics run on the Cambridge-MT multitrack set (§3).
 
 ---
 
-## 1. 段落术语的准确定义
+## 1. Precise Definitions of Section Terms
 
-来自 DeSantis「Common Forms 1: Elements of Song Form」。
-**写 ARR-SPEC 的 `form[].name` 时按这套定义用词**，不要自造。
+From DeSantis, "Common Forms 1: Elements of Song Form."
+**When writing `form[].name` in ARR-SPEC, use terms according to these definitions**; do not coin your own.
 
-### Verse（主歌 / "A" 段）
+### Verse ("A" section)
 
-- 通常是**循环出现**的段落
-- 长度通常为 **16 或 32 小节**
-- 作为歌曲的**主体**
-- 有词时通常**讲述"故事"**
+- Usually **recurs** as a section
+- Typically **16 or 32 bars** long
+- Forms the **body** of the song
+- When there are lyrics, it usually **tells the "story"**
 
-> DeSantis 给的一个属性目录案例可以当判据用：那首歌的主歌人声唱得气息感重（贴麦轻声），
-> 到副歌换成全声演唱，主奏 synth 一直压到第二遍副歌才进场；
-> 曲式排成 Verse 16、Verse 16、Chorus 16、Breakdown 32、Chorus 16、Chorus 16 小节（p0018）。
-> 具体数字随歌而变，但方向是稳定的：主歌该比副歌"轻"，
-> 可以先从人声演唱方式和乐器进场时间点去分配，不必只靠加减轨道数量。
+> DeSantis gives an attribute-catalogue case that can serve as a criterion: in that song the verse vocals are breathy and intimate (close-miked, sung softly), switch to full-voice singing in the chorus, and the lead synth is held back until the second chorus. The form runs Verse 16, Verse 16, Chorus 16, Breakdown 32, Chorus 16, Chorus 16 bars (p0018).
+> The exact numbers vary from song to song, but the direction is stable: the verse should sit "quieter" than the chorus. You can distribute this first through the vocal delivery and the entry points of instruments, rather than relying only on adding or removing tracks.
 
-### Chorus（副歌 / "B" 段）
+### Chorus ("B" section)
 
-- 通常也循环出现，**长度与 verse 相当**
-- 作为 verse 材料的**对比**
-- 通常包含歌曲的**钩子（hook）**——旨在留在听众脑海中的旋律想法
-- 通常作为**音乐解决**点，而 **verse 创造音乐紧张感**
-- ★ **关键区别**：
-  **循环的 verses 共享相同的音乐但通常有不同的歌词；
-  循环的 choruses 通常共享相同的音乐和歌词。**
-- 有词时 chorus 通常**包含歌曲标题**
-- 一般规则：**第一个 chorus 出现在 verse 之后**（尽管有些歌曲以 chorus 开始）
+- Also usually recurs, **of comparable length to the verse**
+- Provides **contrast** with the verse material
+- Usually contains the song's **hook**: the melodic idea meant to stay in the listener's mind
+- Usually serves as the **musical resolution** point, whereas the **verse builds musical tension**
+- ★ **Key distinction**:
+  **Recurring verses share the same music but usually have different lyrics;
+  recurring choruses usually share the same music and the same lyrics.**
+- When there are lyrics, the chorus usually **contains the song title**
+- General rule: **the first chorus comes after the verse** (although some songs open with the chorus)
 
-### Bridge（桥段 / "C" 段）
+### Bridge ("C" section)
 
-- 作为 verse 和 chorus 的**对比**
-- 通常**在歌曲中只出现一次**
-- 音乐上往往与其余部分**显著不同**：可能在**不同调性**、用**不寻常的和弦进行**、
-  或有**截然不同的织体密度和能量水平**
-- 某些类型里 bridge 用于**器乐独奏**
-- 通常**仅在至少一个 verse 和一个 chorus 之后**出现
+- Provides **contrast** with the verse and chorus
+- Usually appears **only once** in the song
+- Often sounds **markedly different** from the rest musically: it may be in a **different key**, use **an unusual chord progression**, or have **a distinctly different texture density and energy level**
+- In some genres the bridge is used for an **instrumental solo**
+- Usually appears **only after at least one verse and one chorus**
 
-> ★ 注意 chorus 那条"共享相同的歌词"与本库 lint #16「副歌逐遍有变化」并不冲突：
-> **词可以一样，编曲不能一样。** DeSantis 说的是词曲身份，lint 说的是编曲。
+> ★ Note that the chorus rule "share the same lyrics" does not conflict with this library's lint #16, "chorus varies from pass to pass": **the words can stay the same while the arrangement must not**. DeSantis is talking about the identity of the song's words and music; the lint is talking about the arrangement.
 
 ---
 
-## 2. 常见商业曲式
+## 2. Common Commercial Forms
 
 > **ABABCB** = Verse–Chorus–Verse–Chorus–Bridge–Chorus
 
-- 有些歌在这个基本形式末尾**增加一个或多个额外的 chorus**
-- **此形式未做改变地用于可能在电台听到的大多数当代流行歌曲**
-- **严格范例**：Lorde《Royals》
+- Some songs **add one or more extra choruses** at the end of this basic form
+- **This form, unaltered, is used by most contemporary pop songs that might be heard on the radio**
+- **Textbook example**: Lorde, "Royals"
 
-### 2.1 什么时候这套术语不适用
+### 2.1 When This Terminology Does Not Apply
 
-> 仅由 verse / chorus / bridge 组合而成的形式，**在更地下或实验性音乐中较少使用**。
+> Forms built only from verse, chorus and bridge are **less common in more underground or experimental music**.
 >
-> **大多数无声乐的当代电子流派倾向于避免传统的 verse 和 chorus 段落，
-> 而是通过「层叠的加减」（addition and subtraction of layers）来创造形式对比。**
-> （见 DeSantis「Common Forms 2: Layering as Form」）
+> **Most contemporary electronic genres without vocals tend to avoid traditional verse and chorus sections,
+> and instead create formal contrast through the "addition and subtraction of layers."**
+> (See DeSantis, "Common Forms 2: Layering as Form.")
 
-**本库的处理**：ARR-SPEC 的 `form[]` 两种都支持——
-有词的走段落名，纯电子的走**层数变化**，
-后者的能量曲线由 `roster[].entry/exit` 自然生成，不需要段落名撑着。
+**This library's handling**: ARR-SPEC's `form[]` supports both approaches.
+Vocal music uses section names; purely electronic music uses **changes in layer count**,
+whose energy curve is generated naturally by `roster[].entry/exit`, so it does not need section names to hold it up.
 
-> 这也是 `SKILL.md` §5「编制即形式」那一节的出处。
+> This is also the source of the "lineup is form" section in `SKILL.md` §5.
 
-### 2.2 DeSantis 自己的收尾建议
+### 2.2 DeSantis's Own Closing Advice
 
-> 如果工作在更接近流行音乐的流派，**仅使用这几种段落类型即可创作大量音乐**。
+> If the work is in a genre closer to pop music, **using just these few section types is enough to create a great deal of music**.
 
-**不要因为怕单调就发明段落类型。** 单调来自处理方式相同，不是来自段落名重复。
+**Do not invent section types just because you fear monotony.** Monotony comes from treating everything the same way, not from repeating section names.
 
 ---
 
-## 3. 本库的实测数据全表
+## 3. Full Table of This Library's Measured Data
 
-语料：**Cambridge-MT 多轨 62 首**（自然抽样，非策展），逐首反推成 ARR-SPEC 后按规则的判据统计命中。
+Corpus: **62 songs from Cambridge-MT multitrack** (natural sample, not curated). Each song was reverse-engineered into ARR-SPEC, and the hit rates for each rule's criterion were counted.
 
-| 规则 | 命中 | 分档 | 说明 |
+| Rule | Hits | Tier | Notes |
 |---|---|---|---|
-| 能量曲线必须有下降 | **62/62** | **强规则** | 没有例外 |
-| 编制必须有乐器中途进场 | **59/59** | **强规则** | |
-| 至少一件乐器提前退场 | **59/59** | **强规则** | |
-| 不该全声部严格对齐网格 | **62/62** | **强规则** | 失效条件见 `mc-rhythm-section` §2.0 |
-| 开场不该把乐器一次铺满 | **54/59** | **强规则** | 5 个例外均为特定风格 |
-| 全曲至少一处明显减法 | **36/62 = 70%** | **倾向** | |
-| 最高潮前应有能量回落 | 全量 **22%** ／ 人工真值 **5/7** | **★ 矛盾，只当手法** | 见 §3.1 |
-| 编制在最高潮最密 | **25/59 = 42%** | **挂起** | |
+| Energy curve must have a drop | **62/62** | **Strong rule** | No exceptions |
+| Lineup must have an instrument entering mid-song | **59/59** | **Strong rule** | |
+| At least one instrument must exit early | **59/59** | **Strong rule** | |
+| Not all parts should align strictly to the grid | **62/62** | **Strong rule** | Failure conditions in `mc-rhythm-section` §2.0 |
+| The opening should not lay every instrument in at once | **54/59** | **Strong rule** | The 5 exceptions are all specific styles |
+| At least one clear subtraction somewhere in the song | **36/62 = 70%** | **Tendency** | |
+| Energy should fall back before the peak climax | Full set **22%** / human ground truth **5/7** | **★ Contradiction, treat only as a technique** | See §3.1 |
+| Lineup is densest at the climax | **25/59 = 42%** | **Pending** | |
 
-**另有**：拍速校准（56 首真值）、段落校准（7 首人工标注，命中 72%，**偏差中位 0.0 s**）。
+**Also**: tempo calibration (56 songs of ground truth), section calibration (7 songs human-annotated, 72% hit rate, **median deviation 0.0 s**).
 
-### 3.1 ★ 那条矛盾值得单独说
+### 3.1 ★ The Contradiction Deserves Separate Mention
 
-「最高潮前应有能量回落」在全量 62 首里只有 **22%**，
-但在 7 首**人工标注**的真值里是 **5/7**。
+"Energy should fall back before the peak climax" holds in only **22%** of the full set of 62 songs,
+but in the 7 **human-annotated** ground-truth songs it holds **5/7**.
 
-**差距的来源**：算法定位"最高潮"用的是能量峰值，
-而人耳定位的最高潮**不总是能量最大的点**。
-所以 22% 那个数**测的不是这条规则**，测的是"能量峰值前有没有回落"。
+**Source of the gap**: the algorithm locates the "climax" using the energy peak, whereas the human ear does not always place the climax at the point of greatest energy.
+So the 22% figure **does not measure this rule**; it measures "whether there is a dip before the energy peak."
 
-**结论**：这条**不降级为伪规则，也不升为强规则**——
-列为**手法**，在 `SKILL.md` 里以"可以这么做"而非"必须这么做"的口吻出现。
+**Conclusion**: this rule is **neither downgraded to a pseudo-rule nor promoted to a strong rule**.
+It is listed as a **technique**, and appears in `SKILL.md` in the wording "you can do this" rather than "you must do this."
 
-> ★ 这是本库方法论的一个实例：**指标测不准时，不要拿指标去推翻教科书，
-> 先问指标测的是不是那回事。**
-> （另一个实例见 `mc-case-studies` §5.2：硬编码"12 dB 动态范围"那次误判的教训。）
+> ★ This is an instance of this library's methodology: **when a metric cannot measure accurately, do not use the metric to overturn the textbook; first ask whether the metric is measuring what you think it is.**
+> (Another instance is in `mc-case-studies` §5.2: the lesson from the misjudgement caused by a hard-coded "12 dB dynamic range.")
 
-### 3.2 证据等级的用法
+### 3.2 How to Use Evidence Tiers
 
-| 档 | 在 SKILL.md 里怎么写 |
+| Tier | How to write it in SKILL.md |
 |---|---|
-| **强规则** | "必须"；进 20 条自查表 |
-| **倾向** | "通常应该"；不进 lint，进"写完后必过"清单 |
-| **手法** | "可以这么做"；只在诊断路径里出现 |
-| **挂起** | **不写进 skill**，只在上面的实测表里列着，等更多数据 |
+| **Strong rule** | "must"; goes into the 20-item self-check table |
+| **Tendency** | "should usually"; not in lint, goes into the "must pass after writing" checklist |
+| **Technique** | "you can do this"; appears only in the diagnostic path |
+| **Pending** | **Not written into the skill**; only listed in the measured table above, awaiting more data |
 
 ---
 
-## 4. Suno 默认行为 → ARR-SPEC 对抗字段
+## 4. Suno Default Behaviour → ARR-SPEC Counter-Fields
 
-完整的十四条见 `mc-ai-tell-audit` §2。这里只放编曲相关的行，方便对照。
+The full fourteen items are in `mc-ai-tell-audit` §2. Only the arrangement-related rows are kept here for easy comparison.
 
-**用法**：生成后端在无指令时会滑向左列。ARR-SPEC 的对应字段就是**为了把它拉回来**。
+**Usage**: when no instructions are given, the generation backend drifts toward the left column. The corresponding ARR-SPEC field exists **to pull it back**.
 
-| 后端默认倾向 | ARR-SPEC 的对抗字段 |
+| Backend default tendency | ARR-SPEC counter-field |
 |---|---|
-| 段落等长、都是 8 或 16 的倍数 | `form[].bars` + lint #3（不许全部是 4 的倍数） |
-| 能量单调上升到底 | `energy_curve[]` + lint #1（必须有下降） |
-| 开场就把乐器铺满 | `roster[].entry` + lint #5 |
-| 所有乐器从头响到尾 | `roster[].exit` + lint #6（至少一件提前退场） |
-| 每 4 小节一个过门 | `groove.fill_policy.bars` + lint #10（不许等差 4） |
-| 全声部严格对齐网格 | `groove.push_pull` + lint #11（必须带量级） |
-| 第二遍副歌与第一遍完全相同 | `section_variation[]` + lint #16 |
-| 动态范围被压平 | `dynamics[]` + lint #12 |
-| 立体声宽度全曲不变 | `mix_intent.sound_stage[]` + lint #13 |
+| Sections of equal length, all multiples of 8 or 16 | `form[].bars` + lint #3 (not all may be multiples of 4) |
+| Energy rises monotonically to the end | `energy_curve[]` + lint #1 (must include a drop) |
+| Every instrument filled in from the opening | `roster[].entry` + lint #5 |
+| Every instrument sounds from start to finish | `roster[].exit` + lint #6 (at least one instrument exits early) |
+| A fill every 4 bars | `groove.fill_policy.bars` + lint #10 (not an arithmetic sequence of 4) |
+| All parts strictly aligned to the grid | `groove.push_pull` + lint #11 (must carry a magnitude) |
+| Second chorus identical to the first | `section_variation[]` + lint #16 |
+| Dynamic range flattened | `dynamics[]` + lint #12 |
+| Stereo width unchanged across the whole song | `mix_intent.sound_stage[]` + lint #13 |
 
 ---
 
-## 6. 不在本 skill 的部分
+## 6. Parts Not Covered by This Skill
 
-| 内容 | 去哪 |
+| Content | Where to find it |
 |---|---|
-| 曲式的**乐理分析**（奏鸣曲式、回旋曲式、乐段结构） | `mc-form`（L1）——底本是吴祖强、李吉提、杨儒怀 |
-| 频段怎么分、谁和谁抢 | `mc-texture-layering` |
-| 具体乐器怎么配 | `mc-orchestration` |
-| 打得像不像真人 | `mc-rhythm-section` |
-| 各风格的典型曲式（city pop 的、trap 的） | **L3 风格层** |
-| 影视配乐的结构（跟画面走，不是跟段落走） | 配乐（为画面写音乐）的事，不归本包 |
+| Music-theory analysis of form (sonata form, rondo form, phrase structure) | `mc-form` (L1), based on Wu Zuqiang, Li Jiti and Yang Ruhuai |
+| How to divide the frequency bands and who competes with whom | `mc-texture-layering` |
+| How to orchestrate specific instruments | `mc-orchestration` |
+| Whether it sounds like a real human player | `mc-rhythm-section` |
+| Typical forms of each style (city pop's, trap's) | **L3 style layer** |
+| Structure of film scoring (follows the picture, not the sections) | Writing music to picture is outside the scope of this package |

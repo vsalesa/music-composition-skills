@@ -1,265 +1,265 @@
-# 弦乐器组的组合（杨立青上册第四章）
+# String Section Orchestration (Yang Liqing, Vol. 1, Chapter 4)
 
-这一份管的是弦乐组内部的组合决策：编制规模、线条的幅度、和声的排列与分部、音型化、各类型织体的具体写法、踏板音、多重编制，以及各时期可选的弦乐范式。它与 reference §2.3（为弦乐配器）并列，是同一件事的杨立青侧；§2.3.6 的排列色调表、§4.1 的十五度线条、§4.2 的多层八度都出自本章，那三处不在这里重复。
+This file covers the internal orchestration decisions of the string section: lineup size, the scale of melodic lines, the arrangement and division of harmony, figuration, the concrete writing for each texture type, pedal notes, multiple lineups, and the string models available in each period. It stands alongside reference §2.3 ("Orchestrating for Strings") and is the Yang Liqing side of the same topic. The colour table of arrangements in §2.3.6, the fifteenth-interval lines in §4.1 and the multi-layer octaves in §4.2 all come from this chapter, and those three points are not repeated here.
 
 ---
 
-## 1. 编制：加人买到的是什么
+## 1. Lineup: What Adding Players Buys
 
-| 规模 | Vln I / Vln II / Vla / Vc / Db | 页 |
+| Scale | Vln I / Vln II / Vla / Vc / Db | Page |
 |---|---|---|
-| 小型 | 4 / 3–4 / 2–3 / 2 / 1 | （p0172） |
-| 中型 | 8 / 6–8 / 4–6 / 3–4 / 3 | （p0172） |
-| 大型 | 16 / 14–16 / 10–12 / 8 / 6 | （p0172） |
+| Small | 4 / 3–4 / 2–3 / 2 / 1 | (p0172) |
+| Medium | 8 / 6–8 / 4–6 / 3–4 / 3 | (p0172) |
+| Large | 16 / 14–16 / 10–12 / 8 / 6 | (p0172) |
 
-- ★ 中型编制在最有利音区最强约 90–92 分贝，已够 ff 听感；换大型只再多 2–3 分贝，**加人买到的是圆润、柔韧、融洽，不是响度**（p0172）。
-- 小型编制只用一把低音提琴，为的是避开低音区的拍音（p0172）。
-- 力度包容幅度实测：弦乐 pp 到 ff 约 35.5 分贝（52.5–88），木管 12.5（72.5–85），铜管 17.5（77.5–95）（p0172）。弦乐是唯一能靠自身力度跨度撑起全曲动态的组。
-- 各声部只要数量配比与主次相称、音区大致均等，力度平衡不难达到（p0172）。阈值见 §4。
+- ★ At its most favourable register, the medium lineup reaches about 90–92 dB, which is already enough to sound like ff. Moving to a large lineup adds only another 2–3 dB. **Adding players buys roundness, flexibility and blend, not loudness** (p0172).
+- The small lineup uses only one double bass, to avoid beating in the low register (p0172).
+- Measured dynamic range: strings span about 35.5 dB from pp to ff (52.5–88), woodwinds 12.5 (72.5–85), and brass 17.5 (77.5–95) (p0172). Strings are the only group that can carry the dynamic span of a whole piece on its own.
+- As long as the numbers of each part are in proportion to their roles and their registers are roughly balanced, dynamic balance is not hard to achieve (p0172). Thresholds are covered in §4.
 
-**非传统编制的五条路**（p0172）：声部细分到七部以上或反过来用不分组的大数量弦乐；独奏型编制或每件乐器各占一部的多重分部；省略声种（只用中低音或只用低音弦乐，代价是音响整体下沉变暗）；独奏与群体弦乐并置以求音色对比；复合弦乐队（见 §9）。
+**Five routes to a non-traditional lineup** (p0172): subdivide the strings into seven or more parts, or conversely use a large undivided string body; a soloistic lineup, or multiple divisi in which each instrument takes its own part; omit voice types (use only the middle and low strings, or only the low strings, at the cost of a sound that sinks and darkens overall); juxtapose soloists and string groups for timbral contrast; or a composite string orchestra (see §9).
 
-**用法**：先答这段要的是响度还是质地，再决定加不加人。要响度而人数已到中型，改去 §3 换排列或 §4 换奏法。
+**Usage**: first decide whether the passage needs loudness or texture, then decide whether to add players. If you need loudness and the lineup is already medium, change the arrangement in §3 or the bowing technique in §4 instead.
 
 ---
 
-## 2. 线条：同度、八度、和声性线条
+## 2. Lines: Unison, Octave, Harmonic Lines
 
-线条要同时答两件事：构成形态（密度、浓度、幅度）与呈现质量（音色、音区、力度）（p0176）。
+A line must answer two questions at once: its shape (density, concentration, range) and its quality of presentation (timbre, register, dynamics) (p0176).
 
-### 2.1 同度：先问音区，再问配对
+### 2.1 Unison: Choose the Register First, Then the Pairing
 
-- 两极音区选择余地很小，只能用适合该音区的乐器；**选择余地最大的音域是中音区与中高音区**，各声部的应用音域在那里相互交叉（p0176、p0181）。★ 两极的异类同度可能性不多，运用不当会流于怪诞离奇，实用价值较低（p0180）。
-- 中低音乐器的高音区能拿到高音弦乐器在正常音区拿不到的色彩（p0176–0177，例 IV-1）；中高音区也可用指定用弦（Sul G、Sul A）取色（p0180，例 IV-3）。
-- 主题在声部间依次交替可逐级抬高紧张度，条件是后一声部处在比前一声部发音更高也更强烈的音区（例 IV-2；见 SKILL §3.6）。
+- The two extreme registers leave little room for choice, so only instruments suited to that register can be used. **The widest range of choice lies in the middle and upper-middle registers, where the playing ranges of the parts overlap** (p0176, p0181). ★ There are few possibilities for unisons between mismatched instruments at the two extremes; used carelessly they become grotesque and bizarre, so their practical value is low (p0180).
+- The upper register of middle-to-low instruments can achieve colours that high string instruments cannot reach in their normal register (p0176–0177, Ex. IV-1). In the upper-middle register, a designated bowing (Sul G, Sul A) can also be used to obtain colour (p0180, Ex. IV-3).
+- When the theme passes successively between parts, tension can be raised step by step, provided the following part sits in a register that sounds higher and more intense than the preceding one (Ex. IV-2; see SKILL §3.6).
 
-| 配对 | 听感与条件 | 页 |
+| Pairing | Aural effect and conditions | Page |
 |---|---|---|
-| Vln + Vla | ff 且中提琴在其较高音区：相当强烈，大大加强小提琴的紧张感。p 时像真挚的倾诉，柔和且发自深心，弱奏再叠中音长笛与单簧管更深沉 | （p0181–0182，例 IV-5、IV-6） |
-| Vln + Vc | 大提琴在最富表现力的 A 弦上时音色往往占优，线条热情饱满；此时小提琴 I 须用 G 弦，整条线色调浓重 | （p0181） |
-| Vla + Vc | 大提琴音区不很高时中提琴使其略微软化，中和它在男高音音域里过于醒目的色彩，带严峻克制的性质（见 SKILL §3.4）。大提琴再上移到最有利音域，同一结合转为十分热情紧张 | （p0183–0184，例 IV-7、IV-8） |
-| Vln + Vla + Vc | 共同音域在中提琴大提琴的中高音区与小提琴 G 弦低音区，戏剧性明显、色彩极浓；配音区上升加 pp 到 ff 的渐强，效果极紧张浓烈 | （p0185，例 IV-9） |
-| 全组 | 当代写法，低音提琴须到极高音区，紧张度甚至超过三件的组合；让声部先后退出可做出音响"稀释"的效果 | （p0186，例 IV-10） |
-| Vc + Db（低音区） | 两极同度里的例外：低音提琴处稍高音区因而有紧张度，大提琴处浓音色低音区，浓郁强烈 | （p0180，例 IV-4） |
+| Vln + Vla | At ff, with the viola in its higher register: quite intense, greatly heightening the violin's sense of tension. At p it sounds like sincere confiding, soft and coming from deep within; doubling it with a middle flute and clarinet at soft dynamics makes it darker still | (p0181–0182, Ex. IV-5, IV-6) |
+| Vln + Vc | When the cello is on its most expressive A string, its timbre often dominates and the line is warm and full; at this point Vln I must use the G string, giving the whole line a rich colour | (p0181) |
+| Vla + Vc | When the cello is not very high, the viola softens it a little, neutralising its colour, which is too prominent in the tenor range, giving a quality of stern restraint (see SKILL §3.4). When the cello moves up to its most favourable range, the same combination becomes very passionate and tense | (p0183–0184, Ex. IV-7, IV-8) |
+| Vln + Vla + Vc | The shared range lies in the middle-to-upper registers of viola and cello and the low register of the violin's G string; the drama is pronounced and the colour very rich. Raising the register and adding a crescendo from pp to ff makes the effect extremely tense and intense | (p0185, Ex. IV-9) |
+| Whole section | A contemporary approach: the double bass must reach very high registers, and the tension can exceed that of the three-instrument combination. Having the parts withdraw one after another can produce a sense of sonic "dilution" | (p0186, Ex. IV-10) |
+| Vc + Db (low register) | An exception among unisons at the extremes: the double bass in its slightly higher register provides tension, while the cello in its dense low register provides richness and strength | (p0180, Ex. IV-4) |
 
-### 2.2 八度
+### 2.2 Octaves
 
-同类（p0186–0187）：小提琴八度在较高音区明亮富光彩；中提琴分部八度适合填充性内声部与对位线条，**但在缜密织体里没有管乐支持会被覆盖**（例 IV-11）；大提琴承担和声或独立内声部时可用低音提琴分部八度求更坚实的支持。见 SKILL §3.2。
+Same-instrument octaves (p0186–0187): violin octaves in the higher register are bright and lustrous; viola divisi octaves suit filling inner parts and contrapuntal lines, **but in a dense texture they are covered up without wind support** (Ex. IV-11). When the cellos carry the harmony or an independent inner part, double-bass divisi octaves can be used for firmer support. See SKILL §3.2.
 
-异类（p0187、p0189）：Vln + Vla 在中高音区比纯小提琴八度稍柔和暗淡（例 IV-12）；Vln + Vc 饱满如歌，★ 大提琴处在最有利音区时**只需一半演奏员就足以赋予音乐激情与紧张度**（例 IV-13）；Vla + Vc 都在较高音区时大提琴占优，中提琴强化其上方分音（例 IV-14）。十五度线条见 reference §4.1，多层八度见 §4.2。
+Mixed-instrument octaves (p0187, p0189): Vln + Vla in the upper-middle register is slightly softer and duller than pure violin octaves (Ex. IV-12). Vln + Vc is full and song-like. ★ When the cello is in its most favourable register, **only half the players are needed to give the music passion and tension** (Ex. IV-13). Vla + Vc, with both in the higher register, has the cello dominating while the viola reinforces the partials above it (Ex. IV-14). For fifteenth-interval lines, see reference §4.1; for multi-layer octaves, see §4.2.
 
-### 2.3 和声性线条：由非八度平行音程构成的线条
+### 2.3 Harmonic Lines: Lines Built from Parallel Non-Octave Intervals
 
-| 型 | 判据 | 页 |
+| Type | Criterion | Page |
 |---|---|---|
-| 三度、六度平行 | 古典浪漫的常态，多用同类乐器。★ 六度两声部改由小提琴与大提琴担任并作声部交错（大提琴置于小提琴之上）可得浓烈真挚的激情，代价是要打破音区归属的直觉；换回常规的 Vln I/Vln II、Vln II/Vla、Vla/Vc 叠置，这份激情会丧失殆尽而流于平庸 | （p0192，例 IV-17） |
-| 三六度的重叠与混合 | 作八度甚至双八度重叠，层次互相支持，格外丰满明亮（例 IV-18）；也可只在低八度重复三度线条里的上方旋律声部（例 IV-19） | （p0192–0193） |
-| 四度、五度平行 | 印象派与国内作曲家常见，可多层重复；分部大提琴与低音提琴的声部交错可仿奥尔加农。最低音交给分部大提琴的最低声部，因为大提琴第 IV 弦比低音提琴第 II 弦发音更饱满浓重 | （p0193，例 IV-20） |
-| 二度平行 | 现代偶见。小提琴声部的小二度叠置可仿二胡一类民间乐器音准上的微偏 | （p0194，例 IV-21） |
-| 和弦连续 | 19 世纪后半期起线条"体积"扩大为和弦连续；极弱力度下分部小提琴的平行六和弦作双层八度重叠，轻盈透明 | （p0195，例 IV-22） |
-| 体积膨胀与音块 | 体积可从小二度到四度高叠再到五度高叠逐级膨胀，音区同步扩张（例 IV-23）；也可逐拍在下方加一个相距小二度的声部加浓轮廓，宽度由大二度扩到小七度（例 IV-24） | （p0196） |
+| Parallel thirds and sixths | The norm in Classical and Romantic music, usually using same-type instruments. ★ When the two voices of a parallel sixth are given to the violin and cello, with the parts interlaced (cello placed above the violin), an intense and sincere passion results. The cost is that it breaks the intuition about register ownership. Restoring the usual stacking of Vln I/Vln II, Vln II/Vla, Vla/Vc causes this passion to vanish, leaving the music banal | (p0192, Ex. IV-17) |
+| Overlapping and mixing of thirds and sixths | Doubling in octaves or even double octaves, with layers supporting one another, gives an especially full and bright sound (Ex. IV-18). Alternatively, only the upper melodic part of a repeated third-based line can be doubled an octave lower (Ex. IV-19) | (p0192–0193) |
+| Parallel fourths and fifths | Common in Impressionist and domestic composers' works; can be repeated in multiple layers. Interlacing the divisi cellos and double basses can imitate organum. The lowest note is given to the lowest divisi cello part, because the cello's fourth string sounds fuller and denser than the double bass's second string | (p0193, Ex. IV-20) |
+| Parallel seconds | Occasionally seen in modern music. Stacking violin parts a minor second apart can imitate the slight pitch deviations of folk instruments such as the erhu (èrhú) | (p0194, Ex. IV-21) |
+| Chord progressions | From the second half of the 19th century the "volume" of lines expanded into chord progressions. At extremely soft dynamics, divisi violins playing parallel six-note chords doubled in two layers of octaves give a light and transparent sound | (p0195, Ex. IV-22) |
+| Volume expansion and blocks | Volume can expand step by step, from stacks a minor second apart to stacks a fourth apart, and then to stacks a fifth apart, with the register expanding in step (Ex. IV-23). Alternatively, a part a minor second apart can be added below on each beat to thicken the outline, with the width widening from a major second to a minor seventh (Ex. IV-24) | (p0196) |
 
-### 2.4 线条的两种特殊形态（p0197）
+### 2.4 Two Special Forms of Line (p0197)
 
-- **分拆隐伏**：把主要旋律的构成音分拆到不同声部交错出现，每声部都由跳进构成。代价是旋律不再直观、音程走向要专门设计，换来的是起伏跌宕，避免平铺直叙冲淡强烈阴惨的色调（例 IV-25）。
-- **只保留顶层**：双八度重复的主旋律，完整形态可只出现在最高声部，下方重复声部为方便双弦演奏分拆交错到不同声部（例 IV-26）。
+- **Split and hidden**: the constituent notes of the main melody are split across different parts, appearing in interlaced fashion, with each part built from leaps. The cost is that the melody is no longer immediately recognisable, and the intervallic direction must be designed carefully. The gain is ups and downs and dramatic swings, which prevent a plain, flat narration from diluting a strong, grim colour (Ex. IV-25).
+- **Top layer only**: a main melody repeated in double octaves can appear in full only in the highest part, while the repeated part below is split and interlaced across different parts for ease of playing on paired strings (Ex. IV-26).
 
-**编曲含义**：先定幅度再定配对。配对决定色调与紧张度，幅度决定体积。
-
----
-
-## 3. 和声：排列、幅度、分部
-
-和声处理是否得当直接决定整体音响的共鸣与平衡。里姆斯基-科萨科夫的说法是和弦分布得好、声部处理得当，用弦乐铜管木管演奏效果都一样好；稍有不当就容易比例失调，这是初学配器最易出的疏漏之一。弦乐组不涉及异质音色，要盯的是密度（排列方式）、幅度（占据的音区宽窄）、分配方式（分不分部）三件事（p0198）。
-
-### 3.1 传统密集排列的五条原则（整套）
-
-以自然泛音列的排列方式为规范（p0198）：
-
-1. 总体密度应**下疏上密**。下方尤其低音区密集会让谐频在中音区互相干扰，共鸣不纯净。
-2. 低声部与上方声部的间距不宜过大，否则产生游离脱节感。
-3. 上方各声部应均匀密集，不可任意留空隙（开放排列与下面的例外除外）。
-4. 乐器声部按各自正常音区顺序排，不宜交错，以免个别乐器因音区优势过分突出、破坏整体均衡。
-5. 需要扩展幅度时，把上方声部高八度重复并保持密集（偶尔低八度重复以填中音区空隙）；低音声部通常只能低八度重复。
-
-第 1 条与 Adler 的"低声部各音间隔要比高声部大"是同一规则的两种说法（见 reference §2.3.4）。密集排列通常给出最谐调的音响与最丰满的共鸣（p0199，例 IV-27）。
-
-### 3.2 什么条件下可以违反
-
-各种排列的听感与代价已列在 reference §2.3.6，这里只补机理与条件：
-
-- ★ **总机理**：弱奏时任何乐器激发的谐波数目少、幅度也弱，低音区即使密集也不会在中音区产生明显干扰。所以 ppp 下中音区留出大六度甚至小七度的空隙不但不破坏平衡，反而让整体特别清澈柔和（p0202、p0208，例 IV-31）。力度一上来，脱节感的风险就回来了。
-- 低音持续音与内声部隔到两个八度时，着眼点是透明的空间性，不是丰满坚实（p0200，例 IV-28）。浪漫派时期违反这五条的写法普遍存在，规则不具绝对性（p0199）。
-
-### 3.3 现代写法：等距、音束、三条禁忌一起打破
-
-- **等距密集**：即使音高材料属传统写法，和声也可在所有音区一律用等距密集排列，与常规原则相忤，为的是特殊色彩（p0207，例 IV-37）。
-- ★ **三条禁忌可以同时叠加打破**（p0208–0209，例 IV-38）：和声下密上疏；层间留出宽达两个八度的中空；乐器排列次序颠倒，例如让低音提琴的泛音发音高于大提琴与中提琴。作者的评价是这类写法音响怪诞新奇，**若非出于特殊表现需要，不推荐使用**。
-- **音束的合法性，两说并排**。考威尔的论据是传统三度叠置和弦依据泛音列第 1 至第 8 分音，现代作曲家同样有权从第 9 分音以上谐波的密集排列引伸出大二度、小二度乃至微分音的音束（p0209）。作者本人的观察摆在旁边：例 IV-39 里 42 把弦乐 ff 奏 1/4 音关系的浓聚音束，共鸣的响亮程度或许不及传统和弦结构，震撼力则前所未见。
-
-### 3.4 音区分布与幅度的对比（p0210–0213）
-
-和声的表现力不只取决于结构形态与密度，很大程度还依赖音区分布、幅度、力度、奏法。★ 密度不变（都是密集排列）时，仅靠音区对照加力度骤变（极高音区长音和弦 ff 转中低音区 pp）就足以做出由张及弛、由明及暗的鲜明反差（回参例 IV-2）。同一套十二音材料也有两种处理：开放排列跨五个八度以上、fff，强烈响亮；密集排列压成大七度跨度的音束，浓郁紧张（例 IV-41）。
-
-### 3.5 分部演奏（p0213–0216）
-
-- **代价表**：同一和弦用分部比双音和弦奏法发音更纯净精美，力度上弱约 2 分贝。★ 由 div. 回到 uni. 本身就构成一种自然的力度渐强（p0213，例 IV-42）。
-- **同声种合唱**：把和声交给分部的同类弦乐器，可在某个音区布满一种特定音色（p0215，例 IV-43 由 5 把大提琴 soli 起，渐次加入其余低音弦乐）。
-- **记谱**：细分声部间交叉排列更常见，因为相邻而坐的两人奏五、六度音准更易把握；多于三部按谱台甚至按演奏者分部（p0215–0216）。
-
-**用法**：先定力度再定排列。强奏要响就密集，弱奏才谈得上留隙、中空、等距与倒序。分部与否是另一个轴，换的是纯净度与 2 分贝。
+**Orchestration implication**: fix the range first, then the pairing. The pairing determines colour and tension; the range determines volume.
 
 ---
 
-## 4. 声部均衡与多弦奏法（p0217–0220）
+## 3. Harmony: Arrangement, Range, Divisi
 
-- ★ **判据不是人数，是两件事**：数量分配与声部在织体中的主次地位是否相称；声部间力度差有没有越过 8–13 分贝的隐蔽效应界限。两条都满足就不会有声部均衡问题。**乐器数目的少量增减对实际力度的影响，远不如凭直觉设想的那样明显**（p0217，例 IV-45 演示约 3 人的中提琴音型可与小提琴 I、II 的八度齐奏旋律相抗衡）。与 SKILL §4 并读。
-- **双音和弦奏法**音量更大、发音更粗犷，用在情绪强烈或要求响亮坚实处。必须标 non div.，否则会被读成分部（p0217–0220，例 IV-46、IV-47 演示靠空弦减轻难度并使发音更辉煌）。
-- **三音四音和弦**（拉奏或拨奏）用于力度很强、发音短促处，或强调 sf 的起奏，与铜管打击乐重叠可得更强共鸣。★ 这类用法里**和弦音的排列方式与声部连接的规范性已属次要**，优先保演奏方便与发音共鸣（p0220，例 IV-48）。
+Whether harmonic treatment is handled well directly determines the resonance and balance of the overall sound. Rimsky-Korsakov's view is that when chords are well distributed and parts are well handled, the result sounds equally good whether played by strings, brass or woodwinds. A slight misjudgment easily produces disproportion, which is one of the most common oversights of beginners in orchestration. The string section involves no heterogeneous timbres, so attention should be focused on three things: density (the arrangement), range (how wide the register is) and distribution (whether or not the parts are divided) (p0198).
+
+### 3.1 The Five Principles of Traditional Close Arrangement (complete set)
+
+Take the arrangement of the natural harmonic series as the norm (p0198):
+
+1. The overall density should be **sparse at the bottom and dense at the top**. Density in the low register, especially the bass, causes the overtones to interfere with one another in the middle register, and the resonance becomes impure.
+2. The gap between the low voices and the upper voices should not be too large, or a sense of detachment arises.
+3. The upper parts should be evenly dense and should not leave gaps arbitrarily (except for open voicings and the exceptions below).
+4. Instrumental parts should be ordered according to their normal registers and should not cross, so that no single instrument becomes excessively prominent through its register advantage and upsets the overall balance.
+5. When the range needs to be widened, repeat the upper parts an octave higher while keeping them dense (occasionally repeat an octave lower to fill gaps in the middle register). Low parts can usually be repeated only an octave lower.
+
+Principle 1 is the same rule as Adler's "the intervals between the notes of the lower parts should be larger than those of the higher parts" (see reference §2.3.4). Close arrangement usually gives the most harmonious sound and the fullest resonance (p0199, Ex. IV-27).
+
+### 3.2 Under What Conditions the Rules May Be Broken
+
+The aural effects and costs of each arrangement are already listed in reference §2.3.6. Here only the mechanism and the conditions are added:
+
+- ★ **The general mechanism**: at soft dynamics, any instrument produces few harmonics and at weak levels, so even dense low-register writing does not cause noticeable interference in the middle register. So a gap of a major sixth or even a minor seventh left in the middle register at ppp does not disturb the balance; on the contrary, it makes the whole sound especially clear and soft (p0202, p0208, Ex. IV-31). Once the dynamic rises, the risk of a sense of detachment returns.
+- With a sustained bass note and inner parts separated by two octaves, the focus is on transparent spatiality rather than fullness and solidity (p0200, Ex. IV-28). Writing that breaks these five principles was widespread in the Romantic period, so the rules are not absolute (p0199).
+
+### 3.3 Modern Approaches: Equal Spacing, Tone Clusters, and Breaking All Three Taboos at Once
+
+- **Equal-interval close voicing**: even when the pitch material is traditional, the harmony may use equal-interval close voicing throughout all registers. This runs against the conventional principles, but it is done for a special colour (p0207, Ex. IV-37).
+- ★ **The three taboos can be broken together** (p0208–0209, Ex. IV-38): the harmony is dense below and sparse above; a hollow space two octaves wide is left between layers; and the order of the instruments is reversed, for example by having the double bass's overtones sound higher than the cello and viola. The author's assessment is that this kind of writing produces a grotesque and novel sound. **Unless a special expressive need calls for it, its use is not recommended.**
+- **The legitimacy of tone clusters, with two views set side by side**. Cowell's argument is that traditional stacked-third chords are based on the first to eighth partials of the harmonic series. Modern composers have an equal right to derive major seconds, minor seconds and even microtonal clusters from the close arrangement of harmonics above the ninth partial (p0209). The author's own observation is placed alongside: in Ex. IV-39, bar 42, the strings play a dense cluster of quarter-tone relationships at ff. Its resonance may not be as loud as that of a traditional chord structure, but its impact is unprecedented.
+
+### 3.4 Register Distribution and the Contrast of Scale (p0210–0213)
+
+The expressive power of harmony depends not only on structural shape and density but to a large extent on register distribution, range, dynamics and bowing. ★ With density unchanged (all in close arrangement), register contrast alone, combined with a sudden change in dynamics (a long chord at ff in the very high register switching to pp in the low-middle register), is enough to create a striking contrast that moves from tension to release and from bright to dark (cf. Ex. IV-2). The same twelve-tone material can also be handled in two ways: open voicing spanning more than five octaves at fff, sounding powerfully loud; or close voicing compressed into a cluster spanning a major seventh, rich and tense (Ex. IV-41).
+
+### 3.5 Divisi Playing (p0213–0216)
+
+- **Cost table**: the same chord played divisi sounds purer and more refined than when played as double-stops, and is about 2 dB weaker in dynamics. ★ Returning from *div.* to *uni.* by itself creates a natural crescendo (p0213, Ex. IV-42).
+- **Choir of a single string type**: when the harmony is handed to divisi players of the same instrument type, a specific timbre can fill a given register (p0215, Ex. IV-43 begins with five cellos *soli* and then gradually adds the other low strings).
+- **Notation**: interlaced cross-arrangement of subdivided parts is more common, because two players sitting side by side find fifths and sixths easier to keep in tune. For more than three parts, divide by stand, or even by individual player (p0215–0216).
+
+**Usage**: fix the dynamics first, then the arrangement. For loud playing you need density; only at soft dynamics do gaps, hollow spaces, equal spacing and reversed order become options. Whether to divide is a separate axis, trading purity against 2 dB.
 
 ---
 
-## 5. 音型化的四类（p0220–0239）
+## 4. Part Balance and Multiple-Stop Bowing (p0217–0220)
 
-分节奏、线条、和声、混合四类，雏形在巴罗克古典时期已见，真正兴盛在 19 世纪（p0220）。
+- ★ **The criterion is not the number of players but two things**: whether the distribution of numbers matches the primary and secondary roles of the parts in the texture; and whether the dynamic difference between parts crosses the hidden threshold of 8–13 dB. If both are satisfied, there is no balance problem. **A small change in the number of instruments affects the actual dynamics far less than intuition suggests** (p0217; Ex. IV-45 demonstrates that a viola figure played by about three players can hold its own against a melody played in unison octaves by Vln I and II). Read alongside SKILL §4.
+- **Double-stop bowing** is louder and rougher in tone, used where emotion is intense or a loud, solid sound is needed. It must be marked *non div.*, or it will be read as divisi (p0217–0220; Ex. IV-46 and IV-47 show that open strings are used to reduce the difficulty and make the sound more brilliant).
+- **Three- and four-note chords** (bowed or plucked) are used where the dynamic is very strong and the sound is short, or to emphasise an *sf* attack; overlapping with brass and percussion produces stronger resonance. ★ In this kind of usage, **the conventions of chord-note arrangement and voice leading become secondary**; ease of playing and resonance take priority (p0220, Ex. IV-48).
 
-### 5.1 节奏音型化
+---
 
-无音高变化的节奏型反复出现，可用于任何层次。风俗性音画里用它标定体裁或地域风格，多数场合用它是为了流动感或紧张度（p0220–0221）。让它不呆板的手段：音色与幅度的改换（转接、同度增长为八度）、奏法变化、音型体积的扩展或缩减（p0221–0222，例 IV-49、IV-51）；音型在声部间转接造成音区跳荡，配靠指板与极弱力度像给织体蒙上一重薄纱（例 IV-52）；两种节奏型复合交错，再用连弓对拨奏的奏法对置（例 IV-53）。不定量记谱配手掌击弦可得偶然性、非节拍化的节奏音型，只要反复出现性质不变（p0224，例 IV-54）。
+## 5. The Four Types of Figuration (p0220–0239)
 
-### 5.2 线条音型化
+The four types (rhythmic, linear, harmonic, mixed) appeared in embryonic form in the Baroque and Classical periods, but flourished in the 19th century (p0220).
 
-传统型依附于和声骨架，由和弦外音构成固定音型，没有独立旋律意义，最常见的是短小音阶片断（p0225）。急速的音阶式音型可先在低音出现再蔓延到高音区形成排山倒海之势；起伏大时用声部转接，在不同音区形成模仿与多层旋律化音型（p0227）。密度靠声部数量增减控制，也可在单声部音型上渐次叠加平行声部再层层削减（p0228）。当代蜕变：保留形式外壳，音高不再从主旋律或内声部和声派生，改按序列、音集原则组合，代价是失去传统意义上可辨识的旋律（p0229，例 IV-58）。
+### 5.1 Rhythmic Figuration
 
-### 5.3 和声音型化：三种基本型
+A rhythmic pattern without pitch change, repeated, can be used at any level. In descriptive pictorial music it marks a genre or regional style, but on most occasions it serves to create a sense of flow or tension (p0220–0221). Means of keeping it from sounding rigid: changing timbre and dynamics (switching between sections, or doubling at the unison and then at the octave), changing bowing technique, and expanding or contracting the volume of the figure (p0221–0222; Ex. IV-49, IV-51). Passing the figure between parts creates leaping register movement, and combining it with fingerboard playing and extremely soft dynamics gives the texture a thin veil (Ex. IV-52). Two compound rhythmic patterns can be interlaced and set against each other using the contrast of legato bowing and pizzicato (Ex. IV-53). Unmeasured notation combined with the palm striking the strings can produce accidental, non-metrical rhythmic figures, as long as their character remains unchanged when they recur (p0224, Ex. IV-54).
 
-| 型 | 做法 | 要点与代价 |
+### 5.2 Linear Figuration
+
+The traditional type attaches to a harmonic skeleton and consists of fixed figures made of non-chord tones. It has no independent melodic meaning, and the most common forms are short scale fragments (p0225). A rapid scale-like figure can first appear in the low register and then spread upward into the high register, creating an overwhelming sweep. When the range is large, the figure is passed between parts, forming imitative and multi-layered melodic figures across different registers (p0227). Density is controlled by adding or removing parts; one can also gradually add parallel parts to a single-part figure and then strip them away layer by layer (p0228). The modern transformation keeps the formal shell but no longer derives pitches from the main melody or inner harmony; instead, pitches are organised according to serial or pitch-set principles, at the cost of losing a melody recognisable in the traditional sense (p0229, Ex. IV-58).
+
+### 5.3 Harmonic Figuration: Three Basic Types
+
+| Type | Method | Key points and costs |
 |---|---|---|
-| **摇荡式** | 相邻和弦音反复交替 | 最简单的一型，效果是似动非动。相毗邻的声部常互作反向进行、互相补位，在每个音点上保持完整和声与良好共鸣（p0229，例 IV-59）。当代版建立在分解音束上，节奏比例可更复杂（如 10:11:12）（p0230–0231，例 IV-60） |
-| **密集式分解** | 沿密集排列的相邻和弦音作幅度较大的上下行交替 | 为避免和声音响大幅波动，用若干互呈反向的琶音层维系均衡（p0231，例 IV-61）。★ 让其中一层用泛音构成持续长音，可把节奏交错的快速音型黏成一体（p0232–0233，例 IV-62） |
-| **开放式分解** | 按开放排列位置作大幅度上下行琶音 | 特别适合在三四根弦上演奏。位于中低音区并用连弓、两声部自身又成八度重叠时更丰满厚实；改用加弱音器的独奏乐器 pp 撞弓则更具弹性（p0233–0235，例 IV-63、IV-64） |
+| **Rocking** | Adjacent chord notes repeated in alternation | The simplest type, with the effect of seeming to move without really moving. Neighbouring parts often move in contrary motion, filling in for each other, keeping the harmony complete and resonant at every point (p0229, Ex. IV-59). A modern version is built on arpeggiated clusters, and the rhythmic proportions can be more complex (such as 10:11:12) (p0230–0231, Ex. IV-60) |
+| **Close-voiced arpeggio** | Alternating upward and downward arpeggios of large range through adjacent notes of a close-voiced chord | To avoid large fluctuations in the sound of the harmony, several contrary arpeggio layers maintain the balance (p0231, Ex. IV-61). ★ If one layer forms a sustained note from harmonics, the rhythmically interlaced fast figures can be fused into a single unit (p0232–0233, Ex. IV-62) |
+| **Open arpeggio** | Large upward and downward arpeggios following the open-voicing positions | Especially suited to playing on three or four strings. Fuller and more solid when in the middle-to-low register, using legato bowing, with the two parts themselves doubled in octaves; played by muted soloistic instruments with a pp bow-strike, it gains more elasticity (p0233–0235, Ex. IV-63, IV-64) |
 
-四种复杂化（p0235–0238）：让各层节奏交错甚至各用不同奏法，★ 作曲家要的是融汇为一片的交织错落，**不必让所有细节都须眉毕现**（例 IV-65）；用色彩装饰性因素描画轮廓，如用独奏泛音修饰他声部的分解和弦（例 IV-66）；加强调性因素点化细节，或把开放式与摇荡式叠置在不同声部（例 IV-67）；用类似恰空的织体变奏原则让音型每次出现都有变化（例 IV-68）。
+Four ways of making this more complex (p0235–0238): interlacing the rhythms of the layers, or even giving each layer a different technique. ★ The composer wants an interwoven texture that blends into one mass, **and does not need every detail to be clearly visible** (Ex. IV-65). Use coloristic decorative elements to sketch the outline, for example by using a solo harmonic to embellish the broken chords of another part (Ex. IV-66). Add accentuating elements to pinpoint details, or stack open and rocking figures in different parts (Ex. IV-67). Apply a variation principle to the texture, similar to a chaconne, so that the figure changes every time it returns (Ex. IV-68).
 
-### 5.4 混合音型化
+### 5.4 Mixed Figuration
 
-三类的综合，谱面未必复杂，性质却不同于单纯的和声音型化：线条音型化声部的环绕进行可让并置的节奏音型化低音免于呆滞；多层并存时可安排一个声部沟通各层，另一声部起强调作用（p0239，例 IV-69）。
-
----
-
-## 6. 织体层次怎么剥离（p0242–0250）
-
-六个手段是音色、音区、奏法、密度浓度、幅度、力度，总表见 `mc-texture-layering` §3.4。这里是杨立青给出的判据与排序：
-
-- **音色起主导作用**。只要音色特征鲜明，某声部即使音区与背景重合也能作为独立层浮现（p0244，例 IV-72）。★ **穿越力的物理条件**：两个声部同处一个音区、力度相差较大时，只要音色差异明显，尤其当弱力度那件谐波较丰富、或其频谱共振峰恰好落在强力度那件振幅较弱的部位，弱的一件仍有穿越力，不会被掩盖。用音色对置做层次色差是配器的"古典原则"之一（p0242–0243），这是 SKILL §5 三条件背后的物理机制。
-- **音区**：声部间音程距离越大，掩盖的可能越小。瓦西连科的原则是给旋律声部演奏的"自由天地"，必要时让对位声部作曲折跳进腾出音区，甚至倒置声部排列（p0244–0246，例 IV-73）。见 SKILL §4.1、§6。★ **反直觉的一条**：两层挤进同一音区时，只要主旋律位于自己最富特性的中高音区并用较强力度，仍能从中性色彩的伴奏中凸现，效果有时不亚于音区分离本身（p0246–0247，例 IV-74）。
-- **奏法**：同一乐器的两种差异极大的奏法，频谱结构与时间过渡特性都不同，这类结合通常只能产生异质性音响，对剥离极其有利（p0247–0248，例 IV-75）。见 SKILL §3.5。
-- **密度与浓度**：同类甚至完全相同的音色，只要数量配置差别明显就能形成浓度反差，弦乐组最常见的是 solo、soli、tutti 三级（p0248，例 IV-76 演示品种、力度、奏法全一致，仅靠音区对置加密度差形成对比）。
-- **幅度**：一个音组对多个音组的陈述规模差可辅助分离，也可强调两条对比线条的不同性格（p0249–0250，例 IV-77）。见 SKILL §3.2。
-- ★ **力度永远只是辅助手段**（p0250）。给主要因素力度优势确实有用，但若各层在音区、音色、密度、幅度上的比例已严重失调，靠力度级差补救往往拿不到理想结果；多数例证里作曲家并未依赖力度差来取得平衡与主次。这与 reference §2.3.1 引海顿那条标尺是同一个判断。
+A synthesis of the three types. The score may not look complicated, but its character differs from pure harmonic figuration. The circling movement of a linear-figuration part can keep a juxtaposed rhythmic-figuration bass from sounding stagnant. When several layers coexist, one part can connect the layers while another plays an accentuating role (p0239, Ex. IV-69).
 
 ---
 
-## 7. 各类型织体的具体构成
+## 6. How to Separate Textural Layers (p0242–0250)
 
-总开关（同质求融合、异质求分离）见 SKILL §1.1。以下是弦乐组内部的落点。
+The six means are timbre, register, technique, density and concentration, range, and dynamics. The overall table is in `mc-texture-layering` §3.4. Here are the criteria and ordering given by Yang Liqing:
 
-### 7.1 齐奏型（p0250–0256）
-
-- 八度或多层八度齐奏中各声部应有相似的音区特性与紧张度，以免偏色；某件音域不合或要避开易冒尖的音区时，可改变进行方向作八度转换（例 IV-78）。见 SKILL §3.2。
-- 转接的理由除音域与技术难度外还有回避过多换弦换把（补 SKILL §3.6）；弦乐组音色的相对统一是接缝不露的保证（例 IV-79）。
-- 快速齐奏里低音提琴可简化以免低音区浑浊；简化后它最后才投入，本身就是渐强手段，兼起扩大幅度与强调节拍重音的作用（例 IV-80）。
-- ★ **两说并排**。SKILL §3.5 的判据是奏法差异带来分离；本章给出反向的一例：同一条齐奏线上多数弦乐用十六分音符分弓、大提琴改用八分音符连弓，这种差异反而形成融合性因素，使线条更连贯清晰（p0253，例 IV-81）。两说都成立，分界在于奏法差异是被用来分层，还是被用来补足同一条线的发音形态。
-- 陈述幅度可由一个音组递增到五个并配巨大渐强，反向递减做渐弱；掺少量管乐定音鼓的准齐奏同样适用（例 IV-82 由 1 到 5，例 IV-83 由 3 到 1）。
-- 在节拍重音、曲调顶音、线条转折点上用拨奏点缀可让最具个性的音调节奏特征凸现（例 IV-84）。见 SKILL §3.9。
-- **节奏异化的齐奏**：各声部音高完全一致而节奏形成错综的对位，单线条写法里滋生多层次；各声部都在发音较强的音区时会生出内在动感与紧张度（p0256，例 IV-85）。
-
-### 7.2 和弦与音束型（p0256–0261）
-
-- 基本原则：作为均衡统一的同质整体设计，按乐器排列顺序均匀分布，各声部尽可能位于相互对应的音区（都在各自低音区，或都在中高音区），弓法奏法也基本一致（例 IV-86）。这是 SKILL §4.1 在块状织体上的落点。
-- 最高声部与下方并无旋律伴奏式的主从关系，却天然带一定优势与独立性，可再加密度与幅度、用别的乐器作同度或八度重复来强化它的主导意义（例 IV-87）。见 SKILL §3.9。
-- ★ 打乱声部的正常排列顺序（如把中提琴夹置在大提琴之间）可有效突出特定乐器的特性音色，例如大提琴的胸声（p0258，例 IV-88）。
-- **分化同质性的三种非常规手法**（p0259，例 IV-89）：同一和弦各声部用不同触弦点（正常、靠马、靠指板）；各和弦音的进入与退出时间错开；同一个音上用不同种类的颤音。
-- 音束的节奏化与连接：巨大持续音束里挑出个别声部群突然以更强力度作节奏化处理，可在凝止的和声层里造出动荡与光斑（例 IV-90）。若干音束依次连接、各声部的切入与化出点都不同时，整串音响带流动闪烁的性质，处在和声性结构与点描性结构之间的临界点上（p0261，例 IV-91）。
-
-### 7.3 分部写作型（p0264–0269）
-
-- 处理原则：各声部按正常顺序排列，保持音响平衡，采用相似的奏法弓法求谐调一致（例 IV-93）。适用对象是介于主调与复调之间、带合唱式特性的多声部写作。
-- 同一结构的不同段落可先后换音色配置、密度与幅度；声部数目的增减造成层次感（p0265）。
-- 一旦有意强调个别声部（多为最上方旋律或低音线条），处理就带上异质化倾向。可用手法：用较大浓度（小提琴 I、II 同度）强调旋律；八度重叠突出低音线条；细分弦乐让内声部处于较弱陪衬；用大提琴高音区这类特殊音区强调旋律线；靠声部的退出与渐次加入换总体色调。★ **谱面声部数可以多于实际有效声部数**，多出来的是重叠或派生的支声部（p0266–0267，例 IV-95）。见 SKILL §3.9。
-- 力度渐强的同时把触弦点从靠指板过渡到靠马（ppp 靠指板，渐强到 pp 改靠马），可做出细腻的明暗变化，适合多声部在相近音区求朦胧同质背景的场合（p0268–0269，例 IV-97）。
-
-### 7.4 复调型（p0269–0293）
-
-**对比性**：弦乐队以音色统一见长，对比手段不及跨音组配器丰富，可用的是奏法、密度、幅度、音区（p0269）。两条线的色差可由陈述幅度、音色、音区、奏法四个维度同时构成（例 IV-98），音区排列次序的倒错也是常用的一招。★ 最难的情形是两条线同素材又同音区，此时只能靠奏法与线条构成形态剥离，例如一条由断续拨奏音点构成、另一条由连续滑奏构成（p0272，例 IV-100）。
-
-**模仿性**：两种处理原则二选一（p0272–0273）。一是强调对比，做法同对比性复调，求浮雕般的层次；二是强调同质，用性质相同或相近的音色配置增进亲和性。★ 作者的评价：强调同质的路对音色谐调统一的弦乐组特别合适，这大约就是历代作品中赋格段常由弦乐组担任的原由。可用手段：主题与对题在旋律形态、音区、节奏之外再加奏法对比（例 IV-101）；声部繁多时中音区线条用加倍防止淹没（见 SKILL §4），主题某次进入安排在最上方声部可降低被覆盖的危险，密接和应处用八度叠置强化（例 IV-102）；主题与背景在弱音器上作相反配置，并让主题各件在各自最有特色的弦上演奏、弓法也与背景不同，即使主题在中音区被模仿声部缠绕也能突出（p0277，例 IV-103；补 SKILL §5）。★ 乐器数量悬殊的两条线不会给人比例失调的感觉，只要节奏对比明显且音区充分分离（p0279，例 IV-104）。
-
-**微型复调**（p0280–0293）：里盖蒂首创，各对位线以极密的音程关系纠结在一起，听觉上是块面式聚合的流动音束，由异质因素合成同质音响，用里盖蒂的话说，听众听到的只是复调的结果，并非复调本身。数十声部严格模仿、音程统一为小二度时，配 pppp、连奏、靠指板得朦胧神秘（例 IV-105），配 ff 则得相反的强烈效果（例 IV-106）。★ 主题也可以改用**奏法序列**而非音高序列，由叩击、极限音拨奏、琴马后单弦震音一类奏法构成噪音序列再作逆行变体（例 IV-112）。
-
-### 7.5 旋律与伴奏型（p0293–0297）
-
-- 基本原则：层与层之间力求分离与对比，各层内部按同质性处理（p0293）。见 SKILL §1.1。
-- ★ **选乐器不能只按音区就近分配**。原书为乐队中音区的一条抒情旋律逐一权衡（p0293–0294，例 IV-113）：大提琴 A 弦热情明朗，最终选它；小提琴用 G 弦过于强烈且色调晦暗，移高八度虽理想，但过早使用高把位会给乐曲后续发展留下困难；中提琴柔和有余而特色与强度不足；低音提琴的结果必然滑稽古怪。这套逐件排除的权衡方式比结论本身更值得照搬。
-- 独奏与伴奏群可在弱音器有无、揉弦有无与幅度上作双重反向对比（独奏去弱音器加富表情揉弦，伴奏群加弱音器且不得揉弦），独奏即使处在密集音束的伴奏里也能突现（p0294–0295，例 IV-114）。
-- **音色分离原则**：给每一个因素分配一种绝不会与其他因素混同的音色，音色含奏法与力度的组合。原书三层示例：背景用加弱音器的小提琴奏节奏化和声，低音层用拨奏低音提琴配弓杆打弦与靠马震音的插句，旋律层用独奏小提琴的正常音色（p0295–0296，例 IV-115）。
-- 反过来的一条：多条旋律线若形态与性质相近、彼此无主次，只靠音区区分、当同质整体处理即可，不必再加音色或奏法对比（p0297，例 IV-116）。
-
-### 7.6 点描型（p0298–0306）
-
-- 前提：传统主题旋律思维的蜕变，音色旋律逻辑兴起的产物。横向连贯发展的原则被废弃，由休止符分隔的短小动机、单个和弦甚至音点取代传统主题成为基本结构单位（p0298）。
-- 处理原则：相邻的动机、和弦、音点须在音区、音色、力度或奏法上形成程度不等的对比，**色调的跳跃是它最大的特点**；横向与纵向一律按异质性结构处理（p0298）。
-- 全用弦乐也做得出：靠音区的急剧对比加高频率的奏法轮换（拉奏、拨奏、弓杆、靠马震音、泛音连续交替）造出跳荡的色点与光斑（例 IV-118）。给这类织体找内在逻辑，常借序列乃至卡农、逆行、镜射对称作音色分配的依据；卡农模仿可用音色的倒影式对应，如原由 4 把小提琴演奏的因素改由 2 把低音提琴加 2 把大提琴演奏（p0301–0306，例 IV-119）。
-- **突出某因素的两条途径**（p0305）：排列位置的交叉与倒错（如把大提琴擢升到凌驾其他声部的位置）；给它一种不同于其他声部的奏法。见 SKILL §3.9、§3.5。
-- **同一因素的多奏法处理**（p0305–0306）：低音弦乐分部，一部拉奏一部拨奏，线条清晰又有弹性；连音与震音结合，轮廓清晰又带紧张度；同一和弦用三种触弦点造内部色差。★ 同一条旋律用拉奏、弓杆奏法、拨奏三种奏法同度叠合，可在 pp 下得到发音清晰、带轻微敲击噪音、易与小军鼓融合的音色（例 IV-120）。这是 SKILL §3.1 的具体案例。
+- **Timbre plays the leading role.** As long as the timbral character is distinct, a part can emerge as an independent layer even when its register coincides with the background (p0244, Ex. IV-72). ★ **The physical condition for penetration**: when two parts share a register but differ considerably in dynamics, a clear timbral difference is enough. In particular, if the softer part is richer in harmonics, or its spectral formant happens to fall where the louder part's amplitude is weak, the softer one still penetrates and is not masked. Using timbral opposition to create layered contrast is one of the "classical principles" of orchestration (p0242–0243). This is the physical mechanism behind the three conditions of SKILL §5.
+- **Register**: the larger the interval between parts, the smaller the chance of masking. Vasilenko's principle is to give the melodic part "free space" to move in, and where necessary to make the contrapuntal part leap in a zigzag to clear register space, or even invert the order of the parts (p0244–0246, Ex. IV-73). See SKILL §4.1 and §6. ★ **One counter-intuitive point**: when two layers are squeezed into the same register, as long as the principal melody sits in its most characteristic upper-middle register and is played at a fairly strong dynamic, it can still stand out from a neutral-coloured accompaniment. The effect is sometimes no less than that of separating the registers (p0246–0247, Ex. IV-74).
+- **Technique**: two very different techniques on the same instrument have very different spectral structures and time-transition characteristics. Such combinations usually produce only heterogeneous sound, which is extremely useful for separation (p0247–0248, Ex. IV-75). See SKILL §3.5.
+- **Density and concentration**: even identical or closely similar timbres form a contrast of concentration when the numbers are clearly differentiated. The most common levels in the string section are three: solo, soli and tutti (p0248; Ex. IV-76 demonstrates a contrast created purely by placing the registers against each other with a difference in density, while the instrument, dynamics and technique remain the same).
+- **Range**: a difference in scale between the statement of one group of notes and that of several groups can assist separation, and can also emphasise the different characters of two contrasting lines (p0249–0250, Ex. IV-77). See SKILL §3.2.
+- ★ **Dynamics are always only an auxiliary means** (p0250). Giving the main element a dynamic advantage is genuinely useful, but if the layers are already seriously out of proportion in register, timbre, density or range, relying on dynamic gradation to fix them rarely gives an ideal result. In most of the examples, composers did not depend on differences in dynamics to achieve balance and hierarchy. This is the same judgment as the Haydn yardstick cited in reference §2.3.1.
 
 ---
 
-## 8. 踏板音（p0309–0316）
+## 7. The Concrete Make-Up of Each Texture Type
 
-乐队踏板音是由延续发音的长时值和弦或单音构成的层次。**四大功能**（p0309–0313）：中介，沟通不同乐器音色使各层融为一体；稳定，在流动音型化织体里给出清晰的和声轮廓；丰满，增进圆润厚实；对比，与无踏板音的段落形成疏密浓淡。
+The master switch (homogeneous material seeks fusion, heterogeneous material seeks separation) is in SKILL §1.1. What follows is where it lands inside the string section.
 
-- ★ **什么时候不要加**：织体中的旋律低音或内声部若已含若干长时值音符，已经在起踏板作用，再加一层就是画蛇添足；追求生硬干涩、颗粒性与弹性的写法加了踏板会让音响模糊、失去弹性（p0313，例 IV-126 是反例，例 IV-125 用与不用两句对比）。**踏板音的使用频度甚至是作曲家管弦乐写作的风格标志之一**。
-- **选音**：和声变换频繁的段落优先选各和弦之间的共同音，让它成为贯穿因素；找不到共同音时挑音高不同的长音，并尽量使它构成良好的旋律进行（p0313、p0315，例 IV-127、IV-128b）。
-- **形态不必单一**：可由持续长音、震音、具持续音性质的音型三种在不同音区组合（例 IV-129），也可分三层合成，如小提琴高音区八度震音奏主音、中提琴泛音三连音奏属音、低音弦乐奏音型化持续音（例 IV-130）。
-- **动力延续**：长时间延续的低音区踏板音增加浓度、让紧张度积攒；即便当前织体简单、本无必要另加踏板声部，作曲家仍可能刻意延续前一段落的低音长音以维持潜在动力（p0316）。
-- **对齐要求**：音型化层与持续和声层并置时，长音和弦的音区位置、排列与密度须在每拍第 1 音上与流动层完全吻合，才黏合得住各层（p0311，例 IV-124）。
+### 7.1 Unison Type (p0250–0256)
 
-**编曲含义**：铺长音层之前先查织体里有没有现成的长音在起同样作用，有就别加。要加就先答选哪个音（共同音优先），再答由几种形态在哪几个音区合成。
+- In unison or multi-layered octave passages, the parts should have similar register characteristics and tension, so that the colour does not drift. When a part's range is unsuitable, or when one needs to avoid a register that tends to stick out, the direction of the line can be changed to switch octaves (Ex. IV-78). See SKILL §3.2.
+- The reasons for passing a line between parts, beyond range and technical difficulty, include avoiding too many changes of string and position (supplementing SKILL §3.6). The relative uniformity of string timbre is what keeps the joins invisible (Ex. IV-79).
+- In fast unison passages, the double bass can be simplified to avoid muddiness in the low register. Since it comes in last after simplification, this is itself a means of crescendo, and also serves to widen the range and to stress the metrical accents (Ex. IV-80).
+- ★ **Two views, side by side**. The SKILL §3.5 criterion holds that differences in technique produce separation. This chapter gives an opposite example: on a single unison line, most strings use sixteenth-note separate bows while the cellos use eighth-note legato bowing. This difference, paradoxically, becomes a fusing factor and makes the line more coherent and clear (p0253, Ex. IV-81). Both views hold. The dividing line is whether the technical difference is used to layer the material or to complete the speaking character of one and the same line.
+- The statement of the range can grow from one group of notes to five, accompanied by a huge crescendo, or decrease in reverse as a diminuendo. A quasi-unison with a small admixture of wind and timpani works in the same way (Ex. IV-82 goes from 1 to 5; Ex. IV-83 goes from 3 to 1).
+- Plucking on metrical accents, on the top note of a melody, or at turning points in a line can highlight the most individual rhythmic features of a tune (Ex. IV-84). See SKILL §3.9.
+- **Unison with rhythmic differentiation**: all parts have exactly the same pitch but intricate rhythmic counterpoint is formed. Multiple layers arise within a single-line writing style. When every part sits in a register where it sounds strongly, an internal sense of motion and tension emerges (p0256, Ex. IV-85).
+
+### 7.2 Chord and Cluster Types (p0256–0261)
+
+- Basic principle: design it as a balanced, unified, homogeneous whole. Distribute the parts evenly in the order of the instruments, with each part as far as possible in corresponding registers (all in their own low registers, or all in the middle-to-upper registers), and with largely consistent bowing and technique (Ex. IV-86). This is where SKILL §4.1 lands on block textures.
+- The highest part has no accompanying, melody-and-support relationship with the parts below, yet it naturally carries some advantage and independence. It can be reinforced further with added density and dynamics, or by doubling it in unison or octaves with another instrument, to strengthen its leading role (Ex. IV-87). See SKILL §3.9.
+- ★ Disturbing the normal order of parts (for example, placing the viola between the cellos) can effectively bring out the characteristic timbre of a specific instrument, such as the chest voice of the cello (p0258, Ex. IV-88).
+- **Three unconventional methods for differentiating homogeneity** (p0259, Ex. IV-89): the parts of the same chord use different striking points for the strings (normal, near the bridge, near the fingerboard); the entries and exits of the chord notes are staggered in time; and different kinds of vibrato are applied to the same note.
+- Rhythmicising and connecting clusters: within a huge sustained cluster, a group of parts is singled out and suddenly treated rhythmically at a stronger dynamic. This creates turbulence and points of light within a static harmonic layer (Ex. IV-90). When several clusters are connected in succession, with each part's entry and exit point different, the whole stream of sound takes on a flowing, shimmering quality. It sits at the threshold between harmonic structure and pointillist structure (p0261, Ex. IV-91).
+
+### 7.3 Divisi Writing Type (p0264–0269)
+
+- Treatment principle: the parts are arranged in their normal order, the sound is kept balanced, and similar bowing and technique are used to achieve a harmonious unity (Ex. IV-93). The target is multi-part writing that sits between homophony and polyphony and has choral-like qualities.
+- Different sections of the same structure can be given successively different timbral configurations, densities and dynamics. Adding or removing parts creates a sense of layering (p0265).
+- Once a particular part is deliberately emphasised (most often the top melodic line or the bass line), the treatment takes on a heterogeneous tendency. Methods available: emphasise the melody with a larger concentration (Vln I and II in unison); emphasise the bass line with octave doubling; subdivide the strings so that the inner parts become a weaker accompaniment; emphasise the melodic line with a special register such as the upper range of the cello; or change the overall colour through the exit and gradual entry of parts. ★ **The number of parts on the score may be greater than the number of parts actually audible**; the extra ones are doublings or derived supporting parts (p0266–0267, Ex. IV-95). See SKILL §3.9.
+- When dynamics rise, the point of bowing moves from near the fingerboard toward the bridge (pppp near the fingerboard, increasing to pp with the bowing near the bridge). This makes delicate changes between dark and light, and suits situations where multiple parts in a close register seek a hazy, homogeneous background (p0268–0269, Ex. IV-97).
+
+### 7.4 Polyphonic Type (p0269–0293)
+
+**Contrasting polyphony**: string ensembles excel at uniformity of timbre, and their means of contrast are less varied than those of orchestration across timbral groups. The usable means are technique, density, dynamics and register (p0269). The colour difference between two lines can be built simultaneously along four dimensions: the dynamic level of their statements, timbre, register and technique (Ex. IV-98). Reversing the order of the registers is also a common device. ★ The hardest case is when two lines share the same material and the same register; then the only option is to separate them through the form created by technique and line, for example one line made of intermittent plucked points and another made of continuous glissandi (p0272, Ex. IV-100).
+
+**Imitative polyphony**: choose one of two treatment principles (p0272–0273). The first is to emphasise contrast, using the same approach as contrasting polyphony, to achieve a relief-like layering. The second is to emphasise homogeneity, using timbres of the same or similar character to increase affinity. ★ The author's assessment: the homogeneity route is especially suitable for string sections, whose timbres blend and unify well. This is probably why fugal passages throughout the history of music are so often entrusted to strings. Available means: contrast the subject and the countersubject in bowing as well as in melodic shape, register and rhythm (Ex. IV-101). When the parts are numerous, double the mid-register lines to keep them from being drowned out (see SKILL §4); placing the subject's entry in the top part reduces the risk of being covered, and close stretto passages can be reinforced with octave stacking (Ex. IV-102). Place the subject and the background in opposite configurations with mutes, and have each subject instrument play on the string that suits it best, with a bowing different from the background; even if the subject is wrapped in imitative parts in the middle register, it still stands out (p0277, Ex. IV-103; supplementing SKILL §5). ★ Two lines with very unequal numbers of instruments will not feel out of proportion, as long as the rhythmic contrast is clear and the registers are well separated (p0279, Ex. IV-104).
+
+**Micropolyphony** (p0280–0293): pioneered by Ligeti. The contrapuntal lines are entangled through extremely dense intervallic relations, so that to the ear they form a flowing cluster that aggregates like a block, synthesising homogeneous sound out of heterogeneous elements. In Ligeti's words, the listener hears only the result of polyphony, not polyphony itself. When dozens of parts strictly imitate one another with all intervals a minor second, pppp, legato and near the fingerboard give a hazy, mysterious effect (Ex. IV-105). At ff the effect is the opposite, intensely strong (Ex. IV-106). ★ The subject can also be built on a **sequence of techniques** rather than a sequence of pitches: a noise sequence made of tapping, extreme-register plucking, and single-string tremolos behind the bridge, which can then be treated as a retrograde variant (Ex. IV-112).
+
+### 7.5 Melody and Accompaniment Type (p0293–0297)
+
+- Basic principle: aim for separation and contrast between layers, and treat the inside of each layer homogeneously (p0293). See SKILL §1.1.
+- ★ **Instruments cannot be chosen simply by the nearest register.** The source weighs, one by one, the instruments for a lyrical melody in the middle register of the orchestra (p0293–0294, Ex. IV-113). The cello's A string is warm and clear, so it is finally chosen. The violin on its G string is too intense and its colour is dark; moving it up an octave is ideal, but using the high positions too early leaves difficulties for the later development of the piece. The viola is soft but lacks character and strength. The double bass's result would inevitably be comic and odd. This method of eliminating instruments one by one is more worth copying than the conclusion itself.
+- A soloist and an accompanying group can be contrasted in two opposite ways at once: in mutes (the soloist without mute, with rich expressive vibrato; the accompaniment with mutes and no vibrato). The soloist can stand out even when placed within a dense cluster of accompaniment (p0294–0295, Ex. IV-114).
+- **Principle of timbral separation**: assign each element a timbre that can never be confused with the others, where timbre includes the combination of technique and dynamics. The source offers a three-layer example: the background uses muted violins playing a rhythmicised harmony; the bass layer uses plucked double bass together with interjections of bow-stick knocking and ponticello tremolo; and the melodic layer uses the normal timbre of a solo violin (p0295–0296, Ex. IV-115).
+- The reverse case: when several melodic lines have similar shapes and character and no one is primary, distinguish them only by register and treat them as a homogeneous whole. There is no need to add timbral or technical contrast (p0297, Ex. IV-116).
+
+### 7.6 Pointillist Type (p0298–0306)
+
+- Premise: a transformation of traditional thematic-melodic thinking, a product of the rise of timbre-based melodic logic. The principle of coherent horizontal development is abandoned. Short motifs separated by rests, single chords, and even single points of sound replace the traditional theme as the basic structural unit (p0298).
+- Treatment principle: adjacent motifs, chords and points must form contrasts of varying degree in register, timbre, dynamics or technique. **Jumps in colour are its greatest feature.** Both horizontal and vertical dimensions are treated as heterogeneous structures (p0298).
+- It can be achieved with strings alone: abrupt register contrasts combined with rapidly alternating techniques (bowing, plucking, bow-stick, tremolo near the bridge, alternating harmonics) produce jumping colour-points and patches of light (Ex. IV-118). To find an internal logic for such textures, serial organisation, or even canon, retrograde and mirror symmetry, is often used as the basis for distributing timbres. In canonic imitation, timbres can correspond in a mirror-like way: for example, an element originally played by four violins can instead be played by two double basses and two cellos (p0301–0306, Ex. IV-119).
+- **Two ways to highlight one element** (p0305): crossing and inverting the order of positions (such as raising the cello above the other parts), or giving it a technique different from the other parts. See SKILL §3.9 and §3.5.
+- **Multiple techniques on the same element** (p0305–0306): divide the low strings so that one section bows and another plucks, giving a clear but elastic line; combine sustained notes with tremolos, giving a clear outline with a sense of tension; use three striking points for the same chord to produce internal colour differences. ★ When the same melody is played with bowing, bow-stick and plucking, stacked at the unison, the result at pp is a clearly articulated timbre with a slight percussive noise that blends easily with the snare drum (Ex. IV-120). This is a concrete case of SKILL §3.1.
 
 ---
 
-## 9. 多重复合与多重分部编制（p0316–0328）
+## 8. Pedal Notes (p0309–0316)
 
-前提：以弦乐五重奏为基础的传统编制原则已不再独尊。多重复合弦乐编制由若干弦乐队或重奏组叠合而成，是 SKILL §3.8 那套思路在规模上的扩展。三种用途：
+An orchestral pedal note is a layer made of long-value sustained chords or single notes that keep sounding. **Four main functions** (p0309–0313): as an intermediary, linking different instrumental timbres so that the layers blend into one; as a stabiliser, giving a clear harmonic outline within a flowing figurative texture; as a fuller, enriching roundness and thickness; and as a contrast, creating density and light-shade differences with passages that have no pedal.
 
-1. **密度与浓度的对比**。独奏重奏组（solo、soli）与全奏（tutti）不断交替形成浓淡对比与纵深感，这也是一些作曲家把独奏重奏组固定为乐队独立成分的原因之一（例 IV-131、IV-132）。
-2. **大协奏曲原则的复兴**。主奏部加辅奏部加通奏低音的编制在新条件下复活，动因之一是对浪漫派甜腻醇浓音响的厌倦（p0318，例 IV-133）。★ **两个层次的色彩差可由五个因素叠加产生**（p0320）：弱音器与正常音色的对比；独奏音色与群体音色的对比；排列位置分离带来的空间感；力度上的巨大差异（如 ff 对 pp）；音区差异，例如某组低音提琴的退出使音响格外透明。三种成分还可此分彼合，层次数量在一层到三层间变化，这本身就是一种变奏（例 IV-134）。
-3. **立体性与空间感**。靠实际的乐队方位布局，配合同一素材在不同方位间的传递、应答与分合交替（p0323–0324，例 IV-136）。若要各组音色不混同，空间布局应尽可能远离；数量配置的不均可以成为整部作品构思的基点（p0318）。
+- ★ **When not to add one**: if the melodic bass or an inner part of the texture already contains several long-value notes and is already acting as a pedal, adding another layer is superfluous. Writing that pursues a harsh, dry, granular and elastic character is blurred by a pedal and loses its elasticity (p0313; Ex. IV-126 is a counter-example; Ex. IV-125 compares a version with and without a pedal). **The frequency of pedal use is even one of the stylistic marks of a composer's orchestral writing.**
+- **Choosing the note**: in passages where the harmony changes frequently, give priority to notes common to the successive chords, making the note a running thread. When no common note can be found, choose a sustained note of a different pitch, and try to make it form a good melodic progression (p0313, p0315; Ex. IV-127, IV-128b).
+- **The form need not be single**: the pedal can combine three kinds of material in different registers: a sustained note, a tremolo, or a figure with the character of a sustained note (Ex. IV-129). It can also be built in three layers: for example, violins in the high register play the tonic as octave tremolo, violas play the dominant as harmonic triplets, and the low strings play a figured sustained note (Ex. IV-130).
+- **Continuing the momentum**: a long pedal in the low register increases concentration and builds up tension. Even when the current texture is simple and there is no need for an additional pedal part, composers may deliberately prolong the bass sustained note from the previous section to maintain latent momentum (p0316).
+- **Alignment requirement**: when a figurative layer is juxtaposed with a sustained harmonic layer, the register, arrangement and density of the sustained chord must match the flowing layer exactly on the first note of each beat, or the layers will not hold together (p0311, Ex. IV-124).
 
-**多重分部编制**（细到每件乐器各奏一部）的应用面比多重复合更广，动因是传统四部和声写法失势、密集半音与微分音的音束写法出现、微型复调与多层次织体大量运用（p0328）。
-
----
-
-## 10. 横向色彩对比：把音色当结构力（p0328–0340）
-
-- 只用弦乐这一个声源，仍可靠主题材料、调性和声、节奏、织体形态、力度、音区等对比因素，配合色块的镶嵌与偷换制造横向色彩变化。★ 这种对比出现在重要曲式部位之间时，**对结构划分有不容忽视的作用**（p0328）。这是 SKILL §3.6 在单一音色内部的落点，新增的是它的结构功能。
-- **偷换的可抄范式**：全部声部起初统一用靠马奏法，带主动机意味的短小乐节以常规奏法嵌入；随着镶嵌愈发频繁、特殊奏法片段的长度按 10、6、5、4、3 拍递减，常规音色渐占上风直至总揽全局（p0328–0330，例 IV-139）。
-- **音色上的动力性再现**：靠力度减退、音区下降、织体写法变化，并让各声部先后交替退出、从容加上弱音器，再现时以极压抑的音色奏主题，色调比初次呈示更沉重晦暗（p0331–0332，例 IV-140，对照例 IV-86）。
-- ★ 在表现主义与当代音乐里，横向色彩对比甚至可以成为曲式形成过程中最主要的结构力，作用超过音高与时值关系；辨识这类作品的结构要看音响特色与织体形态，不看传统主题发展逻辑（p0334–0335，例 IV-142）。
-- **用奏法给整乐章定性**：巴托克《第四弦乐四重奏》每个乐章统一用一类奏法定性格，例如整章顿弓加大分弓加低弦高把位取粗犷结实，另一章全部加弱音器加小分弓加滑奏取晦暗诡异，还有一章只用拨弦（p0336–0340，例 IV-143 至 IV-149）。
+**Orchestration implication**: before laying down a sustained layer, check whether the texture already has a sustained note doing the same job; if it does, do not add one. If you do add one, first answer which note to choose (a common note has priority), and then answer which forms in which registers combine to make it.
 
 ---
 
-## 11. 历史范式：先选哪一套，再选手法
+## 9. Multiple Composite and Multiple Divisi Lineups (p0316–0328)
 
-| 时期 | 弦乐组的地位与写法 | 页 |
+Premise: the traditional lineup principles built on the string quintet no longer hold exclusive sway. A multiple composite string lineup is formed by superimposing several string orchestras or chamber groups. It is an extension, in scale, of the approach in SKILL §3.8. It has three uses:
+
+1. **Contrast of density and concentration.** Alternating solo chamber groups (solo, soli) with full tutti creates constant shifts of light and shade and a sense of depth. This is one reason some composers fix the solo chamber group as an independent component of the orchestra (Ex. IV-131, IV-132).
+2. **Revival of the principle of the concerto grosso.** A lineup of principal group, secondary group and continuo revives under new conditions. One motive is weariness with the sweet, rich sound of the Romantic period (p0318; Ex. IV-133). ★ **The colour difference between two layers can be produced by stacking five elements** (p0320): contrast between mute and normal timbre; contrast between solo timbre and group timbre; a sense of space created by separating the positions; a huge difference in dynamics (such as ff against pp); and a difference in register, for example when a certain group of double basses drops out and the sound becomes especially transparent. The three components can also split and merge, with the number of layers varying from one to three. This itself is a form of variation (Ex. IV-134).
+3. **Spatiality and a sense of space.** Using the actual physical layout of the orchestra, with the same material passed between different positions, answered and alternately split and joined (p0323–0324, Ex. IV-136). For the groups' timbres not to merge, the spatial layout should be placed as far apart as possible. An imbalance in the quantities allocated can become the starting point for the conception of a whole work (p0318).
+
+**Multiple divisi lineups** (where each instrument plays its own part) have a wider range of application than multiple composite lineups. The motive is that the traditional four-part harmony approach has lost favour, that dense semitone and microtonal cluster writing has emerged, and that micropolyphony and multi-layer textures are widely used (p0328).
+
+---
+
+## 10. Horizontal Colour Contrast: Using Timbre as a Structural Force (p0328–0340)
+
+- Using strings alone, one can still rely on contrasting factors such as thematic material, tonal harmony, rhythm, texture, dynamics and register, and combine them with mosaic inlays and substitutions of colour blocks to create horizontal colour change. ★ When this contrast appears between important formal sections, **it plays a structural role that must not be overlooked** (p0328). This is where SKILL §3.6 lands inside a single timbre; what is new is its structural function.
+- **A substitution model worth copying**: at first all parts uniformly use sul ponticello; short phrases with the character of a leading motif are inserted in the ordinary technique. As the inlays become more frequent, the lengths of the special-technique passages decrease by 10, 6, 5, 4 and 3 beats, until the ordinary timbre gradually gains the upper hand and dominates the whole (p0328–0330, Ex. IV-139).
+- **Dynamic recapitulation through timbre**: by reducing dynamics, lowering the register, changing the texture, and having the parts drop out in succession and calmly adding mutes, the recapitulation presents the theme in an extremely suppressed timbre. Its colour is heavier and darker than the first presentation (p0331–0332, Ex. IV-140; compare Ex. IV-86).
+- ★ In expressionist and contemporary music, horizontal colour contrast can even become the principal structural force in the formation of a form, surpassing the relations of pitch and duration. To recognise the structure of such works, look at the sound character and the texture, not at the logic of traditional thematic development (p0334–0335, Ex. IV-142).
+- **Characterising a whole movement through technique**: in Bartók's *String Quartet No. 4*, each movement uses one class of technique to define its character. For example, one movement uses detached bowing throughout with large separate bows and high positions on the low strings to achieve a rough, solid sound. Another movement uses mutes throughout, with small separate bows and glissandi to achieve a dark, eerie sound. Yet another movement uses only plucking (p0336–0340, Ex. IV-143 to IV-149).
+
+---
+
+## 11. Historical Models: Choose the Set First, Then the Technique
+
+| Period | Position and writing of the string section | Page |
 |---|---|---|
-| **古典** | 宗旨是均衡的音响，线条流畅柔韧清晰，称素描风格。★ 当时小提琴已可到 g³ 左右，作曲家却常有意回避这类最高音，甚至改动旋律轮廓把过高的音移低八度：牺牲音高轮廓，换发音的完美与统一 | （p0343–0346，例 IV-152、IV-153） |
-| **古典的两套并存范式** | **海顿模式**：基本四部和声，旋律只给小提琴 I，小提琴 II 与中提琴奏内声部，大提琴与低音提琴八度重叠成低音线条，低音提琴独立出现时常需大管或圆号支持。**莫扎特模式**：更灵活，旋律常由小提琴 I、II 同度或八度奏出，内声部或交中提琴分部、或由中提琴与木管共担 | （p0346） |
-| **贝多芬到浪漫后期** | 贝多芬让低音提琴摆脱对大提琴的依附，五个独立声部成为常规，并大量使用分部与大提琴中高音区。浪漫后期弦乐由 15–25 人增至约 60 人，与木管铜管鼎足三分，应用音域比古典向上扩展大三度至大六度不等。新增的色彩手段清单见 reference §2.1 | （p0346–0350） |
-| **印象派** | ★ 弦乐组不再居中心地位，只是与其他组价值相等的一种色彩。多层分部很少用于复杂交织的复调线条，常纯粹出于音色考虑；微弱力度里常同时要求加弱音器与靠指板以强调苍白缥缈。★ **同一种组合方式很少长时间不变，色调更换异常频繁** | （p0350–0351，例 IV-156） |
-| **表现主义** | 弦乐组作为统一完整音色实体的作用被削弱，转而突出每件乐器各自的音色；这与浪漫派把弦乐组当同质整体的用法相反，选了它就等于放弃弦乐组的融合感。加弱音器近乎标准化并极频繁地与去弱音器交替 | （p0352） |
-| **先锋派** | 四条共同特征：编制解体，五重奏基础代之以若干独奏声部构成的弦乐群；地位平等，弦乐的垄断被打破，组内四种乐器也不再有主次高下；音响微差化成为主要追求，奏法、音域、力度手段都推到极端；噪音取得与乐音同等的素材地位。★ 作者对最后一条留有保留：这类敲击性噪音效果"往往并不为演奏家或听众们所欢迎" | （p0353） |
+| **Classical** | The aim is balanced sound, with flowing, flexible and clear lines, known as a "sketch" style. ★ At that time the violin could already reach about g³, but composers often deliberately avoided these highest notes, sometimes even altering the melodic contour to move notes that were too high down an octave. They sacrificed the shape of the pitch contour in exchange for perfection and unity of sound | (p0343–0346, Ex. IV-152, IV-153) |
+| **Two co-existing Classical models** | **The Haydn model**: basic four-part harmony, with the melody given only to Vln I, Vln II and viola playing the inner parts, cellos and double basses doubled in octaves forming the bass line. When the double bass appears independently, it often needs support from bassoon or horn. **The Mozart model**: more flexible, with the melody often played by Vln I and II in unison or octaves, and the inner parts either divided into violas or shared between violas and woodwinds | (p0346) |
+| **From Beethoven to the late Romantic** | Beethoven freed the double bass from its dependence on the cello, making five independent parts the norm, and made extensive use of divisi and the middle-to-upper register of the cello. In the late Romantic period the string section grew from 15–25 players to about 60, standing on equal footing with the woodwinds and brass. Its playing range extended upward from the Classical range by anywhere from a major third to a major sixth. For the list of newly added colouristic devices, see reference §2.1 | (p0346–0350) |
+| **Impressionism** | ★ The string section no longer holds the central position; it is merely one colour of equal value with the other groups. Multi-layer divisi is rarely used for complex interwoven polyphonic lines and is often used purely for timbral reasons. At very soft dynamics, muted and near-fingerboard playing are often required together to emphasise pallor and vagueness. ★ **The same combination rarely stays unchanged for long; colour changes are exceptionally frequent** | (p0350–0351, Ex. IV-156) |
+| **Expressionism** | The role of the string section as a unified, complete timbral entity is weakened; instead, the individual timbre of each instrument is brought forward. This is the reverse of the Romantic use of the string section as a homogeneous whole. Choosing it amounts to giving up the sense of fusion in the strings. Mutes become nearly standardised and alternate very frequently with no mutes | (p0352) |
+| **Avant-garde** | Four shared features: the lineup disintegrates, and in place of the quintet foundation, the strings become a group of several solo parts; the parts are equal in status, the monopoly of the strings is broken, and the four instruments within the group no longer have primary or secondary ranks; refinement of minute sonic differences becomes the main pursuit, with technique, register and dynamics pushed to extremes; and noise gains the same material status as pitched sound. ★ The author reserves judgment on the last point: such percussive noise effects "are often not welcomed by performers or listeners" | (p0353) |
 
-**用法**：风格定位先于手法选择。选定范式就选定了三件事：弦乐组是当整体还是当个体、音色组合换得快还是慢、噪音算不算素材。这三件事定下来，前面各节的手法才有取舍依据。
+**Usage**: choosing a stylistic position comes before choosing techniques. Selecting a model settles three things: whether the string section is treated as a whole or as individuals; whether timbral combinations change quickly or slowly; and whether noise counts as material. Once these three are settled, the techniques in the earlier sections have a basis for choice.

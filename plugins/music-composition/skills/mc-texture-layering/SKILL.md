@@ -1,311 +1,304 @@
 ---
 name: mc-texture-layering
-description: Texture and spectral layering (织体与频谱分层) - arranging as a space budget rather than an instrument list. Foreground/middle-ground/background depth planning, the perceptual cues that decide what a listener hears as lead, rate-of-change discipline per depth layer, the frequency budget and the three ways to resolve a collision (yield / separate registers / alternate), and the maximal-density method for building dense sections. Use when a mix or arrangement sounds muddy, flat, or two-dimensional, when two parts fight, when the wrong element is grabbing attention, when something is written but inaudible, or when filling the spectrum_budget field of an ARR-SPEC. Grounded in critical bands, masking asymmetry (low masks high), temporal masking and auditory grouping. 织体、频段预算、临界频带、掩蔽、前中后景、深度、密度、声部打架。
+description: Texture and spectral layering - arranging as a space budget rather than an instrument list. Foreground/middle-ground/background depth planning, the perceptual cues that decide what a listener hears as lead, rate-of-change discipline per depth layer, the frequency budget and the three ways to resolve a collision (yield / separate registers / alternate), and the maximal-density method for building dense sections. Use when a mix or arrangement sounds muddy, flat, or two-dimensional, when two parts fight, when the wrong element is grabbing attention, when something is written but inaudible, or when filling the spectrum_budget field of an ARR-SPEC. Grounded in critical bands, masking asymmetry (low masks high), temporal masking and auditory grouping. Keywords: texture, frequency budget, critical band, masking, foreground/middle-ground/background, depth, density, part collision.
 ---
 
-# 织体与频谱分层（Texture & Spectral Layering）
+# Texture & Spectral Layering
 
-**核心观念：编曲是一份空间预算，不是一张乐器清单。**
+**Core principle: arranging is a space budget, not an instrument list.**
 
-> **音乐空间有边界，像画布一样，添加超过限度就会覆盖已有内容。**
-> **每添加一个部分，其他部分就需要更费力地争夺听众注意力。** (p0286)
+> **Musical space has edges, like a canvas. Adding beyond the limit covers what is already there.**
+> **Each added part makes every other part work harder to win the listener's attention.** (p0286)
 
-所以"加一层"从来不是免费的。这个 skill 管的就是**怎么分配这份有限的空间**。
+So "adding one more layer" is never free. This skill governs **how to allocate this limited space**.
 
-## 按任务读哪几节
+## Which sections to read, by task
 
-| 症状／任务 | 读 |
+| Symptom / task | Read |
 |---|---|
-| 糊、浑、听不清 | §4 频谱预算 |
-| 平、二维、没有纵深 | §2 深度三层 |
-| 主角不突出／抢戏的是别人 | §3 深度线索 ＋ §3.2 陷阱 |
-| 写了但听不见 | §3、§4 一起看 |
-| 段落越到后面越乱 | §5 变化率纪律 |
-| 要做一个很密但不乱的段落 | §6 最大密度法 |
-| 填 ARR-SPEC 的 spectrum_budget | §7 ＋ §8 |
+| Muddy, murky, unclear | §4 Spectrum budget |
+| Flat, two-dimensional, no depth | §2 Three depth layers |
+| Lead is not prominent / someone else is stealing the focus | §3 Depth cues + §3.2 the trap |
+| Written but inaudible | §3 and §4 together |
+| Sections get messier toward the end | §5 Rate-of-change discipline |
+| Want a very dense section that does not turn to mud | §6 Maximal-density method |
+| Filling the spectrum_budget field of an ARR-SPEC | §7 + §8 |
 
-## 边界：什么不归这个 skill 管
+## Boundary: what this skill does not cover
 
-| 不归这里 | 归哪 |
+| Not covered here | Where it lives |
 |---|---|
-| 用哪件乐器、混合音色怎么混 | `mc-orchestration` |
-| 什么时候进场退场、能量曲线 | `mc-arrangement-arch` |
-| 具体的 EQ 频点、压缩比、母带 | 混音的事；本包只给 `mix_intent` 这份意图 |
-| 段落让路的**意图**（哪段谁让谁） | `mc-mix-intent`（本 skill 管**结构性**的分层，它管**段落性**的让路） |
-| 鼓组内部的层次 | `mc-rhythm-section` |
+| Which instrument to use, how to blend timbres | `mc-orchestration` |
+| When parts enter and exit, the energy curve | `mc-arrangement-arch` |
+| Specific EQ frequencies, compression ratios, mastering | Mixing; this package only supplies the `mix_intent` brief |
+| The **intent** of making way between sections (which section yields to which) | `mc-mix-intent` (this skill handles **structural** layering; it handles **section-level** yielding) |
+| Layering inside the drum kit | `mc-rhythm-section` |
 
-> `mc-texture-layering` 与 `mc-mix-intent` 的分界容易含糊，记住这条：
-> **本 skill 的解法是"改写"（换音区、减音符、换乐器、错开时间）；
-> mix-intent 的解法是"改混"（让频、侧链、动态）。**
-> 能在作曲层解决的，不要留给混音——那是把问题往下游推。
-
----
-
-## 1. 动笔前必填
-
-| 必填 | 问法 |
-|---|---|
-| **① 深度图** | 每个元素在前景／中景／背景的哪一层？（§2） |
-| **② 频段归属** | 每个元素主要占哪个频段？说不出来就还没想清楚 |
-| **③ 冲突清单** | 哪两件在抢同一块空间？（§4） |
-| **④ 每处冲突的解法** | 让频／错开音区／交替出现——**三选一，写明是哪一种** |
+> The boundary between `mc-texture-layering` and `mc-mix-intent` is easy to blur. Remember this:
+> **this skill's fix is to "rewrite" (change register, reduce notes, swap instruments, offset timing);
+> mix-intent's fix is to "remix" (EQ, sidechain, dynamics).**
+> Anything that can be solved at the writing stage should not be left to the mix. Doing so pushes the problem downstream.
 
 ---
 
-## 2. 深度三层：前景、中景、背景
+## 1. Required before you start writing
 
-**问题**：音乐感觉"扁平（flatness）"或二维化，缺乏深度感 (p0111)。
-
-**做法**：借用视觉艺术（电影、摄影、绘画）的概念，**在作曲阶段就规划深度层级**，
-而不是把它全留给混音 (p0111)。
-
-| 层 | 视觉类比 (p0112) |
+| Required | Question to ask |
 |---|---|
-| **前景** | 离观察者最近，通常是主体，焦点清晰，细节丰富 |
-| **中景** | 介于两者之间，非主要焦点，但比背景更近更突出 |
-| **背景** | 距离最远，可识别但模糊，细节较少 |
+| **① Depth map** | Which layer (foreground / middle ground / background) does each element sit in? (§2) |
+| **② Band assignment** | Which frequency band does each element mainly occupy? If you cannot say, you have not thought it through yet |
+| **③ Collision list** | Which two elements are competing for the same space? (§4) |
+| **④ Resolution for each collision** | Yield / separate registers / alternate: **pick one of the three and state which** |
 
-**制作层面怎么推拉** (p0112–0113)：
+---
 
-| | 拉近（推向前景） | 推远（推向背景） |
+## 2. Three depth layers: foreground, middle ground, background
+
+**Problem**: music can feel "flat" or two-dimensional, lacking a sense of depth (p0111).
+
+**Approach**: borrow concepts from the visual arts (film, photography, painting) and **plan the depth levels at the composition stage**,
+rather than leaving all of it to the mix (p0111).
+
+| Layer | Visual analogy (p0112) |
+|---|---|
+| **Foreground** | Closest to the observer; usually the subject, sharp focus, rich detail |
+| **Middle ground** | Between the two; not the main focus, but nearer and more prominent than the background |
+| **Background** | Farthest away; recognisable but blurred, with less detail |
+
+**How to push and pull in production** (p0112–0113):
+
+| | Bring closer (toward foreground) | Push back (toward background) |
 |---|---|---|
-| 音量 | 更响 | 更轻 |
-| 音色 | 更亮（增加高频） | 更暗 |
-| 空间 | 更干（原始信号比例高、混响少） | 混响更多 |
+| Volume | Louder | Quieter |
+| Timbre | Brighter (more high frequencies) | Darker |
+| Space | Drier (higher proportion of direct signal, less reverb) | More reverb |
 
-**★ 但本 skill 关心的是作曲层面的深度**，见 §3——那部分是混音救不回来的。
+**★ But this skill is concerned with depth at the compositional level**, see §3. That is the part mixing cannot recover.
 
 ---
 
-## 3. 深度线索：听众凭什么决定谁是主角
+## 3. Depth cues: what makes the listener decide who is the lead
 
-### 3.1 四条感知线索
+### 3.1 Four perceptual cues
 
-> **人耳倾向于把「高」「响」「快」「变化率快」的声音听作前景。** (p0113)
+> **The ear tends to hear sounds that are "high", "loud", "fast", or "changing quickly" as foreground.** (p0113)
 
-注意这四条里只有"响"是混音能调的，其余三条**在作曲阶段就定死了**。
+Of these four, only "loud" can be adjusted in the mix; the other three **are fixed at the composition stage**.
 
-其中三条 Howard & Angus 给了听觉上的解释：**响**——听觉在 3–4 kHz 附近最灵敏，同样声压级下这一带比低频响得多（p0091、p0093）；
-**高**——5–7 次以上谐波显著的音色被形容为明亮、刺耳、极具穿透力（p0223、p0228）；
-**变化率**——听觉对变化的声音非常敏感，不变的东西会被"适应"掉（p0352、p0342）。
+Three of them have auditory explanations given by Howard & Angus: **loud**: hearing is most sensitive around 3–4 kHz, so at the same sound pressure level this range sounds much louder than the low frequencies (p0091, p0093); **high**: timbres with strong harmonics from the 5th to 7th and above are described as bright, harsh, and highly penetrating (p0223, p0228); **rate of change**: hearing is very sensitive to changing sounds, and unchanging things get "adapted" out (p0352, p0342).
 
-**一个精确的例子** (p0113)：
-> 鼓组通常很响，但因为其**一致性（consistent and unvarying）**，通常被置于中景或背景；
-> 当发生**鼓填充（drum fill）**时，**纹理密度与复杂度的突然变化**使鼓暂时跳到前景。
+**A precise example** (p0113):
+> The drum kit is usually very loud, but because of its **consistent and unvarying** character, it is typically placed in the middle ground or background;
+> when a **drum fill** occurs, the **sudden change in texture density and complexity** briefly moves the drums to the foreground.
 
-这条把"变化率"讲透了：同一件乐器，不改音量不改音色，**只靠变化率就能在深度上位移**。
-——所以 fill 不是装饰，是**深度调度**。
+This makes the point about rate of change clear: the same instrument, with no change in volume or timbre, can be shifted in depth **by rate of change alone**.
+This is why a fill is not decoration; it is **depth scheduling**.
 
-### 3.2 ★ 最常见的陷阱
+### 3.2 ★ The most common trap
 
-> 如果合成器旋律线**比人声高八度**，或者**节奏更复杂、音符跳跃更剧烈**，
-> 听众可能会潜意识地把合成器而非人声听作**主导声部**。 (p0113)
+> If a synth melody line sits **an octave above the vocal**, or has **more complex rhythm and more jumping intervals**,
+> listeners may subconsciously hear the synth, rather than the vocal, as the **leading part**. (p0113)
 
-这就是"人声被盖住"的真正原因——**很多时候不是音量问题，是感知线索给错了**。
-把人声推大 3 dB 解决不了，因为合成器在"高"和"快"两条上都赢了。
+This is the real reason the vocal gets buried: **often it is not a volume problem, but the perceptual cues are pointing the wrong way**.
+Pushing the vocal up 3 dB will not fix it, because the synth wins on both "high" and "fast".
 
-人声还有一条自己的线索：歌剧歌手靠 2.5–4 kHz 的"歌唱者共振峰"在整个乐队之上被听见
-（Howard & Angus p0209；男高音实测 2.4–3.5 kHz，p0221）。流行人声没有这么强的共振峰，但道理一样——
-**这一带是人声出头的窗口**，合成器、失真吉他、镲的谐波峰堆在这里，人声就退到后面。
-自检：副歌里 2.5–4 kHz 是谁在占。失效条件：主角不是人声时不适用。
+The vocal has its own cue as well: opera singers are heard above a full orchestra thanks to the 2.5–4 kHz "singer's formant"
+(Howard & Angus p0209; measured at 2.4–3.5 kHz for tenors, p0221). Pop vocals do not have such a strong formant, but the principle is the same:
+**this range is the window where the vocal comes forward**. Synth, distorted guitar, and cymbal harmonic peaks piled into this range push the vocal back.
+Self-check: in the chorus, who occupies 2.5–4 kHz? Fails when the lead is not the vocal.
 
-**自检动作**：对每个段落，列出当下最高的、最响的、最快的、变化最剧烈的分别是谁。
-**如果这四个答案里主角占不到两个，主角就不是主角。**
+**Self-check action**: for each section, list which element is currently the highest, the loudest, the fastest, and the one changing most dramatically.
+**If the lead does not hold at least two of these four answers, it is not the lead.**
 
-### 3.3 解法
+### 3.3 Solutions
 
-不是把主角调大，而是**把竞争者在四条线索上压下去**：
+Rather than turning the lead up, **push the competitors down on the four cues**:
 
-| 竞争者赢在哪 | 怎么压 |
+| How the competitor wins | How to push it down |
 |---|---|
-| 高 | 移低八度，或让它只在主角的句间空档出现 |
-| 响 | （这条交给混音） |
-| 快 | 减音符密度、拉长时值 |
-| 变化率 | 让它变成重复的 pattern——**一致性会把它推向背景** |
+| High | Move it down an octave, or let it appear only in the gaps between the lead's phrases |
+| Loud | (Hand this to the mix) |
+| Fast | Reduce note density, lengthen note values |
+| Rate of change | Turn it into a repeating pattern: **consistency pushes it toward the background** |
 
 ---
 
-### 3.4 ★ 让层与层分开的六个手段（杨立青）
+### 3.4 ★ Six means of separating layers (Yang Liqing)
 
-§3.1 讲的是听众凭什么把一层听成主角，这一节讲**你手上有哪几个旋钮能把两层拉开**（杨立青 p0244–0250）：
+§3.1 explains why the listener hears one layer as the lead; this section covers **which knobs you have to pull two layers apart** (Yang Liqing p0244–0250):
 
-| 手段 | 做什么 | 要点 |
+| Means | What it does | Key point |
 |---|---|---|
-| **音色** | 换一族乐器 | 层次剥离里起主导作用的因素（p0244） |
-| **音区** | 拉开音程距离，或把主线放到它最有特性的音区 | 距离越大覆盖越少；**主线在自己最富特性的中高音区，即使和伴奏搅在同一音区也能浮出来**（p0246） |
-| **演奏法** | 换奏法 | 不同时间过渡特性的音色只能产生异质音响，这对剥离层次是有利条件（p0247） |
-| **密度／浓度** | solo、soli、tutti 的件数对比 | ★ 两层用完全相同的乐器，只靠件数差也能分开（p0248） |
-| **幅度** | 单音组对多音组（同度对八度、多层八度） | 辅助作用（p0250） |
-| **力度** | 标高一级或低一级 | ★ **永远只是辅助手段**。音区、音色、密度、幅度本已失调，力度救不回来（p0250） |
+| **Timbre** | Switch to a different instrument family | The dominant factor in separating layers (p0244) |
+| **Register** | Widen the interval distance, or place the main line in the register where it is most characteristic | The greater the distance, the less overlap; **a main line in its most characteristic mid-to-high register will float out even when it shares a register with the accompaniment** (p0246) |
+| **Articulation** | Change the playing technique | Timbres with different transitional characteristics produce heterogeneous sound, which helps separate layers (p0247) |
+| **Density / concentration** | Contrast in the number of players for solo, soli, and tutti | ★ Two layers using exactly the same instruments can still be separated by player count alone (p0248) |
+| **Amplitude** | Single-note groups against multi-note groups (unison against octave, multi-layer octaves) | Supporting role (p0250) |
+| **Dynamics** | Raise or lower by one level | ★ **Always only a supporting means.** When register, timbre, density, and amplitude are already out of balance, dynamics cannot rescue it (p0250) |
 
-**用法**：两层打架，按表从上往下试，**力度放最后**。混音层能动的只有最后一行，前五行全在编曲层，
-这就是"能在写法上解决的让路不要留到混音"的依据（reference §7.4）。
+**How to use it**: if two layers are fighting, try the table from top to bottom, **leave dynamics for last**. Only the last row is available to the mixing layer; the first five rows all sit in the arrangement layer.
+This is the basis for "solve yielding at the writing level rather than leaving it to the mix" (reference §7.4).
 
-## 4. 频谱预算
+## 4. Spectrum budget
 
-### 4.1 每件乐器都要说得出占哪个频段
+### 4.1 Be able to state the band each instrument occupies
 
-这是 ARR-SPEC 里 `roster[].band` 和 `spectrum_budget` 两个字段的用处。
-**说不出频段的乐器，你也不知道它在和谁打架。**
+This is what the `roster[].band` and `spectrum_budget` fields in ARR-SPEC are for.
+**If you cannot name an instrument's band, you do not know who it is fighting with.**
 
-### 4.2 冲突的三种解法
+### 4.2 The three ways to resolve a collision
 
-两件乐器占同一块频段时，**只有三条路**，必须选一条并写明：
+When two instruments occupy the same band, **there are only three paths**. You must choose one and state it:
 
-| 解法 | 做什么 | 什么时候用 |
+| Resolution | What it does | When to use it |
 |---|---|---|
-| **① 让频** | 一方在另一方发声时退让（改写：减音符、缩短延音、换和弦排列） | 两者都必须在场，但重要性有别 |
-| **② 错开音区** | 把其中一方整体移到别的音区 | 两者都重要、都要全程在场 |
-| **③ 交替出现** | 两者不同时发声，按段落或按句轮流 | 两者性格相近，同时出现只会互相抵消 |
+| **① Yield** | One side gives way while the other sounds (rewrite: reduce notes, shorten sustains, change chord voicing) | Both must be present, but their importance differs |
+| **② Separate registers** | Move one side as a whole to a different register | Both are important and both must be present throughout |
+| **③ Alternate** | The two never sound at the same time; take turns by section or by phrase | The two have similar character, and sounding together would only cancel them out |
 
-**第 ③ 条常被忽略，但往往是最好的解**——它同时解决了频段冲突和 `mc-orchestration` §3.4 的中和问题。
+**Option ③ is often overlooked, but it is frequently the best solution**: it resolves both the band collision and the masking problem in `mc-orchestration` §3.4.
 
-三条解法各有一条 Howard & Angus 划出的边界：
-- **错开音区**：掩蔽向上延展，低频掩蔽高频远强于反向（p0239）——把次要声部移到主角**下方**比移到上方更危险；
-  临界带宽随频率增大（p0083–0084），低音区同样的音程更容易浑浊——四声部写作要求低音与次中音之间
-  不小于四度，除非它们已在低音谱表之上（p0146）。
-- **让频**：同一临界频带内，掩蔽阈只比掩蔽声低约 20 dB（p0240）——次要声部在主角的频段里轻不到 20 dB
-  就是"写了但听不见"，不如删掉或改音区。
-- **交替出现**：响声停止后 100–200 ms 内轻的起音仍被掩蔽（p0241）——句尾空档短于 200 ms 的"交替"不算交替。
+Each of the three resolutions has a boundary drawn by Howard & Angus:
+- **Separating registers**: masking spreads upward; low frequencies masking high frequencies is far stronger than the reverse (p0239). Moving a secondary part **below** the lead is more dangerous than moving it above. Critical bandwidth grows with frequency (p0083–0084), so the same interval sounds muddier in the low register. Four-part writing requires at least a fourth between bass and tenor, unless they are already above the bass clef (p0146).
+- **Yielding**: within the same critical band, the masking threshold sits only about 20 dB below the masker (p0240). If a secondary part in the lead's band is less than 20 dB quieter, it is "written but inaudible"; delete it or change its register instead.
+- **Alternating**: a soft attack within 100–200 ms after a loud sound stops is still masked (p0241). A "turn-taking" gap at a phrase ending shorter than 200 ms does not count as alternating.
 
-> 一个实测样本的写法（City Pop）：
-> `1–3 kHz` 段：干净吉他与合成器主音冲突 → **解法：交替出现**，
-> 吉他只在主歌/抬升段，合成器只在前奏/副歌/尾奏的句尾空档。
+> A measured example (City Pop):
+> In the `1–3 kHz` band, a clean guitar and a synth lead collide → **resolution: alternate**.
+> The guitar appears only in the verses and build-ups; the synth appears only in the intro, chorus, and outro, in the phrase-ending gaps.
 
-### 4.3 "变薄"：整体移除之外的中间手段
+### 4.3 "Thinning": middle options short of removing an element entirely
 
-不必非要删掉一整件乐器，可以只削薄它 (p0287)：
+You do not have to delete an entire instrument; you can just thin it (p0287):
 
-1. **减少某件乐器演奏的音符数量**
-2. **缩短持续音的衰减时间**，让它迅速让位给混音中的其他部分
+1. **Reduce the number of notes the instrument plays**
+2. **Shorten the decay of sustained notes**, so they yield quickly to the other elements in the mix
 
-**这两条是作曲层的解法，不是混音层的**：改的是谱面上写了多少音、音符占用多长的时值，不是靠 EQ 或压缩去抠掉某段泛音，所以归本 skill，不归 mix-intent。
+**These two are composition-level fixes, not mix-level ones**: they change how many notes are written on the score and how much note value each note occupies. They are not EQ or compression carving out certain overtones. That is why they belong to this skill and not to mix-intent.
 
-削薄和整体移除怎么选：一件乐器如果承担着 §2 里的中景或前景角色，删掉整件会让那一层空掉，这时先试削薄；如果它只是在某个片段填充密度、抽掉也不影响谁在说话，直接整体移除更干净。
+Choosing between thinning and removing outright: if an instrument carries a middle-ground or foreground role from §2, deleting it entirely leaves that layer empty, so try thinning first. If it is only filling density in a passage and removing it does not change who is speaking, removing it outright is cleaner.
 
-用 §6 最大密度法把段落堆到很密之后，回头做 §4.2/4.3 这两轮删减时容易删得不够：过度分层的段落需要**大量**擦除才能恢复音乐性，稍一心软就会留下一堆互相抢注意力的音符 (p0288)。判断"够不够"的办法不是数删了几件乐器，是删完之后再听一遍：还有哪个部分说不出自己占的频段和拍点，就还没删够。
+After stacking a section to a very high density using the §6 maximal-density method, the two rounds of removal in §4.2/4.3 tend to be too timid: an over-layered section needs **heavy** erasing before it regains musicality, and if you hesitate you will leave a pile of notes competing for attention (p0288). The test for "enough" is not counting how many instruments you removed; it is listening again after removal: if any part still cannot state the band it occupies or its beat placement, you have not removed enough.
 
-### 4.4 一条要先明确的前提
+### 4.4 A premise to establish first
 
-> **减法策略只在你现有的部分已经尽可能好的情况下才有效。** (p0286)
+> **A subtractive strategy only works when your existing parts are already as good as they can be.** (p0286)
 
-一堆平庸素材里删掉几个，剩下的还是平庸。**分层救不了不好的素材。**
+Removing a few parts from a pile of mediocre material leaves mediocre material. **Layering cannot rescue weak material.**
 
-什么时候该往这条路上想：段落听感是"小"、"弱"或"没力量"，第一反应往往是加东西，但原理反过来：每多加一个部件，其他部件就要更费力地去抢听众的注意力，音乐空间是有边界的画布，加过头只会盖掉已经写好的东西 (p0286)。这时候该问的是能不能拿掉些什么，而不是还能塞进什么。
+When to think along these lines: if a section sounds "small", "weak", or "without force", the first instinct is often to add things. But the principle runs the other way: every extra component makes the others work harder for the listener's attention, and musical space is a bounded canvas; overfilling it only buries what has already been written (p0286). The question at this point is whether something can be removed, not what else can be squeezed in.
 
-这不是极简主义的专利，也不是某个流派才用得上的技巧：变化率慢的音乐即使元素数量不少，听感也可能是极简的（见 §5 变化率纪律）；反过来，高密度的商业 EDM 只要有意限制同时发声的部件数，照样能听着清晰开放 (p0287)。核心原则是只在必要时添加，但也仅仅是必要时，同时对没有对音乐做出贡献的东西不留情面地删 (p0287)。
+This is not the privilege of minimalism, nor a technique belonging to any one genre. Music with slow rates of change may sound minimal even with many elements (see §5 Rate-of-change discipline); conversely, high-density commercial EDM can still sound clear and open if it deliberately limits the number of parts sounding at once (p0287). The core principle is to add only when necessary, and also to ruthlessly remove whatever does not contribute to the music (p0287).
 
-### 4.5 叠层不等于更响
+### 4.5 Stacking is not the same as louder
 
-两件同样响的乐器叠在一起只 +3 dB，十件才 +10 dB，而 +10 dB 才是响度加倍（Howard & Angus p0040、p0094–0095）。
-想让段落"更大"，靠把能量铺到更多临界频带——总声强不变，响度也会增大（p0096）——
-也就是往**空着的频段**加东西，而不是往已占的频段叠 unison。
-失效条件：同一信号复制出来的相干叠加另算（同相可到 +6 dB，p0035、p0037）。
-自检：新加的一层占了哪个之前空着的频段？答不出来就是白加。
+Two equally loud instruments stacked together gain only +3 dB; ten give +10 dB, and +10 dB is a doubling of loudness (Howard & Angus p0040, p0094–0095).
+To make a section feel "bigger", spread the energy across more critical bands: the total sound intensity stays the same, yet perceived loudness rises (p0096).
+In other words, add material to **empty bands**, rather than unison-stacking on bands that are already occupied.
+Exception: copies of the same signal add coherently, which is a separate case (in phase up to +6 dB, p0035, p0037).
+Self-check: which previously empty band does the new layer occupy? If you cannot answer, the addition is wasted.
 
-★ **频率轴之外还有时间轴**（竹内 p0028–0031）：音压的印象取决于**有没有寂静的空隙**。
-每隔三秒戳破一个气球音压不高，不间断地戳就高，最大音量完全一样（p0029）。
-底鼓打四分音符时拍与拍之间是空的，所以只靠底鼓推不高音压，得用贝斯把空隙填上；
-但低频再怎么填，按等响曲线也带不来大音压的感觉，**真正推高音压的是把 1–5 kHz 用持续音包住**（p0029–0030）。
-那正是吉他、人声、钢琴落的频段，所以自弹自唱反而比连续底鼓更容易做大（p0030）。
+★ **Beyond the frequency axis there is a time axis** (Takeuchi p0028–0031): the impression of sound pressure depends on **whether there are silent gaps**.
+Popping a balloon once every three seconds does not sound loud; popping it continuously does, even though the maximum volume is identical (p0029).
+A kick drum on quarter notes leaves gaps between beats, so the kick alone cannot push up perceived loudness; the bass has to fill those gaps.
+But no matter how much low frequency you add, by equal-loudness curves it does not produce the feeling of high loudness. **What really raises perceived loudness is wrapping 1–5 kHz in sustained sound** (p0029–0030).
+That is the range where guitar, voice, and piano sit, which is why a self-accompanied singer can sometimes build more size than with a continuous kick (p0030).
 
-**编曲含义**：副歌要"大"，先看两件事，一是有没有持续音把拍与拍之间的空隙填掉，二是 1–5 kHz 有没有一层持续的东西（pad、破音吉他墙、和声人声）。
-两件都没做，加低频只会闷。
+**Arrangement implication**: to make the chorus feel "big", check two things. First, is there sustained material filling the gaps between beats? Second, is there a continuous layer in 1–5 kHz (pad, distorted guitar wall, harmony vocals)?
+If neither is in place, adding low frequencies will only sound muddy.
 
 ---
 
-### 4.6 ★ 踏板音：什么时候加长音层，什么时候不该加
+### 4.6 ★ Pedal tones: when to add a sustained layer, and when not to
 
-乐队踏板音就是延续发音的长音或长和弦，流行编曲里的 pad、持续弦乐都是它（杨立青 p0309）。四个功能（p0309）：
+A band pedal tone is a sustained note or long chord; the pads and sustained strings in pop arrangements are examples (Yang Liqing p0309). It serves four functions (p0309):
 
-1. **中介**：沟通不同音色，让各层融成一个整体
-2. **稳定**：在流动的音型化织体里给出清晰的和声轮廓
-3. **丰满**：发音更圆润厚实
-4. **对比**：与没有踏板音的段落形成疏密浓淡对比
+1. **Mediation**: connects different timbres so the layers blend into one whole
+2. **Stabilisation**: provides a clear harmonic outline within a flowing figured texture
+3. **Fullness**: makes the sound rounder and thicker
+4. **Contrast**: creates a contrast of density and sparseness against sections without a pedal tone
 
-★ **什么时候不该加**（p0313）：织体里的旋律、低音或内声部**本身已经含有长时值音符**时，它们已经在起踏板作用，再加一层持续音是画蛇添足。
-追求生硬干涩音响的风格也少加，踏板音出现的频度本身就是风格标记。
+★ **When not to add one** (p0313): when the melody, bass, or inner parts in the texture **already contain long-value notes**, they are already acting as a pedal, and adding another sustained layer is gilding the lily.
+Styles that aim for a harsh, dry sound also use pedal tones sparingly; how often a pedal tone appears is itself a stylistic marker.
 
-**怎么选音**（p0313）：和声换得频繁的段落，选各和弦之间的**共同音**做踏板，让它成为贯穿因素；找不到共同音就筛几个音高不同的长音，尽量让它们连成一条好听的线。
-踏板层不一定是长音，震音或结构单纯的音型也可以。
+**How to choose the pitch** (p0313): in sections where the harmony changes frequently, choose **common tones** shared by the successive chords as the pedal, so it becomes a running thread. If no common tone exists, screen several long notes of different pitches and try to connect them into a pleasant line.
+The pedal layer does not have to be long notes; tremolo or a structurally simple figure can also serve.
 
-**粘合**（p0311）：密集音型之上加一层长音和弦，让它的音区、排列、密度在每拍第一个音上与音型层吻合，两层就被黏在一起。
-反过来，**固定音型与打击乐节奏型也是粘合剂**（杨立青中册 p0514–0515）：一个轮廓鲜明、反复出现的节奏型能把错综复杂的结构整合起来，
-既做纵向整合，也做段落之间的横向连接。
+**Gluing** (p0311): placing a long chord layer above a dense figure, with its register, voicing, and density matching the figure layer on the first note of each beat, binds the two layers together.
+Conversely, **a fixed figure or a percussion rhythm pattern also acts as glue** (Yang Liqing, middle volume p0514–0515): a rhythmic pattern with a distinct, recurring contour can integrate a complex structure,
+providing both vertical integration and horizontal connection between sections.
 
-## 5. 变化率纪律
+## 5. Rate-of-change discipline
 
-> **中景和背景元素的变化率应保持在最低限度，而前景元素允许更多的运动自由度。** (p0114)
+> **Middle-ground and background elements should keep their rate of change to a minimum, while foreground elements may move more freely.** (p0114)
 
-这条极其实用，而且是"越到后面越乱"的解药：
+This principle is very practical, and it is the remedy for "sections get messier toward the end":
 
-- 背景在变 → 听众的注意力被不断拉扯，主角站不住
-- 背景不变 → 主角的每一次变化都被听见
+- Background changing → the listener's attention is constantly pulled, and the lead cannot hold its ground
+- Background static → every change in the lead is heard
 
-**自检动作**：把每个元素的"每几小节变一次"写出来。
-**如果背景元素的变化频率和前景一样高，那就没有背景，只有一堆前景。**
+**Self-check action**: write down how often each element changes, e.g. "changes every few bars".
+**If background elements change as often as the foreground, there is no background, only a pile of foreground.**
 
-**失效条件**：某些风格（IDM、breakcore）的美学就是全员高变化率——
-但那种情况下"前景"是靠别的线索建立的（通常是音色的极端性），而不是靠变化率。
-
----
-
-## 6. 最大密度法：怎么做一个很密但不乱的段落
-
-**问题**：写完第一部分后，加第二部分像从零开始；线性从左往右推进让人望而生畏 (p0265)。
-
-**做法**（注意它是**作曲阶段**的方法，和 `mc-arrangement-arch` §3 的减法编曲是**编曲阶段**的，
-两者相似但作用点不同）(p0266)：
-
-1. 从歌曲中间任意一个**最大密度**的点开始——所有可能同时发生的元素**实际上都在同时发生** (p0265)
-2. 这一步会堆出**不和谐的混乱（unmusical mess）**，这是预期内的
-3. **逐个减去元素**，直到达到既高密度又符合音乐逻辑的水平 → 这就是歌曲的**高潮点** (p0265)
-4. **复制**这个峰值段落，通过静音/删除来测试更低密度的版本
-5. 找到喜欢的组合就复制粘贴成新段落
-6. 于是编曲变成"组织这些不同密度的段落，以符合歌曲的起伏（ebb and flow）" (p0266)
-
-**这个方法的价值**：它让**所有段落天然同源**——低密度段是高密度段的子集，
-所以不会出现"各段像不同的歌"。
-
-**代价**：容易过度分层。DeSantis 自己提醒，用了最大密度或减法编曲之后，
-**可能意外产生过度分层（over-layering）**，需要大量擦除才能恢复音乐性，
-且要格外小心判断**是否移除得足够多** (p0288)。
+**Failure condition**: some styles (IDM, breakcore) aesthetically embrace high rate of change across all elements.
+In those cases, the "foreground" is established by other cues (usually extreme timbre), not by rate of change.
 
 ---
 
-## 7. 与 ARR-SPEC 的字段对应
+## 6. Maximal-density method: how to build a very dense section that does not turn to mud
 
-| 字段 | 本 skill 的哪一节 |
+**Problem**: after writing the first part, adding a second part feels like starting from scratch; building linearly from left to right is daunting (p0265).
+
+**Approach** (note that this is a **composition-stage** method; it is similar to but operates at a different point from the subtractive arrangement in §3 of `mc-arrangement-arch`, which is an **arrangement-stage** method) (p0266):
+
+1. Start from any **point of maximum density** in the song, where all the elements that could possibly sound together **actually do sound together** (p0265)
+2. This step will produce **unmusical mess**, which is expected
+3. **Remove elements one at a time** until reaching a level that is both dense and musically logical → this becomes the song's **climax** (p0265)
+4. **Copy** this peak section, and test lower-density versions by muting or deleting
+5. When you find a combination you like, copy and paste it as a new section
+6. The arrangement thereby becomes "organising these sections of different densities to match the ebb and flow of the song" (p0266)
+
+**Value of this method**: it makes **all sections naturally share one source**: the low-density sections are subsets of the high-density section,
+so the sections will not sound like "different songs".
+
+**Cost**: it tends to produce over-layering. DeSantis himself warns that after using maximal density or subtractive arrangement,
+**over-layering may arise unintentionally**, requiring heavy erasing before musicality returns,
+and you must take special care in judging **whether you have removed enough** (p0288).
+
+---
+
+## 7. Mapping to ARR-SPEC fields
+
+| Field | Section of this skill |
 |---|---|
-| `arrangement.spectrum_budget` | §4（每条含 band / owner / competitors / **resolution**） |
+| `arrangement.spectrum_budget` | §4 (each entry includes band / owner / competitors / **resolution**) |
 | `arrangement.roster[].band` | §4.1 |
-| `arrangement.depth_map` | §2 深度三层 |
-| `arrangement.roster[].band` 的四段划分 | §4.1（见 reference §1） |
+| `arrangement.depth_map` | §2 Three depth layers |
+| The four-segment division of `arrangement.roster[].band` | §4.1 (see reference §1) |
 
-**不归本 skill 填**：`roster[].entry/exit`（→ `mc-arrangement-arch`）、
-`roster[].instrument`（→ `mc-orchestration`）、`mix_intent.ducking_map`（→ `mc-mix-intent`）。
-
----
-
-## 8. 写完后必过
-
-- [ ] 每个元素都标了**前景／中景／背景**
-- [ ] 每个元素都说得出**占哪个频段**
-- [ ] 每段的"最高、最响、最快、变化最剧烈"分别是谁，列得出来；**主角至少占两条**
-- [ ] 每处频段冲突都写明了解法是**让频／错开音区／交替出现**中的哪一种
-- [ ] 主角是人声时，副歌的 2.5–4 kHz 归人声；低音区两声部间距不小于四度（§3.2、§4.2）
-- [ ] 背景元素的变化率**明显低于**前景
-- [ ] 用了最大密度法的话，检查过**是否移除得够多**（§6 的代价）
-- [ ] 凡是能在作曲层解决的冲突，**没有推给混音**
+**Not filled by this skill**: `roster[].entry/exit` (→ `mc-arrangement-arch`),
+`roster[].instrument` (→ `mc-orchestration`), `mix_intent.ducking_map` (→ `mc-mix-intent`).
 
 ---
 
-## 附：来源
+## 8. Must-pass checks after writing
 
-- **Dennis DeSantis《Making Music》**（Ableton）——§2、§3、§4.3、§4.4、§5、§6 的主干
-  （Foreground/Middle Ground/Background、Maximal Density、The Power of Erasing）。页码为该书页。
-- 频段预算的听觉基础见 **Izhaki《混音指南》**的掩蔽章节，整理在 [reference.md](reference.md)。
-- **Howard & Angus《音乐声学与心理声学》**（Acoustics and Psychoacoustics）——
-  §3 的响度／谐波／歌唱者共振峰、§4.2 的掩蔽不对称与时间掩蔽、§4.5 的响度叠加；临界频带的尺子在 reference §1.1。页码为中译本页。
-- 混音侧的对应手法见 **Izhaki《混音指南》**——**只取频段预算与意图的部分**，
-  EQ/压缩实操是混音的事，本包不收。
+- [ ] Every element is labelled **foreground / middle ground / background**
+- [ ] Every element can state **which frequency band it occupies**
+- [ ] For each section, the answers to "highest, loudest, fastest, changing most dramatically" are listed; **the lead holds at least two**
+- [ ] Every band collision states whether the resolution is **yield / separate registers / alternate**
+- [ ] When the lead is the vocal, the chorus's 2.5–4 kHz belongs to the vocal; in the low register, the spacing between two parts is at least a fourth (§3.2, §4.2)
+- [ ] Background elements' rate of change is **clearly lower** than the foreground's
+- [ ] If the maximal-density method was used, check that you **removed enough** (cost in §6)
+- [ ] Every collision that can be solved at the composition level **has not been pushed to the mix**
+
+---
+
+## Appendix: Sources
+
+- **Dennis DeSantis, *Making Music*** (Ableton): the backbone of §2, §3, §4.3, §4.4, §5, and §6
+  (Foreground/Middle Ground/Background, Maximal Density, The Power of Erasing). Page numbers refer to the book's pages.
+- The auditory basis for the frequency budget is in the masking chapter of **Izhaki, *Mixing Audio***, summarised in [reference.md](reference.md).
+- **Howard & Angus, *Acoustics and Psychoacoustics***: §3's loudness / harmonics / singer's formant, §4.2's masking asymmetry and temporal masking, and §4.5's loudness summation; the critical-band ruler is in reference §1.1. Page numbers refer to the Chinese edition's pages.
+- The corresponding mixing techniques are in **Izhaki, *Mixing Audio***. **Only the frequency-budget and intent parts are taken**;
+  EQ and compression practice is a matter for mixing and is not included in this package.

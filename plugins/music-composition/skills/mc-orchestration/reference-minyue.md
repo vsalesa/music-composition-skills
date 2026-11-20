@@ -1,243 +1,243 @@
-# 民族管弦乐速查（mc-orchestration 的 §7–§8）
+# Chinese Folk Orchestra Quick Reference (§7–§8 of mc-orchestration)
 
-> 从 [reference.md](reference.md) 分出来的，小节号沿用原编号。
-> 决策层在 SKILL.md §8，本文只放查表内容。
+> Split out from [reference.md](reference.md); section numbers keep their original numbering.
+> The decision layer is in SKILL.md §8; this file holds only the lookup content.
 
 ---
 
-## 7. 民族乐器法速查
+## 7. Chinese Folk Instrument Quick Reference
 
-> 决策层（四组性格、分组结合、全编制分配、处理法）在 `SKILL.md` §8；这里只放**查得到的数字与惯例**。
-> 每行末尾的「页」即该行的出处。**只采用书里明确写出的数字**，原书以图示给音域的留空；两本书说法不同时并排保留。
-> **八度记谱与谱表的汇总表在 §8.3**，配器前先过那张。
+> The decision layer (the four group characters, grouped combinations, full-lineup allocation, treatment methods) is in `SKILL.md` §8; this section holds only the **numbers and conventions you can look up**.
+> The "Page" at the end of each row is the source of that row. **Only figures explicitly stated in the book are used**; where the book leaves a range blank in a diagram, that is noted. Where the two books differ, both views are kept side by side.
+> **The summary table of octave notation and staves is in §8.3**; check that table before arranging.
 
-### 7.1 吹管组
+### 7.1 Wind Group
 
-| 乐器 | 调／定音 | 记谱 | 音区与约束 | 页 |
+| Instrument | Key / tuning | Notation | Range and constraints | Page |
 |---|---|---|---|---|
-| **竹笛（总）** | 六孔；**开第三孔的音就是这支笛的调**，筒音是本调的五度音 sol | **贴膜笛一律低八度记谱；无膜笛实音** | 低音区厚实、中音区明亮、高音区清脆，**最高几个音较刺耳**。常用音域＝最低音往上**两个八度加一个大二度**。**实际因音准一笛只吹四到五个调**；**总谱必须写明用什么调的笛，中途换笛也必须写上** | 朱晓谷 p0011, p0014, p0015 |
-| 高音笛（梆笛） | 调高 F 至 C 调（记谱 f¹—c²） | 低八度 | 低音区不易过强（会吹成高八度），高音区不易过弱；北派技法为主 | 朱晓谷 p0011, p0015, p0028 |
-| 中音笛（曲笛） | 调高 bB 至 E 调（记谱 bB—e¹） | 低八度 | 高音域一般不易过弱；南派技法为主，用气平稳 | 朱晓谷 p0012, p0015, p0028 |
-| 低音笛（大笛） | 调高 A 调以下可至 D 甚至 C 调（记谱 d—a） | 低八度 | 弯管笛属低音笛，常用 C、D 调 | 朱晓谷 p0013, p0030 |
-| 新笛 | 无膜六孔，常用 F、G 调 | 实音 | 柔和较闷；常用两个八度；**音量比箫大**，技巧同竹笛 | 朱晓谷 p0030 |
-| 箫／南管 | 箫竖吹无膜八孔、常用 F、G 调；南管竖吹五孔、一般 G 调 | 实音 | 箫柔和、两个八度、音量小，**乐队里只能作色彩性乐器**；南管圆润醇厚，比箫音量大 | 朱晓谷 p0029, p0032 |
-| 口笛 | 三或五孔无膜，G、A 调；**比 G 调梆笛高八度** | 低两个八度 | 极尖锐嘹亮；常用一个八度；技巧不如竹笛 | 朱晓谷 p0031 |
-| 排箫 | 一管一音，C、D、G 调 | 高八度 | 清亮恬美；**因音准，多见于中、慢速** | 朱晓谷 p0034 |
-| 埙 | 十孔，C、D、F、G 调常用 | 实音 | 低沉凄凉；一般两个八度；作色彩乐器 | 朱晓谷 p0032 |
-| 巴乌／葫芦丝 | 簧片发音；巴乌一般 F 调，葫芦丝常用 D、C、bB 调 | 实音 | 音色如笙，柔美厚实；**九度音域**；**巴乌音量不超过 f** | 朱晓谷 p0033, p0034 |
-| **唢呐（总）** | 八孔；**定调同竹笛**：筒音为本调五级音，开三孔的音即是调 | **传统唢呐有实音与低八度两种记谱，用哪种必须写明**；**加键唢呐一律实音且音域内有半音** | 低音区不易强奏，高音区不易弱奏且较尖锐。**平吹与超吹之间不能用指滑音**；除打击乐外**高音唢呐音量最大，用不适合的调会带偏整个乐队的音准**，必须注明用何调唢呐 | 朱晓谷 p0035, p0036, p0037, p0040 |
-| 传统高音唢呐 | 常用 C、D 调；一支可吹五至七个调、常用四至五个（D 调可吹 D、G、C、F、A） | 实音或低八度 | 常用音域强奏嘹亮、弱奏柔和 | 朱晓谷 p0035, p0036, p0037 |
-| 加键中音唢呐 | 传统中音唢呐常用 G、A、bB、B 调 | 实音 | 低音区淳厚、中音区明亮、高音区纤细。**乐队中使用较多**，易平衡，**但传统技法多有消失** | 朱晓谷 p0037, p0038, p0039 |
-| 次中音加键唢呐 | | 实音 | **音色带强烈鼻音**；其音域中音与低音加键唢呐都能替代，**并非所有乐团都配** | 朱晓谷 p0038 |
-| 低音加键唢呐 | 传统低音唢呐常用 F、E、D 调 | 实音 | 浓烈厚实；不只是管乐低音，**支撑全乐队低音** | 朱晓谷 p0037, p0039 |
-| 海笛 | 高音唢呐的一种，**音域最高**；E、F、G、D 调 | 低八度 | | 朱晓谷 p0039 |
-| 管子 | 八孔芦苇哨；A 调筒音 e¹、F 调筒音 c¹ | | 低音区带鼻音，中音区明亮丰满易控制，**高音区刺耳不易吹**。**超吹不是平吹的八度，而是高十一度**；**平吹没有 b¹ 和 f²** | 朱晓谷 p0048, p0049 |
-| 双管／筚篥／加键管 | 双管＝两支同调管扎一起（C 调管可吹 C、G、D）；筚篥八孔，常用 bB 调 | | 双管靠微小音律差构成音色；加键管不必须配备，可用加键唢呐兼任 | 朱晓谷 p0049, p0050 |
-| **笙（总）** | **可同时吹二至十多个音**的簧管乐器；传统高音笙多为 D 调，改良三十六（三十八）簧与三十七簧各调都能奏 | 实音；改良笙音域内都含半音；中音、次中音笙**也可用中音谱号** | 低音区柔和、中音区甜美、高音区清亮；**高音区单音音量极弱**，靠加共鸣管才平衡。**音量由同时发音的个数决定，渐强渐弱要靠加减音**；吹吸皆发音；**指滑音一般只在 a² 以上** | 朱晓谷 p0052, p0055, p0057 |
-| 笙的传统和音 | **上加纯五度再加纯四度** | | 听感是四度音程的旋律。"五八"＝上加五度与八度；"五"＝上加五度；"四"＝下加四度。**有力度的拂音可同时吹十多个音但没有和声功能意义** | 朱晓谷 p0059, p0060 |
-| 排笙／芦笙 | 排笙有高、中、低三种；芦笙常用 C、bB 调 | 排笙实音 | 排笙**高音少用**，中低音量平衡；芦笙可吹旋律、和弦、复调 | 朱晓谷 p0063, p0064 |
+| **Bamboo flute, general (zhudi)** | Six holes; **the note with the third hole open gives the flute's key**; the open-tube note is the fifth (sol) above the key | **Membrane flutes are always notated an octave lower; membraneless flutes sound as written** | Thick low register, bright middle register, crisp high register, **with the highest few notes rather shrill**. Usual range = from the lowest note up **two octaves plus a major second**. **In practice, one flute plays only four or five keys owing to pitch**; **the score must specify which key of flute is used, and any change of flute mid-piece must also be written** | Zhu Xiaogu p0011, p0014, p0015 |
+| High-pitched flute (bangdi) | Keys from F to C (notated f¹–c²) | An octave lower | The low register is hard to play loudly (it turns into the high octave); the high register is hard to play softly; mainly northern-school technique | Zhu Xiaogu p0011, p0015, p0028 |
+| Middle flute (qudi) | Keys from B-flat to E (notated b♭–e¹) | An octave lower | The high register generally is hard to play softly; mainly southern-school technique, with steady breath | Zhu Xiaogu p0012, p0015, p0028 |
+| Low flute (dadi) | Keys from A downward, to D or even C (notated d–a) | An octave lower | Bent-tube flutes count as low flutes; C and D keys are common | Zhu Xiaogu p0013, p0030 |
+| New flute (xindi) | Membraneless, six holes; F and G keys common | As written | Soft and somewhat muffled; two octaves in common use; **louder than the xiao**; technique as for the bamboo flute | Zhu Xiaogu p0030 |
+| Xiao / nanguan | Xiao: held vertically, membraneless, eight holes, F and G keys common; nanguan: held vertically, five holes, usually G key | As written | The xiao is soft, spans two octaves, and is quiet, so **in the orchestra it can only serve as a colouring instrument**; the nanguan is round and mellow, louder than the xiao | Zhu Xiaogu p0029, p0032 |
+| Mouth whistle (koudi) | Three or five holes, membraneless, G and A keys; **an octave higher than a G-key bangdi** | Two octaves lower | Extremely sharp and ringing; one octave in common use; technique less developed than the bamboo flute | Zhu Xiaogu p0031 |
+| Panpipes (paixiao) | One pipe per note; C, D, and G keys | An octave higher | Clear and serene; **because of pitch, mostly used at medium and slow tempos** | Zhu Xiaogu p0034 |
+| Xun (ocarina-type vessel flute) | Ten holes; C, D, F, and G keys common | As written | Deep and mournful; generally two octaves; used as a colouring instrument | Zhu Xiaogu p0032 |
+| Bawu / hulusi | Reed-sounding; bawu usually in F, hulusi commonly D, C, and B-flat | As written | Timbre like the sheng, soft and full; **a ninth of range**; **bawu volume should not exceed f** | Zhu Xiaogu p0033, p0034 |
+| **Suona, general** | Eight holes; **tuned like the bamboo flute**: the open-tube note is the fifth degree of the key; the note with the third hole open is the key | **Traditional suona has both as-written and octave-lower notation; the one used must be specified**; **keyed suona is always as written, with semitones throughout its range** | Low register hard to play loudly, high register hard to play softly and rather shrill. **Finger glissandi cannot be used between normal blowing and overblowing**; except for percussion, **the high suona is the loudest, and using an unsuitable key drags the whole orchestra's pitch off**, so the suona's key must be marked | Zhu Xiaogu p0035, p0036, p0037, p0040 |
+| Traditional high suona | C and D keys common; one instrument can play five to seven keys, with four to five in common use (in D it can play D, G, C, F, and A) | As written or an octave lower | In its usual range, loud playing is brilliant and soft playing is gentle | Zhu Xiaogu p0035, p0036, p0037 |
+| Keyed middle suona | Traditional middle suona usually in G, A, B-flat, and B | As written | Full-bodied low register, bright middle register, slender high register. **Used quite often in the orchestra and easy to balance, but many traditional techniques have been lost** | Zhu Xiaogu p0037, p0038, p0039 |
+| Keyed alto suona (secondary middle) | | As written | **Timbre with a strong nasal quality**; its range can be substituted for by the keyed middle or keyed low suona; **not every ensemble includes it** | Zhu Xiaogu p0038 |
+| Keyed low suona | Traditional low suona usually in F, E, and D | As written | Rich and thick; not just a low wind voice, **it supports the bass of the whole orchestra** | Zhu Xiaogu p0037, p0039 |
+| Haidi | A type of high suona, **with the highest range**; keys of E, F, G, and D | An octave lower | | Zhu Xiaogu p0039 |
+| Guan (guanzi, double-reed) | Eight holes with a reed; open-tube note e¹ in A, c¹ in F | | Low register nasal, middle register bright and full and easy to control, **high register harsh and hard to blow**. **Overblowing is not the octave of normal blowing but an eleventh higher**; **normal blowing has no b¹ or f²** | Zhu Xiaogu p0048, p0049 |
+| Shuangguan / bili / keyed guan | Shuangguan = two pipes of the same key bound together (a C-key pipe can play C, G, and D); bili has eight holes, usually in B-flat | | The shuangguan forms its timbre through a slight difference in tuning; a keyed guan is not required and a keyed suona can double for it | Zhu Xiaogu p0049, p0050 |
+| **Sheng, general** | A reed instrument that **can sound two to more than ten notes at once**; the traditional high sheng is mostly in D; the improved 36- (38-) reed and 37-reed sheng can both play in every key | As written; every note in the range of the improved sheng includes semitones; the middle and alto sheng **may also use the alto clef** | Low register soft, middle register sweet, high register clear; **single notes in the high register are extremely weak and must be balanced by adding resonance tubes**. **Volume is set by the number of notes sounding at once, so crescendo and diminuendo depend on adding or removing notes**; sounds on both inhalation and exhalation; **finger glissandi are generally only above a²** | Zhu Xiaogu p0052, p0055, p0057 |
+| Traditional sheng harmony | **A perfect fifth added above, then a perfect fourth added** | | To the ear it is a melody in fourths. "Five-eight" = a fifth plus an octave added above; "five" = a fifth added above; "four" = a fourth added below. **Forceful flutter-tonguing can sound more than ten notes at once but has no harmonic function** | Zhu Xiaogu p0059, p0060 |
+| Paisheng / lusheng | Paisheng come in high, middle, and low; lusheng usually in C and B-flat | Paisheng as written | Paisheng **high register rarely used**, middle and low registers balanced in volume; lusheng can play melody, chords, and polyphony | Zhu Xiaogu p0063, p0064 |
 
-### 7.2 弹拨组
+### 7.2 Plucked Group
 
-| 乐器 | 定弦 | 记谱 | 音域与音区 | 和弦与关键约束 | 页 |
+| Instrument | Tuning | Notation | Range and register | Chord and key constraints | Page |
 |---|---|---|---|---|---|
-| **琵琶** | **a、e、d、A**；变格有 a-e-B-A（《霸王卸甲》）、a-a-e-A、a-e-d-G、d-a-g-d | 大谱表实音 | 低音区淳厚、中音区恬美、高音区清亮。六相二十六品，**半音齐全，任何调可奏**（常用 D、G、C、A、F） | **一弦多音**（a¹ 四根弦都能奏），**乐队里必须统一用哪根弦**。和弦以中低音区最常用，多用相邻三根弦，**密集比开放顺手，有空弦音的最丰满**；不含空弦音的三、四音和弦先确认能否演奏 | 朱晓谷 p0067, p0068, p0086, p0087 |
-| **柳琴** | **g、d¹、g¹、d²** | 高音谱号实音 | **朱晓谷记为 g—g⁴；杨春林记为"三个多八度"**。低音区厚实略干涩、中音区圆润、高音区明亮 | 常用调 G、bB、C、D、F，其次 A、bE。**用弹片明亮，不用弹片柔和**。**因只能同向刮奏，不能隔弦奏三音或四音和弦**。弦短把位小，**擅长快速乐句** | 朱晓谷 p0088, p0089, p0097；杨春林 p0073, p0074 |
-| 月琴 | 同柳琴 **d²、g¹、d¹、g**；三弦者 **a²、d¹、a** | | 高音区比柳琴短促 | 技法同柳琴，音色厚实、音量较大。京剧三大件之一，**只用第一弦八度以内的音** | 朱晓谷 p0097, p0098 |
-| **中阮** | **d¹、g、d、G**，二十四品 | **三种并存，必须写明**：大谱表实音／中音或低音谱表／**高八度记谱**。杨春林主张统一用**中音谱表** | 中低音域厚实，**高音域有些干涩** | 常用调 D、C、bB、A、G、F、E、bE。音色柔和如人声，**和其他乐器融合好**，担中音声部。**和弦多以开放为主，有空弦音的效果较好** | 朱晓谷 p0100, p0101, p0105；杨春林 p0087 |
-| 高阮／小阮／大阮／低阮 | 定弦多种；大阮低音谱表实音 | | 高阮共鸣箱小弦短，**干涩带木头与弹片声**；小阮介于柳琴与中阮之间 | **综合乐队里高阮由柳琴替代、低阮由低音革胡兼**，二者大多不入编制；大阮把位大不如中阮灵活 | 朱晓谷 p0099, p0100, p0106；杨春林 p0087 |
-| **三弦（大）** | 空弦 **g、d、G**；戏曲民间按人声改定弦 | 一般低音谱号实音，中高音区改高音谱号；独奏用大谱表；**也有同中阮的高八度记谱** | 柄长、有指板、**无品** | 常用调 C、G、F、bB、D。**音色扎实醇厚，弹点清楚，渗透力强，音量大**。**和弦：空弦音构成的二度到八度都容易，两个音都不是空弦时较难** | 朱晓谷 p0107, p0108, p0119；杨春林 p0094 |
-| **扬琴** | 按**十二平均律**排列，变音槽转调；乐队多用 402 扬琴 | 大谱表实音 | **四个八度**（加琴码可低到 E、高到 a³）。低音区厚实但**余音很长**；中音区清脆明亮（主要音域）；高音区**带击木杂音** | 常用 D、F、C、A、bB（江南丝竹定 D 调，广东音乐定 C 调）。**余音长能起中和作用，用不好就浑浊**——换和弦频繁时当心。**能奏柱式和弦、和弦琶音与多声部**；**音量反差是弹拨组里较大的** | 朱晓谷 p0120, p0121；杨春林 p0079 |
-| **古筝** | **二十一弦**，传统 **D 调五声定弦**；创作曲常用**人工音阶定弦，一曲一个排列** | 大谱表实音 | **四个八度**；低音区浑厚、中音区柔美、高音区明亮。**最高音 d³**，按音可按出 #d³、e³ 甚至 f³、g³ | **不按音、不移码只能弹一个调**。移码代价：D→G 移四个码，D→A 移五个，**D→C 要移八个，"非常困难"**。**传统筝没有四级、七级音的音位**，遇到这两个音都要靠滑音 | 朱晓谷 p0128, p0129, p0130, p0137；杨春林 p0089 |
-| 古琴 | **七弦十三徽**（十三徽都是泛音音位）；定弦随乐曲而变 | **减字谱**；杨春林记为低音谱表实音 | 低音区浑厚、中音区宽涌、高音区尖脆；常用调 F、C、bB、D | **作曲家把音写出来远远不够，每个音的技法要靠弹琴人标明**；**神韵不能用小节的强弱拍来感受** | 朱晓谷 p0149, p0150, p0152；杨春林 p0095 |
-| 箜篌（改革） | 双排弦、有琴码，可两边发音、可像古筝那样揉弦 | 大谱表 | 音域较宽，**有一段音域可以像古筝一样压颤音** | 与竖琴比**音色不如竖琴、音量偏小、容易跑弦** | 朱晓谷 p0147；杨春林 p0096, p0466 |
+| **Pipa** | **a, e, d, A**; variant tunings include a-e-B-A ("Bawang xiejia" [Hegemon Shedding His Armour]), a-a-e-A, a-e-d-G, d-a-g-d | Grand staff, as written | Low register full, middle register sweet, high register clear. Six positions, 26 frets, **full chromatic range, playable in any key** (common keys D, G, C, A, F) | **Multiple notes on one string** (a¹ can be played on all four strings); **the orchestra must agree on which string to use**. Chords are most common in the low-middle register, usually using three adjacent strings; **compact voicings are easier than open ones, and chords with open-string notes are the fullest**; for three- or four-note chords without open strings, first check whether they are playable | Zhu Xiaogu p0067, p0068, p0086, p0087 |
+| **Liuqin** | **g, d¹, g¹, d²** | Treble clef, as written | **Zhu Xiaogu records it as g–g⁴; Yang Chunlin records it as "more than three octaves"**. Low register thick and slightly dry, middle register round, high register bright | Common keys G, B-flat, C, D, F, then A and E-flat. **Bright with a plectrum, soft without one**. **Because it can only be strummed in one direction and cannot play three- or four-note chords across strings**. Short strings and small position range, **good at fast phrases** | Zhu Xiaogu p0088, p0089, p0097; Yang Chunlin p0073, p0074 |
+| Yueqin | Same tuning as the liuqin, **d², g¹, d¹, g**; with the sanxian, **a², d¹, a** | | High register shorter and more abrupt than the liuqin's | Technique as for the liuqin; thick timbre and fairly loud. One of the "three big instruments" of Peking opera; **uses only notes within an octave of the first string** | Zhu Xiaogu p0097, p0098 |
+| **Zhongruan** | **d¹, g, d, G**, 24 frets | **Three notations coexist and must be specified**: grand staff as written / middle or bass staff / **octave-higher notation**. Yang Chunlin advocates **the middle staff** throughout | Middle and low ranges thick, **high range somewhat dry** | Common keys D, C, B-flat, A, G, F, E, and E-flat. Timbre soft like a human voice, **blends well with other instruments**, carries the middle voice. **Chords are mostly open; those with open-string notes sound better** | Zhu Xiaogu p0100, p0101, p0105; Yang Chunlin p0087 |
+| Gaoruan / xiaoruan / daruan / diruan | Several tunings; the bass ruan in bass staff, as written | | The gaoruan has a small resonator and short strings, **dry and with wooden and plectrum sounds**; the xiaoruan lies between the liuqin and zhongruan | **In the comprehensive orchestra the gaoruan is replaced by the liuqin and the diruan is covered by the bass gehu; most of these are not in the lineup**; the daruan's positions are wide and less agile than the zhongruan's | Zhu Xiaogu p0099, p0100, p0106; Yang Chunlin p0087 |
+| **Sanxian (large)** | Open strings **g, d, G**; opera and folk traditions retune it to fit the singing voice | Usually bass clef as written, switching to treble clef for middle and high registers; solo in grand staff; **also has an octave-higher notation like the zhongruan** | Long neck with a fingerboard, **no frets** | Common keys C, G, F, B-flat, D. **Timbre solid and mellow, plucks clear, strong penetration, loud**. **Chords: second to octave intervals built from open-string notes are easy; harder when neither note is an open string** | Zhu Xiaogu p0107, p0108, p0119; Yang Chunlin p0094 |
+| **Yangqin** | Arranged in **twelve-tone equal temperament**, with key changes via bridges moved in the tuning slots; the orchestra mostly uses the 402 yangqin | Grand staff, as written | **Four octaves** (with the bridge it can go down to E and up to a³). Low register thick but **with very long decay**; middle register crisp and bright (the main range); high register **with a striking-wood buzz** | Common keys D, F, C, A, B-flat (Jiangnan silk-and-bamboo ensemble tunes to D; Cantonese music tunes to C). **Long decay gives a moderating effect, but used badly it becomes muddy**; be careful when chords change frequently. **Can play block chords, arpeggiated chords, and polyphony**; **its dynamic contrast is the largest in the plucked group** | Zhu Xiaogu p0120, p0121; Yang Chunlin p0079 |
+| **Guzheng** | **Twenty-one strings**, traditionally tuned to the **D-key pentatonic**; compositions often use **an artificial scale tuning, with a different arrangement for each piece** | Grand staff, as written | **Four octaves**; low register deep, middle register gentle, high register bright. **Highest note d³**; by pressing strings, #d³, e³, and even f³ and g³ can be reached | **Without pressing strings or moving bridges, it can only play one key**. Cost of moving bridges: D→G requires moving four bridges, D→A five; **D→C requires eight, "very difficult"**. **Traditional zheng has no positions for the fourth and seventh degrees**, so these two notes must be produced by glissando | Zhu Xiaogu p0128, p0129, p0130, p0137; Yang Chunlin p0089 |
+| Guqin | **Seven strings, thirteen markers** (all thirteen markers are harmonic positions); tuning changes with the piece | **Jianzi pu** (abbreviated character notation); Yang Chunlin records it as a bass staff, as written | Low register full, middle register broad and surging, high register sharp and crisp; common keys F, C, B-flat, D | **It is far from enough for a composer to write the notes; the technique for each note must be indicated by the player**; **its spirit cannot be felt through the strong and weak beats of the bar** | Zhu Xiaogu p0149, p0150, p0152; Yang Chunlin p0095 |
+| Konghou (reformed) | Double rows of strings, with bridges, can sound from both sides, and can bend strings like the guzheng | Grand staff | Fairly wide range, **with a section of the range where it can produce tremolo-like pressing as the guzheng does** | Compared with the harp, **its timbre is weaker, its volume lower, and its strings easily slip** | Zhu Xiaogu p0147; Yang Chunlin p0096, p0466 |
 
-**弹拨组的公共要点**：发音的基本形式是**"点"**；**轮、滚、摇都是"把点变成线"，但手法与效果完全不同，应尽量标明**，否则演奏者会自行选一种。琵琶、扬琴、古筝**可跨三个音域演奏**。组合指法是弹拨、尤其琵琶的常用写法，**但要顺手，不能拼凑**（朱晓谷 p0067, p0074, p0079, p0081）。
+**Common points for the plucked group**: the basic form of sound is the **"dot"**; **rolling, rapid tremolo, and rocking all "turn the dot into a line," but their techniques and effects are entirely different, so they should be marked as far as possible**, or players will choose one for themselves. The pipa, yangqin, and guzheng **can be played across three registers**. Combined fingerings are a common writing device for plucked instruments, especially the pipa, **but must feel natural and not be pieced together** (Zhu Xiaogu p0067, p0074, p0079, p0081).
 
-### 7.3 拉弦组
+### 7.3 Bowed Group
 
-| 乐器 | 定弦 | 记谱 | 音域与音区 | 关键约束 | 页 |
+| Instrument | Tuning | Notation | Range and register | Key constraints | Page |
 |---|---|---|---|---|---|
-| **二胡** | **纯五度 d¹–a¹**；可移低或移高大二度，也可纯四度 | 实音（个别独奏曲用 sol-re 定弦高八度记谱，需写明） | 正常两个八度，超高音区再延伸五度。**极高音区音量渐小渐细**；合奏中**低音区与中音区是最佳音区** | 常用调 **D、G、C、F、bB**，另 A、E、bE 可用；**无指板**，别的调音准难控，一般靠调高或调低半度弦适应。空弦选调各有风格：D（do-sol 弦）明亮、C（re-la 弦）柔和、bB（mi-si 弦）风格性强、G（sol-re 弦）坚实、F（la-mi 弦）柔和。**a¹ 以上内外弦都能奏，以音色统一与换把方便为准**；**抖弓不能慢于三十二分音符** | 朱晓谷 p0158, p0159, p0160, p0164；杨春林 p0027 |
-| **高胡** | **g¹–d²**（朱晓谷另记有 a¹–e²） | 实音 | 有效音域 **g¹—g³**；g¹—c² 略带鼻音、d²—c³ 优美、d³—g³ 明亮、超高音区 a³ 略尖锐且音量减小 | 常用调 G、bB、C、D、F、bE。乐队里**拉宽拉弦组的高度**，需要强调时高八度重复二胡；**总谱拉弦组排第一行** | 朱晓谷 p0178, p0180；杨春林 p0034, p0035 |
-| **中胡** | **g–d¹** | **中音谱表或高音谱表；杨春林主张中音谱表**（最好的乐队音区正好在中音谱表内，也避免把中胡写太高） | 理论上两个多八度。低音区浑厚**但带鼻音**；**中音区是它最好的音区**；高音区渐干涩 | **从音域上讲它并不是通常意义的中音乐器**；价值在加厚并扩展二胡的音色音域、过渡到弦乐低音。**总谱拉弦组排第三行**，主要担和声 | 朱晓谷 p0182, p0184；杨春林 p0035, p0036 |
-| 低胡（革胡／大提琴） | **C、G、d、a**，发音与记谱同度 | 低音、次中音与高音谱表 | 革胡四弦：**a 明亮、d 厚实饱满、G 柔和、C 低沉圆润** | 革胡有指板；**双音四、五、六度很方便，二度、七度、八度较难，三度不易**；开放三或四和弦及转位都较易 | 朱晓谷 p0197, p0198；杨春林 p0036, p0037 |
-| 倍低胡／低音革胡 | **E、A、d、g**（朱晓谷记低音革胡为 G、D、A₁、E₁） | **低音谱表，记谱比实际发音高八度** | 厚实、余音长；一、二弦扎实，三、四弦柔和 | **记谱不要低于下加一线 E**；**两个降号以下的降号调不可用最低音记谱**；**奏快速乐句没有革胡清晰**；**单音和双音常用，三和弦、七和弦少用** | 朱晓谷 p0199, p0200；杨春林 p0037, p0063, p0352 |
-| **板胡（高音）** | 纯五度；杨春林记为**定弦同二胡 d¹–a¹** | **高音谱表，记谱比实际发音低八度** | 常用两个八度；明亮高亢，**音量是弦乐中最大的** | **它本身是高八度乐器，旋律音区不要太高、音域不要太宽**；**双音只能奏纯五度**（纯四度定弦只能奏纯四度） | 朱晓谷 p0171, p0172, p0175；杨春林 p0038, p0039 |
-| 板胡（中／次中／低音） | 中音纯五度也有纯四度，**g¹–d²** 或 **a¹–e²**；次中音与低音比中音低小三度或纯四度 | 中音实音 | 中音常用两个八度、可再高四五度；浑厚柔和 | g¹–d² 常用调 C、bE、F、G、bB；a¹–e² 常用调 C、bE、F、G、A。**临时改定弦能用的调更多**。郿鄠剧欢音以 mi、la 为主音，苦音以 fa、si 为主音（#fa 偏低、bsi 偏高） | 朱晓谷 p0172, p0173 |
-| 京胡 | 戏曲按腔系定弦（二黄 5-2、反二黄 1-5、西皮 6-3、反西皮 2-6；老生花脸二黄 E 调，旦角小生二黄 A–E 弦、西皮 #C–#G 弦）；**乐团中一般定弦同二胡** | 戏曲中旦角西皮一般低八度记谱；**乐团中高音谱表、记谱比实际发音低八度** | 西皮高亢明亮；二黄圆润清亮，**常用音域以上尖锐紧张** | **定弦是固定的而定调是不同的，上下可移二度**；常用第一把位。**戏曲的强音概念不同于按节拍的强弱**，往往在强音上用推弓 | 朱晓谷 p0186, p0187, p0188；杨春林 p0039 |
-| 坠胡／坠琴／雷琴 | 坠胡四、五度定弦 **a–d¹** 或 **g–d¹**；三弦坠胡空弦 **d–a–d¹** | 坠胡高音谱表实音；**雷琴高八度记谱** | 坠胡常用 **a 到 d³**；三弦坠胡 **d 到 d³** | 常用调 G、F、C、D（吕剧多用 E 调）。**有指板**，与唱腔贴合；**滑指揉弦与长距离大滑音是它最有特点的技法** | 朱晓谷 p0191, p0192, p0193, p0195 |
-| 四胡／大广弦 | 编制外乐器；大广弦定弦同二胡 | 高音谱表，**四胡记谱与实际发音相同** | | | 杨春林 p0039 |
+| **Erhu** | **Perfect fifth d¹–a¹**; can be shifted down or up a major second, or tuned in perfect fourths | As written (a few solo pieces use sol–re tuning an octave higher in notation, which must be specified) | Normally two octaves, extending a fifth higher in the extreme high register. **In the extreme high register volume becomes progressively smaller and thinner**; in ensemble, **the low and middle registers are the best** | Common keys **D, G, C, F, B-flat**, with A, E, and E-flat also used; **no fingerboard**, so pitch is hard to control in other keys, and it is generally adjusted by raising or lowering the string by a semitone. Choice of open-string key has its own style: D (do–sol strings) bright, C (re–la strings) soft, B-flat (mi–si strings) strongly stylised, G (sol–re strings) solid, F (la–mi strings) soft. **Above a¹ the inner and outer strings can both be used; choose according to tonal consistency and ease of position change**; **bow tremolo cannot be slower than thirty-second notes** | Zhu Xiaogu p0158, p0159, p0160, p0164; Yang Chunlin p0027 |
+| **Gaohu** | **g¹–d²** (Zhu Xiaogu also records a¹–e²) | As written | Effective range **g¹–g³**; g¹–c² slightly nasal, d²–c³ beautiful, d³–g³ bright, and the extreme high register a³ slightly sharp with reduced volume | Common keys G, B-flat, C, D, F, and E-flat. In the orchestra it **widens the height of the bowed group**; when emphasis is needed it doubles the erhu an octave higher; **in the score the bowed group is listed in the first line** | Zhu Xiaogu p0178, p0180; Yang Chunlin p0034, p0035 |
+| **Zhonghu** | **g–d¹** | **Middle staff or treble staff; Yang Chunlin advocates the middle staff** (the best orchestral register lies exactly within the middle staff, and it also avoids writing the zhonghu too high) | Theoretically more than two octaves. Low register full **but nasal**; **middle register is its best**; high register increasingly dry | **In terms of range it is not a middle-register instrument in the ordinary sense**; its value lies in thickening and extending the erhu's timbre and range, and in bridging to the low strings. **In the score the bowed group is listed in the third line**, mainly carrying harmony | Zhu Xiaogu p0182, p0184; Yang Chunlin p0035, p0036 |
+| Dihu (gehu / cello) | **C, G, d, a**, with sounding pitch and notation at the same interval | Bass, alto, and treble staves | The four strings of the gehu: **a bright, d full and solid, G soft, C deep and round** | The gehu has a fingerboard; **double stops of fourths, fifths, and sixths are convenient, seconds, sevenths, and octaves harder, thirds not easy**; open triads or sixths and inversions are fairly easy | Zhu Xiaogu p0197, p0198; Yang Chunlin p0036, p0037 |
+| Beidihu / bass gehu | **E, A, d, g** (Zhu Xiaogu records the bass gehu as G, D, A₁, E₁) | **Bass staff; notated an octave higher than the actual sound** | Solid and with long decay; first and second strings firm, third and fourth soft | **Notation should not go below the added first-line E**; **keys with two or more flats cannot be notated on the lowest note**; **fast passages are not as clear as on the gehu**; **single and double notes are common; triads and seventh chords rarely used** | Zhu Xiaogu p0199, p0200; Yang Chunlin p0037, p0063, p0352 |
+| **Banhu (treble)** | Perfect fifth; Yang Chunlin records it as **tuned like the erhu, d¹–a¹** | **Treble staff; notated an octave lower than the actual sound** | Usually two octaves; bright and high-pitched, **the loudest of the bowed instruments** | **It is itself an instrument an octave higher; its melodic range should not be too high and its compass not too wide**; **double stops can only be perfect fifths** (a perfect-fourth tuning allows only perfect fourths) | Zhu Xiaogu p0171, p0172, p0175; Yang Chunlin p0038, p0039 |
+| Banhu (middle / secondary middle / bass) | Middle banhu uses perfect fifths or perfect fourths, **g¹–d²** or **a¹–e²**; the secondary-middle and bass are a minor third or a perfect fourth below the middle | Middle: as written | Middle usually spans two octaves, can extend a fourth or fifth higher; full and mellow | g¹–d² common keys C, E-flat, F, G, B-flat; a¹–e² common keys C, E-flat, F, G, A. **Temporarily changing the tuning allows more keys**. In Meihu opera the joyful (huan) mode is centred on mi and la, and the bitter (ku) mode on fa and si (sharp fa tends low, flat si tends high) | Zhu Xiaogu p0172, p0173 |
+| Jinghu | In opera, tuned by melodic mode (Erhuang 5-2, Fan Erhuang 1-5, Xipi 6-3, Fan Xipi 2-6; for lao sheng and painted-face roles, Erhuang in E; for dan and xiaosheng, Erhuang on A–E strings, Xipi on #C–#G strings); **in ensembles usually tuned like the erhu** | In opera, dan Xipi is usually notated an octave lower; **in the ensemble, treble staff, notated an octave lower than the actual sound** | Xipi is high-pitched and bright; Erhuang is round and clear, and **above the normal range it becomes sharp and tense** | **The tuning is fixed but the key varies, and it can be shifted up or down a second**; first position commonly used. **The concept of a loud note in opera differs from metrical strong beats**, and a push bow is often used on loud notes | Zhu Xiaogu p0186, p0187, p0188; Yang Chunlin p0039 |
+| Zhuihu / zhuiqin / leiqin | Zhuihu tuned in fourths and fifths, **a–d¹** or **g–d¹**; sanxian zhuihu open strings **d–a–d¹** | Zhuihu, treble staff, as written; **leiqin notated an octave higher** | Zhuihu commonly **a to d³**; sanxian zhuihu **d to d³** | Common keys G, F, C, D (Lü opera mostly uses E). **Has a fingerboard**, fits the vocal melody; **sliding finger vibrato and long-distance glissandi are its most distinctive techniques** | Zhu Xiaogu p0191, p0192, p0193, p0195 |
+| Sihu / daguangxian | Outside the standard lineup; daguangxian tuned like the erhu | Treble staff, **sihu notated the same as its actual sound** | | | Yang Chunlin p0039 |
 
-### 7.4 打击组
+### 7.4 Percussion Group
 
-分四类：**皮革**（大鼓、定音鼓、排鼓、板鼓、腰鼓等）、**竹木**（梆子、拍板、木鱼）、**金属**（锣、钹、钟、方响、铃）、**石**（磬）（朱晓谷 p0203）。
+Divided into four classes: **skin** (large drum, timpani, drum kit, banjiao drum, yao drum, etc.), **wood and bamboo** (bangzi clappers, paiban clapper boards, wooden fish), **metal** (gong, cymbal, bell, fangxiang, bells), and **stone** (qing chime) (Zhu Xiaogu p0203).
 
-| 乐器 | 音高与记谱 | 关键约束 | 页 |
+| Instrument | Pitch and notation | Key constraints | Page |
 |---|---|---|---|
-| 大鼓／花盆鼓 | 无固定音高，**打击乐里的低音**；常用十八到二十寸 | 击鼓心 D（宏亮）、击鼓边 T（撕裂感）、击鼓框 X（木声）、击鼓钉 G（刮奏）、互击槌 q；另有闷击、压奏、摇奏、滚奏（可鼓心↔鼓边） | 朱晓谷 p0204, p0205, p0206, p0207 |
-| 定音鼓 | **高八度记谱**；**整个乐队的最低音**；一般三至四个 | **换音要给足时间**；定音多用主音、属音、下属音、上主音、下中音 | 朱晓谷 p0208, p0209 |
-| 排鼓 | **可定音**，二至七个一组；**三种记谱**：高音谱号实音／相对音高（五线每条一鼓）／数字。**上下鼓面的定音多为四、五度关系** | **换音慢，定了一般不再改**；音准不稳定，**多是用它的音色**；不能击鼓框；写快速换鼓要考虑手的顺序是否顺手 | 朱晓谷 p0210, p0211 |
-| 板鼓／拍板 | 无固定音高，**鼓类的高音乐器** | 平击强大／点击轻盈；小鼓膛用于戏曲（清脆），大鼓膛用于民间音乐（余音短）。**戏曲中是领奏乐器，起指挥乐队的作用** | 朱晓谷 p0212, p0213 |
-| 木鱼／梆子／竹板 | 竹木类**高音**；编木鱼是**准音高乐器** | 木鱼可单击、双击、滚奏，音量不大；北梆子两棒互击、用在重拍；南梆子中空柔和 | 朱晓谷 p0214, p0215 |
-| 大锣／低锣／片锣 | 无固定音高，**打击乐的低音**；最大的低锣直径 1.42 米 | **锣面大，发音反应较慢，余音很长**——进入点要提前算；可用锣槌止音；片锣无卷边，音色开旷 | 朱晓谷 p0217 |
-| 京锣／小锣／包锣 | 无固定音高；京锣与小锣是**高音**，京锣音高由锣门大小决定 | 小锣用木片敲击发"台"声、带上滑音，可闷击；包锣柔美、余音较长 | 朱晓谷 p0217, p0218, p0219 |
-| 十面锣 | **准音高**；**三种记谱**：锣鼓经／具体音高（一种排法是 D 调七声音阶）／数字或一行谱（最大的是第十面） | **十面锣是气氛，很难和乐队的调同步**——这是第三种记谱最常用的原因 | 朱晓谷 p0219, p0220 |
-| 云锣 | **固定音高**；民间一般不超过 15 面，乐队用的有 26 面或更多 | **一般用中低音**：低音较暗、中音明亮、高音亮而尖（硬槌），软槌柔和；**每手执两槌可同击四个音**；换调时可临时更换个别锣 | 朱晓谷 p0221, p0222 |
-| 磬／编磬 | 石类；编磬成组，**可奏旋律** | 磬丰满飘逸；编磬**余音短、音量轻、音色较干、有庄重感** | 朱晓谷 p0222, p0223 |
-| 钹类／碰铃 | 无固定音高；小钹（小镲）是钹中的高音，大钹（大镲）是低音；碰铃是钹类高音 | 平击、闷击、槌击（鼓杆击钹边，轻击空旷、重击如霹雳）、磨击、边击（似钹的泛音）、交击（**速度不宜快**）、滚击、擦击（革胡弓擦钹边）、移击 | 朱晓谷 p0223, p0224, p0225, p0226 |
+| Large drum / flowerpot drum | No fixed pitch, **the bass of percussion**; commonly 18 to 20 inches | Strike the drum centre D (resonant), the rim T (tearing sound), the frame X (wooden sound), the drum nails G (scraping), the paired mallets q; there are also muted strokes, pressed strokes, rocking, and rolling (which can move between centre and rim) | Zhu Xiaogu p0204, p0205, p0206, p0207 |
+| Timpani | **Notated an octave higher**; **the lowest note of the whole orchestra**; generally three to four | **Give ample time for pitch changes**; the tuning mostly uses tonic, dominant, subdominant, upper tonic, and lower mediant | Zhu Xiaogu p0208, p0209 |
+| Drum set (paigu) | **Tunable**, in groups of two to seven; **three notations**: treble clef as written / relative pitch (one drum per line of the staff) / numbers. **The tunings of the upper and lower drumheads are usually a fourth or fifth apart** | **Slow to change, and once tuned generally not changed again**; pitch unstable, **so it is mostly used for its timbre**; the frame cannot be struck; when writing fast drum changes, consider whether the hand order is convenient | Zhu Xiaogu p0210, p0211 |
+| Banhu drum / clapper boards (bangu / paiban) | No fixed pitch, **the high-pitched instrument of the drum class** | Flat-strike for power, point-strike for lightness; small drum shell for opera (crisp), large drum shell for folk music (short decay). **In opera it is the leading instrument and directs the orchestra** | Zhu Xiaogu p0212, p0213 |
+| Wooden fish / bangzi / bamboo clappers | Wood-and-bamboo **high** instruments; a set of wooden fish is a **pitched instrument** | The wooden fish can be struck singly, doubly, or rolled, with modest volume; the northern bangzi strikes two sticks together and is used on strong beats; the southern bangzi is hollow and soft | Zhu Xiaogu p0214, p0215 |
+| Large gong / low gong / piece gong | No fixed pitch, **the bass of percussion**; the largest low gong is 1.42 metres in diameter | **Large gong face, slow response, very long decay**: calculate entry points in advance; the mallet can stop the sound; the piece gong has no rolled edge and an open timbre | Zhu Xiaogu p0217 |
+| Jing gong / small gong / bao gong | No fixed pitch; the jing gong and small gong are **high**, and the jing gong's pitch is set by the size of its boss | The small gong is struck with a wooden strip to produce a "tai" sound, with upward glissando, and can be muted; the bao gong is soft and sweet with long decay | Zhu Xiaogu p0217, p0218, p0219 |
+| Shimian luo (ten-gong set) | **Approximate pitch**; **three notations**: gong-drum pattern / specific pitches (one arrangement is the seven-note scale in D) / numbers or a single line (the largest is the tenth gong) | **The ten-gong set provides atmosphere and is very hard to synchronise with the orchestra's key**, which is why the third notation is the most often used | Zhu Xiaogu p0219, p0220 |
+| Yunluo (cloud gongs) | **Fixed pitch**; folk use usually no more than 15 gongs; ensemble sets have 26 or more | **Generally used in the middle to low range**: low notes darker, middle notes bright, high notes bright and sharp (hard mallets), soft mallets give a gentler sound; **each hand holding two mallets can strike four notes at once**; individual gongs can be swapped temporarily when changing key | Zhu Xiaogu p0221, p0222 |
+| Qing / bianqing (chime stones) | Stone class; bianqing come in sets and **can play melody** | The qing is full and graceful; the bianqing has **short decay, light volume, a rather dry timbre, and a sense of solemnity** | Zhu Xiaogu p0222, p0223 |
+| Cymbals / pengling | No fixed pitch; the small cymbal (xiaobo) is the high cymbal, the large cymbal (dabo) the low; the pengling is a high cymbal-type instrument | Flat strike, muted strike, mallet strike (drumstick on the cymbal edge: a light strike sounds open, a heavy strike like a thunderclap), grinding strike, edge strike (sounds like the overtones of a cymbal), crossed strike (**tempo should not be fast**), rolling strike, friction strike (a huqin bow rubbing the cymbal edge), and shifting strike | Zhu Xiaogu p0223, p0224, p0225, p0226 |
 
-**锣鼓经代音字**：大锣 仓／匡（K）、顷（Q，弱）；小锣 台（t）、另（l，弱）、匝（z，闷）；钹 七／才（C）、扑（P，闷）；板 扎／衣（j）；鼓 搭（d，单签）、崩／八（B，双签同时）、八搭（双签先后）、嘟儿（签轮奏，长者"撕边"、短者"攒儿"）、隆冬（单签轻打两击）、哆罗（单签小滚奏）；乙（休止，也作切分用）（朱晓谷 p0213, p0218）。
+**Syllables for gong-drum patterns**: large gong *cang*/*kuang* (K), *qing* (Q, soft); small gong *tai* (t), *ling* (l, soft), *za* (z, muted); cymbal *qi*/*cai* (C), *pu* (P, muted); banhu clapper *zha*/*yi* (j); drum *da* (d, single stick), *beng*/*ba* (B, two sticks together), *ba da* (two sticks in succession), *dur dur* (stick roll, long strokes "tearing the edge," short strokes "gathering"), *long dong* (two light single-stick strikes), *duo luo* (single-stick small roll); *yi* (rest, also used for syncopation) (Zhu Xiaogu p0213, p0218).
 
-### 7.5 少数民族乐器的记谱惯例
+### 7.5 Notation Conventions for Ethnic Minority Instruments
 
-用在民族管弦乐里时，**记谱方式必须照原书标注**，不能想当然按实音写（朱晓谷 p0227, p0230, p0232）：
+When used in Chinese folk orchestral works, **the notation must follow what the source books mark**; do not assume the sounding pitch and write it as written (Zhu Xiaogu p0227, p0230, p0232):
 
-- **低八度**：侗笛。**高八度**：热瓦普、火不思。
-- **实音**：芒筒、咧咧、伽倻琴、冬不拉、扎木聂、独弦琴、四胡、马头琴、马骨胡、艾捷克、独它尔、奚琴。
-- 羌笛、筚篥、口簧、吐良、苏奈尔、根卡、藏京胡、铁琴、弦子原书只给图示音域；少数民族打击乐只列名称与所属民族。
-- 同一种乐器可能有高、中、低不同规格，上列只是常用的那件。
+- **An octave lower**: dong flute. **An octave higher**: rewapu, huobuhu.
+- **As written (sounding pitch)**: mangtong, lielie, gayageum, dombra, zhamnye, duxianqin, sihu, morin khuur, mage hu, aijike, dutar, xiqin.
+- The qiangdi, bili, mouth reed (kouhuang), tuliang, sunay, genka, zang jinghu, tieqin, and xianzi: the source books give only diagrams of their ranges; minority percussion is listed by name and ethnic group only.
+- The same instrument may come in high, middle, or low sizes; the list above gives only the commonly used one.
 
 ---
 
-## 8. 民族管弦乐总谱写法
+## 8. Chinese Folk Orchestra Score Writing
 
-### 8.1 总谱乐器排列顺序
+### 8.1 Order of Instruments in the Score
 
-**排列格式**：吹管组 → 弹拨组 → 打击组 → 拉弦组，自上而下（杨春林 p0302）。
+**Layout format**: wind group → plucked group → percussion group → bowed group, from top to bottom (Yang Chunlin p0302).
 
-**总谱模板（自上而下）**（杨春林 p0475）：
-- **吹管**：梆笛、曲笛、新笛、高音笙、中音笙、低音笙、高音唢呐、中音唢呐、次中音唢呐、低音唢呐
-- **弹拨**：柳琴、琵琶、扬琴（大谱表）、中阮、大阮、古筝（大谱表）
-- **打击**：定音鼓、云锣、编钟、中国大鼓、排鼓、小军鼓、镲、铃鼓、木鱼
-- **拉弦**：高胡、二胡、中胡、低胡、倍低胡
+**Score template (top to bottom)** (Yang Chunlin p0475):
+- **Winds**: bandi, qudi, new flute, high sheng, middle sheng, low sheng, high suona, middle suona, secondary-middle suona, low suona
+- **Plucked**: liuqin, pipa, yangqin (grand staff), zhongruan, daruan, guzheng (grand staff)
+- **Percussion**: timpani, yunluo, bianzhong, Chinese bass drum, drum set, small snare drum, cymbals, tambourine, wooden fish
+- **Bowed**: gaohu, erhu, zhonghu, dihu, beidihu
 
-组内细则：**高胡在拉弦组排第一行、中胡排第三行**（杨春林 p0034, p0035）。
+Within the group: **the gaohu is in the first line of the bowed group and the zhonghu in the third line** (Yang Chunlin p0034, p0035).
 
-**另一种代表性顺序**：《丰收锣鼓》总谱共二十四行分谱，"其声部排列顺序具有代表性，是我国出版的民乐总谱中最常见的"——吹管（短膜笛、长膜笛、中音笙、唢呐、中音唢呐）／弹拨（扬琴、琵琶、中阮、三弦、大阮）／打击（水镲、顶钹、大锣、风锣、十面锣、排鼓、云锣、定音鼓）／拉弦（板胡、高胡、二胡、中胡、大提琴、低音提琴）（李民雄 p0151, p0156）。**两种都把打击放在弹拨与拉弦之间；照要交付的乐团习惯选一种，全曲不要中途改。**
+**Another representative order**: the score of *Bumper Harvest Gong and Drum* has twenty-four lines of parts, and its voice order "is representative, the most common in Chinese published folk-orchestra scores": winds (short membrane flute, long membrane flute, middle sheng, suona, middle suona) / plucked (yangqin, pipa, zhongruan, sanxian, daruan) / percussion (shui cha, ding bo, large gong, feng gong, shimian luo, drum set, yunluo, timpani) / bowed (banhu, gaohu, erhu, zhonghu, cello, double bass) (Li Minxiong p0151, p0156). **Both put percussion between the plucked and bowed groups; choose the one the receiving orchestra is used to, and do not switch midway through a piece.**
 
-**打击乐组占多少行**：西方总谱中打击乐一般不超过四种；**中国打击乐组可多达七八行、十几种乐器甚至更多**（杨春林 p0288）。
+**How many lines percussion takes**: in Western scores percussion usually has no more than four instruments; **the Chinese percussion group can run to seven or eight lines, more than ten instruments, or even more** (Yang Chunlin p0288).
 
-**唢呐组的三种记谱格式**（杨春林 p0144, p0145）：① 四行谱，高／中／次中／低各一行；② 三行谱，高音一行、中音一行、次中音与低音合一行；③ 二行谱，高音与中音合一行、次中音与低音合一行。
+**Three notation formats for the suona section** (Yang Chunlin p0144, p0145): ① four-line score, with one line each for high, middle, secondary-middle, and low; ② three-line score, with one line for high, one for middle, and secondary-middle and low combined; ③ two-line score, with high and middle combined in one line and secondary-middle and low combined in another.
 
-### 8.2 编制：先定人数再定平衡
+### 8.2 Lineup: Set the Head Count First, Then Balance
 
-`SKILL.md` §4 说平衡要按**人数**算——民乐队的人数在这里（杨春林 p0473, p0474）。
-读法：**笛 梆/曲/新｜笙 高/中/低｜唢呐 高/中/次中/低｜弹拨 柳/琵/扬/筝/箜｜阮 中/大｜胡 高/二/中/低/倍低｜打击**。
+`SKILL.md` §4 says balance should be calculated by **head count**; the head counts for the Chinese folk orchestra are here (Yang Chunlin p0473, p0474).
 
-| 规模 | 笛 | 笙 | 唢呐 | 弹拨 | 阮 | 胡 | 打击 |
+Reading key: **flutes banbu/qu/xin | sheng high/middle/low | suona high/middle/secondary-middle/low | plucked liu/pi/yang/zheng/konghou | ruan middle/large | hu high/second/middle/low/beidi | percussion**.
+
+| Scale | Flute | Sheng | Suona | Plucked | Ruan | Hu | Percussion |
 |---|---|---|---|---|---|---|---|
-| 特大型 90 人 | 2/2/2 | 2/2/1 | 2/2/1/1＋低音管1 | 4/4/2/1/1 | 6/2 | 10/12/8/8/6 | 8 |
-| 大型 70 人 | 2/2/1 | 2/2/1 | 2/1/1/1 | 2/4/2/1/1 | 6/2 | 8/10/4/6/4 | 5 |
-| 中型一 55 人 | 1/2/— | 2/1/— | 2/1/—/— | 2/4/1/1/— | 4/2 | 6/10/6/4/2 | 4 |
-| 中型二 45 人 | 1/1/1 | 1/1/— | 2/1/—/— | 1/2/1/1/— | 4/2 | 4/8/4/4/2 | 4 |
-| 小型一 35 人 | 1/1/— | 1/1/— | 1/1/—/— | 1/2/1/1/— | 2/1 | 2/6/2/4/2 | 5 |
-| 小型二 25 人 | 1/1/— | 1/1/— | 1/—/—/— | —/2/1/1/— | 2/1 | 2/4/2/2/1 | 2 |
-| 小型三 15–16 人 | 1/—/— | 1/—/— | 1/—/—/— | —/1/1/1/— | 2/— | 1/2/1/1/1 | 1–2 |
-| 丝竹 10–12 人 | 1/—/— | 1/—/— | — | —/1/1/1/— | 1/— | —/2/1/(1)/(1) | 1 |
+| Very large, 90 players | 2/2/2 | 2/2/1 | 2/2/1/1 + 1 low suona pipe | 4/4/2/1/1 | 6/2 | 10/12/8/8/6 | 8 |
+| Large, 70 players | 2/2/1 | 2/2/1 | 2/1/1/1 | 2/4/2/1/1 | 6/2 | 8/10/4/6/4 | 5 |
+| Medium I, 55 players | 1/2/— | 2/1/— | 2/1/—/— | 2/4/1/1/— | 4/2 | 6/10/6/4/2 | 4 |
+| Medium II, 45 players | 1/1/1 | 1/1/— | 2/1/—/— | 1/2/1/1/— | 4/2 | 4/8/4/4/2 | 4 |
+| Small I, 35 players | 1/1/— | 1/1/— | 1/1/—/— | 1/2/1/1/— | 2/1 | 2/6/2/4/2 | 5 |
+| Small II, 25 players | 1/1/— | 1/1/— | 1/—/—/— | —/2/1/1/— | 2/1 | 2/4/2/2/1 | 2 |
+| Small III, 15–16 players | 1/—/— | 1/—/— | 1/—/—/— | —/1/1/1/— | 2/— | 1/2/1/1/1 | 1–2 |
+| Silk-and-bamboo, 10–12 players | 1/—/— | 1/—/— | — | —/1/1/1/— | 1/— | —/2/1/(1)/(1) | 1 |
 
-**注意**：原编制表把阮列在拉弦一栏，与 §8.1 的总谱顺序（阮属弹拨组）不一致——**人数照这里，排位照 §8.1**。**人数比直接决定和声平衡**：二胡与中胡是 **10 比 4**，同一和弦奏出来才丰满融合（李民雄 p0101）。
+**Note**: the source lineup table lists the ruan in the bowed-group column, which is inconsistent with the score order in §8.1 (the ruan belongs to the plucked group) — **take the head counts from here, and the seating from §8.1**. **The head counts directly determine harmonic balance**: the erhu and zhonghu are **10 to 4**, so the same chord sounds full and fused only when played that way (Li Minxiong p0101).
 
-### 8.3 八度记谱与调性乐器：最容易出错的一张表
+### 8.3 Octave Notation and Transposing Instruments: The Table Most Prone to Error
 
-**"记谱"与"实际发音"不一致的乐器全部在这里。配器按实际音高想，落纸按记谱写。**
+**Every instrument whose notation differs from its actual sounding pitch is listed here. Arrange by the actual sounding pitch; write on paper as notated.**
 
-| 乐器 | 记谱与实际音高 | 谱表 | 来源 |
+| Instrument | Notation vs. actual pitch | Staff | Source |
 |---|---|---|---|
-| 梆笛、曲笛（贴膜笛） | **记谱比发音低八度** | 高音谱表 | 杨春林 p0136, p0137；朱晓谷 p0011 |
-| 小 c 调梆笛 | **记谱低两个八度**（比大 C 调笛高一个八度） | 高音谱表 | 杨春林 p0135, p0137 |
-| 新笛、箫、埙、巴乌、葫芦丝、南管 | **同度** | 高音谱表 | 杨春林 p0138；朱晓谷 p0029, p0032, p0033 |
-| 口笛 | **记谱低两个八度** | 高音谱表 | 朱晓谷 p0031 |
-| 排箫 | **记谱高八度** | 高音谱表 | 朱晓谷 p0034 |
-| 高音／中音／低音三十六簧笙 | **同度** | 高音／**中音**／低音谱表 | 杨春林 p0139, p0140 |
-| 高音唢呐 | **记谱比实际音高低八度**（朱晓谷记传统唢呐有实音与低八度两种记谱，**须写明**） | 高音谱表 | 杨春林 p0142；朱晓谷 p0036 |
-| 中音加键唢呐 | **同度** | 高音谱表 | 杨春林 p0142 |
-| 次中音、低音加键唢呐 | **同度** | 低音谱表 | 杨春林 p0143 |
-| 海笛 | **记谱低八度** | 高音谱表 | 朱晓谷 p0039 |
-| 柳琴、琵琶、扬琴、大阮、古筝、三弦、古琴、箜篌 | **同度** | 柳琴高音谱表；琵琶、扬琴、古筝、箜篌大谱表；大阮、三弦、古琴低音谱表 | 杨春林 p0073, p0075, p0079, p0087, p0089, p0094, p0095, p0096 |
-| **中阮** | **两种并存**：实音（中音／低音谱表、大谱表）或**高八度记谱**——**必须写明** | 杨春林主张中音谱表 | 杨春林 p0087；朱晓谷 p0100 |
-| 二胡、高胡、中胡、低胡（革胡） | **同度** | 二胡高胡高音谱表；中胡中音谱表（也有用高音谱表）；低胡低音／次中音／高音谱表 | 杨春林 p0027, p0034, p0035, p0036, p0037 |
-| **倍低胡／低音革胡** | **记谱比实际发音高八度** | 低音谱表 | 杨春林 p0037, p0352；朱晓谷 p0199 |
-| **高音板胡、京胡（乐团用）** | **记谱比实际发音低八度** | 高音谱表 | 杨春林 p0038, p0039 |
-| 中音板胡、四胡、大广弦、坠胡 | **同度** | 高音谱表 | 朱晓谷 p0172, p0192；杨春林 p0039 |
-| 雷琴 | **记谱高八度** | | 朱晓谷 p0195 |
-| **定音鼓** | **记谱高八度** | | 朱晓谷 p0209 |
-| 排鼓 | 实音记谱／相对音高／数字，三者并存 | | 朱晓谷 p0210 |
+| Bangdi, qudi (membrane flutes) | **Notated an octave lower than sounding** | Treble staff | Yang Chunlin p0136, p0137; Zhu Xiaogu p0011 |
+| C-minor bangdi | **Notated two octaves lower** (one octave higher than the big C-key flute) | Treble staff | Yang Chunlin p0135, p0137 |
+| New flute, xiao, xun, bawu, hulusi, nanguan | **As written (same pitch)** | Treble staff | Yang Chunlin p0138; Zhu Xiaogu p0029, p0032, p0033 |
+| Mouth whistle | **Notated two octaves lower** | Treble staff | Zhu Xiaogu p0031 |
+| Panpipes | **Notated an octave higher** | Treble staff | Zhu Xiaogu p0034 |
+| High, middle, and low 36-reed sheng | **As written (same pitch)** | Treble / **middle** / bass staff | Yang Chunlin p0139, p0140 |
+| High suona | **Notated an octave lower than the actual pitch** (Zhu Xiaogu records that the traditional suona has both as-written and octave-lower notation, **which must be specified**) | Treble staff | Yang Chunlin p0142; Zhu Xiaogu p0036 |
+| Middle keyed suona | **As written (same pitch)** | Treble staff | Yang Chunlin p0142 |
+| Secondary-middle and bass keyed suona | **As written (same pitch)** | Bass staff | Yang Chunlin p0143 |
+| Haidi | **Notated an octave lower** | Treble staff | Zhu Xiaogu p0039 |
+| Liuqin, pipa, yangqin, daruan, guzheng, sanxian, guqin, konghou | **As written (same pitch)** | Liuqin treble staff; pipa, yangqin, guzheng, konghou grand staff; daruan, sanxian, guqin bass staff | Yang Chunlin p0073, p0075, p0079, p0087, p0089, p0094, p0095, p0096 |
+| **Zhongruan** | **Two notations coexist**: as written (middle or bass staff, or grand staff) or **notated an octave higher**, **which must be specified** | Yang Chunlin advocates the middle staff | Yang Chunlin p0087; Zhu Xiaogu p0100 |
+| Erhu, gaohu, zhonghu, dihu (gehu) | **As written (same pitch)** | Erhu and gaohu treble staff; zhonghu middle staff (treble staff also used); dihu bass / secondary-middle / treble staff | Yang Chunlin p0027, p0034, p0035, p0036, p0037 |
+| **Beidihu / bass gehu** | **Notated an octave higher than the actual sounding pitch** | Bass staff | Yang Chunlin p0037, p0352; Zhu Xiaogu p0199 |
+| **Treble banhu, jinghu (ensemble use)** | **Notated an octave lower than the actual sounding pitch** | Treble staff | Yang Chunlin p0038, p0039 |
+| Middle banhu, sihu, daguangxian, zhuihu | **As written (same pitch)** | Treble staff | Zhu Xiaogu p0172, p0192; Yang Chunlin p0039 |
+| Leiqin | **Notated an octave higher** | | Zhu Xiaogu p0195 |
+| **Timpani** | **Notated an octave higher** | | Zhu Xiaogu p0209 |
+| Drum set (paigu) | Three coexisting notations: as written / relative pitch / numbers | | Zhu Xiaogu p0210 |
 
-**由这张表派生的两条硬边界**：**除非特殊情况，梆笛最高音不要超过记谱的 e³**（G 调梆笛的最高音就是上加三线 E）；**两个降号以下的降号调，倍低胡不可以用最低音记谱**，且记谱不要低于下加一线 E（杨春林 p0063, p0136, p0352）。
+**Two hard limits derived from this table**: **unless in special circumstances, the highest note of the bangdi should not exceed the notated e³** (the highest note of a G-key bangdi is the added third-line E); **in keys with two or more flats, the beidihu cannot be notated on its lowest note**, and the notation should not go below the added first-line E (Yang Chunlin p0063, p0136, p0352).
 
-**杨春林明确给出的常用音域**（均为记谱音）：G 调梆笛 d¹—e³、F 调梆笛 c¹—d³、小 c 调梆笛 g¹—a³、D 调曲笛 A—b²、中音三十六簧笙 c—b²、低音三十六簧笙 C₁—b¹、D 调高音唢呐 a¹—b³（另记传统 D 调高音唢呐常用十七度、a¹—e³）、C 调高音唢呐 g¹—a³、高胡 g¹—g³（杨春林 p0034, p0136, p0137, p0140, p0141, p0142）。中音／次中音加键唢呐常用两个八度加小三度，**但两个八度之内最容易演奏、音色最好**（杨春林 p0142, p0143）。
+**Practical ranges explicitly given by Yang Chunlin** (all in notated pitch): G-key bangdi d¹–e³, F-key bangdi c¹–d³, C-minor bangdi g¹–a³, D-key qudi A–b², middle 36-reed sheng c–b², low 36-reed sheng C₁–b¹, D-key high suona a¹–b³ (the traditional D-key high suona is also commonly given as a seventeenth, a¹–e³), C-key high suona g¹–a³, gaohu g¹–g³ (Yang Chunlin p0034, p0136, p0137, p0140, p0141, p0142). The middle and secondary-middle keyed suona commonly span two octaves plus a minor third, **but within two octaves they are easiest to play and have the best timbre** (Yang Chunlin p0142, p0143).
 
-**调性乐器的选择规则**：
-- 一根笛子可演奏五个调——本调、下五度调、上五度调、下二度调、上小三度调；合奏中主要用前三种指法。乐团常备 D、C、E、F、G、A 调笛，降号多时加 bE 调；**E 调与 bE 调笛子既不算梆笛也不算曲笛，称中笛**（杨春林 p0135, p0137）。
-- **升号超过三个以上，或最高音区达到记谱的升 F，则需要用 A 调梆笛**；三个降号以上的旋律需要 bE 或 bA 调独奏（杨春林 p0137）。
-- **旋律调性是 G 或 C 且出现下加二线 G 音时，必须选 C 调曲笛**，不能用最常用的 D 调曲笛（杨春林 p0138）。
-- **定调要先想二胡**：综合乐队里二胡是最重要的旋律乐器，定调时要看这个调下二胡是哪两根弦、够不够亮、会不会逼得旋律翻八度（李民雄 p0010, p0011, p0075）。
+**Rules for choosing the key of an instrument**:
+- One flute can play five keys: its own key, the key a perfect fifth below, the key a perfect fifth above, the key a major second below, and the key a minor third above; in ensemble, the first three fingerings are mainly used. The orchestra normally keeps flutes in D, C, E, F, G, and A, adding a B-flat flute when there are many flats; **E-key and B-flat flutes count neither as bangdi nor as qudi, and are called zhongdi (middle flutes)** (Yang Chunlin p0135, p0137).
+- **When there are more than three sharps, or the highest register reaches notated F-sharp, an A-key bangdi is needed**; melodies with more than three flats require a solo in B-flat or A-flat (Yang Chunlin p0137).
+- **When the melody is in G or C and includes the G below the added second line, a C-key qudi must be chosen**, not the most common D-key qudi (Yang Chunlin p0138).
+- **Choose the key with the erhu in mind**: in the comprehensive orchestra the erhu is the most important melodic instrument; when settling the key, check which two strings the erhu uses in that key, whether it sounds bright enough, and whether it forces the melody to jump an octave (Li Minxiong p0010, p0011, p0075).
 
-**最常用总音区**：七个音组六个八度，最低音 E 由倍低胡决定，最高音 g³ 由 G 调梆笛决定（杨春林 p0351）。
+**Most commonly used overall range**: six octaves across seven octave groups; the lowest note E is set by the beidihu, and the highest note g³ by the G-key bangdi (Yang Chunlin p0351).
 
-### 8.4 分部与演奏标记
+### 8.4 Divisi and Performance Markings
 
-| 组 | 规则 | 来源 |
+| Group | Rule | Source |
 |---|---|---|
-| **吹管** | 两支同类共奏一个旋律标 **a²**，第一声部单独奏标 **I**，第二声部标 **II**；另一种写法是第一声部符杆永远向上、第二声部向下，合奏时才标 a²。唢呐分部同笛子。**单数配置时仍按两个声部处理**，需要一支演奏时用 **solo** | 杨春林 p0347, p0348 |
-| **a¹ 的坑** | 有作曲家用 a¹ 表示一支演奏——**但这样无法指明由谁来奏**；默认是一声部演奏员，可有时需要第二声部来奏就标不出来，标 a² 又会被误会成两个人 | 杨春林 p0347 |
-| **笙** | 本身是多音乐器，**一般不分部、不予标记**；一支独奏标 **solo**，再次齐奏标 **tutti** | 杨春林 p0348 |
-| **弹拨** | 都能奏双音，**一般不标分奏**。只有一件乐器时双音必须由它独立完成；除扬琴外有两件乐器时双音大多分部演奏，不需要分部处单独标 **unis.**。**扬琴的双音一般不要分奏**；其他弹拨奏三音或四音的琶音、强和弦时不要分奏 | 杨春林 p0348 |
-| **拉弦** | 高胡、二胡、中胡**只能奏一个音**，声部里出现两个以上的音**必须 div.**，恢复合奏用 **unis.**。独奏 **solo**（一人）、**soli**（二至三人），再齐奏 **tutti**。**低胡的双音必须标 div. 或 non div.**；低胡奏三音或四音的琶音、强和弦时一般不分奏。**倍低胡一般不奏双音** | 杨春林 p0348, p0349 |
-| **成对原则** | **div. 之后必有 unis.；solo／soli 之后必有 tutti。** 只写前一半就是错 | 杨春林 p0348 |
+| **Winds** | Two instruments of the same type playing one melody are marked **a²**; the first part played alone is marked **I**, the second part **II**; another method is for first-part stems always to point up and second-part stems always down, marking a² only in ensemble. Suona divisi is the same as flute. **Odd-numbered configurations are still treated as two parts**; when one player is needed, mark **solo** | Yang Chunlin p0347, p0348 |
+| **The a¹ pitfall** | Some composers use a¹ to mean one player, **but this cannot specify who plays it**; the default is a first-part player, and sometimes a second-part player is needed, which a¹ cannot indicate, while a² can be misread as two people | Yang Chunlin p0347 |
+| **Sheng** | Itself a multi-note instrument, **generally not divided or marked**; one solo marked **solo**, and again in unison marked **tutti** | Yang Chunlin p0348 |
+| **Plucked** | All can play double notes, **generally not marked divisi**. Only when there is one instrument must double notes be played by it alone; apart from the yangqin, when there are two instruments double notes are mostly divided, and where no division is needed it is marked **unis.** separately. **Yangqin double notes generally should not be divided**; other plucked instruments playing three- or four-note arpeggios or strong chords should not be divided | Yang Chunlin p0348 |
+| **Bowed** | Gaohu, erhu, and zhonghu **can play only one note at a time**; where a part shows more than one note, **div.** is required, and **unis.** restores unison. Solo **solo** (one player), **soli** (two to three players), then unison **tutti**. **Double notes for dihu must be marked div. or non div.**; for three- or four-note arpeggios or strong chords on the dihu, generally do not divide. **The beidihu generally does not play double notes** | Yang Chunlin p0348, p0349 |
+| **Pairing principle** | **div. must always be followed by unis.; solo/soli must always be followed by tutti.** Writing only the first half is an error | Yang Chunlin p0348 |
 
-**哪些技法要标、哪些不用标**（杨春林 p0460, p0462）：
-- **附带性修饰**（拉弦的揉弦与指法、弹拨的弹轮、吹管的点与线）属演奏者自由处理，可不标——但**同一声部必须统一**：奏和声长音时拉弦尽量不揉弦、弹拨统一弹轮、管乐气口统一。
-- **对基础音做外延化处理的风格性技法**（拉弦的滑音、抹音、颤音、打音；弹拨的扫、推、拉、挽、摘；吹管的吐、呼、花舌、历音、打音）**必须在谱上标记**，并由作曲者、配器者规定好。
+**Which techniques must be marked and which need not be** (Yang Chunlin p0460, p0462):
+- **Incidental ornamentation** (bowed vibrato and fingering, plucking with roll, the dot and line of winds) is left to the performer's discretion and may be unmarked, but **it must be uniform within a part**: when playing a harmonic sustained note, bowed instruments should avoid vibrato where possible, plucked instruments should all use roll, and wind breath points should be uniform.
+- **Stylistic techniques that extend the basic note** (bowed glissando, slide, trill, and tapping; plucked strumming, pushing, pulling, pulling-back, and picking; wind tonguing, breathing, flutter-tonguing, calling, and tapping) **must be marked in the score**, and set by the composer or orchestrator.
 
-#### 8.4.1 拉弦组分部的三类（杨春林 p0050–0054）
+#### 8.4.1 Three Types of Divisi in the Bowed Group (Yang Chunlin p0050–0054)
 
-民族拉弦乐器一般不能奏双音，最多五度平行双音，所以**要分部就必须每种乐器奏不同的音**；低胡与倍低胡例外，能奏双音到四音和弦（p0051）。标记 div.／分奏，恢复用 unis.／齐奏（p0051）。
+Ethnic bowed instruments generally cannot play double notes, at most parallel fifths, so **to divide, each instrument must play a different note**; the low erhu and beidihu are the exception, able to play double stops to four-note chords (p0051). Mark divisi / divided with div., and restoration with unis. / unison (p0051).
 
-| 类 | 做法 | 用途与限制 |
+| Type | Method | Use and limits |
 |---|---|---|
-| **和声式分部** | 同一组分出两到四个和声声部 | 让和声分布更均匀、音响更平衡、色彩更丰富；**多于五个声部不太好**；要"音块"时可以一人一音（p0050） |
-| **附着式分部** | 同一组分出两到四个旋律声部，依附式结构：**下方声部节奏与旋律完全相同、音不同，同时形成和声**（p0052–0053） | 旋律横向流动时兼有纵向结构，"立体的音响效果" |
-| **对比性分部** | 两个声部节奏形成对比（p0053） | 书中例子：高胡加两组二胡奏旋律，第 I 二胡第二声部与旋律成对比线条，中胡与之附着并与低音成四部和声 |
+| **Harmonic division** | One section splits into two to four harmonic parts | Makes harmony more evenly distributed, sonority more balanced, and colour richer; **more than five parts is not ideal**; for a "block of sound" one player can take one note each (p0050) |
+| **Attached division** | One section splits into two to four melodic parts, in an attached structure: **the lower part has exactly the same rhythm as the melody but different notes, forming harmony at the same time** (p0052–0053) | When the melody moves horizontally it also has a vertical structure, "a three-dimensional sonic effect" |
+| **Contrasting division** | Two parts form a rhythmic contrast (p0053) | Example in the book: gaohu plus two groups of erhu play the melody; the first erhu's second part forms a contrasting line against the melody, and the zhonghu attaches to it and forms a four-part harmony with the bass |
 
-代价：拉弦组人多分部容易，但**分部后整组音量会减弱**（p0054）。
+Cost: dividing the bowed group with many players is easy, but **after division the whole group's volume is reduced** (p0054).
 
-#### 8.4.2 弹拨组分不分部（p0118）
+#### 8.4.2 Whether to Divide the Plucked Group (p0118)
 
-弹拨乐器多能奏双音甚至更多，分部比拉弦组容易；柳琴不分部就能奏和弦，琵琶不分奏能奏两个以上的音甚至同时两条旋律（p0118）。六条判据：
-1. 有琶音记号的三音以上琶音，**不**分部；
-2. 标了扫弦，**不**分部；
-3. 每个品种只有一件（一把琵琶、一把中阮），**不**分部；
-4. **同种乐器两件以上时，合奏里普遍分部，哪怕双音和弦方便奏也分**；
-5. 扬琴尽量不分部，双音无须分部，但配器者不可写出无法演奏的音；
-6. 古筝尽量避免五声音阶以外的音，横向可以但别快，**纵向和弦尽量不用五声外音**。
+Plucked instruments mostly can play double notes or more, so dividing them is easier than in the bowed group; the liuqin can play chords without division, and the pipa can play more than two notes or even two melodies at once without division (p0118). Six criteria:
+1. Arpeggios of three or more notes with an arpeggio marking: **do not** divide;
+2. Marked strum: **do not** divide;
+3. When there is only one of each kind (one pipa, one zhongruan): **do not** divide;
+4. **When there are two or more instruments of the same kind, ensembles commonly divide, even when double-note chords are easy to play**;
+5. The yangqin should generally not be divided; double notes need not be divided, but the arranger must not write notes that cannot be played;
+6. The guzheng should generally avoid notes outside the pentatonic scale; horizontally it is acceptable but should not be fast, and **vertically, chords should generally avoid non-pentatonic notes**.
 
-#### 8.4.3 和声陈述五式与单、双音色组（p0121–0124、p0246–0252）
+#### 8.4.3 Five Harmonic Presentation Methods and the Single- and Double-Colour Groups (p0121–0124, p0246–0252)
 
-拉弦组与弹拨组的和声陈述方式相同：**柱式、分解式、节奏式、附着式、琶音式**（p0121–0124），第九章合称柱式、节奏式、分解式、附着式与混合式（p0246）。七和弦一条硬规则：**任何一个音被低音部用了，其他声部都不可再用**（p0121）。
-全体拉弦组是一个**单音色组**，全体弹拨组也是，两组结合叫**双音色组**（p0246）。书中八种搭配（p0247–0252）可以直接当模板：
+The bowed and plucked groups present harmony in the same ways: **block, broken-chord, rhythmic, attached, and arpeggio** (p0121–0124); chapter nine combines them as block, rhythmic, broken-chord, attached, and mixed (p0246). One hard rule for seventh chords: **once the bass uses any note, no other part may use it** (p0121).
+The whole bowed group forms a **single timbre group**, and so does the whole plucked group; combining the two is called a **double timbre group** (p0246). The book's eight pairings (p0247–0252) can be used directly as templates:
 
-| 旋律 | 和声 | 低音 |
+| Melody | Harmony | Bass |
 |---|---|---|
-| 双音色组全体 | 柱式 | |
-| 拉弦单音色组 | 弹拨单音色组节奏式；大提琴低音提琴 pizz. 模仿弹拨的节奏感 | |
-| 弹拨单音色组 | 扬琴二声部与中阮附着式；拉弦组部分乐器节奏式，大提琴 arco 与 pizz. 交替 | |
-| 双音色组高音区乐器 | 各组中音区乐器节奏式 | 各组低音区乐器 |
-| 双音色组以附着式结构陈述旋律 | 中阮大阮柱式（混合型） | |
-| 双音色组以节奏式柱式陈述：高胡对扬琴、二胡对琵琶、中胡对中阮**节奏完全相同** | | |
-| 拉弦单音色组（加管乐） | 弹拨组分解式与节奏式混合音型 | |
-| 高胡二胡琵琶 | 扬琴柳琴分解和弦 | |
+| Whole double-timbre group | Block | |
+| Bowed single-timbre group | Plucked single-timbre group in rhythmic style; cello and double bass pizzicato imitating the rhythmic feel of the plucked group | |
+| Plucked single-timbre group | Yangqin two-part and zhongruan in attached style; part of the bowed group in rhythmic style, cello alternating arco and pizzicato | |
+| Upper-register instruments of the double-timbre group | Middle-register instruments of each group in rhythmic style | Low-register instruments of each group |
+| Double-timbre group states the melody in attached structure | Zhongruan and daruan in block style (mixed type) | |
+| Double-timbre group states in rhythmic block style: gaohu against yangqin, erhu against pipa, zhonghu against zhongruan, **with identical rhythm** | | |
+| Bowed single-timbre group (with winds) | Mixed figure of the plucked group's broken-chord and rhythmic styles | |
+| Gaohu, erhu, pipa | Yangqin and liuqin broken chords | |
 
-规律：**旋律给谁，和声就给另一组**；同组陈述旋律与和声时用附着式或节奏式柱式，让两组按件对应。
+Rule: **whichever group has the melody, the harmony goes to the other group**; when the same group states both melody and harmony, use attached or rhythmic block style so that the two groups correspond instrument by instrument.
 
-### 8.5 落到纸上之前：李民雄的工作顺序与三条配器分工
+### 8.5 Before Committing to Paper: Li Minxiong's Working Order and Three Orchestration Divisions
 
-**① 分析主旋律 → ② 写低音声部 → ③ 选伴奏织体 → ④ 写缩谱 → ⑤ 配器**（李民雄 p0007, p0012, p0036, p0074）。**缩谱＝旋律＋低音＋伴奏，是写总谱时配器的蓝本**；配器阶段可以回头改缩谱（换音区、改和弦排列法）（李民雄 p0084, p0085）。
+**① Analyse the main melody → ② write the bass part → ③ choose the accompaniment texture → ④ write the condensed score → ⑤ orchestrate** (Li Minxiong p0007, p0012, p0036, p0074). **The condensed score = melody + bass + accompaniment, and is the blueprint for writing the full score in orchestration**; during orchestration you can return to the condensed score and revise it (changing register, rearranging chords) (Li Minxiong p0084, p0085).
 
-- **定调**（另见 §8.3）：调性要分清**调高**与**调式**——谱上的 1=C 只说了"1"的音高，没说调式（李民雄 p0010）。
-- **低音声部**七种写法：节奏性、旋律化、和弦分解式、复调化、固定音（音型）、加强性、奏主旋律。**低音与旋律多用斜向与反向进行，少用同向**；**速度快的段落和声节奏不宜太密**，否则笙、琵琶、阮这类常奏多音的乐器难演奏（李民雄 p0017, p0028, p0033）。
-- **伴奏织体**十种：齐奏、和弦式、长音衬腔式、节奏化音型式、和弦分解式、支声复调、对比复调、模仿复调、对位化、混合（李民雄 p0036）。**伴奏与旋律的活动音区隔开，旋律才清晰**（全奏的多八度重迭除外）；**密集与混合排列用得较多**；**中间伴奏声部要平稳**，内声部大跳会冲淡旋律（李民雄 p0078, p0081, p0083）。
-- **为和声配器 vs 为复调配器是相反的**：和声要**平衡与融合**，**选同组乐器最理想**；复调要**每个声部有个性**，用**不同类乐器**或**不同音区**拉开。**三音一般不能省略**，但五声旋律里三音常是"4、7"偏音、格外突出，**三音声部不能过重**。吹管组里**只有笙是演奏和声的乐器**（李民雄 p0101, p0102, p0105, p0106）。
-- **打击乐编配五法**（李民雄 p0109, p0114, p0120, p0123, p0128）：**加强性**（句逗与旋律完全一致、节奏"你疏我密"）／**对比性**（短小锣鼓点反复，与旋律句逗明显不一致，常与旋律并重）／**间插性**（把旋律拆开，民间叫"拆头"，用于展开或高潮，**太长大展开功能就减弱**）／**连接性**（旋律未结束锣鼓已进入）／**点缀性**（只在"起、转、收"闪现）。**打击乐全奏音响规模很大，不加强旋律声部，旋律就可能被淹没**（李民雄 p0155）。
-
+- **Key** (see also §8.3): distinguish the **pitch level** from the **mode** — the 1=C on a score says only the pitch of "1," not the mode (Li Minxiong p0010).
+- **Bass part**, seven ways of writing: rhythmic, melodic, broken-chord, polyphonic, fixed (figure), reinforcing, and carrying the main melody. **Bass and melody mostly move in oblique and contrary motion, seldom in similar motion**; **in fast passages the harmonic rhythm should not be too dense**, otherwise instruments that often play many notes, such as sheng, pipa, and ruan, become hard to play (Li Minxiong p0017, p0028, p0033).
+- **Accompaniment texture**, ten types: unison, chordal, sustained-note background to the vocal line, rhythmic figuration, broken-chord, supporting-voice polyphony, contrasting polyphony, imitative polyphony, contrapuntalised, and mixed (Li Minxiong p0036). **The melody is clear only when the accompaniment's active register is separated from it** (except for multi-octave doubling in full tutti); **dense and mixed arrangements are used quite often**; **the middle accompaniment parts must be steady**, since large leaps in inner voices dilute the melody (Li Minxiong p0078, p0081, p0083).
+- **Orchestrating for harmony and orchestrating for polyphony are opposite**: harmony needs **balance and fusion**, and **the best choice is instruments from the same group**; polyphony needs **each part to have its own character**, separated by **instruments of different types** or **different registers**. **The third of a chord generally cannot be omitted**, but in a pentatonic melody the third is often the "4 and 7" degrees, which stand out, so **the third part must not be too heavy**. In the wind group, **only the sheng plays harmony** (Li Minxiong p0101, p0102, p0105, p0106).
+- **Five methods for percussion scoring** (Li Minxiong p0109, p0114, p0120, p0123, p0128): **reinforcing** (phrase breaks match the melody exactly, rhythm "sparse here and dense there") / **contrasting** (short gong-drum figures repeated, clearly not matching the melodic phrase breaks, often equal in weight to the melody) / **interpolating** (splitting the melody apart, called "splitting the head" in folk usage, used for development or climax; **too long an interpolation weakens the developmental function**) / **connecting** (the gong-drum pattern enters before the melody has ended) / **decorating** (flashing only at the "start, turn, and close"). **A full-tutti percussion sound is very large; if the melodic parts are not reinforced, the melody may be swamped** (Li Minxiong p0155).

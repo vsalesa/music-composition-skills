@@ -1,445 +1,434 @@
 ---
 name: mc-style-rock-band
-description: Rock and band-format music as a style layer (乐队编制风格层) - what changes when five people in a room have to play it. The band roster as a hard constraint, why rock opens with fewer instruments than any other style, power chords and the harmony rules that stop applying, and riff as the primary hook carrier - Rooksby's 30 riff types (interval / scale / chord based), riff length and the 3+1 repetition pattern, riff vs vocal (alternate, end-of-line, or sustain), where riffs sit in the form, variation devices, riff-drum-bass dovetailing, twin-guitar roles, drop D / open G tuning, and the transfer table. Use when arranging for a band lineup, when a track needs a riff hook, when a riff sounds monotonous or fights the vocal, when a rock arrangement feels thin or muddy, or when borrowing band devices into produced music. 摇滚、乐队、band、riff 写作、riff 类型、power chord、失真吉他、双吉他、drop D、调弦、现场感。
+description: Rock and band-format music as a style layer (band lineup style layer) - what changes when five people in a room have to play it. The band roster as a hard constraint, why rock opens with fewer instruments than any other style, power chords and the harmony rules that stop applying, and riff as the primary hook carrier - Rooksby's 30 riff types (interval / scale / chord based), riff length and the 3+1 repetition pattern, riff vs vocal (alternate, end-of-line, or sustain), where riffs sit in the form, variation devices, riff-drum-bass dovetailing, twin-guitar roles, drop D / open G tuning, and the transfer table. Use when arranging for a band lineup, when a track needs a riff hook, when a riff sounds monotonous or fights the vocal, when a rock arrangement feels thin or muddy, or when borrowing band devices into produced music. Also matches rock, band, riff writing, riff types, power chord, distorted guitar, twin guitars, drop D, tuning, live feel.
 ---
 
-# 乐队编制风格层（Rock / Band）
+# Band Lineup Style Layer (Rock / Band)
 
-**这个 skill 的组织原则不是"摇滚听起来怎样"，而是：**
+**The organizing principle of this skill is not "what rock sounds like," but:**
 
-> **当这段音乐必须由房间里的五个人同时演奏时，什么变了？**
+> **When this music has to be played simultaneously by five people in a room, what changes?**
 
-这个约束比"摇滚"这个风格标签管用得多，而且它同时覆盖
-朋克、独立、放克、乡村摇滚、布鲁斯——**语料里那一整包 `Alt-Rock---Blues---Country-Rock---Indie---Funk---Reggae` 就是这么打包的。**
+This constraint is far more useful than the "rock" style label, and it covers punk, indie, funk, country rock, and blues at the same time—**the whole corpus bundle `Alt-Rock---Blues---Country-Rock---Indie---Funk---Reggae` is packaged exactly this way.**
 
-## 按任务读哪几节
+## Which sections to read by task
 
-| 任务 | 读 |
+| Task | Read |
 |---|---|
-| **判断乐队手法能不能搬走** | ★ §2 移植表 |
-| 编制怎么定 | §3（★ **它是约束，不是调色板**） |
-| 开场怎么进 | ★ §4（**实测：摇滚开场铺得最少**） |
-| 和声 | §5（★ **哪些通用规则在这里失效**） |
-| hook 放哪 | §6 riff |
-| **riff 怎么写**（类型／长度／变形） | ★ §6.2–§6.6 ＋ [reference.md](reference.md) §1–§3 |
-| riff 与人声怎么共处 | §6.4 |
-| riff 与贝司／鼓怎么咬合 | ★ §6.7 |
-| 双吉他怎么分工、调弦怎么选 | §3.3–§3.5 |
-| 查 riff 分类表／谱例索引／术语 | [reference.md](reference.md) |
-| 听起来"拼出来的"不像演奏的 | §7 |
+| **Judging whether band techniques can be transplanted** | ★ §2 transfer table |
+| How to set the lineup | §3 (★ **it is a constraint, not a palette**) |
+| How to bring in the opening | ★ §4 (**measured: rock opens with the least**) |
+| Harmony | §5 (★ **which general rules stop applying here**) |
+| Where the hook goes | §6 riff |
+| **How to write a riff** (type / length / variation) | ★ §6.2–§6.6 plus [reference.md](reference.md) §1–§3 |
+| How riffs coexist with vocals | §6.4 |
+| How riffs interlock with bass and drums | ★ §6.7 |
+| Dividing roles between two guitars, choosing tuning | §3.3–§3.5 |
+| Looking up the riff taxonomy / example index / terminology | [reference.md](reference.md) |
+| Sounding "assembled" rather than played | §7 |
 
-## 边界
+## Boundaries
 
-| 不归这里 | 归哪 |
+| Not covered here | Where it belongs |
 |---|---|
-| 打得像不像真人 | `mc-rhythm-section`（★ 通用，不限风格） |
-| 吉他/贝司/鼓的乐器法 | 电吉他与电贝司的乐器法本库不转写，调弦与对 riff 友好的调见本 skill reference §6–§7；鼓组各件的编配见 `mc-rhythm-section` reference §2 |
-| 失真音色怎么做 | 不归本包：吉他失真效果链是录音与混音的事（`mc-sound-design` 是合成器音色） |
-| 频段预算 | `mc-texture-layering` |
-| 曲式 | `mc-form` |
-| 乐队录音的实操 | 声音（录音）的事，不归本包 |
-| riff 的指板指法、把位、推弦细节 | 不归本包（本 skill 只管写作与编排，reference 只记页号） |
-| 拍号与 groove 的通用理论 | `mc-rhythm-groove`（本 skill 只记 riff 相关的拍号效果，reference §4） |
-
----
-
-## 1. 动笔前必填
-
-| 必填 | 问法 |
-|---|---|
-| **① 编制名单** | ★ **写死**。几把吉他、有没有键盘。**这是硬约束** |
-| **② 现场能不能演** | ★ 决定能叠几层（§3.2） |
-| **③ hook 在人声还是 riff** | §6 |
-| **④ 开场有几件在场** | ★ 实测摇滚**只有 8%**（§4） |
-| **⑤ riff 是哪一型、几小节、下面是什么和弦** | §6.2、§6.3 |
+| Whether drumming sounds human | `mc-rhythm-section` (★ general, not style-specific) |
+| Guitar, bass, and drum instrument technique | Electric guitar and electric bass instrument technique is not transcribed in this library; tunings and riff-friendly keys are in this skill's reference §6–§7; arrangement of individual drum kit pieces is in `mc-rhythm-section` reference §2 |
+| How to make distortion tones | Not in this package: the guitar distortion effects chain is a matter of recording and mixing (`mc-sound-design` covers synthesizer timbres) |
+| Frequency-band budget | `mc-texture-layering` |
+| Form | `mc-form` |
+| Practical band recording | A matter of audio recording, not covered in this package |
+| Fretboard fingering, positions, and bending details for riffs | Not covered here (this skill covers only writing and arrangement; the reference only records page numbers) |
+| General theory of meter and groove | `mc-rhythm-groove` (this skill only records meter effects relevant to riffs, reference §4) |
 
 ---
 
-## 2. ★ 移植表
+## 1. Required before starting
 
-| 手法 | 可搬出去吗 | 说明 |
+| Required | Question to answer |
+|---|---|
+| **① Lineup roster** | ★ **Fix it.** How many guitars, is there a keyboard? **This is a hard constraint** |
+| **② Can it be performed live?** | ★ Determines how many layers can be stacked (§3.2) |
+| **③ Is the hook in the vocal or the riff?** | §6 |
+| **④ How many instruments are present at the opening?** | ★ Measured: rock is **only 8%** (§4) |
+| **⑤ Which riff type, how many bars, what chords are underneath?** | §6.2, §6.3 |
+
+---
+
+## 2. ★ Transfer Table
+
+| Technique | Can it be transferred? | Notes |
 |---|---|---|
-| **编制即约束**（先定名单再写） | ✅ ★ **可搬，而且该搬** | 无限音源的最大害处是永远不用做取舍 |
-| **极稀薄的开场** | ✅ ★ **可搬**（§4） | 实测摇滚在这一项上是极值，值得学 |
-| **riff 当 hook** | ✅ 可搬 | 它就是 `arrangement_hook`（lint #8）的一种实现 |
-| **Power chord（平行五度）** | ⚠️ **半搬** | 它是**音色手段**不是声部写作。搬进有真正声部写作的编制会撞规则（§5.1） |
-| **全员齐奏的落点** | ⚠️ 半搬 | 在流行里很有效，但不能多——会盖掉人声 |
-| **失真吉他的频段占用** | ❌ 不可搬 | 它几乎吃掉整个中频，别的风格承受不起 |
-| **"能演出来"这个标准** | ✅ ★ **可搬** | §7 |
+| **Lineup as constraint (fix the roster before writing)** | ✅ ★ **Transferable, and should be** | The biggest harm of unlimited sound sources is that you never have to make trade-offs |
+| **Extremely sparse opening** | ✅ ★ **Transferable** (§4) | Measured rock is the extreme on this item and worth learning |
+| **Riff as hook** | ✅ Transferable | It is one implementation of `arrangement_hook` (lint #8) |
+| **Power chords (parallel fifths)** | ⚠️ **Partially transferable** | It is a **timbral device**, not voice-leading. Moving it into a lineup with real voice-leading will collide with rules (§5.1) |
+| **Full-ensemble unison hits** | ⚠️ Partially transferable | Effective in pop, but not too often—it will drown out the vocal |
+| **Distorted guitar's frequency-band occupation** | ❌ Not transferable | It consumes almost the entire midrange, which other styles cannot afford |
+| **The "can be performed" standard** | ✅ ★ **Transferable** | §7 |
 
-★ **判据**：
-> **可以搬走它的纪律（编制约束、稀薄开场、能演出来），
-> 不要搬走它的频谱占用方式（失真吉他 + 全员齐奏）。**
+★ **Criterion**:
+> **Transfer its discipline (lineup constraint, sparse opening, can be performed live),
+> but do not transfer its spectral occupation (distorted guitar + full-ensemble unison).**
 
 ---
 
-## 3. 编制是约束，不是调色板
+## 3. The Lineup Is a Constraint, Not a Palette
 
-### 3.1 先写名单
+### 3.1 Write the roster first
 
-**乐队音乐与制作型音乐最根本的差别**：
-制作型音乐里"再加一层"是免费的；乐队音乐里**加一层意味着多一个人或多一次叠录**。
+**The most fundamental difference between band music and produced music**:
+in produced music, "adding another layer" is free; in band music, **adding a layer means one more person or one more overdub**.
 
-★ **这个约束是好事**：
-`mc-texture-layering` 开篇那句"音乐空间有边界，加超过限度就会覆盖已有内容"，
-在乐队编制里是**物理事实**，不是提醒。
+★ **This constraint is a good thing**:
+the line that opens `mc-texture-layering`, "musical space has boundaries; adding beyond the limit will cover existing content," is a **physical fact** in a band lineup, not a reminder.
 
-### 3.2 叠录的两条线
+### 3.2 The two lines for overdubbing
 
-| | 说明 |
+| | Notes |
 |---|---|
-| **现场能演** | 编制 = 人数。**这条线上的编排最干净** |
-| **可以叠录** | 双轨吉他、加键盘层、加和声。★ **但要问：这首歌现场怎么办？** |
+| **Playable live** | Lineup = number of people. **Arrangements on this line are the cleanest** |
+| **Can be overdubbed** | Double-tracked guitars, added keyboard layers, added harmonies. ★ **But ask: how will this song be handled live?** |
 
-**实务折中**：**核心四件（鼓/贝司/吉他/人声）必须现场成立**，
-叠录的层是**色彩**，抽掉之后歌还站得住。
+**Practical compromise**: **the core four (drums / bass / guitar / vocals) must work live**;
+overdubbed layers are **color**, and the song should still stand if they are removed.
 
-### 3.3 编制决定 riff 怎么写
+### 3.3 The lineup determines how the riff is written
 
-| 编制 | riff 的写法 | 页 |
+| Lineup | How the riff is written | Page |
 |---|---|---|
-| **Power trio／四人含主唱**（只有一件和声乐器） | 倾向至少两个音的 riff，和弦类 riff 更有吸引力；单音 riff 里给某些音加三度以暗示和弦——两音都不是根音时最好，**根音留给贝司** | Rooksby《Riffs》p0140、p0048 |
-| **有第二把吉他** | 可以和声化 riff，单音 riff 可叠 | Riffs p0140 |
-| **有键盘手** | 试更有"切割感"的单音 riff，键盘填和声；★ **让键盘手限制音数以服务 riff**（Deep Purple 的做法） | Riffs p0140 |
-| **无贝司**（White Stripes 式） | 在五声小调的每个音上建大三和弦，得到六个大和弦的色板（reference §7） | Riffs p0123 |
+| **Power trio / four-piece including vocalist** (only one harmonic instrument) | Favor riffs of at least two notes; chord-based riffs are more appealing. In single-note riffs, add thirds to some notes to imply chords—best when both notes are not the root, **leave the root to the bass** | Rooksby, *Riffs*, p0140, p0048 |
+| **Has a second guitar** | The riff can be harmonized; single-note riffs can be doubled | Riffs p0140 |
+| **Has a keyboardist** | Try single-note riffs with more "cutting" quality, with keyboards filling the harmony. ★ **Have the keyboardist limit the number of notes to serve the riff** (Deep Purple's approach) | Riffs p0140 |
+| **No bass (White Stripes style)** | Build major triads on every note of the minor pentatonic, yielding a palette of six major chords (reference §7) | Riffs p0123 |
 
-★ 这是 §3.1 的推论：**编制名单写死之后，riff 该有几个音、谁奏根音，就已经定了一半。**
+★ This follows from §3.1: **once the lineup roster is fixed, how many notes the riff should have and who plays the root is already half decided.**
 
-### 3.4 双吉他分工
+### 3.4 Dividing roles between two guitars
 
-| 分工 | 说明 | 页 |
+| Division | Description | Page |
 |---|---|---|
-| **一把 riff、一把和弦** | 副歌里奏 riff 的吉他跟人声旋律走，另一把奏直八分音符和弦；riff 不被第二把吉他或贝司加倍，编曲更有呼吸感 | Riffs p0056 |
-| **一把 riff、一把 shuffle** | 和弦变到 C、D 时另一把奏标准 shuffle 而非移调的 riff，riff 在独奏后再现时显得新鲜 | Riffs p0038 |
-| **两把相似但不同** | 两把吉他奏相似但不完全相同的 part（All Right Now）；同一音阶 riff 部分音不同（Helicopter） | Riffs p0111、p0139 |
-| **分音** | 快速五度一人难奏干净 → 两把各奏一个单音；三度和声两把各取一音 | Riffs p0139、p0178 |
-| **双主音（twin lead）** | 两把吉他奏以三度为主的平行线（Wishbone Ash、Thin Lizzy、Queen）；三度在 1–2 弦或 3–4 弦最好，低音弦上发浑 | Riffs p0043 |
-| **一把持续、一把 riff** | 第一把不承载踏板音，立体声另一侧的第二把最终进入、用 D5 支持它 | Riffs p0091 |
-| **左右分置** | intro 里 riff 只在中央出现一次，乐队进来后 riff 分裂为左右两把 | Riffs p0038 |
-| **12 弦叠六弦** | 电 12 弦混小声叠在过载六弦上，高八度弦加泛音感 | Riffs p0139 |
+| **One riff, one chords** | In the chorus, the guitar playing the riff follows the vocal melody, while the other plays straight eighth-note chords; the riff is not doubled by the second guitar or bass, giving the arrangement more breathing room | Riffs p0056 |
+| **One riff, one shuffle** | When chords move to C and D, the other guitar plays a standard shuffle rather than a transposed riff, so the riff sounds fresh when it returns after the solo | Riffs p0038 |
+| **Two similar but different** | Two guitars play parts that are similar but not identical (*All Right Now*); a same-scale riff with some notes different (*Helicopter*) | Riffs p0111, p0139 |
+| **Splitting notes** | Fast fifths are hard for one player to play cleanly → two guitars each play one single note; thirds harmony split with each guitar taking one note | Riffs p0139, p0178 |
+| **Twin lead** | Two guitars play parallel lines built mainly on thirds (Wishbone Ash, Thin Lizzy, Queen); thirds sound best on strings 1–2 or 3–4, and turn muddy on the low strings | Riffs p0043 |
+| **One sustained, one riff** | The first guitar does not carry the pedal note; the second guitar on the other side of the stereo field eventually enters, supported by a D5 | Riffs p0091 |
+| **Split left and right** | In the intro the riff appears only once in the center; once the band enters, the riff splits into two guitars, left and right | Riffs p0038 |
+| **12-string over 6-string** | An electric 12-string mixed quietly over an overdriven six-string, with the high octave strings adding a sense of overtones | Riffs p0139 |
 
-★ 与 §5.1 的接口：**双吉他各奏一条线时，平行五度的问题回来了；双主音的三度平行是它的语汇，不是错误。**
+★ Interface with §5.1: **when two guitars each play their own line, the parallel-fifths problem returns; parallel thirds in twin lead are part of its vocabulary, not an error.**
 
-### 3.5 调弦对编曲的影响
+### 3.5 How tuning affects the arrangement
 
-（全表见 [reference.md](reference.md) §6–§7。）写作阶段要知道的五条：
+(The full table is in [reference.md](reference.md) §6–§7.) Five points to know at the writing stage:
 
-- **调决定声音**：同一 I–bVII–IV 换调对吉他影响巨大——空弦有多少、最低音是什么（Riffs p0122）。硬摇滚首选 E、A；F#、B 也热门，因为比主音低全音的空弦正是 bVII（Riffs p0122）。
-- **降调加重**：整体降半音指型不变，只是低半音；每降半音弦号加一级，否则弦松、音准差、不耐重击（Riffs p0124）。Dropped D 让吉他偏向从 E 转到 D、最低三弦可单指横按（Riffs p0126）。
-- **开放调弦改变能写的 riff**：open G 让"横按大三和弦上加 sus4/6/9"的 on/off 图形比标准调弦更有效（Riffs p0125）；DADGAD 来自民谣巴洛克与北非持续音的模仿（Riffs p0125）。
-- ★ **改了调弦就要降失真**：开放／改变调弦下共鸣、延音、泛音增强，建议降低失真度；相邻弦上相差全音／半音的密集音需要更干净的音色（Riffs p0127）。这条要与 `mc-sound-design` 的音色决定同源。
-- **移调会丢空弦**：原 riff 用空弦，多数移调会失去它，踏板／持续音／转位／和弦类 riff 尤其敏感（Riffs p0122）——处理见 §6.6。在改变调弦里写的 riff 务必记下指型（Riffs p0127），**写进 `roster[].note`**。
+- **The key determines the sound**: transposing the same I–bVII–IV has a huge effect on guitar—how many open strings there are and what the lowest note is (Riffs p0122). Hard rock favors E and A; F# and B are also popular, because the open strings a whole step below the tonic are exactly bVII (Riffs p0122).
+- **Tuning down adds weight**: lowering all strings by a semitone keeps the fingerings the same, just a semitone lower; each semitone down calls for one step heavier string gauge, or the strings go slack, pitch suffers, and they don't hold up to heavy attack (Riffs p0124). Dropped D shifts the guitar's center from E to D, and the lowest three strings can be barred with one finger (Riffs p0126).
+- **Open tunings change which riffs can be written**: open G makes the on/off figure of "sus4/6/9 added over a barred major chord" more effective than standard tuning (Riffs p0125); DADGAD grew out of imitations of folk baroque and North African drones (Riffs p0125).
+- ★ **If you change the tuning, reduce the distortion**: under open or altered tunings, resonance, sustain, and overtones are all enhanced, so lower the distortion; dense notes on adjacent strings a whole step or semitone apart need a cleaner tone (Riffs p0127). This should share a source with the timbre decisions in `mc-sound-design`.
+- **Transposition loses open strings**: an original riff that uses open strings will lose them in most transpositions; pedal, sustained, inverted, and chord-based riffs are especially sensitive (Riffs p0122)—see how to handle this in §6.6. Riffs written in altered tunings must have their fingerings noted down (Riffs p0127), **written into `roster[].note`**.
 
 ---
 
-## 4. ★ 实测：摇滚的开场铺得最少
+## 4. ★ Measured: Rock Opens With the Least
 
-Cambridge-MT 多轨实测（每个风格 10 首），各风格"开场就在场的乐器占全部 roster 的比例"：
+Cambridge-MT multitrack measurements (10 tracks per style), giving the share of the full roster that is present at the opening for each style:
 
-| 风格 | 开场在场比例 |
+| Style | Share present at opening |
 |---|---|
 | ★ **rock** | ★ **8%** |
 | jazz-acoustic | 16% |
-| Alt-Rock 包 | 20% |
+| Alt-Rock bundle | 20% |
 | pop | 21% |
 | edm | 21% |
 | hiphop-rnb | 24% |
 
-**读法**：★ **摇滚是所有风格里开场最克制的。**
+**How to read it**: ★ **Rock is the most restrained at the opening of all styles.**
 
-**为什么**：因为它后面要**全员齐奏**。
-**如果开场就全员，全奏时就没有落差了。**
+**Why**: because it has to **go full ensemble** later.
+**If everyone is in from the start, there is no contrast when the full ensemble arrives.**
 
-> **实测同时印证了本库的强规则**：「开场不该把乐器一次铺满」**54/59 命中**。
-> ★ 摇滚不只是满足这条，是把它做到了极值。
+> **The measurements also confirm a strong rule in this library**: "the opening should not lay out all the instruments at once"—**54/59 hits**.
+> ★ Rock does not merely satisfy this rule; it pushes it to the extreme.
 
-**自检动作**：★ **把你的开场编制数一遍。超过全部 roster 的 20%，就太满了。**
+**Self-check**: ★ **Count the instruments in your opening lineup. If it exceeds 20% of the full roster, it is too full.**
 
-### 4.1 其余实测
+### 4.1 Other measurements
 
-| 指标 | rock | Alt-Rock 包 | pop |
+| Metric | rock | Alt-Rock bundle | pop |
 |---|---|---|---|
-| roster 规模（中位） | 30 | **38** | 36 |
-| 中途进场的乐器数 | 26 | 28 | 29 |
-| 提前退场的乐器数 | 18 | 16 | 16 |
+| Roster size (median) | 30 | **38** | 36 |
+| Instruments entering mid-track | 26 | 28 | 29 |
+| Instruments leaving early | 18 | 16 | 16 |
 
-⚠ **不要引用 BPM**（beat tracking 在失真吉他上的可靠性未验证）。
+⚠ **Do not cite BPM** (the reliability of beat tracking on distorted guitar has not been verified).
 
 ---
 
-## 5. 和声：哪些通用规则在这里失效
+## 5. Harmony: Which General Rules Stop Applying Here
 
-### 5.1 ★ Power chord 与平行五度
+### 5.1 ★ Power chords and parallel fifths
 
-`mc-counterpoint` reference §1 的规则 2：**严格禁用平行五度与平行八度**。
+Rule 2 in `mc-counterpoint` reference §1: **strictly prohibit parallel fifths and parallel octaves**.
 
-★ **在这里它不适用**，但**理由要说清**：
+★ **It does not apply here**, but **the reason must be stated clearly**:
 
-> **Power chord 不是和弦，是音色。**
-> 它没有三音，不参与功能和声；平行移动它是在**平移一个音色**，
-> 不是在**做两个声部的运动**。
+> **A power chord is not a chord; it is a timbre.**
+> It has no third and does not take part in functional harmony; moving it in parallel is **shifting one timbre**, not **carrying out the motion of two voices**.
 
-★ **判据**：**问这两个"声部"有没有各自的旋律身份。**
-没有 → 它是音色，平行随便走。
-有 → 平行五度的问题回来了（例如双吉他各奏一条线时）。
+★ **Criterion**: **ask whether these two "voices" have their own melodic identity.**
+If not → it is timbre, and it may move in parallel freely.
+If so → the parallel-fifths problem returns (for example, when two guitars each play a line).
 
-Rooksby 从音色角度给出同一结论：五度没有三音、非大非小，**能耐受大量失真而在摇滚语境里保持有效**，这与失真增强的泛音有关（Rooksby《Riffs》p0030）；三度承载大小调的情感内容，在低音弦上发浑（Riffs p0030、p0096），所以摇滚 riff 三度用得少、五度用得多（Riffs p0043）。
+Rooksby reaches the same conclusion from the standpoint of timbre: a fifth has no third and is neither major nor minor, and **it tolerates heavy distortion and stays effective in a rock context**, which is linked to the overtones that distortion enhances (Rooksby, *Riffs*, p0030). Thirds carry the emotional content of major and minor and turn muddy on the low strings (Riffs p0030, p0096), which is why rock riffs use thirds sparingly and fifths often (Riffs p0043).
 
-### 5.2 弱进行（D→S）
+### 5.2 Weak progressions (D→S)
 
-`C–G–F–C` 这类"属到下属"的进行在古典和声里视为错误
-（`mc-harmony` reference §5 的对照表）。
+Dominant-to-subdominant progressions such as `C–G–F–C` are treated as errors in classical harmony (see the comparison table in `mc-harmony` reference §5).
 
-> ★ **在摇滚/民谣里它是标准语汇。**
-> 给三个和弦都加小七（C7/F7/G7）就得到带蓝调音的布鲁斯声音。
+> ★ **In rock and folk it is standard vocabulary.**
+> Adding a minor seventh to each of the three chords (C7/F7/G7) gives a blues sound with blue notes.
 
-### 5.3 还有效的
+### 5.3 Still valid
 
-- **功能进行的骨架**仍然有效（T–S–D–T）
-- **调外和弦**仍然是色彩（lint #9 仍然生效）
-- ★ **低音线设计**仍然有效——**这是斯波索宾与日式实务唯一都认的一条**
+- **The skeleton of functional progressions** is still valid (T–S–D–T)
+- **Non-diatonic chords** remain color (lint #9 still applies)
+- ★ **Bass-line design** is still valid—**this is the one point that both Sposobin and Japanese practice agree on**
 
-### 5.4 从 riff 反推的和声规则
+### 5.4 Harmony rules deduced from riffs
 
-| 规则 | 说明 | 页 |
+| Rule | Description | Page |
 |---|---|---|
-| **两个相距半音的大三和弦不在任何大调里** | 半音移位做成五度／大三和弦必出离调音，这是它"叛逆"的来源；朋克在 12 小节的每个和弦前加低半音的大三和弦 | Rooksby《Riffs》p0018–p0019 |
-| **bVII 是常态** | 全音移位抹掉导音，调式变 Mixolydian；I–bVII–IV 是摇滚核心进行；"每个大调 I–IV–V riff 可能对应两三个 Mixolydian I–bVII–IV riff" | Riffs p0022–p0023、p0097、p0100 |
-| **五声小调上建大三和弦** | A 五声小调 → A、C、D、E、G 大三和弦，可再加 F；等价说法：大调扔掉减和弦与三个小和弦，3／6／7 音降半音转大三 | Riffs p0123 |
-| **小和弦少见** | 摇滚偏爱五度，对小和弦的"过度情感"不安；最常见的小和弦 riff 是 I–VII–VI（Am–G–F） | Riffs p0104 |
-| **riff 的调式由下方和弦裁决** | 缺三音的 riff 被听成哪个调式，由节奏吉他／贝司决定；调式 riff 需要不削弱它的和声支持 | Riffs p0071、p0078 |
-| **调式是风味不是全程** | 摇滚里调式很少以"纯"形式出现，旋律与和弦都守在调式内的更少 | Riffs p0077 |
-| **隐含和弦** | 吉他静态、贝司在下移动造成和弦变化的错觉；同一五度换低音被听成不同和弦 | Riffs p0037、p0033 |
-| **大七和弦在重型语境里** | 重摇滚少用（太甜），但与其力量结合时效果巨大 | Riffs p0137 |
+| **Two major triads a semitone apart do not belong to any major key** | Making a semitone shift into a fifth or major triad necessarily produces an out-of-key note; this is the source of its "rebelliousness." Punk places a major triad a semitone lower before each chord in a 12-bar form | Rooksby, *Riffs*, p0018–p0019 |
+| **bVII is the norm** | A whole-step shift erases the leading tone, and the mode becomes Mixolydian; I–bVII–IV is the core rock progression; "every major-key I–IV–V riff may correspond to two or three Mixolydian I–bVII–IV riffs" | Riffs p0022–p0023, p0097, p0100 |
+| **Major triads built on the minor pentatonic** | A minor pentatonic → major triads on A, C, D, E, G, which may add F. Equivalently: from the major scale, discard the diminished chord and the three minor chords, and lower the 3rd, 6th, and 7th by a semitone to make them major triads | Riffs p0123 |
+| **Minor chords are rare** | Rock favors fifths and is uneasy with the "excess emotion" of minor chords; the most common minor-chord riff is I–VII–VI (Am–G–F) | Riffs p0104 |
+| **The riff's mode is decided by the chords beneath it** | Which mode a riff lacking a third is heard as depends on the rhythm guitar or bass; modal riffs need harmonic support that does not weaken them | Riffs p0071, p0078 |
+| **Modes are flavor, not the whole** | In rock, modes rarely appear in pure form, and even fewer have both melody and chords staying within the mode | Riffs p0077 |
+| **Implied chords** | The guitar stays static while the bass moves underneath, creating the illusion of chord changes; the same fifth with a different bass note is heard as a different chord | Riffs p0037, p0033 |
+| **Major sevenths in heavy contexts** | Rarely used in heavy rock (too sweet), but extremely effective when combined with its power | Riffs p0137 |
 
-这些与 §5.2 同源：**摇滚和声的骨架是布鲁斯与 Mixolydian，不是功能大调。** `mc-harmony` 的功能规则在这里退到"骨架仍在"（§5.3），色彩由 riff 的音程决定（§6.2）。
+These share a source with §5.2: **the skeleton of rock harmony is blues and Mixolydian, not functional major.** The functional rules of `mc-harmony` recede here to "the skeleton still stands" (§5.3), and color is determined by the riff's intervals (§6.2).
 
 ---
 
-## 6. Riff 作为 hook
+## 6. Riff as Hook
 
-**在乐队音乐里，`arrangement_hook`（lint #8）通常就是一条 riff。**
+**In band music, the `arrangement_hook` (lint #8) is usually a riff.**
 
-| 要点 | 说明 |
+| Point | Description |
 |---|---|
-| **它是记忆点，不是垫底** | ★ 与 `example-01` 里"合成主音只弹 hook，不做垫底"同理 |
-| **它需要空间** | riff 响的时候人声通常不唱（**交替出现**，`mc-texture-layering` §4.2 解法③） |
-| **它要复现** | `hooks.arrangement_hook.recurs_at` 要写清在哪几段回来 |
-| **它可以是节奏而非音高** | 一个特定的停顿/切分也能当 riff |
+| **It is a memory point, not filler** | ★ Same principle as "the synth lead in `example-01` only plays the hook and does not fill in the background" |
+| **It needs space** | When the riff sounds, the vocal usually does not sing (**alternating**, `mc-texture-layering` §4.2 solution ③) |
+| **It must recur** | `hooks.arrangement_hook.recurs_at` must specify which sections it returns in |
+| **It can be rhythm rather than pitch** | A specific pause or syncopation can also serve as a riff |
 
-细则（分类表、重复模式、变形手法、谱例索引、术语）见 [reference.md](reference.md)；下面是写 riff 时要过的七道关。
+Details (taxonomy, repetition patterns, variation techniques, example index, terminology) are in [reference.md](reference.md); the seven checkpoints to pass when writing a riff follow below.
 
-### 6.1 什么算 riff：短、重复、记得住、低
+### 6.1 What counts as a riff: short, repeated, memorable, low
 
-Rooksby 的工作定义：**"短小、重复、令人难忘的乐句，通常在吉他低音区，集中了摇滚歌曲的大部分能量与兴奋"**（Rooksby《Riffs》p0007）。四个词各是一条约束：
+Rooksby's working definition: **"a short, repeated, memorable phrase, usually in the low register of the guitar, that concentrates most of a rock song's energy and excitement"** (Rooksby, *Riffs*, p0007). Each of the four words is a constraint:
 
-- **短**：1–4 小节；再长听起来像旋律或独奏（Riffs p0007）。
-- **重复**：重复是它钉进记忆的方式，也是驱动力——"往蒸汽机车的炉子里铲煤"（Riffs p0007）。
-- **记得住**：靠特定的节奏、和声或旋律特质（Riffs p0007）；检查用 **RHM 公式**——节奏／和声／旋律三个面都过一遍（Riffs p0008）。
-- **低**：多数吉他 riff 在低三根弦上，那里有"力量与权威"，且低音定义上方的和声（Riffs p0007）。高音区 riff 是特例，要靠回声加厚并与贝司结合（The Edge，Riffs p0008）。
+- **Short**: 1–4 bars; any longer and it sounds like a melody or a solo (Riffs p0007).
+- **Repeated**: repetition is how it sticks in memory, and it is also the driving force—"shoveling coal into a steam locomotive's firebox" (Riffs p0007).
+- **Memorable**: it relies on specific rhythmic, harmonic, or melodic qualities (Riffs p0007). To check, use the **RHM formula**—run through all three facets: rhythm, harmony, melody (Riffs p0008).
+- **Low**: most guitar riffs sit on the lowest three strings, where there is "power and authority," and the bass defines the harmony above it (Riffs p0007). Riffs in the high register are exceptions, and need echo to thicken them and combination with the bass (The Edge, Riffs p0008).
 
-★ **riff 的四种功能**：节奏（让人动）、填充无人声的段落、动态对比（主歌收、器乐段用 riff 爆发）、临时替代和弦进行（Riffs p0008）。**写之前先说出它在这首歌里承担哪一种。**
+★ **The four functions of a riff**: rhythm (makes people move), filling sections without vocals, dynamic contrast (the verse pulls back, the instrumental section explodes with the riff), and temporarily substituting a chord progression (Riffs p0008). **Before writing, state which of these it serves in this song.**
 
-**判据**：和弦进行也可以是 riff——只要重复得够频繁、且有定义明确的有力节奏型（Riffs p0013–p0014）；反过来，同样的和弦在 intro／verse 里靠明确节奏成为 riff，到 chorus 就只是伴奏（American Idiot，Riffs p0100）。**"这是 riff 还是伴奏"由节奏型决定，不由音决定。**
+**Criterion**: a chord progression can also be a riff—provided it repeats often enough and has a clearly defined, forceful rhythmic pattern (Riffs p0013–p0014). Conversely, the same chords become a riff in the intro/verse through a clear rhythm, but in the chorus are merely accompaniment (*American Idiot*, Riffs p0100). **"Is this a riff or accompaniment" is decided by the rhythmic pattern, not by the notes.**
 
-### 6.2 类型学：先选材料，再接受它的和声后果
+### 6.2 Typology: choose the material first, then accept its harmonic consequences
 
-Rooksby 分三组共 30 型（Riffs p0013；完整表见 reference §1）：
-**① 两个单音之间的音程**——半音／全音／八度／五度／四度／三全音／三度／六度／混合；
-**② 音阶**——小调五声／布鲁斯／大调五声／大调／Mixolydian／自然小调／Dorian／Phrygian／Lydian／Locrian／半音阶；
-**③ 和弦**——踏板音／持续音／琶音／大调和弦／Mixolydian 和弦／小调和弦／挂留／三和弦／转位／非常规。
+Rooksby divides them into three groups totaling 30 types (Riffs p0013; full table in reference §1):
+**① Intervals between two single notes**—semitone / whole tone / octave / fifth / fourth / tritone / third / sixth / mixed;
+**② Scales**—minor pentatonic / blues / major pentatonic / major / Mixolydian / natural minor / Dorian / Phrygian / Lydian / Locrian / chromatic;
+**③ Chords**—pedal note / drone / arpeggio / major chord / Mixolydian chord / minor chord / suspension / triad / inversion / unconventional.
 
-写作时的判据不是"哪型好听"，而是**每一型自带的和声后果**：
+The criterion when writing is not "which type sounds good," but **the harmonic consequences each type carries with it**:
 
-| 选了 | 就得接受 | 页 |
+| If you choose | You must accept | Page |
 |---|---|---|
-| 半音移位做成五度／大三和弦 | 必出离调音——这是"叛逆"的来源，也意味着它不在任何一个大调里 | Riffs p0018–p0019 |
-| 全音移位 bVII→I | 导音没了，调式是 Mixolydian；bVII 和弦随之而来 | Riffs p0022–p0023 |
-| 五度、四度、八度 | 非大非小，上面配什么和弦都行——**和声由别人（贝司／节奏吉他）决定** | Riffs p0027、p0030、p0034 |
-| 三度、六度 | 明确大小调；甜、缺攻击性；低音弦上发浑 | Riffs p0043、p0048、p0096 |
-| 小调五声／布鲁斯音阶 | 在大调和弦上"硬"，在小调和弦上融合、失去断言感 | Riffs p0053 |
-| 大调五声 | 放在小调和弦上"相当糟" | Riffs p0063 |
-| Dorian／Phrygian／Lydian／Locrian | 必须有不削弱它的和声支持，否则被听成别的（5.15 被听成 Mixolydian 而非 Dorian）；调式多作"风味"而非全程纯用 | Riffs p0077–p0078 |
-| 半音阶 | 需要稳定鼓点＋清晰陈述的根音保住稳定性 | Riffs p0085 |
-| 踏板音／持续音／转位／带空弦的和弦 riff | 移调会丢空弦，要在写作阶段"作曲解决" | Riffs p0122 |
-| 非常规和弦 | 节省用——"没有正常，就不知道什么是奇怪" | Riffs p0116 |
+| A semitone shift made into a fifth or major triad | An out-of-key note is inevitable—this is the source of its "rebelliousness," and it also means it belongs to no major key | Riffs p0018–p0019 |
+| A whole-step shift bVII→I | The leading tone is gone, the mode is Mixolydian, and the bVII chord comes with it | Riffs p0022–p0023 |
+| Fifths, fourths, octaves | Neither major nor minor; any chord can go above them—**the harmony is decided by someone else (bass / rhythm guitar)** | Riffs p0027, p0030, p0034 |
+| Thirds, sixths | Clearly major or minor; sweet, lacking aggression; muddy on low strings | Riffs p0043, p0048, p0096 |
+| Minor pentatonic / blues scale | Sounds "hard" over major chords; blends in over minor chords and loses its assertiveness | Riffs p0053 |
+| Major pentatonic | Sounds "pretty bad" over minor chords | Riffs p0063 |
+| Dorian / Phrygian / Lydian / Locrian | Must have harmonic support that does not weaken it, or it will be heard as something else (5.15 heard as Mixolydian rather than Dorian); modes are mostly used as "flavor" rather than in pure form throughout | Riffs p0077–p0078 |
+| Chromatic | Needs a steady drum pattern and a clearly stated root to keep it stable | Riffs p0085 |
+| Pedal / drone / inversion / chord riffs with open strings | Transposition loses the open strings; this must be "solved compositionally" at the writing stage | Riffs p0122 |
+| Unconventional chords | Use sparingly—"without normal, you don't know what is strange" | Riffs p0116 |
 
-**失效条件**：riff 缺三音时（多数五度／四度／八度／五声 riff 都缺），它的调式由**下方的和弦**决定——Taxman、Paperback Writer 被听成 Mixolydian 而非五声，是节奏吉他的大三和弦干的（Riffs p0071）。**所以单写 riff 不算写完，得写出它下面是什么。**
+**Failure condition**: when a riff lacks a third (most fifth-, fourth-, octave-, and pentatonic riffs do), its mode is decided by **the chords beneath it**—*Taxman* and *Paperback Writer* are heard as Mixolydian rather than pentatonic because of the rhythm guitar's major triads (Riffs p0071). **So writing the riff alone does not count as finished; you must write out what is underneath it.**
 
-不对称 riff（怪音阶、怪重音、不可预测的跳进、变拍号）对演奏者有趣，但较少引起公众共鸣（Riffs p0013）——想要 Smoke On The Water 那种就别堆。
+Asymmetric riffs (odd scales, odd accents, unpredictable leaps, changing meters) are interesting to players but rarely resonate with the public (Riffs p0013)—if you want something like *Smoke on the Water*, don't pile them on.
 
-### 6.3 长度与重复
+### 6.3 Length and repetition
 
-- **长度**：1、2、4 小节是常态；3 小节少见（重复后成 6，违背"四"的分组，但四次可得 12）；超过 4 小节难被听成单一单元（Riffs p0129）。四小节通常再分成两个应答乐句，不分句的少见（Riffs p0072）。
-- **重复模式**：把一小节记作 a1，基本形状是 **3+1**：`a1 a1 a1 a2`；八小节 `a1 a1 a1 a2 / a1 a1 a1 a3`；十六小节末尾再加 a4；问答式 `a1 a2 a1 a3`（Riffs p0129–p0130；全表见 reference §2.2）。
-- ★ **变体的和声等级**：a2、a3 不能比 a4 更"完整"，因为 a4 是整块的结尾——A 调里 a2、a3 最好落在暗示 D、E 或 bIII、bVII 的音上（Riffs p0130）。
-- **重复几次**：intro 里 riff 只奏三次不奏四次就进主歌（Tush，Riffs p0038）；重复 4 小节改成 3 或 5 次，耳朵会更早听到变化（Peter Buck，Riffs p0132）；单小节 riff 只奏四次（约 10 秒）就进歌也成立（Riffs p0056）。
-- **上限的判据**：听众觉得"riff 很棒但歌结束得太快"→ 会重播，这是要的效果（Riffs p0118）；全程盯着 riff 不放是力量来源，但不无聊地做到很难（Riffs p0047）。
+- **Length**: 1, 2, and 4 bars are the norm; 3 bars are rare (repeated, they make 6, which breaks the grouping in fours, but four repetitions give 12); more than 4 bars is hard to hear as a single unit (Riffs p0129). Four bars usually split into two answering phrases; unsplit ones are rare (Riffs p0072).
+- **Repetition patterns**: label one bar as a1; the basic shape is **3+1**: `a1 a1 a1 a2`; eight bars `a1 a1 a1 a2 / a1 a1 a1 a3`; sixteen bars add a4 at the end; call-and-response `a1 a2 a1 a3` (Riffs p0129–p0130; full table in reference §2.2).
+- ★ **Harmonic level of variants**: a2 and a3 must not sound more "complete" than a4, because a4 is the ending of the whole block—in A, a2 and a3 are best landing on notes that imply D, E, or bIII, bVII (Riffs p0130).
+- **How many repetitions**: the riff in the intro plays three times, not four, before the verse comes in (*Tush*, Riffs p0038); repeating a 4-bar riff 3 or 5 times instead lets the ear notice change sooner (Peter Buck, Riffs p0132); a one-bar riff played only four times (about 10 seconds) before the song enters also works (Riffs p0056).
+- **The upper-limit criterion**: when listeners feel "the riff is great but the song ended too soon," they replay it—this is the desired effect (Riffs p0118). Keeping the riff in focus throughout is a source of power, but it should be hard to make it boring (Riffs p0047).
 
-**自检**：数一下 riff 在进人声前响了几遍——四遍以上且没有任何变体（重音、贝司音、加乐器），就已经在消耗它。
+**Self-check**: count how many times the riff sounds before the vocal enters—if it is four or more times with no variation at all (accents, bass notes, added instruments), you are already wearing it out.
 
-### 6.4 riff 与人声：让位还是持续
+### 6.4 Riff and vocal: yielding or sustaining
 
-两种关系都合法，但要选：
+Both relationships are valid, but you must choose:
 
-| 关系 | 怎么做 | 页 |
+| Relationship | How | Page |
 |---|---|---|
-| **交替**（riff 响时不唱） | riff 填无人声的段落；主歌收、器乐段爆发 | Riffs p0008 |
-| **riff 落在句尾** | riff 嵌在每句歌词的结尾，不分散对歌词的注意力（Queen Bitch）；riff 作为歌词的"确认"而非同时进行（The Thunderthief、Money） | Riffs p0099、p0145 |
-| **riff 持续、人声在上** | 硬摇滚／金属里 riff 从 intro 持续到主歌，人声在其上唱 | Riffs p0130 |
-| **人声骑在 riff 之上** | 旋律不跟 riff 走而"骑"过去，建立对位节奏（Howlin' Wolf） | Riffs p0046 |
-| **主歌换材料** | 人声在单一静态和弦上、随后接更忙的 riff——静态和弦不会分散对人声的注意力 | Riffs p0047 |
+| **Alternating** (no singing while the riff sounds) | The riff fills sections without vocals; the verse pulls back, the instrumental section explodes | Riffs p0008 |
+| **Riff lands at the end of the line** | The riff is inserted at the end of each lyric line, so it does not divert attention from the words (*Queen Bitch*); the riff acts as an "affirmation" of the lyric rather than running simultaneously (*The Thunderthief*, *Money*) | Riffs p0099, p0145 |
+| **Riff sustained, vocal on top** | In hard rock and metal, the riff runs from the intro into the verse, with the vocal singing over it | Riffs p0130 |
+| **Vocal riding over the riff** | The melody does not follow the riff but "rides" over it, establishing a contrapuntal rhythm (Howlin' Wolf) | Riffs p0046 |
+| **Verse changes material** | The vocal sits on a single static chord, followed by a busier riff—a static chord does not distract from the vocal | Riffs p0047 |
 
-★ **让 riff 与人声同时成立的三个条件**（Riffs p0131）：复杂的 riff 会分散对旋律的注意力，且不像和弦那样提供和声支持；要在 riff 上叠旋律，就 **①旋律节奏匹配 riff 节奏；②旋律选与 riff 音和声协调的音；③riff 有间隙时把旋律放进间隙**。
+★ **Three conditions for a riff and vocal to coexist** (Riffs p0131): a complex riff distracts from the melody and does not provide harmonic support the way chords do. To layer a melody over a riff, **① match the melody's rhythm to the riff's rhythm; ② choose melody notes that harmonize with the riff's notes; ③ place the melody in the gaps when the riff has them**.
 
-**音区解法**：低音区 riff 不像高音吉他 riff 那样与主唱冲突（Ball Of Confusion，Riffs p0056）；高吉他 riff＋低贝司的配置在编曲中间留出空间给人声（U2，Riffs p0037）；主歌里 riff 吉他退出混音、只留贝司奏 riff（Smells Like Teen Spirit，Riffs p0131）。
+**Register solutions**: low-register riffs do not clash with the lead singer the way high guitar riffs do (*Ball of Confusion*, Riffs p0056); a high guitar riff plus a low bass setup leaves room in the middle of the arrangement for the vocal (U2, Riffs p0037); in the verse, the riff guitar drops out of the mix and only the bass plays the riff (*Smells Like Teen Spirit*, Riffs p0131).
 
-**失效条件**：riff 里有会撞歌词的音，人声一进就把它删掉——Are You Gonna Go My Way 主唱进入时 riff 的四度消失（Riffs p0062）；riff 的上行跑句要落在歌手乐句之间的空隙，它才能同时是伴奏和 hook（Street Life，Riffs p0065）。
+**Failure conditions**: if the riff contains notes that collide with the lyrics, delete them as soon as the vocal enters—in *Are You Gonna Go My Way*, the riff's fourth disappears when the singer comes in (Riffs p0062); the riff's ascending run must fall into the gaps between the singer's phrases for it to serve as both accompaniment and hook (*Street Life*, Riffs p0065).
 
-### 6.5 riff 在段落结构里的位置
+### 6.5 Where the riff sits in the section structure
 
-Rooksby 列出的位置：**intro；主歌里持续；主歌与副歌之间的连接；独奏下方或引出独奏；coda 再现**（Riffs p0131）。每个位置有各自的策略：
+The positions Rooksby lists: **intro; sustained through the verse; the link between verse and chorus; under or leading into a solo; recurring in the coda** (Riffs p0131). Each position has its own strategy:
 
-| 位置 | 策略 | 页 |
+| Position | Strategy | Page |
 |---|---|---|
-| **intro riff** | 先给缩短版（五个音、停在未解决的音上），再给完整版——"写一条 riff，再做一个缩短版来延迟完整版的出现" | Riffs p0095 |
-| | intro 像从 12 小节的第 9 小节进入，增强 riff 进入时的冲击 | Riffs p0025 |
-| | riff 延迟进入：序列合成器→钢琴→鼓→第一段主歌之后吉他 riff 才来 | Riffs p0099 |
-| | 前 5 秒抓耳：贝司 E 八度对吉他 Bb 八度的三全音 | Riffs p0041 |
-| **verse riff** | 主歌简化、副歌或连接段保留完整形式 | Riffs p0131 |
-| | 主歌只留贝司奏根音、和弦是暗示的；或贝司单独奏根音撑第三段主歌，再由左右两把吉他加倍 | Riffs p0098、p0102 |
-| | 贝司 riff 撑第一段主歌（只配镲与人声），其他乐器进来但贝司持续到副歌——"riff 持续、上方发生别的事"造张力 | Riffs p0070 |
-| | 主歌 riff 无贝司，贝司到副歌才进 | Riffs p0111 |
-| **过门 riff** | 用琶音 riff 连接副歌与主歌；第一副歌后的第二条 riff 作为通往第二主歌的链接 | Riffs p0094、p0070 |
-| **独奏段** | 独奏常用简化形式、上全音移调 | Riffs p0064、p0121 |
-| **coda** | 结尾移调给听多次的 riff 注入新生命；把 riff 移到 E 用到吉他与贝司的最低音，力量最大 | Riffs p0120、p0082 |
-| **一条 riff 撑全曲** | 两小节 riff 撑整首、只靠偶尔重音变化（Louie Louie，Riffs p0100）；三种变体承载整首歌（Ain't Talkin' Bout Love，Riffs p0096）。前提是 riff 有变体等级（§6.3） | |
+| **Intro riff** | Give a shortened version first (five notes, ending on an unresolved note), then the full version—"write a riff, then make a shortened version to delay the appearance of the full one" | Riffs p0095 |
+| (same) | The intro enters as if from bar 9 of a 12-bar form, heightening the impact when the riff arrives | Riffs p0025 |
+| (same) | The riff enters late: sequencer synth → piano → drums → the guitar riff only arrives after the first verse | Riffs p0099 |
+| (same) | Catchy in the first 5 seconds: bass E octave against guitar Bb octave, a tritone | Riffs p0041 |
+| **Verse riff** | Simplify the verse; keep the full form for the chorus or linking section | Riffs p0131 |
+| (same) | In the verse, only the bass plays the root and the chords are implied; or the bass alone plays the roots to carry the third verse, then the left and right guitars double it | Riffs p0098, p0102 |
+| (same) | A bass riff carries the first verse (only cymbals and vocal with it); other instruments come in, but the bass continues into the chorus—"the riff persists while other things happen above it" creates tension | Riffs p0070 |
+| (same) | The verse riff has no bass; the bass enters only in the chorus | Riffs p0111 |
+| **Transition riff** | Use an arpeggiated riff to connect chorus and verse; a second riff after the first chorus serves as the link to the second verse | Riffs p0094, p0070 |
+| **Solo section** | Solos often use a simplified form, transposed up a whole step | Riffs p0064, p0121 |
+| **Coda** | Transposing in the ending breathes new life into a riff heard many times; moving the riff to E and using the lowest notes of guitar and bass gives the greatest power | Riffs p0120, p0082 |
+| **One riff carries the whole song** | A two-bar riff carries the whole song, relying only on occasional accent changes (*Louie Louie*, Riffs p0100); three variants carry an entire song (*Ain't Talkin' Bout Love*, Riffs p0096). This presupposes that the riff has a hierarchy of variants (§6.3) | |
 
-**贝司进入时机**（Riffs p0139）：别在第一分钟用光弹药——①贝司先低八度叠吉他，稍后再低一个八度；②贝司先奏踏板音再进齐奏；③贝司先奏 riff、吉他再叠上。
+**When the bass enters** (Riffs p0139): don't spend all your ammunition in the first minute—① the bass first doubles the guitar an octave lower, then drops another octave later; ② the bass first plays a pedal note before the full ensemble comes in; ③ the bass plays the riff first, then the guitar layers on top.
 
-**自检**：`hooks.arrangement_hook.recurs_at` 里每一次出现，都写得出"这一次与上一次的差别"（简化／完整／移调／换低音／换乐器）。一模一样出现三次以上，就是 §6.6 的手法没用上。
+**Self-check**: for each occurrence listed in `hooks.arrangement_hook.recurs_at`, be able to write out "how this time differs from the last" (simplified / full / transposed / different bass note / different instrument). If it appears identically three or more times, the techniques of §6.6 have not been used.
 
-### 6.6 变形手法
+### 6.6 Variation techniques
 
-按 RHM 三个面改，不要把 riff 当完成品，而是"只展示了一面的物体"（Riffs p0118；全表见 reference §3）：
+Vary it along the three RHM facets. Don't treat the riff as a finished product; treat it as "an object that shows only one side" (Riffs p0118; full table in reference §3):
 
-| 面 | 手法 | 一句话 | 页 |
+| Facet | Technique | In brief | Page |
 |---|---|---|---|
-| 节奏 | 测速度 | 目标是**不失去 riff 身份的最快速度**，不是能奏的最快；demo 常偏慢 | Riffs p0118 |
-| 节奏 | 减时 | 结尾把四小节 riff 压成两小节，听众感觉加速而速度未变 | Riffs p0134 |
-| 节奏 | 移重音／反转时值／移一拍 | 在重复中加原本没有的重音；附点八分＋十六分反过来；某些音前后移一拍或半拍 | Riffs p0134、p0060 |
-| 节奏 | 换拍号 | 4/4 放进 5/4 多出一拍休止给鼓 fill；插一小节 3/4 让下一段早一拍到 | Riffs p0135、p0132 |
-| 和声 | 重配和声 | 大→关系小；只含五度／四度的 riff 在不同段落分别配大、小和弦 | Riffs p0119 |
-| 和声 | 改贝司音 | 齐奏 riff 改贝司音暗示转位；第一转位不如根音齐奏"稳"，可用来延迟根音齐奏的出现 | Riffs p0119 |
-| 和声 | 换语境不换音 | riff 不动、和弦走 Em→G→C→F（Androgyny）；"改变被听见的语境而非改变音符" | Riffs p0119–p0120、p0184 |
-| 和声 | 局部和声化 | 只在最后一小节上方加几个音；三度／六度带大小调色彩，四度／五度／八度保持空洞；选八度时看人声线的音高 | Riffs p0140 |
-| 音高 | 移调（跟结构） | 12 小节里先上四度再上五度，一条单小节 riff 撑完 12 小节 | Riffs p0120–p0121 |
-| 音高 | 移调（不跟结构） | 最常见上大二度（第二副歌后为独奏）；小三度；沿五声音阶依次移；要不安就用半音或三全音 | Riffs p0121–p0122 |
-| 音高 | 八度叠加 | 同音高叠 2–3 轨后再加不更响；改叠不同八度 | Riffs p0139 |
-| 形式 | 逐遍发展 | A5 节奏→加小三度→小三度变 bIII 和弦→跑句加厚；"发展在摇滚里几乎不用"，所以偶尔用有奇效 | Riffs p0177、p0175 |
+| Rhythm | Testing tempo | The goal is **the fastest speed at which the riff keeps its identity**, not the fastest it can be played; demos often run slow | Riffs p0118 |
+| Rhythm | Diminution | At the end, compress a four-bar riff into two bars; listeners feel acceleration though the tempo is unchanged | Riffs p0134 |
+| Rhythm | Shifting accents / reversing note values / shifting by a beat | Add accents that were not there in the repetition; reverse a dotted eighth + sixteenth; move certain notes earlier or later by a beat or half-beat | Riffs p0134, p0060 |
+| Rhythm | Changing meter | Put a 4/4 riff into 5/4, adding an extra beat of rest for a drum fill; insert a 3/4 bar so the next section arrives a beat early | Riffs p0135, p0132 |
+| Harmony | Re-harmonizing | Major → relative minor; a riff containing only fifths or fourths is harmonized with major or minor chords in different sections | Riffs p0119 |
+| Harmony | Changing the bass note | In a unison riff, change the bass note to imply an inversion; the first inversion is less "stable" than root-position unison, and can be used to delay the arrival of the root-position unison | Riffs p0119 |
+| Harmony | Changing context, not notes | The riff stays put while the chords move Em→G→C→F (*Androgyny*); "change the context you hear, not the notes" | Riffs p0119–p0120, p0184 |
+| Harmony | Partial harmonization | Add a few notes above only the last bar; thirds and sixths carry major/minor color, fourths/fifths/octaves stay hollow; when choosing octaves, look at the pitch of the vocal line | Riffs p0140 |
+| Pitch | Transposition (following structure) | In a 12-bar form, go up a fourth and then a fifth; a single one-bar riff covers all 12 bars | Riffs p0120–p0121 |
+| Pitch | Transposition (not following structure) | Most commonly up a major second; a minor third; step through the pentatonic scale; for unease, use a semitone or tritone | Riffs p0121–p0122 |
+| Pitch | Octave layering | Stacking 2–3 tracks at the same pitch adds no more loudness; layer different octaves instead | Riffs p0139 |
+| Form | Development across repetitions | A5 rhythm → add a minor third → the minor third becomes a bIII chord → run thickened; "development is almost never used in rock," so using it occasionally is effective | Riffs p0177, p0175 |
 
-**失效条件**：
-- 移调会丢空弦——踏板／持续音／转位／和弦类 riff 尤其敏感。录音室能用变调夹或重调弦只叠移调版，**但要问现场怎么办**；更明智的是把它当成写变体的机会，"作曲解决"（Riffs p0122）。这条与 §3.2 同源。
-- 加音要有理由——"每个音的选择要么帮和声、要么帮节奏，没理由就别弹"（John Paul Jones，Riffs p0146）。
+**Failure conditions**:
+- Transposition loses open strings—pedal, sustained, inverted, and chord-based riffs are especially sensitive. In the studio, you can use a capo or retuning to layer only the transposed version, **but ask how it will be handled live**. A wiser move is to treat it as an opportunity to write a variant—"solve it compositionally" (Riffs p0122). This shares a source with §3.2.
+- Added notes need a reason—"each note should either support the harmony or support the rhythm; if there's no reason, don't play it" (John Paul Jones, Riffs p0146).
 
-### 6.7 riff 与贝司、鼓的对位
+### 6.7 Counterpoint between the riff and bass and drums
 
-★ 这是 riff 能不能"像演奏的"的关键，与 §7 直接相连。
+★ This is the key to whether a riff "sounds played," and it connects directly to §7.
 
-**与鼓**（Riffs p0135）：
-- 两个基本选择：**riff 的音嵌进鼓（dovetail）**，或**与鼓同时**。特别注意底鼓和军鼓——可以基于其中一个来写，或留出间隙让其中一个穿透。
-- 经典技巧：**在军鼓击打处留间隙、围着它奏**（Riffs p0135）；You Really Got Me 的力量来自军鼓在 riff 间隙里重击（Riffs p0024）；Last Resort 的冲击力来自音与音之间清晰的节拍间隔（Riffs p0076）。
-- 最有效的八度 riff 是与鼓锁定的——认真考虑每个音在节奏上的落点（Riffs p0027）。
-- 许多最好的 riff 产生于对着鼓机／鼓循环／鼓手即兴的时候：没有节奏伴奏，人会去追和声或旋律的兴奋，但摇滚主要关于节奏（Riffs p0135）。
-- John Paul Jones 的版本：从节奏组的角度想 riff；想让军鼓（或底鼓）成为特色，就在 riff 里给它留空；复杂 riff 里有时该停下 riff 让鼓表现动态——**"如果所有人同时演奏，它不会更重，只会更弱"**；张力放在微观层面，让 riff 的各部分相互推拉（Riffs p0145–p0146）。
+**With drums** (Riffs p0135):
+- Two basic choices: **the riff's notes dovetail into the drums**, or **they sound together with the drums**. Pay particular attention to the kick and snare—you can write around one of them, or leave a gap so one of them punches through.
+- A classic technique: **leave gaps where the snare hits and play around it** (Riffs p0135). The power of *You Really Got Me* comes from the snare hitting hard in the gaps of the riff (Riffs p0024); the impact of *Last Resort* comes from clear beat-spaces between the notes (Riffs p0076).
+- The most effective octave riffs are locked to the drums—think carefully about where each note lands rhythmically (Riffs p0027).
+- Many of the best riffs emerge while playing along with a drum machine, drum loop, or drummer's improvisation: without a rhythmic backing, people chase the excitement of harmony or melody, but rock is mainly about rhythm (Riffs p0135).
+- John Paul Jones's version: think about the riff from the rhythm section's perspective; if you want the snare (or kick) to be a feature, leave space for it in the riff; in a complex riff, sometimes you should stop the riff and let the drums express dynamics—**"if everyone plays at the same time, it won't get heavier, only weaker"**; place tension at the micro level, so that the parts of the riff push and pull against each other (Riffs p0145–p0146).
 
-**与贝司**：
-- 节奏上最好的吉他 riff 常由贝司加倍，节奏型与鼓一致（Riffs p0135）。
-- **贝司决定 riff 的和声身份**：同一 A–C–G 之下低音 A 像 A 小调五声，低音 F 或 C 就完全不同（Riffs p0129）；贝司稳定下来进主歌时 riff 的音色随之变化（Riffs p0037）；吉他静态、贝司在下移动即"隐含和弦"（Riffs p0037）。
-- 吉他转位类 riff，贝司必须跟着转位的低音走，只奏根音效果会弱（Riffs p0174）；反过来，想探索转位时**让贝司手改音比改吉他和弦更容易**（Riffs p0115）；AC/DC 在熟悉的五声和弦 riff 里靠贝司转位或踏板音造"和声扭曲"（Riffs p0100）。
-- 琶音 riff 下贝司可只奏根音以突出和弦变化（Riffs p0094）；riff 太快贝司模仿不了时，贝司自由奏别的（Riffs p0158）；小调音阶贝司线置于大三和弦下制造张力（The Rocker，Riffs p0103）。
-- 贝司稳住一个音、吉他在上换音程（Radar Love，ZZ Top 风格，Riffs p0051、p0090）——这是 `bass_kick_relation` 结合式的 riff 版本。
+**With bass**:
+- The rhythmically best guitar riffs are often doubled by the bass, with a rhythmic pattern matching the drums (Riffs p0135).
+- **The bass determines the riff's harmonic identity**: over the same A–C–G, a low A sounds like A minor pentatonic, while a low F or C sounds completely different (Riffs p0129). When the bass settles down and enters the verse, the riff's timbre changes accordingly (Riffs p0037). The guitar stays static while the bass moves underneath—this is an "implied chord" (Riffs p0037).
+- For inverted guitar riffs, the bass must follow the inverted bass line; playing only the root weakens the effect (Riffs p0174). Conversely, when exploring inversions, **it is easier to have the bassist change notes than to change the guitar chords** (Riffs p0115). AC/DC create "harmonic distortion" in familiar pentatonic chord riffs by using bass inversions or pedal notes (Riffs p0100).
+- Under an arpeggiated riff, the bass may play only the root to highlight the chord changes (Riffs p0094). When the riff is too fast for the bass to imitate, the bass is free to play something else (Riffs p0158). Placing a minor-scale bass line under a major triad creates tension (*The Rocker*, Riffs p0103).
+- The bass holds one note steady while the guitar changes intervals above it (*Radar Love*, ZZ Top style, Riffs p0051, p0090)—this is the riff version of the fused type in `bass_kick_relation`.
 
-**自检**（写完 riff 必做）：
-1. 说出军鼓落点与 riff 音的关系：嵌进去、留空、还是同时？
-2. 说出贝司是加倍、奏根音、奏踏板音、还是奏别的线——并说出为什么。
-3. 数全员同时砸的小节：多于 riff 长度的一半，就回到"更弱不更重"那句。
+**Self-check** (mandatory after writing a riff):
+1. State the relationship between the snare's landing points and the riff's notes: dovetailed in, left as gaps, or simultaneous?
+2. State whether the bass doubles, plays the root, plays a pedal note, or plays another line—and say why.
+3. Count the bars where everyone hits together: if they outnumber half the riff's length, return to the line "it gets weaker, not heavier."
 
 ---
 
-## 7. ★ "听起来像拼出来的"
+## 7. ★ "Sounds Assembled"
 
-**这是乐队风格最常见的失败，而且它有具体成因：**
+**This is the most common failure in band styles, and it has specific causes:**
 
-| 成因 | 解法 |
+| Cause | Remedy |
 |---|---|
-| **每件乐器都完美对齐网格** | → `mc-rhythm-section` §2.2：**逐乐器量化**，留一件不量化 |
-| **全员从头响到尾** | → 至少一件提前退场（**59/59 强规则**） |
-| **没有人在回应别人** | ★ 乐队音乐的本质是**互动**：吉他在人声句间填，鼓在吉他 riff 落点上重，贝司跟着底鼓走或故意不跟（→ `mc-rhythm-section` §7.1） |
-| **动态全程一致** | 真乐队在主歌会自动收，副歌会自动放。→ `energy_curve` |
-| **fill 落在 4 的倍数** | → lint #10 |
-| **riff 和鼓同时砸满** | → §6.7："所有人同时演奏不会更重，只会更弱"（Rooksby《Riffs》p0146）；在军鼓处给 riff 留空 |
-| **riff 每遍一模一样** | → §6.3、§6.6：3+1 变体、改贝司音、换语境不换音 |
+| Every instrument is perfectly aligned to the grid | → `mc-rhythm-section` §2.2: **quantize instrument by instrument**, leaving one instrument unquantized |
+| Everyone plays from start to finish | → At least one instrument drops out early (**59/59 strong rule**) |
+| Nobody responds to anyone else | ★ The essence of band music is **interaction**: guitar fills between vocal phrases, drums hit hard on the guitar riff's landing points, the bass follows the kick or deliberately doesn't (→ `mc-rhythm-section` §7.1) |
+| Dynamics are uniform throughout | Real bands naturally pull back in the verse and open up in the chorus. → `energy_curve` |
+| Fills land on multiples of 4 | → lint #10 |
+| The riff and drums hit together, filling everything | → §6.7: "if everyone plays at once, it doesn't get heavier, only weaker" (Rooksby, *Riffs*, p0146); leave space for the riff at the snare |
+| The riff is identical every time | → §6.3, §6.6: 3+1 variants, change the bass note, change the context but not the notes |
 
-★ **一个最直接的自检**：
-> **想象这五个人在房间里。他们在听彼此吗？**
-> 每一层都说得出"它在回应谁"，这首歌就会像演奏的。
+★ **The most direct self-check**:
+> **Imagine the five people in the room. Are they listening to each other?**
+> If every layer can say "who it is responding to," the song will sound played.
 
 ---
 
-## 8. 与 ARR-SPEC 的字段对应
+## 8. Field Mapping to ARR-SPEC
 
-| 字段 | 本 skill |
+| Field | This skill |
 |---|---|
 | `meta.style_layer` | `mc-style-rock-band` |
-| `arrangement.roster` | ★ §3 —— **先定名单，它是约束** |
-| `roster[].entry` | ★ §4 —— 开场在场的**不超过 20%** |
-| `hooks.arrangement_hook.what` | §6.1–§6.2 —— 写出 riff 的类型（reference §1 的名字）、长度（小节数）、**它下方的和弦**（§6.2 失效条件） |
-| `hooks.arrangement_hook.first_at` | §6.5 —— 缩短版先出，还是完整版直接出；贝司什么时候进 |
-| `hooks.arrangement_hook.recurs_at` | §6.5 —— 每次出现写差别（简化／完整／移调／换低音／换乐器） |
-| `form[].harmony` | §5.4 —— bVII、五声小调上的大三和弦是常态，不需要豁免 |
-| `form[].note` | §6.6、reference §4 —— 拍号变化（插 3/4、5/4 段）写在这里 |
-| `meta.key` | §3.5、reference §7 —— 调要对吉他友好（E、A、F#、B 一类）；不友好的调写出理由 |
-| `roster[].note` / `roster[].timbre` | §3.5 —— 调弦（drop D／open G）与指型记在 note；改了调弦，timbre 里的失真度要降 |
-| `depth_map` | §6.4 —— riff 与人声同时在前景时，riff 要么在低音区要么在高音区，不占中间 |
-| `groove.quantize_policy` | §7 —— 留一件不量化 |
-| `bass_kick_relation` | 结合式（重）或交织式（有旋律感）。§6.7 —— 贝司对 riff 是加倍／奏根音／奏踏板音／奏转位低音，四选一写清 |
-| `checks.exemptions` | ★ 用 power chord 的平行五度**不需要豁免**（§5.1 已说明它不是声部写作），但**双吉他各奏一条线时要注意**；双主音的三度平行是语汇（§3.4） |
+| `arrangement.roster` | ★ §3 — **define the roster first; it is the constraint** |
+| `roster[].entry` | ★ §4 — at the opening, present instruments **no more than 20%** |
+| `hooks.arrangement_hook.what` | §6.1–§6.2 — state the riff's type (name from reference §1), length (number of bars), and **the chords beneath it** (§6.2 failure conditions) |
+| `hooks.arrangement_hook.first_at` | §6.5 — whether the shortened version comes first or the full version appears directly; when the bass enters |
+| `hooks.arrangement_hook.recurs_at` | §6.5 — note the difference at each occurrence (simplified / full / transposed / different bass note / different instrument) |
+| `form[].harmony` | §5.4 — bVII and major triads on the pentatonic are the norm and need no exemption |
+| `form[].note` | §6.6, reference §4 — record meter changes (inserted 3/4, 5/4 sections) here |
+| `meta.key` | §3.5, reference §7 — the key should be guitar-friendly (E, A, F#, B and similar); if the key is not friendly, state the reason |
+| `roster[].note` / `roster[].timbre` | §3.5 — record tuning (drop D / open G) and fingerings in note; if the tuning is changed, reduce the distortion in timbre |
+| `depth_map` | §6.4 — when the riff and vocal are both in the foreground, the riff should be either in the low register or the high register, not occupying the middle |
+| `groove.quantize_policy` | §7 — leave one instrument unquantized |
+| `bass_kick_relation` | Fused (heavy) or interlocking (melodic). §6.7 — state clearly whether the bass doubles, plays the root, plays a pedal, or plays an inverted bass line against the riff: pick one of the four |
+| `checks.exemptions` | ★ Parallel fifths from power chords **need no exemption** (§5.1 already explains they are not voice-leading), but **watch out when two guitars each play a line**; parallel thirds in twin lead are vocabulary (§3.4) |
 
 ---
 
-## 9. 写完后必过
+## 9. Must-Check After Writing
 
-- [ ] **编制名单先写死**，后面的编排在它之内
-- [ ] 说得出这首歌**现场怎么办**（哪些层是叠录的色彩）
-- [ ] ★ **开场在场的乐器 ≤ 全部 roster 的 20%**
-- [ ] 至少一件乐器**提前退场**
-- [ ] `arrangement_hook` 有一条 **riff**，且写了它在哪几段复现
-- [ ] riff 响时**给它留了空间**（不与人声抢）
-- [ ] ★ **每一层都说得出"它在回应谁"**
-- [ ] 不是所有乐器都完美对齐网格
-- [ ] 用 power chord 时清楚它是**音色不是声部**（§5.1）
-- [ ] 往别的风格搬时，查过 §2
-- [ ] riff 写了**类型**（reference §1）、**长度**、**下方的和弦**（§6.2）
-- [ ] riff 的重复有变体等级：3+1，且 a2／a3 不比 a4 更完整（§6.3）
-- [ ] riff 与人声**选了关系**：交替／句尾／持续（持续则过 §6.4 的三个条件）
-- [ ] 说得出**军鼓落点与 riff 的关系**、**贝司奏什么**（§6.7）
-- [ ] 移调后丢空弦的问题已"作曲解决"，不是靠录音室（§6.6）
-- [ ] 改了调弦就降了失真（§3.5）
+- [ ] **Fix the roster first**; all later arrangement stays within it
+- [ ] Can state **how this song is handled live** (which layers are overdubbed color)
+- [ ] ★ **Instruments present at the opening ≤ 20% of the full roster**
+- [ ] At least one instrument **drops out early**
+- [ ] `arrangement_hook` has a **riff**, and the sections where it recurs are written down
+- [ ] **Leave it space** while the riff sounds (don't compete with the vocal)
+- [ ] ★ **Every layer can state "who it is responding to"**
+- [ ] Not every instrument is perfectly aligned to the grid
+- [ ] When using power chords, be clear that it is **timbre, not voice** (§5.1)
+- [ ] When transferring to other styles, checked §2
+- [ ] Riff's **type** (reference §1), **length**, and **chords beneath** (§6.2) are written
+- [ ] The riff's repetitions have a variant hierarchy: 3+1, and a2/a3 are not more complete than a4 (§6.3)
+- [ ] A **relationship between riff and vocal** is chosen: alternating / line-end / sustained (if sustained, pass the three conditions in §6.4)
+- [ ] Can state **the snare's landing points in relation to the riff** and **what the bass plays** (§6.7)
+- [ ] The lost-open-string problem after transposition has been "solved compositionally," not left to the studio (§6.6)
+- [ ] If tuning was changed, distortion was reduced (§3.5)
 
 ---
 
-## 附：来源
+## Appendix: Sources
 
-- **实测**：Cambridge-MT 多轨——
-  `rock` 10 首、`Alt-Rock---Blues---Country-Rock---Indie---Funk---Reggae` 10 首。
-  ★ **§4 那条"开场 8%"是本 skill 最实的一条依据。**
-- **和声的失效条件**：`mc-harmony` [reference.md](../mc-harmony/reference.md) §5、
-  `mc-counterpoint` [reference.md](../mc-counterpoint/reference.md) §1.1
-- **Riff 写作**：Rikky Rooksby《Riffs: How to Create and Play Great Guitar Riffs》，
-  引用页 p0007–p0184。§6 的定义、类型学、长度与重复模式、riff 与人声、段落位置、变形手法、与贝司／鼓的对位，
-  §3.3–§3.5 的编制与调弦，§5.4 的和声规则均出自此书；分类表、谱例索引、术语表见 [reference.md](reference.md)。
-  书中 30 型的划分以其自述为准（Riffs p0013），本 skill 只采用书里明确写出的说法。
-- 本 skill 建立在**语料实测 + 通用层 + 对"乐队编制"这个约束的推演 + Rooksby 的 riff 写作法**之上。
-- ⚠ 语料里那一包六风格混装（`Alt-Rock---Blues---Country-Rock---Indie---Funk---Reggae`）
-  **没有拆开**，所以本 skill 的实测数字不区分放克与雷鬼。
+- **Measurements**: Cambridge-MT multitracks—`rock` 10 tracks, `Alt-Rock---Blues---Country-Rock---Indie---Funk---Reggae` 10 tracks. ★ **The "8% at the opening" point in §4 is this skill's most solid basis.**
+- **Failure conditions for harmony**: `mc-harmony` [reference.md](../mc-harmony/reference.md) §5, `mc-counterpoint` [reference.md](../mc-counterpoint/reference.md) §1.1
+- **Riff writing**: Rikky Rooksby, *Riffs: How to Create and Play Great Guitar Riffs*, cited pages p0007–p0184. The definitions, typology, length and repetition patterns, riff and vocal, section placement, variation techniques, and counterpoint with bass and drums in §6, the lineup and tuning in §3.3–§3.5, and the harmony rules in §5.4 all come from this book; the taxonomy, example index, and glossary are in [reference.md](reference.md). The division of the book's 30 types follows its own account (Riffs p0013); this skill adopts only what the book states explicitly.
+- This skill rests on **corpus measurement + the general layer + deduction from the "band lineup" constraint + Rooksby's riff-writing method**.
+- ⚠ The six-style bundle in the corpus (`Alt-Rock---Blues---Country-Rock---Indie---Funk---Reggae`) **was not split apart**, so this skill's measured numbers do not distinguish funk from reggae.

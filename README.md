@@ -2,13 +2,15 @@
 
 English · [中文版](README_ZH.md) · [日本語](README_JA.md) · [한국어](README_KO.md)
 
+> **English translation fork.** This is an English translation of [jtydhr88/music-composition-skills](https://github.com/jtydhr88/music-composition-skills), whose skill files are written in Chinese. Content and structure follow the original; machine-assisted translation, so check terms and book titles against the cited sources. The original authorship and the MIT license (see LICENSE and NOTICE) apply unchanged.
+
 29 agent skills (for [Claude Code](https://docs.anthropic.com/en/docs/claude-code/skills) and [OpenAI Codex](https://developers.openai.com/codex/)) for composing and arranging popular music, distilled from 50 books on orchestration, harmony, form, counterpoint, mixing and style practice, plus 62 arrangements measured from multitrack recordings.
 
 Both agents share the same files: install once and it works in both.
 
 **The output is a spec sheet.** Ask for a song and the agent fills in an ARR-SPEC (arrangement spec sheet): key, tempo, bar-accurate section map, chord letters and roman numerals, who enters and leaves when, the energy curve, vocal delivery, mix intent. It then compiles that one document into a Suno prompt, a score for YuE2, or a note file that loads into music software. The same document is what you check the result against. The whole design comes down to **one artifact, four uses**: handoff, controlled A/B, compile source, acceptance baseline.
 
-**Ask in your own language.** The skill bodies are written in Chinese, because most of the sources are Chinese originals or Chinese translations. The agent answers in whatever language you ask in.
+**Ask in your own language.** In the original repository the skill bodies are written in Chinese, because most of the sources are Chinese originals or Chinese translations; in this fork they are translated into English. The agent answers in whatever language you ask in.
 
 **These skills trade time for quality.** A full pass through a professional music workflow often takes twenty minutes or more for a single song (the agent reads the criteria, fills in the spec, runs the checklists). What you get in return is a professional-grade spec.
 

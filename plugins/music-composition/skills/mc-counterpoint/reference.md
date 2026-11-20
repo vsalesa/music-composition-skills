@@ -1,328 +1,331 @@
-# mc-counterpoint 参考：声部进行规则、模仿复调与多声部导航
+# mc-counterpoint Reference: Voice-Leading Rules, Imitative Polyphony, and Navigation for Multi-Voice Writing
 
-> [SKILL.md](SKILL.md) 讲怎么写第二条线；本文件放**严格规则的原文**、
-> **模仿/卡农的完整目录**、以及三声部及以上的导航。
+> [SKILL.md](SKILL.md) covers how to write the second line; this file holds **the original text of the strict rules**, **the full catalogue of imitation and canon**, and **navigation for three or more voices**.
 >
-> 底本：**于苏贤《复调音乐教程》**（中国艺术教育大系·音乐卷，
-> ）。页码为该书页。
+> Source: **Yu Suxian, *A Course in Polyphonic Music* (Fudiao Yinyue Jiaocheng)**, China Art Education Series, Music volume (
+> ). Page numbers are the book's pages.
 
 ---
 
-## 1. ★ 第一类对位的六条声部进行规则
+## 1. ★ The six voice-leading rules of first species
 
-**这六条是全部对位规则的地基**，后面各类都在此基础上放开。
-即使写流行编曲不做严格对位，**规则 1、2、4、6 仍然有实际后果**。
+**These six rules are the foundation of all counterpoint rules**; later species relax them step by step.
+Even when writing pop arrangements without strict counterpoint, **rules 1, 2, 4 and 6 still have practical consequences**.
 
-| # | 规则 | 出处 |
+| # | Rule | Source |
 |---|---|---|
-| **1** | ★ **"大三度、小三度与大六度、小六度虽是主要音程，但连续出现三次平行进行就会形成一种依附关系，从而减弱了旋律线的独立性。"** | p0029，例 8（标"不好"） |
-| **2** | **"严格禁用平行五度与平行八度，以及反向五度与反向八度进行。"** | p0029，例 9（标"不可"） |
-| **3** | **由其他音程同向进入五度及八度时**：① **上声部级进、下声部跳进 → 可用**（例 10）；② **上声部跳进、下声部级进 → 禁止**（例 11） | p0029 |
-| **4** | **"两声部避免交错与超越。"** | p0029，例 12 |
-| **5** | 两声部之间的音程距离，要在**男女混合四声部的范围内**任选两部组合，**不超出人声音域**即可 | p0030 |
-| **6** | ★ **"同度音程在结构内部禁止使用。因为同度会使二声部结构造成中断的效果。"** | p0030 |
+| **1** | ★ **"Major and minor thirds, and major and minor sixths, though principal intervals, form a relation of dependence if they occur in parallel motion three times in a row, weakening the independence of the melodic line."** | p0029, Ex. 8 (marked "not good") |
+| **2** | **"Parallel fifths and parallel octaves are strictly forbidden, as are contrary fifths and contrary octaves."** | p0029, Ex. 9 (marked "not permitted") |
+| **3** | **When other intervals move in similar motion into a fifth or octave**: ① upper voice conjunct, lower voice leaping → permitted (Ex. 10); ② upper voice leaping, lower voice conjunct → forbidden (Ex. 11) | p0029 |
+| **4** | **"Two voices must avoid crossing and overtaking."** | p0029, Ex. 12 |
+| **5** | The interval distance between two voices should be chosen from any two parts of a mixed four-part (SATB) choir, **not exceeding the vocal range** | p0030 |
+| **6** | ★ **"Unisons are prohibited within the structure, because a unison makes the two-voice structure break off."** | p0030 |
 
-### 1.1 这六条在流行编曲里各自意味着什么
+### 1.1 What the six rules mean in pop arrangement
 
-| 规则 | 流行编曲里的后果 |
+| Rule | Consequence in pop arrangement |
 |---|---|
-| **1（连续平行三六度 ≤ 2 次）** | ★ **最实用的一条**。连续平行三度是"加和声"的默认做法，但**连三次它就不再是独立声部了**。想要真副旋律，**平行三度最多用两次就要换方向** |
-| **2（平行五八度）** | 在摇滚、EDM 里 power chord 就是平行五度——**那是故意的音色手段，不是声部写作**。但在弦乐、木管、合唱写作里这条仍然生效 |
-| **3（同向进入五八度）** | 细节，写弦乐组时会撞上 |
-| **4（交错与超越）** | 两条线穿过对方会让听众丢失线索。**编曲里表现为"突然分不清谁是主角"** |
-| **5（音域）** | 见 `mc-orchestration` |
-| **6（同度中断结构）** | ★ 两条线走到同度那一刻，**听众听到的是一条线**。用作刻意的汇合点可以，但会切断复调感 |
+| **1 (at most two consecutive parallel thirds or sixths)** | ★ **The most practical rule.** Consecutive parallel thirds are the default way of "adding harmony," but **after three in a row the line is no longer an independent voice.** For a real counter-melody, **use parallel thirds at most twice before changing direction** |
+| **2 (parallel fifths and octaves)** | In rock and EDM, power chords are parallel fifths. **That is a deliberate timbral device, not voice writing.** In string, woodwind, and choral writing this rule still applies |
+| **3 (similar motion into fifths and octaves)** | A detail that you will hit when writing string sections |
+| **4 (crossing and overtaking)** | Two lines passing through each other make the listener lose the thread. **In arrangement this shows up as "suddenly it is unclear who the protagonist is"** |
+| **5 (range)** | See `mc-orchestration` |
+| **6 (unison breaks the structure)** | ★ When two lines reach the same pitch, **the listener hears one line.** Usable as a deliberate meeting point, but it cuts the sense of polyphony |
 
-### 1.2 对位声部的旋律性要求
+### 1.2 Melodic requirements for contrapuntal voices
 
-> **"为使旋律线流畅，对位声部应以级进为基础。
-> 而具有和声力的五度、四度、大小三度、大小六度等旋律音程的跳进都是不可缺少的。
-> 但大七度、九度及增四度、减五度音程作旋律性跳进则应避免。"** (p0030)
+> "To keep the melodic line flowing, contrapuntal voices should be built on stepwise motion. Leaps of melodic intervals with harmonic force, such as fifths, fourths, major and minor thirds, and major and minor sixths, are indispensable. But leaps of major sevenths, ninths, and augmented fourths or diminished fifths should be avoided." (p0030)
 
-> **"大跳音程之前之后，应以相反方向的级进进行为佳。
-> 这样可以形成委婉曲折的旋律进行。"** (p0030)
+> "Before and after a large leap, contrary stepwise motion is preferable. This produces a winding, graceful melodic motion." (p0030)
 
 ---
 
-## 2. 五类对位：规则本体（于苏贤 p0028–0043）
+## 2. The five species: rule bodies (Yu Suxian, p0028–0043)
 
-五类对位是训练体系，不是写作风格；但它的每条规则都对应一种"两条线为什么打架"的原因。写副旋律出问题时按类查。
+The five species are a training system, not a writing style. But each of their rules corresponds to a reason why two lines fight. When a counter-melody has a problem, look it up by species.
 
-### 2.1 第一类：一音对一音，全部规则都在这里（p0028–0030）
+### 2.1 First species: note against note, where all the rules live (p0028–0030)
 
-**音程三档**：大小三度、大小六度及其复音程是**不完全协和**，音响坚实，是二部对位的主要音程；同度、纯五、纯八是**完全协和**，有稳定感，是建立调性结构的音程；纯四度双重性格，是五度的转位却带解决倾向，二声部里当不协和处理（p0028）。
-**调性结构**：首小节固定调在下时上方可用同度、五度、八度，固定调在上时下方只能用同度、八度；末小节两声部落在主音的同度或八度。意义是"强调主音的稳固作用，明确由起点到终点运动的方向感"（p0028）。
-**声部进行六条**（p0029–0030）：
-1. 三度六度虽是主要音程，**连续三次平行就形成依附关系**，旋律线独立性减弱。
-2. 严禁平行五度、平行八度，以及反向五度、反向八度。
-3. 同向进入五度八度：上声部级进、下声部跳进可以；**上声部跳进、下声部级进进到五度八度禁止**。
-4. 两声部避免交错与超越。
-5. 两声部的距离在混声四部里任选两部的范围内，不超出人声音域。
-6. **同度在结构内部禁用**，它会让二声部结构中断。
-**旋律流畅**：对位声部以级进为基础，五度、四度、三度、六度的跳进不可少；大七度、九度、增四减五不作旋律音程；**大跳前后用反向级进**（p0030）。
+**Interval tiers**: major and minor thirds and sixths, and their compounds, are **imperfect consonances**. They sound solid and are the main intervals of two-voice counterpoint. Unisons, perfect fifths and perfect octaves are **perfect consonances**; they give stability and are the intervals that establish tonal structure. The perfect fourth has a dual character: it is an inversion of the fifth but carries a tendency to resolve, so in two-voice writing it is treated as a dissonance (p0028).
 
-### 2.2 第二类：二音对一音，弱拍音的四种身份（p0031–0034）
+**Tonal structure**: in the first bar, when the cantus firmus is in the lower voice, the upper voice may use unisons, fifths and octaves; when the cantus firmus is in the upper voice, the lower voice may use only unisons and octaves. The last bar places both voices on the tonic, as a unison or an octave. The purpose is "to emphasise the stabilising role of the tonic and to make the sense of direction from start to finish clear" (p0028).
 
-强拍上的结合原则与第一类完全相同；对位声部第一小节先用二分休止符把进入时间错开（p0031）。第二个二分音符只能是四种之一：
-1. **不协和的经过音**：两个协和音之间级进引入的不协和音，"最富有对位特性的不协和音之一"（p0031）。
-2. **协和的经过音**：弱拍上级进引入却与固定调协和的音；因为五类对位一小节内不换和弦，它仍按经过音处理；终止前一小节除外，可看作换和弦的终止式，第二个协和音可跳进到主音（p0032）。
-3. **级进辅助音**：相邻小节强拍为同一音时，弱拍加上下大小二度装饰（p0032）。
-4. **跳进的协和音转换**：同和弦音转换，用来改进声部进行、换音域；相邻小节第二个二分音符形成八度也禁止（p0032–0033）。
-**终止**：终止前一小节两个二分音符必须都是协和音，**绝不能用不协和音进入结束的主音**（p0033–0034）。
+**The six voice-leading rules** (p0029–0030):
+1. Thirds and sixths are principal intervals, but **three parallel motions in a row form a relation of dependence**, which weakens the independence of the melodic line.
+2. Parallel fifths and octaves are strictly forbidden, as are contrary fifths and octaves.
+3. Similar motion into a fifth or octave: the upper voice moving stepwise while the lower voice leaps is allowed; **the upper voice leaping while the lower voice moves stepwise into a fifth or octave is forbidden**.
+4. The two voices must avoid crossing and overtaking.
+5. The distance between the voices must lie within the range of any two parts of a mixed four-part choir, not exceeding the vocal range.
+6. **Unisons are forbidden within the structure**, because they break the two-voice structure.
 
-### 2.3 第三类：四音对一音，多出来的是双辅助音（p0035–0037）
+**Melodic smoothness**: contrapuntal voices are built on stepwise motion. Leaps of fifths, fourths, thirds and sixths are indispensable. Major sevenths, ninths, and augmented fourths or diminished fifths are not used as melodic leaps. **Use contrary stepwise motion before and after a large leap** (p0030).
 
-每小节第一个四分音符必须协和，相邻小节第一音之间不得平行五八；新增**上下环绕的双辅助音**，只能用在一小节内部装饰一个音；其余三个四分音符任何一个都可以是不协和音；**相邻小节第一拍只可连续出现一次相同的音**，多了就停滞；同一小节内跳进协和音转换可出现在任何两个四分音符之间（p0035–0036）。终止规则同第二类。
+### 2.2 Second species: two notes against one; the four identities of weak-beat notes (p0031–0034)
 
-### 2.4 第四类：切分与延留音，不协和终于能落在强拍（p0038–0040）
+The consonance principles on strong beats are exactly the same as in first species. In the first bar the counter-voice first uses a half rest to stagger its entry (p0031). The second half note can only be one of four types:
+1. **Dissonant passing tone**: a dissonance approached by stepwise motion between two consonances, described as "one of the most contrapuntal dissonances" (p0031).
+2. **Consonant passing tone**: approached by stepwise motion on a weak beat, yet consonant with the cantus firmus. Because second species has no chord change within a bar, it is still treated as a passing tone. The exception is the bar before the cadence, which may be read as a cadential chord change; there the second consonance may leap to the tonic (p0032).
+3. **Neighbour note**: when adjacent strong beats share the same note, the weak beat is decorated by a major or minor second above or below (p0032).
+4. **Leap to a consonant substitute**: a change between chord tones of the same chord, used to improve voice motion and shift register. If the second half notes of adjacent bars form an octave, that too is forbidden (p0032–0033).
 
-每小节第二个二分音符必须协和并用连线延到下一小节强拍，于是不协和出现在第一拍，形成"两声部的重音交错"（p0038）。切分音两种身份：
-- **延留音**：延到强拍构成不协和，**必须下行级进解决**。上方延留音是压缩的：7–6、4–3、9–8、11–10，**2–1 禁用**；下方延留音是扩张的：2–3、4–5、9–10，**7–8 一般禁用**；**9–8 不能连续用**，会成平行八度（p0038）。
-- **协和切分音**：延过去仍协和，处理是跳进到另一个协和音；上方五度不可上行级进到六度，那算上行解决的延留音或换和弦，离开五类对位后完全可用（p0039）。
-每小节第二个二分音符之间不可出现连续八度与五度，那是实际上的平行（p0039）。
+**Cadence**: the two half notes in the bar before the cadence must both be consonant. **Never enter the final tonic with a dissonance** (p0033–0034).
 
-### 2.5 第五类：混合节奏（p0040–0043）
+### 2.3 Third species: four notes against one; the extra notes are double neighbour tones (p0035–0037)
 
-前四类的综合，不是按小节拼接，而是在保留前四类原则的基础上丰富与变化的混合；第一小节可从二三四类的开头写法里选一种或混用；调性原则同前；**第一类的全音符对全音符只能用在结束的最后一小节**，开始与中间都不能用（p0040–0041）。
+The first quarter note of each bar must be consonant. Between the first notes of adjacent bars, no parallel fifths or octaves. New **double neighbour notes** (above and below) may be used only to decorate one note within a bar. Any of the other three quarter notes may be dissonant. **The first beats of adjacent bars may repeat the same note only once in succession;** more than that causes stagnation. Within one bar, a leap to a consonant substitute may occur between any two quarter notes (p0035–0036). The cadence rules are the same as in second species.
 
-**两个新增因素**：
-- **八分音符**：只能作级进的经过音或辅助音用在弱拍，第一拍与第三拍不用，一小节内最多出现一次（p0041）。
-- **全音符的变化形式**：可拆成二分附点音符加一个四分音符，或两个八分音符；拆出来的四分音符若与固定调协和，可用跳进构成协和音转换（p0041）。
+### 2.4 Fourth species: syncopation and suspension; dissonance finally falls on strong beats (p0038–0040)
 
-**切分节奏的装饰解决**（前提仍是延留音必须下行解决，只丰富外部形态，p0041–0042）：解决音内部可以加装饰音，延留音延留过程中也可以加装饰音；用跳进辅助音装饰时**必须一方跳进一方级进，不可前后都跳进**（同 §1 的跳进辅助音规则）。★ **底线**：装饰音不能掩盖延留音预备与解决之间原本存在的平行五度或平行八度，装饰只是表面变化，骨架里的平行五八照样算数（p0042）。
+The second half note of each bar must be consonant and is tied over to the strong beat of the next bar. The dissonance therefore lands on the first beat, forming "a crossing of accents between the two voices" (p0038). Syncopation has two identities:
+- **Suspension**: held over to a strong beat, where it forms a dissonance, and **must resolve by stepwise descent**. Upper suspensions are compressed: 7–6, 4–3, 9–8, 11–10; **2–1 is forbidden**. Lower suspensions are expanded: 2–3, 4–5, 9–10; **7–8 is generally forbidden**; **9–8 may not be used consecutively, since that becomes parallel octaves** (p0038).
+- **Consonant syncopation**: stays consonant when held over. The treatment is to leap to another consonance. An upper fifth may not move stepwise up to a sixth; that counts as an upward-resolving suspension or a chord change, and once you leave fifth species it is fully usable (p0039).
 
-第五类是"能自由到什么程度"的上限，不是"随便写"：骨架仍是前四类的规则，混合节奏只是把外壳做丰富。
+Between the second half notes of successive bars, consecutive octaves and fifths must not appear, since that is effectively parallel motion (p0039).
 
-### 2.6 从练习到写作：对比复调的两种对比与四条旋律特性（第三章，p0050–0056）
+### 2.5 Fifth species: mixed rhythm (p0040–0043)
 
-**不同特性的对比**：同时陈述两个不同性格的旋律，用对位原则统一，戏剧性交响性音乐里用来把两个形象结合起来表现矛盾（p0050）。
-**相同特性的对比**：两条旋律没有鲜明性格差别，靠对位技术造对比：**节奏疏密互补、音程结合的色彩变换、同向反向与斜向的声部进行**（p0052）；这种对比仍有主次之分，常用来给已陈述过的主题配对比旋律使之升华（p0052）。这是流行编曲里副旋律的常态：不是另一个角色，是同一角色的另一面。
+A synthesis of the first four species, not a mechanical assembly of bars. It enriches and varies the material while keeping the principles of the first four species. The first bar may use an opening from second, third or fourth species, or mix them. Tonal principles are as before. **The whole note against a whole note of first species may be used only in the final bar of the cadence, never at the beginning or in the middle** (p0040–0041).
 
-**严格对位旋律的四条特性**（p0054）：合唱风格（平稳流畅、律动宽广悠缓，不是器乐的音型化旋律）；调式调性明确（起止显示调性结构，不转调）；音程在人声音域内，避免增减音程与七度九度大跳，其他大跳后反向级进平衡；节奏宽广悠缓，让两条线可以**交替使用不协和**。
-**节奏三注意**（p0055）：跨小节切分要设计好延留音的解决或协和切分的发展，不必再守"解决音必须在第三个四分音符上"；避免等时值节奏型重复；避免相同节奏组织连续原样重复。
-**结构**：乐句型或乐段型都可，不要求方整对称，但必须有逻辑性，靠调式功能、节奏、材料发展形成呼应，避免"流水账式的罗列"，高潮形成与下降不能突然（p0055）。
-**结合原则**：协和音程是对位的本质音程，不协和音程是由对位技巧形成的旋律性动力因素（p0055–0056）。
+**Two new elements**:
+- **Eighth notes**: used only as stepwise passing or neighbour notes on weak beats, never on the first or third beat, and at most once per bar (p0041).
+- **Variant forms of the whole note**: it may be split into a dotted half plus a quarter note, or into two eighth notes. A split-off quarter note that is consonant with the cantus firmus may form a consonant change by leap (p0041).
 
----
+**Decorating syncopation** (the premise remains that suspensions must resolve by descent; only the outer form is enriched; p0041–0042): ornaments may be added within the resolution note, and also during the suspension. When decorating with leaping neighbour tones, **one voice must leap while the other moves stepwise; both must not leap** (the same rule as the leaping neighbour tone in §1). ★ **Bottom line**: decoration must not hide the parallel fifths or octaves that exist between the suspension's preparation and its resolution. Decoration is only surface variation; parallel fifths and octaves in the skeleton still count (p0042).
 
-## 3. 复对位（可动对位）全表
+Fifth species is the **ceiling on how freely you may write**, not permission to "write anything": the skeleton still follows the rules of the first four species, and mixed rhythm only enriches the outer shell.
 
-**第四章 二声部复对位对比复调**（p0059 起）。
-SKILL.md §6 只讲了最实用的部分，完整的在这里。
+### 2.6 From exercises to writing: two kinds of contrast in contrapuntal polyphony, and four melodic characteristics (Chapter 3, p0050–0056)
 
-### 3.1 纵向可动对位（二重对位）
+**Contrast of unlike characteristics**: two melodies of different character are presented at once and unified by counterpoint principles. Used in dramatic and symphonic music to join two images and express conflict (p0050).
 
-| 类型 | 页 |
-|---|---|
-| **八度 / 十五度二重对位**：写作限制与转位方法 | p0060–0063 |
-| 八度二重对位：实际应用与三行谱表写作 | — |
-| **十二度二重对位**：特征与写作原则 | — |
-| **十度二重对位**：写作原则与转位方法 | — |
-| 其他音程的二重对位（第五节） | — |
+**Contrast of like characteristics**: the two melodies lack sharp differences of character, and counterpoint technique creates the contrast through **complementary rhythmic density, varied interval colour, and contrary, similar, and oblique voice motion** (p0052). This contrast still has a primary and a secondary voice, and is often used to add a contrasting melody to a theme already stated, so as to elevate it (p0052). This is the normal state of a counter-melody in pop arrangement: not another character, but the other face of the same character.
 
-**音程关系的计算**分三种情形，各有公式（第十节，p0090）：
-- **反向移动**的计算
-- **单向移动**的计算
-- **同向移动**的计算
+**Four characteristics of a strict contrapuntal melody** (p0054): choral style (smooth and flowing, with a broad, unhurried rhythmic pulse, not instrumental figuration); a clear modal and tonal identity (the start and end show a tonal structure, and there is no modulation); intervals within the vocal range, with augmented and diminished intervals and leaps of sevenths and ninths avoided, and other large leaps balanced by contrary stepwise motion; and a broad, unhurried rhythm that lets the two lines **take turns using dissonances**.
 
-### 3.2 横向与纵横可动对位
+**Three rhythm cautions** (p0055): across bar lines, design the resolution of suspensions or the development of consonant syncopations with care, and it is not necessary to keep the rule that the resolving note falls on the third quarter note. Avoid rhythmic patterns of equal note values repeating. Avoid the same rhythmic organisation repeating unchanged in succession.
 
-**第六节 横向可动对位**（p0077–0079）：两旋律的**音级与声部位置都不变**，只改变进入的**时间距离**：拉近、拉远，或者干脆把先后顺序颠倒（原来 A 先 B 后，变化结合里 B 先 A 后）。因为移位后纵向音程关系不再有规律可循，严格写作**只能用三行谱表**：两条已有旋律各自抄在两端的谱表上、留出不同的进入间隔，再在中间谱表配一条同时和两端都成立的低音。
+**Structure**: phrase-type or period-type are both acceptable, and regular symmetry is not required. But the structure must be logical, and echoes must come from modal function, rhythm and development of material. Avoid "a ledger-like list of items." Climax formation and descent must not be abrupt (p0055).
 
-**第七节 纵横可动对位**（p0079–0081）：音高关系与进入时间**同时**变化，是纵向可动对位与横向可动对位的叠加。★ **它和二重对位有本质差异**：纵横同时在动，两旋律的纵向音程已没有规律可循，所以任何音程的移动难度都一样（八度转位不比十度转位更难）。也存在声部位置不转换、只把纵向距离拉宽或收窄再叠加横向移动的变体。严格写作同样**只能用三行谱表**：两端谱表放已有旋律的原位与转位形式，横向再错开，中间谱表配对比旋律，须同时兼顾两种结合都成立；要让顺序颠倒，就把后配的旋律安排进两次已有旋律之间进入。
-
-### 3.3 倒影对位（第八节，p0082 起）
-
-按**音轴**分类，每种音轴有各自的写作原则：
-
-| 音轴 | 页 |
-|---|---|
-| II 级音轴（Supertonic Axis） | p0084 |
-| III 级音轴（Mediant Axis） | p0085 |
-| IV 级音轴（Subdominant Axis） | p0086 |
-| V 级音轴（Dominant Axis） | p0086 |
-| 同音列各自然调式中的"商"音轴 | p0087 |
-
-另有：**延留音的应用**（p0087）、**倒影对位中的声部变换**（p0088）。
-
-### 3.4 逆行对位（第九节，p0089–0090）
-
-**定义**：两条旋律原形结合陈述完之后，各自在原有声部位置上**逆向走回起始音**，形成新的对位结合；效果像镜子里的映像，所以也叫**镜式对位**（p0089）。二十世纪作曲家对它的开掘远超严格对位阶段：兴德米特《调性游戏》套曲里的 F 调赋格，整首结构就是顺行与逆行各占一半（p0089）。
-
-**写作原则**（p0090）：
-- 两条旋律都**从主音开始**，这样结束也落在主音上，调性才立得住；
-- 原形里的经过音、辅助音逆行之后会变成直接相撞的强倚音，**要回头调整原形里的不协和音**，让顺行、逆行两种结合都成立；
-- 顺行与逆行的**交接点**是关键：可以用一个实音做横向的"镜轴"，也可以用休止符做镜轴，总之不能生硬；
-- 顺行与逆行也可以不连在一起使用，各自独立出现。
+**Principle of combination**: consonant intervals are the essential intervals of counterpoint. Dissonant intervals are melodic dynamic factors produced by contrapuntal technique (p0055–0056).
 
 ---
 
-## 4. 模仿复调与卡农
+## 3. Complete table of movable counterpoint
 
-**第五章**（p0091 起）。
+**Chapter 4: two-voice double counterpoint and contrasting polyphony** (from p0059).
+SKILL.md §6 covers only the most practical part. The complete version is here.
 
-### 4.1 基本概念与分类（p0095–0099）
+### 3.1 Vertical movable counterpoint (double counterpoint)
 
-**基本概念**：相同材料在**同一声部**先后出现叫**反复**；在**不同声部**先后出现叫**模仿**。先出现的叫开始声部，材料叫**起句**（是主题时就叫**主题**）；后出现的叫模仿声部，对起句的模仿叫**应句**（对主题的模仿叫**答题**）；开始声部与模仿声部构成的对比成分叫**对句**（对主题就是**对题**）（p0095）。
+| Type | Page |
+|---|---|
+| **Octave and fifteenth double counterpoint**: writing restrictions and inversion methods | p0060–0063 |
+| Octave double counterpoint: practical application and writing on three staves | — |
+| **Twelfth double counterpoint**: features and writing principles | — |
+| **Tenth double counterpoint**: writing principles and inversion methods | — |
+| Double counterpoint at other intervals (Section 5) | — |
 
-**分类的四个维度**（p0096）：按模仿程度分**严格模仿**与**变化模仿**；按模仿部位分**局部模仿**与**卡农式模仿**；按音程距离分同度、二度、五度模仿等；按变化形态分倒影、扩大、紧缩模仿等。★ 一次模仿往往同时落在好几个维度上，教学上才按单一维度分类讲解。
+**Calculating interval relations** covers three cases, each with its own formula (Section 10, p0090):
+- calculation for **contrary motion**
+- calculation for **one-directional motion**
+- calculation for **similar motion**
 
-**严格模仿**：模仿声部对开始声部在旋律方向、音程关系、节奏形式上**不作任何改变**（p0096）。★ 但"严格"是相对的：自然调式音阶里非八度的模仿，音程之间的半音数本来就不均等，真正精确的模仿只有十二音体系里才存在。
+### 3.2 Horizontal and vertical-horizontal movable counterpoint
 
-**局部模仿**：模仿声部只对开始声部模仿**一次**，不连续模仿下去，所以也叫简单模仿；创意曲、赋格里陈述部分最常用的手法（p0096）。写作要点（p0097–0099）：
-- 起句长短要适中，太短印象弱，太长冲淡效果；
-- 应句何时进入：可以等起句陈述完；也可以在起句的句逗停顿处进入；也可以让起句结尾与应句开头**重叠**，只要纵向音程合理；起句是完整主题而结束音与应句开头音程不合逻辑时，**加一个连接因素**把应句引到正确的音程关系上进入；
-- 模仿声部上下位置不限，模仿的音程距离原则上没有限制；
-- **四、五度模仿是特例**：这是赋格呈示段的基础。严格移到属调（或下属调）叫**完全模仿**；为避免开头就转调而改动开头几个音、让答题首部先留在起句调性上，叫**守调模仿**，常见做法是"主答属、属答主"：起句里主音到属音的跳进，答题用属音到主音回答。
+**Section 6, horizontal movable counterpoint** (p0077–0079): the two melodies keep **their pitch classes and voice positions unchanged**. Only the **time distance** of entry changes: it is brought closer, pushed further apart, or the order is simply reversed (originally A first and B second; in the combined version B first and A second). Because the vertical intervals no longer follow a regular pattern after the shift, strict writing **must use three staves**: each existing melody is written on one of the two outer staves with a different entry gap, and a bass line on the middle staff is made to work with both.
 
-局部模仿之后接连续模仿就是**卡农**，见 §4.2。
+**Section 7, vertical-horizontal movable counterpoint** (p0079–0081): pitch relations and entry times **change at the same time**. It is a superposition of vertical and horizontal movable counterpoint. ★ **It differs essentially from double counterpoint.** Since vertical and horizontal motion both change, the vertical intervals between the two melodies follow no regular pattern, so every interval shift is equally difficult (an octave inversion is no harder than a tenth inversion). There are also variants in which the voice positions are not exchanged, but the vertical distance is widened or narrowed and then combined with horizontal movement. Strict writing likewise **must use three staves**: the outer staves hold the existing melody in original and inverted forms, staggered horizontally, and the middle staff holds a contrasting melody that must satisfy both combinations. To reverse the order, place the later-added melody so that it enters between the two presentations of the existing melody.
 
-### 4.2 卡农
+### 3.3 Inverted counterpoint (Section 8, from p0082)
 
-- **卡农的构成及应用形式**（按音程分类）
-- **卡农的写作**
+Classified by **axis**. Each axis has its own writing principles:
 
-**第三节 变化模仿**的十种卡农：
+| Axis | Page |
+|---|---|
+| II-degree axis (Supertonic Axis) | p0084 |
+| III-degree axis (Mediant Axis) | p0085 |
+| IV-degree axis (Subdominant Axis) | p0086 |
+| V-degree axis (Dominant Axis) | p0086 |
+| The "shang" (second-degree) axis in each natural mode of the same scale | p0087 |
 
-| # | 类型 | 页 |
+Also covered: **the use of suspensions** (p0087) and **voice exchange in inverted counterpoint** (p0088).
+
+### 3.4 Retrograde counterpoint (Section 9, p0089–0090)
+
+**Definition**: after two melodies have been stated together in their original forms, each returns to its starting note by moving backwards in its own voice position, forming a new combination. The effect is like a mirror image, which is why it is also called **mirror counterpoint** (p0089). Twentieth-century composers explored it far beyond the strict counterpoint stage. In Hindemith's *Ludus Tonalis* cycle, the fugue in F is built so that the direct and retrograde forms each take up half the piece (p0089).
+
+**Writing principles** (p0090):
+- Both melodies **start on the tonic**, so the ending also falls on the tonic and the tonality stands firm;
+- Passing and neighbour notes in the original become directly clashing strong appoggiaturas when played backwards. **Go back and adjust the dissonances in the original** so that both the direct and the retrograde combinations hold;
+- The **junction** between direct and retrograde is the key point. A sustained note can serve as a horizontal "mirror axis," or a rest can serve as the axis. Either way, the junction must not be abrupt;
+- Direct and retrograde forms need not be joined. Each may also appear on its own.
+
+---
+
+## 4. Imitative polyphony and canon
+
+**Chapter 5** (from p0091).
+
+### 4.1 Basic concepts and classification (p0095–0099)
+
+**Basic concepts**: the same material appearing again and again in **the same voice** is called **repetition**; appearing in **different voices** in succession is called **imitation**. The material that appears first is the **leading phrase** (when it is a theme, the **theme**). The later imitating voice's copy of the leading phrase is the **response phrase** (its copy of a theme is the **answer**). The contrast formed by the leading voice and the imitating voice is the **counter-phrase** (for a theme, the **countersubject**) (p0095).
+
+**Four dimensions of classification** (p0096): by degree of imitation, **strict imitation** and **free imitation**; by location, **local imitation** and **canonic imitation**; by interval distance, unison, second, fifth imitation and so on; by form of variation, inversion, augmentation, diminution and so on. ★ A single imitation often falls under several dimensions at once. Teaching classifies it along one dimension at a time.
+
+**Strict imitation**: the imitating voice makes **no change** to the direction of the melody, the interval relations or the rhythmic form of the leading voice (p0096). ★ But "strict" is relative: in a natural modal scale, imitation at intervals other than the octave has unequal numbers of semitones between intervals, so truly exact imitation exists only in the twelve-tone system.
+
+**Local imitation**: the imitating voice imitates the leading voice **only once** and does not continue, so it is also called simple imitation. It is the most common device in inventions and in the exposition of fugues (p0096). Writing points (p0097–0099):
+- The leading phrase should be a moderate length: too short and the impression is weak; too long and the effect is diluted;
+- When the response enters: it can wait until the leading phrase is complete; it can enter at a comma-like pause within the leading phrase; or the end of the leading phrase can overlap the start of the response, as long as the vertical intervals are reasonable. If the leading phrase is a complete theme and its ending note forms an illogical interval with the opening of the response, **add a connecting element** to lead the response into the correct interval relation before it enters;
+- The imitating voice may be above or below, and in principle there is no limit on the interval distance of imitation;
+- **Imitation at the fourth or fifth is a special case**: it is the basis of the fugue exposition. Moving strictly to the dominant (or subdominant) key is called **complete imitation**. To avoid modulating right at the start, the first few notes are altered so that the answer's opening stays in the key of the leading phrase; this is called **tonal imitation**. The common practice is "tonic answers dominant, dominant answers tonic": a tonic-to-dominant leap in the leading phrase is answered by a dominant-to-tonic leap.
+
+Local imitation followed by continuous imitation becomes a **canon**; see §4.2.
+
+### 4.2 Canon
+
+- **Structure and forms of application of canon** (classified by interval)
+- **Writing a canon**
+
+**Section 3, varied imitation: ten kinds of canon:**
+
+| # | Type | Page |
 |---|---|---|
-| 四 | **紧缩卡农** | p0109 |
-| 五 | **紧缩倒影卡农** | p0109–0110 |
-| 六 | **逆行卡农** | p0110–0112 |
-| 七 | **逆行倒影卡农** | p0112–0113 |
-| 八 | **同步倒影卡农** | p0113–0114 |
-| 九 | **自由卡农** | p0114 |
-| 十 | **节奏卡农** | p0114–0115 |
+| 4 | **Contracted canon** | p0109 |
+| 5 | **Contracted inverted canon** | p0109–0110 |
+| 6 | **Retrograde canon** | p0110–0112 |
+| 7 | **Retrograde-inverted canon** | p0112–0113 |
+| 8 | **Simultaneous inverted canon** | p0113–0114 |
+| 9 | **Free canon** | p0114 |
+| 10 | **Rhythmic canon** | p0114–0115 |
 
-### 4.3 第六章：二声部复对位模仿复调（p0116 起）
+### 4.3 Chapter 6: two-voice double-counterpoint imitative polyphony (from p0116)
 
-| 主题 | 页 |
+| Topic | Page |
 |---|---|
-| **无终卡农**（endless canon）的写作方法 | — |
-| 辅助谱表（helper staff）的四个要点 | — |
-| 无终卡农结构图式与二重对位音程公式 | — |
-| **卡农模进**（canon sequence）的特性、构成、写作方法、应用 | — |
-| **转位卡农**的特性与应用 | p0127–0130 |
-| **紧接模仿**（第五节） | p0130–0135 |
+| Writing method for **endless canon** | — |
+| Four key points of the helper staff | — |
+| Structural schema of endless canon and the interval formulas for double counterpoint | — |
+| **Canon sequence**: characteristics, construction, writing method, applications | — |
+| **Canon with inversion** (transposed canon): characteristics and applications | p0127–0130 |
+| **Stretto** (close imitation) (Section 5) | p0130–0135 |
 
-> ★ **哪些能用在流行/影视编曲里**：
-> **严格模仿**（一条线延迟进入，同一旋律）是最容易用的——
-> 弦乐的层叠进入、人声的轮唱、电子乐的 delay 式声部，本质都是它。
-> **紧缩卡农**（后进入的声部时值缩短）是做"加速逼近"的高潮手段。
-> 其余（逆行、倒影）在配乐里偶尔用作"镜像"的音响隐喻，流行歌里基本用不上。
+> ★ **Which of these can be used in pop and film arrangement**:
+> **Strict imitation** (one line entering late with the same melody) is the easiest to use. Layered string entries, vocal rounds, and delay-style parts in electronic music are essentially all this.
+> **Contracted canon** (a later voice with shortened note values) is a climax device for "accelerating approach."
+> The rest (retrograde, inversion) occasionally serve as sonic metaphors for "mirroring" in film scores, but are basically unused in pop songs.
 
 ---
 
-## 5. 二声部复调乐曲（第七章，p0137 起）
+## 5. Two-voice polyphonic pieces (Chapter 7, from p0137)
 
-| 主题 | 页 |
+| Topic | Page |
 |---|---|
-| 概述与卡农曲 | p0137–0138 |
-| **卡农曲结构分析：三部曲式** | p0139–0141 |
-| **创意曲（Invention）** | p0142–0143 |
-| 其他形式的二声部复调乐曲 | p0144 |
-| ★ **中国风格作品分析** | p0145–0149 |
+| Overview and canon pieces | p0137–0138 |
+| **Structural analysis of canon: ternary form** | p0139–0141 |
+| **Invention** | p0142–0143 |
+| Other forms of two-voice polyphonic pieces | p0144 |
+| ★ **Analysis of works in Chinese style** | p0145–0149 |
 
 ---
 
-## 6. 三声部及以上
+## 6. Three or more voices
 
-**写流行歌基本用不到，写管弦/合唱必需。**
+**Hardly needed for writing pop songs; essential for writing orchestral and choral music.**
 
-### 6.1 三声部（第八–十三章，p0150 起）
+### 6.1 Three voices (Chapters 8–13, from p0150)
 
-| 章 | 内容 | 页 |
+| Chapter | Content | Page |
 |---|---|---|
-| 第八章 | **三声部基本对位** | p0150–0153 |
-| 第九章 | 三声部单对位对比复调：**声部性格与进入形式**、严格写作 | — |
-| 第十章 | 三声部复对位：**八度三重对位**（特性/写作原则/实际应用/严格写作 p0172）；**三声部倒影对位** p0174；**附加平行三度的三声部复对位** p0178 | — |
-| 第十一章 | 三声部模仿复调：综述 / 严格模仿 / 变化模仿；紧缩时值的三声部卡农；扩大倒影与紧缩倒影卡农；自由卡农；**加自由声部的卡农** | — |
-| 第十二章 | 三声部无终卡农 / 卡农模进 / 转位卡农（八度三重对位转位卡农；二重对位转位的三声部卡农） | — |
-| 第十三章 | 三声部复调形式：**复调合唱曲** | — |
+| Chapter 8 | **Basic three-voice counterpoint** | p0150–0153 |
+| Chapter 9 | Three-voice single-counterpoint contrasting polyphony: **character of the voices and forms of entry**, strict writing | — |
+| Chapter 10 | Three-voice double counterpoint: **triple counterpoint at the octave** (features, writing principles, practical application, strict writing p0172); **three-voice inverted counterpoint** p0174; **three-voice double counterpoint with added parallel thirds** p0178 | — |
+| Chapter 11 | Three-voice imitative polyphony: overview, strict imitation, varied imitation; canons with contracted note values; expanded and contracted inverted canons; free canon; **canon with an added free voice** | — |
+| Chapter 12 | Three-voice endless canon, canon sequence, canon with inversion (triple counterpoint at the octave, inverted canon; three-voice canon with double-counterpoint inversion) | — |
+| Chapter 13 | Three-voice polyphonic forms: **polyphonic choral pieces** | — |
 
-**关键谱例**：例 262 弗兰克《赋格》；例 263 莫扎特《卡农》（含"表面复杂性与内在规律"的分析）；
-例 264《孔雀飞起来了》（中段/结尾/高潮/尾声逐段分析）。
+**Key examples**: Ex. 262, Franck, *Fugue*; Ex. 263, Mozart, *Canon* (including an analysis of "surface complexity and inner law"); Ex. 264, *The Peacock Flies Up (Kongque Feiqilai Le)* (segment-by-segment analysis of the middle section, ending, climax and coda).
 
-### 6.2 四声部（第十四–十五章）
+### 6.2 Four voices (Chapters 14–15)
 
-| 主题 |
+| Topic |
 |---|
-| 四声部对比复调 |
-| ★ **四声部中不协和音的多样化应用与连锁现象** |
-| 四声部对比复调的**艺术表现特性** |
-| 四声部对比复调的**结合原则** |
-| 严格写作的四声部对比复调 |
-| 第十五章 四声部复对位：**八度四重对位**；四声部倒影对位 |
+| Four-voice contrasting polyphony |
+| ★ **Diversified use of dissonance in four-voice writing, and chain phenomena** |
+| **Expressive characteristics** of four-voice contrasting polyphony |
+| **Principles of combination** in four-voice contrasting polyphony |
+| Strict writing for four-voice contrasting polyphony |
+| Chapter 15, four-voice double counterpoint: **quadruple counterpoint at the octave**; four-voice inverted counterpoint |
 
 ---
 
-## 7. 赋格
+## 7. Fugue
 
-底本是赵晓生《巴赫平均律 结构分析版》下册，页号随文标注。
+The base text is Zhao Xiaosheng, *Bach's Well-Tempered Clavier: Structural Analysis*, vol. 2. Page numbers are annotated in the text.
 
-### 7.1 赋格三段，段与段以终止式划界
+### 7.1 A fugue has three sections, divided by cadences
 
-呈示段（主题在各声部依次进入，主属交替）→ 展开段（离开主调，间插段与紧接段交替，材料裂变重组）→ 再现或总合段（回主调，终止式，可加 coda）。
-**段与段之间以 cadence 划界**（p0199–0200、p0231–0233）。
+Exposition (the subject enters in each voice in turn, alternating tonic and dominant) → development (leaving the home key, episodes and closely following entries alternate, and the material is split and recombined) → recapitulation or summation (returns to the home key, a cadence, and optionally a coda).
+**Sections are divided by cadences** (p0199–0200, p0231–0233).
 
-★ 一条顺带松开的约束：**巴赫的再现时常不在主调上**，属调或下属调再现也叫再现，因为"段落各部分与呈示段相对应"（p0232）。
-写歌时"再现"看的是材料对应，不是调。
+★ A loose constraint: **Bach's recapitulations are often not in the tonic.** A recapitulation in the dominant or subdominant also counts as a recapitulation, because "the parts of the section correspond to the exposition" (p0232). When writing songs, "recapitulation" is judged by correspondence of material, not by key.
 
-### 7.2 间插段与紧接段：两个能直接搬进流行编曲的做法
+### 7.2 Episodes and closely following entries: two methods that transfer directly into pop arrangement
 
-**间插段的材料与主题、对题同源**，做法是把来自主题与对题的材料**原形与倒影相互交错重组**（p0092、p0232）。
-→ 搬进流行编曲：**间奏与过门的材料应取自主副歌，不要另写一段。**
+**Episode material shares its origin with the subject and countersubject.** The method is to interlace material from the theme and the countersubject, in original and inverted forms, and recombine it (p0092, p0232).
+→ Transfer to pop arrangement: **interludes and fills should draw their material from the verses and choruses; do not write a separate new passage.**
 
-**紧接段**：后一次主题在前一次未结束时进入，密度就是张力旋钮，可与时值紧缩叠用（p0079、p0232）。
-→ 末段副歌想再上一档，让第二条人声提前进来叠着唱，比加乐器有效。
+**Closely following entries (stretto)**: the next entry of the theme comes before the previous one has finished. Density is the tension dial, and it can be combined with note-value compression (p0079, p0232).
+→ To lift the final chorus one more level, bring in a second vocal early so it sings on top. That works better than adding instruments.
 
-统领两者的概念是**核心细胞加时空重组**：同一个细胞在时间维上顺行、逆行、紧缩、扩大、延迟，在空间维上换音区、换声部、倒影、复对位、叠层（p0080、p0200、p0235）。
-本文的二重对位、可动对位、卡农十型都收在这一个框架下。
+The concept that unites both is **core cell with spatio-temporal reorganisation**. In time, the same cell can run direct, retrograde, compressed, expanded, or delayed. In space, it can change register, change voice, invert, take double counterpoint, or stack in layers (p0080, p0200, p0235). The double counterpoint, movable counterpoint, and the ten canon types in this file all fall under this one framework.
 
-### 7.3 ★ 听众凭什么把一串音听成一个独立的层
+### 7.3 ★ Why a listener hears a string of notes as an independent layer
 
-一个"层面"要成立，五个条件（p0092）：
+For a "layer" to be established, five conditions must hold (p0092):
 
-1. 同一音高层面上，相隔再远的音也要能前后呼应连接
-2. 有独立的音乐性格
-3. 音区与别的层相互分离，**间距越大性格越显**
-4. 节奏形态独立
-5. 同一层面内的材料有相关性
+1. On the same pitch level, notes far apart must still be able to echo and connect to each other, in order
+2. It has an independent musical character
+3. Its register separates it from other layers; **the greater the gap, the more distinct the character**
+4. Its rhythmic shape is independent
+5. The material within the same layer is related
 
-据此**三个声部可以被听成十个层面**。这回答了本库以前没答过的问题：不是写了几条线就有几层，而是听众能分出几条。
-`mc-texture-layering` §3.4 的六手段里，音区与节奏形态直接对应第 3、4 条。
-底本下卷有，但本 skill 以上卷（复调技术理论）为主。
-**赵晓生／巴赫平均律第二卷分析**是补充来源，
-
+By this standard, **three voices can be heard as ten layers.** This answers a question the library had not answered before: writing several lines does not automatically give several layers. What matters is how many the listener can separate.
+Register and rhythmic shape in `mc-texture-layering` §3.4 correspond directly to conditions 3 and 4.
+The lower volume of the source has this material, but this skill relies mainly on the upper volume (theory of polyphonic technique).
+**Zhao Xiaosheng's analysis of Bach's *Well-Tempered Clavier*, vol. 2**, is a supplementary source.
 
 ---
 
-### 7.4 两个动机怎么叠：四种时空位置与"叠几层差几度"（赵晓生）
+### 7.4 Two motives stacked: four temporal and spatial positions, and "how many degrees apart for each layer" (Zhao Xiaosheng)
 
-两个动机结合有四种位置（p0045）：共时叠合；延迟到一个动机之后（起始音程三度）；推迟到形成领先卡农（与 a 纯五度、与 b 八度）；推迟到形成滞后卡农（八度模仿，结合音程六度与三度）。
-**叠层的极致**：同一材料两层、三层、四层紧接叠合，各层之间分别是八度、六度、三度关系，**层数与音程距离是一对旋钮**（p0045）。
-★ **高潮可以纯靠材料叠置堆出来**：小弧形连续叠置形成长呼吸的大拱形，赋格的两次高潮点都是由环环相扣的材料叠置达到的（p0045）。
-给 `mc-arrangement-arch` 的能量曲线补一条不靠加乐器的路。
+Two motives can be combined in four positions (p0045): simultaneous stacking; delayed to follow one motive (opening interval a third); delayed to form a leading canon (with a, a perfect fifth; with b, an octave); or delayed to form a lagging canon (octave imitation, combined intervals a sixth and a third).
 
-### 7.5 外繁内简与外简内繁（p0092）
+**The extreme of layering**: the same material stacked two, three or four deep in close succession, with each layer related at the octave, the sixth, and the third respectively. **The number of layers and the interval distance are a pair of dials** (p0045).
 
-两条组织思维：**外繁内简**，表面听着复杂，内部核心组织极简；**外简内繁**，表面只有三个声部，内部包含远多于三声部的空间构造。
-写之前先定走哪条：想让听众觉得"密"，用前者，材料一个就够；想让听众觉得"清"又不空，用后者，层面五条件（§7.3）拉满。
+★ **A climax can be built purely by stacking material.** Small arcs stacked one after another form a long-breathed large arch. Both climaxes of the fugue are reached by interlocking stacks of material (p0045).
+This gives the energy curve in `mc-arrangement-arch` another route that does not rely on adding instruments.
 
-### 7.6 三条省材料的做法
+### 7.5 Outer complexity with inner simplicity, and outer simplicity with inner complexity (p0092)
 
-- **一个固定音型撑起整段**：四小节固定音型在 66 小节里出现 8 次，配 5 个不同的对位，靠复对位构成全部织体，此外只有两组模进（p0231）
-- **模进格式的倒置重组**：把已有格式里的两个成分倒置，保持其中一个的切分节奏，另一个略变形使之更有推动力；之后切分节奏又被单独抽出构成新格式（p0231）。"从已有的东西里再长一个"
-- **对题可以多重化**，一首赋格有第一二三对题，它们**可以从不完整纵向重合**，先后呈示、只组接一次（p0080 前后）
-- **调性拱形**（p0080）：调性布局本身做成拱形，头尾在主调，中部三次小调终止，与主调形成以三度为特征的拱形。`mc-form` 的调性布局多了一个形状
+Two organising principles: **outer complexity, inner simplicity**, which sounds complex on the surface but has an extremely simple core organisation. **Outer simplicity, inner complexity**, which has only three voices on the surface but internally contains far more spatial structure than three voices.
 
-## 8. 与其他 skill 的接口
+Decide the route before writing. To make the listener feel "dense," use the first: one piece of material is enough. To make the listener feel "clear but not empty," use the second and fully satisfy the five layer conditions (§7.3).
 
-| 内容 | 去哪 |
+### 7.6 Three ways to save material
+
+- **One fixed figure carries a whole section**: a four-bar fixed figure appears eight times in 66 bars, set against five different counter-lines. Double counterpoint builds all the texture, and apart from that there are only two sequences (p0231).
+- **Inverted recombination of sequence patterns**: take two components of an existing pattern and invert them, keep the syncopated rhythm of one, and slightly deform the other to make it more propulsive. Later, the syncopated rhythm is extracted alone to form a new pattern (p0231). "Grow something new out of what already exists."
+- **Countersubjects can be multiplied**: a fugue can have a first, second and third countersubject. They **may overlap incompletely**, be presented in succession, and combined only once (around p0080).
+- **Tonal arch** (p0080): the tonal layout itself is shaped like an arch. The head and tail are in the home key, and the middle has three cadences in minor. Together they form an arch characterised by thirds relative to the home key. `mc-form`'s tonal layout gains another shape.
+
+## 8. Interfaces with other skills
+
+| Content | Where it goes |
 |---|---|
-| 单条旋律好不好唱（音域、跳进限制） | `mc-melody` §3、§4 ——★ **约束比这里松**，因为只需一条线成立 |
-| 和弦选择与功能 | `mc-harmony` ——★ **纵向归它，横向归这里** |
-| 这条对位线用什么乐器、和主旋律怎么融合 | `mc-orchestration` §3 |
-| 这条线占哪个频段 | `mc-texture-layering` |
-| 影视配乐里的双线叙事 | `mc-style-cinematic`（L3）＋ 本 skill §2 |
-| 复调合唱的实际写作 | 本文件 §6.1 第十三章 |
+| Whether a single melody is singable (range, leap limits) | `mc-melody` §3, §4. ★ **The constraints here are looser**, because only one line has to hold up |
+| Chord choice and function | `mc-harmony`. ★ **Vertical goes there, horizontal goes here** |
+| Which instrument this counter-line uses and how it blends with the main melody | `mc-orchestration` §3 |
+| Which frequency band this line occupies | `mc-texture-layering` |
+| Two-line narrative in film scoring | `mc-style-cinematic` (L3) + SKILL.md §2 of this skill |
+| Practical writing of polyphonic choral music | §6.1 Chapter 13 of this file |

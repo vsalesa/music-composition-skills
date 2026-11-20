@@ -1,220 +1,219 @@
-# mc-form 参考：段落对比技法、逐段编制表与古典曲式目录
+# mc-form Reference: Section Contrast Techniques, Section-by-Section Lineup Table and Classical Form Catalogue
 
-> [SKILL.md](SKILL.md) 讲怎么排结构；本文件放**怎么让段落听起来真的不同**，
-> 以及流行术语不够用时的古典曲式目录。
+> [SKILL.md](SKILL.md) covers how to arrange structure; this file covers **how to make sections actually sound different**,
+> and a catalogue of classical forms for when pop terms run out.
 >
-> 来源：《プロの曲作りが分かる本》、高山博《ポピュラー音楽作曲のための旋律法 増補版》；
-> **吴祖强《曲式与作品分析》**。
+> Sources: *A Book That Explains How Professionals Write Songs*, Takayama Hiroshi, *Melody Writing for Popular Music Composition* (expanded edition);
+> **Wu Zuqiang, *Musical Forms and Work Analysis***.
 
 ---
 
-## 1. ★ 段落对比：六要素表
+## 1. ★ Section contrast: the six-element table
 
-> **段落感不是靠贴标签来的，是靠运动性质的对比来的。**
+> **A sense of sectionhood does not come from attaching labels; it comes from contrasts in the nature of motion.**
 >
-> **前提：同一材料的性格由上下文决定**——
-> 前面是静态乐句，它就被听成小高潮；前面是飞扬乐句，它就成了安抚性的回答。
+> **Premise: the character of the same material is determined by its context**:
+> if it follows a static phrase, it is heard as a small climax; if it follows a soaring phrase, it becomes a soothing answer.
 
-**典型的 A → サビ 发展。翻转任何一项都产生对比；
-一次翻转多项 = 强对比（适合进副歌），翻转单项 = 弱对比（适合段落内的小变化）：**
+**The typical development from A to sabi. Reversing any one item produces a contrast;
+reversing several at once = strong contrast (suited to entering the chorus), reversing a single item = weak contrast (suited to small variations within a section):**
 
-| # | 要素 | A メロ（引入） | サビ（高潮） |
+| # | Element | A-melo (introductory) | Sabi (climax) |
 |---|---|---|---|
-| 1 | **音域** | 低、窄 | 高、宽（**在宽音域上一口气推起来**） |
-| 2 | **时值／密度** | 短音符的说话式密度，或长保持的白玉音符 | ★ **与 A 相反**：A 密则副歌开阔成长时值；A 疏则副歌加密 |
-| 3 | **音程运动** | 同音反复、级进 | **大跳**，尤其开头的上行大跳 |
-| 4 | **乐句起点位置** | 反拍／弱起 | 强拍起 |
-| 5 | **节奏性格** | 平白、贴着拍 | 切分，或反过来"与拍严丝合缝的有力节奏" |
-| 6 | **和声节奏** | 短和弦为主（频繁更换） | 长和弦为主（或反之），配合旋律的扩张 |
+| 1 | **Range** | Low, narrow | High, wide (**pushed up in one breath across a wide range**) |
+| 2 | **Note values / density** | Speech-like density of short notes, or long sustained "white-jade" (*shiratama*) notes | ★ **The opposite of A**: if A is dense, the sabi opens out into long note values; if A is sparse, the sabi adds density |
+| 3 | **Interval motion** | Repeated notes, stepwise motion | **Large leaps**, especially an upward leap at the opening |
+| 4 | **Phrase starting point** | Off-beat / upbeat | Starts on a strong beat |
+| 5 | **Rhythmic character** | Plain, sitting on the beat | Syncopated, or conversely a powerful rhythm locked tightly to the beat |
+| 6 | **Harmonic rhythm** | Mainly short chords (changing frequently) | Mainly long chords (or the reverse), matching the expansion of the melody |
 
-### 1.1 ★ 挑选对比材料的诀窍
+### 1.1 ★ The trick for choosing contrast material
 
-> **抓住前一段开头（出だし）最有特征的那个元素，把它反过来。**
+> **Identify the most characteristic element at the opening (*dasi*, the "start") of the preceding section, and reverse it.**
 
-例：A 段的招牌是"弱起 + 同音反复 + 低窄音域"，
-那么副歌就用"强拍起 + 大跳 + 高宽音域"来对比。
+Example: if section A's signature is "upbeat + repeated notes + low narrow range",
+then the chorus contrasts it with "strong-beat start + large leaps + high wide range".
 
-**优先处理每个乐节开头的性格，是让结构清晰的通用技巧。**
+**Prioritizing the character at the start of each phrase is a general technique for making structure clear.**
 
-### 1.2 "运动不同 ≠ 听得出对比"
+### 1.2 "Different motion ≠ audibly contrasting"
 
-> 运动虽不同但**性格同类**（都是八分音符、窄音域、级进）→ 听起来是"同样的东西在继续"。
-> ★ **对安静段落来说这反而是恰当的统一感。**
+> If the motion differs but the **character is the same kind** (all eighth notes, narrow range, stepwise), it sounds like "the same thing continuing".
+> ★ **For quiet sections, this is actually an appropriate sense of unity.**
 
-**要清楚的对比，运动性质必须显著不同**：
-级进 ↔ 跳进、短时值 ↔ 长时值、贴拍 ↔ 切分，**一次翻转多项**。
+**For a clear contrast, the nature of the motion must differ markedly**:
+stepwise ↔ leaps, short note values ↔ long note values, on the beat ↔ syncopated. **Reverse several items at once.**
 
-### 1.3 一个示范
+### 1.3 A demonstration
 
-A 段 = 弱起、密集切分的八分音符；
-B 段 = 全音符的白玉稀疏；
-サビ = 抬高音区、中等密度、动机重复
-→ **靠密度与音区建立段落对比。**
+Section A = upbeat, densely syncopated eighth notes;
+Section B = sparse, sustained whole notes ("white jade");
+Sabi = raised register, medium density, motif repetition
+→ **the section contrast is built through density and register.**
 
-这是个抽象骨架，只用来示范"翻转单项"和"翻转多项"分别落在六要素表的哪几格，不是某首真实曲子的拆解；真实曲例见 `mc-case-studies` §2.4（桑田佳祐、Hey Jude、Sunday Morning 三例都能反过来对照这张表复核）。
+This is an abstract skeleton, used only to demonstrate which cells of the six-element table are hit by "reversing a single item" and "reversing several items". It is not a breakdown of any real song. For real examples, see `mc-case-studies` §2.4 (three cases: Kuwata Keisuke, "Hey Jude" and "Sunday Morning" can all be checked against this table in reverse).
 
 ---
 
-## 2. 逐段编制厚度表
+## 2. Section-by-section lineup thickness table
 
-以典型流行编制（鼓、贝司、木吉他、电吉他、钢琴）为例。
+Using a typical pop lineup (drums, bass, acoustic guitar, electric guitar, piano) as the example.
 
-★ **这张表与 `mc-arrangement-arch` 的关系**：
-它给的是**惯例的默认值**；打破默认（为什么这首歌的 2A 反而更厚）归 arrangement-arch。
+★ **Relationship between this table and `mc-arrangement-arch`**:
+It gives **the default values of convention**; breaking the default (why this song's 2A is actually thicker) belongs to arrangement-arch.
 
-| 段落 | 厚度关键词 | 编配要点 |
+| Section | Thickness keyword | Arranging points |
 |---|---|---|
-| **前奏** | 薄编制 | 别太长；平滑流进 A；可用弦乐四重奏陈述主题；**埋一句预告副歌的乐句** |
-| **1 A メロ** | **做出空隙** | 钢琴或木吉他 + 贝司 + 鼓就够；**甚至可以撤掉贝司和鼓**；开阔的声场，听得见气声与呼吸 |
-| **1 B メロ** | 略厚 | 薄薄一层持续弦乐、长笛加厚；曼陀林/西塔/竖琴/柔和短号奏动机重音；电吉他泛音。★ **不要一次全进**："休止 → 填一小句" |
-| **段落接缝** | 桥接音 | 弦乐驆け上がり（快速上行音阶）、镲滚奏、竖琴刮奏往上推；★ **人声弱起进入时，大胆地无伴奏** |
-| **1 サビ** | 全部入り | 全员推高潮；弦乐奏**对旋律**；加铜管；加合唱或字ハモ |
-| **2 A メロ** | **与 1A 不同的印象** | ★ **编曲者显功力的地方**：1A 钢琴 → 2A 木吉他；抽掉鼓和贝司；双轨人声改单轨（听得见呼吸） |
-| **2 B メロ** | — | 可与 1B 相同；弦乐之类的细节微调是功力所在 |
-| **2 サビ** | — | 通常与 1 サビ同编制；**在人声空隙里织入对旋律**加深记忆 |
-| **间奏** | **刻意的若无其事** | 保留サビ的余韵、让耳朵休息；同时逐件加乐器、铺转调和弦，为下一段助跑 |
-| **C/D メロ** | **意外的发展** | ★ **和弦进行最要紧**：造一个前面没出现过的世界 |
-| **3 サビ 1**（大サビ位置） | 高潮顶点 | 可转调；弦乐比之前的サビ飞得更高，合唱更厚 |
-| **3 サビ 2** | — | 用更大的弦乐动态推上顶峰 |
-| **尾奏** | **美丽地留余韵** | 别太长；淡出？还是只剩钢琴？**在"留下印象"上下功夫** |
+| **Intro** | Thin lineup | Not too long; flow smoothly into A; the theme can be stated by a string quartet; **bury a phrase that previews the chorus** |
+| **1 A-melo** | **Leave space** | Piano or acoustic guitar + bass + drums is enough; **may even drop the bass and drums**; open soundstage, with breath and air audible |
+| **1 B-melo** | Slightly thicker | A thin layer of sustained strings, flute thickening; mandolin / sitar / harp / soft short trumpet accenting the motif; electric guitar harmonics. ★ **Do not bring everything in at once**: "rest → fill with a short phrase" |
+| **Section seam** | Bridging sounds | Strings doing a rising run (*kakeagari*, a fast ascending scale), cymbal roll, harp glissando pushing upward; ★ **when the vocal enters on an upbeat, boldly go unaccompanied** |
+| **1 sabi** | Everyone in | Everyone pushes toward the climax; strings play **counter-melody**; add brass; add choir or lyrical harmony (*ji-hamo*) |
+| **2 A-melo** | **A different impression from 1A** | ★ **Where the arranger shows their skill**: 1A piano → 2A acoustic guitar; remove drums and bass; double-tracked vocal changed to single-tracked (breath audible) |
+| **2 B-melo** | — | May be the same as 1B; fine adjustments such as strings are where the skill lies |
+| **2 sabi** | — | Usually the same lineup as 1 sabi; **weave counter-melody into the gaps in the vocal** to deepen memorability |
+| **Interlude** | **Deliberate nonchalance** | Keep the lingering resonance of the sabi and let the ear rest; at the same time add instruments one by one and lay down modulating chords, running up to the next section |
+| **C / D-melo** | **Unexpected development** | ★ **Chord progressions matter most**: create a world that has not appeared before |
+| **3 sabi 1** (ō-sabi position) | Peak of climax | May modulate; strings soar higher than in the earlier sabi, choir thicker |
+| **3 sabi 2** | — | Push to the summit with greater string dynamics |
+| **Outro** | **Lingering beautifully** | Not too long; fade out? Or leave only piano? **Work on leaving an impression** |
 
 ---
 
-## 3. ★ 歌手与编曲的抑扬互补
+## 3. ★ Complementary dynamics between singer and arrangement
 
-**这条常被忽略，但它决定了一首歌听起来是"堆"还是"有呼吸"：**
+**This point is often overlooked, but it decides whether a song sounds "stacked" or "breathes":**
 
-| 歌手 | 编曲 |
+| Singer | Arrangement |
 |---|---|
-| **抑扬少**（平directed 的唱法） | **抑扬多的编曲**（音符多，但也留足空隙）来补足动态，听众仍能舒服地"用耳朵跟着人声走" |
-| **抑扬丰富**（表现力强） | **抑扬少的编曲**，把人声顶到前面（例如只有一把木吉他伴奏） |
+| **Little dynamic variation** (flat delivery) | **An arrangement with plenty of dynamic variation** (many notes, but also leaving ample space) to make up the dynamics, so listeners can still comfortably "follow the vocal with their ears" |
+| **Rich dynamic variation** (strong expressiveness) | **An arrangement with little dynamic variation**, pushing the vocal to the front (for example, just one acoustic guitar as accompaniment) |
 
-> ★ **两者同步往前推是流行的王道，但做得太常规就会失去新鲜感，
-> 跳进"谁弹得更炫"的残酷竞争里——刻意的"错位互补"是差异化策略。**
+> ★ **Pushing both forward in sync is the mainstream of pop, but when done too conventionally it loses freshness and falls into a cutthroat contest over "who plays flashier". Deliberate "offset complementarity" is a differentiation strategy.**
 
-**与本库的接口**：这条要与 `mc-vocal-direction` §1② 的逐段 delivery
-和 `mc-arrangement-arch` §2 的能量曲线**一起决定**。
-歌手抑扬 + 编曲抑扬**同时拉满**，正是生成模型的默认动作。
+**Interface with this library**: this must be decided together with the section-by-section delivery in `mc-vocal-direction` §1 ② and the energy curve in `mc-arrangement-arch` §2.
+Maxing out both singer dynamics and arrangement dynamics at once is exactly the default behavior of generative models.
 
 ---
 
-## 4. 古典曲式目录（吴祖强）
+## 4. Classical form catalogue (Wu Zuqiang)
 
-流行术语不够用时切到这一套。**两套不要混着说。**
+Switch to this system when pop terms are not enough. **Do not mix the two systems.**
 
-### 4.1 乐段：比"段落"更细的刻度（第三章，p0082 起）
+### 4.1 Period: a finer scale than "section" (Chapter 3, from p0082)
 
-**这一章是全书最实用的部分**——它给出了比"段落"更细的刻度。
+**This chapter is the most practical part of the whole book**: it gives a finer scale than "section".
 
-| 主题 | 页 |
+| Topic | Page |
 |---|---|
-| 乐段及其组成部分（概述） | — |
-| **乐段、乐句、乐节与动机的划分原则** | — |
-| 乐句的划分——乐段实例分析 | — |
-| **一个乐句结构**的乐段实例 | — |
-| **两个乐句结构**的乐段 | — |
-| **三个乐句及以上结构**的乐段 | — |
-| **复乐段**（Compound Period） | — |
-| ★ **开放乐段**（Open Period） | — |
-| 乐段的分类及其特征 | p0082 |
-| **乐段的典型结构** | p0083 |
-| 乐段结构的综合与分解 | p0091 |
-| ★ **乐段前后的引子和补充** | p0092 |
-| 乐段的反复 | p0092 |
-| ★ **作为独立曲式的乐段 与 作为曲式一部分的乐段的不同特征** | p0093 |
+| Periods and their components (overview) | — |
+| **Principles for dividing periods, phrases, sub-phrases and motifs** | — |
+| Dividing phrases: analysis of period examples | — |
+| Period examples with **a one-phrase structure** | — |
+| Periods with **a two-phrase structure** | — |
+| Periods with **three or more phrases** | — |
+| **Compound period** | — |
+| ★ **Open period** | — |
+| Classification of periods and their characteristics | p0082 |
+| **Typical structure of periods** | p0083 |
+| Synthesis and decomposition of period structure | p0091 |
+| ★ **Introductions and supplements before and after periods** | p0092 |
+| Repetition of periods | p0092 |
+| ★ **Periods functioning as independent forms vs periods as part of a larger form: differing characteristics** | p0093 |
 
-**三条对本库特别有用的**：
+**Three points especially useful for this library**:
 
-1. **开放乐段**（结束在非主和弦上）——
-   直接对应 `mc-melody` reference §5 的**终止开放度第 5–8 档**。
-   两本书从不同方向说的是同一件事。
-2. **乐段前后的引子和补充**——
-   ★ 这解释了"为什么这段是 17 小节不是 16"：**那一小节是结构外的补充，不是段落的一部分**。
-   这与 `mc-arrangement-arch` §4 的非对称设计是两回事：**一个是结构外附加，一个是结构内打破。**
-3. **独立曲式的乐段 vs 曲式一部分的乐段**——
-   判断"这到底是一段还是一首"的依据。做 `mc-case-studies` 的逐段拆解时要用。
+1. **Open period** (ending on a non-tonic chord) —
+   directly corresponds to **cadence openness levels 5–8** in `mc-melody` reference §5.
+   The two books describe the same thing from different directions.
+2. **Introductions and supplements before and after a period** —
+   ★ This explains "why this section is 17 bars rather than 16": **that bar is a supplement outside the structure, not part of the section**.
+   This is different from the asymmetric design in `mc-arrangement-arch` §4: **one is an addition outside the structure, the other is a break within it.**
+3. **Period as independent form vs period as part of a form** —
+   the basis for judging "is this one section or a whole piece". Needed when doing section-by-section breakdown in `mc-case-studies`.
 
-### 4.2 奏鸣曲式：能搬进流行曲的那几条（第九章，p0266–0292）
+### 4.2 Sonata form: the parts that can be carried over into pop songs (Chapter 9, p0266–0292)
 
-单二、单三、复三、回旋、变奏、套曲各章按原书目录查；这里只提奏鸣曲式，因为它是"两个主题打架再和解"的模型，流行曲里 verse 与 chorus、A 段与 B 段的关系可以借它想。
+Simple binary, simple ternary, compound ternary, rondo, variation and suite chapters should be looked up in the book's table of contents; only sonata form is covered here, because it is a model of "two themes clashing and then reconciling", and the relationship between verse and chorus, or between section A and section B, in pop songs can be modeled on it.
 
-**主题关系**（p0266–0268）：复三部与回旋曲的对比主题是**并置**，奏鸣曲式的对比主题有**内在联系**，直接产生矛盾、趋向统一。三种性质：互相配合、互相矛盾、兼有二者。副部常从主部**派生**。
-**调性**：主部在主调，副部在从属调；大调作品副部最典型是属调，小调作品副部常用平行大调（p0267）。
+**Thematic relationships** (p0266–0268): the contrasting themes in compound ternary and rondo are **juxtaposed**; in sonata form the contrasting theme has an **internal connection**, directly generating conflict and tending toward unity. Three natures: mutually complementary, mutually contradictory, or both. The subordinate section is often **derived** from the main section.
+**Tonality**: the main section is in the home key and the subordinate section is in a subordinate key; in major-key works the subordinate section is most typically in the dominant, while in minor-key works it often uses the parallel major (p0267).
 
-**贯串发展**（p0268–0269）：主部主题的六站——引子里准备、呈示部初陈述、片断出现在副部"转折"与结束部、展开部充分发挥、再现部处于新阶段、结尾作为收束材料。**主题的贯串发展对全曲高潮的形成有重要作用**。流行曲里对应的是 hook 的动机在 verse、pre、bridge 里各露一次。
+**Continuous development** (p0268–0269): six stations for the main theme: preparation in the introduction, initial statement in the exposition, fragments appearing in the "turn" of the subordinate section and in the closing section, full exploitation in the development section, a new stage in the recapitulation, and as closing material in the coda. **Continuous development of the theme is crucial to forming the climax of the whole piece.** In pop songs, the equivalent is the hook's motif appearing once each in the verse, pre-chorus and bridge.
 
-| 部分 | 做法 | 页 |
+| Part | Method | Page |
 |---|---|---|
-| **呈示部** | 主部、连接部、副部、结束部；主要对比在主部与副部之间，连接部因负担过渡对比不显著 | p0270 |
-| **连接部** | 两型：独立结构的，或附属在主部里的（主部的后乐句、主部单三的再现部）。典型三段：开始（主部收束处）、基本部分（不太对比的新曲调发展、转调）、准备句（停在副部的属和弦上）；不是每个连接部三段都有。最典型的调性做法是**转调后出现副部的属和弦** | p0275–0277 |
-| **副部** | 多是单一材料的歌唱性抒情主题；★ 副部安静、内部缺对比时，古典作曲家在**副部后半引进"转折"**，用活跃材料造突然对比，往往形成副部的扩充；副部一般以本调完全终止收拢，也可开放直接进展开部；浪漫派以后副部换新速度来强调对比 | p0277–0279 |
-| **结束部** | 收束呈示部、初步概括；用副部结束时的调性，典型是**把副部末尾的主和弦终止式重复成一个扩充的大终止式**，常有主长音持续；结构是乐段加补充，或只是几个补充组合 | p0279–0280 |
-| **展开部** | 最难归纳规律的部分，三方面：**材料**（不原样引用，主题分割是主要手法；常以别调上的主部材料或结束部材料开始；主部材料最常用因为它活跃；多用复调甚至赋格段；可引入派生新主题）；**调性**（长期不稳定，基本不出现主调；从近关系或三度关系调开始；后半常用下属方面调性，与呈示部强调主属形成对比；很少完全终止；结尾回到主调的属和弦成"属和弦准备段"或"属长音准备段"）；**结构**（引入部分很短甚至没有，基本部分形成总高潮，再现准备段；可能出现假再现；插部很少） | p0280–0287 |
-| **再现部** | **任何情况下都是变化的再现部**：最小变化是副部回主调、结束部随之回主调、连接部因此改结构；乐思发展剧烈时是动力再现，变化在结构、调性布局、主题性格上，不只是力度织体配器 | p0287–0288 |
-| **引子** | 材料可与主题对比也可派生；结构可独立完整也可只是几小节准备；结束必须准备好主部进入，常从从属调引到主调属和弦成"属准备段"，所以引子往往不收拢；有独立意义的引子可以贯串全曲成主导动机 | p0290–0291 |
-| **结尾** | 综合与结论：常以前面的主题材料再现或变化发展，可用全部主题也可只强调一个；新主题少见；要求主调完全终止；有较大发展时倾向下属方面；可从全终止后开始也可从阻碍终止后开始；有时结构像展开部，与之交叉呼应取得平衡 | p0291–0292 |
+| **Exposition** | Main section, transition, subordinate section, closing; the main contrast lies between the main and subordinate sections, while the transition, bearing the burden of linking, has little contrast | p0270 |
+| **Transition** | Two types: one with independent structure, or one attached within the main section (the post-phrase of the main section, or the recapitulation in a simple ternary main section). A typical three-part shape: beginning (end of the main section), basic part (development of a not-very-contrasting new tune, modulation), preparatory phrase (stopping on the dominant chord of the subordinate section); not every transition has all three parts. The most typical tonal approach is **a dominant chord of the subordinate section appearing after a modulation** | p0275–0277 |
+| **Subordinate section** | Usually a single lyrical theme of song-like character; ★ when the subordinate section is quiet and lacks internal contrast, classical composers **introduce a "turn" in its second half**, using active material to create a sudden contrast, often leading to an expansion of the subordinate section; the subordinate section typically closes with a full cadence in its home key, or may be left open to proceed directly into the development. After the Romantic era, the subordinate section changed to a new tempo to emphasize contrast | p0277–0279 |
+| **Closing section** | Rounds off the exposition and gives a preliminary summary; uses the tonality at the close of the subordinate section. Typically the tonic cadence at the end of the subordinate section is repeated as an expanded large cadence, often with a sustained tonic pedal. The structure is a period plus supplement, or simply a combination of several supplements | p0279–0280 |
+| **Development section** | The hardest part to generalize, in three aspects. **Material**: not quoted verbatim, with theme fragmentation as the main technique; often begins with main-section material in another key or with closing-section material; main-section material is most often used because it is active; polyphonic texture or even fugal passages are common; new derived themes may be introduced. **Tonality**: unstable for long stretches, with the home key almost never appearing; starts from closely related or mediant-related keys; the second half often uses the subdominant area, contrasting with the tonic–dominant emphasis of the exposition; rarely reaches a full cadence; the ending returns to the tonic's dominant chord as a "dominant preparation passage" or "dominant pedal preparation passage". **Structure**: the introductory part is very short or absent, the basic part forms the overall climax, and it leads to a recapitulation preparation passage; false recapitulations may occur; episodes are rare | p0280–0287 |
+| **Recapitulation** | **Always a varied recapitulation**: the smallest change is the subordinate section returning to the home key, the closing section following suit, and the transition restructured accordingly; when the musical idea develops dramatically it becomes a dynamic recapitulation, with changes in structure, tonal layout and thematic character, not just in dynamics, texture or orchestration | p0287–0288 |
+| **Introduction** | Material may contrast with the theme or be derived from it; the structure may be complete and independent or just a few bars of preparation; it must prepare the entry of the main section, often leading from a subordinate key to the dominant chord of the home key as a "dominant preparation passage", so the introduction often does not close; an independently meaningful introduction can run through the whole piece as a dominant motif | p0290–0291 |
+| **Coda** | Synthesis and conclusion: often recapitulates or develops earlier thematic material, may use all the themes or emphasize just one; new themes are rare; requires a full cadence in the home key; with a substantial development, it tends toward the subdominant area; may begin after a full cadence or after an interrupted cadence; sometimes the structure resembles the development section, cross-echoing it to achieve balance | p0291–0292 |
 
-**四条能直接用在流行曲的**：
-1. 副部"转折"就是 chorus 后半要有一次翻起来的理由（p0278）。
-2. 结束部"把终止式重复成大终止式"就是 outro 反复 hook 尾句的古典依据（p0280）。
-3. 展开部后半走下属、结尾也倾向下属，这是 bridge 往下属调走的依据；回来要经过一段属准备（p0284–0285、p0292）。
-4. 再现永远是变化的再现（p0288）：最后一遍 chorus 至少要有一处不同，这与 `mc-arrangement-arch` 的末段微变是同一条。
+**Four points that can be applied directly to pop songs**:
+1. The subordinate section's "turn" is the reason the second half of a chorus needs a moment where it lifts up (p0278).
+2. The closing section "repeating the cadence as a large cadence" is the classical basis for an outro that repeats the hook's final phrase (p0280).
+3. The development section's second half moving to the subdominant, and the coda also tending toward the subdominant, is the basis for a bridge moving toward the subdominant; returning requires a dominant preparation passage (p0284–0285, p0292).
+4. The recapitulation is always a varied recapitulation (p0288): the final round of the chorus must have at least one difference. This is the same principle as the final-section variation in `mc-arrangement-arch`.
 
-### 4.3 其他曲式来源
+### 4.3 Sources for other forms
 
-| 来源 |
+| Source |
 |---|
-| 曲式谱例集 |
-| 论曲式 |
-| 杨儒怀《音乐的分析与创作》下册 |
-| 杨儒怀 上册 |
-| **李吉提《曲式与作品分析》**（西方曲式教材，十六讲；中国音乐的结构观察散在各讲） |
+| Collection of form score examples |
+| On Musical Form |
+| Yang Ruhuai, *Analysis and Creation of Music*, vol. 2 |
+| Yang Ruhuai, vol. 1 |
+| **Li Jiti, *Musical Forms and Work Analysis*** (a Western form textbook, sixteen lectures; observations on the structure of Chinese music are scattered across the lectures) |
 
 ---
 
-## 5. 中国音乐的结构原则
+## 5. Principles of Chinese music structure
 
-> 底本是李吉提《曲式与作品分析》里散落的中国音乐结构观察，**它是一本西方曲式教材，板腔体与曲牌体那一层它没有讲**。
-> 板腔体、曲牌体的结构规则本包不覆盖。
+> The base text is Li Jiti's *Musical Forms and Work Analysis*, with its scattered observations on the structure of Chinese music. **It is a Western form textbook, and it does not cover the layer of banjiang-ti and qupai-ti** (*banqiang* and *qupai* structures).
+> The structural rules of banjiang-ti and qupai-ti are not covered by this package.
 
-### 5.1 ★★ 过程，不是回归
+### 5.1 ★★ Process, not return
 
-"中国人认为音乐是一个过程，当音乐进入新的起点后，即可在新的高度上发挥，没有必要强调再现或调性回归"（p0071–0072）。
-瞿维《花鼓》只有主题综合再现与速度再现、没有调再现，调布局实际是二部性的。
-**写中国风时"末段必须回到主调"不是规则**，材料和速度的回归就够。
+"Chinese people regard music as a process: when the music enters a new starting point, it can be developed at a new height, and there is no need to stress recapitulation or return to the tonic" (p0071–0072).
+Qu Wei's *Huagu* (Flower Drum) has only a thematic-synthesis recapitulation and a tempo recapitulation, with no tonal recapitulation; its tonal layout is in fact binary.
+**When writing in a Chinese style, "the final section must return to the home key" is not a rule**; the return of material and tempo is enough.
 
-### 5.2 ★★ 划段的依据换了
+### 5.2 ★★ The basis for dividing sections has changed
 
-"在民间音乐或群众歌曲中，**主题材料、速度、板式或体裁的对比与再现，可能成为更重要的曲式阶段划分标志**，
-不能简单套用西方专业经典曲式理论"（p0072）。中国乐曲的单三部"可能不强调和声变换或转调，而更注重主题材料或速度、体裁的变更以及调式的转换"（p0065）。
-**中国风段落对比靠材料、速度、体裁、调式，不靠和声。** 与 `mc-melody` reference §3.0 的同宫犯调是一回事：换色不换调。
+"In folk music or mass songs, **contrasts and recapitulations of thematic material, tempo, *banshi* (metric pattern) or genre may become more important markers for dividing sections of form**,
+and Western classical form theory should not be applied to them simply" (p0072). For single-ternary structures in Chinese pieces, "harmonic change or modulation may not be emphasized, while more attention is paid to changes of thematic material, tempo and genre, and to shifts of mode" (p0065).
+**Contrast between sections in a Chinese style relies on material, tempo, genre and mode, not on harmony.** This is the same thing as the *tonggong fan diao* ("same palace, offending modulation") in `mc-melody` reference §3.0: change the color, not the key.
 
-### 5.3 材料怎么长：展衍与起承转合
+### 5.3 How material grows: elaboration and *qi-cheng-zhuan-he*
 
-- **展衍**：从一个乐汇出发逐步更新材料（《二泉映月》），"在中国传统音乐中尤为多见"（p0016、p0020）。它是中国音乐的材料发展逻辑，与再现原则并列，不是它的下位
-- **起承转合**的四句结构"在中国的传统音乐中更具有普遍意义"（p0022、p0035）；乐思陈述过程（陈述 → 巩固 → 展开对比 → 总结收束）本身就吻合起承转合
-- **句句双**（p0035、p0153）：本是两句，各自反复一次成四句，中外民间都有，防腻成本极低
-- **合尾式**（p0032）：句尾呼应缺失但**句头对比**，也能构成乐段。`mc-melody` §7.3 默认呼应在句尾，这是句头的一路
-- **垛句**促使乐思展开、形成展开性的对比乐句（《猜调》，p0031）
+- **Elaboration** (*zhanyan*): progressively renewing material from a single musical phrase (for example *Erquan Yingyue*, Moon Reflected in the Second Spring), "especially common in traditional Chinese music" (p0016, p0020). It is the developmental logic of material in Chinese music, standing alongside the recapitulation principle rather than beneath it.
+- The four-line structure of *qi-cheng-zhuan-he* "has more universal significance in traditional Chinese music" (p0022, p0035); the process of presenting a musical idea (statement → consolidation → developing contrast → summary and closure) itself matches *qi-cheng-zhuan-he*.
+- **Paired couplets** (*ju ju shuang*) (p0035, p0153): two lines, each repeated once to make four lines, found in both Chinese and foreign folk music, with very low cost in terms of avoiding monotony.
+- **Closing-tail form** (*he wei shi*) (p0032): the response at the end of the phrase is missing but the **contrast at the beginning of the phrase** still forms a section. `mc-melody` §7.3 assumes the response at the end of the phrase by default; this is the other route, at the head of the phrase.
+- **Stacked phrases** (*duo ju*) drive the development of musical ideas, forming developmental contrasting phrases (*Caidiao*, Guessing Tune, p0031).
 
-### 5.4 民间的三部性怎么来
+### 5.4 How tripartite form arises in folk music
 
-民间乐手用不同乐器来回移调演奏同一小曲，形成"主调 – 对比调 – 主调"布局（p0077）。**中国风要三部性又不想生硬，就换乐器换宫，不换材料。**
-这条路子理论上只限**单一主题**的结构：换的是调和乐器音色，主题本身不出现第二个对比主题，换了就不是这一类了（p0077）。
-肖邦《玛祖卡舞曲》Op.33 No.2 第一部分是个可比对的西方实例：A 段 D 大调、A1 段移低四度到 A 大调、A 段再现回 D 大调，材料完全不变，只挪调（p0078）；换个角度看，这也可以算作"同一旋律换调呈示"的固定旋律变奏（p0078）。换乐器换宫的中国路子与换调重复的西方路子，代价选项不同：前者靠音色差异撑对比，材料和速度都不用动；后者材料虽不变但调性确实位移了，中国风想要"过程感"（见 §5.1）就更适合前一种。
+Folk musicians play the same short tune by moving it between keys on different instruments, forming a layout of "home key – contrasting key – home key" (p0077). **When a Chinese-style piece needs tripartite form but should not feel forced, change the instrument and the palace, not the material.**
+This route is theoretically limited to **single-theme** structures: what changes is key and instrumental timbre, and the theme itself never presents a second contrasting theme. Once that happens, it is no longer this type (p0077).
+Chopin's Mazurka Op. 33 No. 2, first section, is a comparable Western example: section A in D major, section A1 shifted down a fourth to A major, and section A recapitulated back in D major. The material is completely unchanged; only the key moves (p0078). Viewed another way, this can also count as a fixed-melody variation in the form of "the same melody presented in a changed key" (p0078). The Chinese route of changing instrument and palace and the Western route of repeating in a changed key differ in cost: the former relies on timbral difference for contrast and leaves material and tempo untouched; the latter leaves the material unchanged but truly shifts the tonality. For a Chinese-style piece seeking a "sense of process" (see §5.1), the former is more suitable.
 
+---
 
-## 6. 乐思的扩充、减缩与裁截（杨儒怀 p0131–0138）
+## 6. Expansion, reduction and truncation of musical ideas (Yang Ruhuai, p0131–0138)
 
-扩充三型、减缩三法、裁截的全文已并入 `mc-development` reference §2（判据与用法在其 SKILL §3.3–3.5）；本节只留这个指针。
+The full text on the three types of expansion, the three methods of reduction, and truncation has been merged into `mc-development` reference §2 (criteria and usage are in its SKILL §3.3–3.5). This section keeps only this pointer.
 
-## 7. 不在本文件、归别处的部分
+## 7. Parts not in this file, covered elsewhere
 
-| 内容 | 去哪 |
+| Content | Where it goes |
 |---|---|
-| hook / 抓耳技法（原 §V） | `mc-arrangement-arch` §7 |
-| 高潮与结尾（原 §VI） | `mc-arrangement-arch` §2、§8 |
-| 前奏/间奏/尾奏/vamp 的**编制**做法（原 §VII） | 本文件 §2 ＋ `mc-arrangement-arch` |
-| 反予定調和清单（原 §VIII） | `mc-melody` §8 |
-| サビ 设计与最大化（原 §IV） | `mc-arrangement-arch` §2 ＋ 本文件 §1 |
-| 工作流（原 §IX） | `mc-workflow` |
+| Hooks and attention-grabbing techniques (originally §V) | `mc-arrangement-arch` §7 |
+| Climax and ending (originally §VI) | `mc-arrangement-arch` §2 and §8 |
+| Lineup approaches for intro / interlude / outro / vamp (originally §VII) | This file §2 plus `mc-arrangement-arch` |
+| Anti-predictability checklist (originally §VIII) | `mc-melody` §8 |
+| Sabi design and maximization (originally §IV) | `mc-arrangement-arch` §2 plus this file §1 |
+| Workflow (originally §IX) | `mc-workflow` |

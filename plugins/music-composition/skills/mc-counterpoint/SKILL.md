@@ -1,272 +1,240 @@
 ---
 name: mc-counterpoint
-description: Counterpoint and voice writing (对位与声部写作) - writing a second line that is genuinely independent rather than a harmony part. The four complementarity axes that make two lines combine (rhythmic density, interval colour, contrary/oblique/similar motion, staggered peaks), contrast between unlike versus like characters, the melodic constraints a contrapuntal line must obey, the five species, and invertible counterpoint for varying a repeat. Use when writing a counter-melody or obbligato, when checking voice leading in a multi-part passage (parallel fifths and octaves, hidden fifths, voice crossing and overlap), when two simultaneous lines sound glued together or fight, when a repeated section needs varying without new material, or when an arrangement is harmonically correct but flat. Not for ordinary bass or accompaniment writing. 对位、复调、副旋律、对旋律、声部独立、声部进行、平行五度、平行八度、隐伏五八度、声部交叉、四声部检查、二重对位、卡农。
+description: Counterpoint and voice writing - writing a second line that is genuinely independent rather than a harmony part. The four complementarity axes that make two lines combine (rhythmic density, interval colour, contrary/oblique/similar motion, staggered peaks), contrast between unlike versus like characters, the melodic constraints a contrapuntal line must obey, the five species, and invertible counterpoint for varying a repeat. Use when writing a counter-melody or obbligato, when checking voice leading in a multi-part passage (parallel fifths and octaves, hidden fifths, voice crossing and overlap), when two simultaneous lines sound glued together or fight, when a repeated section needs varying without new material, or when an arrangement is harmonically correct but flat. Not for ordinary bass or accompaniment writing. Keywords: counterpoint, polyphony, counter-melody, obbligato, voice independence, voice leading, parallel fifths, parallel octaves, hidden fifths and octaves, voice crossing, four-part check, double counterpoint, canon.
 ---
 
-# 对位与声部写作（Counterpoint）
+# Counterpoint and Voice Writing
 
-> **对位是专业级编曲的分水岭。**
-> 理由很简单：**和声让声部同时响，对位让声部各自活着。**
-> 只会和声的编曲，所有非主旋律声部都是"伴奏"；会对位的编曲，它们是**角色**。
+> **Counterpoint is the dividing line of professional arranging.**
+> The reason is simple: **harmony makes the voices sound together; counterpoint makes each voice come alive on its own.**
+> An arrangement that only knows harmony treats every non-melody voice as "accompaniment"; one that knows counterpoint treats them as **characters**.
 
-**本 skill 不教你写练习，教你写第二条线。**
+**This skill does not teach you exercises. It teaches you to write the second line.**
 
-## 按任务读哪几节
+## Which sections to read for each task
 
-| 任务 | 读 |
+| Task | Read |
 |---|---|
-| 要写一条副旋律／obbligato | §3 四条互补轴（**最常用的一节**） |
-| 两条线黏在一起、听成一条 | §3 ＋ §4 |
-| 两条线打架、乱 | §5 旋律约束 |
-| 贝司线没有自己的生命 | §3 ＋ §5 |
-| 同一段要重复一遍，想变 | ★ §6 二重对位 |
-| 和声都对但就是平 | §2 |
-| 想系统练 | §7 五类对位 |
+| Need to write a counter-melody or obbligato | §3 Four complementarity axes (**the most-used section**) |
+| Two lines stick together and sound like one | §3 + §4 |
+| Two lines fight and sound messy | §5 Melodic constraints |
+| The bass line has no life of its own | §3 + §5 |
+| The same section must repeat and needs to change | ★ §6 Double counterpoint |
+| Harmony is correct but flat | §2 |
+| Want systematic practice | §7 The five species |
 
-## 边界
+## Boundaries
 
-| 不归这里 | 归哪 |
+| Not covered here | Where it lives |
 |---|---|
-| 和弦选什么、功能进行 | `mc-harmony` |
-| 主旋律本身怎么写 | `mc-melody` |
-| 这条线用什么乐器奏 | `mc-orchestration` |
-| 这条线占哪个频段、会不会抢 | `mc-texture-layering` |
-| 这条线什么时候进场退场 | `mc-arrangement-arch` |
-| 赋格、卡农的完整曲式 | [reference.md](reference.md)（本 skill 只取能用在编曲里的部分） |
-| 三声部及以上的严格写作 | [reference.md](reference.md) |
+| Which chords to choose, functional progressions | `mc-harmony` |
+| How the main melody itself is written | `mc-melody` |
+| Which instrument plays this line | `mc-orchestration` |
+| Which frequency band this line occupies, whether it will crowd others | `mc-texture-layering` |
+| When this line enters and exits | `mc-arrangement-arch` |
+| Full forms of fugue and canon | [reference.md](reference.md) (this skill only takes the parts usable in arrangement) |
+| Strict writing for three or more parts | [reference.md](reference.md) |
 
-> ★ **与 `mc-harmony` 的分界**：**和声管纵向（这一刻响的是什么和弦），
-> 对位管横向（每条线自己走得通不通）。**
-> 平行五八度这类**声部进行规则归本 skill**，不归和声。
+> ★ **Boundary with `mc-harmony`**: **harmony governs the vertical axis (which chord sounds at this moment); counterpoint governs the horizontal axis (whether each line works on its own).**
+> Voice-leading rules such as parallel fifths and octaves belong to this skill, not to harmony.
 
 ---
 
-## 1. 动笔前必填
+## 1. Required before starting
 
-| 必填 | 问法 |
+| Required | Question to ask |
 |---|---|
-| **① 这条线是谁** | 它是一个**角色**还是一层铺垫？角色才需要对位 |
-| **② 与主旋律是哪种对比** | 不同特性 还是 相同特性（§4） |
-| **③ 四条互补轴各怎么错开** | §3。**说不出四条里的至少两条，这条线就还是伴奏** |
-| **④ 主次关系** | ★ **即使两条线都独立，也必须有主有次** |
+| **① Who this line is** | Is it a **character** or a layer of padding? Only characters need counterpoint |
+| **② Contrast with the main melody** | Different characteristics, or the same characteristics (§4)? |
+| **③ How each of the four complementarity axes is staggered** | §3. **If you cannot name at least two of the four, this line is still accompaniment** |
+| **④ Primary and secondary relationship** | ★ **Even when both lines are independent, one must lead and one must support** |
 
 ---
 
-## 2. 对位给你什么，和声给不了
+## 2. What counterpoint gives you that harmony cannot
 
-> **对比复调**：两个或两个以上具有独立性的旋律，以对位原则结合成的复调结构 (p0050)。
+> **Contrapuntal polyphony**: two or more independent melodies combined under the principles of counterpoint into a polyphonic structure (p0050).
 
-**艺术表现上特有的功能**：
+**The artistic function unique to counterpoint:**
 
-> 能够**同时陈述两个或两个以上具有不同特性的旋律**所表现的内容，
-> 并以对位原则谐调地结合为统一体 (p0050)。
+> It can **present two or more melodies with different characteristics at the same time**, and combine them harmoniously into a unified whole under counterpoint principles (p0050).
 
-**用处**：戏剧性或交响性音乐里，把两个不同的形象结合起来表现**矛盾与冲突**，
-或描绘宏伟的戏剧场面。
+**Use**: in dramatic or symphonic music, two different images are joined to express **conflict and contradiction**, or to depict grand dramatic scenes.
 
-★ **这正是"电影级"的落点之一**——
-单一旋律 + 和声只能表达一个东西；对位能**同时表达两个，并让它们发生关系**。
+★ **This is one of the anchor points of "cinematic" quality.** A single melody plus harmony can express only one thing; counterpoint can **express two at once and make them relate**.
 
-**谱例**（丁善德《长征交响曲》II，例 61）：
-低声部是缓慢悠长、低沉压抑的固定低音，不变地反复三次，表现人民的苦难；
-上方单簧管与英国管交替奏出悠扬辽阔的旋律，描绘山区风光。
-→ **压抑低沉 与 明朗辽阔 两种表情特性的对比结构。**
+**Music example** (Ding Shande, *Long March Symphony*, II, Ex. 61): the lower voice is a slow, long, low, oppressive ground bass, repeated unchanged three times to express the suffering of the people. Above it, the clarinet and English horn alternately play a lyrical, expansive melody depicting the mountain scenery.
+→ **A structure contrasting oppressive, low expression with bright, expansive expression.**
 
 ---
 
-## 3. ★ 四条互补轴：本 skill 最实用的一节
+## 3. ★ Four complementarity axes: the most practical section of this skill
 
-两条线要"既结合又各自独立"，靠的是在这四条轴上**互补**：
+For two lines to be "both combined and independent," they must be **complementary** on these four axes:
 
-| 轴 | 怎么互补 |
+| Axis | How they complement each other |
 |---|---|
-| **1. 节奏的疏密** | **一条密时另一条疏**。★ 这是四条里最强的一条——**两条线节奏同步就一定会被听成一条** |
-| **2. 音程结合的色彩** | 变换协和/不协和、三度/六度/四度五度的比例，不要全程平行三度 |
-| **3. 声部进行的方向** | **同向、反向、斜向交替分布**。★ 全程同向 = 和声声部，不是对位 |
-| **4. 旋律线的高峰与低点** | **交错**，不要同时到达顶点 |
+| **1. Rhythmic density** | **When one is dense, the other is sparse.** ★ This is the strongest of the four: **if two lines share the same rhythm, they will be heard as one line** |
+| **2. Colour of interval combinations** | Alternate consonance and dissonance, and vary the mix of thirds, sixths, fourths and fifths; do not keep parallel thirds throughout |
+| **3. Direction of voice motion** | **Distribute similar, contrary, and oblique motion alternately.** ★ Same direction throughout = a harmony part, not counterpoint |
+| **4. Highs and lows of the melodic line** | **Stagger them**; do not reach the peak at the same time |
 
-> ★ **自检动作**：把两条线在这四条轴上逐条打勾。
-> **少于两条互补，你写的就是和声声部，不是对位。**
+> ★ **Self-check action**: tick off the two lines on each of the four axes.
+> **Fewer than two complementary axes means you are writing a harmony part, not counterpoint.**
 
-**这四条也是"相同特性的对比"的全部技术手段**——见 §4.2。
+These four axes are also the complete technical toolkit for "contrast of like characteristics" (see §4.2).
 
 ---
 
-## 4. 两种对比
+## 4. Two kinds of contrast
 
-### 4.1 不同特性的对比
+### 4.1 Contrast of unlike characteristics
 
-两条线的**形象本身**就不同（见 §2 的例 61）。
-适合：戏剧冲突、双线叙事、影视配乐里"两个角色同时在场"。
+The two lines' **images themselves** differ (see Ex. 61 in §2).
+Suited to dramatic conflict, dual narratives, and film or TV scoring where "two characters are on stage at the same time."
 
-**谱例**（普罗科菲耶夫《第七交响曲》I，例 62）：
-高声部是抒情委婉的主部主题，低声部的对比旋律**富有内在激情与崇高的气质**。
+**Music example** (Prokofiev, Symphony No. 7, I, Ex. 62): the upper voice is the lyrical, tender main theme; the lower contrasting melody has **an inner passion and a noble, exalted character**.
 
-### 4.2 ★ 相同特性的对比（流行编曲里最常用的）
+### 4.2 ★ Contrast of like characteristics (the most common in pop arranging)
 
-> 构成对比的两个旋律**没有鲜明的特性对比**，
-> 而是运用对位技术使两个具有共性的旋律产生对比的效果 (p0052)。
+> The two melodies forming the contrast **have no sharp difference of character**. Instead, counterpoint technique makes two melodies that share common traits produce a contrasting effect (p0052).
 
-**手段就是 §3 的四条轴。**
+**The means are the four axes of §3.**
 
-> ★ 这种纯对位性的对比二声部，**虽没有形象特征的对比，但却有主要次要之分**。
+> ★ This kind of purely contrapuntal two-voice contrast **has no contrast of image, yet it still has a primary and a secondary voice**.
 >
-> **在不同体裁的音乐中经常遇到这种情况：
-> 给已经陈述过的主题旋律配上一条对比旋律，使主题内涵得以丰富、升华。** (p0052)
+> **This situation is frequently encountered in music of many genres: a contrasting melody is added to a theme that has already been stated, enriching and elevating its content.** (p0052)
 
-**这句话就是"第二遍副歌怎么变"的答案之一**——
-不改主旋律，给它加一条对比旋律。
-（另外几种办法见 `mc-arrangement-arch` §6。）
+**This sentence is one answer to "how does the second chorus vary"**: do not change the main melody; add a contrasting melody to it. (Other methods are in `mc-arrangement-arch` §6.)
 
-**谱例**：
-- **普罗科菲耶夫《罗密欧与朱丽叶》**（例 63）：对比旋律与主题**在表情气质方面是相同的**，
-  但结合成的复调"确比单一主题旋律更加深刻动人"
-- **贝多芬《第九交响曲》II**（例 64）：中部回旋曲主题由两条**特性一致**的旋律对位结合陈述。
-  ★ **贝多芬把这个二声部当作一个统一体对待——每次重复时用声部转位或附加平行三度取得变化**
-  （→ 这正是 §6 二重对位的用法）
-- **陈培勋《第二交响曲——清明祭》**（例 65）：主题先由大提琴与低音提琴齐奏，
-  之后移交中提琴，同时配上大提琴奏出的对比旋律
+**Music examples**:
+- **Prokofiev, *Romeo and Juliet*** (Ex. 63): the contrasting melody and the theme are **the same in expressive character**, yet the polyphony formed by joining them is "more profound and moving than a single theme melody."
+- **Beethoven, Symphony No. 9, II** (Ex. 64): the theme of the central rondo is stated by two melodies of **matching character** combined in counterpoint. ★ **Beethoven treats this two-voice unit as one whole; each repetition varies it through voice inversion or added parallel thirds** (→ this is exactly the use of §6 double counterpoint).
+- **Chen Peixun, *Symphony No. 2, "Qingming Ji" (Qingming Memorial)*** (Ex. 65): the theme is first played in unison by cellos and double basses, then handed to the violas, while the cellos play a contrasting melody.
 
 ---
 
-## 5. 对位声部的旋律约束
+## 5. Melodic constraints on contrapuntal voices
 
-**不是任何旋律都能拿来对位。** 能对位的线有四条特性：
+**Not every melody can be used for counterpoint.** A line that works in counterpoint has four characteristics.
 
-### 5.1 合唱风格特性
+### 5.1 Choral-style characteristics
 
-> 复调合唱旋律要求**旋律线平稳流畅、节奏律动宽广悠缓**，以适宜于多声部的复调结合 (p0054)。
+> A polyphonic choral melody requires **a smooth, flowing melodic line with a broad, unhurried rhythmic pulse**, suited to combining multiple voices (p0054).
 
-★ 它**不同于器乐音乐中的音型化旋律**。
-**这是最常被违反的一条**：拿一条器乐 riff 去和主旋律对位，结果只会打架。
+★ It **differs from instrumental figurated melody**.
+**This is the rule most often broken**: taking an instrumental riff and setting it against the main melody only produces clashes.
 
-于苏贤原文这条只给了这一句整体判断，没有像 §5.3 那样拆成音程表。
-"平稳流畅""宽广悠缓"是一个先于细节的方向判据：
-先问这条线**像不像合唱队能唱出来的**，通过了才去查 §5.3 的音程约束和 §5.4 的节奏约束。
+Yu Suxian's original gives only this one overall judgment, with no interval table as in §5.3. "Smooth and flowing, broad and unhurried" is a directional test that comes before the details: first ask whether the line is **something a choir could actually sing**. Only if it passes do you check the interval constraints of §5.3 and the rhythm constraints of §5.4.
 
-### 5.2 调式调性特性
+### 5.2 Modal and tonal characteristics
 
-- 必须建立**明确的方向感**，开始与结束要以显示明确的调性结构为前提
-- ★ **对主音的处理至关重要**——主音在建立基本对位结构中承担不可替代的调性功能
-- 在严格对位阶段**不要求转调**
+- Must establish a **clear sense of direction**; the beginning and end must rest on a clear tonal structure
+- ★ **Treatment of the tonic is critical**: the tonic carries an irreplaceable tonal function in building the basic contrapuntal structure
+- **No modulation is required** in the strict counterpoint stage
 
-> 勋伯格《作曲基本原理》里与申克一致的观点：
-> **"就大体上来说，一首乐曲就像一个终止式，每一个短句等于终止式中的一个部分，
-> 不过或多或少比较复杂而已。"** (p0054)
+> Schoenberg, *Fundamentals of Musical Composition*, agrees with Schenker on this point:
+> **"Broadly speaking, a piece is like a cadence: each short phrase equals one part of the cadence, only more or less complicated."** (p0054)
 
-### 5.3 ★ 音程特性（最具操作性的一条）
+### 5.3 ★ Interval characteristics (the most operational rule)
 
-| 规则 | 说明 |
+| Rule | Explanation |
 |---|---|
-| **不超过人声音域** | 不要超过合唱队中任何一个声部的音域极限 |
-| **避免增减音程** | 以及**七度、九度的大跳** |
-| **大跳之后反向级进平衡** | 其他自然音程的大跳之后要这样处理 |
-| ★ **四度、五度自然音程是好东西** | 可以形成**旋律的特性音调**，还能起建立调性的结构功能作用——**是旋律发展中不可缺少的因素** |
-| **但避免连续的四五度大跳** | |
+| **Stay within the human voice range** | Do not exceed the range limit of any choral voice part |
+| **Avoid augmented and diminished intervals** | And avoid leaps of a **seventh or a ninth** |
+| **Balance other large leaps with contrary stepwise motion** | Handle other natural-interval leaps this way |
+| ★ **Natural fourths and fifths are good** | They can form **the characteristic intonation of a melody** and serve the structural role of establishing tonality, making them **an indispensable element of melodic development** |
+| **But avoid consecutive leaps of fourths and fifths** | |
 
-> **总之：以级进为主，再结合上述良好音程的跳进。**
+> **In short: favour stepwise motion, combined with good intervallic leaps as described above.**
 
-★ 与 `mc-melody` §3 的关系：那边讲**单条旋律好不好唱**，这边讲**两条线能不能配合**。
-**约束更严**——因为要同时满足两条线各自成立且合起来成立。
+★ Relation to `mc-melody` §3: that section asks **whether a single melody is singable**; this one asks **whether two lines can cooperate**.
+**The constraints here are stricter**, because both lines must stand on their own and also stand together.
 
-### 5.4 节奏特性
+### 5.4 Rhythmic characteristics
 
-**节奏律动要求宽广悠缓**，是为了让两条旋律结合时**彼此之间可以交替运用不协和音**。
+**Rhythmic motion must be broad and unhurried**, so that when the two melodies combine they can **take turns using dissonant tones**.
 
-具体到两条线怎么摆节奏（p0055–0056）：
-- **疏密交替**：宽律动与密律动交替出现，做到"你动我静，你静我动"；
-- **切分交替，不同时切分**：一条线用延留音或切分时，另一条线要在强拍上补一个音，**强拍绝不能空**；两条线同时切分是错误示范；
-- **偶尔来一次一音对一音**：不能永远你动我静，一对一节奏本身也能产生推动力；
-- **开头以先后进入为佳**：两条线同时进入不如错开，节奏形态服从旋律特性，不必套死在某一类对位的固定写法上。
+Concretely, how to set the rhythm of two lines (p0055–0056):
+- **Alternating density**: broad motion and dense motion alternate, so that "you move while I rest, you rest while I move";
+- **Alternate syncopation; never syncopate at the same time**: when one line uses a suspension or syncopation, the other must supply a note on the strong beat. **Strong beats must never be left empty.** Both lines syncopating together is the wrong way;
+- **Occasionally one note against one note**: you cannot always be "you move, I rest." A one-to-one rhythm can itself generate drive;
+- **Preferably stagger the entries at the start**: two lines entering together is worse than staggering them. Rhythmic shapes follow the character of the melody and need not be locked to one fixed pattern of counterpoint.
 
 ---
 
-## 6. ★ 二重对位：把一段变成两段
+## 6. ★ Double counterpoint: turning one passage into two
 
-**这是对位技术在编曲里最直接的用处。**
+**This is the most direct use of counterpoint technique in arrangement.**
 
-**二重对位** = 两个声部可以**上下交换位置**而仍然成立。
-写好一次，就得到**两个版本**——第二遍重复时把上下声部互换，
-听起来是新的，但材料完全一样。
+**Double counterpoint** means the two voices can **swap their upper and lower positions** and still work. Write it once and you get **two versions**: on the second repetition, swap the upper and lower voices. It sounds new, yet the material is exactly the same.
 
-| 类型 | 转位方法 | 特点 |
+| Type | Inversion method | Characteristics |
 |---|---|---|
-| **八度（及十五度）二重对位** | 一个声部移八度 | **最常用**，限制最少 |
-| **十度二重对位** | | 有独特的写作原则 |
-| **十二度二重对位** | | 有独特的特征与写作原则 |
+| **Octave (and fifteenth) double counterpoint** | Move one voice by an octave | **The most common**; the fewest restrictions |
+| **Tenth double counterpoint** | | Has its own writing principles |
+| **Twelfth double counterpoint** | | Has distinctive features and writing principles |
 
-★ **贝多芬在《第九》第二乐章里就是这么干的**（§4.2 的例 64）：
-每次重复用**声部转位**或**附加平行三度**取得变化。
+★ **Beethoven does exactly this in the second movement of the *Ninth*** (Ex. 64 in §4.2): at each repetition he varies the material through **voice inversion** or **added parallel thirds**.
 
-**其他可动对位**（详见 [reference.md](reference.md)）：
-- **横向可动对位**：改变两声部的**时间**关系（进入点错开）
-- **纵横可动对位**：同时改变纵向与横向
-- **倒影对位**：一个声部按某个音轴倒影（II 级音轴、III 级音轴、IV 级音轴各有规则）
+**Other movable counterpoints** (details in [reference.md](reference.md)):
+- **Horizontal movable counterpoint**: changes the **timing** between the two voices (entry points staggered)
+- **Vertical-horizontal movable counterpoint**: changes vertical and horizontal relationships at once
+- **Inverted counterpoint (mirror counterpoint)**: one voice is inverted around an axis; rules differ for each axis type (II-degree, III-degree, and IV-degree axes)
 
-> **本库的用法**：ARR-SPEC 里"第二遍副歌怎么变"（lint #16）的一个高级答案，
-> 就是**同一条对比旋律做一次八度二重对位的转位**。
-> 这比"加一层和声"高级，而且不增加新材料。
+> **How this library uses it**: the advanced answer to "how does the second chorus vary" in ARR-SPEC (lint #16) is simply **an octave double-counterpoint inversion of the same contrasting melody**. This is more sophisticated than "adding a harmony layer", and it adds no new material.
 
 ---
 
-## 7. 五类对位（系统训练的阶梯）
+## 7. The five species (a systematic training ladder)
 
-以固定调（cantus firmus）为基础，逐级放开节奏：
+Built on a cantus firmus, with rhythm progressively freed:
 
-| 类 | 对法 |
+| Species | Method |
 |---|---|
-| **第一类** | 一音对一音 |
-| **第二类** | 二音对一音 |
-| **第三类** | 四音对一音 |
-| **第四类** | **切分音**对全音符 |
-| **第五类** | **混合节奏**对全音符（华丽对位） |
+| **First species** | One note against one note |
+| **Second species** | Two notes against one |
+| **Third species** | Four notes against one |
+| **Fourth species** | **Syncopation** against a whole note |
+| **Fifth species** | **Mixed rhythm** against a whole note (florid counterpoint) |
 
-> **为什么要经过严格法则**：
-> **"通过严格法则的制约，学习、掌握丰富多样的复调技术，
-> 不但不影响在写作自由风格的复调音乐时对个性与才能的发挥，
-> 相反，只有打好坚实的严格对位基础，才能获得敏锐的洞察力，
-> 才能理解大师们在创作实践中是如何灵活运用这些严格对位技术的。"** (p0054)
+> **Why strict rules first**:
+> "Through the discipline of strict rules, one learns and masters a rich variety of polyphonic techniques. This does not hinder the expression of individuality and talent when writing polyphonic music in a free style. On the contrary, only with a solid foundation in strict counterpoint can one gain keen insight and understand how the masters flexibly applied these strict techniques in their creative practice." (p0054)
 
-★ **本库的立场**：agent 不需要做练习，但**需要知道这五级的存在**，
-因为它们对应"这条对位线有多活跃"的五个刻度——
-第一类 = 一个纯粹的和声声部，第五类 = 一条完全独立的旋律。
-每一类的规则本体（音程三档、声部进行六条、弱拍音四种身份、延留音的可用与禁用音程）在 [reference.md](reference.md) §2，副旋律出问题时按类查。
-**写副旋律时，先选一个刻度。**
+★ **This library's position**: the agent does not need to do exercises, but **it needs to know these five levels exist**, because they correspond to five gradations of "how active this counterpoint line is." First species = a purely harmonic voice; fifth species = a fully independent melody. The rule bodies for each species (three tiers of intervals, six voice-leading rules, four identities of weak-beat notes, and which intervals suspensions may and may not use) are in [reference.md](reference.md) §2. When a counter-melody has problems, look them up by species. **When writing a counter-melody, first choose a gradation.**
 
-各类的具体规则（和声音程、调性结构、声部进行、终止式）在 [reference.md](reference.md)。
+The specific rules for each species (harmonic intervals, tonal structure, voice motion, cadences) are in [reference.md](reference.md).
 
 ---
 
-## 8. 与 ARR-SPEC 的字段对应
+## 8. Correspondence with ARR-SPEC fields
 
-| 字段 | 本 skill |
+| Field | This skill |
 |---|---|
-| `arrangement.roster[].role` 为 `旋律` 的第二件 | §3、§4 |
-| `hooks.arrangement_hook` | ★ 一条好的对比旋律**就是**非人声记忆点（lint #8） |
-| `vocal.chorus_variation` / 段落变化 | §6 二重对位（lint #16 的高级解法） |
-| `form[].note` | 记"此段为二声部对比复调" |
+| The second `arrangement.roster[].role` whose value is `melody` | §3, §4 |
+| `hooks.arrangement_hook` | ★ A good contrasting melody **is** the non-vocal memorable hook (lint #8) |
+| `vocal.chorus_variation` / section variation | §6 double counterpoint (the advanced fix for lint #16) |
+| `form[].note` | Record "this section is two-voice contrasting polyphony" |
 
 ---
 
-## 9. 写完后必过
+## 9. Must pass after writing
 
-- [ ] 这条线是**角色**不是铺垫（否则不需要对位，用和声就行）
-- [ ] 与主旋律在 §3 四条轴里**至少两条互补**
-- [ ] ★ **节奏疏密是互补的**（这一条单独拿出来查，因为它最强也最常被漏）
-- [ ] 声部进行有**同向/反向/斜向的交替**，不是全程同向
-- [ ] 两条线的**高峰不在同一处**
-- [ ] 即使两条都独立，**主次分明**
-- [ ] 对位线遵守 §5.3 的音程约束（无增减音程、无七九度大跳、大跳后反向级进）
-- [ ] 对位线是**平稳流畅、宽广悠缓**的，不是器乐音型
-- [ ] 若段落要重复，考虑过用**二重对位转位**而不是加新材料
+- [ ] This line is a **character**, not padding (otherwise no counterpoint is needed; harmony is enough)
+- [ ] Complementary to the main melody on **at least two** of the four axes in §3
+- [ ] ★ **Rhythmic density is complementary** (check this one on its own, because it is the strongest axis and the one most often missed)
+- [ ] Voice motion alternates between **similar, contrary, and oblique**, not the same direction throughout
+- [ ] The two lines' **peaks are not in the same place**
+- [ ] Even when both are independent, **primary and secondary are clear**
+- [ ] The counter-line obeys the interval constraints of §5.3 (no augmented or diminished intervals, no seventh or ninth leaps, contrary stepwise motion after leaps)
+- [ ] The counter-line is **smooth and flowing, broad and unhurried**, not instrumental figuration
+- [ ] If the section will repeat, consider a **double-counterpoint inversion** rather than adding new material
 
 ---
 
-## 附：来源
+## Appendix: Sources
 
-- **于苏贤《复调音乐教程》**（中国艺术教育大系·音乐卷）——
-  **本 skill 的唯一底本**。上卷复调技术理论。
-  页码为该书页。谱例编号（例 61–65 等）可回原书核对。
-- **勋伯格《作曲基本原理》**——§5.2 引用的终止式观点。
-- **赵晓生／巴赫平均律分析**——赋格的实例。
-- 三声部及以上、卡农、赋格、倒影对位的音轴规则，全部在 [reference.md](reference.md)。
+- **Yu Suxian, *A Course in Polyphonic Music* (Fudiao Yinyue Jiaocheng)**, China Art Education Series, Music volume. This is **the sole source for this skill**; volume 1 covers polyphonic technique theory. Page numbers are the book's pages. Example numbers (Ex. 61–65 etc.) can be checked against the original book.
+- **Schoenberg, *Fundamentals of Musical Composition***: the cadence view cited in §5.2.
+- **Zhao Xiaosheng / analysis of Bach's *Well-Tempered Clavier***: worked examples of fugue.
+- Three-part and above, canon, fugue, and the inversion axis rules for inverted counterpoint are all in [reference.md](reference.md).

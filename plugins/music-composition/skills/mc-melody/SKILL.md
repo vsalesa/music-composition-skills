@@ -1,405 +1,405 @@
 ---
 name: mc-melody
-description: Melody writing (旋律法) - what a melodic line expresses and how to make it singable. Direction and interval width as expression, the hard limits on leaps and how to prepare and land them (windup, run-up, cushion, rebound), range setting against the human voice and the passaggio, long and short note values, cadence treatment and the eight degrees of closure, motive-phrase-section construction and the six causes of segmentation, and a checklist against predictable cliche. Use when writing or fixing a melody, when a line is unsingable or bland or too predictable, when deciding a key and range for a specific singer, when a melody gets buried by the accompaniment, or when filling melody_register in an ARR-SPEC. 旋律、曲调、跳进、音域、乐句、动机、唱不上去、太套路。
+description: Melody writing - what a melodic line expresses and how to make it singable. Direction and interval width as expression, the hard limits on leaps and how to prepare and land them (windup, run-up, cushion, rebound), range setting against the human voice and the passaggio, long and short note values, cadence treatment and the eight degrees of closure, motive-phrase-section construction and the six causes of segmentation, and a checklist against predictable cliche. Use when writing or fixing a melody, when a line is unsingable or bland or too predictable, when deciding a key and range for a specific singer, when a melody gets buried by the accompaniment, or when filling melody_register in an ARR-SPEC. Keywords: melody, tune, leap, range, phrase, motif, hard to sing, too predictable.
 ---
 
-# 旋律法（Melody Writing）
+# Melody Writing
 
-> **一条旋律 = 一个音在时间里的运动。**
-> 所有的表现力都来自这个运动的**方向、幅度、时值、拍位**四件事。
+> **A melody = one pitch moving through time.**
+> All of its expressiveness comes from four things: the **direction, width, note value, and metric position** of that movement.
 
-这个 skill 管的是**这条线本身**——不管它配什么和弦（那是 `mc-harmony`），
-也不管它配什么词（那是**作词**的事）。
+This skill covers **the line itself**. It does not cover which chords sit under it (that is `mc-harmony`),
+nor which words are set to it (that is **lyric writing**).
 
-## 按任务读哪几节
+## Which sections to read, by task
 
-| 症状／任务 | 读 |
+| Symptom / task | Read |
 |---|---|
-| 从零写一条旋律 | §1 动笔前必填 → §2 → §5 |
-| 旋律平淡无聊 | §2 幅度 ＋ §8 反套路 |
-| 唱不上去 / 难唱 | §3 跳进的硬限制 ＋ §4 音域 |
-| 给特定歌手定调 | §4.2 换声点 |
-| 每一步都被猜到 | §8 予定调和清单 |
-| 松散、抓不住 | §7 动机与切分 |
-| 虎头蛇尾 | §7.4 ＋ §6 收束 |
-| 被伴奏盖住 | §9 诊断表 |
-| 结尾不够终止 | §6.3 |
+| Writing a melody from scratch | §1 Required before starting → §2 → §5 |
+| Melody is flat and boring | §2 Width + §8 Anti-cliché |
+| Hard to sing / can't reach the notes | §3 Hard limits on leaps + §4 Range |
+| Setting the key for a specific singer | §4.2 Passaggio |
+| Every step is predictable | §8 Predictability checklist |
+| Loose, won't hold together | §7 Motive and syncopation |
+| Strong start, weak finish | §7.4 + §6 Closure |
+| Buried by the accompaniment | §9 Diagnostic table |
+| Ending doesn't feel final enough | §6.3 |
 
-## 边界：什么不归这个 skill 管
+## Boundary: what this skill does not cover
 
-| 不归这里 | 归哪 |
+| Not covered here | Where it lives |
 |---|---|
-| 和弦怎么选、旋律和和声的匹配 | `mc-harmony` |
-| 曲式、段落多长、整首怎么拼 | `mc-form`（乐理）／`mc-arrangement-arch`（决策） |
-| 多声部的独立与避免平行 | `mc-counterpoint` |
-| 转调 | `mc-modulation` |
-| 节奏型本身 | `mc-rhythm-groove` |
-| 字怎么安到音上、倒字、押韵 | **作词**的事 |
-| 人声怎么唱（气声/力度/修音） | `mc-vocal-direction` |
-| 旋律用什么乐器奏 | `mc-orchestration` |
-| 调式音阶的完整目录 | [reference.md](reference.md) |
+| How to choose chords, matching melody to harmony | `mc-harmony` |
+| Form, how long sections are, how the whole song is put together | `mc-form` (theory) / `mc-arrangement-arch` (decisions) |
+| Independence of multiple voices and avoiding parallels | `mc-counterpoint` |
+| Modulation | `mc-modulation` |
+| Rhythmic patterns themselves | `mc-rhythm-groove` |
+| How syllables are placed on notes, inverted word stress, rhyme | **Lyric writing** |
+| How the voice sings (breathiness / dynamics / pitch correction) | `mc-vocal-direction` |
+| Which instrument plays the melody | `mc-orchestration` |
+| The full catalogue of modes and scales | [reference.md](reference.md) |
 
-> ★ 与作词的分界特别重要：**本 skill 管"这条线好不好听、好不好唱"，
-> 作词管"这些字能不能安上去"。** 符割り、字余り、倒字全在那边。
-> 本 skill 要用的只有两条推论：先词后曲时，同一首歌的歌词从 `meta.upstream.lyrics` 读，每行几个字就要几个音（中文一字一音节），一行是一个乐句；
-> 中文词的字调会限制大跳落在哪个字上（`mc-style-chinese-pop` §3.2）。没有歌词时，旋律只对自己负责。
-
----
-
-## 1. 动笔前必填
-
-| 必填 | 问法 |
-|---|---|
-| **① 中心音域** | 一个八度的范围，写死。**不填这条旋律会散** |
-| **② 谁来唱** | 音域、换声点在哪。**这决定调**（§4.2） |
-| **③ 高潮在哪** | 具体到第几小节。放在**全曲 2/3–3/4 处**是默认 |
-| **④ 这条线的方向** | 整体上行还是下行？为什么 |
+> ★ The boundary with lyric writing matters: **this skill decides whether the line sounds good and is singable,
+> while lyric writing decides whether the words can be fitted onto it.** Syllable-to-note alignment, excess syllables, and inverted word stress all belong to that side.
+> This skill needs only two inferences from it: when lyrics come first, the lyrics for the song are read from `meta.upstream.lyrics`, and each line's syllable count sets the number of notes (in Chinese, one character is one syllable), with one line forming one phrase;
+> the tones of Chinese characters limit where a large leap can land (`mc-style-chinese-pop` §3.2). Without lyrics, the melody is responsible only for itself.
 
 ---
 
-## 2. 方向与幅度：运动本身就是表现
+## 1. Required before starting
 
-### 2.1 方向
-
-| 运动 | 表现 |
+| Required | Question to ask |
 |---|---|
-| **上行** | 紧张、昂扬；**句尾上行 = 提问、抛出、对对方说** |
-| **下行** | 放松、稳定；**句尾下行 = 回答、点头、叹息、确信** |
-| **窄幅上下摆动** | 逡巡、犹豫不决，既非上行也非下行 |
-
-**三个音以上的乐句，整体方向看首音与末音的相对高度。**
-若到达末音的**局部运动与整体方向相反**，整体方向感会**被削弱**。
-
-★ **和声背景能改写方向的意义**：上行如果靠和声机制落在稳定音上
-（如 G7→C 落到主音），"提问感"就被"解决感"取代。
-**要强调提问就把挡住它的东西拿掉**——别落在稳定音上。
-
-> 身体类比：上行 = 踮起来看远处；下行 = 弯下腰看近处。
-
-### 2.2 幅度
-
-| 幅度 | 表现与限制 |
-|---|---|
-| **级进** | 平滑流畅、无阻碍；沿音阶上下 = 张力平滑增减，极常用。加二度辅助音装饰 = 保持轮廓的同时增加运动 |
-| **半音** | 最窄的音程，表达微妙与纤细；含半音的旋律有**艳丽感与深度**。★ **滥用（尤其带临时记号的半音阶）→ 神经质、病态、怪诞**，必须克制 |
-| **跳进** | 戏剧性、情绪大幅摆动；**跳进落点上的字会被强调** |
-| **同音反复** | 低音区 = 平静倾诉、内敛叙述（或强行压抑）；高音区 = 张力持续、不停呼喊。★ 音高不动时听众注意力转向节奏 → 配切分与多变时值 = **接近说话的表达** |
-
-> **"怎么用好半音"是旋律感的两大来源之一**（另一个是五声的密度）。
-
-**幅度 × 速度**：音程越窄越好唱、越适应任何速度；越宽越需要慢速与准备。
-**大跳需要在它的起点或终点（或两者）有足够的时值**才自然可唱。
-**高低音快速连续交替最容易僵硬。**
+| **① Core range** | A one-octave span, fixed. **Without this, the melody will scatter** |
+| **② Who sings it** | Range and passaggio location. **This determines the key** (§4.2) |
+| **③ Where the climax is** | Specify the bar. **The default placement is at roughly the 2/3–3/4 point of the song** |
+| **④ Direction of the line** | Overall rising or falling? Why? |
 
 ---
 
-## 3. 跳进：准备与落地
+## 2. Direction and width: the movement itself is the expression
 
-### 3.1 ★ 三条硬限制
+### 2.1 Direction
 
-1. **单次跳进不超过六度**——但**纯八度反而好唱好听，可用**
-2. **四度及以上的跳进，同方向最多连续 2 次，且两端总音程不超过一个八度**
-   - 合规：3+5=7 度、4+4=7 度
-   - 违规：5+5=9 度、4+4+4=10 度 —— 不自然、难唱
-3. **七度跳进最常用中间音拆成 3+5 或 4+4**（踏脚石式，分两步走）
-
-### 3.2 上跳容易，下跳难
-
-（加力运动可控，卸力运动难稳。）
-
-**宽下跳的两个补救**：
-1. 落点天然带**重音**——预见到它并**主动利用**
-2. **把起音充分拉长 + 渐弱**，在起点积蓄情绪与张力再跳
-
-**窄跳里反而下跳更容易**（卸力）——"短的高音向下跳"放在句首做句头重音，是常用手法。
-
-### 3.3 四个装置
-
-| 装置 | 做法 |
+| Movement | Expression |
 |---|---|
-| **タメ（蓄力）** | 跳进**之前**放 1 到数个**反方向**的音（通常级进），像大动作前的引势。也可放在跳进中途 |
-| **助走（起跑）** | 跳进之前放 1 到数个**同方向**的级进音。起跑音可在跳进音程之内或之外 |
-| **落地缓冲** | 到达跳进落点**之后**接 1 到数个**同方向**级进音，柔化落地冲击——**对下跳尤其有效** |
-| **回弹** | 大跳之后**反方向**级进 = 落地反弹。★ 这个反弹音可以同时充当**下一次跳进的蓄力**，形成"跳→弹(蓄)→跳→弹(蓄)→跳"的链条 |
+| **Ascending** | Tension, eagerness; **a phrase ending that rises = a question, a throw-out, speaking to the other party** |
+| **Descending** | Relaxation, stability; **a phrase ending that falls = an answer, a nod, a sigh, certainty** |
+| **Narrow up-and-down wobble** | Hesitation, indecision; neither rising nor falling |
 
-### 3.4 超过八度的跳进
+**For a phrase of three or more notes, judge the overall direction by the relative height of the first and last notes.**
+If the **local motion arriving at the final note runs against the overall direction**, the sense of overall direction is **weakened**.
 
-**强烈切断旋律**（无法作为一个乐句来切分）。
-**反向利用**：在切分边界上把音区拉开 → 做出**伪二声部**旋律
-（一个低音区动机与一个高音区动机在对话）。
+★ **The harmonic background can rewrite the meaning of direction**: if a rise lands on a stable note through harmonic function
+(such as G7→C landing on the tonic), the "questioning" feeling is replaced by a "resolved" feeling.
+**To emphasise a question, remove whatever is blocking it: do not land on a stable note.**
 
-### 3.5 "不自然"的价值（全都要克制，滥用即失效）
+> Body analogy: ascending = standing on tiptoe to look into the distance; descending = bending down to look at something close.
 
-| 手法 | 效果 |
+### 2.2 Width
+
+| Width | Expression and limits |
 |---|---|
-| 无准备的大跳 | **情绪突然爆发**（补上中间音会变平滑，但摧毁爆发力） |
-| 跳进后不反向解决、继续同向 | 特殊的**切なさ**（揪心） |
-| 连续跳进且内部联系薄弱 | 失重的轻盈、**无机质的流行感** |
-| 错位半音、听不出音阶归属 | 人工感、抽离的反讽 |
-| 增音程 | 非西方感 |
+| **Stepwise motion** | Smooth and unobstructed; moving up or down the scale = smooth increase or decrease of tension, very common. Adding a supporting second as an ornament = keeps the contour while adding motion |
+| **Semitone** | The narrowest interval, expressing subtlety and delicacy; melodies containing semitones have **a lush quality and depth**. ★ **Overuse (especially chromatic semitone runs with accidentals) → nervousness, sickliness, the grotesque**; must be restrained |
+| **Leap** | Dramatic, large emotional swings; **the syllable on the landing note of a leap is emphasised** |
+| **Repeated note** | In the low register = calm confiding, restrained narration (or forced suppression); in the high register = sustained tension, incessant calling. ★ When the pitch does not move, listeners' attention shifts to rhythm → pairing it with syncopation and varied note values = **an expression close to speech** |
 
-> **总公式：把局部的不自然嵌进去当"钩子"，最后再以自然的方式把它解决掉。**
+> **"Using semitones well" is one of the two main sources of melodic feeling** (the other being the density of the pentatonic).
+
+**Width × tempo**: the narrower the interval, the easier it is to sing and the more it adapts to any tempo; the wider it is, the more it needs a slow tempo and preparation.
+**A large leap needs sufficient note value at its start or end point (or both)** to be sung naturally.
+**Rapid alternation between high and low notes is the most likely to become stiff.**
 
 ---
 
-## 4. 音域与人声
+## 3. Leaps: preparation and landing
 
-### 4.1 音域的基本规矩
+### 3.1 ★ Three hard limits
 
-- **先把旋律的中心音域定在大约 1 个八度**，每个乐句的重心都落在里面——
-  否则旋律会发散，甚至听起来像好几个声部混在一起
-- 全曲实际音域约 **1.5 个八度，最多 2 个**（这正好是多数嗓音与乐器的可用音域）
-  - 控制在 1 个八度内 = 窄音程旋律，亲密、好唱
-  - 横跨 2 个八度 = 动态强但难唱
+1. **A single leap should not exceed a sixth**, but **a pure octave actually sings well and is usable**
+2. **Leaps of a fourth or more: at most 2 consecutive in the same direction, and the total span across both ends must not exceed one octave**
+   - Compliant: 3+5=7th, 4+4=7th
+   - Non-compliant: 5+5=9th, 4+4+4=10th — unnatural and hard to sing
+3. **A seventh leap is most often split at a middle note into 3+5 or 4+4** (stepping-stone style, done in two steps)
 
-**乐句在音域中的位置决定效果**：
+### 3.2 Upward leaps are easy; downward leaps are hard
 
-| 位置 | 效果 |
+(Motion that adds energy is controllable; motion that releases energy is hard to steady.)
+
+**Two remedies for a wide downward leap**:
+1. The landing note naturally carries **stress**: anticipate it and **deliberately use it**
+2. **Lengthen the starting note sufficiently and diminuendo**, accumulating emotion and tension at the start before leaping
+
+**In narrow leaps, downward is actually easier** (releasing energy): "a short high note leaping downward" placed at the start of a phrase as a phrase-initial accent is a common technique.
+
+### 3.3 Four devices
+
+| Device | Method |
 |---|---|
-| 重心偏高 | 明亮、充满张力；**突破音域天花板的音张力陡增**；极高 = 痛苦的表情 |
-| 重心偏低 | 平静放松；**跌破地板 = 沉重**；极低 = 无力松垮 |
+| **Tame (the hold-back)** | Before the leap, place one or several notes **in the opposite direction** (usually stepwise), like the lead-in before a large gesture. Can also be placed midway through the leap |
+| **Run-up (josou)** | Before the leap, place one or several stepwise notes **in the same direction**. The run-up note can be within or outside the leap interval |
+| **Landing cushion** | **After** reaching the landing point of the leap, follow with one or several stepwise notes **in the same direction**, softening the impact of landing; **especially effective for downward leaps** |
+| **Rebound** | After a large leap, stepwise motion **in the opposite direction** = a bounce off the landing. ★ This rebound note can simultaneously serve as the **tame for the next leap**, forming a chain of "leap→bounce (tame)→leap→bounce (tame)→leap" |
 
-★ **同样的运动在音域的不同位置效果不同**：
-- 音域中部的上行 = 适度紧张
-- 冲向顶部、突破音域的上行 = 张力显著放大
-- 从低处爬回中部的上行 = 张力增加被"低音转柔"抵消，**甚至可以起放松作用**
-- 同一个句尾上行：低音区 = 轻松的提问；高音区 = 恳切的请求，甚至质问
+### 3.4 Leaps larger than an octave
 
-> **音高性格是相对的**：同一个中央 C，在低音区旋律里被听成"高音"，在高音区旋律里被听成"低音"。
+**Strongly cuts the melody** (it cannot be segmented as a single phrase).
+**Use it in reverse**: open the register gap at a segmentation boundary → creates a **pseudo two-part** melody
+(a low-register motive and a high-register motive in dialogue).
 
-### 4.2 ★ 换声点决定调
+### 3.5 The value of "unnaturalness" (all must be restrained; overuse makes them fail)
 
-男声约比女声低一个八度，习惯上**男声记谱比实际发声高一个八度**。
-流行实务：男声很少用低音区、常用高音区；女声很少用极高音区、常用低音区。
-
-| 声区 | 性格 |
+| Technique | Effect |
 |---|---|
-| **胸声** | 流行音乐真实感与亲密感的根；音高运动的性格在这里表达得最强烈。高音区的紧绷可以表达**恳切**（想传达出去的急迫） |
-| **中声（混声）** | 声带半闭合、向上延伸音域；音色明亮开放 = 积极外放的强表达。★ **同一个高音乐句：胸声唱 = 紧绷恳求；中声唱 = 开阔远望**——声区选择改变旋律性格 |
-| **假声** | **当成和胸声不同的乐器来对待**：纯净纤细，适合精致柔和的表达。局限：泛音少 → 咬字略糊；力度难变化 → 不适合亲密倾诉与大幅情绪摆动 |
-| **胸声翻上假声** | 不惜破音也要够到高音的**拼命感** → 强烈的憧憬、极致的切なさ |
+| Unprepared large leap | **A sudden emotional outburst** (filling in the middle notes would smooth it out, but would destroy the burst of force) |
+| After a leap, not resolving in the opposite direction but continuing in the same direction | A special **setsunasa (heart-wrenching ache)** |
+| Consecutive leaps with weak internal connection | Weightless lightness, **a lifeless pop quality** |
+| Misplaced semitones, scale membership not audible | An artificial feel, a detached irony |
+| Augmented intervals | A non-Western flavour |
 
-> ★ **"这位男歌手有没有中声、换声点在哪"，是决定音域与调的大前提——先确认它。**
-> 换声点尴尬的歌手：**逐句设计声区**（这句胸声、那句假声/中声），让任何一句都不跨过换声点。
-
-**基本八度设在可用极限音域的中间**——留出余量，同时保留"故意去碰极限"的表现选项。
-
-### 4.3 唱和效应
-
-听众会在脑子里跟着哼。
-
-- 被易懂的重复**诱导进入同步**之后，后面的高音即使歌手唱得毫不费力，**听众仍觉得"高而紧张"**
-- **开头或句首的突然高音**没有给同步的时间 → 被外化成"炫技"来欣赏
-
-**写的时候要明确**：这一段是要"被跟唱"还是"被旁观欣赏"，并主动诱导。
+> **General formula: embed local unnaturalness as a "hook", then finally resolve it in a natural way.**
 
 ---
 
-## 5. 时值
+## 4. Range and the human voice
 
-### 5.1 可用范围
+### 4.1 Basic rules of range
 
-常用 **十六分音符到全音符**；连音通常只用 1 拍或 2 拍的三连音。
-**原则：流行音乐必须让听众保持同步——时值组合不能让听众丢掉拍子。**
+- **First set the melody's core range at roughly one octave**; the centre of gravity of each phrase should fall within it,
+  otherwise the melody will scatter, and may even sound like several voices mixed together
+- The actual range of the whole song should be about **1.5 octaves, at most 2** (this is exactly the usable range of most voices and instruments)
+  - Keeping within one octave = a narrow-interval melody, intimate and easy to sing
+  - Spanning two octaves = dynamically strong but hard to sing
 
-- 整首是三连感时，不要到处写三连音，**改记成 6/8、9/8、12/8**
-- 先在 **BPM ≈ 100** 这个"时值≈长度"的中速下考察性格，再考虑极端速度的偏移
+**The position of a phrase within the range determines its effect**:
 
-### 5.2 长音与短音
-
-| | 表现 |
+| Position | Effect |
 |---|---|
-| **长音** | 持续的力 = 张力；音内可以塑形（颤音、渐强渐弱）→ **高潮常在高音区放长音**（张力的最强表达） |
-| **短音** | 轻快敏捷；用力唱 = 尖锐、甩开。低音区的短音被沉重感抵消 |
+| Centre of gravity high | Bright, full of tension; **tension rises sharply on notes that break through the range ceiling**; extremely high = a pained expression |
+| Centre of gravity low | Calm and relaxed; **dipping below the floor = heaviness**; extremely low = weakness and sloppiness |
 
-- 连续长音 + 音高少动 = 持续张力；但**拖太久会松垮无聊**——插入跳进，或在长音之间织入短音
-- **长音 + 大跳** = 平滑化大幅音高运动的同时**放大规模感**
-- **窄音程 × 短音 = 接近说话的旋律**（新闻播报语速约等于 BPM 120 的八分音符，并不觉得快）
-- 大范围连续短音 = 轻盈滚动；**持续太久 = 神经质、强迫感**
+★ **The same motion has different effects in different parts of the range**:
+- An ascent in the middle of the range = moderate tension
+- An ascent rushing toward the top and breaking through the range = tension is markedly amplified
+- An ascent climbing back from low up to the middle = the added tension is offset by the "low register softening", and **can even have a relaxing effect**
+- The same ascending phrase ending: in the low register = an easy question; in the high register = an earnest request, even an interrogation
 
-★ **长短混合时：长音是主（重心与天然重音），短音是从——与拍位无关。**
-常见循环：短音**接近**一个高长音 → 张力 → 低短音**释放** → 再接近……
-极端压缩 = 长短长短交替的**跳跃感**（6/8、12/8 常见），好用但**极易予定调和**。
+> **Pitch character is relative**: the same middle C is heard as "high" in a low-register melody and as "low" in a high-register melody.
+
+### 4.2 ★ The passaggio determines the key
+
+Male voices sound about an octave lower than female voices, and by convention **male parts are notated one octave higher than they actually sound**.
+Pop practice: male singers rarely use the low register and often use the high register; female singers rarely use the extreme high register and often use the low register.
+
+| Register | Character |
+|---|---|
+| **Chest voice** | The root of realism and intimacy in pop music; pitch movement is expressed most strongly here. Tightness in the high chest range can express **earnestness** (urgency to get a message across) |
+| **Mix voice** | Vocal folds partly closed, extending the range upward; bright and open timbre = a positive, outgoing, strong expression. ★ **The same high phrase: sung in chest voice = a tense plea; sung in mix voice = an open gaze into the distance**. The choice of register changes the melody's character |
+| **Falsetto** | **Treat it as a different instrument from chest voice**: pure and delicate, suited to refined, gentle expression. Limitations: few overtones → slightly blurred diction; dynamics hard to vary → unsuitable for intimate confiding and large emotional swings |
+| **Chest-to-falsetto break** | The **desperate effort** of going past the crack to reach a high note → intense longing, extreme setsunasa |
+
+> ★ **"Does this male singer have a mix voice, and where is his passaggio?" is the major precondition for deciding range and key: confirm it first.**
+> For a singer with an awkward passaggio: **design the register phrase by phrase** (this phrase in chest, that one in falsetto or mix), so that no phrase crosses the passaggio.
+
+**Set the basic octave in the middle of the usable extreme range**: this leaves headroom, while keeping the expressive option of deliberately pushing toward the limit.
+
+### 4.3 The singalong effect
+
+Listeners hum along in their heads.
+
+- Once listeners are **drawn into synchronisation** by easy-to-follow repetition, a high note that comes later still sounds "high and tense" to them, even if the singer sings it effortlessly
+- **A sudden high note at the opening or at the start of a phrase** gives no time to synchronise → it is externalised and heard as "showing off"
+
+**Be clear while writing**: is this passage meant to be **sung along to**, or **watched and admired**? Then induce it deliberately.
 
 ---
 
-## 6. 收束（Cadence）
+## 5. Note values
 
-### 6.1 时值处理
+### 5.1 Usable range
 
-拉长收束音 = 运动停止。两种后续：加一个短音**释放**张力，或用休止**卸力**。
+Commonly use **sixteenth notes through whole notes**; tuplets are usually limited to triplets of one or two beats.
+**Principle: pop music must keep listeners in sync; the combination of note values must not cause listeners to lose the beat.**
 
-★ **光靠时值关不上收束**：如果和声与调式（音级）没有同时收束，
-终止感就是半成品。**反向利用**：让副歌落定但整首保持未解决，留下"话没说完"。
+- If the whole piece has a triplet feel, do not write triplets everywhere; **notate it as 6/8, 9/8, or 12/8 instead**
+- First examine the character at **BPM ≈ 100**, a moderate tempo where "note value ≈ duration", and only then consider deviations at extreme tempos
 
-### 6.2 大收束（段落末／全曲末）
+### 5.2 Long and short notes
 
-| 手法 | 效果 |
+| | Expression |
 |---|---|
-| 渐慢 + 渐弱 | 泄掉能量。**"记谱式渐慢"= 把收束前的每个音依次写长，或插入一小节 2/4** |
-| 充分拉长收束前的音（蓄力）再落在**短音**上 | 张力保持到最后一刻，然后瞬间释放 |
-| **旋律省略收束音，交给伴奏** | 像呼吸被掐断的梦幻余韵 |
-| 不慢不长，用带重音的短音收 | **干脆利落的强烈意志**（可再加一个带重音的短音强化） |
+| **Long notes** | Sustained force = tension; the note can be shaped within (vibrato, crescendo/diminuendo) → **climaxes often place long notes in the high register** (the strongest expression of tension) |
+| **Short notes** | Light and agile; sung forcefully = sharp, flung-off. Short notes in the low register are offset by a sense of heaviness |
 
-### 6.3 休止是旋律的一部分
+- Consecutive long notes + little pitch movement = sustained tension; but **dragging on too long becomes slack and boring**. Insert a leap, or weave short notes between the long ones
+- **Long notes + large leap** = smooths out large pitch movement while **amplifying the sense of scale**
+- **Narrow intervals × short notes = a melody close to speech** (news-reading speed is roughly equal to eighth notes at BPM 120, and does not feel fast)
+- Wide-ranging continuous short notes = light, rolling motion; **sustained too long = nervousness, a sense of compulsion**
 
-休止在旋律里承担两个已在别处讲透的角色，这里只做归位：切分信号见 §7.2 六个成因第一条（长时值与休止最清晰）；乐句末尾的卸力手段见 §6.1 大收束的时值处理（休止可以替代短音完成释放）。
+★ **When mixing long and short notes: long notes are the main voice (centre of gravity and natural stress); short notes are subordinate, regardless of metric position.**
+A common cycle: short notes **approach** a high long note → tension → a low short note **releases** → approach again…
+Extreme compression = a leaping feel of alternating long and short notes (common in 6/8 and 12/8). Effective, but **highly prone to predictability**.
 
 ---
 
-## 7. 动机 → 乐句 → 段落
+## 6. Closure (cadence)
 
-### 7.1 术语层级
+### 6.1 Note-value treatment
+
+Lengthening the closing note = motion stops. There are two possible follow-ups: add a short note to **release** the tension, or use a rest to **shed** it.
+
+★ **Note values alone cannot close a cadence**: if harmony and mode (scale degrees) do not close at the same time,
+the sense of ending is half-finished. **Use this in reverse**: let the chorus settle while keeping the whole song unresolved, leaving the sense that "the story is not yet finished".
+
+### 6.2 Major closure (end of a section / end of the song)
+
+| Technique | Effect |
+|---|---|
+| Ritardando + diminuendo | Releases energy. **"Notated ritardando" = write each note before the close progressively longer, or insert a bar of 2/4** |
+| Lengthen the note before the close (building tension), then land on a **short** note | Tension is held to the last moment, then released instantly |
+| **The melody omits the closing note and hands it to the accompaniment** | Like a dreamy afterglow where the breath has been cut off |
+| Neither slowing nor lengthening, close on a short accented note | **A decisive, strong sense of will** (can be reinforced with one more accented short note) |
+
+### 6.3 Rests are part of the melody
+
+Rests play two roles that have been covered thoroughly elsewhere; this section simply places them: for segmentation signals, see the first of the six causes in §7.2 (long note values and rests are the clearest); for the release of tension at the end of a phrase, see the note-value treatment in §6.1 Major closure (a rest can replace a short note in completing the release).
+
+---
+
+## 7. Motive → phrase → section
+
+### 7.1 Terminology hierarchy
 
 ```
-部分动机（不能独立，但有可辨特征）≈ 词        标 a1、a2，变体加 '
-  → 动机：能独立的最小旋律单位，至少 1 小节    标 a、b
-     （再短就无法独立判断拍位）
-     ★ 重复时通常继承节奏轮廓、带变化地重复
-  → 小乐节：通常 2 个动机                     标 A1、A2
-     → 乐节：最常 8 小节，4 小节也常见          标 A、B
-        （其他小节数多是对 8 或 4 的增减）
-        由一个情绪统一的整体
+Partial motive (cannot stand alone, but has recognisable features) ≈ word       labelled a1, a2; variants add '
+  → Motive: the smallest melodic unit that can stand alone, at least 1 bar       labelled a, b
+     (any shorter and its metric position cannot be judged independently)
+     ★ On repetition, it usually inherits the rhythmic contour and repeats with variation
+  → Sub-period: usually 2 motives                                                 labelled A1, A2
+     → Period: most often 8 bars, 4 bars also common                              labelled A, B
+        (other bar counts are mostly additions or subtractions from 8 or 4)
+        A whole unified in its emotional character
 ```
 
-★ **不同动机之间可以共享部分动机**（如 a'' = a1' + b2）——**这是结构统一的重要手段**。
+★ **Different motives can share part of a motive** (e.g. a'' = a1' + b2). **This is an important means of achieving structural unity.**
 
-> **同样的材料，性格由上下文决定**：同一个动机，放在静态乐句之后是小高潮，
-> 放在飞扬乐句之后就是安抚性的回答。
+> **The same material takes its character from context**: the same motive, placed after a static phrase, becomes a minor climax;
+> placed after a soaring phrase, it becomes a soothing answer.
 
-### 7.2 切分的六个成因（按清晰度排序）
+### 7.2 Six causes of segmentation (ranked by clarity)
 
-1. **长时值与休止**（最清晰）
-2. **音程跳进**（切断音高连续性）
-3. **运动型的重复**（每个重复单元自成一段）
-4. **明确的收束**
-5. **明确的开始**（回溯识别：只有认出下一句的开始，才确认上一段结束了）
-6. **重复／对比**（同样是回溯识别）
+1. **Long note values and rests** (clearest)
+2. **Leaps** (interrupt pitch continuity)
+3. **Repetition of a motion pattern** (each repeating unit forms its own segment)
+4. **Clear closure**
+5. **Clear beginning** (recognised retrospectively: only when the start of the next phrase is recognised does the previous segment confirm that it has ended)
+6. **Repetition / contrast** (likewise recognised retrospectively)
 
-**2、4、8 小节的切分最易把握**；奇数小节分组（3+3+2 等）难以感知。
+**Segmentation in groups of 2, 4, and 8 bars is easiest to grasp**; odd-bar groupings (3+3+2, etc.) are hard to perceive.
 
-| | 效果 |
+| | Effect |
 |---|---|
-| **强切分**（主音 + 强拍 + 主和弦 + 长音/休止） | 重新开始的感觉——适合开启新段落、强化重复/对比。**但它会把歌切成两半，段落末以外要慎用** |
-| **弱切分** | 平滑连续、气氛持续；可能模糊结构或造成停滞感 |
+| **Strong segmentation** (tonic + strong beat + tonic chord + long note/rest) | A sense of restarting: suited to opening a new section, reinforcing repetition/contrast. **But it cuts the song in two, so use sparingly except at the end of a section** |
+| **Weak segmentation** | Smooth and continuous, mood sustained; may blur structure or create a sense of stagnation |
 
-### 7.3 呼应：最基本的引擎
+### 7.3 Call and response: the most basic engine
 
-给出两段，**后者被听成对前者的反应**（不必是字面的一问一答）。
+Present two passages; **the latter is heard as a reaction to the former** (it need not be a literal question and answer).
 
-- 相似乐句呼应 = 回声型；对比乐句呼应 = 延续型；**"回答"甚至可以先出现**（先稳定形式，后提问）
-- **成对呼应最稳定但予定调和**；**串珠式**链式延展发展丰富但有散漫风险
-- 呼应在动机/乐句**多个层级上并行**（一个动机既呼应紧邻的前一动机，也呼应整个前一乐句）
+- Call and response with similar phrases = echo type; with contrasting phrases = continuation type; **the "answer" can even come first** (establish the form first, then ask the question)
+- **Paired call and response is the most stable but also the most predictable**; **chain-like extension ("string of beads") develops richly but risks dispersal**
+- Call and response runs **in parallel across several levels** of motives and phrases (one motive responds both to the immediately preceding motive and to the entire preceding phrase)
 
-### 7.4 高潮的位置
+### 7.4 Where the climax falls
 
-**默认放在全曲 2/3–3/4 处。**
+**Default placement: the 2/3–3/4 point of the song.**
 
-高潮段落有三个可辨认的信号：音区更高、时值更长、力度更强，编制也趋向宽广（文海良 p0149）。
-推进到高潮有两条路，**两说并排**：
-**渐进式**：旋律用连续上行，配合节奏疏密对比、和声语言变化、音色或调性变换，鼓点在陈述段与高潮段的接缝处加花，把推进力做实（文海良 p0149）。
-**以静制动**：陈述段落彻底收住，不加过渡直接切入高潮，靠反差本身完成推进；代价是需要一个足够干净的停顿点，接不好就显得生硬（文海良 p0151）。
+A climax section has three recognisable signals: higher register, longer note values, and stronger dynamics, with the instrumentation also tending to broaden (Wen Hailiang p0149).
+There are two routes into the climax, **presented side by side**:
+**Gradual build**: the melody uses continuous ascent, combined with contrasts of rhythmic density, changes in harmonic language, and shifts in timbre or tonality; drums add embellishments at the seam between the statement and the climax, consolidating the drive (Wen Hailiang p0149).
+**Stillness to create motion**: the statement section is brought fully to rest, and the climax enters with no transition, driving forward through the contrast itself. The cost is that it needs a sufficiently clean pause point; if handled badly, it sounds abrupt (Wen Hailiang p0151).
 
-高潮点与高潮段的收尾也不一样：高潮点推进完常突然放慢、拉宽节奏，给一个完满收束；高潮段要在情绪高昂的基础上继续走，不能急着收（文海良 p0149）。
+The climax point and the climax section also end differently: once the climax point has been pushed through, the rhythm often suddenly slows and widens, giving a complete closure; the climax section must continue on from its high emotion and should not rush to end (Wen Hailiang p0149).
 
-虎头蛇尾的解法：检查高潮位置与收尾方式，**修改动机/乐句的结束方式**，在副歌后半强化高潮；
-如果高潮反复几遍仍觉得没说够，可以接一段延续性的补充乐段再做音量淡出收尾，比直接砍断更完满（文海良 p0152）。
-
----
-
-### 7.5 乐思发展索引：一个动机怎么长成一段、一段怎么长成一首
-
-一个动机怎么长成一段、一段怎么长成一首，归 **`mc-development`**（L1）。它拥有 `material` 与 `form[].development`，十种手法、发展与堆砌的分界、流行歌里的落点都在那里；本 skill 只管动机与乐句本身怎么写。
-
-## 8. ★ 反套路（予定調和）
-
-> **予定调和 = 听众读得出下一步，一切如预期展开——这是旋律写作最该提防的问题。**
-
-### 8.1 高危模式清单
-
-- 同一乐句**原样重复 3 次以上**
-- 动机**跟着和弦进行平行位移**（到第 3 个和弦听众就把整首读完了）
-- 公式化的和声节奏：一小节一个和弦，8 小节末尾属和弦
-- 第二段主歌**照抄**第一段的 A−A' 开头（听众立刻预测后面必是 B−C）
-- 长短长短的跳跃节奏**贯穿全曲**
-- 教科书式的导音→主音、iv→iii 解决**照直弹**
-
-### 8.2 六条对策
-
-1. **第 3 次重复必须变**；第二段主歌**省掉开头的重复**（A-A'-B-C → A-B-C）
-2. **利用期待再翻盘**：先诱导听众的预测，然后在被预测的那一点上**大幅背叛**——用意外来做高潮的调度
-3. **把旋律线拉长**：一个不被动机切碎的长弧（用先现音把节奏形黏起来，潜到深处 → 反弹上行成为高潮 → 一个强烈的半音倚音作为第二重心 → 从容收束）。
-   ★ **长线 = 方向感 + 多样运动装置的接力**，不是单纯没有断点（那只会拖沓）
-4. **材料保持最少**：任何新乐句都要说清"和之前有什么不同、有什么延续"（部分对比 + 部分重复）。**材料越少的歌越好懂也越动人**
-5. **用悬留、倚音、先现音打破现成的解决**
-6. 在"平庸"（照搬现成手法，令人安心但无价值）与"不知所云"（偏离共享形式太远成为一堵墙）之间，
-   **用作品内部的强逻辑来支撑原创性**
-
-### 8.3 扭曲 + 回答
-
-**全程平滑 = 无聊**；需要一个**いびつ（扭曲）**的点来搅动。
-★ **但扭曲必须被回答**（一串不稳定音之后的动人解决；违抗重音的跳进 = 强烈情感的背书），
-否则它只是个缺陷。
-
-> 一旦前面的巧思让听众相信"这首歌值得听"，即使后面出现平淡的一句，
-> 听众也会耐心等待"后面会有好答案"。
+Remedy for a strong start with a weak finish: check the position of the climax and how the song ends, **revise how the motive or phrase ends**, and strengthen the climax in the second half of the chorus.
+If the climax has been repeated several times and still feels unfinished, you can attach a continuing supplementary passage before a volume fade-out. This is more complete than cutting off abruptly (Wen Hailiang p0152).
 
 ---
 
-## 9. 诊断表
+### 7.5 Index for musical-idea development: how a motive grows into a section and a section into a song
 
-| 症状 | 查什么 → 开什么药 |
+How a motive grows into a section and a section into a song belongs to **`mc-development`** (L1). It owns `material` and `form[].development`; the ten techniques, the boundary between development and mere accumulation, and where pop songs land are all covered there. This skill covers only how the motive and phrase themselves are written.
+
+## 8. ★ Anti-cliché (yotei chowa: predictability)
+
+> **Yotei chowa = the listener can read the next step, and everything unfolds as expected. This is the problem melody writing most needs to guard against.**
+
+### 8.1 High-risk pattern checklist
+
+- The same phrase **repeated unchanged 3 or more times**
+- A motive **shifting in parallel along the chord progression** (by the third chord the listener has already worked out the whole song)
+- Formulaic harmonic rhythm: one chord per bar, dominant chord at the end of an 8-bar unit
+- The second verse **copies** the A−A' opening of the first verse (the listener immediately predicts that B−C must follow)
+- A long-short-long-short leaping rhythm **running through the whole song**
+- Textbook leading-tone→tonic and iv→iii resolutions **played straight**
+
+### 8.2 Six countermeasures
+
+1. **The third repetition must change**; in the second verse, **drop the repeated opening** (A-A'-B-C → A-B-C)
+2. **Use expectation to turn the tables**: first induce the listener's prediction, then **sharply betray** it at the very point predicted, using surprise to shape the climax
+3. **Stretch the melodic line**: a long arc not chopped up by motives (use anticipation notes to bind the rhythmic figure together, sink deep → rebound upward to become the climax → a strong semitone appoggiatura as a second centre of gravity → close calmly).
+   ★ **A long line = a sense of direction + a relay of varied motion devices**, not merely the absence of breaks (that only drags)
+4. **Keep material to a minimum**: every new phrase should make clear how it differs from what came before and what it continues (partial contrast + partial repetition). **The fewer the materials, the more easily a song is understood and the more moving it can be**
+5. **Break ready-made resolutions with suspensions, appoggiaturas, and anticipation notes**
+6. Between "mediocrity" (copying stock devices, comforting but worthless) and "incomprehensibility" (straying so far from shared form that it becomes a wall),
+   **support originality with strong internal logic within the work**
+
+### 8.3 Distortion + answer
+
+**Smoothness throughout = boredom**; a **misshapen** (ibitsu, distorted) point is needed to stir things up.
+★ **But a distortion must be answered** (a moving resolution after a string of unstable notes; a leap that defies the accent = endorsement of strong feeling).
+Otherwise it is simply a flaw.
+
+> Once early cleverness has convinced listeners that the song is worth hearing, even a plain line that follows
+> will be waited through patiently, with the listener expecting that a good answer is coming.
+
+---
+
+## 9. Diagnostic table
+
+| Symptom | What to check → what to prescribe |
 |---|---|
-| **平淡无聊** | 全是级进/和弦音/正拍？→ 加非和弦音（倚音/悬留）、切分、跳进+蓄力；检查五声密度与半音用法是否一成不变 |
-| **每一步都被猜到** | 原样重复 2 次以上？动机跟着和弦平行位移？→ 第 3 次变化、省略重复、或诱导后翻盘做高潮 |
-| **松散、抓不住** | 材料太多、连续全新动机？→ 共享部分动机、新乐句里保留重复元素；把音域收进 1 个八度；按 2/4/8 小节切分 |
-| **虎头蛇尾** | 高潮位置与收尾？→ 高潮放 2/3–3/4；改动机/乐句的**结束方式**；副歌后半强化 |
-| **难唱** | 跳进超六度？同向跳进超 2 次或总跨度超八度？大跳两端都没时值？跨换声点？增二度？→ 七度拆 3+5 / 4+4、加蓄力/起跑/落地、逐句分配声区 |
-| **被伴奏盖住** | 开头和低音一起落在强拍？旋律描摹节奏型？全程黏着拍子？→ 错开起点、给反拍让路或作答、留空隙 |
-| **像说明书／校歌** | 导音→主音之类的功能进行太直白？→ 用悬留/倚音打破、混入五声、乐句末避开最强收束（主音+I+强拍） |
-| **五声旋律没个性** | 只在好走的邻音间打转？→ 转旋法、把五声主音与调主音错开、插大跳/琶音稀释、加装饰半音 |
-| **结尾不够终止** | 时值停了但调式/和声没停？→ 落在主音+I+导音接近 = 最强收束；要余韵就反着做 |
-| **整首单调** | 每段都从主和弦起？间奏都一样长？→ 某段从反向循环起、后半省略乐句、末段副歌重复+转调 |
+| **Flat and boring** | All stepwise / chord tones / on the beat? → Add non-chord tones (appoggiaturas / suspensions), syncopation, leaps with preparation; check whether pentatonic density and semitone usage are unchanging |
+| **Every step is predictable** | Same phrase unchanged 2+ times? Motive shifting in parallel with the chords? → Vary on the 3rd repetition, omit repetitions, or induce expectation and turn the tables for the climax |
+| **Loose, won't hold together** | Too much material, continuous brand-new motives? → Share partial motives, keep repeated elements in new phrases; narrow the range to 1 octave; segment in 2/4/8 bars |
+| **Strong start, weak finish** | Position of climax and ending? → Place the climax at 2/3–3/4; change the **ending method** of the motive/phrase; strengthen the second half of the chorus |
+| **Hard to sing** | Leap over a sixth? Same-direction leaps more than 2 or total span over an octave? Neither end of a large leap given note value? Crossing the passaggio? Augmented second? → Split sevenths into 3+5 / 4+4, add tame / run-up / landing cushion, assign registers phrase by phrase |
+| **Buried by the accompaniment** | Opening and bass both landing on strong beats? Melody tracing the rhythmic pattern? Stuck to the beat throughout? → Offset the start points, give way on off-beats or answer them, leave gaps |
+| **Like an instruction manual / school song** | Functional progressions like leading-tone→tonic too blunt? → Break them with suspensions/appoggiaturas, mix in pentatonic, avoid the strongest cadence at phrase ends (tonic + I + strong beat) |
+| **Pentatonic melody lacks character** | Only circling between easy neighbouring tones? → Use turn figures, offset the pentatonic tonic from the key tonic, insert large leaps / arpeggios to dilute, add ornamental semitones |
+| **Ending doesn't feel final** | Note value has stopped but mode/harmony has not? → Landing on tonic + I + leading tone approach = the strongest closure; for an afterglow, do the reverse |
+| **Whole song monotonous** | Every section starts on the tonic chord? Interludes all the same length? → Start one section from a reversed cycle, omit phrases in the second half, repeat the chorus with a key change in the final section |
 
 ---
 
-## 10. 与 ARR-SPEC 的字段对应
+## 10. Mapping to ARR-SPEC fields
 
-| 字段 | 本 skill 的哪一节 |
+| Field | Section of this skill |
 |---|---|
-| `form[].melody_register` | §4.1（**段落间要有对比**） |
-| `hooks.vocal_hook` | §7.1 动机 ＋ §8 |
-| `vocal.register_arc` | §4.2（与换声点一致） |
-| `meta.key` | ★ §4.2 —— **调是由歌手的换声点决定的，不是先定调再找歌手** |
+| `form[].melody_register` | §4.1 (**there must be contrast between sections**) |
+| `hooks.vocal_hook` | §7.1 Motives + §8 |
+| `vocal.register_arc` | §4.2 (consistent with the passaggio) |
+| `meta.key` | ★ §4.2 — **the key is determined by the singer's passaggio, not by choosing a key first and then finding a singer** |
 
 ---
 
-## 11. 写完后必过
+## 11. Must-pass checks after writing
 
-- [ ] 中心音域**在一个八度内**，全曲不超过 1.5–2 个八度
-- [ ] 没有超过六度的单次跳进（八度除外）
-- [ ] 同向连续跳进**不超过 2 次**，两端总跨度**不超过一个八度**
-- [ ] 每个大跳都有**蓄力／起跑／落地缓冲／回弹**中的至少一个
-- [ ] 确认过歌手的**换声点**，且没有乐句跨过它
-- [ ] 高潮在 **2/3–3/4** 处，且说得出它凭什么是高潮
-- [ ] **没有原样重复 3 次**的乐句；第二段主歌省掉了开头重复
-- [ ] 动机之间**共享部分动机**，不是一堆全新材料
-- [ ] 有一处**扭曲**，且它**被回答了**
-- [ ] 收束时**时值、和声、调式三者同时到位**（要余韵才反着做）
+- [ ] Core range **within one octave**; the whole song does not exceed 1.5–2 octaves
+- [ ] No single leap larger than a sixth (octaves excepted)
+- [ ] Consecutive same-direction leaps **no more than 2**, with total span **no more than one octave**
+- [ ] Every large leap has at least one of: **tame / run-up / landing cushion / rebound**
+- [ ] The singer's **passaggio** has been confirmed, and no phrase crosses it
+- [ ] Climax at **2/3–3/4**, with a stated reason why it is the climax
+- [ ] **No phrase repeated unchanged 3 times**; the second verse drops the repeated opening
+- [ ] Motives **share partial motives**, rather than a pile of entirely new material
+- [ ] There is one **distortion**, and it **is answered**
+- [ ] At closure, **note value, harmony, and mode all arrive together** (for an afterglow, do the reverse)
 
 ---
 
-## 附：来源
+## Appendix: Sources
 
-- **高山博《ポピュラー音楽作曲のための旋律法 増補版》**——§2–§9 的主干。
-  **书里不在本 skill 的部分**：
-  词曲对齐 → 作词的事，不在本包；曲式与整首组装 → `mc-form`；
-  调式音阶目录 → [reference.md](reference.md)。
-- **Jimmy Kachulis《The Songwriter's Workshop: Melody》**——
-  动机四型（并列/相近/倾斜/对比）与调式旋律（大调布鲁斯、混合利底亚、多利亚、五声）
-  整理在 [reference.md](reference.md)。
-- **勋伯格《作曲基本原理》**——
-  乐句构造与动机发展的另一套说法，与日式那套**并排保留**，差异见 reference。
-- **Richardson 调式**——调式目录。
-- **文海良《流行音乐学院系列教材·编曲》**——§7.4 高潮的推进手法与尾声处理。
-- **黄虎威《转调法》、李重光《基本乐理通用教材》**——reference.md §3.5 五声收束的偏音与稳定音级判据。
+- **Takayama Hiroshi, *Melody Writing for Popular Music Composition*, expanded edition** (Japanese original: ポピュラー音楽作曲のための旋律法 増補版) — the backbone of §2–§9.
+  **Parts of the book not covered by this skill**:
+  matching words to music → a matter for lyric writing, not in this package; form and whole-song assembly → `mc-form`;
+  catalogue of modes and scales → [reference.md](reference.md).
+- **Jimmy Kachulis, *The Songwriter's Workshop: Melody*** —
+  the four types of motive (parallel / similar / oblique / contrasting) and modal melody (major blues, mixolydian, dorian, pentatonic)
+  are summarised in [reference.md](reference.md).
+- **Schoenberg, *Fundamentals of Musical Composition*** —
+  another account of phrase construction and motive development, kept **alongside** the Japanese approach above; differences are noted in the reference.
+- **Richardson modes** — the modal catalogue.
+- **Wen Hailiang, *Arranging*** (Popular Music Academy textbook series) — §7.4 the techniques for driving to the climax and handling the ending.
+- **Huang Huwei, *Modulation Methods*; Li Chongguang, *General Textbook of Basic Music Theory*** — the criteria for non-chord tones and stable scale degrees in pentatonic closure, reference.md §3.5.

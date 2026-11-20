@@ -1,303 +1,292 @@
 ---
 name: mc-modulation
-description: Modulation (转调) - moving between keys and making the seam sound intended rather than accidental. Closely related versus distant keys, the cushion chord and its announcement ladder from smoothest to most impactful, degree thinking, the three tools that keep a modulation feeling unified, what each interval distance expresses, a six-step decision flow including the return trip, and a warning about the one modulation generative models reach for by default. Use when a section needs to change key, when a key lift feels cheap or abrupt, when a modulation sounds accidental, when planning a bright-to-dark or dark-to-bright switch, or when returning to the home key. 转调、升key、离调、同主调、平行调、近亲调、远隔调、缓冲和弦。
+description: Modulation - moving between keys and making the seam sound intended rather than accidental. Closely related versus distant keys, the cushion chord and its announcement ladder from smoothest to most impactful, degree thinking, the three tools that keep a modulation feeling unified, what each interval distance expresses, a six-step decision flow including the return trip, and a warning about the one modulation generative models reach for by default. Use when a section needs to change key, when a key lift feels cheap or abrupt, when a modulation sounds accidental, when planning a bright-to-dark or dark-to-bright switch, or when returning to the home key. Keywords: modulation, key change, key lift, closely related keys, distant keys, parallel key, relative key, cushion chord.
 ---
 
-# 转调（Modulation）
+# Modulation
 
-**转调的全部难点不在"转到哪"，在"接缝听起来是不是有意为之"。**
+**The whole difficulty of modulation lies not in "where to go" but in "whether the seam sounds intentional."**
 
-这个 skill 的核心是一个概念——**缓冲和弦（クッション）**，
-以及一把刻度尺——**它有多大声地宣告"我要转调了"**。
+The core of this skill is one concept, the **cushion chord**,
+and one measuring scale: **how loudly it announces "I am modulating now."**
 
-## 按任务读哪几节
+## Which sections to read by task
 
-| 任务 | 读 |
+| Task | Read |
 |---|---|
-| 决定转到哪个调 | §2 亲疏关系 ＋ §4 距离与性格 |
-| 接缝生硬 | §3 缓冲和弦 |
-| 想转得不着痕迹 | §3.2 宣告刻度的最低两档 |
-| 想转得有冲击 | §3.2 的最高两档 |
-| 转完了回不来 | §5 第 6 步 |
-| **担心升 key 太俗** | ★ §6 |
-| 按场景选手法 | §7 |
-| 查具体手法（50 条） | [reference.md](reference.md) |
+| Decide which key to go to | §2 closeness of relationship + §4 distance and character |
+| The seam is abrupt | §3 cushion chord |
+| Want the modulation to pass unnoticed | §3.2 the two lowest announcement levels |
+| Want the modulation to hit with impact | §3.2 the top two levels |
+| Got there and cannot get back | §5 step 6 |
+| **Worried a key lift is too cheap** | ★ §6 |
+| Choose a technique by scenario | §7 |
+| Look up a specific technique (50 items) | [reference.md](reference.md) |
 
-## 边界
+## Boundaries
 
-| 不归这里 | 归哪 |
+| Not covered here | Where it goes |
 |---|---|
-| 不转调的调外和弦（副属、借用、裏和弦） | `mc-harmony` §6——★ **那是"离调"，不是转调** |
-| 和弦进行本身 | `mc-progressions` |
-| 转调点放在曲式的哪里 | `mc-modulation` §5（六步流程第 1 步定位置）与 §6 |
-| 转调时旋律怎么接 | `mc-melody` §3（大跳的准备）＋ §6（收束） |
-| 50 条具体手法的谱例 | [reference.md](reference.md) |
+| Out-of-key chords that do not modulate (secondary dominants, borrowed chords, ura-codes) | `mc-harmony` §6 — ★ **that is a temporary departure from the key, not a modulation** |
+| Chord progressions themselves | `mc-progressions` |
+| Where the modulation point sits in the form | `mc-modulation` §5 (step 1 of the six-step flow places it) and §6 |
+| How the melody connects through a modulation | `mc-melody` §3 (preparing large leaps) + §6 (closing) |
+| Score examples for the 50 techniques | [reference.md](reference.md) |
 
-> ★ **离调 vs 转调**：插一个 E7 再回到 C，是**离调**（`mc-harmony`）；
-> 插一个 E7 之后**后面一直待在 A 大调**，才是**转调**（本 skill）。
-> 判据是"**之后有没有留下来**"，不是"用了什么和弦"。
-
----
-
-## 1. 动笔前必填
-
-| 必填 | 问法 |
-|---|---|
-| **① 目标调** | 具体到调名，并算出与原调的**音程关系** |
-| **② 为什么要转** | 抬升？明暗切换？世界切换？**"因为该转了"不是理由** |
-| **③ 宣告强度** | 要不着痕迹还是要冲击（§3.2 的五档里选一档） |
-| **④ 回程** | 还回不回来？怎么回？**★ 这条最常被漏** |
+> ★ **Temporary departure vs. modulation**: inserting an E7 and returning to C is a
+> **temporary departure from the key** (`mc-harmony`);
+> inserting an E7 and then **staying in A major from there on** is a **modulation** (this skill).
+> The criterion is "**whether it stays**," not "which chords were used."
 
 ---
 
-### 1.1 转调的四个目的（黄虎威 p0010–0013）
+## 1. Required before starting
 
-表现内容与刻画形象；发展材料（同一片断在不同调上重复是"节约材料，事半功倍"）；色彩对比；
-★ **适应人声或乐器的音域、音区、音色**。第四条以前不在本 skill 的问题清单里，而它最实际：歌手唱不上去，转调就是答案，不必找别的理由。
-从属调性天然不稳定、要求回到基本调性，这就是推动力；**回程先转到基本调的属调最宜引出主调**，正如属和弦最宜引出主和弦（p0011）。
+| Required | Question |
+|---|---|
+| **① Target key** | Name the key and work out its **interval relationship** with the original key |
+| **② Why modulate** | A lift? A switch between bright and dark? A switch of world? **"Because it's time to" is not a reason** |
+| **③ Announcement strength** | Subtle or impactful? (choose one of the five levels in §3.2) |
+| **④ Return** | Does it come back? How? **★ This is the item most often forgotten** |
 
-## 2. 近亲调与远隔调
+---
 
-常用调共 24 个（12 大 + 12 小）。以 Key=C 为例，**六种近亲调**：
+### 1.1 Four purposes of modulation (Huang Huwei, pp. 0010–0013)
 
-| 关系 | 例 | 性格 |
+Expressing content and characterizing a figure; developing material (repeating the same passage in different keys is "saving material, achieving more with less effort"); color contrast;
+★ **adapting to the range, register, and timbre of the voice or instrument.** This fourth purpose was not on this skill's checklist before, yet it is the most practical: if a singer cannot reach the notes, modulating is the answer, with no need to look for another reason.
+A subordinate key is naturally unstable and demands a return to the home key; that is the driving force. **The return is best led by first modulating to the dominant of the home key, just as the dominant chord is best suited to lead to the tonic chord** (p0011).
+
+## 2. Closely related and distant keys
+
+There are 24 commonly used keys (12 major + 12 minor). Taking Key=C as an example, there are **six closely related keys**:
+
+| Relationship | Example | Character |
 |---|---|---|
-| **同主调** | C ↔ Cm | 同一个主音的大小调；明暗对比**可以拉得很狠** |
-| **平行调**（= 关系大小调） | C ↔ Am | 同调号，几乎所有和弦共通；**轻轻一碰就换了情绪** |
-| **属调**（上行纯五） | C → G | 音阶只差 1 个音，共同和弦多，**最平滑** |
-| **属调的平行调** | C → Em | 与 G 同调号 |
-| **下属调**（下行纯五） | C → F | 与属调对称，同样平滑 |
-| **下属调的平行调** | C → Dm | 与 F 同调号 |
+| **Parallel key** (same tonic) | C ↔ Cm | Major and minor on the same tonic; the bright-dark contrast **can be pushed very hard** |
+| **Relative key** | C ↔ Am | Same key signature, nearly all chords shared; **a light touch changes the mood** |
+| **Dominant key** (rising perfect fifth) | C → G | Differs by only one scale note, many shared chords, **the smoothest** |
+| **Relative key of the dominant** | C → Em | Same key signature as G |
+| **Subdominant key** (falling perfect fifth) | C → F | Mirrors the dominant key, equally smooth |
+| **Relative key of the subdominant** | C → Dm | Same key signature as F |
 
-**远隔调**：以上之外的全部。气氛剧变，用得好能造出戏剧性发展。
-**半音关系与三全音关系都属于远隔调。**
+**Distant keys**: everything beyond the above. The mood changes drastically; used well, it can produce dramatic development.
+**Semitone and tritone relationships both belong to distant keys.**
 
 ---
 
-### 2.1 三级关系的定量划分（黄虎威）
+### 2.1 Quantitative three-level classification of relationships (Huang Huwei)
 
-"近亲"与"远隔"可以数出来（p0013–0017），距离按五度圈上最近的一边算：
+"Closely related" and "distant" can be counted (pp. 0013–0017). Distance is measured on the circle of fifths, on the nearer side:
 
-| 关系 | 调号差 | 共同的自然音三和弦 |
+| Relationship | Difference in key signature | Shared natural triads |
 |---|---|---|
-| 近关系 | 1 个 | **4 个** |
-| 较远关系 | 2 个 | 2 个 |
-| 远关系 | 3–6 个 | 0 个 |
-| 最远 | 6 个 | 0 个 |
+| Close | 1 | **4** |
+| Farther | 2 | 2 |
+| Distant | 3–6 | 0 |
+| Farthest | 6 | 0 |
 
-共同三和弦的个数就是缓冲和弦（§3）能挑的材料有多少。零个共同和弦的转调，缓冲只能靠等音或换调（§4.1）。
+The number of shared triads is how much material the cushion chord (§3) has to choose from. A modulation with zero shared chords can only be smoothed by enharmonic equivalence or by a change of key (§4.1).
 
-### 2.2 五声调式的转调
+### 2.2 Modulation in pentatonic modes
 
-五声调式换宫系统只有两条路，变宫为角上五度、清角为宫下五度，连续两次到大二度（黄虎威 p0041–0042、p0063–0064）。
-★ **近关系的五声转调在旋律层面无痕**，一个宫系统的七个自然音能写出本调与两个近关系调的五声旋律而不出任何变化音（p0040–0041），
-所以转调感全靠和声承担，和声里必须让新调号的那个音出现（p0045）。体系与同主音四变体见 `mc-melody` reference §3.0。
+In pentatonic modes there are only two routes for changing the gong system: the *bian gong* becomes the rising fifth of *jiao*, and *qing jiao* becomes the falling fifth of *gong*; two consecutive whole-step moves reach the target (Huang Huwei pp. 0041–0042, 0063–0064).
+★ **Pentatonic modulation to a closely related key is melodically seamless.** The seven natural notes of one gong system can write a melody in the home key and in two closely related keys without any accidentals (pp. 0040–0041), so the sense of modulation rests entirely on harmony, and the harmony must make the new key's characteristic note appear (p0045). The system and the four variants on the same tonic are in `mc-melody` reference §3.0.
 
-### 2.3 什么不算转调（防止过度分析）
+### 2.3 What does not count as modulation (preventing over-analysis)
 
-出现副属、扩展属、相关 II-7、调式转换、替代属、过渡和弦时，**一般不能分析为转调**；只停留一小节的和弦按原调级数解释更好
-（陈云强《爵士和声》p0257）。与 §5 的"之后有没有留下来"是同一条判据的两面：**没留下来的不是转调，是离调**。
+When secondary dominants, extended dominants, related ii7, modal interchange, substitute dominants, or passing chords appear, they generally **cannot be analyzed as a modulation**; a chord that stays for only one bar is better explained by its degree in the original key (Chen Yunqiang, *Jazz Harmony*, p0257). This and the criterion in §5 ("whether it stays") are two sides of the same rule: **a chord that does not stay is not a modulation; it is a temporary departure from the key.**
 
-### 2.4 歌里的转调三法（Kachulis）
+### 2.4 Three modulation methods in songs (Kachulis)
 
-**平行调转调**（同主音换调式色彩，G 混合利底亚到 G 多利亚，用来标记歌词故事的转折）；**关系调转调**（枢纽和弦在两调里级数不同，把预期的和弦换成另一调的、然后留在那）；
-**惊叹调转调**（V 之后直接进新调）。三法都比黄虎威那套粗，但它们绑着歌词用：歌词故事在哪里转折，转调就落在那。有歌词就从 `meta.upstream.lyrics` 读出转折在哪一段；没有就按 `intent.emotional_arc` 标出的转折段落定。
+**Parallel-key modulation** (changing the modal color on the same tonic, e.g. G mixolydian to G dorian, used to mark turns in the lyric's story); **relative-key modulation** (the pivot chord takes a different degree in the two keys: the expected chord is replaced by one from the other key, and the music then stays there); **exclamation modulation** (a direct jump to the new key after V). All three are cruder than Huang Huwei's system, but they are tied to lyrics: the modulation falls wherever the lyric's story turns. If there are lyrics, read where the turn happens from `meta.upstream.lyrics`; if not, place it at the section that `intent.emotional_arc` marks as the turn.
 
-## 3. ★ 缓冲和弦：本 skill 的核心概念
+## 3. ★ Cushion chord: the core concept of this skill
 
-### 3.1 它是什么
+### 3.1 What it is
 
-**一个让转调听起来平滑的过渡和弦。**
+**A transitional chord that makes a modulation sound smooth.**
 
-> **最常见的就是目标调的 V 或 V7**，插在转调前的最后 1–2 拍，
-> **跨小节线解决成 V7→I（属进行）**。
+> **The most common is the target key's V or V7**, placed in the last 1–2 beats before the modulation,
+> **resolving across the barline as V7→I (dominant motion)**.
 
-★ 这个 V7 **在原调里通常是个调外和弦**（III7、IV7、VI7 等）——
-**那正是"要换色了"的信号。**
+★ This V7 **is usually a non-diatonic chord in the original key** (III7, IV7, VI7, etc.) —
+**and that is exactly the signal that the color is about to change.**
 
-### 3.2 宣告刻度：它有多大声说"我要转调了"
+### 3.2 Announcement scale: how loudly it says "I am modulating now"
 
-**从最轻到最重：**
+**From softest to loudest:**
 
-| 档 | 缓冲和弦 | 效果 |
+| Level | Cushion chord | Effect |
 |---|---|---|
-| 1 | **V（三和弦）** | **最平滑，宣告最低** |
-| 2 | **V7** | 含三全音，推力更强 |
-| 3 | **♭II7（裏和弦）** | 注入外来音，**宣告最强**，自带爵士味 |
-| 4 | **dim / aug**（V7(♭9)／V7(♭13) 的替身） | 音响独特，**冲击最大** |
-| 5 | **IV(onV) 型分数和弦**（如 F/G） | ★ **没有三音（导音）→ 调性感被模糊 → 反而"可以飞去任何调"** |
+| 1 | **V (triad)** | **Smoothest, lowest announcement** |
+| 2 | **V7** | Contains a tritone, stronger push |
+| 3 | **♭II7 (ura-code)** | Brings in foreign notes, **strongest announcement**, with a jazzy flavor |
+| 4 | **dim / aug** (stand-ins for V7(♭9) / V7(♭13)) | Distinctive sonority, **greatest impact** |
+| 5 | **IV(onV)-type slash chord** (e.g. F/G) | ★ **No third (leading tone) → sense of key blurred → "can fly to any key"** |
 
-★ **第 5 档是特例**：它不是"更响"，而是**另一个方向**——
-前四档是"明确地宣告"，第 5 档是"让人听不出原来在哪个调"。
-**要偷偷转就用它。**
+★ **Level 5 is a special case**: it is not "louder" but works in the **opposite direction**.
+Levels 1–4 announce the modulation explicitly; level 5 makes it **hard to hear which key you started in**.
+**If you want to modulate covertly, use it.**
 
-### 3.3 级数思维
+### 3.3 Degree thinking
 
-**把每个和弦都想成罗马数字级数：调变了，级数不变。**
-这是一个换算习惯，不是一条带条件的判据，所以只有这一句：
-它在 §3.4 工具①（整段进行原样平移）、§3.5"共同和弦怎么取"（同一和弦在前后两调的级数换算）、
-以及 §5 第 3 步（算出目标调的 V7）里被反复用到——具体怎么用、有什么代价，见那几处。
+**Think of every chord as a Roman numeral degree: when the key changes, the degree stays the same.**
+This is a conversion habit, not a conditional criterion, so there is only this one sentence. It is used repeatedly in §3.4 tool ① (transposing a whole progression unchanged), in §3.5 "how to choose common chords" (the same chord's degree converted between the two keys), and in §5 step 3 (calculating the target key's V7). See those places for how it is applied and what it costs.
 
-### 3.4 保持统一感的三件工具
+### 3.4 Three tools for keeping a sense of unity
 
-转调最大的风险是"听起来像换了一首歌"。三条对策：
+The biggest risk in modulation is that it "sounds like a different song." Three countermeasures:
 
-1. **整段进行原样平移**（同一个进行移调，级数完全不变）
-2. **一条クリシェ线贯穿两个调**（低音/内声部/顶音的半音级进）
-3. ★ **用共同音当顶音**，让旋律带着走过转调
+1. **Transpose the whole progression unchanged** (the same progression moved, degrees completely unchanged)
+2. **Run one cliché line through both keys** (chromatic stepwise motion in the bass, an inner voice, or the top voice)
+3. ★ **Use a common tone as the top note**, letting the melody carry through the modulation
 
 ---
 
-### 3.5 缓冲和弦的九条做法（黄虎威）
+### 3.5 Nine approaches to the cushion chord (Huang Huwei)
 
-§3 讲缓冲和弦是什么，这一节是各种具体接法，按从近到远排：
+§3 explains what a cushion chord is; this section covers the concrete ways of connecting one, ordered from nearest to most distant:
 
-| 做法 | 要点 | 页 |
+| Approach | Key point | Pages |
 |---|---|---|
-| **共同和弦怎么取** | 几个相邻和弦都共同时，**只把紧靠转调和弦的最后一个算共同和弦**；它在前后两调的级数一般不同、功能可能相同 | p0033–0034 |
-| **特征音提前或推迟** | 共同和弦里可以提前渗进后调的特征音（常以经过音"闯入"），也可以推迟到后面再追认。★ 这是一个真正的旋钮：**旋律先转和声追认**与**和声先转旋律后跟**听感完全不同 | p0034–0035、p0049–0050 |
-| **半音转调** | 后调是大调，共同和弦里含后调自然 VI 级音，进转调和弦时该音降半音；后调是小调，含后调自然 VII 级音，进转调和弦时升半音成导音 | p0037–0039 |
-| **中间调** | 把共同三和弦扩成一个临时调性中心（前后加它的属功能），再转向后调。远关系拆成两跳就靠它 | p0057–0059 |
-| **增三和弦作共同和弦** | 十二平均律只有四个音响互异的增三和弦；任一个连同两个等和弦能解决到十二个调。捷径：**选一个含后调主和弦一两个和弦音的增三和弦** | 见黄书增三和弦章 |
-| **属七与增六互为等和弦** | 前调属七当后调增五六 → 低半音的调；前调增五六当后调属七 → 高半音的调。半音上下转调的另一条路 | p0120–0121 |
-| **单声部转调** | 只用一个持续单音或单声部完成转调，段落接缝的极简过渡 | p0145–0153 |
-| **小三度循环** | 沿同方向连续小三度换调，**第四次回到原调**；大三度循环低音加大二度经过音生成全音音阶 | p0163–0164 |
-| **小代大、大代小** | 预期的主和弦被降低或升高三音。总接在前调属功能之后，功能联系太紧，**一般不构成换调**，但色彩对比鲜明，是一个低成本的假转调 | p0167–0168 |
+| **How to choose common chords** | When several adjacent chords are shared, **only the last one, the chord right next to the modulating chord, counts as the common chord**; its degree in the two keys is generally different, though its function may be the same | pp. 0033–0034 |
+| **Characteristic note introduced early or delayed** | A common chord may already slip in a characteristic note of the new key (often entering as a passing tone), or defer it to be acknowledged later. ★ This is a real dial: **melody turns first and harmony confirms afterward** sounds completely different from **harmony turns first and melody follows** | pp. 0034–0035, 0049–0050 |
+| **Semitone modulation** | If the new key is major, the common chord contains the new key's natural VI degree, which is lowered a semitone when entering the modulating chord; if the new key is minor, it contains the natural VII degree, which is raised a semitone to become the leading tone | pp. 0037–0039 |
+| **Intermediate key** | Expand the shared triad into a temporary tonal center (adding its dominant function before and after), then turn to the new key. Distant keys are bridged in two hops with this technique | pp. 0057–0059 |
+| **Augmented triad as common chord** | Twelve-tone equal temperament has only four augmented triads with distinct sonorities; any one of them, together with two equivalent chords, can resolve to all twelve keys. Shortcut: **pick an augmented triad that contains one or two chord tones of the new key's tonic triad** | See the augmented-triad chapter of Huang's book |
+| **Dominant seventh and augmented sixth as equivalents** | The old key's dominant seventh serving as the new key's augmented sixth → a key a semitone lower; the old key's augmented sixth serving as the new key's dominant seventh → a key a semitone higher. Another route for semitone modulation up or down | pp. 0120–0121 |
+| **Single-voice modulation** | Complete the modulation using only one sustained note or a single voice; the minimal transition at a section seam | pp. 0145–0153 |
+| **Minor-third cycle** | Consecutive minor thirds in one direction modulate repeatedly, **returning to the original key on the fourth step**; a major-third cycle with a whole-step passing tone in the bass generates the whole-tone scale | pp. 0163–0164 |
+| **Minor for major, major for minor** | The expected tonic chord has its third lowered or raised. It usually follows the previous key's dominant function directly; because that function link is too tight, it **generally does not constitute a modulation**, but the color contrast is vivid, making it a cheap false modulation | pp. 0167–0168 |
 
-**轴心音**（p0061）：贯穿前后两调、同时是两调调式骨干音的那个音（如前调属音兼后调下属音），§3.4 第 3 条"用共同音当顶音"的可操作版：先找轴心音，再往上挂旋律。
+**Axis note** (p0061): the note that runs through both keys and is a skeletal tone of both keys' modes (e.g. the old key's dominant that is also the new key's subdominant). It is the actionable form of §3.4 tool 3, "use a common tone as the top note": first find the axis note, then hang the melody above it.
 
-## 4. 距离决定性格
+## 4. Distance determines character
 
-| 方向 | 性格 |
+| Direction | Character |
 |---|---|
-| **上行半音** | 尾奏前的标准升 key，情绪抬升。★ 见 §6 |
-| **下行半音** | 远隔调的冲击，却**不需要任何特殊技巧** |
-| **上行全音** | 汹涌；**经过 dim 和弦会更悲壮** |
-| **下行全音** | 邻调；自然生成漂亮的**"终曲感"**／分量感 |
-| **上行小三度** | 大调 = 华丽壮大；小调 = 微妙的换色 |
-| **下行小三度** | 大调 = 明亮又安定；积极清爽 |
-| **同主调** | 直接的明暗切换（对比），或渐变的上色 |
-| **平行调** | **最平滑的明暗切换** |
-| **属调／下属调** | 共同和弦最多，**全部之中最平滑** |
-| **三全音** | **距离最远**；架好桥就是**最有戏剧性的** |
+| **Rising semitone** | The standard key lift before the outro; lifts the mood. ★ See §6 |
+| **Falling semitone** | The shock of a distant key, yet **requires no special technique** |
+| **Rising whole step** | Surging; **passing through a dim chord makes it more tragic** |
+| **Falling whole step** | A neighboring key; naturally produces a beautiful **sense of finale** and weight |
+| **Rising minor third** | Major = splendid and grand; minor = a subtle change of color |
+| **Falling minor third** | Major = bright yet settled; positive and fresh |
+| **Parallel key** | Direct bright-dark switch (contrast), or gradual coloring |
+| **Relative key** | **The smoothest bright-dark switch** |
+| **Dominant / subdominant key** | Most shared chords, **the smoothest of all** |
+| **Tritone** | **Farthest distance**; with a bridge built, **the most dramatic** |
 
 ---
 
-### 4.1 换调：不架桥，直接搬
+### 4.1 Switching without a bridge: go direct
 
-**换调（调性对置）**不做缓冲，两个调直接对置，只要色彩对比（黄虎威 p0156–0164）。配对规则：
-**材料不同的换调放在乐段级的大结构之间；材料相同的换调放在乐句、乐节、乐汇级的小结构之间**，结构短、印象未散，对比才突出。
-色彩梯度：近关系功能性强、对比弱 → 三度关系最富色彩 → 调号差 5 个"突然而新颖" → 差 6 个"最突然、关系最疏远"。
-§6 说的末段上行半音，就是换调里最被用滥的那一格。
+**Key switching** (tonal juxtaposition) uses no cushion: the two keys are placed directly against each other, relying only on color contrast (Huang Huwei pp. 0156–0164). Pairing rule: **a key switch between differing material goes between large structures at the section level; a key switch between identical material goes between small structures at the phrase, sub-phrase, or motif level.** Short structures keep the impression fresh, so the contrast stands out.
+Color gradient: closely related keys are functionally strong but have weak contrast → third-related keys are the most colorful → a key-signature difference of 5 is "sudden yet novel" → a difference of 6 is "most sudden, most remote." The rising semitone at the end of §6 is the most overused cell of this key-switching gradient.
 
-## 5. 六步决策流程
+## 5. Six-step decision flow
 
-1. **定目标调与方向**：想去哪（副歌升 key？明暗切换？最后一程的高潮？），算出音程关系
-2. **查方向索引**（[reference.md](reference.md) §1）：找出该方向的手法，按想要的**宣告强度**挑
-3. **算出目标调的 V7**：这是万用缓冲。要更有型换**裏和弦**；要更冲击用 **dim/aug 替身**；
-   要偷偷转用 **IV(onV) 型分数和弦**
-4. **选统一策略**：整段平移？クリシェ线贯穿？共同音留在顶部？（选一个或组合）
-5. **安排落点**：缓冲和弦放在转调前最后 1–2 拍，**跨小节线解决到新调的 I**
-   （或 IIm7／IVm 这样的二五入口）
-6. ★ **规划回程**：把新调的 I 变成属七（I→I7），或变成原调的 IIm，
-   借副属／二五一回家
+1. **Set the target key and direction**: where to go (a key lift for the chorus? a bright-dark switch? the final climax?), and work out the interval relationship
+2. **Consult the direction index** ([reference.md](reference.md) §1): find the techniques for this direction and pick by the desired **announcement strength**
+3. **Calculate the target key's V7**: this is the all-purpose cushion. For more style, switch to a **ura-code**; for more impact, use a **dim/aug stand-in**; to modulate covertly, use the **IV(onV) slash chord**
+4. **Choose a unifying strategy**: transpose the whole progression? run a cliché line through? keep a common tone on top? (pick one or combine)
+5. **Place the landing**: put the cushion chord in the last 1–2 beats before the modulation, **resolving across the barline to the new key's I** (or to an entry such as IIm7 or IVm, a two-five entry)
+6. ★ **Plan the return**: turn the new key's I into a dominant seventh (I→I7), or make it the IIm of the original key, using a secondary dominant or a two-five to come home
 
-> **第 6 步最常被漏。** 转出去回不来的结果是后半首都别扭，
-> 而且 20 条自查查不出来——**这是一条只能靠自检的规则。**
+> **Step 6 is the one most often forgotten.** A modulation that goes out but cannot come back leaves the second half awkward,
+> and the 20-item self-check cannot catch it — **this is a rule that can only be enforced by self-check.**
 
 ---
 
-### 5.1 完备转调的四步，与转调特征音
+### 5.1 The four steps of a complete modulation, and the characteristic note
 
-六步是设计流程，这四步是**诊断**：接缝出问题时逐一查（黄虎威 p0032–0036）。
+The six steps are a design procedure; these four steps are a **diagnosis** to run through one by one when a seam goes wrong (Huang Huwei pp. 0032–0036).
 
-1. 显示前调
-2. 出现共同和弦
-3. 出现**转调和弦**
-4. 肯定后调（正格全终止）
+1. Establish the previous key
+2. Common chords appear
+3. A **modulating chord** appears
+4. Affirm the new key (perfect authentic cadence)
 
-实际作品要么走全四步，要么合并或取消某几步，极端是两调主和弦直接对置（那就是 §4.1 的换调）。
+Real works either take all four steps, or merge or drop some of them; the extreme case is the tonic chords of the two keys placed directly against each other (that is the key switch of §4.1).
 
-★ **转调特征音**（p0035）：转调和弦里要出现**前调没有、后调独有**的音，通常就是两调调号相异的那个（C 到 G 是升 F，C 到 F 是降 B）；
-后调是和声大调则看降 VI 级，和声小调则看升 VII 级。**它是"到底转过去没有"的检查项**：特征音没出现过，听众不会知道你转了。
+★ **Characteristic note** (p0035): the modulating chord must contain a note **present only in the new key and absent from the previous key**, usually the one whose key signature differs (C to G adds F♯; C to F adds B♭). If the new key is harmonic major, look for the lowered VI degree; if harmonic minor, look for the raised VII degree. **It is the check for "did you actually modulate?": if the characteristic note never appears, listeners will not know you modulated.**
 
-## 6. ★ 套路警戒线：最后一遍副歌上行半音
+## 6. ★ Cliché warning line: the rising semitone in the final chorus
 
-**这是流行音乐里被用得最狠的一个手法，也是生成模型的默认动作。**
+**This is the most heavily overused device in popular music, and the default move of generative models.**
 
-在"epic / emotional / final chorus"这类提示下，后端**高概率自己给你升半音**。
+Under prompts like "epic / emotional / final chorus," the back end **will with high probability raise a semitone for you on its own**.
 
-**判据同 `mc-progressions` §3**：
+**The criterion is the same as in `mc-progressions` §3**:
 
-> **你是"选择"了它，还是"默认"落进了它？**
+> **Did you choose it, or did it land on you by default?**
 
-### 6.1 四条替代方案（都能达到"最后一程更强"）
+### 6.1 Four alternatives (each achieves "stronger for the last pass")
 
-| 替代 | 为什么有效 |
+| Alternative | Why it works |
 |---|---|
-| **下行全音** | 得到"终曲感"与分量，而不是廉价的抬升。**方向反了，效果反而更重** |
-| **上行小三度** | 华丽壮大，比半音更有事件感 |
-| **不转调，改编制** | ★ **多数时候这才是正解**——升 key 往往是在补编曲没做够的功课（→ `mc-arrangement-arch` §6） |
-| **同主调切换** | 大转小或小转大，情绪变化比升半音大得多 |
+| **Falling whole step** | Gives a sense of finale and weight rather than a cheap lift. **Going the opposite way makes it heavier** |
+| **Rising minor third** | Splendid and grand; more of an event than a semitone |
+| **No modulation; change the lineup** | ★ **Most of the time this is the right answer**: a key lift is often a patch for arrangement work that was not done (→ `mc-arrangement-arch` §6) |
+| **Same-tonic switch** | Major to minor or minor to major; the mood changes far more than with a rising semitone |
 
-### 6.2 如果仍然要升半音
+### 6.2 If you still want the rising semitone
 
-**至少做到这两条之一**：
-- 用 §3.2 的第 4 档（dim/aug）或第 5 档（分数和弦）**改变宣告方式**，别用最俗的 V7
-- **让升 key 与一个编制事件同时发生**（撤掉某件乐器、加进一件新的），
-  这样听众记住的是那个事件而不是那半音
+**Do at least one of these two things**:
+- Use the §3.2 level 4 (dim/aug) or level 5 (slash chord) **to change how the modulation is announced**; do not use the most obvious V7
+- **Let the key lift coincide with a lineup event** (remove an instrument, or add a new one), so listeners remember the event rather than the semitone
 
-★ **自检动作**：在 ARR-SPEC 的 `form[].note` 里写一句为什么在这里转调。
-写不出来就别转。
+★ **Self-check action**: write one sentence in `form[].note` in ARR-SPEC explaining why the modulation happens here.
+**If you cannot write it, do not modulate.**
 
 ---
 
-## 7. 场景 → 手法
+## 7. Scenario → technique
 
-| 场景 | 推荐手法编号（见 [reference.md](reference.md)） |
+| Scenario | Recommended technique numbers (see [reference.md](reference.md)) |
 |---|---|
-| 整段副歌升 key（尾奏前的标准做法） | 10、15、41 |
-| 大サビ（最后的高潮副歌）再炸一次 | 15、09、21 |
-| 主歌 → 副歌豁然开朗（暗→明） | 05、12、17、23、36、39 |
-| 明亮的 A/B 段 → 忽然深沉的副歌（明→暗） | 16、30、34、40 |
-| 尾奏的终曲感／华丽收尾 | 02、08、24、31、33、43 |
-| 间奏/solo 段的世界切换 | 27、40 |
-| 前奏与 A 段用对比的调 | 30、35、45、48 |
-| 时髦的爵士味 | 20、21、49 |
-| 不突兀的渐进明暗上色 | 36、37 |
-| 多调之旅／华丽的副歌进行 | 44、47、50 |
+| Whole chorus lifted a key (the standard approach before the outro) | 10, 15, 41 |
+| The final climactic chorus (*ōsabi*) explodes once more | 15, 09, 21 |
+| Verse → chorus opening up suddenly (dark → bright) | 05, 12, 17, 23, 36, 39 |
+| Bright A/B section → a suddenly deep chorus (bright → dark) | 16, 30, 34, 40 |
+| Finale feel / flamboyant ending in the outro | 02, 08, 24, 31, 33, 43 |
+| Switch of world in an interlude or solo section | 27, 40 |
+| Contrasting key for the intro and the A section | 30, 35, 45, 48 |
+| Stylish jazz flavor | 20, 21, 49 |
+| Gradual, unobtrusive shading from bright to dark | 36, 37 |
+| Multi-key journey / flamboyant chorus progression | 44, 47, 50 |
 
 ---
 
-## 8. 与 ARR-SPEC 的字段对应
+## 8. Mapping to ARR-SPEC fields
 
-| 字段 | 说明 |
+| Field | Description |
 |---|---|
-| `meta.key` | **原调**。转调后的调不改这里 |
-| `form[].harmony` | ★ 转调段的级数**以新调为准**，并在 `note` 里写明"此段 Key=X" |
-| `form[].harmony_letters` | 字母记号自然反映新调 |
-| `form[].note` | ★ **转调理由写在这里**（§6 的自检动作） |
-| lint #9 | "至少一段含调外和弦**或转调标记**"——转调满足这一条 |
+| `meta.key` | **The original key**. A modulated key does not change this |
+| `form[].harmony` | ★ Degrees in a modulated section are **counted in the new key**, and `note` states "this section: Key=X" |
+| `form[].harmony_letters` | Letter notation naturally reflects the new key |
+| `form[].note` | ★ **The reason for the modulation goes here** (the self-check action of §6) |
+| lint #9 | "At least one section contains a non-diatonic chord **or a modulation marker**"; a modulation satisfies this |
 
 ---
 
-## 9. 写完后必过
+## 9. Checklist before finishing
 
-- [ ] 说得出**为什么**要在这里转调，不是"该转了"
-- [ ] 缓冲和弦的**宣告强度**是选的，不是默认用了 V7
-- [ ] 用了 §3.4 三件统一工具中的至少一件
-- [ ] ★ **规划了回程**（或明确决定不回来，并写明）
-- [ ] 若是"最后副歌升半音"，过了 §6 的警戒线检查
-- [ ] 转调段的级数记号**以新调为准**，且 `note` 里标了新调
-- [ ] 旋律在转调点上的大跳有准备（→ `mc-melody` §3.3）
+- [ ] Can state **why** to modulate here, not just "it's time"
+- [ ] The cushion chord's **announcement strength** was chosen, not defaulted to V7
+- [ ] Used at least one of the three unifying tools in §3.4
+- [ ] ★ **Planned the return** (or explicitly decided not to return, and wrote that down)
+- [ ] If it is a "final chorus rising semitone," passed the §6 cliché-line check
+- [ ] Degree notation in a modulated section **is counted in the new key**, and `note` marks the new key
+- [ ] The large leap at the modulation point is prepared (→ `mc-melody` §3.3)
 
 ---
 
-## 附：来源
+## Appendix: Sources
 
-- **梅垣ルナ《転調テクニック50》**——§1–§5、§7 与 50 条手法。
-- ⚠ **黄虎威《转调法》**——
-  这本是中文乐理体系的转调专著。
-  预计差异在：黄书从**共同和弦**入手（古典路径），日式从**缓冲和弦/属进行**入手（流行路径）。
-- **斯波索宾《和声学教程》**——转调的古典严格版本。
-- 50 条手法的方向索引与类型索引在 [reference.md](reference.md)。
+- **Umegaki Luna, *Modulation Techniques 50*** — §1–§5, §7, and the 50 techniques.
+- ⚠ **Huang Huwei, *Modulation Methods* (Zhuandiao fa)** —
+  this is the Chinese-language treatise on modulation in the Chinese music-theory system.
+  Expected difference: Huang's book starts from **common chords** (the classical route), while the Japanese book starts from **cushion chords / dominant motion** (the popular-music route).
+- **Sposobin, *A Course in Harmony*** — the strict classical version of modulation.
+- The directory index and type index for the 50 techniques are in [reference.md](reference.md).

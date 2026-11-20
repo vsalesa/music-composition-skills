@@ -1,285 +1,260 @@
-# mc-harmony 参考：非和弦音、张力音、各手法的完整用法
+# mc-harmony Reference: Non-Chord Tones, Tensions, and the Full Usage of Each Technique
 
-> [SKILL.md](SKILL.md) 讲功能骨架与九步升级；本文件放**查表用的细则**。
-> 来源：《初歩から身につく！コードの選び方マニュアル》＋《もっと！思いどおりに作曲ができる本》；
-> §2、§5 的第二出处是 Levine《The Jazz Theory Book》，引用记作 Levine p 页号。
+> [SKILL.md](SKILL.md) covers the functional skeleton and the nine-step upgrade. This file holds **the detailed rules for lookup**.
+> Sources: *Learn Chord Selection from the Basics* (Shohō kara migi ni tsukeru! Kōdo no erabikata manyuaru) and *Writing Music the Way You Want* (Motto! Omoi-dōri ni sakkyoku ga dekiru hon).
+> The second source for §2 and §5 is Levine, *The Jazz Theory Book*, cited as "Levine p" plus the page number.
 
 ---
 
-## 1. 非和弦音（非和声音）
+## 1. Non-chord tones
 
-| | 定义 |
+| | Definition |
 |---|---|
-| **和弦音** | 属于当前和弦构成音的旋律音 |
-| **非和弦音** | 不属于当前和弦构成音的旋律音（C 和弦上的 D） |
+| **Chord tone** | A melody note that belongs to the constituent notes of the current chord |
+| **Non-chord tone** | A melody note that does not belong to the constituent notes of the current chord (a D over a C chord) |
 
-> 全是和弦音 → 正确但过于平淡；非和弦音饱和 → 不协调。
-> **比例的平衡靠经验与品味。**
+> If everything is a chord tone, the result is correct but bland. If non-chord tones saturate the line, it sounds dissonant.
+> **The balance of proportions is a matter of experience and taste.**
 >
-> ★ **非和弦音是"配饰"不是"障碍"**——它想回到和弦音的冲动产生前进的动力，
-> 那是一种"略带坏意的风情"。
+> ★ **Non-chord tones are "accessories", not "obstacles."** Their impulse to return to a chord tone creates forward motion, a kind of "slightly naughty charm."
 
-### 1.1 三条行为特征
+### 1.1 Three behavioural characteristics
 
-1. **它们会"解决"**：非和弦音本质上是和弦音的变形，多数解决到**最近的和弦音**，
-   也可以解决到**下一个和弦的构成音**
-2. ★ **它们不能悬着不管**：没解决就跳进下一个和弦，听起来就是错的。
-   **修法：插入一个更合适的和弦，把这个音变成和弦音**
-   （C→G 之间有个别扭的 A —— 插入 F，变成 C→F→G）
-3. **它们分四型**：
+1. **They "resolve"**: a non-chord tone is essentially a deformed chord tone. Most resolve to the **nearest chord tone**, though they may also resolve to a **constituent note of the next chord**.
+2. ★ **They must not hang**: if a non-chord tone is left unresolved and the line leaps into the next chord, it sounds wrong. **The fix: insert a more suitable chord so that the note becomes a chord tone.** (An awkward A between C and G: insert F, giving C→F→G.)
+3. **They come in four types**:
 
-| 型 | 定义 |
+| Type | Definition |
 |---|---|
-| **经过音** | 在两个不同音高的和弦音之间**按顺序级进**通过 |
-| **倚音** | 落在**强拍**上的非和弦音，通常上行或下行级进解决 |
-| **掛留音（悬留）** | 前一和弦的和弦音**原样保持**（常用连线），在新和弦上成为非和弦音，然后解决 |
-| **刺繍音（辅助音）** | 围着一个和弦音"绣花"：和弦音 → 邻音 → 回到原音 |
+| **Passing tone** | Moves stepwise between two chord tones of different pitch |
+| **Appoggiatura** | A non-chord tone on a **strong beat**, usually resolving by step up or down |
+| **Suspension** | A chord tone of the previous chord is **held over unchanged** (usually tied). On the new chord it becomes a non-chord tone, and then it resolves |
+| **Neighbour (auxiliary) tone** | Embroidery around a chord tone: chord tone → neighbour → back to the original |
 
-### 1.2 三条实务推论
+### 1.2 Three practical inferences
 
-- ★ **同一条旋律，把哪个音当成和弦音，配出来的和声就不同**
-  （同一旋律既可配 Dm→G，也可配 C→Dm）——**由终止式与上下文裁决**
-- **配完自检**：把每个非和弦音圈出来，确认它属于四型之一**且有解决去处**
-- ★ **反向应用**：写伴奏时**故意埋进"非和弦音 → 解决"的运动**，
-  能得到单纯琶音给不了的前进动力
+- ★ **The same melody can produce different harmonies depending on which note you treat as a chord tone.** The same melody can be harmonised as Dm→G or as C→Dm. **The cadence and context decide.**
+- **Self-check after harmonising**: circle each non-chord tone and confirm that it belongs to one of the four types **and has a place to resolve to**.
+- ★ **Reverse application**: when writing accompaniment, **deliberately build in "non-chord tone → resolution" motion.** This gives forward drive that a plain arpeggio cannot.
 
 ---
 
-## 2. 张力音（Tension）
+## 2. Tensions
 
-**原理**：在七和弦之上继续叠三度得到 9/11/13，共 **7 种**：
-♭9、♮9、♯9 ／ ♮11、♯11 ／ ♭13、♮13。
-（Levine p0053：9＝2、11＝4、13＝6，用大于 7 的数字只是为了保持三度叠置的连续性；"变化音"专指 ♭9 ♯9 ♯11 ♭5 ♯5 ♭13，Levine p0015）
+**Principle**: keep stacking thirds above a seventh chord to get 9, 11 and 13. There are **7 types** in all:
+♭9, ♮9, ♯9 / ♮11, ♯11 / ♭13, ♮13.
+(Levine p0053: 9 = 2, 11 = 4, 13 = 6. Numbers above 7 are used only to keep the stacking of thirds continuous. "Altered tones" refers specifically to ♭9, ♯9, ♯11, ♭5, ♯5 and ♭13, Levine p0015.)
 
-> 张力音 = "提高紧张度、让人想进入稳定音响的音"——爵士音响的来源。
-> Levine p0056 的说法：不协和不是"坏"，它提供张力、解决与能量，用多少由上下文决定。
+> A tension is a note that raises the level of tension and makes the ear want to enter a stable sonority. This is the source of jazz sonority.
+> Levine p0056: dissonance is not "bad." It provides tension, resolution and energy, and how much to use is decided by context.
 
-### 2.1 各和弦型的常用张力音
+### 2.1 Common tensions for each chord type
 
-| 和弦型 | 常用张力音 | Levine 的对应说法 |
+| Chord type | Common tensions | Levine's corresponding view |
 |---|---|---|
-| **△7（大七family）** | 9、♯11、13 | 同。V 级五声给出大和弦的 7 与 9（p0217）；几乎任何大七和弦都能把 4 升成 ♯11（p0057）；C6／C9／C△♯4 都算 C 大和弦，大七音不是必需（p0307） |
-| **m7** | 9、11、13 | 同。D-7 叠到 13 就是 D Dorian（p0049–p0050），IIm7 没有 avoid note（p0052）。★ 惯例：钢琴／吉他排 m7 时通常不放 6/13 音（p0426），13 多留给旋律线（p0214） |
-| **m7(♭5)** | 9、11、♭13 | ★ **不同说法**：Levine 分两套——用 Locrian 时 ♭9 是 avoid note（p0072）；用旋律小调第 6 调式时 ♮9 是"半减和弦上最美的音"（p0086–p0087）。11、♭13 两套都有 |
-| **属七（V7 等）** | ★ **♮9、♭9、♯9、♯11、♮13、♭13 全部可用**，按情况选 | 同。最常用的三种是 ♭9、alt、♯11（p0298）；alt＝♭9 ♯9 ♯11 ♭13 且没有 5 音（p0088–p0089）；♮11 是 avoid note（p0052、p0059）。**哪种配哪种解决见 §2.7** |
+| **△7 (major-seventh family)** | 9, ♯11, 13 | The same. The V-degree pentatonic supplies the 7 and 9 of the major chord (p0217). Almost any major-seventh chord can raise its 4 to ♯11 (p0057). C6, C9 and C△♯4 all count as C major chords; the major seventh is not required (p0307) |
+| **m7** | 9, 11, 13 | The same. D-7 stacked up to 13 is D Dorian (p0049–p0050). IIm7 has no avoid note (p0052). ★ Convention: when voicing m7 on piano or guitar, the 6/13 note is usually left out (p0426). The 13 is mostly left to the melody line (p0214) |
+| **m7(♭5)** | 9, 11, ♭13 | ★ **Different views.** Levine divides it in two. When using Locrian, ♭9 is an avoid note (p0072). When using the sixth mode of melodic minor, ♮9 is "the most beautiful note on a half-diminished chord" (p0086–p0087). 11 and ♭13 are acceptable under both views |
+| **Dominant seventh (V7 etc.)** | ★ **♮9, ♭9, ♯9, ♯11, ♮13 and ♭13 are all usable.** Choose by situation | The same. The three most common are ♭9, alt and ♯11 (p0298). Alt = ♭9 ♯9 ♯11 ♭13 with no 5th (p0088–p0089). ♮11 is an avoid note (p0052, p0059). **Which tension goes with which resolution is in §2.7** |
 
-### 2.2 9 音的三条最小规则（避免音）
+### 2.2 Three minimal rules for the 9th (avoid notes)
 
-1. △7、m7 及多数和弦上用 **♮9**
-   （Levine p0078–p0080：小七和弦上的 ♭9 明显不协和；p0307：C9 是常见的 C 大和弦排列）
-2. **只有属七家族可以用全部 ♮9/♭9/♯9**；★ **目标 T 是小和弦时几乎不用 ♮9**（改用 ♭9 等）
-   （Levine p0088–p0089 属七的变化音；补一个例外：sus♭9 也带 ♭9，但它本身就是 V 功能的和弦，p0067、p0069。
-   目标是小和弦用 ♭9／alt：Levine p0093 小调二五一的 V 是 alt，p0425 小调二五 Aø→D7♭9 顺畅落到小和弦。
-   ★ **不同说法**：Levine 的判据不是"目标是不是小和弦"，而是"V 是否按下五度解决"——
-   按下五度解决的 V 上 ♭9 通常都好听，目标是大和弦也一样（p0285–p0288、p0424 B♭7♭9→E♭△）；
-   不按下五度解决的 V 才改用 ♯11（p0318、p0425）。日式流行按目标大小选，爵士按解决方向选，
-   两条都可用，冲突时看旋律音裁决，见 §2.8）
-3. ★ **m7(♭5) 家族与 IIIm7 上通常避开 9 音**
-   （IIIm7：Levine p0066 同——III 级的自然音 9 是 ♭9，在 E-7 上不协和，Levine 干脆把 III 级和弦写成 Esus♭9。
-   m7(♭5)：★ **不同说法**，见 §2.1 表——Levine 只避 ♭9，♮9 反而最美（p0072、p0086–p0087）；
-   写流行歌按日式避开，要爵士味时用 ♮9）
+1. On △7, m7 and most chords, use **♮9**.
+   (Levine p0078–p0080: ♭9 on a minor seventh chord is clearly dissonant. p0307: C9 is the common voicing of the C major chord.)
+2. **Only the dominant seventh family may use the full set of ♮9, ♭9 and ♯9.** ★ **When the target T is a minor chord, almost never use ♮9.** Use ♭9 and the like instead.
+   (Levine p0088–p0089 covers dominant-seventh alterations. One exception: sus♭9 also carries ♭9, but it itself has V function, p0067, p0069. For targets that are minor chords, use ♭9 or alt: Levine p0093, the V of a minor ii–V–I is alt. p0425: a minor ii–V, Aø→D7♭9, leads smoothly into a minor chord.
+   ★ **Different views.** Levine's test is not "whether the target is minor" but "whether the V resolves down a fifth." A V that resolves down a fifth usually sounds good with ♭9, whether the target is major or minor (p0285–p0288, p0424: B♭7♭9→E♭△). A V that does not resolve down a fifth uses ♯11 instead (p0318, p0425). Japanese pop chooses by whether the target is major or minor. Jazz chooses by the direction of resolution. Both are usable. When they conflict, the melody note decides; see §2.8.)
+3. ★ **On the m7(♭5) family and on IIIm7, usually avoid the 9th.**
+   (IIIm7: Levine p0066 says the same. The natural 9 of III is ♭9, which is dissonant over E-7, so Levine simply writes the III chord as Esus♭9. m7(♭5): ★ **Different views**, see the table in §2.1. Levine avoids only ♭9, and ♮9 is in fact the most beautiful (p0072, p0086–p0087). When writing pop songs, follow the Japanese convention and avoid it. When you want jazz flavour, use ♮9.)
 
-### 2.3 11 音在旋律层的用法（打歌的关键）
+### 2.3 The 11th at the melodic level (the key to playing tunes)
 
-- **小和弦上用 ♮11**（小三度与 11 相差全音，不冲突）
-  （Levine p0338：旋律音是 11 时可配 m7、m7♭5、sus、sus♭9；I 级和 V7 没有自然 11）
-- **大和弦上用 ♯11**（避开与三音的半音碰撞）。
-  （Levine p0055：大和弦的 4 是 avoid note；p0057：升成 ♯4 即 Lydian，几乎任何大七和弦都行。
-  ★ 失效：旋律或独奏正在用 ♮4 时，伴奏不要加 ♯4，p0307、p0425）
-  ★ **♯11 与五音是半音冲突，所以五音通常省略**
+- **On minor chords, use ♮11**, since the minor third and the 11 are a whole step apart and do not clash.
+  (Levine p0338: when the melody note is 11, it can be harmonised with m7, m7♭5, sus or sus♭9. I and V7 have no natural 11.)
+- **On major chords, use ♯11**, to avoid a semitone clash with the third.
+  (Levine p0055: the 4 of a major chord is an avoid note. p0057: raising it to ♯4 gives Lydian, which works on almost any major-seventh chord. ★ Exception: when the melody or solo is using ♮4, the accompaniment should not add ♯4, p0307, p0425.)
+  ★ **♯11 and the fifth form a semitone clash, so the fifth is usually left out.**
 
-例：`Am7(11) → G7sus4 → G7 → F△7(♯11)`
+Example: `Am7(11) → G7sus4 → G7 → F△7(♯11)`
 
-### 2.4 Key=C 的两个例子
+### 2.4 Two examples in Key = C
 
-| 场景 | 写法 |
+| Scenario | Notation |
 |---|---|
-| 二五一爵士化 | `Dm7(9) → G7(13,9) → C△7(13,9)` = `IIm7(9) → V7(13,9) → I△7(13,9)` |
-| 目标是小和弦 | `C△7(9) → E7(♭13,♭9) → Am7(9)` = `I△7 → III7 → VIm7`（E7 指向 Am，故用 ♭9/♭13） |
+| A jazzed-up ii–V–I | `Dm7(9) → G7(13,9) → C△7(13,9)` = `IIm7(9) → V7(13,9) → I△7(13,9)` |
+| The target is a minor chord | `C△7(9) → E7(♭13,♭9) → Am7(9)` = `I△7 → III7 → VIm7` (E7 points to Am, so ♭9 and ♭13) |
 
-Levine 对应：第一行——整个 II-V-I 都能用 V 级五声音阶，它恰好含 G7 的 9、13 与 C△ 的 7、9（p0214–p0217、p0220）。
-第二行——小调二五一的 V 用 alt（p0093）；★ 注意 ♭9 与 ♭13 在 Levine 里分属两套：
-只写 ♭9 来自半全减音阶、音阶里是 ♮13；♭9 加 ♭13 就是 alt 音响，来自旋律小调（p0099、p0298）。
+Levine correspondence: in the first line, the whole II–V–I can use the V-degree pentatonic, which contains the 9 and 13 of G7 and the 7 and 9 of C△ (p0214–p0217, p0220).
+The second line: the V of a minor ii–V–I uses alt (p0093). ★ Note that in Levine, ♭9 and ♭13 belong to two different sets. ♭9 alone comes from the half-whole diminished scale, which contains ♮13. ♭9 together with ♭13 is the alt sound, from melodic minor (p0099, p0298).
 
-### 2.5 注意
+### 2.5 Notes
 
-张力音**写在和弦名右侧的括号里**，也**经常为了谱面整洁完全省略**。
-（Levine p0307：很多爵士乐手把 C△ 直接写成 C；p0102：♭9 是 ♭9 ♯9 ♯11 三个变化音的简写；
-p0423：谱上的延伸／变化记号一律先怀疑，根音与和弦性质才可信）
-★ **规则之外的用法只要耳朵认可就成立**——严格的避免音规则逐级不同，**不必全背**。
-（Levine p0055："avoid note"该叫"小心处理的音"；p0202：任何音都能在任何和弦上用，你听着对就是对；
-p0502：理论是向导，不是紧身衣）
+Tensions are **written in brackets to the right of the chord name**, and **are often left out entirely to keep the score clean.**
+(Levine p0307: many jazz players write C△ simply as C. p0102: ♭9 is shorthand for the three altered tones ♭9, ♯9 and ♯11. p0423: treat extension and alteration signs on the score with suspicion, and trust the root and chord quality only when they are confirmed.)
+★ **Usages outside the rules are valid as long as the ear approves.** The strict avoid-note rules differ from level to level, **so there is no need to memorise them all.**
+(Levine p0055: "avoid note" should be read as "a note to handle with care." p0202: any note can be used over any chord; if it sounds right, it is right. p0502: theory is a guide, not a straitjacket.)
 
-### 2.6 avoid note 的判定与消除（Levine）
+### 2.6 Identifying and removing avoid notes (Levine)
 
-| 规则 | 内容 | 失效条件／自检动作 | 出处 |
+| Rule | Content | Exception or self-check | Source |
 |---|---|---|---|
-| 定义 | 与和弦一起按住会不协和的音。大调各级：I△7 的 4、V7 的 11、VIIm7(♭5) 的 ♭9；IIm7 与 sus 没有 | 自检：左手按住和弦，右手单独按住该音听 | p0015、p0052、p0055 |
-| 不是禁用，是"小心处理" | 作经过音快速带过几乎听不出；停住、拉长、放强拍才出问题 | 失效：outside／free 段或长段大七和弦上，4 反而可能是最有意思的音 | p0055、p0056、p0059、p0495 |
-| 解决方向 | 大和弦的 4 通常下行到 3；属七的 11 下半音到 3 | 自检：圈出每个 avoid note，看下一个音是不是 3 | p0056、p0059 |
-| 消除法一：升它 | 大和弦 4→♯4（Lydian）、属七 11→♯11 | 失效：旋律含 ♮4 时不能标 ♯4；独奏刻意用 4 时伴奏别加 ♯4 | p0057、p0060、p0307、p0425 |
-| 消除法二：换 sus | sus＝"4 不再像 avoid note 的 V 级和弦"；解决到 I 与 V7 一样顺 | 自检：排列里 3 音要放在 4 音之上，4 在 3 上会出小九度 | p0061–p0062、p0064–p0065 |
-| 安全音池 | 去掉两个 avoid note 的大调音阶＝该调 V 级五声音阶（C 调即 G 五声），在 II、V、I 上都协和，自带 9 与 13 | 写 hook／对位线且整段和声在一个调内 → 先用这五个音；失效：一用变化属就不适用 | p0220、p0226 |
-| 没有 avoid note 的和声 | 旋律小调、减音阶、全音音阶和声没有 avoid note，同一音阶内和弦可互换 | → `mc-style-jazz` §3 | p0090、p0099、p0108 |
+| Definition | Notes that sound dissonant when held with the chord. In major: the 4 of I△7, the 11 of V7, and the ♭9 of VIIm7(♭5). IIm7 and sus have none | Self-check: hold the chord with the left hand, then play the note alone with the right and listen | p0015, p0052, p0055 |
+| Not forbidden, but "handle with care" | Passed quickly as a passing tone, it is almost inaudible. It becomes a problem only when held, lengthened, or placed on a strong beat | Exception: in outside or free passages, or in long stretches over a major-seventh chord, the 4 can be the most interesting note | p0055, p0056, p0059, p0495 |
+| Direction of resolution | The 4 of a major chord usually steps down to the 3. The 11 of a dominant seventh steps down a semitone to the 3 | Self-check: circle each avoid note and see whether the next note is the 3 | p0056, p0059 |
+| Removal method 1: raise it | Major chord 4→♯4 (Lydian); dominant 11→♯11 | Exception: if the melody contains ♮4, do not mark ♯4. If a solo deliberately uses the 4, the accompaniment should not add ♯4 | p0057, p0060, p0307, p0425 |
+| Removal method 2: use sus | sus means "the 4 no longer makes the V-degree chord sound like an avoid note." Resolution to I and to V7 is equally smooth | Self-check: in the voicing the 3 must sit above the 4. If the 4 sits above the 3, a minor ninth appears | p0061–p0062, p0064–p0065 |
+| Safe pool | The major scale minus its two avoid notes equals the V-degree pentatonic of the key. In C, that is the G pentatonic. It is consonant on II, V and I, and carries its own 9 and 13 | When writing hooks or counter-lines and the harmony stays in one key, use these five notes first. Exception: it no longer applies once altered dominants are used | p0220, p0226 |
+| No avoid notes | Melodic minor, the diminished scale and the whole-tone scale have no avoid notes, and chords within the same scale can be interchanged | → `mc-style-jazz` §3 | p0090, p0099, p0108 |
 
-### 2.7 属和弦的变化张力：哪种配哪种解决（Levine）
+### 2.7 Altered tensions on dominant chords: which goes with which resolution (Levine)
 
-| 属和弦 | 张力内容 | 用在哪／最强解决 | 失效条件（看旋律音） | 出处 |
+| Dominant chord | Tension content | Used where and strongest resolution | Exception (check the melody note) | Source |
 |---|---|---|---|---|
-| **V7♭9** | 来自半全减音阶；♭9 是 ♭9 ♯9 ♯11 的简写，音阶里还有 ♮13 | 按下五度解决的 V，目标大小都行；♭9 常当旋律音向下半音落到目标和弦的 5 音 | 旋律是 ♮9 或 ♭13 时不能用 | p0099、p0102、p0285–p0288、p0298、p0424 |
-| **V7alt** | ♭9 ♯9 ♯11 ♭13，没有 5 音；旋律小调第 7 调式 | 最强解决：下五度、上半音、下大三度；小调二五一的标准 V | 旋律是 ♮9、♮13、♮5 时不能用；旋律是 3 音时非常刺（3 与 ♯9 成小九度）；旋律是 7 音时配 ♯9 好听 | p0088–p0089、p0093、p0285–p0288、p0299–p0300、p0425 |
-| **V7♯11** | 旋律小调第 4 调式；与 alt 互为三全音代换、同一母音阶 | 不在 II-V 里、不按下五度解决的属和弦；最强解决：下半音、下四度、上全音；同根 II7→IIm7（D7♯11→Dm7） | 旋律是 ♭9、♯9、♭13 时不能用；V 既在 II-V 里又下五度解决时 ♯11 是差选择，改 ♭9 | p0082、p0298–p0300、p0303、p0318、p0425 |
-| **V7♯5** | 全音音阶；♯5＝♭13 | 下五度解决；很多乐手直接用 alt 替代 | 记号别写成 G7♭13——会被读成 alt | p0108、p0110、p0305 |
-| **V7♯9** | 常当 I 级用（布鲁斯第一小节那种），几乎没有解决倾向 | vamp、布鲁斯主和弦 | 要推进时换 ♭9／alt | p0305 |
-| **sus／sus♭9** | sus＝装在一个和弦里的 II-V（D-7/G）；sus♭9 来自 Phrygian 或旋律小调第 2 调式 | 作 V 用；替换 II-V 时与被替的 V 同根；当代常不解决、有漂浮感 | 3 音可与 4 同在，但 3 必须排在 4 之上 | p0061–p0065、p0067–p0069、p0339 |
-| **减七** | ＝去掉根音的 V7♭9；一个减七可当四个 V7♭9 向四个方向解决 | 半音低音线；判读：根音是否在半音线上、是否等于下一和弦上五度的 V7♭9 | 纯减七偏温，任一音升全音仍在同一减音阶、更有咬合 | p0103、p0306、p0335、p0354 |
-| **连带规则** | II 改半减后，后面的 V 通常改 ♭9 或 alt；VI 级改属七（A7 代 Am7）声部更顺、可变化的余地更大 | 循环进行、turnaround | 旋律是 II 的 5 或 6 音时不能改半减 | p0043、p0294–p0295、p0306 |
+| **V7♭9** | Comes from the half-whole diminished scale. ♭9 is shorthand for ♭9 ♯9 ♯11. The scale also contains ♮13 | A V that resolves down a fifth. The target can be major or minor. The ♭9 often sits as a melody note that steps down a semitone to the 5th of the target chord | Not usable if the melody is ♮9 or ♭13 | p0099, p0102, p0285–p0288, p0298, p0424 |
+| **V7alt** | ♭9 ♯9 ♯11 ♭13, with no 5th. Seventh mode of melodic minor | Strongest resolution: down a fifth, up a semitone, down a major third. The standard V of a minor ii–V–I | Not usable if the melody is ♮9, ♮13 or ♮5. If the melody is the 3, it is very harsh (3 and ♯9 form a minor ninth). If the melody is the 7, ♯9 sounds good | p0088–p0089, p0093, p0285–p0288, p0299–p0300, p0425 |
+| **V7♯11** | Fourth mode of melodic minor. Tritone substitute for alt, with the same parent scale | A dominant that is not in a ii–V and does not resolve down a fifth. Strongest resolution: down a semitone, down a fourth, up a whole step. Same-root II7→IIm7 (D7♯11→Dm7) | Not usable if the melody is ♭9, ♯9 or ♭13. When the V is both in a ii–V and resolves down a fifth, ♯11 is the wrong choice; change to ♭9 | p0082, p0298–p0300, p0303, p0318, p0425 |
+| **V7♯5** | Whole-tone scale. ♯5 = ♭13 | Resolves down a fifth. Many players simply use alt instead | Do not write it as G7♭13, which will be read as alt | p0108, p0110, p0305 |
+| **V7♯9** | Often used as I (as in the first bar of a blues). Almost no tendency to resolve | Vamps, blues tonic chords | When the progression must move forward, switch to ♭9 or alt | p0305 |
+| **sus / sus♭9** | sus is a ii–V (D-7/G) packed into one chord. sus♭9 comes from Phrygian or the second mode of melodic minor | Used as a V. When replacing a ii–V, same root as the V it replaces. In contemporary use it often does not resolve and has a floating feel | The 3 may sound with the 4, but the 3 must sit above the 4 | p0061–p0065, p0067–p0069, p0339 |
+| **Diminished seventh** | Equals a V7♭9 with the root removed. One diminished seventh can resolve as four different V7♭9s, in four directions | Semitone bass lines. To read it: whether the root sits on the semitone line, and whether it equals the V7♭9 of the next chord's fifth | A pure diminished seventh is tuned slightly wide. Raising any one note by a whole step still stays in the same diminished scale, and has more bite | p0103, p0306, p0335, p0354 |
+| **Linked rules** | If II is changed to half-diminished, the following V usually changes to ♭9 or alt. Changing VI to a dominant seventh (A7 for Am7) gives smoother voicing and more room for variation | Cyclic progression, turnaround | Not usable if the melody is the 5 or 6 of II | p0043, p0294–p0295, p0306 |
 
-### 2.8 撒张力音前的旋律自检（Levine 的 right／wrong／optional）
+### 2.8 Melody self-check before adding tensions (Levine's right, wrong and optional)
 
-逐小节把旋律音对进和弦，问它是几音（Levine p0423–p0426）：
+Set each melody note against its chord, bar by bar, and ask what degree it is (Levine p0423–p0426):
 
-- 根音与和弦性质可信，延伸／变化记号一律先怀疑
-- 旋律音本来就是那个变化音（♭5 落在 m7♭5 上、♭9 落在 V7♭9 上）→ 记号正确
-- 旋律音与变化音相斥（alt 下出现 ♮9／♮13／♮5，♯4 下出现 ♮4，♭9 下出现 ♮9）→ 记号错：改掉，或把小节拆成两半（前两拍 C7、后两拍 C7alt）
-- 旋律音不涉及该变化音 → 变化音可选，按 §2.7 的解决方向定
-- 一拍以内的擦音可以放过；要更稳就把上一个 V 延长两拍、推迟解决（p0426）
+- The root and chord quality are reliable. Extension and alteration signs are always suspect.
+- If the melody note is the altered tone itself (♭5 on m7♭5, ♭9 on V7♭9) → the sign is correct.
+- If the melody note conflicts with the altered tone (♮9, ♮13 or ♮5 under alt; ♮4 under ♯4; ♮9 under ♭9) → the sign is wrong. Change it, or split the bar in two (for example, the first two beats C7 and the last two beats C7alt).
+- If the melody note does not involve the altered tone → the alteration is optional. Decide it by the resolution direction in §2.7.
+- A grace-like clash within one beat can be let pass. For more stability, extend the previous V by two beats and delay the resolution (p0426).
 
-**I 级与主小调上的张力选择**（Levine p0290–p0291、p0295、p0307–p0312、p0424、p0497）：
+**Tension choices on I and on the minor tonic** (Levine p0290–p0291, p0295, p0307–p0312, p0424, p0497):
 
-| 旋律音落在 | 可以做 |
+| The melody note lands on | What you can do |
 |---|---|
-| 大和弦的 3 或 7 | △♯5，常写成 slash（A♭△♯5＝C/A♭）；♯5 再回 5，或上到 6 |
-| 大和弦的根音或 5 | 整个和弦上移半音，旋律变成新和弦的大七或 ♯4；多用于最后一个 I |
-| 大和弦的 ♯4 或大七 | 根音下方半音的三和弦 slash（B/C），随后回 C△ |
-| 大和弦的 5 | △♭6（和声大调色彩） |
-| 小和弦，且它不在 II-V 里（主小调） | m7→m6 或 m△7，更暗、更像主和弦；旋律是小七音时例外；旋律 3 或 7 时可写 B/C 型 slash |
+| The 3 or 7 of a major chord | △♯5, often written as a slash (A♭△♯5 = C/A♭). Take ♯5 back to 5, or move up to 6 |
+| The root or 5 of a major chord | Shift the whole chord up a semitone, so the melody becomes the major seventh or ♯4 of the new chord. Mostly used on the final I |
+| The ♯4 or major seventh of a major chord | A triad slash a semitone below the root (B/C), then back to C△ |
+| The 5 of a major chord | △♭6 (harmonic-major colour) |
+| A minor chord that is not in a ii–V (minor tonic) | m7→m6 or m△7, which is darker and more like a tonic chord. Exception: when the melody is the minor seventh. When the melody is the 3 or 7, a B/C-type slash may be written |
 
 ---
 
-### 2.8 两种半音装饰和弦：邻音与倚音（Valerio）
+### 2.8 Two chromatic ornament chords: neighbour and appoggiatura (Valerio)
 
-九步表里有三全音替代、经过减七、挂留，缺这两种（Valerio p0028–0033）：
+The nine-step table covers tritone substitution, passing diminished chords and suspensions, but lacks these two (Valerio p0028–0033):
 
-| 装饰 | 做法 | 例（C 大调） |
+| Ornament | Method | Example (C major) |
 |---|---|---|
-| **邻音和弦** | 把和弦向上或向下移半音，再回到原位 | G7 → A♭7 → G7 |
-| **倚音和弦** | 用高或低半音的和弦**暂时顶替**原和弦，出现在被装饰和弦**之前** | Dm7 的位置先来 A♭7，再落到该来的和弦 |
+| **Neighbour chord** | Move the chord up or down a semitone, then return to its original place | G7 → A♭7 → G7 |
+| **Appoggiatura chord** | A chord a semitone higher or lower **temporarily stands in for** the original chord and appears **before** the chord it decorates | Where Dm7 belongs, A♭7 appears first, and then the chord that was due arrives |
 
-两者的差别只在位置：邻音是"离开再回来"，倚音是"先错后对"。
-**用法**：一个进行太静，先试邻音（不改和声节奏，只加一次半音摆动）；要把听众往某个和弦上推，用倚音。
-爵士以外的风格慎用，半音上下的属七一出来就是爵士标记（→ `mc-style-jazz`）。
+The only difference is position. The neighbour chord "leaves and returns," while the appoggiatura chord "is wrong first, then right."
+**Usage**: if a progression is too static, try a neighbour chord first. It does not change the harmonic rhythm and adds only one semitone shimmer. To push the listener toward a particular chord, use an appoggiatura chord. Use them sparingly outside jazz, since a semitone-related dominant seventh immediately marks the style as jazz (→ `mc-style-jazz`).
 
-## 3. 十三种色彩手法的完整用法
+## 3. The complete usage of thirteen colour techniques
 
-| # | 手法 | 要点 |
+| # | Technique | Key points |
 |---|---|---|
-| 1 | **分数和弦** | 指定低音做平滑/半音低音线。★ **F/G ≈ G7sus4(9)**，比 G7 含蓄精致，city pop 的心头好。Levine p0063 同：F/G、D-7/G 都是 Gsus 的写法，D-7/G 直接写出了它的功能 |
-| 2 | **IIIm7** | ★ **变色龙**：既能作 T（I 的代理）也能作 D（V 的代理）。切换依上下文。注意它上面通常避开 9 音 |
-| 3 | **副属（Sec.D）** | 任何"临时充当 T 的和弦"前面放它的 V7：A7→Dm、B7→Em、C7→F、**D7→G（重属）**、E7→Am。通常用七和弦形。Levine p0043、p0306：VI 级用 A7 代 Am7 是现代常态——解决更顺、能加变化音 |
-| 4 | **二五（ii–V）** | 把属和弦拆成 IIm7→V7。**IIm 是 IV 的代理，低音上行四度大跳**，比 4→5 更有力。可连锁 |
-| 5 | **裏和弦（三全音代换）** | V7 → ♭II7。低音走半音。**不合适时加 ♭5**。Levine p0280–p0281：成立的原因是 3 音与 7 音的三全音被两个属七共用；换不换的判据（p0285、p0289）：至少满足"造出半音低音"或"旋律音变得更有趣"之一，否则不换——容易用过头 |
-| 6 | **下属小调（S.M）** | IV→IVm(6)，或用 ♭VI△7／♭VII7 代换。★ **怅惘感的主要来源**；IVm 期间低音常留在 I |
-| 7 | **旋法味** | 多利亚 IV／属小调——借调式色彩避开功能和声的直白 |
-| 8 | **sus4** | 延迟解决。★ **不解决的 V7sus4** 可以完全避开属七的套路感 |
-| 9 | **张力音** | 见 §2 |
-| 10 | **クリシェ（半音线）** | 和弦不动，**内声部半音移动**——治"和弦挂太久"。代表：`C–Caug–C6–C7`（五音独走 G→G#→A→B♭）。小调版（Levine p0291–p0294）：主小调拉两小节以上时走 根→大七→小七→6（`Fm–Fm△7–Fm7–Fm6`），落点 6 音正好是下一个 V 的 3 音，可直接接 II→V；上行版 5→♭6→6→♭7 |
-| 11 | **经过减和弦** | 填进**大二度的空隙**。代表：`C–C#dim–Dm7–G7`。★ **C#m(♭5) 可理解为省略根音的 A7**（Levine p0103、p0306 同一判读：减七＝去根音的 V7♭9） |
-| 12 | **保续音（Pedal）** | 低音不动、上面换和弦。代表：`C–G/C–F/C–G`。★ 第 4 个和弦换成 **Fm/G** 制造"大发展的预感"（Levine p0362：pedal＝同一低音上走一串和弦） |
-| 13 | **布鲁斯／蓝调音** | ♭3、♭5、♭7 的擦音。★ **和声里不含该蓝调音时效果最强**。染蓝全曲：加 ♭III、♭VI、♭VII、Vm、I7、IV7（**非功能性**用法） |
+| 1 | **Slash chord** | Specify the bass for a smooth or semitone bass line. ★ **F/G ≈ G7sus4(9)**: more subtle and refined than G7, a favourite of city pop. Levine p0063 agrees: F/G and D-7/G are both ways of writing Gsus, and D-7/G states its function directly |
+| 2 | **IIIm7** | ★ **Chameleon**: it can act as T (a stand-in for I) as well as D (a stand-in for V). The choice depends on context. Note that it usually avoids the 9 above it |
+| 3 | **Secondary dominant (Sec.D)** | Place its V7 in front of any chord that is temporarily acting as T: A7→Dm, B7→Em, C7→F, **D7→G (double dominant)**, E7→Am. Usually in seventh-chord form. Levine p0043, p0306: using A7 for VI instead of Am7 is standard modern practice, since the resolution is smoother and altered tones are available |
+| 4 | **Two-five (ii–V)** | Split the dominant chord into IIm7→V7. **IIm stands in for IV, and the bass leaps up a fourth**, which is stronger than 4→5. It can be chained |
+| 5 | **Tritone substitution (ura-wakon)** | V7 → ♭II7. The bass moves by semitone. **Add ♭5 when it does not fit.** Levine p0280–p0281: it works because the tritone formed by the 3rd and 7th is shared by the two dominant sevenths. The test for using it (p0285, p0289): it must satisfy at least one of "it creates a semitone bass" or "it makes the melody note more interesting." Otherwise do not use it. It is easy to overuse |
+| 6 | **Subdominant minor (S.M)** | IV→IVm(6), or substitute ♭VI△7 / ♭VII7. ★ **The main source of wistfulness.** During IVm the bass often stays on I |
+| 7 | **Modal flavour** | Dorian IV or dominant minor. Borrows modal colour to avoid the blunt directness of functional harmony |
+| 8 | **sus4** | Delayed resolution. ★ **An unresolved V7sus4** can avoid the dominant-seventh cliché altogether |
+| 9 | **Tensions** | See §2 |
+| 10 | **Cliché line (chromatic line)** | The chord stays put while an **inner voice moves by semitone**. The cure for "a chord sitting too long." Representative: `C–Caug–C6–C7` (the fifth moves alone: G→G#→A→B♭). Minor version (Levine p0291–p0294): a minor tonic held for two bars or more walks root → major seventh → minor seventh → 6 (`Fm–Fm△7–Fm7–Fm6`). The landing 6 is exactly the 3 of the next V, so it connects directly to II→V. Upward version: 5→♭6→6→♭7 |
+| 11 | **Passing diminished chord** | Fills a **whole-step gap**. Representative: `C–C#dim–Dm7–G7`. ★ C#m(♭5) can be read as an A7 with the root omitted (Levine p0103, p0306 give the same reading: a diminished seventh is a dominant ♭9 with the root removed) |
+| 12 | **Pedal** | The bass stays put while chords change above it. Representative: `C–G/C–F/C–G`. ★ Changing the fourth chord to **Fm/G** creates a sense that major development is coming (Levine p0362: a pedal is a series of chords over one bass) |
+| 13 | **Blues / blue notes** | Rubbing against ♭3, ♭5 and ♭7. ★ **Strongest when the blue note is not contained in the harmony.** To colour a whole song blue: add ♭III, ♭VI, ♭VII, Vm, I7 and IV7 (**non-functional** use) |
 
 ---
 
-## 4. 小调的自然音和弦
+## 4. Natural chords of minor keys
 
-小调有三种音阶，自然音和弦随用哪一种而略有不同。
+A minor key has three scales, and the natural chords shift slightly depending on which one is used.
 
-| 音阶 | 级数 | Key=Am |
+| Scale | Degrees | Key = Am |
 |---|---|---|
-| **自然小调** | Im–IIm(♭5)–♭III–IVm–**Vm**–♭VI–♭VII | Am–Bm(♭5)–C–Dm–**Em**–F–G |
-| **和声小调**（vii 升半音） | Im–IIm(♭5)–♭III+–IVm–**V(7)**–♭VI–**viidim** | Am–Bm(♭5)–C+–Dm–**E(7)**–F–**G#dim** |
-| **旋律小调**（上行 vi、vii 均升） | Im–IIm–♭III+–IV–V(7)–vidim–viidim | Am–Bm–C+–D–E(7)–F#dim–G#dim |
+| **Natural minor** | Im–IIm(♭5)–♭III–IVm–**Vm**–♭VI–♭VII | Am–Bm(♭5)–C–Dm–**Em**–F–G |
+| **Harmonic minor** (raised 7th) | Im–IIm(♭5)–♭III+–IVm–**V(7)**–♭VI–**viidim** | Am–Bm(♭5)–C+–Dm–**E(7)**–F–**G#dim** |
+| **Melodic minor** (vi and vii both raised going up) | Im–IIm–♭III+–IV–V(7)–vidim–viidim | Am–Bm–C+–D–E(7)–F#dim–G#dim |
 
-★ **实务中的关键只有一条**：**V 必须用大三或属七**（来自和声小调的升七级），
-否则 D→T 的解决力消失，小调会"垮掉"。
+★ **In practice, one point is key**: **V must use a major triad or a dominant seventh** (from the raised seventh of harmonic minor). Otherwise D→T loses its resolving force, and the minor key "collapses."
 
-★ **增二度警告**：和声小调的 vi–vii 之间是增二度，**旋律不要直接连接这两个音**
-（这也是 `mc-melody` §9 诊断表里"难唱"的一个成因）。
+★ **Augmented-second warning**: in harmonic minor, the step from vi to vii is an augmented second. **Do not connect these two notes directly in a melody.** (This is also one cause of "hard to sing," in the `mc-melody` §9 diagnostic table.)
 
 ---
 
-## 5. 斯波索宾 vs 日式：两套判据并排
+## 5. Sposobin versus Japanese practice: two standards side by side
 
-| | **斯波索宾《和声学教程》** | **日式实务** | **Levine（爵士实务）** |
+| | **Sposobin, *Textbook of Harmony*** | **Japanese practice** | **Levine (jazz practice)** |
 |---|---|---|---|
-| 管什么 | **声部进行的对错** | **听感的好坏** | **每个和弦上哪些音能用**（和弦－音阶），最终裁判是耳朵（p0055、p0202） |
-| 核心禁忌 | 平行五度/八度、声部超越、反常进行 | 予定調和（太好猜）、和弦切太碎 | 停在 avoid note 上（大和弦 4、属七 11、半减 ♭9）；sus 的 4 排在 3 之上；旋律音与变化音相斥；三全音代换用过头（p0052、p0065、p0289、p0300） |
-| 四部和声 | ★ 严格规定 | 基本不谈（流行是和弦 + 旋律思维） | 不谈；只强调一条声部进行——II-V-I 里每个和弦的 7 音下半音变成下一个和弦的 3 音；大七音、根音都不是必需（p0040、p0307、p0492） |
-| 弱进行（D→S） | **视为错误** | **摇滚/民谣的标准语汇**（如 `C–G–F–C`） | V–IV–I 是大调布鲁斯的常规；V 不按下五度走叫阻碍终止，是重配的正规手法（p0243、p0343） |
-| 适用 | 写多声部、写弦乐、要古典质感 | 写流行歌 | 爵士、爵士味的流行、即兴与重配 |
+| What it governs | **Correctness of voice motion** | **How good it sounds** | **Which notes are usable over each chord (chord–scale)**. The final judge is the ear (p0055, p0202) |
+| Core prohibitions | Parallel fifths and octaves, voices overtaking, unusual motion | Predictability (too easy to guess), chords chopped too finely | Stopping on an avoid note (the major 4, the dominant 11, the half-diminished ♭9). The 4 of a sus placed above the 3. Melody notes that conflict with altered tones. Overusing tritone substitution (p0052, p0065, p0289, p0300) |
+| Four-part harmony | ★ Strictly specified | Largely not discussed (pop works from chord and melody) | Not discussed. Stresses only one voice-leading principle: in a ii–V–I, the 7th of each chord steps down a semitone to become the 3rd of the next. The major seventh and the root are not required (p0040, p0307, p0492) |
+| Weak progression (D→S) | **Treated as an error** | **The standard vocabulary of rock and folk** (for example, `C–G–F–C`) | V–IV–I is standard in major-key blues. A V that does not go down a fifth is said to block cadence, but in re-harmonisation it is a regular technique (p0243, p0343) |
+| Applies to | Multi-part writing, strings, classical texture | Writing pop songs | Jazz, jazz-flavoured pop, improvisation and re-harmonisation |
 
-★ **两者不冲突，但判据不同——不要拿一方的标准去否定另一方。**
-（Levine p0011 的立场相同：没有唯一的"爵士真理"，真理只在音乐本身，理论是围绕音乐的智力活动）
+★ **The two do not conflict, but they use different criteria. Do not use one side's standard to reject the other.**
+(Levine p0011 takes the same position: there is no single "jazz truth." Truth lies in the music itself, and theory is an intellectual activity built around the music.)
 
-**本库的用法**：
-- 走 `mc-counterpoint`（多声部）或 `mc-style-cinematic`（管弦）时，**斯波索宾的规则生效**
-- 走流行歌时，**日式那套生效**，斯氏的禁忌降级为"注意事项"
-- 走 `mc-style-jazz` 或要爵士味时，**Levine 的和弦－音阶判据生效**；它与日式同属"听感"阵营，差别只在张力音怎么选（§2.2、§2.7）
-- ★ **唯一两边都认的**：**低音线要有设计**（见 `mc-progressions` reference §9.4）。
-  Levine 也认：三全音代换的第一判据就是能否造出半音低音（p0285）；在任意根音上重配时，半音或五度圈低音线效果最好（p0336）
+**Use in this library**:
+- When working on `mc-counterpoint` (multi-part) or `mc-style-cinematic` (orchestral), **Sposobin's rules apply.**
+- When writing pop songs, **the Japanese system applies**, and Sposobin's prohibitions drop to the level of "points to note."
+- When working on `mc-style-jazz` or wanting a jazz flavour, **Levine's chord–scale criterion applies.** It sits in the "sound" camp with the Japanese system. The difference is only in how tensions are chosen (§2.2, §2.7).
+- ★ **The only point both sides accept**: **the bass line should be designed** (see `mc-progressions` reference §9.4). Levine also agrees that the first test for tritone substitution is whether it creates a semitone bass (p0285). When re-harmonising over any root, semitone or circle-of-fifths bass lines work best (p0336).
 
----
+## 6. Seven variations without new chords (Kachulis)
 
-## 6. 不加新和弦的七种变奏（Kachulis）
+The seven variations without new chords have been merged into the end of `mc-development` reference §3. Their usage is in its SKILL §6.3. This section keeps only the pointer.
 
-不加新和弦的七种变奏已并入 `mc-development` reference §3 末（用法在其 SKILL §6.3）；本节只留这个指针。
+## 7. Schoenberg: root progression, the limits of secondary dominants, floating chords (*Harmony*)
 
-## 7. 勋伯格：根音进行、副属的边界、游移和弦（《和声学》）
+### 7.1 The basis for judging a progression is always root motion
 
-### 7.1 衡量进行的依据永远是根音进行
+Three classes (p0139–0141): a **rising progression**, in which the root moves up a fourth or down a third, "good in every case, but avoid mechanical repetition." A **falling progression**, in which the root moves down a fourth or up a third, "only to be used in combination with rising progressions to form a rising progression." An **overstepping progression**, in which the root moves by a second up or down, used sparingly.
+Whatever the chords are stacked into, **look at the root motion first.** The same applies to the most complex chromatic chord changes.
 
-三分类（p0139–0141）：**上升进行**＝根音四度上行、三度下行，"一律良好，但应避免机械的反复"；
-**下降进行**＝四度下行、三度上行，"只有在与上升进行结合起来构成上升进行时才能使用"；**超越进行**＝二度上下行，节省着用。
-不管和弦叠成什么样，**先看根音走向**，最复杂的半音变化和弦之间也一样。
+### 7.2 The limits of secondary dominants
 
-### 7.2 副属和弦的边界
+- ★ **Two hard failure conditions** (p0101): **a secondary dominant cannot be used on the IV degree in major.** F up a fourth gives an augmented fourth, unless you go to a triad on ♭B, which has already left the key. **Nor can one be used on the VI degree in minor, or on a raised VI or VII.** The "any degree" rule in SKILL §7, step 3, must be narrowed to match this.
+- **Density budget** (p0101): out of 10 to 15 chords, at most three or four should be secondary dominants. This matches the stop rule in SKILL §7.1.
+- ★ **Two consecutive secondary dominants are dangerous** (p0103): both are major triads, and the second carries a strong sense of tonic. Major triads imply a tonic more strongly than minor triads do, so the whole passage gets heard as a modulation. This is the answer to "why does a run of secondary dominants suddenly sound like a change of key."
+- ★ **Balance between the dominant and subdominant regions** (p0103): when the secondary dominants lean too close to the dominant region (V and III stand out), **immediately lead through VI toward II or IV**. When they lean too close to the subdominant region (II and IV), work toward the dominant region. This is a correction you can apply at any time.
 
-- ★ **两个硬性失效条件**（p0101）：**大调 IV 级上不能用副属和弦**（F 往上四度是增四度，除非去 ♭B 上的三和弦，那已出调）；**小调 VI 级、以及升高的 VI、VII 级上也不能用**。SKILL §7 第 3 步的"任何一级前面都能放"要按这条收紧
-- **密度预算**（p0101）：十到十五个和弦里顶多三四个副属，接 SKILL §7.1 的停手规则
-- ★ **连续两个副属是危险的**（p0103）：两个都是大三和弦，第二个就带强烈的主和弦意味，大三和弦比小三和弦更像主和弦，整段会被听成转调。"为什么一串副属之后听着像换了调"的答案
-- ★ **属与下属领域的平衡**（p0103）：副属用得太靠近属领域（V、III 变突出）时，立刻**通过 VI 引向 II 或 IV**；太靠近下属领域（II、IV）时，努力转向属领域。随时可执行的纠偏动作
+### 7.3 Floating chords: chords that do not firmly belong to any one key
 
-### 7.3 游移和弦：不牢固属于任何一个调的那一类
+Diminished sevenths, augmented triads, the augmented sixth chords (in the 5/3, 4/3 and 2 forms), the Neapolitan sixth, and two others (p0149–0166). They do not belong firmly to any key. **So they can make distant connections closer and turn abrupt connections smooth.**
+The library had no such category before. The items were scattered across the nine-step table.
 
-减七、增三、增六五／四三／二、那不勒斯六，以及另外两个（p0149–0166）。它们不牢固地属于任何一个调，**所以能把关系疏远的连接变密切、把生硬的连接变平顺**。
-本库以前没有这个类别，各条散在九步表里。
+- **Connection guideline** (p0165): between a simple chord and a floating chord, the best connection is "the second chord contains a note that appeared in the first chord, or can be recognised as a chromatic variant of one." This can be checked directly.
+- **The diminished seventh, two schools side by side**: Schoenberg calls it a "universal remedy" that smooths awkward connections, but "using this universal remedy is very inartistic, unimaginative, too convenient, and without expressive power at all." Overuse gives a strong effect and no lasting value (p0149, p0166). Levine's side (§2.6–2.7) treats it as a standard tool. The test: decide whether the spot should be heard. If it should, do not use a diminished seventh.
+- ★ **The Neapolitan sixth** (p0145–0148): introduced through the lower submediant relation (in C major, f–a♭–d♭). **In a cadence it substitutes for II.** It usually sits right after I and resolves to I⁶₄ or V.
+  **Set it beside the tritone substitution ♭II7 that this library already has.** They share a root but have opposite functions. The tritone substitution is dominant in function, and the Neapolitan is subdominant. Do not confuse them.
+- **The augmented sixth chord sounds the same as a dominant seventh, so the two are enharmonically interchangeable** (p0161). An augmented sixth can resolve as a dominant seventh, or a dominant seventh can be resolved as an augmented sixth. This is the same point as Huang Huwei p0120–0121, and the two books corroborate each other. The augmented sixth can also be read as a secondary dominant of the Neapolitan sixth (p0171).
 
-- **连接指南**（p0165）：简单和弦与游移和弦之间，最好的连接是"第二个和弦里含有第一个和弦出现过的音，或者能认出是第一个和弦的半音变化"。可直接检查
-- **减七，两家并排**：勋伯格说它是"万应灵药"，能使生硬的连接平顺，**但"用这种万应灵药很不艺术，没有想象力，太方便，毫无表现力"**，用多了效果虽强却没价值（p0149、p0166）；Levine 那一侧（§2.6–2.7）把它当常规工具。判据是这一处要不要被听见：要就别用减七
-- ★ **那不勒斯六和弦**（p0145–0148）：由小下属关系引入（C 大调里是 f–a♭–d♭），**在终止式里作 II 的替代**，通常紧接在 I 后面，解决到 I⁶₄ 或 V。
-  **与本库已有的裏和弦 ♭II7 并排**：根音同，功能相反，裏和弦是属功能（三全音替代），那不勒斯是下属功能。别混
-- **增六五与属七音响相同，可等音互换**（p0161）：增六五按属七解决，或把属七当增六五解决。与黄虎威 p0120–0121 是同一件事，两本互证。增六五也可看成那不勒斯六的副属（p0171）
+### 7.4 Cadences fall into two groups, and there are two kinds of chromatic progression
 
-### 7.4 终止式只分两组，与变音进行两条
+- **Two groups** (p0202–0203, p0070–0071): A, the perfect (authentic) cadence: IV or II – V – I, with VI–V–I also counting. B, everything else, classed as half cadences. ★ **The plagal cadence IV–I is placed among the half cadences**, "with no special significance in harmony." Set this beside SKILL §3.1, where Kachulis treats the plagal cadence as religious feeling. One school looks at function and the other at emotion, and both are right.
+- **Deceptive cadence** (p0070–0071): V–VI or V–IV in place of V–I. Its value lies in **preparing the real ending and strengthening the force of the conclusion through repetition**. ★ Hard constraint: **the V in a deceptive cadence must be in root position.**
+- **Phrygian cadence II–III** (p0204): a half cadence landing on III. Useful for ending a minor-key section. Half-cadence candidates: IV–V, VI–V, II–V, I–V, III–V, and types such as VII–I and I–II.
+- ★ **Two rules for chromatic progressions** (p0103–0104, p0224): **a raised note keeps moving up by semitone, and a lowered note keeps moving down by semitone.** Each chromatic note creates an artificial leading tone. **Place chromatic notes in the outer voices**, especially the bass, which helps prevent the bass from stalling.
+- An intermediate chord should not be too stable, or the cadence will need to be longer. Two intermediate chords may be used in a row, as in C→a→e→G (p0093–0095), corroborated by Huang Huwei p0057–0059.
+- **The mechanism of establishing a key** (p0066–0067): the subdominant key is the main threat to the home key, because a note tends to disappear into its lower fifth. Use the leading tone to prevent this. **The clearest way to establish a key is to distinguish it from the keys most similar to it.**
 
-- **两组**（p0202–0203、p0070–0071）：A 正格终止（IV 或 II – V – I，VI–V–I 也算）；B 其余全归半终止。★ **变格终止 IV–I 被划进半终止**，"在和声上并没有任何特殊的重要性"。
-  与 SKILL §3.1 Kachulis 把变格终止当"宗教感"并排：一家看功能，一家看情感，两边都对
-- **伪终止式**（p0070–0071）：V–VI 或 V–IV 代替 V–I，价值在于**为真正的结束做预备、通过重复增强结束的力量**。★ 硬约束：**伪终止里的 V 必须是根音位置**
-- **弗里吉亚终止 II–III**（p0204）：落在 III 上的半终止，小调段落收尾好用。半终止候选：IV–V、VI–V、II–V、I–V、III–V，以及 VII–I、I–II 一类
-- ★ **变音进行两条**（p0103–0104、p0224）：**升高的音继续向上半音、降低的音继续向下半音**，每个变音都造一个人为导音；**变音放外声部**，放低音尤其有利，能避免低音停留
-- 中间调不宜太稳固，否则终止式要相应更长；可连用两个中间调 C→a→e→G（p0093–0095），与黄虎威 p0057–0059 互证
-- **调性建立的机理**（p0066–0067）：下属调是主调最大的威胁，一个音总倾向消失在它下五度音里，所以要用导音制止；**建立调性最明确的方法是把它和最相似的调区别开来**
+## 8. Where to find other sources
 
-## 8. 其他来源的位置
-
-| 内容 | 出处／去哪 |
+| Content | Source or where it goes |
 |---|---|
-| 流行与爵士和声的完整体系 | 任达敏 |
-| 爵士乐理（张力、代换、调式和声） | — |
-| 爵士和声的钢琴实操 | — |
-| Kachulis 的和声课 | — |
-| 勋伯格《和声的结构功能》 | — |
-| 李重光《基本乐理》 | — |
-| 转调的完整手法 | → `mc-modulation` |
-| 118+ 条现成进行 | → `mc-progressions` |
-
+| Full system of pop and jazz harmony | Ren Damin |
+| Jazz theory (tension, substitution, modal harmony) | — |
+| Piano practice in jazz harmony | — |
+| Kachulis's harmony course | — |
+| Schoenberg, *Structural Functions of Harmony* | — |
+| Li Chongguang, *Fundamentals of Music Theory* | — |
+| Full treatment of modulation | → `mc-modulation` |
+| 118+ existing progressions | → `mc-progressions` |

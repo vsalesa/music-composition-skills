@@ -1,184 +1,182 @@
-# mc-mix-intent 参考：交接格式、工序顺序与目标细化
+# mc-mix-intent Reference: Handoff Format, Process Order and Goal Detail
 
-> `SKILL.md` 讲意图怎么写；本文件放**写给谁、按什么顺序、细到什么程度**。
+> `SKILL.md` covers how to write intent; this file covers **who it is written for, in what order, and to what level of detail**.
 >
-> 主要来源：**Roey Izhaki《Mixing Audio》**；
-> 听觉依据：**Howard & Angus《音乐声学与心理声学》**。
+> Main source: **Roey Izhaki, *Mixing Audio***.
+> Auditory basis: **Howard & Angus, *Acoustics and Psychoacoustics***.
 
 ---
 
-## 1. 为什么要写意图：混音是空间竞争
+## 1. Why write intent: mixing is a competition for space
 
-> 混音中的各个乐器都会**为其存在空间而相互竞争**，例如吉他和人声会互相掩蔽 (p0089)。
+> The instruments in a mix all **compete with each other for their place in the space**. For example, guitar and vocals mask each other (p0089).
 
-掩蔽的定义与机制见 Howard & Angus p0238–0239；书里举的正是人声与伴奏的例子——
-伴奏在 1.5 kHz 附近让一点、人声在同处补一点，歌声就从伴奏里出来了（p0342）。
-这是"改混"型让路的原型；反过来做，人声就更听不见。
+The definition and mechanisms of masking are in Howard & Angus p0238–0239. The book gives exactly the example of vocals and accompaniment:
+the accompaniment backs off a little around 1.5 kHz, the vocal adds a little at the same spot, and the singing then emerges from the accompaniment (p0342).
+This is the prototype of a "remix" yielding. Doing it the other way round makes the vocal even less audible.
 
-混音师必须做取舍。**不写意图，取舍就由混音师替你做**——
-他会按他的习惯做，而不是按这首歌的需要做。
-这也是为什么本 skill 存在：**ARR-SPEC 的 `mix_intent` 是替你把取舍讲在前面。**
+A mix engineer has to make trade-offs. **If intent is not written down, the engineer makes the trade-offs for you**:
+they follow their own habits rather than what this song needs.
+This is why this skill exists: **the `mix_intent` in ARR-SPEC states these trade-offs up front on your behalf.**
 
 ---
 
-## 2. ★ 一个反直觉的顺序问题：从哪个乐段入手
+## 2. ★ A counterintuitive ordering problem: which section to start with
 
-Izhaki 给了两种做法，并指出第一种的陷阱 (p0065)：
+Izhaki gives two approaches and points out the trap in the first one (p0065):
 
-| 做法 | 问题 |
+| Approach | Problem |
 |---|---|
-| **按时间排序**（第一段起逐段推进） | 看上去合逻辑，但——**如果把主歌做得极为出色，留给副歌中新出现的乐器的展示空间就很小了** |
-| **按重要性排序** | 先处理最重要的乐段。录制音乐通常是**副歌**；电子音乐可能是**高潮部分** |
+| **Order by time** (work through sections from the start) | Looks logical, but **if the verse is made extremely good, little room is left to showcase the instruments that newly appear in the chorus** |
+| **Order by importance** | Process the most important section first. Recorded music is usually the **chorus**; electronic music may be the **climax** |
 
-> ★ 这和 `mc-texture-layering` §6 的最大密度法是**同一个道理的两次出现**：
-> **先做最满的地方，再往回做**。从稀疏处开始，你会不知不觉把预算花光。
+> ★ This is **the same principle appearing twice** as the maximum-density method in `mc-texture-layering` §6:
+> **do the fullest places first, then work backwards.** If you start from the sparse places, you will spend your budget without noticing.
 
-**落到 `mix_intent` 上**：`focus_by_section[]` **应该先写最密的那一段**，
-其余段落相对它定义，而不是按时间顺序逐段罗列。
+**Applied to `mix_intent`**: `focus_by_section[]` **should write the densest section first**,
+and define the other sections relative to it, rather than listing them one by one in time order.
 
 ---
 
-## 3. 混音顺序（按音轨）的四种方案 (p0064)
+## 3. Four approaches to mixing order (by track) (p0064)
 
-写交接单时用得上——**告诉混音师你希望他按哪种顺序，会影响最终的空间分配**。
+Useful when writing the handoff sheet: **telling the mix engineer which order you want them to follow affects how the final space is allocated**.
 
-| 方案 | 优点 | 缺点 |
+| Approach | Advantage | Disadvantage |
 |---|---|---|
-| **由少到多** | 能集中注意力处理单独的乐器 | 随着音轨加入**混音空间会被占满**，没有足够空间留给剩余声部 |
-| **由节奏 → 和声 → 旋律** | 遵循分期分轨录音的制作顺序 | — |
-| **按重要性排序** | 重要音轨一开始就被处理，**有足够空间让它们足够大** | — |
-| **并行推进法** | 混音时没有一个音轨处于孤立状态 | **仅适用于配器比较简单的作品** |
+| **From fewest to most** | Lets attention focus on each instrument alone | As tracks are added, **the mix space fills up**, leaving insufficient space for the remaining parts |
+| **Rhythm → harmony → melody** | Follows the production order of multitrack recording done in stages | — |
+| **By importance** | Important tracks are handled from the start, **leaving enough space for them to be large enough** | — |
+| **Parallel progression** | No track is treated in isolation during mixing | **Only suitable for works with relatively simple orchestration** |
 
-（节奏音轨 = 鼓、打击乐、贝司；和声音轨 = 节奏吉他、Pad、键盘；旋律音轨 = 人声及独奏）
+(Rhythm tracks = drums, percussion, bass; harmony tracks = rhythm guitar, pads, keyboards; melody tracks = vocals and solos)
 
-**本库的默认建议**：**按重要性**——理由同 §2。
+**This library's default recommendation**: **by importance**, for the reason given in §2.
 
-### 3.1 鼓组内部的混音顺序 (p0064–0065)
+### 3.1 Mixing order within the drum kit (p0064–0065)
 
-| 件 | 说明 |
+| Piece | Description |
 |---|---|
-| **吊镲（Overheads）** | 一般用一对立体声话筒拾音，是**处理其他鼓组乐器的参考**；先处理它能带来更多好处 |
-| **底鼓（Kick）** | 大部分作品中**最具支配性**的节奏元素，经常先于其他鼓乐器进入混音，**有时甚至先于吊镲** |
-| **军鼓（Snare）** | **第二重要**的支配性节奏元素，经常紧随底鼓 |
-| **通鼓（Toms）** | **只在某些时候出声**，对整个鼓组的音响效果作用**最不明显** |
-| **镲（Hi-hat / Ride / Crash）** | 在吊镲音轨中**存在相当多的串音**；混音时经常被用来**加强吊镲音轨的效果** |
+| **Overheads** | Usually recorded with a stereo pair of microphones, and serve as the **reference for processing the other drum pieces**; processing them first brings more benefit |
+| **Kick** | In most works the **most dominant** rhythmic element; often enters the mix before the other drum pieces, **sometimes even before the overheads** |
+| **Snare** | The **second most important** dominant rhythmic element, often following the kick closely |
+| **Toms** | **Sound only at certain moments**, and contribute **the least** to the sonic effect of the whole kit |
+| **Cymbals (Hi-hat / Ride / Crash)** | There is **considerable bleed** in the overhead track; during mixing they are often used to **reinforce the effect of the overhead track** |
 
-> 最后一条解释了为什么鼓组不能按"每件独立"来想——
-> overhead 里已经有了所有镲，单独的镲轨是**加强**而非**来源**。
-> 这一点在用采样库或生成后端时会消失（没有串音），
-> **所以机器做的鼓组天然缺少这层胶水**，需要在 `mix_intent` 里明确要求补。
-
----
-
-## 4. 标准的音频处理顺序 (p0066，图 4.4)
-
-**这不是本库要规定的东西**（是混音的事），但意图单里若写了效果，顺序会被它约束，
-所以列在这里备查：
-
-1. 如果**跳过声像处理**、把素材混成单声道，**将失去声音的宽度和深度**
-2. **插入式处理器的声音会替代原始信号**，因此应在任何**发送式效果器**
-   （调制、延时、混响）**之前**进行
-3. 基于同样理由，通常**先调制、后延时**，而不是先延时再调制
-4. **混响模仿自然空间感**，因此通常希望**混响之后的信号不再经过其他效果器**
-5. **自动化控制通常是混音中最后一个重要阶段**
-
-**干–湿处理方法** (p0066)：先把所有音轨通过**干处理工具**（推子、声像电位器、处理器）
-混合，之后再发送到**湿处理工具**（调制、延时、混响）。
-
-**出版前最后一步**：通常是**进一步细化声像布局与电平平衡** (p0066)。
+> The last point explains why the drum kit cannot be imagined as "each piece independent".
+> The overheads already contain all the cymbals, so a separate cymbal track is a **reinforcement**, not a **source**.
+> This disappears when using sample libraries or generative backends (there is no bleed),
+> **so machine-made drum kits naturally lack this layer of glue**, and `mix_intent` needs to request it explicitly.
 
 ---
 
-## 5. 反复加工：由粗到精 (p0067–0068)
+## 4. Standard audio processing order (p0066, Figure 4.4)
 
-> **「由粗开始，最后到精。只要在真正需要的时候——混音过程结束以后——把声音做到完美就可以了。」** (p0068)
+**This is not something this library prescribes** (it belongs to mixing). But if the intent sheet specifies effects, the order will be constrained by them,
+so it is listed here for reference:
 
-**为什么必须这样**——混音是前后联系极紧的过程 (p0067)：
+1. If you **skip stereo processing** and fold the material to mono, **you lose the width and depth of the sound**
+2. **The sound of an insert processor replaces the original signal**, so it should come **before** any **send effects**
+   (modulation, delay, reverb)
+3. For the same reason, usually **modulation first, then delay**, rather than delay first and modulation after
+4. **Reverb imitates natural spatial impression**, so usually the signal after reverb should **no longer pass through other effects**
+5. **Automation control is usually the last important stage in mixing**
 
-> 已经存在的部分混音，在有新素材加入时**一般都需要调整和润饰**；
-> 任何一种对声音的调整**都可能需要在其他方面进行后续调整**。
+**Dry–wet processing method** (p0066): first combine all tracks through **dry processing tools** (faders, pan pots, processors), and only then send them to **wet processing tools** (modulation, delay, reverb).
 
-一个连锁反应的实例 (p0067)：
-
-1. 提升人声高频使之更明亮
-2. → 高频在混响器中产生的**音尾可能过长** → 得调混响的阻尼衰减
-3. → 均衡也会让人声**音量听上去变大**（能量铺到更多临界频带，总声强不变响度也会增大，Howard & Angus p0096）→ 推子要调
-4. → 如果人声是先均衡再压缩的 → **压缩参数可能需要调整**
-
-> ★ 对本库的意义：这条链说明**为什么 `mix_intent` 只能写意图不能写参数**。
-> 参数之间互相牵动，你在规格单里钉死一个数值，
-> 等于替混音师锁死了后面四步——而你根本不知道他的链路长什么样。
+**Final step before release**: usually **further refinement of the stereo layout and level balance** (p0066).
 
 ---
 
-## 6. 两种常见困境的解法 (p0068–0069)
+## 5. Repeated processing: from rough to fine (p0067–0068)
 
-### 6.1 听评遇到障碍
+> **"Start rough, and end fine. Only when it is genuinely needed, after the mixing process is over, does the sound need to be made perfect."** (p0068)
 
-**症状**：明显感到有什么地方不对劲，**但就是不知道问题出在哪里**。
+**Why it has to be this way**: mixing is a process with very tight interdependencies (p0067):
 
-**解法**：**参考音轨是真正能解决难题的工具**——
-对比当前混音和自己喜爱的某个混音成品，这种对比能告诉你问题所在，
-**或者至少帮你明确一个前进的方向**。
+> A partial mix that already exists generally **needs adjusting and polishing** whenever new material is added;
+> any adjustment to the sound **may require follow-up adjustments elsewhere**.
 
-（参考音轨的六种用法见 `SKILL.md` §6）
+An example of a chain reaction (p0067):
 
-### 6.2 陷入循环怪圈
+1. Raise the high frequencies of the vocal to make it brighter
+2. → The high frequencies may produce **a reverb tail that is too long** → the reverb's damping decay must be adjusted
+3. → EQ also makes the vocal **sound louder** (energy spreads into more critical bands; total sound intensity is unchanged but perceived loudness rises, Howard & Angus p0096) → the fader must be adjusted
+4. → If the vocal was EQ'd before compression → **the compression parameters may need adjusting**
 
-**机理**：我们**只能记得最近的若干次操作**。
-两天前的某个压缩处理的细节回忆不起来，但半小时前的均衡怎么做的却记得很清楚。
-——于是就在最近的几个决定之间来回打转。
-
-**解法**：
-1. 进行**短暂休息**
-2. **重新听一下整个混音**，确定哪些是真正需要去做的，然后再决定接下来怎么办
-3. > 「请注意**对你最近的混音处理进行再次评价**。」
-
-Howard & Angus 把同一件事叫"听觉心理疲劳"：听觉会适应音色的改变，一段时间后提升的效果在听感上减弱，
-于是在已经适应的频带继续提升；唯一的解法也是中断后重听（p0342）。
-这和音量过大造成的听阈暂时偏移不是一回事，正常音量下也会发生。
-
-> ★ 这条对 agent 同样成立，而且更严重——
-> agent 的"最近记忆"就是上下文窗口。
-> 所以本库的做法是：**判断写进 ARR-SPEC，而不是留在对话里**。
-> 规格单就是那个"重新听一下整个混音"的动作的书面形式。
+> ★ Significance for this library: this chain shows **why `mix_intent` can only state intent and not parameters**.
+> Parameters pull on each other. Fixing a value in the spec sheet
+> locks the engineer out of the following four steps, and you cannot know what their chain looks like.
 
 ---
 
-## 7. Izhaki 章节导航
+## 6. Two common predicaments and their solutions (p0068–0069)
 
-| 主题 | 位置 |
+### 6.1 Obstacles while listening and evaluating
+
+**Symptom**: something is clearly wrong, **but you cannot tell where the problem is**.
+
+**Solution**: **reference tracks are the tool that can really resolve the difficulty**.
+Compare the current mix with a finished mix you like. This comparison can show where the problem is,
+**or at least help you settle on a direction to move forward**.
+
+(The six uses of reference tracks are in `SKILL.md` §6.)
+
+### 6.2 Getting stuck in a loop
+
+**Mechanism**: we **can only remember the last few operations**.
+You cannot recall the details of a compression step from two days ago, but you remember clearly how you EQ'd half an hour ago.
+— So you go back and forth between the most recent few decisions.
+
+**Solution**:
+1. Take a **short break**
+2. **Listen to the entire mix again**, decide what genuinely needs doing, and only then decide what to do next
+3. > "Be sure to **re-evaluate your recent mixing decisions**."
+
+Howard & Angus call the same thing "auditory fatigue": the ear adapts to a change in timbre, so after a while a boost sounds weaker, and one keeps boosting the bands one has already adapted to. The only remedy is again to take a break and listen afresh (p0342).
+This is not the same as the temporary threshold shift caused by excessive volume; it also happens at normal volume.
+
+> ★ This applies to agents as well, and more severely:
+> an agent's "recent memory" is its context window.
+> So this library's approach is: **judgments go into the ARR-SPEC, not left in the conversation**.
+> The spec sheet is the written form of the act of "listening to the whole mix again".
+
+---
+
+## 7. Izhaki chapter navigation
+
+| Topic | Location |
 |---|---|
-| 1.2 完美的混音与听觉训练 | — |
-| 2.1 **响度越大听上去越好**（听觉依据：等响曲线，Howard & Angus p0091；+10 dB ≈ 响度加倍，p0094） | — |
-| 3.1.5 处理人际关系的能力 / 3.1.6 快速工作的能力 | — |
-| 3.2 学习混音的方法 / 3.3 混音作品分析 | — |
-| **3.4 使用参考曲目** | p0050–0052 |
-| 4.1 混音与音乐制作流程 / 4.1.5 编辑 | — |
-| 4.2 混音是多种元素的复合体 | — |
-| **4.3 混音顺序与流程** | p0064–0068 |
-| 4.4 一些难题 | p0068–0069 |
-| **4.5 混音流程中的几个里程碑** | — |
-| 4.6 混音效果的定型与固化 | — |
-| 5.1 混音要花多长时间 | p0073 |
-| 5.2 休息 / 5.3 使用独听 / **5.4 单声道监听** | p0074–0075 |
-| 5.5 并轨（Bouncing） | p0077 |
-| 5.6 混音工程管理 / 5.7 编订版 / **5.8 母带处理** | — |
-| **6 混音涉及的领域与目标** | p0089 |
-| **6.1 混音的目标**（情绪/平衡/清晰/趣味） | p0089–0090 |
-| 6.2 频率领域（四段划分、分离） | p0092–0096 |
-| 6.4 立体声领域 / 6.5 深度 | — |
-| 13 声像全章（含 **13.4.1 声像设置与掩蔽** p0250） | p0240– |
-| 14 均衡器全章 | p0258– |
+| 1.2 The perfect mix and ear training | — |
+| 2.1 **The louder it is, the better it sounds** (auditory basis: equal-loudness contours, Howard & Angus p0091; +10 dB ≈ loudness doubles, p0094) | — |
+| 3.1.5 Interpersonal skills / 3.1.6 Ability to work quickly | — |
+| 3.2 Methods of learning to mix / 3.3 Analysis of mixes | — |
+| **3.4 Using reference tracks** | p0050–0052 |
+| 4.1 Mixing and music production workflow / 4.1.5 Editing | — |
+| 4.2 Mixing is a composite of many elements | — |
+| **4.3 Mixing order and workflow** | p0064–0068 |
+| 4.4 Some difficult problems | p0068–0069 |
+| **4.5 Milestones in the mixing workflow** | — |
+| 4.6 Fixing and locking in the mix effect | — |
+| 5.1 How long mixing takes | p0073 |
+| 5.2 Breaks / 5.3 Using solo listening / **5.4 Mono monitoring** | p0074–0075 |
+| 5.5 Bouncing | p0077 |
+| 5.6 Mix project management / 5.7 Final edit / **5.8 Mastering** | — |
+| **6 Domains and goals of mixing** | p0089 |
+| **6.1 Goals of mixing** (mood / balance / definition / interest) | p0089–0090 |
+| 6.2 The frequency domain (four-band division, separation) | p0092–0096 |
+| 6.4 Stereo domain / 6.5 Depth | — |
+| Chapter 13, the full chapter on panning (including **13.4.1 Panning and masking** p0250) | p0240– |
+| Chapter 14, the full chapter on equalizers | p0258– |
 
 ---
 
-## 8. 不在本 skill 的部分
+## 8. Parts not covered by this skill
 
-| 内容 | 去哪 |
+| Content | Where it goes |
 |---|---|
-| 第 14 章起的均衡器、压缩器、混响的**参数与操作** | 混音的事，不归本包 |
-| 母带处理（5.8） | 母带的事，不归本包 |
-| 四段划分与乐器频率分离的**结构性解法** | `mc-texture-layering`（reference 里有完整的四段表） |
-| 人声混音链的具体参数 | `mc-vocal-direction` reference 留了实例值；实操是混音的事 |
-| 鼓组各件的**编配**（不是混音）顺序 | `mc-rhythm-section` reference |
+| Parameters and operation of equalizers, compressors and reverb from chapter 14 onward | Mixing; not part of this package |
+| Mastering (5.8) | Mastering; not part of this package |
+| The structural solutions of the four-band division and separation of instrument frequencies | `mc-texture-layering` (the reference there contains the full four-band table) |
+| Concrete parameters of the vocal mixing chain | The `mc-vocal-direction` reference keeps example values; practical implementation is mixing |
+| The order of **arranging** (not mixing) the individual drum pieces | `mc-rhythm-section` reference |

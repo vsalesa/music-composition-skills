@@ -1,249 +1,236 @@
-# mc-melody 参考：调式、五声、终止开放度与反查骨架
+# mc-melody Reference: Modes, Pentatonics, Cadence Openness, and the Stuck-Point Checklist
 
-> [SKILL.md](SKILL.md) 讲旋律的运动怎么设计；本文件放**音阶目录、终止开放度的八档刻度、
-> 声区表、以及卡住时的反查清单**。
+> [SKILL.md](SKILL.md) covers how to design melodic motion; this file holds the **scale catalogue, the eight-level cadence openness scale, the register table, and the checklist to consult when stuck**.
 >
-> 来源：高山博《ポピュラー音楽作曲のための旋律法 増補版》。
-> 曲式与乐节构造表归 `mc-form`；功能和声进行表归 `mc-harmony`。
+> Source: Takayama Hiroshi, *Melodic Method for Popular Music Composition*, expanded edition (ポピュラー音楽作曲のための旋律法 増補版).
+> Form and phrase-structure tables belong to `mc-form`; functional harmony progression tables belong to `mc-harmony`.
 
 ---
 
-## 1. 大调式与小调式的机理
+## 1. Mechanics of Major and Minor Modes
 
-**调式 = 从 12 个音里选音 + 分配角色（主音等）。**
-★ **调由主音的位置决定，不由调式类型决定**——同一组音换主音就是不同调式
-（全白键既可以是 C 大调也可以是 A 小调）。
+**Mode = selecting notes from the 12 pitches + assigning roles (tonic, etc.).**
+★ **The key is determined by the position of the tonic, not by the mode type**: the same set of notes becomes a different mode when the tonic changes (the all-white-key set can be C major or A minor).
 
-### 1.1 大调式
+### 1.1 Major Mode
 
-**导音（第 vii 级）上行半音解决到主音最强** > 属（v）> 下属（iv）。
+**The leading tone (scale degree vii) resolving up a semitone to the tonic is strongest** > dominant (V) > subdominant (IV).
 
-- **机理 ≠ 强制**：导音以琶音方式走向别的和弦音也非常常见；大调整体约束少、运动自由
-- ★ **功能感过强**（导音→主音、描摹属到主的和声）= 拘谨僵硬（校歌感／朋克的直白喊叫）
-- ★ **大调 ≠ 欢快**：毕业歌之类悲伤怀旧的作品大多是大调
+- **Mechanism ≠ requirement**: the leading tone moving to other chord tones by arpeggio is also very common; major mode as a whole has few constraints and free motion.
+- ★ **Too strong a sense of function** (leading tone → tonic, harmony depicting dominant-to-tonic) = stiff and rigid (school-anthem feel / the blunt shouting of punk).
+- ★ **Major ≠ cheerful**: sad, nostalgic works such as graduation songs are mostly in major.
 
-### 1.2 小调式的三种形态
+### 1.2 Three Forms of Minor Mode
 
-| 形态 | 特点 |
+| Form | Characteristics |
 |---|---|
-| **自然小调** | 没有导音；运动自由，但**旋律容易平淡无特征** |
-| **和声小调** | vii 升高半音作导音（拉力极强）。★ **vi–vii 之间产生增二度，不要直接连接** |
-| **旋律小调** | 上行时 vi 与 vii 都升高（消除增二度，升高的 vi 强烈趋向导音）；vii 不作导音时不升高，转向 vi（下行形） |
+| **Natural minor** | No leading tone; motion is free, but **the melody easily becomes flat and featureless** |
+| **Harmonic minor** | vii raised a semitone as leading tone (very strong pull). ★ **A augmented second arises between vi and vii; do not connect them directly** |
+| **Melodic minor** | When ascending, both vi and vii are raised (removing the augmented second; the raised vi strongly leans toward the leading tone); when vii is not used as leading tone it is not raised, and it turns to vi (descending form) |
 
-> **标准做法**：以自然小调自由行进，**在段落边界局部混入和声（或旋律）小调来"标点"**。
-> ★ 效果强但**容易被预测、显得刻意**，节制使用。
+> **Standard practice**: move freely in natural minor, and **locally mix in harmonic (or melodic) minor at section boundaries as "punctuation"**.
+> ★ The effect is strong but **easily predicted and can seem contrived**; use with restraint.
 
-★ 导音之外小调还有若干半音位置 → **很适合情绪性旋律**。
-**小调 ≠ 阴暗**（大量硬摇滚与爵士标准曲都是小调）。
-
----
-
-## 2. 教会调式：抓住特征音
-
-**每个调式与大/小调式恰好差一个音。**
-
-| 调式 | 家族 | 特征音 | 支持和弦举例 |
-|---|---|---|---|
-| **Ionian** | = 大调式 | —— | —— |
-| **Dorian** | 小调家族 | **大六度** | 含大六度的和弦（D 多利亚里的 G 大三） |
-| **Phrygian** | 小调家族 | **小二度** | 含 ♭II 的和弦 |
-| **Lydian** | 大调家族 | **增四度** | 含 ♯IV 的和弦 |
-| **Mixolydian** | 大调家族 | **小七度** | 含 ♭VII 的和弦（G 混合利底亚里的 Dm 和 F） |
-| **Aeolian** | = 自然小调 | —— | —— |
-| **Locrian** | 小调家族 | 小二度 + 减五度（**唯一差两个音**的调式） | 极少用 |
-
-**方法 = 把特征音放进旋律 + 用含特征音的和弦支持它。**
-★ **不用特征音，调式就无从分辨，白设了。**
-
-> **辨别陷阱**：降 vii 的旋律**通常是"大调式 + 蓝调五声"，不是混合利底亚**。
-
-**日本音阶**（同音不同机理）：律音阶（与大调五声同音但解决音不同）、
-都节音阶（含降音）、冲绳音阶。
+★ Beyond the leading tone, minor has several semitone positions → **very suitable for emotional melodies**.
+**Minor ≠ dark** (a large number of hard rock and jazz standards are in minor).
 
 ---
 
-## 3. 五声音阶速查
+## 2. Church Modes: Grasping the Characteristic Note
 
-★ **五声没有导音、也构不成属和弦 → 自己无法确立调性。**
-它的机理核心是**邻音倾向**：音倾向于移动到相邻的音阶音
-（相邻有二度和三度两种，**二度更容易**）；跳到更远的音需要力，跳完之后倾向于反向。
+**Each mode differs from major or minor by exactly one note.**
 
-### 3.0 ★ 宫商角徵羽：这条五声线属于哪个宫系统（黄虎威）
-
-§3.1 到 §3.6 讲的是**怎么让一条五声线好听**；这一节讲**它属于哪个宫系统、怎么换系统**，两层并列。全部页号出自黄虎威《转调法》。
-
-**宫—角大三度定调性**：五声调式里唯一的大三度是宫到角，**它决定调性，它一动整个五声音阶就动**（p0040）。
-判断一段在哪个宫系统，只需找这个大三度。
-
-**同宫犯调与移宫犯调**（p0019）：同一宫系统里换主音（宫商角徵羽之间）叫同宫犯调，调号不变、所有音都是共同音，
-听感是换色不换调；**宫音移位才是转调**。
-
-**两条换宫的路**：
-
-| 手法 | 做法 | 结果 | 旋律上的标志 |
+| Mode | Family | Characteristic note | Example supporting chords |
 |---|---|---|---|
-| **变宫为角** | 前调的变宫当后调的角 | 上纯五度宫系统，加一个升号 | 变宫出现之后，前调的宫音一般不再出现（p0041） |
-| **清角为宫** | 前调的清角当后调的宫 | 下纯五度宫系统，加一个降号 | 清角出现之后，前调的角音不再出现（p0042） |
+| **Ionian** | = major mode | —— | —— |
+| **Dorian** | Minor family | **Major sixth** | Chords containing a major sixth (the G major triad in D Dorian) |
+| **Phrygian** | Minor family | **Minor second** | Chords containing ♭II |
+| **Lydian** | Major family | **Augmented fourth** | Chords containing ♯IV |
+| **Mixolydian** | Major family | **Minor seventh** | Chords containing ♭VII (Dm and F in G Mixolydian) |
+| **Aeolian** | = natural minor | —— | —— |
+| **Locrian** | Minor family | Minor second + diminished fifth (the only mode that differs by **two** notes) | Rarely used |
 
-连续两次可到高或低大二度的宫系统（p0063–0064）。
+**Method = place the characteristic note in the melody + support it with chords containing that note.**
+★ **Without the characteristic note, the mode cannot be distinguished and the setup is wasted.**
 
-★ **最反直觉的一条**：一个宫系统的七个自然音，**可以写出本调及两个近关系调的五声旋律而不出现任何变化音**（p0040–0041）。
-所以**五声旋律的近关系转调在旋律层面是无痕的，转调感全靠和声承担**：和声里必须让新调号涉及的那个音出现（p0045），
-旋律与和声可以互为先后，旋律先转、和声隔几小节才追认也行。这一条直接解释为什么很多中国风旋律"听着没转、其实转了"。
+> **Identification trap**: a melody with lowered vii is **usually "major mode + blues pentatonic", not Mixolydian**.
 
-**交替调式三型**（p0019–0024）：有过渡环节的、对置型的、★ **突发型**（全曲单一调性，结束处突然换调式收尾）。
-只交替不到一个乐节的算暂交替，到一个乐句就升级为交替调式。
+**Japanese scales** (same notes, different mechanics): ritsu scale (same notes as the major pentatonic but with different resolving notes), miyako-bushi scale (containing lowered notes), Okinawan scale.
 
-★ **一支五声旋律有四个严格的同主音变体**（p0169–0171）：把全部角音改成清角、把全部宫音改成变宫，余类推；
-任意两支毗连就是同主音换调。**这是"第二段主歌怎么变"的中国风答案**：旋律骨架不动，换一个音全段变色。
+---
 
-一条来自李吉提的对照（p0011）：**中国五声是「小三度＋大二度」乘二，日本五声是「小二度＋大三度」乘二**，写"日式"和"中国风"先分清这一层。
+## 3. Pentatonic Quick Reference
 
-**三条写法上的配套**（黄虎威）：
+★ **The pentatonic has no leading tone and cannot form a dominant chord → it cannot establish tonality on its own.**
+Its core mechanism is the **tendency toward neighbouring tones**: a note tends to move to an adjacent scale tone (there are two kinds of adjacency, second and third, and **the second is easier**); leaping to a more distant note requires effort, and after the leap there is a tendency to reverse direction.
 
-- **模进**：相同调式之间的近关系转调，后乐句做前乐句的高或低纯五度模仿，集中形象又节约材料，和声也可跟着转调模进（p0050–0051）。§8.1 说模进是套路风险，这里是它的正面用法：**换宫系统时用它，不换时别用**
-- **偏音判据**：以五声为骨干的七声调式里，变宫与清角是偏音；**只出现新调号涉及的那个偏音仍能明确转调，只出现另一个偏音则转调很可能不成立**，要看宫角大三度在哪（p0043–0044）
-- **交替调式的和声两条路**（p0027–0030）：暂交替片断可以按新调式独立配和声；也可以反过来**压制**，完全按原调式配，用属七到主和弦把跑偏的调式因素顶回去。前者顺着走，后者是"想让它偏一下又不想真的偏"。转换功能里出现副导音就从调式交替变成离调配置，色彩更浓（p0028–0029）
-- 民间音乐换调的接头**常与结构界限吻合**（p0171），落点跟着段落走
+### 3.0 ★ Gong, Shang, Jue, Zhi, Yu: Which Gong System This Pentatonic Line Belongs To (Huang Huwei)
 
-### 3.1 四个典型音型（"有五声味"）
+§3.1 to §3.6 cover **how to make a pentatonic line sound good**; this section covers **which gong system it belongs to and how to switch systems**, the two layers presented side by side. All page numbers are from Huang Huwei, *Zhuandiao Fa* (Modulation Methods).
 
-1. 走到邻音然后**折回**
-2. 走到邻音然后**同方向继续**
-3. ★ 先往**反方向**的邻音"勾"一下，再**跳回两个音阶位**
-   （= 五声版的タメ；第一步是二度的变体最常见）
-4. **越过**目标邻音到更远处，再折回
+**Gong–jue major third determines tonality**: in pentatonic modes, the only major third is from gong to jue; **it determines the tonality, and when it moves, the entire pentatonic scale moves** (p0040).
+To determine which gong system a passage belongs to, simply find this major third.
 
-### 3.2 三个破坏五声感的音型
+**Same-gong key shift vs. shifted-gong key shift** (p0019): changing the tonic within the same gong system (among gong, shang, jue, zhi, yu) is called same-gong key shift; the key signature stays the same and all notes are common tones, so the effect is a change of colour without a change of key; **only shifting the gong tone is a true modulation**.
 
-1. 频繁跳到 **3 个音阶位以上**的音（跳一次就回归正常是可以的）
-2. **跳 2 位以上之后同方向继续**
-3. **连续跳进或重复的同方向跳进**
+**Two routes for changing gong**:
 
-★ 其中**琶音式（分解和弦）运动破坏力最强**——但**跨乐句边界的琶音跳进没问题**。
+| Technique | Method | Result | Melodic marker |
+|---|---|---|---|
+| **Bian-gong as jue** | The bian-gong of the previous key serves as the jue of the next key | Gong system a perfect fifth higher, with one sharp added | After bian-gong appears, the gong of the previous key generally no longer appears (p0041) |
+| **Qing-jue as gong** | The qing-jue of the previous key serves as the gong of the next key | Gong system a perfect fifth lower, with one flat added | After qing-jue appears, the jue of the previous key no longer appears (p0042) |
 
-### 3.3 数值规则
+Two consecutive shifts can reach gong systems a major second higher or lower (p0063–0064).
 
-- **同方向级进 ≤ 3 步**。4 步就把整个音阶扫一遍 = 毫无个性、只是在宣告"我是五声"
-- **相隔五度的两个五声只差 1 个音** → 容易切换，是**转旋法**的枢轴
+★ **The most counter-intuitive point**: the seven natural notes of one gong system **can yield a pentatonic melody in the home key and in two closely related keys without any accidentals appearing** (p0040–0041).
+Therefore **modulation between closely related keys in pentatonic melody is invisible at the melodic level, and the sense of modulation rests entirely on the harmony**: the harmony must make the note involved in the new key signature appear (p0045), and melody and harmony may lead one another; the melody may modulate first, with the harmony confirming it a few bars later. This directly explains why many Chinese-style melodies "sound unmodulated when they actually have modulated".
 
-### 3.4 调内可用的五声（C 大调为例）
+**Three types of alternating modes** (p0019–0024): those with a transitional stage, those of opposing type, and ★ **the sudden type** (a single tonality throughout the piece, which suddenly switches mode at the ending to close). Alternation lasting less than one phrase is a brief alternation; when it reaches a full phrase it is upgraded to an alternating mode.
 
-C / F / G 大调五声，D / E / A / B 小调五声（出现调外音就把那个音去掉）。
+★ **A pentatonic melody has four strict same-tonic variants** (p0169–0171): change all jue to qing-jue and all gong to bian-gong, and so on; any two that are adjacent constitute a same-tonic key change. **This is the Chinese-style answer to "how does the second verse change?"**: the melodic skeleton stays put, and changing one note recolours the whole section.
 
-★ **五声主音可以与调主音不同**（C 大调里用 E 小调五声 = 漂浮的现代色彩）——
-这是**避免五声平淡的标准做法**。
+One comparison from Li Jiti (p0011): **the Chinese pentatonic is "minor third + major second" doubled, and the Japanese pentatonic is "minor second + major third" doubled**; when writing "Japanese-style" or "Chinese-style" music, first distinguish at this level.
 
-### 3.5 五声的收束
+**Three complementary writing techniques** (Huang Huwei):
 
-**主音最强，属音次之**（五声的三个正音级，即主音、中音、属音，本就是稳定音级，其余偏音级不稳定，李重光 p0187）；
-经由五声邻音或上行四度到达**更强**。
+- **Sequence**: modulation to a closely related key within the same mode, where the later phrase imitates the earlier one a perfect fifth higher or lower, concentrating the image and economising material; the harmony may also modulate in sequence (p0050–0051). §8.1 says sequence is a risk of formula; here is its positive use: **use it when changing gong system, and avoid it when not changing**.
+- **Accidental criterion**: in seven-note modes whose backbone is pentatonic, bian-gong and qing-jue are accidentals; **if only the accidental involved in the new key signature appears, the modulation can still be clearly established; if only the other accidental appears, the modulation is probably not valid**, and one must look at where the gong–jue major third lies (p0043–0044).
+- **Two harmonisation routes for alternating modes** (p0027–0030): a brief alternating passage may be harmonised independently in the new mode; or conversely it may be **suppressed**, harmonised entirely in the original mode, using dominant seventh to tonic chords to push the drifting modal element back. The former goes with the flow; the latter is "wanting it to drift a little without really drifting". If a subsidiary leading tone appears in the functional progression, the alternation turns from modal alternation into a non-diatonic configuration with a stronger colour (p0028–0029).
+- Joints of modulation in folk music **often coincide with structural boundaries** (p0171); the landing point follows the section.
 
-★ **偏音不落收束音**：清角、变宫这类偏音一般不作旋律的开始音或结束音，五声调式及以五声为骨干的旋律基本都遵守这条（黄虎威 p0065）。先把偏音排除，再谈落在哪个正音上更强。
+### 3.1 Four Typical Figures ("Having Pentatonic Flavour")
 
-★ **强收束的前提是五声主音与调主音重合**；否则只有柔收束可用。
+1. Step to a neighbouring tone and then **turn back**
+2. Step to a neighbouring tone and then **continue in the same direction**
+3. ★ First **hook** toward the neighbouring tone in the **opposite direction**, then **leap back two scale steps** (= the pentatonic version of *tame*; the first step being a variant of a second is most common)
+4. **Pass over** the target neighbouring tone to a more distant note, then turn back
 
-### 3.6 五声的强项与弱点
+### 3.2 Three Figures That Destroy the Pentatonic Feel
+
+1. Frequently leaping to notes **three or more scale steps** away (a single leap followed by a return to normal is acceptable)
+2. **Continuing in the same direction after a leap of two or more steps**
+3. **Consecutive leaps or repeated same-direction leaps**
+
+★ Among these, **arpeggio-style (broken chord) motion is the most destructive**, but **arpeggiated leaps across phrase boundaries are fine**.
+
+### 3.3 Numerical Rules
+
+- **Same-direction stepwise motion ≤ 3 steps**. Four steps sweeps the entire scale = no individuality, merely announcing "I am pentatonic"
+- **Two pentatonic scales a perfect fifth apart differ by only one note** → easy to switch between, and they are the pivot for **pivot-rotation**
+
+### 3.4 Pentatonic Usable Within the Key (Using C Major as Example)
+
+C / F / G major pentatonics; D / E / A / B minor pentatonics (remove any note that falls outside the key).
+
+★ **The pentatonic tonic may differ from the key tonic** (using the E minor pentatonic in C major gives a floating modern colour) —
+this is the **standard way to avoid pentatonic blandness**.
+
+### 3.5 Resolution of the Pentatonic
+
+**The tonic is strongest, the dominant comes second** (the three positive degrees of the pentatonic — tonic, middle, and dominant — are stable degrees by nature, while the remaining accidental degrees are unstable; Li Zhongguang p0187);
+arriving via pentatonic neighbouring tones or an ascending fourth is **stronger**.
+
+★ **Accidental notes do not fall on the closing note**: accidental notes such as qing-jue and bian-gong generally do not serve as the starting or ending note of a melody; pentatonic modes and melodies with a pentatonic backbone almost all follow this rule (Huang Huwei p0065). Exclude the accidentals first, and only then consider which positive degree is stronger for landing.
+
+★ **Strong resolution requires the pentatonic tonic to coincide with the key tonic**; otherwise only soft resolution is available.
+
+### 3.6 Strengths and Weaknesses of the Pentatonic
 
 | | |
 |---|---|
-| **强项** | ★ **与和声高度独立**：看起来像倚音/经过音的音**不需要解决**，可以自由跳开。同一和声适配多个五声乐句，同一五声乐句适配多个进行——"与和声共存的同时独立自由行动"是五声旋律的精髓 |
-| **弱点** | 只有 5 个音容易套路；没有半音则情感贫乏。可以写入固定的**こぶし**式半音转音（过用则聒噪） |
+| **Strength** | ★ **Highly independent of harmony**: notes that look like appoggiaturas or passing notes **need not resolve** and may leap away freely. One harmony can fit several pentatonic phrases, and one pentatonic phrase can fit several progressions — "coexisting with harmony while moving independently" is the essence of pentatonic melody |
+| **Weakness** | Having only five notes easily becomes formulaic; without semitones, emotional expression is impoverished. Fixed semitone slides in the form of **kobushi** may be written in (overuse becomes noisy) |
 
-**稀释五声感**：插入大跳或琶音式运动。
-★ **实务做法：逐句调节"五声密度"**（每句标 ~五声(强)/(弱)/中间）；
-即使不用五声，也要随时问"现在这条旋律有多五声"。
-
----
-
-## 4. 蓝调音（Blue Notes）
-
-**定义**：大调中第 **iii、v、vii 级的临时半音降低**（"忧郁音"）——
-不是固定改用小调音阶的音，而是：
-
-- **临时**降低，或以"本来的音"为前提**故意唱低**
-- 典型用法是"原音 → 蓝调音"的前后对比，或在两者之间装饰性摆动
-
-★ **和声里不含这个蓝调音时效果最强**（半音与和弦的自然音三度正面相撞）：
-蓝 iii 撞 I 的三音、蓝 vii 撞 V 的三音——最猛烈的布鲁斯色彩。
-
-- 常打包成**蓝调五声**（含 ♭iii、♭vii 的小调五声形）用在大调上
-- ★ **蓝 v 不加入五声，几乎总是半音级进上下解决**（当经过/装饰音用）
-- **要把整首染蓝**：加 ♭III、♭VI、♭VII、Vm、I7、IV7 等和弦
-  （旋律没有蓝调音时也可用；这是**非功能性**用法，不承担和声功能）
+**Diluting the pentatonic feel**: insert large leaps or arpeggio-style motion.
+★ **Practical method: adjust "pentatonic density" phrase by phrase** (mark each phrase ~pentatonic (strong) / (weak) / intermediate);
+even when not using the pentatonic, keep asking "how pentatonic is this melody right now?".
 
 ---
 
-## 5. ★ 终止开放度的八档
+## 4. Blue Notes
 
-**同一个乐句的八种结束方式。从上到下，闭合度递减、向前的拉力递增。**
+**Definition**: the temporarily lowered third, fifth, and seventh degrees (iii, v, vii) in major ("melancholy notes") —
+they are not notes that fixedly switch to the minor scale, but:
 
-| # | 末音 | 和弦 | 拍位 | 效果 |
+- **Temporarily** lowered, or deliberately sung low relative to the "original note"
+- The typical usage is a before-and-after contrast between the "original note → blue note", or decorative wavering between the two
+
+★ The effect is strongest **when the blue note is absent from the harmony** (the semitone collides head-on with the chord's natural third):
+blue iii against the third of I, blue vii against the third of V — the most fierce blues colour.
+
+- Often packaged as a **blues pentatonic** (a minor pentatonic shape containing ♭iii and ♭vii) used over major
+- ★ **Blue v is almost never added to the pentatonic; it nearly always resolves by semitone step up or down** (used as a passing or ornamental note)
+- **To tint a whole piece blue**: add chords such as ♭III, ♭VI, ♭VII, Vm, I7, IV7 (also usable when the melody has no blue notes; this is a **non-functional** usage that bears no harmonic function)
+
+---
+
+## 5. ★ The Eight Levels of Cadence Openness
+
+**Eight ways of ending the same phrase. From top to bottom, closure decreases and forward pull increases.**
+
+| # | Final note | Chord | Beat position | Effect |
 |---|---|---|---|---|
-| 1 | 主音 | 主和弦 I | 强拍 | **最闭合，门完全关上** |
-| 2 | 主音 | 主和弦 I | 弱拍（跨拍悬留） | 稍微柔化 |
-| 3 | 三音 | 主和弦 I | 强拍 | 柔收束 |
-| 4 | 三音 | 主和弦 I | 弱拍（悬留） | 更柔 |
-| 5 | 主音 | 非主和弦（如 IIIm7） | 强拍 | 半开 |
-| 6 | 主音 | 非主和弦 | 弱拍（悬留） | 更开 |
-| 7 | 导音 | 属和弦 V7 | 强拍 | 开放，拉力强 |
-| 8 | 导音 | 属和弦 V7 | 弱拍（先现） | **最开放，冲向后面** |
+| 1 | Tonic | Tonic chord I | Strong beat | **Most closed; the door is completely shut** |
+| 2 | Tonic | Tonic chord I | Weak beat (sustained across the beat) | Slightly softened |
+| 3 | Third | Tonic chord I | Strong beat | Soft closure |
+| 4 | Third | Tonic chord I | Weak beat (sustained) | Softer still |
+| 5 | Tonic | Non-tonic chord (e.g. IIIm7) | Strong beat | Half-open |
+| 6 | Tonic | Non-tonic chord | Weak beat (sustained) | More open |
+| 7 | Leading tone | Dominant chord V7 | Strong beat | Open, strong pull |
+| 8 | Leading tone | Dominant chord V7 | Weak beat (anticipated) | **Most open, rushes forward** |
 
-> ★ **三轴规则**：主音 → 三音 → 导音；主和弦 → 非主和弦 → 属和弦；
-> 强拍 → 弱拍（悬留/先现）。**每替换一项，开放度 +1。**
+> ★ **Three-axis rule**: tonic → third → leading tone; tonic chord → non-tonic chord → dominant chord;
+> strong beat → weak beat (sustained / anticipated). **Each substitution increases openness by 1.**
 
-**这张表是段落衔接的调音旋钮**：
-段落内部的句子用 5–8，段落末用 1–4，全曲末用 1。
-要"话没说完"的效果就在全曲末用 5 或 6。
+**This table is the tuning knob for connecting sections**:
+sentences within a section use 5–8, the end of a section uses 1–4, and the end of the whole piece uses 1.
+For the effect of "the sentence is not finished", use 5 or 6 at the end of the whole piece.
 
 ---
 
-## 6. 声区速查
+## 6. Register Quick Reference
 
-| 声区 | 机制 | 性格 | 要点 |
+| Register | Mechanism | Character | Key points |
 |---|---|---|---|
-| **胸声**（≈地声） | 声带全振动 | 真实感、亲密感；高音区张力强 | 流行的主力；高音的紧绷 = 恳切的表达 |
-| **中声（混声）** | 半闭合、部分振动 | 明亮、外放、积极 | 与胸声结合向上延伸；★ **换声点的位置决定乐句设计与选调** |
-| **假声** | 声带边缘振动 | 纯净纤细；咬字与力度受限 | **当成另一件乐器**；胸声翻假声 = 拼命感、切なさ |
-| **头声** | （理论上 1/4 振动） | —— | 按中声/假声的用法类推 |
+| **Chest voice** (≈ natural voice) | Vocal folds vibrate fully | Realness, intimacy; high register has strong tension | The mainstay of pop; the strain of high notes = earnest expression |
+| **Mix voice** | Semi-closed, partial vibration | Bright, outgoing, positive | Extended upward combined with chest voice; ★ **the position of the passaggio determines phrase design and key choice** |
+| **Falsetto** | Vocal-fold edges vibrate | Pure and slender; articulation and dynamics are limited | **Treat as another instrument**; breaking from chest into falsetto = desperation, setsunasa (wistful ache) |
+| **Head voice** | (theoretically 1/4 vibration) | —— | Reason by analogy with the usage of mix voice and falsetto |
 
-- 男声约比女声低一个八度且记谱高八度；流行里男声少用低音区、常用高音区，女声常用低音区
-- 换声点尴尬的歌手**逐句分配声区**；基本八度设在可用极限的中间，留出"故意去碰极限"的余量
-- **乐器类比**：八度键/多弦机制 ≈ 人声声区；同一音高在不同弦上音色不同；
-  钢琴/合成器没有固有音域，但仍受"发声体大小联想"和唱和效应支配
-
----
-
-## 7. 卡住时的反查骨架
-
-底本按 11 种情境索引谱例。卡住时沿这张清单自问：
-
-### 7.1 怎么开始
-
-稳定音起 ／ 紧张的倚音起 ／ 直率的强拍起 ／ 动态的大跳起 ／ 高音同音反复的呼喊起 ／
-跳进加助走的蹬地起 ／ 无伴奏弱起（恳切）／ 中音区同音反复的倾诉起 ／ タメ蓄势起 ／
-遥望远方的上行起 ／ 一个弱起领起全曲
-
-### 7.2 怎么发展
-
-平淡地重复连接 ／ 有记忆点地重复（改节奏、微变化、hemiola）／ 有记忆点地再现 ／
-错位重复调节张力 ／ 盛り上げ（连锁上行、运动扩张）／ 平息（下行、内省的尾声）／ 对比性延续
-
-> 其余 9 种情境（怎么结束、怎么做高潮、怎么留白等）在底本 Appendix 03。
+- Male voices sound about an octave lower than female voices but are notated an octave higher; in pop, male singers less often use the low register and more often the high register, while female singers often use the low register
+- For singers with an awkward passaggio, **assign the register phrase by phrase**; set the basic octave in the middle of the usable range, leaving room for "deliberately pushing the limit"
+- **Instrumental analogy**: octave keys and multi-string mechanisms ≈ vocal registers; the same pitch on different strings has different timbres;
+  pianos and synthesisers have no inherent range, but are still governed by associations with the size of the sounding body and by the unison-singing effect
 
 ---
 
-### 7.3 宽放、紧收与模进的用法（杨儒怀 p0115–0117）
+## 7. Stuck-Point Checklist
 
-宽放、紧收与模进该放在哪个阶段，已并入 `mc-development` §3.2、§3.7；本节只留这个指针。
+The source indexes music examples under 11 situations. When stuck, ask yourself along this checklist:
 
-### 7.x 三条来自李吉提的补充
+### 7.1 How to Begin
 
-- **乐汇与动机的分界**（p0016）：乐汇是环绕一个主要重音结合成的音组，最小单位；**乐汇在旋律、节奏、和声上都有鲜明个性时才叫动机**
-- **一句一部曲式**（p0026–0027、p0046）：用一个长句表达完整乐思，陈述过程中不再分句，是乐句"结构升级"的产物；对称地，复乐段是乐段"结构降级"。§8.2 第 3 条"把旋律线拉长"的极端形态
-- 节奏模式的抑扬格词汇（抑扬、扬抑、扬抑抑、抑抑扬、扬扬、抑抑）与四种力度状态（从强到弱、从弱到强、强弱起伏、单一力度）（p0016），给动机贴性格标签用
+Starting on a stable note / starting on a tense appoggiatura / starting on a direct strong beat / starting on a dynamic large leap / starting with a shouted repetition of a high note / starting with a leap plus run-up push-off / unaccompanied pickup start (earnest) / starting with a confiding repetition of a middle-register note / starting with tame, building anticipation / starting with an upward line gazing into the distance / one pickup launching the whole piece
 
-## 8. 动机与乐句的另一套说法
+### 7.2 How to Develop
 
-Kachulis 的动机四型、调式旋律课次与勋伯格的说法，已并入 `mc-development` §4 与其 reference §3、§5；本节只留这个指针。
+Plain repetitive connection / repetition with a memorable point (changing rhythm, slight variation, hemiola) / recapitulation with a memorable point / rhythmic displacement to adjust tension / moriage (building up: chained upward motion, expanding motion) / calming down (downward, introspective ending) / contrasting continuation
+
+> The remaining 9 situations (how to end, how to build a climax, how to leave space, and so on) are in Appendix 03 of the source.
+
+---
+
+### 7.3 Use of Expansion, Compression, and Sequence (Yang Ruhuai p0115–0117)
+
+Where expansion, compression, and sequence belong in the development stages has been merged into `mc-development` §3.2 and §3.7; this section keeps only this pointer.
+
+### 7.x Three Supplements from Li Jiti
+
+- **Boundary between motif fragment and motif** (p0016): a motif fragment is the smallest unit, a group of notes organised around one main accent; **a motif fragment is called a motif only when it has distinct individuality in melody, rhythm, and harmony**
+- **One sentence as one whole-phrase form** (p0026–0027, p0046): expressing a complete musical thought with one long sentence, with no further sub-division during statement, is a product of "structural upgrading" of the phrase; symmetrically, a compound period is a "structural downgrading" of the period. The extreme form of §8.2 item 3, "lengthening the melodic line"
+- The vocabulary of rhythmic-pattern metric feet (iambic-type patterns: rising and falling, falling and rising, falling-rising-rising, rising-falling-falling, rising-rising, falling-falling) and the four dynamic states (strong to weak, weak to strong, strong-weak undulation, single dynamic level) (p0016), used to attach character labels to motifs
+
+## 8. Another Way of Describing Motif and Phrase
+
+Kachulis's four types of motif, the course on melodic modes, and Schoenberg's account have been merged into `mc-development` §4 and its reference §3 and §5; this section keeps only this pointer.
 

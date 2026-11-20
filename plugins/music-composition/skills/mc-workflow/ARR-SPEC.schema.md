@@ -1,458 +1,458 @@
-# ARR-SPEC v1.0 —《编曲规格单》规范
+# ARR-SPEC v1.0 — Arrangement Spec: Specification
 
-> 本库唯一的交接物。一物四用：对外交接（对外接口见 §5）、AB 测试对象、编译源（→Suno／YuE／MusicXML／MIDI／ChordPro）、生成后校验基准。
-> 配套文件：`ARR-SPEC.template.yaml`（空模板）、`example-*.yaml`（填好的示例）、20 条自查见 `mc-workflow` §3.0
+> The single hand-off artifact of this library. One artifact, four uses: external hand-off (external interface in §5), A/B test subject, compile source (→ Suno / YuE / MusicXML / MIDI / ChordPro), and the baseline for post-generation checks.
+> Companion files: `ARR-SPEC.template.yaml` (blank template), `example-*.yaml` (filled-in examples); the 20 self-checks are in `mc-workflow` §3.0.
 >
-> **每个字段都有去向**（可执行／桥接／仅意图，见 §4），可执行字段的取值用行业格式能直接读的写法：和弦拼写全 ASCII、时间位置结构化、音色带 GM 号、段落名封闭集合。原因只有一个：规格单写完要能不经人手变成 MusicXML 领奏谱、MIDI 骨架、ChordPro 和 ABC，交给乐手、DAW、吉他手和模型。
+> **Every field has a destination** (executable / bridged / intent-only, see §4). Values in executable fields use forms that industry formats can read directly: chord spelling is all ASCII, time positions are structured, timbres carry GM numbers, and section names come from a closed set. There is one reason for this: once the spec is written, it must be convertible into a MusicXML lead sheet, a MIDI skeleton, ChordPro and ABC without human hands, for musicians, DAWs, guitarists and models.
 
-## 0. 使用纪律
+## 0. Usage discipline
 
-1. **`intent` 四项不填齐，不许往下写 `form`。** 这是动笔前必填表，作用相当于剧作动笔前先问的"这场戏的价值转折是什么"。
-2. 写完**逐条过 20 条自查**（§2），不过的条目改掉或写明理由再编译。这些是判据不是铁律——写了理由的偏离是合法选择。
-3. 生成回来**先逐字段对照规格**看照做率（参考线见 §3）。照做率明显低 → 改规格重生成，**不靠听觉返工**。
-4. 耳朵只在最后一小步介入：照做率过关后，A/B 打乱、成对比较、同一对听两遍看结论稳不稳。
-5. ★ **后端做不到的项不算它的分。** 每个后端在 `backends.yaml` 里声明 `honors: exact|hint|none`，算照做率时把 `none` 的项**排除计分**，不是给 0 分。
-6. ★ **可执行字段只用 ASCII。** `△ ♭ ♯ ° ø ×` 这些符号人看着舒服，但 MusicXML、ChordPro、ABC 全都不认。规格单存 `maj7 b # dim m7b5 x2`，人看的美观版由渲染层生成。
+1. **Do not write `form` until all four `intent` items are filled in.** This is the required table before drafting; it plays the role of a playwright asking, before writing a scene, "what is the value turn of this scene?"
+2. After writing, **run through the 20 self-checks** (§2). Any item that fails must be fixed or have its reason written down before compiling. These are criteria, not hard rules: a deviation with a written reason is a legitimate choice.
+3. After generation, **first compare the output field by field against the spec** to measure compliance (reference lines in §3). If compliance is clearly low → revise the spec and regenerate; **do not rely on listening to rework it**.
+4. Ears come in only at the last small step: once compliance passes, do blind A/B, paired comparison, and listen to the same pair twice to see whether the conclusion holds.
+5. ★ **Items the backend cannot do do not count toward its score.** Each backend declares `honors: exact|hint|none` in `backends.yaml`; when computing compliance, items marked `none` are **excluded from scoring**, not scored as 0.
+6. ★ **Executable fields use ASCII only.** Symbols such as `△ ♭ ♯ ° ø ×` look nice to people but MusicXML, ChordPro and ABC do not accept them. The spec stores `maj7 b # dim m7b5 x2`; the human-friendly display version is produced by the rendering layer.
 
 ---
 
-## 1. 字段规范
+## 1. Field specification
 
 ### 1.1 `meta`
 
-| 字段 | 类型 | 必填 | 说明 |
+| Field | Type | Required | Description |
 |---|---|---|---|
 | `spec_version` | str | ✅ | `"1.0"` |
-| `title` | str | ✅ | 导出为 MusicXML work-title、MIDI 轨名、ChordPro `{title}`、ABC `T:` |
-| `style_layer` | str | ✅ | **基底风格**的 L3 skill id（如 `mc-style-citypop-rnb`）；L3 未建时写 `none` |
-| `style_layers` | list | ○ | **风格混合时**填，见 §1.1.1。单风格不填 |
-| `key` | str | ✅ | 语法固定：`<主音> <major|minor>`，主音用 ASCII 升降号：`F# minor`、`Bb major`、`D major`。**所有和声记号以此为准**。导出为 MusicXML 的 fifths+mode、MIDI 调号、ChordPro `{key}`、ABC `K:` |
-| `mode` | str | ○ | 非自然大小调时填，枚举锁定为 MusicXML 的取值：`major` `minor` `ionian` `dorian` `phrygian` `lydian` `mixolydian` `aeolian` `locrian`。填了 `mode`，`key` 的主音仍是调中心（`D major` + `mode: mixolydian` = D 混合利底亚） |
-| `meter` | str | ✅ | 如 `4/4`。变拍写在 `meter_map`，不写在 `form[].note` 的句子里 |
-| `meter_map` | list | ○ | `[{bar: 1, meter: "4/4"}, {bar: 33, meter: "3/4"}, …]`，与 `tempo_map` 同形，有则 `meter` 取首项。导出为逐小节拍号 |
+| `title` | str | ✅ | Exported as MusicXML work-title, MIDI track name, ChordPro `{title}`, ABC `T:` |
+| `style_layer` | str | ✅ | L3 skill id of the **base style** (e.g. `mc-style-citypop-rnb`); write `none` if the L3 skill has not been built yet |
+| `style_layers` | list | ○ | Fill in **when styles are mixed**, see §1.1.1. Leave empty for a single style |
+| `key` | str | ✅ | Fixed syntax: `<tonic> <major|minor>`, tonic with ASCII accidentals: `F# minor`, `Bb major`, `D major`. **All harmony symbols follow this key**. Exported as MusicXML fifths+mode, MIDI key signature, ChordPro `{key}`, ABC `K:` |
+| `mode` | str | ○ | Fill in when the scale is not a natural major/minor; enum locked to the MusicXML values: `major` `minor` `ionian` `dorian` `phrygian` `lydian` `mixolydian` `aeolian` `locrian`. If `mode` is filled, the tonic in `key` is still the tonal center (`D major` + `mode: mixolydian` = D mixolydian) |
+| `meter` | str | ✅ | e.g. `4/4`. Meter changes go in `meter_map`, not in sentences inside `form[].note` |
+| `meter_map` | list | ○ | `[{bar: 1, meter: "4/4"}, {bar: 33, meter: "3/4"}, …]`, same shape as `tempo_map`; if present, `meter` takes the first entry. Exported as per-bar time signatures |
 | `tempo` | int | ✅ | BPM |
-| `tempo_map` | list | ○ | `[{bar: 1, bpm: 96}, …]`，有则 `tempo` 取首项。导出为 MIDI set_tempo 事件与 MusicXML 速度记号 |
-| `target_duration` | str | ✅ | `mm:ss`。**受 lint 第 14 条约束**：必须与小节数×拍速推算一致（±10%） |
-| `deliverable` | list | ✅ | `full_mix` / `stems` / `midi` / `musicxml` / `chordpro` / `abc`，后四个对应 §4 的四个导出目标 |
-| `upstream` | obj | ○ | 有就读的上游：`brief`（需求出处）、`lyrics`（同一首歌的歌词）、`picture`（要配合的画面）。字段与用法见 §5.2；没有就按本包自己的分析走 |
+| `tempo_map` | list | ○ | `[{bar: 1, bpm: 96}, …]`; if present, `tempo` takes the first entry. Exported as MIDI set_tempo events and MusicXML tempo marks |
+| `target_duration` | str | ✅ | `mm:ss`. **Constrained by lint item 14**: must agree with the bar count × tempo calculation (±10%) |
+| `deliverable` | list | ✅ | `full_mix` / `stems` / `midi` / `musicxml` / `chordpro` / `abc`; the last four correspond to the four export targets in §4 |
+| `upstream` | obj | ○ | Upstream inputs to read if present: `brief` (source of the requirement), `lyrics` (lyrics for the same song), `picture` (picture to be matched). Fields and usage in §5.2; if absent, proceed with this package's own analysis |
 
-#### 1.1.1 `style_layers` —— 风格混合的分工表 ✦
+#### 1.1.1 `style_layers` — Division of labor table for mixed styles ✦
 
-**混合不是把两种风格调匀，是把每个维度分给一种风格。**
+**Mixing is not blending two styles evenly; it is assigning each dimension to one style.**
 
-`owns` 的取值是一个**封闭集合**，只能从下面十四个里选：
+The values of `owns` form a **closed set**; choose only from the fourteen below:
 
-`harmony`　`melody`　`groove`　`low_end`　`fill_policy`　`instrumentation`　`color_instruments`
-`timbre`　`arrangement_hook`　`vocal_delivery`（或拆成 `vocal_delivery_verse` / `vocal_delivery_chorus`）　`form`　`mix`
+`harmony`  `melody`  `groove`  `low_end`  `fill_policy`  `instrumentation`  `color_instruments`
+`timbre`  `arrangement_hook`  `vocal_delivery` (or split into `vocal_delivery_verse` / `vocal_delivery_chorus`)  `form`  `mix`
 
-需要分配的东西不在表里时，归到最接近的那一个，并在 `fusion_note` 里写一句说明；不要自造名字。
-污染与混合的区别只有一条：**混合是写下来的选择，污染是没人选**。
+If something to assign is not in the table, assign it to the closest one and add one sentence in `fusion_note`; do not invent new names.
+Contamination and mixing differ on one point only: **mixing is a choice that is written down; contamination is a choice nobody made**.
 
 ```yaml
 meta:
-  style_layer: mc-style-chinese-pop        # 基底
+  style_layer: mc-style-chinese-pop        # base
   style_layers:
     - {skill: mc-style-chinese-pop, role: base,    owns: [harmony, melody, color_instruments]}
     - {skill: mc-style-hiphop,      role: overlay, owns: [groove, low_end, vocal_delivery_verse]}
-  fusion_note: "副歌唱、主歌 rap；民乐采样只做色彩层不做律动"
+  fusion_note: "sung chorus, rapped verses; folk-instrument samples only as a color layer, no rhythmic role"
 ```
 
-| 字段 | 说明 |
+| Field | Description |
 |---|---|
 | `skill` | L3 skill id |
-| `role` | `base`（恰好一个）／`overlay`（一个或多个） |
-| `owns` | 该风格拥有的维度，取值固定：`harmony` `melody` `groove` `low_end` `instrumentation` `color_instruments` `timbre` `vocal_delivery` `vocal_delivery_verse` `vocal_delivery_chorus` `form` `mix` |
-| `fusion_note` | 一句话说这个组合为什么成立 |
+| `role` | `base` (exactly one) / `overlay` (one or more) |
+| `owns` | Dimensions owned by that style, fixed values: `harmony` `melody` `groove` `low_end` `instrumentation` `color_instruments` `timbre` `vocal_delivery` `vocal_delivery_verse` `vocal_delivery_chorus` `form` `mix` |
+| `fusion_note` | One sentence on why this combination works |
 
-**受 lint 第 17 条约束**：多于一层时，`base` 恰好一个；**每个维度只有一个 owner**（两层都声称 `groove` = 没做选择）；
-每层至少拥有一个维度（否则它只是被读了，没起作用）。
+**Constrained by lint item 17**: when there is more than one layer, there is exactly one `base`; **each dimension has exactly one owner** (two layers both claiming `groove` = no choice was made);
+and each layer owns at least one dimension (otherwise it is only read and does nothing).
 
-**怎么用各 L3 的移植表**：overlay 风格搬进来的正是它移植表里标"❌ 不可搬／会被认出来"的那些项——
-**那就是你要的辨识度**。但每搬一项，都要在 `owns` 里签字，并检查 base 风格的移植表是否允许让出那个维度。
+**How to use each L3's porting table**: what an overlay style brings in is exactly the items its porting table marks "❌ do not port / will be recognized". **That is the distinctiveness you want.**
+But for every item brought in, sign it off in `owns`, and check whether the base style's porting table allows giving up that dimension.
 
-### 1.2 `intent` —— 动笔前必填表（★ 门禁）
+### 1.2 `intent` — Required table before drafting (★ gate)
 
-| 字段 | 类型 | 必填 | 说明 |
+| Field | Type | Required | Description |
 |---|---|---|---|
-| `one_thing` | str | ✅ | **这首歌只干一件事**。一句话，不许两句，不许用"既…又…"。写不出来说明还没想清楚 |
-| `reference_pair` | list | ✅ | **恰好 2 项**，每项 `{track, borrow}`。`borrow` 必须写清"借哪一点"（如"只借前奏的空"），**只写歌名视为未填** |
-| `listener_situation` | str | ✅ | 在哪听、听第几遍、注意力有多少。决定 hook 出现的早晚和信息密度 |
-| `emotional_arc` | list | ✅ | `[{section, mood, value}]`。**必须有转折**，一路向上等于没写 |
+| `one_thing` | str | ✅ | **The one thing this song does**. One sentence, not two; no "both … and …". If you cannot write it, the idea is not yet clear |
+| `reference_pair` | list | ✅ | **Exactly 2 items**, each `{track, borrow}`. `borrow` must state clearly **which point is borrowed** (e.g. "borrow only the space at the start of the intro"); **writing only the track name counts as unfilled** |
+| `listener_situation` | str | ✅ | Where it is listened to, which listen this is, and how much attention is available. Determines how early the hook appears and the information density |
+| `emotional_arc` | list | ✅ | `[{section, mood, value}]`. **Must contain a turn**; rising all the way means nothing was written |
 
-> 为什么设门禁：Suno 的 AI 味不是音色问题，是**没有人做过选择**。这四项就是强迫做选择的地方。
-> 这一块整体是**仅意图**：行业里没有任何格式存它，导出时整块作为文本随文件走（MusicXML 的 miscellaneous、MIDI 第一小节的 text 事件），不丢"为什么"。
+> Why this gate exists: Suno's AI flavor is not a timbre problem; it is that **nobody made a choice**. These four items are where a choice is forced.
+> This whole block is **intent-only**: no industry format stores it, so on export the whole block travels with the file as text (MusicXML's miscellaneous element, or a text event in MIDI bar 1), and the "why" is not lost.
 
-### 1.2b `material` —— 主题材料（★ `mc-development` 拥有）
+### 1.2b `material` — Thematic material (★ owned by `mc-development`)
 
-| 字段 | 类型 | 必填 | 说明 |
+| Field | Type | Required | Description |
 |---|---|---|---|
-| `motif` | str | ✅ | 主题动机的文字描述：音程轮廓、节奏型、长度。写到能让另一个人认出来 |
-| `motif_abc` | str | ○ | 同一个动机用一到两小节 ABC 写出来（只要 `L:` 和音符，不要头部）。有了它，MusicXML 和 MIDI 能把动机当实际音符导出，符号路径拿它当种子 |
-| `character` | str | ○ | 一句话性格（"急促、往上顶"） |
-| `stated_in` | list | ✅ | 原始陈述所在的段落 id，至少一个 |
-| `development_mode` | str | ○ | 这首歌靠什么推进：`加工处理`／`展衍`／`对比`（`mc-development` §5.1，李吉提的三路） |
+| `motif` | str | ✅ | Text description of the theme motif: interval contour, rhythmic pattern, length. Write it so that another person could recognize it |
+| `motif_abc` | str | ○ | The same motif written in one to two bars of ABC (only `L:` and notes, no header). If present, MusicXML and MIDI can export the motif as actual notes; the symbolic path uses it as a seed |
+| `character` | str | ○ | One-sentence character ("rushing, pushing upward") |
+| `stated_in` | list | ✅ | Section ids where the motif is first stated; at least one |
+| `development_mode` | str | ○ | What drives the song forward: `elaboration` / `expansion` / `contrast` (`mc-development` §5.1, the three routes proposed by Li Ji) |
 
-### 1.3 `form` —— 曲式表，一段一行
+### 1.3 `form` — Form table, one section per line
 
-| 字段 | 类型 | 必填 | 说明 |
+| Field | Type | Required | Description |
 |---|---|---|---|
-| `id` | str | ✅ | 全局唯一，如 `I`/`A1`/`B1`/`C1`/`D`/`O`。导出为 MusicXML 排练记号、MIDI marker、ChordPro 段落 label |
-| `name` | str | ✅ | 封闭集合：`Intro` `Verse` `Pre-Chorus` `Chorus` `Post-Chorus` `Bridge` `Instrumental` `Solo` `Breakdown` `Drop` `Outro`。Suno 段落标签、ChordPro 的 `{start_of_verse}`/`{start_of_chorus}`/`{start_of_bridge}` 都由它派生，不另存。术语的准确定义见 `mc-arrangement-arch/reference.md` §1 |
-| `bars` | int | ✅ | 小节数。**受 lint 第 3 条约束**：全曲不许全是 8 的倍数 |
-| `start_bar` | int | ✅ | 起始小节。**受 lint 第 2 条约束**：必须首尾相接，不许有缝或重叠 |
-| `harmony` | str | ✅ | 罗马数字级数，ASCII：`"|VIm7 |IVmaj7 |I |V |"`。变化音前缀 `b`/`#`（`bVI`、`#IVm7b5`），副属 `V/V`。分析与教学用；MusicXML 4.0 的 numeral 能存，软件几乎不读 |
-| `harmony_letters` | str | ✅ | 同一进行的字母记号：`"|F#m7 |Dmaj7 |A |E |"`。**双记是本库硬约定**。拼写见 §1.3.1，**受 lint 第 19 条约束**。导出为 MusicXML harmony、ChordPro `[F#m7]`、ABC `"F#m7"`、MIDI 和弦轨 |
-| `melody_register` | str | ○ | `低`/`中低`/`中`/`中高`/`高`。段落间要有对比。可加实际音域 `melody_range: "A3-E5"`（ASCII 音名加八度），有则导出为分谱音域提示 |
-| `development` | str | ✅ | ★ 这一段拿主题材料做了什么，封闭集合：`repeat`（原样或换尾重复）/`sequence`（模进）/`extend`（扩充）/`contract`（减缩）/`fragment`（裁截）/`vary`（变奏）/`augment`（宽放紧收）/`counterpoint`（对位式）/`new`（新材料）/`recap`（再现）。可写 `"vary+extend"` 表示主次两种。**受 lint 第 18 条约束**。手法定义见 `mc-development` |
-| `energy` | int | ✅ | 0–10。与 `arrangement.energy_curve` 同源，此处冗余便于阅读 |
-| `events` | list | ○ | 该段发生的编制事件，取值固定为 `<roster_id>_in` / `<roster_id>_out`，如 `[drums_in, bass_in, gtr_out]`。与 `roster[].entry/exit` 互为交叉校验 |
-| `note` | str | ○ | **非对称设计写在这里**，如"第二句 6 小节，打破 8 的整数"。变拍不写这里，写 `meter_map` |
+| `id` | str | ✅ | Globally unique, e.g. `I`/`A1`/`B1`/`C1`/`D`/`O`. Exported as MusicXML rehearsal mark, MIDI marker, ChordPro section label |
+| `name` | str | ✅ | Closed set: `Intro` `Verse` `Pre-Chorus` `Chorus` `Post-Chorus` `Bridge` `Instrumental` `Solo` `Breakdown` `Drop` `Outro`. Suno section tags and the ChordPro `{start_of_verse}`/`{start_of_chorus}`/`{start_of_bridge}` are all derived from it and not stored separately. The precise definitions of these terms are in `mc-arrangement-arch/reference.md` §1 |
+| `bars` | int | ✅ | Number of bars. **Constrained by lint item 3**: the whole song must not consist entirely of multiples of 8 |
+| `start_bar` | int | ✅ | Starting bar. **Constrained by lint item 2**: sections must join end to end, with no gaps or overlaps |
+| `harmony` | str | ✅ | Roman-numeral progression, ASCII: `"|VIm7 |IVmaj7 |I |V |"`. Chromatic prefixes `b`/`#` (`bVI`, `#IVm7b5`), secondary dominant `V/V`. For analysis and teaching; MusicXML 4.0 can store numerals, but software rarely reads them |
+| `harmony_letters` | str | ✅ | The same progression in letter symbols: `"|F#m7 |Dmaj7 |A |E |"`. **Dual notation is a hard convention of this library**. Spelling in §1.3.1, **constrained by lint item 19**. Exported as MusicXML harmony, ChordPro `[F#m7]`, ABC `"F#m7"`, and the MIDI chord track |
+| `melody_register` | str | ○ | `low` / `mid-low` / `mid` / `mid-high` / `high`. There must be contrast between sections. The actual range can be added as `melody_range: "A3-E5"` (ASCII note names with octave); if present, exported as a range hint for the part |
+| `development` | str | ✅ | ★ What this section does with the thematic material. Closed set: `repeat` (verbatim or with a changed ending) / `sequence` / `extend` / `contract` / `fragment` / `vary` / `augment` (stretched or compressed) / `counterpoint` / `new` (new material) / `recap`. Can be written `"vary+extend"` for a primary and a secondary technique. **Constrained by lint item 18**. Technique definitions in `mc-development` |
+| `energy` | int | ✅ | 0–10. Same source as `arrangement.energy_curve`; repeated here for readability |
+| `events` | list | ○ | Lineup events occurring in this section, fixed values `<roster_id>_in` / `<roster_id>_out`, e.g. `[drums_in, bass_in, gtr_out]`. Cross-checked against `roster[].entry/exit` |
+| `note` | str | ○ | **Asymmetric design goes here**, e.g. "second phrase is 6 bars, breaking the integer-8 pattern". Meter changes do not go here; they go in `meter_map` |
 
-#### 1.3.1 和弦拼写（★ lint 第 19 条）
+#### 1.3.1 Chord spelling (★ lint item 19)
 
-一对竖线一小节。一小节里多个和弦用空格分隔、按拍等分；不等分时在和弦后写拍数：`|Em7(3) A(1) |`。`%` 重复上一小节。整段反复在串尾写 `x2`。
+One pair of vertical bars per bar. Multiple chords in one bar are separated by spaces and divide the beats evenly; if the division is uneven, write the beat count after the chord: `|Em7(3) A(1) |`. `%` repeats the previous bar. To repeat a whole passage, write `x2` at the end of the string.
 
-根音：`A`–`G` 加 `#` 或 `b`。斜线低音：`/E`。种类后缀是封闭集合，右列是导出到 MusicXML 时的 kind：
+Root: `A`–`G` with `#` or `b`. Slash bass: `/E`. The quality suffix is a closed set; the right-hand column is the kind used when exporting to MusicXML:
 
-| 写法 | 含义 | MusicXML kind |
+| Notation | Meaning | MusicXML kind |
 |---|---|---|
-| （空） | 大三 | major |
-| `m` | 小三 | minor |
-| `5` | 强力 | power |
-| `dim` | 减三 | diminished |
-| `aug` | 增三 | augmented |
-| `sus2` `sus4` | 挂二／挂四 | suspended-second / suspended-fourth |
-| `6` `m6` | 大六／小六 | major-sixth / minor-sixth |
-| `69` | 六九 | major-sixth + degree 9 |
-| `7` | 属七 | dominant |
-| `maj7` | 大七 | major-seventh |
-| `m7` | 小七 | minor-seventh |
-| `mMaj7` | 小大七 | major-minor |
-| `m7b5` | 半减 | half-diminished |
-| `dim7` | 减七 | diminished-seventh |
-| `aug7` | 增属七 | augmented-seventh |
-| `7sus4` | 属七挂四 | suspended-fourth + degree 7 |
-| `9` `maj9` `m9` | 九和弦 | dominant-ninth / major-ninth / minor-ninth |
-| `11` `13` | 十一、十三 | dominant-11th / dominant-13th |
-| `add9` `madd9` | 加九 | major / minor + degree add 9 |
-| `7b9` `7#9` `7#11` `7b13` | 变化属七 | dominant + degree alter |
+| (empty) | major triad | major |
+| `m` | minor triad | minor |
+| `5` | power chord | power |
+| `dim` | diminished triad | diminished |
+| `aug` | augmented triad | augmented |
+| `sus2` `sus4` | suspended 2nd / suspended 4th | suspended-second / suspended-fourth |
+| `6` `m6` | major 6th / minor 6th | major-sixth / minor-sixth |
+| `69` | six-nine | major-sixth + degree 9 |
+| `7` | dominant 7th | dominant |
+| `maj7` | major 7th | major-seventh |
+| `m7` | minor 7th | minor-seventh |
+| `mMaj7` | minor-major 7th | major-minor |
+| `m7b5` | half-diminished | half-diminished |
+| `dim7` | diminished 7th | diminished-seventh |
+| `aug7` | augmented dominant 7th | augmented-seventh |
+| `7sus4` | dominant 7th suspended 4th | suspended-fourth + degree 7 |
+| `9` `maj9` `m9` | ninth chords | dominant-ninth / major-ninth / minor-ninth |
+| `11` `13` | eleventh, thirteenth | dominant-11th / dominant-13th |
+| `add9` `madd9` | added ninth | major / minor + degree add 9 |
+| `7b9` `7#9` `7#11` `7b13` | altered dominant 7ths | dominant + degree alter |
 
-不在表里的写法（`△`、`ø`、`°`、`M7`、`-7`、`Δ`）一律视为拼错。想用的音响表里没有时，选最近的一个并在 `note` 里说明。
+Notations not in the table (`△`, `ø`, `°`, `M7`, `-7`, `Δ`) are all treated as misspellings. If the sound you want is not in the table, choose the nearest one and explain it in `note`.
 
 ### 1.4 `arrangement`
 
-#### `roster` —— 全曲乐器清单
+#### `roster` — Full instrument roster
 
-每件乐器都要说得出：占哪个频段、什么时候进、什么时候退。**说不出"什么时候退"的乐器，通常就是让编曲变平的那一件。**
+Every instrument must be specifiable: which frequency band it occupies, when it enters, and when it exits. **An instrument whose exit cannot be stated is usually the one that flattens the arrangement.**
 
-| 字段 | 必填 | 说明 |
+| Field | Required | Description |
 |---|---|---|
-| `id` | ✅ | 唯一，`mix_intent`、`form[].events`、`render.midi` 都按此 id 引用。导出为 MusicXML part-name、MIDI 轨名、ABC `V:` 名 |
-| `instrument` | ✅ | 具体乐器／音色，不许写"合成器"这种类别词。人读的名字 |
-| `midi` | ✅（`deliverable` 含 `midi`/`musicxml` 时） | `{program: 0-127, bank: 0, channel: 1-16}`，GM 音色号。鼓组 `channel: 10`。这是导出用的一处为准，`render.midi.instrument_map` 只放 VST 名等备注 |
-| `role` | ✅ | `律动`/`低频`/`和声铺底`/`织体`/`旋律`/`色彩`/`记忆点` |
-| `band` | ✅ | 主要占据的频段。**填四段之一**（`低频`/`中低`/`中高`/`高`，分割点 250 Hz / 2 kHz / 6 kHz）或具体区间如 `"1-3 kHz"`。与 `spectrum_budget` 交叉校验 |
-| `entry` | ✅ | 进场段落 id |
-| `exit` | ✅ | 退场段落 id，或 `end`。**受 lint 第 7 条约束**：至少一件乐器的 `exit` 不是 `end` |
-| `timbre` | ○ | **给文本后端看的**音色描述：材质、年代、参照乐器。不写旋钮数值 |
-| `synth_params` | ○ | **给参数后端看的**同一音色。★ 必须与 `timbre` **同源**（都从"音色四问"的答案生成），不同源会导致文本后端和 MIDI 后端听起来是两首歌。能映到 MIDI 控制器的四项按 GM2 编号写：截止 `cc74`、共鸣 `cc71`、起音 `cc73`、释放 `cc72`，取值 0–127 |
+| `id` | ✅ | Unique; `mix_intent`, `form[].events` and `render.midi` all reference this id. Exported as MusicXML part-name, MIDI track name, ABC `V:` name |
+| `instrument` | ✅ | Specific instrument / patch, not a category word such as "synth". A human-readable name |
+| `midi` | ✅ (when `deliverable` includes `midi`/`musicxml`) | `{program: 0-127, bank: 0, channel: 1-16}`, GM program number. Drum kit `channel: 10`. This is the single authoritative place for export; `render.midi.instrument_map` holds only notes such as VST names |
+| `role` | ✅ | `groove` / `low end` / `harmonic pad` / `texture` / `melody` / `color` / `memory hook` |
+| `band` | ✅ | Main frequency band occupied. **Use one of four bands** (`low` / `mid-low` / `mid-high` / `high`, with split points at 250 Hz / 2 kHz / 6 kHz) or a specific range such as `"1-3 kHz"`. Cross-checked against `spectrum_budget` |
+| `entry` | ✅ | Section id where it enters |
+| `exit` | ✅ | Section id where it exits, or `end`. **Constrained by lint item 7**: at least one instrument's `exit` is not `end` |
+| `timbre` | ○ | **For text backends**: a description of the timbre: material, era, reference instrument. Do not write knob values |
+| `synth_params` | ○ | **For parameter backends**: the same timbre. ★ Must be **from the same source** as `timbre` (both generated from the answers to the "four timbre questions"); different sources cause the text backend and the MIDI backend to sound like two different songs. Those four items that map to MIDI controllers use GM2 numbering: cutoff `cc74`, resonance `cc71`, attack `cc73`, release `cc72`, values 0–127 |
 | `note` | ○ | |
 
-#### `depth_map` —— 深度三层 ✦
+#### `depth_map` — Three layers of depth ✦
 
-`{roster_id: 前景|中景|背景}`。听众凭「高／响／快／变化率快」四条线索判断谁是前景，
-**其中只有"响"是混音能调的**——所以深度必须在编曲阶段规划。
-详见 `mc-texture-layering` §2–§3。导出时粗略映到 MIDI 混响发送 cc91（前景低、背景高）。
+`{roster_id: foreground|midground|background}`. Listeners judge what is foreground by four cues: "higher, louder, faster, faster rate of change".
+**Of these only "louder" can be adjusted at mixing**, so depth must be planned at the arrangement stage.
+See `mc-texture-layering` §2–§3. On export, roughly mapped to MIDI reverb send cc91 (low for foreground, high for background).
 
-#### `spectrum_budget` —— 频段预算
+#### `spectrum_budget` — Frequency-band budget
 
-`[{band, owner, competitors, resolution}]`。写清哪两件抢频段、怎么分工：**让频**／**错开音区**／**交替出现**。
-**`resolution` 必须是这三者之一**——这是"编曲＝频谱预算"这个观念的落点，也是 `mix_intent` 之所以能只写意图的前提。
+`[{band, owner, competitors, resolution}]`. State which two parts compete for a band and how they divide it: **yield** / **separate registers** / **alternate**.
+**`resolution` must be one of these three**. This is where the concept "arrangement = spectrum budget" lands, and it is the precondition for `mix_intent` being intent-only.
 
-> 验收标准：画出来的频段归属应当**既不交叠、又连续**（Izhaki 图 6.2 的 b 图）。
-> 只做到不交叠会留下空洞，只做到连续会糊。
+> Acceptance criterion: the band ownership drawn out should be **neither overlapping nor gapped** (Izhaki, Figure 6.2 b).
+> Merely avoiding overlap leaves holes; merely being continuous makes things muddy.
 
-#### `bass_kick_relation` —— 贝司与底鼓的关系 ✦
+#### `bass_kick_relation` — Relationship between bass and kick ✦
 
-`{mode: 结合式|互答式|交织式, detail}`。三选一，必须写明是哪一种。
+`{mode: locked|call-and-response|interlocking, detail}`. Choose one of three and state which one applies.
 
-- **结合式**：贝司节奏随底鼓走、完全重合 → 音头强、结实
-- **互答式**：贝司避开底鼓的节奏点 → 适合底鼓覆盖低频的电子舞曲
-- **交织式**：需要时重合、不需要时拆开 → **默认推荐**，但要求逐小节说得出哪里合哪里分；说不出就退回结合式
+- **Locked**: the bass rhythm follows the kick and coincides fully → strong, firm attacks
+- **Call-and-response**: the bass avoids the kick's rhythmic points → suits electronic dance music where the kick covers the low end
+- **Interlocking**: coincides when needed, separates when not → **default recommendation**, but requires that you can state, bar by bar, where they coincide and where they separate; if you cannot, fall back to locked
 
 #### `energy_curve`
 
-`{段落 id: 0–10}`，key 集合必须等于 `form` 的 id 集合（lint 第 4 条）。
-**受 lint 第 5 条约束：必须至少有一次下降。** 单调递增是 Suno 最强的默认值。
-（实测：62/62 首真实编曲都有下降，**强规则**。）参考渲染时折成力度缩放或 cc11。
+`{section id: 0–10}`. The set of keys must equal the set of ids in `form` (lint item 4).
+**Constrained by lint item 5: there must be at least one drop.** Monotonic increase is Suno's strongest default.
+(Measured: 62/62 real arrangements contain a drop: a **hard rule**.) In reference renders, folded into velocity scaling or cc11.
 
-#### `subtraction_events` —— 减法事件（★ 至少 1 个）
+#### `subtraction_events` — Subtraction events (★ at least 1)
 
-`[{at, what, why}]`。典型：第二段副歌前撤掉鼓、只剩人声＋一件乐器、断掉低频一小节。
-**受 lint 第 6 条约束。** 真唱片靠减法制造冲击，AI 只会加。
+`[{at, what, why}]`. Typical examples: removing the drums before the second chorus so only vocals and one instrument remain; cutting the low end for one bar.
+**Constrained by lint item 6.** Real records create impact through subtraction; AI only adds.
 
-`at` 是结构化的时间位置（§1.9），不是句子：`at: {section: C2, bar_offset: -1, beat: 4}` 表示 C2 前一小节第四拍；`at: {section: D}` 表示整段。"进入前最后半拍"这种描述放 `what`，位置放 `at`。
+`at` is a structured time position (§1.9), not a sentence: `at: {section: C2, bar_offset: -1, beat: 4}` means beat 4 of the bar before C2; `at: {section: D}` means the whole section. Descriptions such as "the last half-beat before entry" go in `what`; the position goes in `at`.
 
 #### `hooks`
 
-| 字段 | 必填 | 说明 |
+| Field | Required | Description |
 |---|---|---|
 | `vocal_hook` | ○ | `{where, shape}` |
-| `arrangement_hook` | ✅ | `{what, first_at, recurs_at, abc}`。**非人声的记忆点**——riff／标志性音色／反复出现的音响事件。**受 lint 第 8 条约束**。缺这一项是"听着还行但记不住"的主因。`abc` 可选，同 `motif_abc`，有则能导出成谱 |
+| `arrangement_hook` | ✅ | `{what, first_at, recurs_at, abc}`. **A non-vocal memory point**: riff / signature timbre / recurring sound event. **Constrained by lint item 8**. Missing this item is the main cause of "sounds fine but is not memorable". `abc` is optional, same as `motif_abc`; if present, it can be exported as notation |
 
 #### `groove`
 
-| 字段 | 必填 | 说明 |
+| Field | Required | Description |
 |---|---|---|
-| `feel` | ✅ | `straight`/`swing16`/`shuffle`/`halftime`/`2:1`/`3:1`。MusicXML 4.0 的 swing 元素能存前三种；MIDI 无标准，靠参考渲染的时值实现 |
-| `quantize_policy` | ○ | `{part: 百分比}`。★ **量化是逐乐器的决策，不是全局开关**——至少一件守网格、至少一件不守 |
-| `push_pull` | ✅ | `[{part, offset_ms, note}]`。**受 lint 第 11 条约束**：至少一项且 `offset_ms ≠ 0`。全部对齐网格＝机器感的根源（实测 62/62，**强规则**）。参考渲染时按速度折成 tick 偏移 |
-| `fill_policy` | ✅ | `{bars: [int], rationale}`。**受 lint 第 10 条约束**：`bars` 不许是公差为 4 的等差数列 |
+| `feel` | ✅ | `straight` / `swing16` / `shuffle` / `halftime` / `2:1` / `3:1`. MusicXML 4.0's swing element can store the first three; MIDI has no standard, so it is realized through the note values of the reference render |
+| `quantize_policy` | ○ | `{part: percentage}`. ★ **Quantization is a per-instrument decision, not a global switch**: at least one part stays on the grid, and at least one does not |
+| `push_pull` | ✅ | `[{part, offset_ms, note}]`. **Constrained by lint item 11**: at least one entry with `offset_ms ≠ 0`. Everything aligned to the grid is the root of a machine feel (measured 62/62, **hard rule**). Reference renders convert it into tick offsets according to tempo |
+| `fill_policy` | ✅ | `{bars: [int], rationale}`. **Constrained by lint item 10**: `bars` must not be an arithmetic sequence with common difference 4 |
 
-### 1.5 `vocal` —— 演唱设计
+### 1.5 `vocal` — Vocal design
 
-对应 `mc-vocal-direction`。**AI 人声最稳定的破绽是"完美"**：音准全中、力度平直、
-每遍副歌一模一样。这一段有一半是在**要求"不完美"**。
+Corresponds to `mc-vocal-direction`. **The most consistent giveaway of AI vocals is "perfection"**: pitch is perfect throughout, dynamics are flat,
+and every chorus is identical. About half of this section is about **asking for "imperfection"**.
 
-| 字段 | 必填 | 说明 |
+| Field | Required | Description |
 |---|---|---|
-| `persona` | ✅ | **这是谁在唱**：性别、音区、质感、年代感。写"女声"视为未填 |
-| `delivery` | ✅ | 气声／实声／半声；咬字松紧。**可以是单串，也可以 `{段落 id: 描述}` 逐段写**。用可执行的词：`亮`/`气声`/`辅音用力`——★ **不许写"大声点"**（音量是推子的事，不是演唱的事） |
-| `dynamics_by_section` | ✅ | `{段落 id: 0–10}`。**受 lint 第 15 条约束**：不许全程同一力度。导出到 MusicXML 力度记号按此映射：0–1 `ppp`、2 `pp`、3 `p`、4 `mp`、5–6 `mf`、7 `f`、8 `ff`、9–10 `fff`；MIDI 参考渲染按 `40 + 8×值` 取力度 |
-| `phrasing` | ○ | `[{line, timing, why}]` 哪几句往后拖（laid back）、哪句抢在拍前。★ 判断抢／拖看的是**元音**的位置，不是音节起点 |
-| `breath_points` | ○ | `[{section, line, after_syllable, note}]`：段落 id、第几行（1 起）、在该行第几个音节之后换气。换气也是留白，位置要和歌词的断句对上。导出为 MusicXML 的 breath-mark |
-| `ad_libs` | ○ | `[{at, what}]`，`at` 用 §1.9 的时间位置；★ 禁止均匀撒 |
-| `chorus_variation` | ✅ | ★ 副歌每一遍怎么各不相同。**受 lint 第 16 条约束**。（词可以一样，编曲不能一样） |
-| `stacking` | ○ | 和声／加倍：堆几层、在哪几句进、用**四型**中的哪型（全声上方／贴唱上方／内敛下方／合いの手）。做 double 要求的是**二次演唱**，不是复制一轨。写了实际音高的层导出为 MusicXML 额外声部 |
-| `pitch_policy` | ○ | ★ 写**哪些位置保留音准偏移**，而不是"修准"。唱低的人声推子推到天上也出不来；**略偏高的穿透力更好**。失效条件：编曲极密的段落该修，判据是**伴奏密度**不是段落名 |
-| `register_arc` | ○ | 音区走向，与 `form[].melody_register` 一致 |
+| `persona` | ✅ | **Who is singing**: gender, vocal range, texture, sense of era. Writing "female voice" alone counts as unfilled |
+| `delivery` | ✅ | Breathy / full / mixed voice; tightness of articulation. **Can be a single string, or per-section `{section id: description}`**. Use executable terms: `bright` / `breathy` / `consonants pushed`. ★ **Do not write "sing louder"** (volume is the fader's job, not the singing's) |
+| `dynamics_by_section` | ✅ | `{section id: 0–10}`. **Constrained by lint item 15**: must not be the same level throughout. Export to MusicXML dynamic marks follows this mapping: 0–1 `ppp`, 2 `pp`, 3 `p`, 4 `mp`, 5–6 `mf`, 7 `f`, 8 `ff`, 9–10 `fff`; the MIDI reference render uses velocity `40 + 8×value` |
+| `phrasing` | ○ | `[{line, timing, why}]` which lines lay back (behind the beat) and which line anticipates the beat. ★ Judging whether a note rushes or lags depends on the position of the **vowel**, not the start of the syllable |
+| `breath_points` | ○ | `[{section, line, after_syllable, note}]`: section id, line number (starting from 1), and the syllable within that line after which to breathe. Breathing is also space; its position must match the lyric's phrasing. Exported as MusicXML breath-mark |
+| `ad_libs` | ○ | `[{at, what}]`, `at` uses the time position from §1.9; ★ evenly scattering them is forbidden |
+| `chorus_variation` | ✅ | ★ How each pass of the chorus differs. **Constrained by lint item 16**. (The words may stay the same; the arrangement may not) |
+| `stacking` | ○ | Harmony / doubling: how many layers, which lines they enter on, and which of the **four types** to use (full-voice above / close-harmony above / understated below / aino-te call-and-response). A double requires a **second performance**, not a copied track. Layers with actual pitches are exported as extra voices in MusicXML |
+| `pitch_policy` | ○ | ★ Write **which positions retain a pitch offset**, rather than "correct to pitch". A vocal that sits too low will not come through even if the fader is pushed to the top; **a slightly sharp vocal has better carrying power**. Failure condition: sections with very dense arrangements should be corrected; the criterion is **accompaniment density**, not the section name |
+| `register_arc` | ○ | Direction of the vocal range, consistent with `form[].melody_register` |
 
 ### 1.6 `mix_intent`
 
-只写**意图**，不写 EQ 频点／压缩比／母带链（那些是混音的事）。
-**参数之间互相牵动**（提人声高频 → 混响音尾变长 → 推子要调 → 压缩参数要调），
-在规格单里钉死一个数值等于替混音师锁死后面四步。这一块除 `sound_stage` 外全是仅意图。
+Write only **intent**, not EQ frequencies / compression ratios / mastering chain (those are the mixing engineer's job).
+**Parameters influence each other** (raise vocal high-frequency → reverb tail lengthens → fader must be adjusted → compression parameters must be adjusted). Pinning a numeric value in the spec locks the mixing engineer out of the four steps that follow.
+Everything in this block except `sound_stage` is intent-only.
 
-| 字段 | 必填 | 说明 |
+| Field | Required | Description |
 |---|---|---|
-| `mood` | ✅ | ★ 一句话说这首混音要传达什么。**对其余所有决定有否决权**，且**在生成提示词里要靠前**（生成模型也是"只擅长某种风格的混音师"，会把输入往它见得最多的平衡上拉） |
-| `sound_stage` | ○ | `[{id, pan, depth}]` 逐乐器的左右＋前后。`pan` 取 `-100..100`（负左正右，0 居中），导出线性折到 MIDI cc10 的 0–127 和 MusicXML pan 的 -180..180；`depth` 取 `前景/中景/背景`，与 `depth_map` 同一枚举。★ **同组乐器的深度必须一致**（深度要"一致"不要"平衡"）；鼓组**内部**的方位归 `mc-rhythm-section`，这里只定鼓组整体坐在哪 |
-| `focus_by_section` | ○ | `{段落 id: roster_id}` 每段谁必须是最清楚的元素。★ **先写最密的那一段**，其余相对它定义 |
-| `ducking_map` | ○ | `[{section, who_yields, band, to}]` 哪一段谁让出哪个频段给谁 |
-| `deliberate_imbalance` | ○ | `[{from_bar, to_bar, what, why}]`。★ **必须带起止小节**——不平衡是**事件**不是状态，没写小节范围的一律当失误 |
-| `reference_tracks` | ○ | `[{track, aspect}]`。★ `aspect` **必须写明参考它哪一方面**，只写歌名视为未填。注意母带影响：参考曲的动态值会系统性偏紧 |
-| `dynamics` | ✅ | `{target_DR_dB, notes}`。`notes` 里写"哪一段必须比副歌小 x dB" |
-| `width_map` | ✅ | `{段落 id: narrow/medium/wide}`。**受 lint 第 12 条约束**：至少两个不同值 |
-| `loudness_target` | ✅ | 如 `"-9 LUFS integrated"` |
+| `mood` | ✅ | ★ One sentence on what this mix must convey. **Has veto power over all other decisions**, and **appears early in the generation prompt** (the generation model is also a "mixing engineer who is only good at one style", and will pull the input toward the balance it has seen most often) |
+| `sound_stage` | ○ | `[{id, pan, depth}]` left/right and front/back for each instrument. `pan` takes `-100..100` (negative left, positive right, 0 centered); exported as a linear mapping to MIDI cc10 0–127 and MusicXML pan -180..180. `depth` takes `foreground / midground / background`, the same enumeration as `depth_map`. ★ **Depth must be consistent within a group of instruments** (depth should be "consistent", not "balanced"). Positioning within the drum group belongs to `mc-rhythm-section`; this only fixes where the drum group as a whole sits |
+| `focus_by_section` | ○ | `{section id: roster_id}`: which element must be the clearest in each section. ★ **Write the densest section first**; define the others relative to it |
+| `ducking_map` | ○ | `[{section, who_yields, band, to}]`: in which section, which part yields which band to which other part |
+| `deliberate_imbalance` | ○ | `[{from_bar, to_bar, what, why}]`. ★ **Must include the start and end bars**. An imbalance is an **event**, not a state; any entry without a bar range is treated as an error |
+| `reference_tracks` | ○ | `[{track, aspect}]`. ★ `aspect` **must state which aspect of the reference is being used**; writing only the track name counts as unfilled. Note the mastering effect: the dynamic values of reference tracks are systematically compressed |
+| `dynamics` | ✅ | `{target_DR_dB, notes}`. `notes` states "which section must be x dB quieter than the chorus" |
+| `width_map` | ✅ | `{section id: narrow/medium/wide}`. **Constrained by lint item 12**: at least two different values |
+| `loudness_target` | ✅ | e.g. `"-9 LUFS integrated"` |
 
 ### 1.7 `render`
 
 #### `render.suno`
 
-| 字段 | 必填 | 说明 |
+| Field | Required | Description |
 |---|---|---|
-| `style_prompt` | ✅ | 风格描述串。**不许出现 `epic`/`emotional`/`beautiful` 这类无信息形容词**（lint 第 13 条软警告） |
-| `section_tags` | ○ | 由 `form[].name` 派生（`[Intro]` `[Verse]` …），编译时生成，不必手填。手填了则**数量与顺序必须与 `form` 一致**（lint 第 13 条） |
-| `exclude` | ○ | 负面提示 |
+| `style_prompt` | ✅ | Style description string. **Must not contain content-free adjectives such as `epic`/`emotional`/`beautiful`** (lint item 13, soft warning) |
+| `section_tags` | ○ | Derived from `form[].name` (`[Intro]` `[Verse]` …) and generated at compile time, no need to fill by hand. If filled by hand, **the count and order must match `form` exactly** (lint item 13) |
+| `exclude` | ○ | Negative prompt |
 | `knobs` | ○ | `{model, weirdness, style_influence}` |
 
 #### `render.yue`
 
-`{genre_tags, structure, ref_audio, abc}`。YuE2 吃 genre tag 串 ＋ 结构化段落，
-**并且可以直接吃 ABC 乐谱**（`abc=` 参数）——这是唯一能让规格被"执行"而不是"提示"的路径。
-`form[].harmony_letters` / `key` / `meter` / `tempo` 直接编译成 ABC。编译规则见 `mc-symbolic-score`。
+`{genre_tags, structure, ref_audio, abc}`. YuE2 takes a genre-tag string plus structured sections,
+**and can take an ABC score directly** (`abc=` parameter). This is the only path where the spec is **executed** rather than **prompted**.
+`form[].harmony_letters` / `key` / `meter` / `tempo` are compiled directly into ABC. Compilation rules in `mc-symbolic-score`.
 
 #### `render.midi`
 
-`{instrument_map: {roster_id: {name, program, bank, channel}}}`。`program/bank/channel` 与 `roster[].midi` 同源，以 roster 为准；`name` 放 VST 或采样库名这类 GM 表达不了的备注。只有 VST 名时也要给 `program` 作回退，否则参考渲染没有声音。
+`{instrument_map: {roster_id: {name, program, bank, channel}}}`. `program/bank/channel` come from the same source as `roster[].midi`, and the roster is authoritative; `name` holds notes that GM cannot express, such as a VST or sample-library name. If only a VST name is given, `program` must still be given as a fallback, otherwise the reference render has no sound.
 
 #### `render.musicxml`
 
-`{lead_sheet: true, parts: [roster_id, …]}`。不填默认只出人声领奏谱：旋律、和弦标记、歌词音节、段落记号、速度、调号拍号、力度、换气。`parts` 列了哪些 roster id，就多出哪些分谱（需要该声部有实际音符，来自符号路径）。
+`{lead_sheet: true, parts: [roster_id, …]}`. If not filled, the default is a vocal lead sheet only: melody, chord symbols, lyric syllables, section marks, tempo, key and time signatures, dynamics, breath marks. Each roster id listed in `parts` adds a part (the part needs actual notes, which come from the symbolic path).
 
 #### `render.chordpro`
 
-`{transpose: 0}`。段落由 `form[].name` 派生，和弦由 `harmony_letters` 派生，歌词来自 `meta.upstream.lyrics.sections`（§5.2）。
+`{transpose: 0}`. Sections are derived from `form[].name`, chords from `harmony_letters`, and lyrics from `meta.upstream.lyrics.sections` (§5.2).
 
 ### 1.8 `checks`
 
-`self_audit: [ … ]` —— 作者逐条打勾的人工项（自动项由 lint 跑）。人工项固定这几条：
+`self_audit: [ … ]`: manual items that the author ticks off one by one (automatic items are run by lint). The manual items are fixed as follows:
 
-- [ ] `one_thing` 念出来是一句话，不是两件事拼的
-- [ ] 两个参照各借的点不重叠
-- [ ] `arrangement_hook` 在不看谱的情况下能哼出来
-- [ ] 至少一段的 `melody_register` 与相邻段落明显不同
-- [ ] 全曲有一处"该说的地方没说"（留白），写明在哪
-- [ ] 每段的"最高、最响、最快、变化最剧烈"分别是谁，列得出来；**主角至少占两条**
-- [ ] 低频主体若是正弦波／极暗音色，补了泛音并**在手机外放验证过**（差音问题）
+- [ ] `one_thing`, read aloud, is one sentence, not two things stitched together
+- [ ] The points borrowed from the two references do not overlap
+- [ ] `arrangement_hook` can be hummed without looking at the score
+- [ ] At least one section's `melody_register` is clearly different from its neighbors
+- [ ] Somewhere in the song there is a place where something that could be said is left unsaid (a rest); state where it is
+- [ ] For each section, list who is the highest, loudest, fastest, and most dramatically changing; **the lead must hold at least two of these**
+- [ ] If the low end is a sine wave or a very dark timbre, harmonics were added and **verified on a phone speaker** (the missing-fundamental / difference-tone problem)
 
-`exemptions: [{rule, why}]` —— 豁免项。**豁免必须写理由，不许静默跳过。**
+`exemptions: [{rule, why}]`: exemptions. **An exemption must state its reason; silently skipping is not allowed.**
 
-### 1.9 时间位置的写法
+### 1.9 Writing time positions
 
-所有"在哪发生"的字段（`subtraction_events[].at`、`ad_libs[].at`、`deliberate_imbalance`、`phrasing[].line` 若指位置）只认两种形式：
+Every field that states "where it happens" (`subtraction_events[].at`, `ad_libs[].at`, `deliberate_imbalance`, and `phrasing[].line` if it refers to a position) accepts only two forms:
 
-- 绝对：`{bar: 40}` 或 `{bar: 40, beat: 3}`
-- 相对段落：`{section: C2}`（整段）、`{section: C2, bar_offset: -1}`（C2 前一小节）、`{section: C2, bar_offset: 0, beat: 4.5}`（C2 第一小节第四拍半）
+- Absolute: `{bar: 40}` or `{bar: 40, beat: 3}`
+- Relative to a section: `{section: C2}` (the whole section), `{section: C2, bar_offset: -1}` (the bar before C2), `{section: C2, bar_offset: 0, beat: 4.5}` (beat 4½ of the first bar of C2)
 
-`beat` 从 1 起，可带小数。这两种形式都能无损换算成 MIDI tick 和 MusicXML 小节号，句子换算不了。
-
----
-
-## 2. 20 条自查（SPEC-LINT）
-
-人工逐条过。**不过 = 改或写理由**，不是禁止编译。
-
-| # | 检查 | 对抗的默认值 |
-|---|---|---|
-| 1 | `intent` 四项非空；`reference_pair` 恰好 2 项且 `borrow` 非空 | 没做过选择 |
-| 2 | `form` 的 `start_bar` 首尾相接无缝无叠 | 规格自相矛盾 |
-| 3 | 至少一个段落的 `bars` 不是 8 的倍数 | 段落全是 8 的整数倍 |
-| 4 | `energy_curve` 的 key 集合 == `form` 的 id 集合 | 规格不完整 |
-| 5 | `energy_curve` 至少有一次下降 | 能量单调递增 |
-| 6 | `subtraction_events` ≥ 1 | 只会加不会减 |
-| 7 | `roster` 每项有 `entry`；至少一项 `exit != end` | 编制从头到尾不变 |
-| 8 | `arrangement_hook.what` 非空 | 没有非人声记忆点 |
-| 9 | 至少一个非 Intro/Outro 段落的 `harmony` 含调外和弦或转调标记（小调里 `bIII`／`bVI`／`bVII` 是自然小调的本调和弦，不算调外） | 一个循环到底 |
-| 10 | `fill_policy.bars` 不是公差为 4 的等差数列 | fill 刻板 |
-| 11 | `groove.push_pull` 至少一项且 `offset_ms != 0` | 网格化 |
-| 12 | `mix_intent.width_map` 至少两个不同值 | 立体声宽度恒定 |
-| 13 | `render.suno.style_prompt` 非空；`section_tags` 若手填则与 `form` 段数、顺序一致 | 编译不完整 |
-| 14 | `target_duration` 与 `Σbars × meter ÷ tempo` 偏差 ≤ 10% | 时长永远 3:30 |
-| **15** | `vocal.dynamics_by_section` 至少两个不同值 | 人声全程一个力度 |
-| **16** | `vocal.chorus_variation` 非空且说得出每遍改了什么 | 副歌逐遍原样复制 |
-| **17** | `style_layers` 多于一层时：恰好一个 base；每个维度只有一个 owner；每层至少一个维度 | 风格"调匀"——两种默认值叠在一起，谁也没选 |
-| **18** | `material.motif` 与 `stated_in` 非空；`form[].development` 全部填了；填 `new` 的段数不过半；全曲至少一段 `repeat` 或 `recap`；副歌各遍不全是 `new` | 每段都写新东西，不发展只堆 |
-| **19** | `harmony_letters` 每个和弦的根音、后缀、斜线低音都在 §1.3.1 的封闭集合里，全 ASCII；`harmony` 同样 ASCII | 拼写各写各的，导不出去 |
-| **20** | `key` 合 `<主音> <major|minor>` 语法；`mode` 在枚举内；`meter` 与 `meter_map`/`tempo_map` 的小节号落在曲内；`form[].name` 在封闭集合内；`subtraction_events[].at` 是 §1.9 的结构 | 可执行字段写成了句子 |
-
-**失效条件（必须写进 `checks.exemptions`）**：
-
-- 第 9 条：极简主义作品（ambient／drone／单和弦 vamp）可豁免
-- 第 11 条：`feel: straight` 的硬网格电子舞曲可把量级写为 0，说明"网格化是本风格的语言"
-  （注意这与 62/62 那条强规则不矛盾——强规则说的是**不许全曲每一件都在网格上**，
-  鼓组绝对量化是允许的，见 `mc-rhythm-section` §2.0）
-- 第 15／16 条：**无人声的纯器乐作品整段 `vocal` 可缺省**，此时两条自动跳过
-- 第 18 条：**通篇即兴或 ambient／drone 这类没有主题材料的作品**，`material.motif` 写"无主题材料"并在这里说明，`development` 可全填 `new` 或留空
-- 第 19／20 条：没有失效条件。这两条查的是语法，不是判断
+`beat` starts from 1 and may be fractional. Both forms convert losslessly into MIDI ticks and MusicXML bar numbers; sentences cannot be converted.
 
 ---
 
-## 3. 与实测量的对应（照做率怎么来）
+## 2. The 20 self-checks (SPEC-LINT)
 
-| ARR-SPEC 字段 | 生成音频侧的实测量 | 判定 |
+Checked manually, one by one. **Failing = fix it or state a reason**; it does not forbid compilation.
+
+| # | Check | Default it counters |
 |---|---|---|
-| `form[].start_bar` | 段落边界检测（秒 → 小节） | 边界命中率，容差 ±1.5 小节 |
-| `form[].harmony` | 每小节 chroma → 和弦模板匹配 | 和弦序列编辑距离 |
-| `meta.tempo` | beat tracking | 相对误差（容差 4%） |
-| `groove.push_pull` | onset 相对网格偏移的均值 | 符号与量级是否一致 |
-| `energy_curve` | 分段 RMS | 与规格曲线的 Spearman 相关 |
-| `roster[].entry/exit` | 分轨 onset 密度 | 事件命中率 |
-| `dynamics.target_DR_dB` | crest factor / LRA | 绝对差 |
-| （AI 味通用项） | 频谱质心时序方差 | 低于阈值即判"全程一个样" |
-| `width_map` | 分段 M/S 比与相关系数 | 是否随段落变化 |
-| `target_duration` | 实际时长 | 相对误差 |
+| 1 | The four `intent` items are non-empty; `reference_pair` has exactly 2 items and each `borrow` is non-empty | No choice was made |
+| 2 | `start_bar` in `form` joins end to end, without gaps or overlaps | The spec contradicts itself |
+| 3 | At least one section's `bars` is not a multiple of 8 | Every section is a multiple of 8 |
+| 4 | The key set of `energy_curve` == the id set of `form` | The spec is incomplete |
+| 5 | `energy_curve` has at least one drop | Energy rises monotonically |
+| 6 | `subtraction_events` ≥ 1 | Only adds, never subtracts |
+| 7 | Every `roster` item has `entry`; at least one item has `exit != end` | The lineup never changes from start to finish |
+| 8 | `arrangement_hook.what` is non-empty | No non-vocal memory point |
+| 9 | At least one non-Intro/Outro section's `harmony` contains an out-of-key chord or a modulation marker (in minor, `bIII`/`bVI`/`bVII` are diatonic chords of natural minor and do not count as out-of-key) | One loop all the way through |
+| 10 | `fill_policy.bars` is not an arithmetic sequence with common difference 4 | Fills are formulaic |
+| 11 | `groove.push_pull` has at least one entry with `offset_ms != 0` | Grid-locked |
+| 12 | `mix_intent.width_map` has at least two different values | Constant stereo width |
+| 13 | `render.suno.style_prompt` is non-empty; if `section_tags` is filled by hand, its section count and order match `form` | Incomplete compilation |
+| 14 | `target_duration` deviates from `Σbars × meter ÷ tempo` by ≤ 10% | Duration is always 3:30 |
+| **15** | `vocal.dynamics_by_section` has at least two different values | Vocal at one level throughout |
+| **16** | `vocal.chorus_variation` is non-empty and states what changed on each pass | Chorus copied verbatim each time |
+| **17** | When `style_layers` has more than one layer: exactly one base; each dimension has only one owner; each layer owns at least one dimension | Styles "blended evenly": two defaults stacked, and no one made a choice |
+| **18** | `material.motif` and `stated_in` are non-empty; every `form[].development` is filled; the number of sections marked `new` is less than half; at least one section in the whole song is `repeat` or `recap`; not every chorus pass is `new` | Every section writes something new; no development, just piling up |
+| **19** | Each chord in `harmony_letters` has its root, suffix and slash bass within the closed set in §1.3.1, all ASCII; `harmony` likewise ASCII | Spellings vary by writer; cannot be exported |
+| **20** | `key` matches the `<tonic> <major|minor>` syntax; `mode` is within the enum; `meter` with the bar numbers of `meter_map`/`tempo_map` falls within the song; `form[].name` is within the closed set; `subtraction_events[].at` has the §1.9 structure | Executable fields were written as sentences |
 
-加权得出 **0–100 照做率**（按同一张表逐字段对照即可，不必算成数）。
+**Failure conditions (must be written into `checks.exemptions`)**:
 
-> ★ **零点校准**：一份 City Pop 规格（112 BPM、10 段、114 小节）比三首与它无关、制作精良的华语成品，对本表打分落在 **63–66**。
-> 所以我们把 **82／70** 当参考线，不是 60——这是理解量级的参考值，不是交付门槛。
-> 这个校准值必须随权重改动一起重测——**改权重后没重测零点 = 数据不可比**。
+- Item 9: minimalist works (ambient / drone / single-chord vamp) may be exempt
+- Item 11: `feel: straight` hard-grid electronic dance music may set the amount to 0, with a note that "grid-locking is this style's language"
+  (Note that this does not conflict with the 62/62 hard rule: the hard rule says **a whole song must not have every part on the grid**;
+  absolute quantization of the drum group is allowed, see `mc-rhythm-section` §2.0)
+- Items 15 / 16: **for purely instrumental works with no vocals, the whole `vocal` section may be omitted**, and both items are then skipped automatically
+- Item 18: **works that are entirely improvised or are ambient / drone with no thematic material**: write "no thematic material" in `material.motif` and explain it here; `development` may be all `new` or left empty
+- Items 19 / 20: no failure conditions. These two check syntax, not judgment
+
+---
+
+## 3. Correspondence with measured quantities (how compliance is computed)
+
+| ARR-SPEC field | Measured quantity on the generated audio | Judgment |
+|---|---|---|
+| `form[].start_bar` | Section boundary detection (seconds → bars) | Boundary hit rate, tolerance ±1.5 bars |
+| `form[].harmony` | Per-bar chroma → chord template matching | Edit distance of the chord sequence |
+| `meta.tempo` | Beat tracking | Relative error (tolerance 4%) |
+| `groove.push_pull` | Mean onset offset relative to the grid | Whether sign and magnitude match |
+| `energy_curve` | Per-section RMS | Spearman correlation with the spec curve |
+| `roster[].entry/exit` | Per-track onset density | Event hit rate |
+| `dynamics.target_DR_dB` | Crest factor / LRA | Absolute difference |
+| (general AI-flavor item) | Temporal variance of spectral centroid | Below the threshold → judged as "one level throughout" |
+| `width_map` | Per-section M/S ratio and correlation coefficient | Whether it varies with the sections |
+| `target_duration` | Actual duration | Relative error |
+
+Summing gives a **0–100 compliance score** (just compare field by field against this table; no need to compute a number).
+
+> ★ **Zero-point calibration**: a City Pop spec (112 BPM, 10 sections, 114 bars) scored against this table lands at **63–66**, compared with three unrelated, well-produced Chinese-language commercial tracks.
+> So we treat **82 / 70** as reference lines, not 60. These are reference values for understanding the scale, not delivery thresholds.
+> This calibration value must be re-measured together with any change in weights: **changing weights without re-measuring the zero point = the data are not comparable**.
 >
-> ★ 一个踩过的坑：把权重从**有区分度**的项（`boundaries`）挪到**没区分度**的项
-> （`energy_shape`，不相关曲目也能拿 0.8）会**抬高所有人的分**，包括零点基线。
-> 加权重要加在能区分的项上。
+> ★ A pitfall we hit: moving weight from **discriminative** items (`boundaries`) to **non-discriminative** items
+> (`energy_shape`, where unrelated tracks can still score 0.8) **raises everyone's score**, including the zero-point baseline.
+> Add weight only to items that can discriminate.
 
-> ★ **后端能力**：`honors: none` 的项**排除计分**，不是给 0 分。
-> 否则一个诚实声明"我做不到声像"的后端，会比一个假装做得到的后端得分更低。
+> ★ **Backend capability**: items with `honors: none` are **excluded from scoring**, not scored as 0.
+> Otherwise a backend that honestly declares "I cannot do stereo imaging" would score lower than one that pretends it can.
 
 ---
 
-## 4. 字段去向：哪些能导出，导到哪
+## 4. Field destinations: what can be exported and where
 
-规格单不是 MusicXML 也不是 MIDI，它们存结果不存原因。但每个字段都要说得出去向，三选一：
+The spec is not a MusicXML or MIDI file; they store results, not reasons. But every field must have a stated destination, one of three kinds:
 
-- **可执行**：无损导出到至少一种行业格式，取值语法按目标格式写。
-- **桥接**：行业格式没有对应字段，用它现有的机制近似（力度、控制器、静音、文字标记），有损，规格单仍是权威。
-- **仅意图**：行业里没有格式存它。导出时整块作为文本随文件走，不丢"为什么"。
+- **Executable**: exported losslessly to at least one industry format; value syntax follows the target format.
+- **Bridged**: the industry format has no matching field, so an approximation is made with its existing mechanisms (dynamics, controllers, mute, text marks). Lossy; the spec remains authoritative.
+- **Intent-only**: no industry format stores it. On export, the whole block travels with the file as text, so the "why" is not lost.
 
-| 去向 | 字段 |
+| Destination | Fields |
 |---|---|
-| 可执行 | `title` `key` `mode` `meter` `meter_map` `tempo` `tempo_map` `form[].id/name/bars/start_bar/harmony_letters` `melody_range` `motif_abc` `arrangement_hook.abc` `roster[].id/instrument/midi` `breath_points` `stacking`（写了音高时） `render.midi/musicxml/chordpro/yue.abc` |
-| 桥接 | `form[].energy/events` `roster[].entry/exit/synth_params` `depth_map` `energy_curve` `subtraction_events` `groove.*` `dynamics_by_section` `phrasing` `sound_stage` |
-| 仅意图 | `style_layer(s)` `fusion_note` `intent.*` `material.motif/character/stated_in/development_mode` `form[].harmony/melody_register/development/note` `roster[].role/band/timbre` `spectrum_budget` `bass_kick_relation` `hooks.*.what` `fill_policy` `vocal` 其余各项 `mix_intent` 其余各项 `render.suno.*` |
+| Executable | `title` `key` `mode` `meter` `meter_map` `tempo` `tempo_map` `form[].id/name/bars/start_bar/harmony_letters` `melody_range` `motif_abc` `arrangement_hook.abc` `roster[].id/instrument/midi` `breath_points` `stacking` (when pitches are written) `render.midi/musicxml/chordpro/yue.abc` |
+| Bridged | `form[].energy/events` `roster[].entry/exit/synth_params` `depth_map` `energy_curve` `subtraction_events` `groove.*` `dynamics_by_section` `phrasing` `sound_stage` |
+| Intent-only | `style_layer(s)` `fusion_note` `intent.*` `material.motif/character/stated_in/development_mode` `form[].harmony/melody_register/development/note` `roster[].role/band/timbre` `spectrum_budget` `bass_kick_relation` `hooks.*.what` `fill_policy` the remaining items of `vocal` `the remaining items of mix_intent` `render.suno.*` |
 
-四个导出目标与各自的受众：
+The four export targets and their audiences:
 
-| 目标 | 给谁 | 带什么 |
+| Target | For whom | Contents |
 |---|---|---|
-| MusicXML 领奏谱 | 乐手、记谱软件 | 旋律、和弦标记、歌词音节、段落记号、速度、调号拍号、力度、换气 |
-| MIDI 骨架 | DAW | 速度表、拍号、段落 marker、各轨音色号、进退场、声像、参考渲染 |
-| ChordPro | 吉他手、排练 | 段落、和弦、歌词 |
-| ABC | 大模型、YuE2 | 旋律、和弦、歌词行，见 `mc-symbolic-score` |
+| MusicXML lead sheet | Musicians, notation software | Melody, chord symbols, lyric syllables, section marks, tempo, key and time signatures, dynamics, breath marks |
+| MIDI skeleton | DAW | Tempo map, time signatures, section markers, per-track program numbers, entries and exits, pan, reference render |
+| ChordPro | Guitarists, rehearsal | Sections, chords, lyrics |
+| ABC | Large models, YuE2 | Melody, chords, lyric lines; see `mc-symbolic-score` |
 
-DAW 私有工程格式与 DAWproject 不对接。`mix_intent` 不找格式，混音意图在行业里就是文字。
+Proprietary DAW project formats and DAWproject are not supported. `mix_intent` has no matching format: mixing intent is, in the industry, simply text.
 
-`meta.upstream.lyrics.sections[].lines`（歌词行）按可执行导出：MusicXML 的 lyric、ChordPro 的歌词行、ABC 的 `w:` 行。`meta.upstream` 的其余项与 `messages` 不导出，只随规格单走。
+`meta.upstream.lyrics.sections[].lines` (lyric lines) is exported as executable: as MusicXML lyric, as ChordPro lyric lines, as ABC `w:` lines. The remaining items of `meta.upstream` and `messages` are not exported; they travel with the spec only.
 
 ---
 
-## 5. 对外接口
+## 5. External interface
 
-这份规格单记的是**一首歌的作曲与编曲决定**。本节写给规格单之外的读者（另一个部门、另一套工具、另一个 agent 都一样），不假设谁在读，只约定数据：交出去的字段（§5.1）、有就读的上游字段（§5.2）、消息通道 `messages`（§5.3）、和歌词那一侧共享的六个字段（§5.4）。本包的 skill 之间也只经这些字段交换。
+This spec records **the composition and arrangement decisions for one song**. This section is written for readers outside the spec (another department, another toolset, or another agent alike); it does not assume who is reading, and only agrees on the data: the fields handed off (§5.1), the upstream fields read when present (§5.2), the message channel `messages` (§5.3), and the six fields shared with the lyrics side (§5.4). The skills in this package exchange data only through these fields.
 
-### 5.1 交出去的字段（按职能）
+### 5.1 Fields handed off (by function)
 
-**先读这几条约定**，下表每一行都照它们理解：
+**Read these conventions first**; every row in the table below is read in line with them:
 
-- **决定与意图，不是处方。** 规格单里没有 EQ 频点、压缩比、母带链，没有词，没有画面的剪辑点，这些由各职能自己定；`intent`、`vocal` 与 `mix_intent` 的大部分是仅意图（§4）。
-- **时间位置按小节与拍**（§1.9），都从 1 起。换算成秒：逐小节按 `tempo_map`（没有就用 `tempo`）与 `meter_map`（没有就用 `meter`）累加，一小节＝每小节拍数 × 60 ÷ BPM（四分音符为一拍）；`form[].start_bar` 首尾相接，每段起止秒数都能算出。
-- **id**：`form[].id` 全局唯一，逐段的字段与歌词都按它对齐；`form[].name` 是封闭集合，可以重复（C1、C2 都是 `Chorus`）。`roster[].id` 是 MIDI 轨名、分谱名，也是 `depth_map`、`spectrum_budget`、`sound_stage` 里的名字。
-- **计划与实测**：规格单是计划，音频回来按 §3 逐字段对照；`checks.exemptions` 里写了理由的偏离是有意的选择；`honors: none` 的字段是那个后端做不到的。
+- **Decisions and intent, not prescriptions.** The spec contains no EQ frequencies, compression ratios, or mastering chain, and no lyrics, no edit points for the picture; these are decided by each function. Most of `intent`, `vocal` and `mix_intent` are intent-only (§4).
+- **Time positions are given in bars and beats** (§1.9), counting from 1. To convert to seconds: accumulate bar by bar using `tempo_map` (or `tempo` if absent) and `meter_map` (or `meter` if absent); one bar = beats per bar × 60 ÷ BPM (quarter note = one beat); with `form[].start_bar` joining end to end, the start and end seconds of each section can all be computed.
+- **id**: `form[].id` is globally unique, and per-section fields and lyrics align on it; `form[].name` is a closed set and may repeat (C1 and C2 are both `Chorus`). `roster[].id` is the MIDI track name and the part name, and also the name used in `depth_map`, `spectrum_budget` and `sound_stage`.
+- **Plan vs. measurement**: the spec is a plan; once audio returns, compare field by field per §3; a deviation whose reason is written in `checks.exemptions` is a deliberate choice; a field with `honors: none` is one that the given backend cannot do.
 
-| 职能 | 读哪些字段 | 字段怎么理解 |
+| Function | Fields read | How to interpret the fields |
 |---|---|---|
-| **作词** | 共享六字段（§5.4）；`form[].start_bar／melody_register／melody_range`；`vocal.phrasing／breath_points／chorus_variation`、`hooks.vocal_hook`；`intent.emotional_arc`；符号路径出的旋律 | **段落 id 是词与曲咬合的那一列**：歌词按 `form[].id` 分段，一行一个乐句，中文一字一音节。`breath_points` 是换气位置（段落、行、第几个音节之后），词的断句要和它对上；`melody_register／melody_range` 标出哪段唱得高，高音上的字要经得起唱。`chorus_variation` 是编曲这一侧副歌逐遍的变化（词可以一样，编曲不能一样）；`emotional_arc` 是逐段情绪与转折 |
-| **声音**（混音、母带） | `mix_intent`；`roster`、`depth_map`、`spectrum_budget`、`bass_kick_relation`、`energy_curve`、`subtraction_events`；`vocal.stacking／pitch_policy`；`meta.deliverable` | **`mix_intent` 是意图，不是参数**，EQ、压缩、混响、总线、母带由混音定。`mood` 对其余决定有否决权；`deliberate_imbalance` 带起止小节，是有意的事件；`dynamics.notes` 的段落落差要在母带后还留得住。`spectrum_budget[].resolution` 说明频段冲突已在编曲里解掉；`depth_map` 同组乐器深度一致。`subtraction_events` 是有意留的空处，别被动态处理填上；`pitch_policy` 列的位置有意保留音准偏移，不修准 |
-| **配乐**（为画面写音乐：spotting、cue） | `meta.tempo／tempo_map／meter_map／target_duration`；`form[]`、`energy_curve`；`material`、`hooks.arrangement_hook`；`roster`、`meta.deliverable` | 本包的音乐**结构由曲式定**，时长自己定。用到画面上，段落起止秒数从小节算；`material.motif`、`arrangement_hook` 是可以再用的主题与记忆点。段落边界要跟画面走的，结构归配乐；本包只在 `meta.upstream.picture` 给了时长与卡点时，按它定时长、速度与小节数 |
-| **剪辑环节**（切在哪、剪短、接缝） | 上一行的时间字段；`form[].events`、`roster[].entry／exit`、`subtraction_events`、`groove.fill_policy.bars` | 段落边界是天然的接缝，`fill_policy.bars` 是过门所在小节；`subtraction_events` 是编曲的冲击来源（§1.4），剪短时留着它。`deliverable` 含 `stems` 时交分轨 |
+| **Lyrics** | Shared six fields (§5.4); `form[].start_bar / melody_register / melody_range`; `vocal.phrasing / breath_points / chorus_variation`, `hooks.vocal_hook`; `intent.emotional_arc`; the melody produced by the symbolic path | **The section id is the column where words and music interlock**: lyrics are split by `form[].id`, one lyric line per phrase, one syllable per Chinese character. `breath_points` are breath positions (section, line, the syllable after which to breathe); the lyric's line breaks must match them; `melody_register / melody_range` mark which sections sit high, and words on high notes must survive being sung. `chorus_variation` is the arrangement side's change per chorus pass (the words may be the same; the arrangement may not); `emotional_arc` is the mood and turn for each section |
+| **Sound** (mixing, mastering) | `mix_intent`; `roster`, `depth_map`, `spectrum_budget`, `bass_kick_relation`, `energy_curve`, `subtraction_events`; `vocal.stacking / pitch_policy`; `meta.deliverable` | **`mix_intent` is intent, not parameters**: EQ, compression, reverb, buses and mastering are decided by the mix. `mood` has veto power over other decisions; `deliberate_imbalance` carries start and end bars and is a deliberate event; the section gaps in `dynamics.notes` must survive after mastering. `spectrum_budget[].resolution` indicates that band conflicts have already been resolved in the arrangement; `depth_map` keeps depth consistent within a group of instruments. `subtraction_events` are deliberately left gaps: do not fill them through dynamics processing; the positions listed in `pitch_policy` deliberately retain pitch offsets and are not corrected to pitch |
+| **Score** (scoring to picture: spotting, cues) | `meta.tempo / tempo_map / meter_map / target_duration`; `form[]`, `energy_curve`; `material`, `hooks.arrangement_hook`; `roster`, `meta.deliverable` | The song's **structure is set by its form**; duration is set by the song itself. When used against picture, section start and end seconds are computed from bars. `material.motif` and `arrangement_hook` are themes and memory points that can be reused. Section boundaries must follow the picture, and structure belongs to the score; this package only sets duration, tempo and bar count when `meta.upstream.picture` supplies a duration and hit points |
+| **Editing** (where to cut, trimming, joins) | The time fields in the row above; `form[].events`, `roster[].entry / exit`, `subtraction_events`, `groove.fill_policy.bars` | Section boundaries are natural joins; `fill_policy.bars` are the bars where the fill occurs; `subtraction_events` are the impact sources of the arrangement (§1.4) and should be kept when trimming. If `deliverable` includes `stems`, deliver the stems |
 
-镜头设计按放音拍时读 `meta.tempo／tempo_map`、`form[].start_bar／bars`：交出去以后再改，拍好的素材就对不上，改前先写消息（`to: shot-design`）。商用前，制片与现场看 `backends.yaml` 里所用后端的 `license`。
+Shot design reads `meta.tempo / tempo_map` and `form[].start_bar / bars` at shooting time: once handed off, changes will not line up with footage already shot, so write a message first (`to: shot-design`) before changing anything. Before commercial use, production and on-set staff check the `license` of the backends used, as listed in `backends.yaml`.
 
-### 5.2 有就读的上游字段
+### 5.2 Upstream fields read when present
 
-| 字段 | 装什么 | 本包怎么用 |
+| Field | Contents | How this package uses it |
 |---|---|---|
-| `meta.upstream.brief` | 需求出处与原话（一句 brief、剧本的一场、cue 表的一条）；没有写 `none` | S0 从这里读起；`intent` 四项仍由本包自己想 |
-| `meta.upstream.lyrics` | 同一首歌的歌词 `{source, flow, shared, sections}`：`source` 是歌词规格单的路径或写明用户给的词；`flow` 取 `先曲后词`／`先词后曲`；`shared` 是先词后曲时读进来的六项 `{form: [{id, name, bars}], tempo, key, persona}`；`sections: [{id, lines}]`，`id` 等于 `form[].id` | **先词后曲时 `shared` 是锁死项**（§5.4），本包照抄；词的字数与句式约束 `form[].bars` 与旋律。`sections[].lines` 是编译用的歌词：领奏谱、ChordPro、ABC `w:` 行、后端的歌词分块都从这里取（`mc-render-compile` §5.3） |
-| `meta.upstream.picture` | 要配合的画面 `{source, sec, hits: [{at_sec, what}], note}`：总时长（秒）、要卡的时刻；按放音拍的写进 `note` | `target_duration`、速度、`form[].bars` 按 `sec` 定；`hits` 落在哪一小节哪一拍，写进 `form[].note` 或 `subtraction_events`。段落边界仍按曲式定 |
+| `meta.upstream.brief` | Source of the requirement and its original wording (one brief line, one scene of a script, one row of a cue sheet); write `none` if absent | S0 starts reading here; this package still forms the four `intent` items itself |
+| `meta.upstream.lyrics` | Lyrics for the same song, `{source, flow, shared, sections}`: `source` is the path to the lyrics spec or a note saying the words were supplied by the user; `flow` takes `composed-first` / `lyrics-first`; `shared` holds, for lyrics-first, the six items read in `{form: [{id, name, bars}], tempo, key, persona}`; `sections: [{id, lines}]`, where `id` equals `form[].id` | **For lyrics-first, `shared` items are locked** (§5.4); this package copies them as given. Word count and phrasing constrain `form[].bars` and the melody. `sections[].lines` are the lyrics used for compilation: the lead sheet, ChordPro, ABC `w:` lines, and the backends' lyric chunking all draw from here (`mc-render-compile` §5.3) |
+| `meta.upstream.picture` | The picture to be matched, `{source, sec, hits: [{at_sec, what}], note}`: total duration in seconds and the moments to hit; for playback-timed work, written into `note` | `target_duration`, tempo, and `form[].bars` are set according to `sec`. `hits` are placed on a bar and beat, written into `form[].note` or `subtraction_events`. Section boundaries are still set by the form |
 
-- **来自谁不重要**，有就读，没有就按本包自己的分析走：没有 `lyrics`，六项由本包定，出不出词按 `mc-workflow` §2.3；没有 `picture`，时长自己定。
-- 已填的上游字段不改写。冲突时在本包字段里照实写，再给来源的职能写 `messages`；共享六项例外，先词后曲时不改，只发消息。
+- **It does not matter who supplied them.** Read them if present; if absent, proceed with this package's own analysis: without `lyrics`, this package sets the six items itself, and whether to produce lyrics follows `mc-workflow` §2.3; without `picture`, this package sets the duration itself.
+- Upstream fields that are already filled are not rewritten. On conflict, record it truthfully in this package's fields, then write `messages` to the function that supplied the source; the shared six items are an exception: for lyrics-first, do not change them, only send a message.
 
-### 5.3 消息通道 `messages`
+### 5.3 Message channel `messages`
 
-顶层列表，每条一件事；和 `checks.exemptions` 一样是公共区，**任何一方都可以写**。
+A top-level list; each entry covers one matter. Like `checks.exemptions`, it is a shared area, and **either side may write to it**.
 
-| 字段 | 类型 | 必填 | 说明 |
+| Field | Type | Required | Description |
 |---|---|---|---|
-| `messages` | list | ○ | 每条 `{from, to, about, says, status, reply}`；空列表＝没有消息 |
-| `from`／`to` | enum | ✅ | 职能封闭集合：`music`（本包）`lyrics`（作词）`sound`（声音）`editing`（剪辑环节）`shot-design`（镜头设计）`writing`（剧作）`production`（制片与现场）；两者不同 |
-| `about` | str 或 list | ✅ | 说的是哪里：字段路径（`form[B2].bars`、`mix_intent.dynamics`）、段落 id 或小节 |
-| `says` | str | ✅ | 要对方做什么、为什么；一件事一条 |
-| `status` | enum | ✅ | 发的一方写 `open`；收的一方改成 `answered`（回了话，字段没改）、`accepted`（已照它改了字段）或 `rejected`（不接受） |
-| `reply` | str | ○ | 收的一方写：`accepted` 写改了哪个字段，`rejected` 写理由 |
+| `messages` | list | ○ | Each entry `{from, to, about, says, status, reply}`; an empty list means no messages |
+| `from` / `to` | enum | ✅ | Closed set of functions: `music` (this package) `lyrics` `sound` `editing` `shot-design` `writing` `production`; the two must differ |
+| `about` | str or list | ✅ | What it concerns: a field path (`form[B2].bars`, `mix_intent.dynamics`), a section id, or bars |
+| `says` | str | ✅ | What the other side should do and why; one matter per entry |
+| `status` | enum | ✅ | The sender writes `open`; the receiver changes it to `answered` (replied, field not changed), `accepted` (field changed as requested) or `rejected` (not accepted) |
+| `reply` | str | ○ | Written by the receiver: for `accepted`, which field was changed; for `rejected`, the reason |
 
-1. **发**：新加一条，`status: open`，如"D 段比 C2 低 6 dB 是唯一的大落差，母带请留住"（`from: music, to: sound, about: mix_intent.dynamics`）。先词后曲时想改共享六项也走这里（`to: lyrics`）。
-2. **回**：只改写给自己那条的 `status` 与 `reply`，不删别人的条目、不改 `says`。消息本身不改字段：要改的字段仍由它的 owner skill 改（`mc-workflow` §2.1），改完标 `accepted`。
-3. **不等待**：读不到回话就当没有；`open` 不挡自查、不停阶段，交付时原样交出去。数据写在字段里，消息只说哪里、为什么。
-4. 写给本包的（`to: music`）在 S0 开工与每次改规格前读。
+1. **Send**: add a new entry with `status: open`, e.g. "The gap between D and C2 at 6 dB is the only large drop; please preserve it in mastering" (`from: music, to: sound, about: mix_intent.dynamics`). If you want to change one of the shared six items in lyrics-first work, also use this channel (`to: lyrics`).
+2. **Reply**: change only the `status` and `reply` of the entry addressed to you; do not delete others' entries or change their `says`. A message does not itself change fields: a field that needs changing is still changed by its owner skill (`mc-workflow` §2.1); after the change, mark the entry `accepted`.
+3. **No waiting**: if no reply is read, treat it as no reply; an `open` entry does not block self-checks or stop a stage, and is handed off as it stands. Data goes into the fields; messages only say where and why.
+4. Messages addressed to this package (`to: music`) are read at S0 kickoff and before every change to the spec.
 
-### 5.4 与歌曲另一侧共享的六个字段
+### 5.4 Six fields shared with the other side of the song
 
-> **与歌曲另一侧共享的六个字段**：`form[].id`、`form[].bars`、`form[].name`、`meta.tempo`、`meta.key`、`vocal.persona`。两边用同一套段落 id。
-> - **先做的一方定这六项**，后做的一方原样读进来，当锁死项用（`meta.upstream`）。先曲后词：作曲编曲定、作词读；先词后曲：作词定、作曲编曲读，这时词的字数和句式会反过来约束 `form[].bars`。
-> - **后做的一方不改这六项。** 真要改（比如词放不进这几小节），就写一条 `messages` 给先做的一方，说清改哪一项、为什么。对方接受后改自己的规格单，后做的一方再重新读。
-> - 只有一侧、另一侧的规格单不存在时，这六项由本包自己定。
+> **Six fields shared with the other side of the song**: `form[].id`, `form[].bars`, `form[].name`, `meta.tempo`, `meta.key`, `vocal.persona`. Both sides use the same set of section ids.
+> - **The party that goes first sets these six items**; the party that comes later reads them in as given, and treats them as locked items (`meta.upstream`). Composed-first: the composer/arranger sets them and the lyricist reads them; lyrics-first: the lyricist sets them and the composer/arranger reads them, and then the lyrics' word count and phrasing constrain `form[].bars` in reverse.
+> - **The party that comes later does not change these six items.** If a change is truly needed (for example, the lyrics do not fit these bars), write a `messages` entry to the party that went first, stating which item to change and why. Once that party accepts, it changes its own spec, and the later party re-reads it.
+> - Only when one side is present and the other side's spec does not exist are these six items set by this package itself.
 
-在本规格单里：先词后曲时读进来的六项记在 `meta.upstream.lyrics.shared`；读进来的 `tempo`、`key` 是 `null`（词那边定不出）时由本包定，再发消息告诉 `lyrics`。本包在消息里是 `music`，歌词一侧是 `lyrics`。
+In this spec: for lyrics-first, the six items read in are recorded in `meta.upstream.lyrics.shared`; if the `tempo` or `key` read in is `null` (the lyrics side could not determine it), this package sets it, then sends a message informing `lyrics`. In messages this package is `music`; the lyrics side is `lyrics`.

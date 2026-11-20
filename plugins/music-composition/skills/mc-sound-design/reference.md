@@ -1,201 +1,201 @@
-# mc-sound-design 参考：音色配方索引
+# mc-sound-design Reference: Timbre Recipe Index
 
-> 本文件是**查找表**，不是读物。`SKILL.md` 讲的是怎么判断，这里放的是具体配方在哪、核心设定是什么。
-> 页码全部指 **野崎貴朗《圖解合成器音樂創作法：99種技法一次學會》**。
-> 书中示范用的合成器是 **NoiseMaker**（免费 VST），参数名在多数减法合成器上通用。
-
----
-
-## 0. 先看这两条原则
-
-### 0.1 「失去的就无法挽回」
-
-> 音色制作存在「**失去的就无法挽回**」这项大原则：
-> **遭到截除的泛音、或削薄的起音，经过采样处理后便无能为力。**
-> 为了保有弹性编辑音色的空间，**多数专业创作者选择「从零开始」制作合成器音色**。
-
-这条是 `SKILL.md` §2「回零点」的另一半理由：不只是为了避开预设的平均值，
-**也是为了保住后续还能改的余地**。用别人的采样等于把所有减法都提前做完了。
-
-### 0.2 把滤波器当音源用
-
-不是所有声音都要从振荡器出发。**共振（RESONANCE）右旋到底时滤波器会自激振荡，
-产生一个音高可控的正弦波**——这就是 909 Kick 的做法（§5.1）。
-
-需要极干净的正弦波、且要对音高做剧烈包络时，这条比用正弦波振荡器灵活。
+> This file is a **lookup table**, not reading material. `SKILL.md` explains how to judge; this file says where specific recipes are and what their core settings are.
+> All page numbers refer to **Nozaki Takao, "Illustrated Synthesizer Music Composition Method: 99 Techniques to Learn at Once"** (圖解合成器音樂創作法：99種技法一次學會).
+> The synthesizer demonstrated in the book is **NoiseMaker** (a free VST); parameter names are common across most subtractive synthesizers.
 
 ---
 
-## 1. 按需求查配方
+## 0. Read these two principles first
 
-### 1.1 贝斯类（技法 26–40，p0100–0142）
+### 0.1 "What is lost cannot be recovered"
 
-| 我要的声音 | 技法 | 页 |
+> Timbre making has a major principle, "**what is lost cannot be recovered**":
+> **Overtones that have been cut away, or onsets that have been thinned out, are beyond help once processed by sampling.**
+> To keep room for flexibly editing the timbre, **most professional creators choose to build synthesizer timbres "from scratch"**.
+
+This is the other half of the reasoning behind `SKILL.md` §2, "return to zero": not only to avoid the average of presets,
+**but also to preserve room for later changes**. Using someone else's sample means all the subtractions have already been made in advance.
+
+### 0.2 Using the filter as a sound source
+
+Not every sound needs to start from an oscillator. **When RESONANCE is turned fully right, the filter self-oscillates,
+producing a sine wave with controllable pitch** — this is how the 909 Kick is made (§5.1).
+
+When you need an extremely clean sine wave with dramatic pitch envelopes, this approach is more flexible than using a sine oscillator.
+
+---
+
+## 1. Looking up recipes by need
+
+### 1.1 Bass (techniques 26–40, p0100–0142)
+
+| The sound I want | Technique | Page |
 |---|---|---|
-| 存在感十足的主角级粗犷贝斯（电音放克） | 26 | p0100 |
-| 新浪潮 / Giorgio Moroder 超经典合成贝斯 | 27 | p0103 |
-| Detroit Techno 贝斯 | 28 | p0106 |
-| IDM 变态贝斯 | 29 | p0107 |
-| Electro House 贝斯（**反相的 FILTER EG**） | 30 | p0109 |
-| 嘻哈肥厚贝斯 | 31 | p0111 |
-| 可变音色的怪诞贝斯 | 32 | p0114 |
-| 昔日放克贝斯（**脉冲宽度 + 滤波器**） | 33 | p0117 |
-| R&B 抒情歌经典合成贝斯 | 34 | p0120 |
-| House / R&B「性感贝斯」 | 35 | p0123 |
-| 在地面低徊的**正弦波贝斯** | 36 | p0126 |
-| 凶猛的鼓打贝斯（Drum'n'Bass） | 37 | p0130 |
-| 迴响贝斯（Reese Bass）① **LFO 调制** | 38 | p0133 |
-| 迴响贝斯 ② | 39 | p0136 |
-| 来自 M1 的匹克贝斯（Pick Bass） | 40 | p0140 |
+| Presence-heavy, lead-level gritty bass (electro-funk) | 26 | p0100 |
+| New wave / Giorgio Moroder classic synth bass | 27 | p0103 |
+| Detroit Techno bass | 28 | p0106 |
+| IDM warped bass | 29 | p0107 |
+| Electro House bass (**inverted FILTER EG**) | 30 | p0109 |
+| Hip-hop fat bass | 31 | p0111 |
+| Morphing, bizarre bass | 32 | p0114 |
+| Old-school funk bass (**pulse width + filter**) | 33 | p0117 |
+| R&B ballad classic synth bass | 34 | p0120 |
+| House / R&B "sexy bass" | 35 | p0123 |
+| Low-lying **sine wave bass** on the ground | 36 | p0126 |
+| Fierce drum and bass (Drum'n'Bass) | 37 | p0130 |
+| Reese bass ① **LFO modulation** | 38 | p0133 |
+| Reese bass ② | 39 | p0136 |
+| Pick Bass from the M1 | 40 | p0140 |
 
-**★ 正弦波贝斯（技法 36）的必读警告**见 `SKILL.md` §6——差音问题，
-纯正弦贝斯在手机上会消失。补泛音的两种做法（移调叠加 / FILTER DRIVE 破音）在 p0127–0128。
+**★ Required warning for the sine wave bass (technique 36)** is in `SKILL.md` §6 — the difference-tone problem;
+a pure sine bass disappears on phones. The two methods of adding overtones (transposed doubling / FILTER DRIVE distortion) are on p0127–0128.
 
-### 1.2 衬底 / Pad（技法 41–47，p0144–0163）
+### 1.2 Pads / Backgrounds (techniques 41–47, p0144–0163)
 
-| 我要的声音 | 技法 | 页 | 核心手段 |
+| The sound I want | Technique | Page | Core method |
 |---|---|---|---|
-| 明亮的弦乐衬底 | 41 | p0144 | **双振荡器去谐 + FILTER EG 质感** |
-| 阴郁的弦乐衬底（UK 新浪潮） | 42 | p0147 | |
-| 气氛庄严的衬底 | 43 | p0150 | **八度音程的齐奏** |
-| 轻薄透明的衬底（补空洞又不抢） | 44 | p0153 | **高通滤波** |
-| 音色可变的衬底 ① | 45 | p0157 | FILTER EG |
-| 音色可变的衬底 ② | 46 | p0159 | **滤波器随 LFO 变化** |
-| 用波形编辑做衬底 | 47 | p0161 | **反转声音** |
+| Bright string pad | 41 | p0144 | **Two detuned oscillators + FILTER EG texture** |
+| Gloomy string pad (UK new wave) | 42 | p0147 | |
+| Solemn, atmospheric pad | 43 | p0150 | **Octave unison** |
+| Light, transparent pad (fills gaps without competing) | 44 | p0153 | **High-pass filtering** |
+| Morphing pad ① | 45 | p0157 | FILTER EG |
+| Morphing pad ② | 46 | p0159 | **Filter varied by LFO** |
+| Pad made with waveform editing | 47 | p0161 | **Reversed sound** |
 
-> 技法 44「轻薄透明」对应 `mc-texture-layering` §4.2 的**让频**——
-> 它是用音色设计解决频段冲突的例子。
+> Technique 44, "light and transparent", corresponds to **frequency yielding** in `mc-texture-layering` §4.2 —
+> it is an example of using timbre design to resolve frequency-band conflicts.
 
-### 1.3 伴奏（技法 48–53，p0165–0182）
+### 1.3 Accompaniment (techniques 48–53, p0165–0182)
 
-| | 技法 | 页 |
+| | Technique | Page |
 |---|---|---|
-| 电钢琴风格 | 48 | p0165 |
-| 电风琴风格 | 49 | p0168 |
-| House 类型伴奏 | 50 | p0171 |
-| 弦乐类型伴奏（含 REVERB 设定范例 p0176） | 51 | p0174 |
-| 管乐类型伴奏（含 FILTER DRIVE + REVERB p0178） | 52 | p0177 |
-| 音色可变的伴奏（**滤波器里也用 LFO**） | 53 | p0180 |
+| Electric piano style | 48 | p0165 |
+| Electric organ style | 49 | p0168 |
+| House-type accompaniment | 50 | p0171 |
+| String-type accompaniment (includes REVERB setting example p0176) | 51 | p0174 |
+| Wind-type accompaniment (includes FILTER DRIVE + REVERB p0178) | 52 | p0177 |
+| Morphing accompaniment (**LFO also used in the filter**) | 53 | p0180 |
 
-### 1.4 FM 系（技法 54–58，p0184–0198）
+### 1.4 FM family (techniques 54–58, p0184–0198)
 
-| | 技法 | 页 |
+| | Technique | Page |
 |---|---|---|
-| DX7 的二三事（FM 入门） | 54 | p0184 |
-| FM 贝斯 ①（**用 EG 在时间上操控 FM**） | 55 | p0187 |
-| FM 贝斯 ②（迴响贝斯也适用的变态系） | 56 | p0190 |
-| FM 管乐 | 57 | p0194 |
-| FM 衬底 | 58 | p0196 |
+| Things about the DX7 (FM introduction) | 54 | p0184 |
+| FM bass ① (**using EG to control FM over time**) | 55 | p0187 |
+| FM bass ② (the warped family, also applicable to Reese bass) | 56 | p0190 |
+| FM wind instrument | 57 | p0194 |
+| FM pad | 58 | p0196 |
 
-### 1.5 序列 / 主奏 / 效果音（技法 59–75，p0200–0233）
+### 1.5 Sequences / Leads / Sound effects (techniques 59–75, p0200–0233)
 
-| | 技法 | 页 |
+| | Technique | Page |
 |---|---|---|
-| 极简音乐类型序列 | 59 | p0200 |
-| 方波序列 | 60 | p0203 |
-| 闪亮亮类型序列 | 61 | p0206 |
-| 凶猛激烈类型序列 | 62 | p0210 |
-| 可变音色序列 ①② （**LFO 调制 LFO**，p0217） | 63、64 | p0213 |
-| 正弦波主奏 | 65 | p0219 |
-| 噪音系粗犷主奏 | 66 | p0222 |
-| 吉他类型主奏 | 67 | p0225 |
-| 温暖的长笛类型主奏 | 68 | p0228 |
-| 和弦风格主奏 | 69 | p0231 |
-| 效果音：风声 | 73 | — |
-| 效果音：射击声 ZAP（techno 御用打击音） | 74 | — |
-| 效果音：科幻类（**抖音转 FM，调变两段重叠**） | 75 | — |
+| Minimal-music style sequence | 59 | p0200 |
+| Square-wave sequence | 60 | p0203 |
+| Sparkling style sequence | 61 | p0206 |
+| Fierce, intense style sequence | 62 | p0210 |
+| Morphing sequences ① ② (**LFO modulating LFO**, p0217) | 63, 64 | p0213 |
+| Sine wave lead | 65 | p0219 |
+| Gritty noise-based lead | 66 | p0222 |
+| Guitar-type lead | 67 | p0225 |
+| Warm flute-type lead | 68 | p0228 |
+| Chord-style lead | 69 | p0231 |
+| Sound effect: wind | 73 | — |
+| Sound effect: ZAP shot (a techno staple percussive hit) | 74 | — |
+| Sound effect: sci-fi (**pitch-drop converted to FM, two modulation layers overlapping**) | 75 | — |
 
-### 1.6 Acid（技法 76–84，p0258–0281）
+### 1.6 Acid (techniques 76–84, p0258–0281)
 
-| | 技法 | 页 |
+| | Technique | Page |
 |---|---|---|
-| 什么是 Acid 音色 | 76 | p0258 |
-| **303 的秘密** | 77 | p0259 |
-| Acid 基本设定 | 78 | p0261 |
-| 滑音活用（AUTO 模式 / 代用音讯 / 人性化） | 79 | p0263 |
-| 贝斯 + 高音 riff ①② | 80、81 | p0266 |
-| **即时操控**（加上无法预测的有机变化） | 82 | p0271 |
-| 破音 Acid ①（Overdrive 做「恰到好处」的破音） | 83 | p0275 |
-| 破音 Acid ②（Bitcrusher / 降采样 / Fuzz） | 84 | p0279 |
+| What an Acid timbre is | 76 | p0258 |
+| **The 303's secret** | 77 | p0259 |
+| Basic Acid settings | 78 | p0261 |
+| Making use of slides (AUTO mode / substitute notes / humanizing) | 79 | p0263 |
+| Bass + high-register riff ①② | 80, 81 | p0266 |
+| **Real-time control** (adding unpredictable organic variation) | 82 | p0271 |
+| Overdriven Acid ① (Overdrive for "just right" distortion) | 83 | p0275 |
+| Overdriven Acid ② (Bitcrusher / downsampling / Fuzz) | 84 | p0279 |
 
-> 技法 82「即时操控」与 `SKILL.md` §2 的反 AI 味逻辑同源：
-> **人手实时扫 CUTOFF 产生的变化，是量化和随机化都做不出来的。**
+> Technique 82, "real-time control", shares its origin with the anti-AI-sound logic in `SKILL.md` §2:
+> **variation produced by a human hand sweeping CUTOFF in real time is something quantization and randomization cannot produce.**
 
 ---
 
-## 2. 唯一在这里给全参数的配方：909 Kick
+## 2. The only recipe here with full parameters: 909 Kick
 
-因为它示范的是**把滤波器当音源**这个反常规做法，值得完整抄录。
+Because it demonstrates the unconventional approach of **using the filter as a sound source**, it is worth transcribing in full.
 
-> TR-909 的大鼓**完全不使用振荡器**。909 Kick 几乎以正弦波制成，
-> 这里当作音源使用的正弦波，来自**共振（resonance）自激产生的振动**——
-> 这样音高操作更有弹性。
+> The TR-909 bass drum **does not use an oscillator at all**. The 909 Kick is made almost entirely from a sine wave,
+> and the sine wave used here as the sound source comes from **vibration self-generated by resonance** —
+> this makes pitch manipulation more flexible.
 
-| 模块 | 设定 |
+| Module | Setting |
 |---|---|
-| **FILTER** | 低通（LOW PASS），**−24 dB/oct** |
-| **RESONANCE** | **右旋到底**（让滤波器自行产生振动） |
-| **CUTOFF** | **8 点钟**左右（为了在 EG 大胆开放后又转为较低的状态） |
-| **FILTER EG** | ATTACK 0 / DECAY **11 点钟** / SUSTAIN 0 / RELEASE **11 点钟**（迅速下降）；**EG AMOUNT 2 点钟** |
-| **AMP EG** | ATTACK 0 / DECAY 0 / SUSTAIN **右旋到底** / RELEASE **1 点钟** |
+| **FILTER** | Low-pass (LOW PASS), **−24 dB/oct** |
+| **RESONANCE** | **Turned fully right** (so the filter generates its own vibration) |
+| **CUTOFF** | Around **8 o'clock** (so that it drops to a lower state after the EG boldly opens it) |
+| **FILTER EG** | ATTACK 0 / DECAY **11 o'clock** / SUSTAIN 0 / RELEASE **11 o'clock** (rapid drop); **EG AMOUNT 2 o'clock** |
+| **AMP EG** | ATTACK 0 / DECAY 0 / SUSTAIN **turned fully right** / RELEASE **1 o'clock** |
 
-**得到的结果**：起音时音高很高，并迅速降到大鼓般的低音。
-**要微调就动 CUTOFF 或 FILTER EG 的 DECAY**——细部上会产生巨大变化。
+**The result**: the onset has a very high pitch, which quickly drops to a low, drum-like bass.
+**For fine-tuning, adjust CUTOFF or the DECAY of FILTER EG** — the detail changes dramatically.
 
-（谱例：圖① p0235，CD TRACK 64 p0236）
+(Score example: Figure ① p0235, CD TRACK 64 p0236)
 
-其余鼓件：TR-808 小鼓 = 技法 71，TR-808 脚踏钹 = 技法 72。
+Other drum parts: TR-808 snare = technique 71, TR-808 hi-hat cymbal = technique 72.
 
 ---
 
-## 3. 滤波器与调变的参数速查
+## 3. Quick reference for filter and modulation parameters
 
-来自 PART 1（p0018–0090），`SKILL.md` §4、§5 的支撑材料。
+From PART 1 (p0018–0090), the supporting material for `SKILL.md` §4 and §5.
 
-| 主题 | 页 |
+| Topic | Page |
 |---|---|
-| 泛音的基本知识 | p0012–0014 |
-| 合成器构造与声音流向 | p0013–0017 |
-| 三种代表性波形（锯齿 / 方波 / 脉冲） | p0019 |
-| 三角波 / 正弦波 / 噪音 | p0022 |
-| PWM 与预设音色的波形 | p0025 |
-| TUNE 与 FINE | p0030–0031 |
-| 滑音 Portamento | p0031–0032 |
-| 振幅波封 AMP EG | p0034–0036 |
-| 滤波器种类（LP/HP/BP/Notch/Comb） | p0037–0038 |
-| 低通与截止频率 | p0040 |
-| 高通 / 带通 / 凹口的应用 | p0046–0048 |
-| **RESONANCE 与扫频 Sweep** | p0049–0051 |
-| **KEY FOLLOW** 与音域泛音 | p0053–0054 |
-| Modulation 与 Vibrato | p0055 |
+| Basics of overtones | p0012–0014 |
+| Synthesizer structure and sound flow | p0013–0017 |
+| Three representative waveforms (sawtooth / square / pulse) | p0019 |
+| Triangle / sine / noise | p0022 |
+| PWM and waveforms of preset timbres | p0025 |
+| TUNE and FINE | p0030–0031 |
+| Portamento (glide) | p0031–0032 |
+| Amplitude envelope AMP EG | p0034–0036 |
+| Filter types (LP/HP/BP/Notch/Comb) | p0037–0038 |
+| Low-pass and cutoff frequency | p0040 |
+| Applications of high-pass / band-pass / notch | p0046–0048 |
+| **RESONANCE and Sweep** | p0049–0051 |
+| **KEY FOLLOW** and register overtones | p0053–0054 |
+| Modulation and Vibrato | p0055 |
 | **LFO** | p0058 |
-| **Filter Envelope**（含 AMOUNT 反相） | p0061 |
-| LFO × OSC / × FILTER / × VOLUME | p0070、p0073、p0076 |
-| EG × OSC（改音高模拟乐器） | p0079 |
-| OSC × OSC：**FM** 做钟声 | p0080 |
-| OSC × OSC：**圈式调变（Ring Mod）** | p0082–0084 |
-| OSC × OSC：**振荡器同步（OSC Sync）** | p0085–0087 |
+| **Filter Envelope** (including AMOUNT inversion) | p0061 |
+| LFO × OSC / × FILTER / × VOLUME | p0070, p0073, p0076 |
+| EG × OSC (changing pitch to simulate instruments) | p0079 |
+| OSC × OSC: **FM** for bell sounds | p0080 |
+| OSC × OSC: **Ring Modulation (Ring Mod)** | p0082–0084 |
+| OSC × OSC: **Oscillator Sync (OSC Sync)** | p0085–0087 |
 
 ---
 
-## 4. 声码器（Vocoder）
+## 4. Vocoder
 
-- 基础原理：p0285
-- **声码器与 EQ 的区别**：p0286
+- Basic principles: p0285
+- **Difference between vocoder and EQ**: p0286
 
-> 与本库的关系：声码器人声归 `mc-vocal-direction` 的 delivery 决策 + 本 skill 的实现。
-> 用在生成后端上时，它属于**后端做不到的项**（`honors: none`），
-> 需要在 DAW 侧后处理——见 L4 的 backend profile。
+> Relationship to this library: vocoded vocals belong to the delivery decisions in `mc-vocal-direction` plus this skill's implementation.
+> When used on a generative backend, it falls into **items the backend cannot do** (`honors: none`),
+> and needs post-processing on the DAW side — see the backend profile at L4.
 
 ---
 
-## 5. 不在本库的部分
+## 5. Parts not in this library
 
-以下 nozaki 书中内容**不属于本 skill**：
+The following content from the Nozaki book **does not belong to this skill**:
 
-| 内容 | 去哪 |
+| Content | Where it goes |
 |---|---|
-| 竹内一弘《EDM 制作》的 EQ / 压缩器全部章节 | `mc-mix-intent`（意图）／参数是混音的事 |
-| 破音效果器的具体挂法与总线路由 | 混音的事，不归本包 |
-| 采样切片、素材管理 | `mc-rhythm-section` ／ 其余不归本包 |
-| Greatest Discs 的唱片分析（COCHIN MOON、Aphex Twin 等） | 语料层 L5，作为参考曲目候选 |
+| All EQ / compressor chapters of Takeuchi Kazuhiro, "EDM Production" | `mc-mix-intent` (intent) / parameters are a mixing matter |
+| Specific insertion of distortion effects and bus routing | A mixing matter, not covered by this package |
+| Sample slicing, material management | `mc-rhythm-section` / otherwise not covered by this package |
+| Record analyses from Greatest Discs (COCHIN MOON, Aphex Twin, etc.) | Corpus layer L5, as candidate reference tracks |

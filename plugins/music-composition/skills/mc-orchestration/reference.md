@@ -1,549 +1,549 @@
-# mc-orchestration 参考：乐器法导航与 MIDI 配器速查
+# mc-orchestration Reference: Instrument Technique Navigator and MIDI Orchestration Quick Guide
 
-> 乐器法是一门要查的学问。`SKILL.md` 讲配器决策，本文放查得到的东西：
-> 弓法与各件乐器的硬约束、为弦乐配器的排列法、MIDI 配器速查。
-
----
-
-## 1. 该查哪本书
-
-| 你要的东西 | 去哪本 |
-|---|---|
-| 某件乐器的音域、指法、能不能这么演奏 | **Adler 上册**（`adler-orch-1`） |
-| 怎么把一段音乐配给乐队、改编原则 | **Adler 下册**（`adler-orch-2`）第十五章起 |
-| 混合音色的机理、色彩对比、全奏 | **杨立青《管弦乐配器教程》中册**（`yang-orch-2`） |
-| 用 MIDI / 采样库做出可信的配器 | **Pejrolo《Acoustic and MIDI Orchestration》**（`pejrolo-en`、`pejrolo-midi-orch`） |
-| **民族乐器的定弦、音域、技法、记谱** | **朱晓谷《民族管弦乐队乐器法》** → 本文 §7 |
-| **民乐总谱的乐器顺序、八度记谱、分部标记、写作流程** | **杨春林《中国民族管弦乐配器法教程》／李民雄《民族管弦乐总谱写法》** → 本文 §8 |
-
-> ★ 三家的分工：**Adler 教乐器能做什么，杨立青教组合起来会变成什么，Pejrolo 教怎么用机器实现。**
-> 本库以 Pejrolo 为落地路径，因为我们的产出要走 MIDI/生成后端，不走真人乐队。
-> 民乐一线同理：**朱晓谷教乐器能做什么，杨春林教组合会变成什么，李民雄教总谱怎么落到纸上。**
+> Instrument technique is a subject you look things up in. `SKILL.md` covers orchestration decisions; this file holds the things you can look up:
+> bowing and the hard constraints of each instrument, the arrangement methods for orchestrating strings, and a quick guide to MIDI orchestration.
 
 ---
 
-## 2. 弦乐组与木管组：弓法、各件乐器、为弦乐与木管配器（Adler 上册）
+## 1. Which book to consult
 
-### 2.1 弓法：按你要什么来选（第二章，p0028–p0045）
-
-弓法决定**起音的形状**，而起音形状决定融合度（`SKILL.md` §3.5）。
-所以弓法不是演奏员的事，是配器的事：同样两件乐器，换个弓法融不融就变了。
-
-#### 2.1.1 弓不离弦（p0033–0037）
-
-| 弓法 | 得到什么 | 要注意 |
-|---|---|---|
-| **连弓** Legato | 连线内所有音一弓拉完，运弓方向一致（p0030） | 线画多长，弓就得撑多长。见下面的负荷问题 |
-| **分弓** Détaché | 每音一弓，音与音之间不断开，只是换向 | 默认状态。谱上不写就是它 |
-| **弓尖／弓根演奏** | 弓尖轻、清；弓根重、糙（p0033–0034） | 想要某种重量就写明弓位，别指望默认 |
-| **连顿弓** Staccato | 一弓之内若干个带停顿的短音（p0037） | ★ **有速度上限**。快到一定程度必然离弦，那时它已经是跳弓，不是连顿弓了 |
-| **分弓连顿** | 短音干脆轻盈柔和，舍弃连线改标分弓（p0037） | 多在弓尖附近完成，长音通常用上弓 |
-| **重断弓** Martelé／Martellato | 每音带一个硬音头 | 要"咬"就用它 |
-
-★ **慢速长连线是最容易写坏的一处**（p0032–0033）。
-哪怕力度柔和，慢速片段也会让弓负荷过重而拉不动，大提琴与低音提琴尤其吃亏，因为它们的弓比小提琴中提琴短。
-**解法是把演奏员分组、各用不同弓法接力**，听感上得到一条很长的连线，实际没有任何一把弓被拉垮。
-这是"写不出来的长句子"的标准处理，和 §2.3.2 的音区分层是同一类思路。
-
-#### 2.1.2 弓离弦（p0038–0040）
-
-| 弓法 | 得到什么 |
+| What you need | Where to look |
 |---|---|
-| **控制跳弓** Conscious Spiccato | 演奏员主动控制的跳弓，颗粒清楚 |
-| **自然跳弓** Saltando | 靠弓自身弹性跳，速度更快，颗粒更轻 |
-| **连跳弓** Slurred Spiccato | 一弓之内连续跳奏 |
-| **抛弓** Jeté／Ricochet | 弓抛下去靠回弹连出数音，颗粒感最强 |
-| **琶音连弓** Arpeggiando | 一弓跨弦滚出琶音 |
+| The range, fingerings, and whether a given passage can be played on an instrument | **Adler vol. 1** (`adler-orch-1`) |
+| How to assign a passage to the orchestra; adaptation principles | **Adler vol. 2** (`adler-orch-2`), from Chapter 15 onward |
+| The mechanics of mixed timbre, color contrast, tutti | **Yang Liqing, *Tutorial on Orchestration*, middle volume** (`yang-orch-2`) |
+| Credible orchestration using MIDI / sample libraries | **Pejrolo, *Acoustic and MIDI Orchestration*** (`pejrolo-en`, `pejrolo-midi-orch`) |
+| **Tuning, range, technique, and notation of Chinese folk instruments** | **Zhu Xiaogu, *Instrument Technique for the Chinese Folk Orchestra*** → §7 of this file |
+| **Instrument order in folk scores, octave notation, section markings, and the scoring workflow** | **Yang Chunlin, *Tutorial on Orchestration Method for Chinese Folk Orchestra* / Li Minxiong, *Score Writing for the Chinese Folk Orchestra*** → §8 of this file |
 
-击跳弓按速度与力度分三种（p0038）。**选哪种取决于你要多少颗粒感和多少控制感**，
-颗粒越自然，可控性越低。
+> ★ The division of labor among the three: **Adler teaches what an instrument can do, Yang Liqing teaches what it becomes when combined, and Pejrolo teaches how to realize it with machines.**
+> This library uses Pejrolo as its path to implementation, because our output goes through MIDI/generation back ends, not live orchestras.
+> The same applies on the folk side: **Zhu Xiaogu teaches what an instrument can do, Yang Chunlin teaches what combinations become, and Li Minxiong teaches how a score is put onto paper.**
 
-#### 2.1.3 色彩性弓法（p0041–0045）
+---
 
-- **颤音** Trills（p0041）
-- **震音** Tremolo 分两种（p0042）：**琴弓震音**（同一个音快速来回运弓）与**手指震音**（两音间快速交替）。
-  两者听感完全不同，写的时候必须指明是哪一种
-- **与震音相似的确实时值效果**（p0043）：写成具体时值而不是震音记号，得到可控的密度
-- **非常规弓位**（p0044–0045）：琴马处演奏、弓杆演奏，都是音色效果而非力度效果
+## 2. String and woodwind sections: bowing, individual instruments, orchestrating strings and winds (Adler vol. 1)
 
-#### 2.1.4 两条会毁掉效果的规则
+### 2.1 Bowing: choose by what you want (Chapter 2, p0028–p0045)
 
-1. **手指滑奏交给整组会糊**（p0028）。写出音的滑奏（各音具体标出）由独奏或少数人奏才清楚，
-   整个弦乐组一起奏，听感是混淆一片的模糊滑奏。要那个效果可以，不要那个效果就别给全组。
-2. **连顿弓超速就变成别的东西**（p0037）。标了连顿弓而速度过快，演奏员只能离弦跳奏，
-   你拿到的是跳弓的颗粒，不是连顿弓的停顿。
+Bowing determines **the shape of the attack**, and the shape of the attack determines blend (`SKILL.md` §3.5).
+So bowing is not the player's concern; it is an orchestration matter: with the same two instruments, changing the bowing changes whether they blend.
 
-#### 2.1.5 拨奏、弱音器、变格定弦、泛音（p0046–0063）
+#### 2.1.1 Bow on the string (p0033–0037)
 
-**拨奏 Pizzicato**
-
-- **越粗越大越留得住**：弦的粗细与乐器尺寸决定拨奏的音量与延续长度，低音提琴的延续性是全族最强的（p0046）。
-  想要拨奏"留得住"就往低处走，高音区的拨奏本质上是点
-- ★ **转换方向不对称**：从弓转拨容易，从拨转回弓难，因为手要从弓根回到常规位置（p0046）。
-  **拨奏前预设一个上弓，让手正好停在弓根，回弓就顺**。这是配器该做的安排，不是演奏员的事
-- `pizz.` 与 `arco` 在总谱和分谱都要写（p0046）
-- **拨奏和弦默认带一点琶音**，因为手指要从最低弦扫过；不要这个效果就写 `non arpegg.`（p0049）
-- **长段快速拨奏会让人疲劳**（p0049）。写长段落时知道演奏员可能要用两指轮替，别把密度顶到极限
-- 要一个音尽量延续，标 `l.v.`（let vibrate）（p0049）
-- 左手拨奏记 `+`，多见于独奏与室内乐，常用在空弦上（p0048）；
-  捻弦拨奏记 `o`、指甲拨奏记 `∩`，是二十世纪的做法（p0048）
-- 用了弓杆、琴马等特殊奏法之后，**必须写明在哪里恢复正常**（`normale` / `naturale` / `in modo ordinario`）（p0046）
-
-**弱音器 Muting**（p0051–0052）
-
-`con sordino` 装，`senza sordino` 卸，全族都能用。
-
-★ **最有用的一条：加弱音器不等于只能写弱。** 音质被彻底改变，
-用弱音器写强或很强的片段，得到的是一种**克制、收缩、紧张**的响。这是弱音器真正的编曲价值，
-只拿它当"变轻"用是浪费。装卸都要留出时间。
-
-**变格定弦 Scordatura**（p0052–0054）
-
-改空弦音高，三种用途：减轻远关系调的演奏难度、得到常规定弦奏不出的和弦、改变音色。
-
-- 总谱分谱的**开头与每个改弦处都要标明四根弦的定弦**，段落结束后留出恢复的时间（标 `accord`／`accordatura`）
-- 两个方向的例子：斯特拉文斯基在《春之祭》结尾把大提琴 A 弦降到 G♯，否则最后那个和弦奏不出来（p0054）；
-  马勒把小提琴四根弦全升一个全音，张力改变使音色偏离小提琴惯有的高贵感（p0053）。
-  **后者是把变格定弦当音色手段用，不是当技术便利用**
-
-**泛音 Harmonics**（p0054–0056）
-
-轻触节点而非按实，把泛音从基音里分离出来。
-
-| 分音 | 触弦位置 | 可靠性 |
+| Bowing | What you get | What to watch for |
 |---|---|---|
-| 第一 | 空弦 | 基音 |
-| 第二 | 弦长 1/2 | 高八度 |
-| 第三 | 1/3 或 2/3 | |
-| 第四 | 1/4 或 3/4 | |
-| 第五 | 1/5、2/5、3/5、4/5 | ★ 只有 1/5、2/5、4/5 够可靠进乐队，其中 2/5 主要用于独奏与室内乐 |
+| **Legato** | All notes within a slur are played in one bow, with consistent bow direction (p0030) | The longer the line, the more the bow must sustain. See the load problem below |
+| **Détaché** | One note per bow, with no break between notes, only changes of direction | The default state. If nothing is written in the score, this is it |
+| **Playing near the tip / near the frog** | Tip: light and clear; frog: heavy and rough (p0033–0034) | If you want a certain weight, specify the bow position; do not count on the default |
+| **Staccato** | Several short, separated notes within one bow (p0037) | ★ **Has a speed limit.** Beyond a certain tempo the bow must leave the string, and at that point it is a jeté, not a staccato bow |
+| **Détaché staccato** | Short notes that are crisp, light, and gentle; the slur is dropped and détaché is marked instead (p0037) | Mostly played near the tip; long notes usually use an up-bow |
+| **Martelé / Martellato** | Each note carries a hard attack | Use it when you want a "bite" |
 
-- **前六个分音最稳**。更高的（到第七、第八分音）在中提琴、大提琴、低音提琴上更容易，因为弦更长更粗（p0055）
-- **记谱两件事**：要发泛音的音符上方加小圆圈，再用菱形符头标出触弦节点的音高（p0056）
-- ★ **必须指定用哪根弦**，因为同一个泛音音高在不同弦上都能取到（p0056）。写 `sul G`，或用罗马数字：
+★ **Slow, long slurred lines are the easiest place to write something that fails** (p0032–0033).
+Even with soft dynamics, slow passages overload the bow and it cannot pull through; cellos and double basses suffer most, because their bows are shorter than those of the violin and viola.
+**The solution is to divide the players into groups that use different bowings in relay**, giving the ear a very long continuous line while no single bow is overloaded.
+This is the standard treatment for "long sentences that cannot be written," and it follows the same reasoning as the register layering in §2.3.2.
+
+#### 2.1.2 Bow off the string (p0038–0040)
+
+| Bowing | What you get |
+|---|---|
+| **Conscious spiccato** | Spiccato controlled actively by the player; the grains are clear |
+| **Natural spiccato** (Saltando) | The bow bounces on its own elasticity; faster, with lighter grains |
+| **Slurred spiccato** | Continuous spiccato played within one bow |
+| **Jeté / Ricochet** | The bow is tossed down and rebounds to produce several notes in a row; the most granular quality |
+| **Arpeggiando** | One bow crosses strings to roll out an arpeggio |
+
+Spiccato is divided into three types by speed and dynamics (p0038). **Which one to choose depends on how much granularity and how much control you need**;
+the more natural the grain, the less controllable it is.
+
+#### 2.1.3 Coloristic bowing (p0041–0045)
+
+- **Trills** (p0041)
+- **Tremolo** comes in two kinds (p0042): **bowed tremolo** (rapid back-and-forth bowing on one note) and **finger tremolo** (rapid alternation between two notes).
+  They sound completely different, so you must specify which kind you want
+- **Note-value effects that resemble tremolo** (p0043): writing specific note values instead of a tremolo sign produces a controllable density
+- **Unconventional bow positions** (p0044–0045): playing over the bridge or with the stick are timbral effects, not dynamic effects
+
+#### 2.1.4 Two rules that can ruin the effect
+
+1. **Finger glissando given to a whole section becomes muddy** (p0028). Written glissandos (with each note marked) are clear only when played by a soloist or a few players; if the whole string section plays them together, the result is a blurred, confused glissando.
+   If you want that effect, you can have it, but if you do not, do not give it to the whole section.
+2. **A staccato that is too fast turns into something else** (p0037). If a staccato is marked at a tempo that is too fast, the player can only bounce the bow off the string,
+   what you get is the granularity of a spiccato, not the separated quality of a staccato.
+
+#### 2.1.5 Pizzicato, mutes, scordatura, harmonics (p0046–0063)
+
+**Pizzicato**
+
+- **The thicker and larger, the longer it sustains**: string thickness and instrument size determine the volume and sustain of pizzicato; the double bass has the longest sustain of the family (p0046).
+  If you want pizzicato to "hold," go lower; pizzicato in the high register is essentially a dot.
+- ★ **Transitions are asymmetric**: moving from bowing to pizzicato is easy, but moving back from pizzicato to bowing is hard, because the hand must return from the frog to the standard position (p0046).
+  **Plan an up-bow before a pizzicato so that the hand stops right at the frog and the return to bowing is smooth.** This is an arrangement the orchestrator should make, not something the player must handle.
+- `pizz.` and `arco` must be written in both the full score and the parts (p0046).
+- **Pizzicato chords default to a slight arpeggio**, because the fingers sweep from the lowest string; if you do not want this effect, write `non arpegg.` (p0049).
+- **Long passages of fast pizzicato cause fatigue** (p0049). When writing long passages, know that the player may need to alternate two fingers, and do not push the density to the limit.
+- To make a note ring as long as possible, mark `l.v.` (let vibrate) (p0049).
+- Left-hand pizzicato is marked `+`, common in solo and chamber music, often on open strings (p0048);
+  pinched pizzicato, marked `o`, and fingernail pizzicato, marked `∩`, are twentieth-century practices (p0048).
+- After using special techniques such as playing with the stick or over the bridge, **you must state where to return to normal** (`normale` / `naturale` / `in modo ordinario`) (p0046).
+
+**Mutes** (p0051–0052)
+
+`con sordino` to put on, `senza sordino` to take off; usable across the whole family.
+
+★ **The most useful point: adding a mute does not mean you can only write soft.** The tone quality is completely altered,
+and writing loud or very loud passages with mutes produces a **restrained, compressed, tense** sound. This is the real compositional value of mutes;
+using them only to "make it softer" is a waste. Allow time for both putting them on and taking them off.
+
+**Scordatura** (p0052–0054)
+
+Changing the pitch of the open strings serves three purposes: easing the playing difficulty of distant keys, obtaining chords that cannot be played in standard tuning, and changing the timbre.
+
+- The **beginning of the full score and parts, and each point where the tuning changes**, must state the tuning of all four strings, with time allowed for restoration after the passage ends (marked `accord` / `accordatura`)
+- Examples in both directions: Stravinsky lowered the cello's A string to G♯ at the end of *The Rite of Spring*, otherwise the final chord cannot be played (p0054);
+  Mahler raised all four violin strings by a whole step, and the change in tension shifted the timbre away from the nobility the violin normally has (p0053).
+  **The latter uses scordatura as a timbral resource, not as a technical convenience**
+
+**Harmonics** (p0054–0056)
+
+Touch the node lightly rather than pressing down, so the harmonic separates from the fundamental.
+
+| Partial | Touch point (string length) | Reliability |
+|---|---|---|
+| 1st | Open string | Fundamental |
+| 2nd | 1/2 | Octave higher |
+| 3rd | 1/3 or 2/3 | |
+| 4th | 1/4 or 3/4 | |
+| 5th | 1/5, 2/5, 3/5, 4/5 | ★ Only 1/5, 2/5, and 4/5 are reliable enough for the orchestra; 2/5 is mainly for solo and chamber music |
+
+- **The first six partials are the most stable.** Higher ones (up to the 7th and 8th partials) are easier on viola, cello, and double bass, because their strings are longer and thicker (p0055)
+- **Two points of notation**: add a small circle above the note that is to produce the harmonic, then use a diamond notehead to show the pitch of the touch point (p0056)
+- ★ **You must specify which string**, because the same harmonic pitch can be obtained on different strings (p0056). Write `sul G`, or use Roman numerals:
 
 | | I | II | III | IV |
 |---|---|---|---|---|
-| 小提琴 | E | A | D | G |
-| 中提琴 | A | D | G | C |
-| 大提琴 | A | D | G | C |
-| 低音提琴 | G | D | A | E |
+| Violin | E | A | D | G |
+| Viola | A | D | G | C |
+| Cello | A | D | G | C |
+| Double bass | G | D | A | E |
 
-### 2.2 单独的弦乐器（第三、四章，p0064–p0123）
+### 2.2 Individual bowed-string instruments (Chapters 3–4, p0064–p0123)
 
-小提琴四根弦的性格在 `SKILL.md` §6，这里放其余几件，以及各自的硬约束。
+The character of the violin's four strings is in `SKILL.md` §6; here are the other instruments and their hard constraints.
 
-#### 2.2.1 中提琴：尺寸就是它的约束（p0073–0085）
+#### 2.2.1 Viola: size is its constraint (p0073–0085)
 
-技法与小提琴基本相同，颤音、弓法、泛音、琶音、双音三音四音和弦都一样成立。
-真正的差别是**琴身比小提琴大三到四英寸**，手要伸得更开才拉得准，**左手张力更大，高把位尤甚**（p0073）。
+Technique is largely the same as the violin's: trills, bowing, harmonics, arpeggios, and double-, triple-, and quadruple-stops all apply equally.
+The real difference is that **the body is three to four inches larger than the violin's**; the hand must stretch further to play accurately, and **left-hand tension is greater, especially in the high positions** (p0073).
 
-**编曲含义**：中提琴的快速音群与宽音程不能照小提琴的尺度写，高把位尤其要克制。
-记谱用中音谱号，高音为避免加线才改高音谱号。
+**Orchestration implication**: viola fast figurations and wide intervals cannot be written to violin standards; restraint is especially needed in the high positions.
+Notated in the alto clef; the treble clef is used for the high register only to avoid ledger lines.
 
-> 书里顺带记了一段历史：中提琴长期被忽略，一是十八世纪很少写四个独立弦乐声部，
-> 二是中提琴手多由小提琴手兼任，作曲家不放心，柏辽兹才第一个在乐队写作里给它独立声部地位（p0073）。
-> 这条对今天的实际用处是提醒：中提琴层空着是历史惯性，不是它能力不够。
+> The book also records some history: the viola was long neglected, first because in the eighteenth century four independent string parts were rarely written, and second because violists were often doubled by violinists, so composers did not trust them.
+> Berlioz was the first to give it an independent part in orchestral writing (p0073).
+> For today's practical purposes, the lesson is this: an empty viola layer reflects historical inertia, not any lack of capability.
 
-#### 2.2.2 大提琴：四根弦差别很大（p0087–0094）
+#### 2.2.2 Cello: the four strings differ greatly (p0087–0094)
 
-| 弦 | 性格 |
+| String | Character |
 |---|---|
-| **A** | 发音最辉煌、最有力 |
-| **D** | 最悦耳动听，和煦、抒情 |
-| **G** | 最柔弱，穿透力远逊其余三根 |
-| **C** | 凭自重与厚度，圆润低沉 |
+| **A** | The most brilliant and most powerful |
+| **D** | The most pleasing and melodious, warm and lyrical |
+| **G** | The weakest, with penetration far inferior to the other three |
+| **C** | Round and deep, relying on its own weight and thickness |
 
-（p0089）★ **G 弦是个陷阱**：它在四根里最不透，把一条要被听见的线写在大提琴 G 弦上，很容易埋掉。
-"大提琴不够灵敏"这个旧说法已经不成立，它几乎能奏小提琴中提琴的任何技法（p0089）。
+(p0089) ★ **The G string is a trap**: it is the least penetrating of the four, and a line that must be heard written on the cello's G string is easily buried.
+The old claim that "the cello is not nimble enough" no longer holds; it can play almost any technique the violin or viola can (p0089).
 
-#### 2.2.3 低音提琴：音程被身体撑开了（p0095–0099）
+#### 2.2.3 Double bass: the body stretches the intervals (p0095–0099)
 
-★ **最影响写法的一条**：琴身大、弦又粗又长，**最小的音程也被撑成很宽的手位距离**。
-低把位上第一指到第四指只够一个大二度（p0097）。
-第一到第五把位只用一、二、四指，第六把位偶尔用三指，第七把位才用得上拇指（p0097）。
+★ **The factor that most affects writing**: the body is large and the strings are thick and long, so **even the smallest interval is stretched into a very wide hand-position distance**.
+In low position, the first through fourth fingers span only a major second (p0097).
+From the first through fifth positions only fingers one, two, and four are used; in the sixth position the third finger is occasionally used; the thumb is needed only from the seventh position (p0097).
 
-**编曲含义**：低音提琴写不了密集的半音级进和快速音阶，写了就是纸上音乐。
-低音声部要动，靠跳进与换把，不靠密集级进。
+**Orchestration implication**: the double bass cannot write dense chromatic stepwise motion or fast scales; if you write them, they remain paper music.
+The bass part must move by leaps and position changes, not by dense stepwise motion.
 
-#### 2.2.4 竖琴：踏板决定了你能写什么（p0100–0117）
+#### 2.2.4 Harp: the pedals determine what you can write (p0100–0117)
 
-这是全组约束最硬的一件，**不懂踏板就写不对竖琴**。
+This is the most constrained instrument in its group; **you cannot write for the harp correctly without understanding the pedals**.
 
-**机制**（p0100）：47 根弦，六个完整八度另加六个音。踏板全在上方位置时定音为降 C 大调。
-每个踏板三档，踩到中间升半音，踩到最低升全音。
+**Mechanism** (p0100): 47 strings, six complete octaves plus six additional notes. With all pedals in the upper position, the tuning is C-flat major.
+Each pedal has three positions: pressing to the middle raises the note a semitone, and pressing to the bottom raises it a whole step.
 
-★ **致命的一条：同一个音名的所有弦由同一个踏板控制。**
-踩下 C 踏板，六根 C 弦一起变。所以**一个八度里不可能同时奏降 C 和还原 C**（p0100）。
+★ **The fatal rule: all strings with the same note name are controlled by the same pedal.**
+Press the C pedal and all six C strings change together. So **it is impossible to play C-flat and C-natural in the same octave at the same time** (p0100).
 
-**绕过去的办法是等音记谱**（p0100、p0101）：把降 C 写成还原 B，两个音就落在不同的弦上、由不同踏板控制。
-同理，要同时用 F 与升 F，可以把 F 写成升 E，或把升 F 写成降 G。
-★ **这是配器者的活，不是演奏员的活**。写之前先排踏板，排不出来就改记谱。
+**The workaround is enharmonic notation** (p0100, p0101): write C-flat as B-natural, so the two notes fall on different strings controlled by different pedals.
+Likewise, to use F and F-sharp at the same time, write F as E-sharp, or write F-sharp as G-flat.
+★ **This is the orchestrator's job, not the player's.** Before writing, plan the pedals; if they cannot be arranged, change the notation.
 
-**踏板排列与换踏板**（p0101）：
+**Pedal arrangement and pedal changes** (p0101):
 
-| 左脚 | 右脚 |
+| Left foot | Right foot |
 |---|---|
-| D　C　B | E　F　G　A |
+| D C B | E F G A |
 
-- ★ **避免要求同一只脚同时换两个踏板**（比如同时换 E 和 G，都在右脚）。
-  不同脚的两个踏板（比如 D 和 G）可以同时换
-- 谱上标踏板有三种写法：逐个字母列出、用三档位置的图示、按左右两边的顺序排列字母
-- 换踏板可以安排在要用那个音之前的最后一瞬间
+- ★ **Avoid requiring the same foot to change two pedals at once** (for example, changing E and G at the same time, both on the right foot).
+  Pedals on different feet (for example D and G) can change simultaneously
+- Pedal markings in the score come in three forms: listing each letter one by one, a diagram of the three positions, or ordering the letters by the left and right sides
+- A pedal change can be placed at the last instant before the note is needed
 
-**两根最低弦（D¹ 与 C¹）不受踏板控制，要手动调**；最高的 G⁷ 由 G 踏板控制（p0100）。
-弦的颜色是找位置用的：**每根 C 弦红色，每根 G 弦蓝色**（p0100）。
+**The two lowest strings (D¹ and C¹) are not controlled by pedals and must be adjusted by hand; the highest, G⁷, is controlled by the G pedal** (p0100).
+String colors are used to find positions: **every C string is red and every G string is blue** (p0100).
 
-#### 2.2.5 拨弦类（p0109–0123）
+#### 2.2.5 Plucked-string instruments (p0109–0123)
 
-具体音域与记谱到对应页查，这里只写能不能用、什么时候用。**吉他**（p0109）实际音高比记谱低八度，**泛音很轻**，没扩音时只适合独奏或轻编制，别指望全奏冒头。**曼陀林**（p0109–0110）定弦同小提琴，持续音靠震音，**是件安静的乐器**，例 4-30 里同类的班卓琴就被两支圆号"几乎完全遮盖"，周围乐器要让路。**班卓琴**（p0119–0120）现代管弦乐里除模仿蓝草风格几乎不再出现，用前先确认是不是真要年代感。**齐特琴**（p0121–0123）出现极少，没有通用写法，照具体谱例译。
+Look up the specific ranges and notation on the corresponding pages; here we state only whether they can be used and when. **Guitar** (p0109): its actual pitch sounds an octave lower than written, and **its overtones are very soft**; without amplification it suits only solo or light ensembles, so do not expect it to project in tutti. **Mandolin** (p0109–0110): tuned like the violin, sustaining by tremolo; **it is a quiet instrument**; in Example 4-30, a similar banjo is "almost completely masked" by two horns, so surrounding instruments must yield. **Banjo** (p0119–0120): in modern orchestras it almost never appears except to imitate bluegrass style; before using it, confirm that you truly want its period flavor. **Zither** (p0121–0123): appears very rarely and has no general writing convention; work from the specific musical examples.
 
-### 2.3 为弦乐配器（第五章，p0124–p0172）
+### 2.3 Orchestrating for strings (Chapter 5, p0124–p0172)
 
-弦乐组的难处在于**整组音色同质**，所以分层不能靠音色差，只能靠音区、排列与演奏法。
-这一节是西洋弦乐侧的排列法与分层法，`mc-harmony` 边界表说的「排列法归这里」指的就是它。
+The difficulty of the string section is that **the whole section has a homogeneous timbre**, so layering cannot rely on timbral differences; it can only rely on register, arrangement, and playing technique.
+This section covers the Western string arrangement and layering methods; the boundary table in `mc-harmony` that says "arrangement methods belong here" refers to this section.
 
-#### 2.3.1 三层分工：前景、中景、背景
+#### 2.3.1 Three-layer division of labor: foreground, middle ground, background
 
-| 层 | 装什么 |
+| Layer | What it carries |
 |---|---|
-| **前景** | 最重要的声部，作曲者要让听众听到的那条旋律 |
-| **中景** | 复调旋律，或重要的对位材料 |
-| **背景** | 伴奏。可以是和声型，也可以是复调或旋律型材料 |
+| **Foreground** | The most important part: the melody the composer wants the listener to hear |
+| **Middle ground** | Contrapuntal melody, or important contrapuntal material |
+| **Background** | Accompaniment. It may be harmonic figuration, or polyphonic or melodic material |
 
-★ **写作顺序是定的**：先定前景，定它的音域范围与要达到的情感张力，再按五件乐器各自的音区特性挑乐器。
-**前景一旦定下，中景与背景才有依据可写**（p0130–0131）。反过来先铺伴奏再找旋律，三层必然打架。
+★ **The writing order is fixed**: first set the foreground, its range, and the emotional tension it should reach; then choose instruments for the five instruments according to each one's register character.
+**Once the foreground is fixed, the middle ground and background have a basis to be written** (p0130–0131). Conversely, if you lay down accompaniment first and then look for a melody, the three layers will inevitably clash.
 
-> 书里拿海顿作标尺：三要素分配得好，可以不靠力度记号就把平衡做出来（p0131）。
-> 这是判断配器好坏的一条实用判据，**要靠力度记号才平衡的配器，多半是分层没做对**。
+> The book uses Haydn as a benchmark: when the three elements are distributed well, balance can be achieved without relying on dynamic markings (p0131).
+> This is a practical criterion for judging orchestration quality: **an orchestration that needs dynamic markings to achieve balance most likely has its layers built wrongly**.
 
-#### 2.3.2 音色相似时，靠音区分层
+#### 2.3.2 When timbres are similar, layer by register
 
-这是弦乐组内部最主要的分层手段（p0136）：
+This is the primary layering method within the string section (p0136):
 
-- **前景的旋律放在乐器最好的音区上**
-- **背景的音型放在乐器最黯淡、最无明显特征的音区上**
+- **Place the foreground melody on the instrument's best register**
+- **Place the background figuration on the register where the instrument is dullest and has the least distinctive character**
 
-配套两条：低音提琴改拨奏可以削弱低音的冲击力（p0136）；背景琶音互相嵌套能做出不间断的流动织体，
-而反复的旋涡式伴奏会给旋律里的长音增加张力，同时保证音型本身不被打断（p0137）。
+Two supporting rules: switching the double bass to pizzicato can weaken the impact of the bass (p0136); nested background arpeggios can produce an uninterrupted, flowing texture,
+while repeated swirling accompaniment adds tension to the long notes in the melody and keeps the figuration itself from being interrupted (p0137).
 
-#### 2.3.3 齐奏与平行三度，情感差比看上去大
+#### 2.3.3 Unison and parallel thirds: the emotional difference is larger than it looks
 
-强有力的齐奏或八度呈示，适合用来先把一个想法摆出来，随后靠织体变化转向另一种情绪（p0137–0138）。
-★ 在古典风格里，**平行三度的简单伴奏与僵硬的八度之间存在巨大的情感对比**，
-哪怕织体与力度的变化很小。突然让阿尔贝蒂式音型休止，可以把可预见的陈述一下子变轻变飘（p0138）。
+A strong unison or octave statement is suited to presenting an idea first, then turning to another mood through changes in texture (p0137–0138).
+★ In the Classical style, **there is a huge emotional contrast between a simple accompaniment in parallel thirds and stiff octaves**,
+even when the change in texture and dynamics is small. Suddenly resting an Alberti-type figure can make a predictable statement suddenly light and floating (p0138).
 
-#### 2.3.4 主调排列：按泛音列的间距走
+#### 2.3.4 Homophonic voicing: spacing that follows the harmonic series
 
-给弦乐全奏写一个和弦时，音的分配主要由排列、音域与旋律三者决定（p0154）。
+When writing a chord for full string section, the distribution of notes is determined mainly by voicing, range, and melody (p0154).
 
-★ **核心判断：低声部各音之间的间隔要比高声部大**，因为泛音列下方的间距本来就比上方大（p0154）。
-违反它，低音区会糊。
+★ **Core judgment: the intervals between notes in the low parts should be larger than those in the high parts**, because the spacing below in the harmonic series is naturally wider than above (p0154).
+Violating this makes the low register muddy.
 
-**例 5-26（p0154）**：同一个 D 大三和弦（D-F♯-A）给五部弦乐写出两种排列，都能弱奏也能强奏，指法都顺手，差别不大；但低声部八度更宽、上方间距更密的那种听起来略暗一点。**这条判据管的是明暗的微调，而非对错**，选哪种取决于你要多暗。反过来，某个和弦排出来发闷，先查是不是低声部叠得比高声部还密。
+**Example 5-26 (p0154)**: the same D major triad (D-F♯-A) written for five string parts in two voicings; both can play soft or loud, the fingerings are all comfortable, and the difference is small; but the version with wider octaves in the low parts and denser spacing above sounds slightly darker. **This criterion governs fine adjustments of darkness and brightness, not right and wrong**; which to choose depends on how dark you want it. Conversely, if a chord sounds stuffy when voiced, first check whether the low parts are doubled more densely than the high parts.
 
-#### 2.3.5 密集排列的六种分配（西洋侧排列法）
+#### 2.3.5 Six allocations of dense voicing (Western-side arrangement methods)
 
-同一个和弦进行，交给弦乐五部有六种常见分法，听感差别很大（p0155）：
+For the same chord progression, handed to five string parts, there are six common allocations, with very different sounds (p0155):
 
-| 分法 | 听感 |
+| Allocation | Sound |
 |---|---|
-| 一、四声部各归各（Vln1 高、Vln2 次、Vla 中、Vc 低，Db 低八度重复 Vc） | 最简捷。**力度在弱到中强之间时会不伦不类**；力度很强时低音过重，因为中低三件都处在比小提琴更合适的音区 |
-| 二、中提琴分奏上两声部，大提琴分奏下两声部 | 柔和、微黯 |
-| 三、在分法二上加低音提琴低八度 | 旋律大幅变黯 |
-| 四、Vln1 走高声部，Vln2 或 Vla 分走次高与中声部 | 略明亮，仍柔和 |
-| 五、全部交给大提琴，低音提琴同度齐奏低声部 | 非常强烈 |
-| 六、整体移高一到两个八度，不用低音提琴 | 逐级变得闪耀 |
+| 1. Four parts each on its own (Vln1 high, Vln2 second, Vla middle, Vc low; Db an octave below repeating Vc) | The simplest. **At dynamics between soft and mezzo-forte it sounds awkward**; at very loud dynamics the bass is too heavy, because the three middle-to-low instruments are all in registers more suitable to them than to the violin |
+| 2. Viola divided into two upper parts, cello divided into two lower parts | Soft, slightly dark |
+| 3. Allocation 2 plus double bass an octave below | The melody becomes much darker |
+| 4. Vln1 takes the high part; Vln2 or Vla divided to take the second-highest and middle parts | Slightly brighter, still soft |
+| 5. All to cello, with double bass in unison doubling the low part | Very intense |
+| 6. Whole thing moved up one to two octaves, with no double bass | Increasingly sparkling |
 
-**用法**：这张表是"同一个和声要什么颜色"的查表入口。先定颜色再选分法，不要先分好了再听效果。
+**Usage**: this table is the lookup for "what color does this harmony need." Settle the color first, then choose the allocation; do not divide first and then listen to the effect.
 
-#### 2.3.6 第一转位里的重复
+#### 2.3.6 Repetition in first inversion
 
-- **重复低音（即三音）不是常规做法**，例外是根音落在六级、七级、二级或三级时（p0155）
-- 常用的 I⁶、IV⁶、V⁶ 要特别注意间隔与重复，**四声部织体里低音不要被重复**
-- 超过四个声部时，三音总要在某处被重复以巩固；**重复位置放在靠近织体底部**，才出得来第一转位特有的开放音（p0155）
+- **Repeating the bass (i.e., the third) is not standard practice**, except when the root falls on scale degree 6, 7, 2, or 3 (p0155)
+- For the commonly used I⁶, IV⁶, and V⁶, pay special attention to intervals and doubling; **in four-part textures, do not double the bass**
+- With more than four parts, the third must be doubled somewhere to reinforce it; **place the doubling near the bottom of the texture** so that the open sound characteristic of first inversion emerges (p0155)
 
-#### 2.3.7 强化一条旋律的七种办法
+#### 2.3.7 Seven ways to reinforce a single melody
 
-同一条旋律要"更有力"，可选（p0156）：
+To make one melody "more powerful," choose from (p0156):
 
-1. 第一小提琴独奏，不加伴奏
-2. 第二小提琴演奏，第一小提琴高八度重复
-3. 两件齐奏重复（Vln1+Vln2 / 小提琴+中提琴 / 小提琴+大提琴 / 中提琴+大提琴）
-4. 放到小提琴 G 弦上
-5. 交给中提琴或大提琴独奏，**这两件在这个音区比小提琴更有张力**
-6. 铺开成四到五个八度，五件全上
-7. 小提琴组、中提琴组、大提琴组三组齐奏
+1. First violin solo, with no accompaniment
+2. Second violin plays, with the first violin repeating an octave higher
+3. Two instruments in unison doubling (Vln1+Vln2 / violin+viola / violin+cello / viola+cello)
+4. Move it to the violin's G string
+5. Give it to viola or cello solo; **at this register these two are more tense than the violin**
+6. Spread across four to five octaves, with all five instruments
+7. Violin section, viola section, and cello section in unison
 
-★ 第 5 条是最常被忽略的一条：想要张力未必要往高处加，换一件在该音区更紧的乐器往往更有效。
+★ Item 5 is the most often overlooked. To obtain tension, you need not add it higher; switching to an instrument that is tighter in that register is often more effective.
 
-#### 2.3.8 对位织体的两个麻烦
+#### 2.3.8 Two troubles with contrapuntal texture
 
-前景、中景、背景之间有一块灰色区域，这是对位式配器最容易出事的地方（p0145）：
+Between foreground, middle ground, and background there is a gray zone; this is where contrapuntal orchestration most often goes wrong (p0145):
 
-1. **必须划清每条旋律属于哪一档**，否则听众收不到主次
-2. **选择要有限度**，尤其是乐段反复、而反复时本可以换别的做法的时候
+1. **You must clearly mark which tier each melody belongs to**, or listeners cannot perceive what is primary and what is secondary
+2. **Choices must be limited**, especially when a section repeats and the repetition could have been handled another way
 
-第二条是对配器者的克制要求：面对管弦乐的大量选择，把能做的都做一遍等于没做。
+The second point is a demand for restraint on the orchestrator: faced with the vast range of options in orchestration, trying everything amounts to doing nothing.
 
-#### 2.3.9 弦乐合奏给独奏者伴奏
+#### 2.3.9 String ensemble accompanying soloists
 
-弦乐组的同质性、技术能力与多变音区，使它适合给器乐独奏、声乐独唱、合唱伴奏（p0163）。
-书里给的是传统模式加曲目清单（门德尔松、莫扎特、比才、福列，p0163–0169），
-以及把钢琴作品改编成弦乐的做法（p0170–0171）。
+The homogeneity, technical capacity, and varied registers of the string section make it suitable for accompanying instrumental soloists, vocal soloists, and choirs (p0163).
+The book gives the traditional model plus a list of works (Mendelssohn, Mozart, Bizet, Fauré, p0163–0169),
+and the practice of arranging piano works for strings (p0170–0171).
 
-> 海顿《弦乐四重奏》Op. 76 No. 3 第二乐章（p0125–0126）示范的是变奏中的声部角色与力度控制，
-> 对应 `SKILL.md` §4「平衡」。
+> Haydn's *String Quartet* Op. 76 No. 3, second movement (p0125–0126) demonstrates the roles of voices and the control of dynamics within variation,
+> corresponding to `SKILL.md` §4, "Balance."
 
 ---
 
-#### 2.3.6 密集、开放、中空、顶部宽间距：排列法决定的是色调（杨立青上册 p0199–0207）
+#### 2.3.6 Dense, open, hollow, and wide top spacing: voicing determines color (Yang Liqing upper volume p0199–0207)
 
-Adler 的六种分配（§2.3.5）讲的是同一排列交给谁；杨立青这一节讲的是**排列本身**在乐队里听起来是什么。
+Adler's six allocations (§2.3.5) cover who gets the same voicing; Yang Liqing's section here covers what **the voicing itself** sounds like in the orchestra.
 
-| 排列 | 听感 | 条件与代价 |
+| Voicing | Sound | Conditions and cost |
 |---|---|---|
-| **密集** | 最谐调、共鸣最丰满（p0199） | 放到低音区且声部间距小于八度，会变得沉重阴暗，勃拉姆斯与西贝柳斯的特有色调（p0201） |
-| **开放** | 弱奏柔和明亮；强奏且跨度大时宏伟宽广（p0204） | ★ **同样力度下实际响度比密集稍低**（p0204）：要"大"选开放，要"响"选密集 |
-| **中音区留隙** | 弱奏时在中音区留一个不超过八度的空隙，低音的谐波从空隙里透出来，色调精致透明（p0201）；ppp 下大六度或小七度的空隙反而让整体更清澈柔和（p0202） | 只在弱奏成立 |
-| **中空** | 和声层中部留大空隙，让出现在中音区的重要织体因素被听见（p0203） | **常只用于弱奏**，而且空隙**常须用流动音型填上**（p0203） |
-| **顶部宽间距** | 音区很广的密集和声，最上方改用五度、六度乃至八度：最高音加强下方和弦音的谐波，亮度提高（p0203） | 若把顶部填成三度，"虚无缥缈的梦幻气氛必将减色不少"（p0203） |
-| **混合** | 开放排列的基础上，把"男高音"声部也在高一到两个八度重复（p0206）；书中例子是低音提琴加大提琴加分部中提琴开放排列、第二小提琴分部在高音区密集重复中提琴上三声部、第一小提琴再高五度封顶，"异常纯净动人"（p0207） | 传统写法只在高八度重复最高两个声部，那也已经在基本声部与重复声部之间形成局部密集（p0205） |
+| **Close** | The most harmonious, with the fullest resonance (p0199) | Placed in the low register with intervals between parts smaller than an octave, it becomes heavy and dark: the characteristic color of Brahms and Sibelius (p0201) |
+| **Open** | Soft and bright at soft dynamics; majestic and broad at loud dynamics with wide spans (p0204) | ★ **At the same dynamic, the actual loudness is slightly lower than close voicing** (p0204): choose open for "bigness," close for "loudness" |
+| **Gap in the middle register** | At soft dynamics, leave a gap of no more than an octave in the middle register; low harmonics shine through the gap, giving a refined, transparent color (p0201). At ppp, a gap of a major sixth or minor seventh makes the whole texture clearer and softer (p0202) | Works only at soft dynamics |
+| **Hollow middle** | Leave a large gap in the middle of the harmonic layer so that important textural elements appearing in the middle register can be heard (p0203) | **Usually used only at soft dynamics**, and the gap **usually must be filled with flowing figuration** (p0203) |
+| **Wide top spacing** | Dense harmony over a very broad range; at the top, use fifths, sixths, or even octaves: the highest note reinforces the overtones of the chord tones below, raising brightness (p0203) | If the top is filled with thirds, "the ethereal, dreamlike atmosphere will be considerably diminished" (p0203) |
+| **Mixed** | Based on open voicing, the tenor part is also repeated one to two octaves higher (p0206). The book's example: bass + cello + divisi viola in open voicing; second violin divisi repeating the viola in dense voicing in the high register, three upper parts; first violin capping it a fifth higher, "exceptionally pure and moving" (p0207) | Traditional writing repeats only the top two parts an octave higher, which already forms local density between the basic part and the doubled parts (p0205) |
 
-另一条常被忽略的：大间距不一定是为了丰满，**低音持续音与内声部隔两个八度，追求的是透明的空间性**（p0200）。
+Another point often overlooked: wide spacing is not always for fullness; **a sustained bass note and inner voices separated by two octaves aim for a transparent sense of space** (p0200).
 
-**编曲含义**：写弦乐铺底先定力度再定排列。弱奏时留隙、中空、顶部宽间距都是可用的颜色；强奏要响就密集，要宽就开放并接受它稍不如密集响。
+**Orchestration implication**: when writing a string pad, set the dynamic first and then the voicing. At soft dynamics, gaps, a hollow middle, and wide top spacing are all usable colors. For loud passages, use close voicing to be loud or open voicing to be broad, accepting that open voicing is slightly less loud than close.
 
-### 2.4 木管组：编制、各件音区性格、和弦排列（第六到八章，p0172–p0290）
+### 2.4 Woodwind section: lineup, register character of each instrument, chord arrangement (Chapters 6–8, p0172–p0290)
 
-#### 2.4.1 编制与总谱规则
+#### 2.4.1 Lineup and score rules
 
-古典双管编制是 2 长笛、2 双簧管、2 单簧管（种类按作品的调定）、2 大管（p0188）。总谱规则（p0190）：
-同种乐器的一二声部写在同一行，节奏复杂程度不同时才分行；三支时一二同行、三单独，或按谁和谁更接近来分；齐奏标 `a2`／`a3`；单独演奏标 `1.`、`2.`。
+The classical double-woodwind lineup is 2 flutes, 2 oboes, 2 clarinets (types set by the key of the work), and 2 bassoons (p0188). Score rules (p0190):
+same-type instruments' first and second parts are written on the same line, and separate lines are used only when rhythmic complexity differs. With three instruments, 1st and 2nd share a line and the 3rd is separate, or lines are grouped by which instruments are closest. Unison is marked `a2` / `a3`; solo performance is marked `1.` and `2.`.
 
-#### 2.4.2 各件的音区性格
+#### 2.4.2 Register character of each instrument
 
-| 乐器 | 音区性格 | 编曲含义 |
+| Instrument | Register character | Orchestration implication |
 |---|---|---|
-| **长笛** | 低音区优美但弱，**要用非常稀疏的织体伴奏才听得见**（p0193）；高音区"有无可置疑的光芒"，兼具灵活性（p0194）；长音需要大量气息，**必须留换气**（p0195） | 低音区旋律时伴奏只能是持续和声背景；快速跑动放高音区 |
-| 短笛／中音长笛／低音长笛 | 短笛把长笛音域向上扩一个八度，原则相同；中音长笛是向下的第一个延伸，斯特拉文斯基拉威尔常用；低音长笛再向下 | 短笛高八度会让黯淡段落"变华丽"，**原本要黯淡的段落慎加**（p0289） |
-| **双簧管** | 最有影响力的音区 **F⁴ 到 C⁶**；要柔和的穿透力，写在高音 C 与其上方 F 之间（p0206）；最高音 A⁶ 极难，职业演奏者也未必吹得出 | 旋律放这一档，和声填充别往上顶 |
-| 英国管 | 双簧管家族的中音成员，管与簧片略长（p0208） | 双簧管的暗一档 |
-| **单簧管** | 四个音区（p0218）：**沙吕莫音区**深沉浓厚；**喉音**苍白；**克拉里诺音区**明亮精准有表现力；极高音穿透尖锐。**所有木管里音域最均质**，ppp 到 fff 都行；**降号调用降 B 调单簧管**（p0218） | 要一件乐器从低到高都稳的，选它；喉音区尽量别放旋律 |
-| 低音单簧管 | 常用降 B 调（p0224） | 木管里最好的低频铺底之一 |
-| **大管** | 双簧片、锥形管，**但没有双簧管那种鼻音**；抒情旋律与敏锐断奏都行（p0232）；低音谱号，上加线多时用次中音谱号 | 低八度重复小提琴主题是经典用法，"突出旋律并增添温暖"（p0288） |
-| 低音大管 | 木管最低，比大管再低一个八度 | |
-| **萨克斯** | 归木管组：音调近单簧管家族、簧片哨嘴近单簧管、演奏者多兼奏、原本就是木管成员（p0228）；家族从高音到低音五种（p0229） | |
+| **Flute** | The low register is beautiful but weak, **audible only with a very sparse accompanying texture** (p0193). The high register has "undeniable brilliance" and also flexibility (p0194). Long notes require a great deal of breath, **so breath points must be provided** (p0195) | With melody in the low register, the accompaniment can only be a sustained harmonic background; place fast runs in the high register |
+| Piccolo / alto flute / bass flute | The piccolo extends the flute's range up an octave, on the same principles. The alto flute is the first downward extension, often used by Stravinsky and Ravel; the bass flute extends further down | A piccolo an octave higher can make dark passages "gaudy"; **use sparingly in passages meant to be dark** (p0289) |
+| **Oboe** | The most influential register is **F⁴ to C⁶**; for soft, penetrating tone, write between high C and the F above it (p0206). The highest A⁶ is extremely difficult, and even professional players may not manage it | Place the melody in this range; do not push harmonic fill upward |
+| Cor anglais | The alto member of the oboe family, with a slightly longer tube and reed (p0208) | One step darker than the oboe |
+| **Clarinet** | Four registers (p0218): the **chalumeau register** is deep and rich; the **throat register** is pale; the **clarino register** is bright, precise, and expressive; the extreme top is piercing. **The most evenly balanced range of all the woodwinds**, usable from ppp to fff; **for keys with flats, use the B-flat clarinet** (p0218) | Choose it for an instrument that is stable from low to high; avoid placing melody in the throat register |
+| Bass clarinet | Commonly in B-flat (p0224) | One of the best low-frequency bases among the woodwinds |
+| **Bassoon** | Double reed, conical bore, **but without the nasal quality of the oboe**; suits both lyrical melody and crisp staccato (p0232). Bass clef; tenor clef is used when many ledger lines would be needed above | Doubling a violin theme an octave lower is a classic use, to "highlight the melody and add warmth" (p0288) |
+| Contrabassoon | The lowest woodwind, an octave below the bassoon | |
+| **Saxophone** | Belongs to the woodwind section: its pitch is close to the clarinet family, its reed and mouthpiece are close to the clarinet's, performers often double, and it is originally a woodwind member (p0228). The family runs from soprano to bass in five types (p0229) | |
 
-#### 2.4.3 双管和弦的四种排列法（p0264–0265）
+#### 2.4.3 Four arrangement methods for two-woodwind chords (p0264–0265)
 
-| 法 | 做法 | 评价 |
+| Method | Procedure | Evaluation |
 |---|---|---|
-| **叠置** | 一件叠在另一件之上 | 最常用，**必须在各件最佳音区才能突出旋律** |
-| **交置** | 各声部交叉 | 较理想，混合了音色；但某些乐器某些音区会盖过较弱的乐器，要谨慎 |
-| **包置** | 一组乐器包在另一组中间 | 与交置同一类问题；★ 把双簧管包在两件音色不同的乐器中间，平衡更好还添色（单簧管在 D⁵ 上比第二长笛强） |
-| **交接** | 各声部同度重复 | 二十世纪以前多用；会掩盖音色特点、加强不需要强调的音；全奏时仍常见 |
+| **Stacking** | One instrument placed on top of another | The most common; **the melody stands out only if each instrument is in its best register** |
+| **Interleaving** | Parts cross each other | Ideal, blending the timbres; but in some registers some instruments will overpower weaker ones, so be careful |
+| **Enclosing** | One group of instruments enclosed between another group | The same kind of problem as interleaving; ★ Enclosing the oboe between two instruments of different timbres gives better balance and adds color (the clarinet is stronger than the second flute on D⁵) |
+| **Contact arrangement** | Parts repeat at the same pitch | Common before the twentieth century; it masks timbral character and strengthens notes that need no emphasis; still common in tutti |
 
-书里对交置法各组合的评价从"好"到"劣，尤其演奏 pp 时"都有，**弱奏时排列法的差别最大**。
+The book's evaluations of each interleaving combination range from "good" to "poor, especially when playing pp," and **the difference in arrangement is greatest in soft passages**.
 
-#### 2.4.4 木管重复弦乐的惯例（p0288–0289）
+#### 2.4.4 Conventions for woodwinds doubling strings (p0288–0289)
 
-十九二十世纪常见的整组重复：第一小提琴由长笛与短笛高八度重复；中提琴由双簧管与单簧管高八度重复，填上上方八度的和声；大提琴由大管同度与高八度重复（p0288）。
-两条配套：木管与弦乐组合时铜管音量压低；**音高上行时音色越发辉煌**（p0289）。
+A whole-section doubling common in the nineteenth and twentieth centuries: the first violin doubled an octave higher by flute and piccolo; the viola doubled an octave higher by oboe and clarinet, filling in the harmony an octave above; the cello doubled at unison and an octave higher by bassoon (p0288).
+Two accompanying rules: when combining woodwinds with strings, reduce the volume of the brass; **as the pitch rises, the timbre becomes ever more brilliant** (p0289).
 
-#### 2.4.5 木管排列五式与三条规则（杨立青下册 p0068–0073）
+#### 2.4.5 Five woodwind arrangement patterns and three rules (Yang Liqing lower volume p0068–0073)
 
-Adler 的四种（§2.4.3）之外，杨立青按"对"来数，多出并置式，且给了每式的适用场合：
+Beyond Adler's four (§2.4.3), Yang Liqing counts by pairs, adding a juxtaposed form, and gives the appropriate occasions for each form:
 
-| 式 | 做法 | 适用 |
+| Form | Method | Suitable for |
 |---|---|---|
-| **叠置** | 两对以上乐器依次按高低排开，各和弦音不重叠 | 最自然、音响完满，至今最常用；和弦"体积"膨胀时长笛不断上移到更鲜明的音区（p0068–0069） |
-| **交织** | 两对乐器音区交叉 | 比叠置更易融汇、平衡通常更好；低音区单簧管与大管的结合阴暗沉稳，像管风琴（p0069） |
-| **包围（夹置）** | 一对乐器的两个音插在另一对中间 | 外围音色略占优势，被夹的稍弱（p0070）。★ **持续长音和声与流动和声声部结合时宜用包围式把两种音色分开**，不宜叠置或交织（p0070）；反过来用逆序，让双簧管包围长笛，能突出双簧管的旋律意义 |
-| **交接** | 上方一对的低声部与下方一对的高声部同度重叠 | 古典时期多见，贝多芬尤爱（p0070–0071） |
-| **并置** | 每个和弦音由两件以上乐器演奏 | 为了更饱满均衡；三管制的 3Fl 3Ob 3Cl 并置可看作叠置的加倍（p0072） |
+| **Stacking** | Two or more pairs of instruments arranged in order from high to low, with no overlapping chord tones | The most natural, with a complete sound; still the most commonly used. As the chord's "volume" expands, the flute keeps moving upward to a more distinct register (p0068–0069) |
+| **Interweaving** | Two pairs of instruments cross each other in register | Easier to fuse than stacking, and balance is usually better. In the low register, the combination of clarinet and bassoon is dark and steady, like an organ (p0069) |
+| **Enclosing (sandwich)** | Two notes of one pair are inserted between another pair | The outer timbre has a slight advantage, while the enclosed one is weaker (p0070). ★ **When combining sustained long-note harmony with flowing harmonic parts, use enclosing to separate the two timbres; stacking or interweaving is not advisable** (p0070). Conversely, using the reverse order, with the oboe enclosing the flute, can highlight the melodic significance of the oboe |
+| **Contact** | The lower part of the upper pair and the higher part of the lower pair overlap at unison | Common in the Classical period; Beethoven especially favored it (p0070–0071) |
+| **Juxtaposition** | Each chord tone is played by two or more instruments | For a fuller, more balanced sound. The 3 Fl, 3 Ob, 3 Cl juxtaposition in a three-per-section lineup can be seen as a doubled form of stacking (p0072) |
 
-三条规则（p0073）：
-1. **古典浪漫写法里不协和小二度不交给同音色乐器**，音响过于紧张。
-2. 三管制里，**一对同类乐器加其变种乐器**（如两支双簧管加英国管）是最佳组合；三声部和弦通常用一对同类加一支非同类。
-3. 除非单管制，**很少把和弦各音分给音色不同的乐器**，容易音色分离、力度难平衡，密集排列时尤甚。例外：和弦带线条化意味，或要与传统配置形成色彩对比时可以。
+Three rules (p0073):
+1. **In Classical and Romantic writing, do not give a dissonant minor second to instruments of the same timbre**; the sound becomes too tense.
+2. In a three-per-section lineup, **a pair of same-type instruments plus a variant instrument** (for example, two oboes plus cor anglais) is the best combination; a three-part chord usually uses a same-type pair plus one instrument of a different type.
+3. Unless each part is played by a single instrument, **rarely distribute chord tones among instruments of different timbres**, as this easily separates the timbres and makes balance difficult, especially in dense voicing. Exceptions: when the chord has a linear implication, or when a color contrast with traditional scoring is wanted.
 
-### 2.5 铜管组：两组、音域机理、弱音器、各件性格（第九到十一章，p0307–p0370）
+### 2.5 Brass section: two groups, the mechanics of range, mutes, and the character of each instrument (Chapters 9–11, p0307–p0370)
 
-#### 2.5.1 编制与两组
+#### 2.5.1 Lineup and the two groups
 
-现代编制 4 圆号、3 小号、3 长号、1 大号（p0307）。铜管的音色比木管统一，但分两组：**圆号**一组，**小号、长号、大号**一组（p0307）。
-依据两条：圆号有融合并加强木管的特性，既是铜管一员又是木管的附属；圆号是漏斗形号嘴，其余是浅杯形。
-福尔西斯的规律：**号嘴杯状部位越浅，声音越嘹亮**。小号长号多为长圆形管体，圆号大号多为圆锥形（p0307–0308）。
+The modern lineup is 4 horns, 3 trumpets, 3 trombones, and 1 tuba (p0307). The timbre of the brass is more unified than that of the woodwinds, but it splits into two groups: **horns** as one group, and **trumpets, trombones, and tuba** as another (p0307).
+Two grounds for this: the horn has the property of fusing with and reinforcing the woodwinds, so it is both a member of the brass and an appendage of the woodwinds; the horn has a funnel-shaped mouthpiece, while the others have shallow cup-shaped mouthpieces.
+Forsyth's rule: **the shallower the cup-shaped part of the mouthpiece, the more brilliant the sound**. Trumpets and trombones mostly have elongated, tubular bodies; horns and tuba mostly have conical bodies (p0307–0308).
 
-**编曲含义**：要"铜管味"又不想刺，用圆号；要嘹亮，用浅杯那一组。圆号可以当木管的一层来叠，小号不行。
+**Orchestration implication**: for a "brass character" without harshness, use horns; for brilliance, use the shallow-cup group. Horns can be layered like a woodwind; trumpets cannot.
 
-#### 2.5.2 音域的机理
+#### 2.5.2 The mechanics of range
 
-音域取决于管长与内膛宽度：**内膛越宽越容易吹低音，越窄越容易吹高音**（p0309）。
-基础音比高音难吹，一般只见于现代交响曲与独奏作品（p0309）。
+Range depends on tube length and bore width: **the wider the bore, the easier it is to play low; the narrower it is, the easier it is to play high** (p0309).
+Fundamental tones are harder to play than high ones and are generally found only in modern symphonies and solo works (p0309).
 
-**往上走为什么难**：无活塞时靠超吹泛音列发高音，理论上到第 21 泛音，多数演奏者吹不上第 16 泛音以上（p0307）；第 7、11、13、14 泛音本身偏离十二平均律，越往上音准问题越密（p0307）。嘴唇放松吹低音、绷紧吹高音，**铜管往高处走是体力活**；强吹又比弱吹费气，慢速强奏的长句要提前算好换气点（p0309）。高音长线条最好留呼吸缝或分人接力。
+**Why going up is hard**: without valves, high notes are produced by overblowing the harmonic series. In theory this reaches the 21st harmonic, but most players cannot reach beyond the 16th (p0307). The 7th, 11th, 13th, and 14th harmonics themselves deviate from equal temperament, so intonation problems multiply as you go higher. Lips are relaxed for low notes and tightened for high notes; **climbing in the brass is physical work**. Loud playing uses more breath than soft playing, so for long phrases at slow, loud dynamics, calculate breath points in advance (p0309). Long high lines are best given breath gaps or relayed among players.
 
-#### 2.5.3 弱音器
+#### 2.5.3 Mutes
 
-小号与长号有各种弱音器，**圆号与大号各自只有一种**（p0318）。
-圆号的**手弱音**会把音升高，演奏者要用手或指法降半音补偿，市售弱音器能纠正这一点（p0318）。
-弱音器之外的弱奏还有碗状塞（plunger），紧贴号口吹快速音会有爆破感（p0321）。
-**编曲含义**：给圆号大号写弱音器只有一种颜色可选，别指望它们做出小号那种一排弱音器的色板。
+Trumpets and trombones have various mutes; **horns and tuba each have only one kind** (p0318).
+The horn's **hand mute** raises the pitch; players compensate by lowering a semitone with the hand or with fingering, and commercial mutes can correct this (p0318).
+Besides mutes, soft playing can also use the plunger; blowing fast notes tight against the mouthpiece gives a burst of sound (p0321).
+**Orchestration implication**: a horn or tuba writing for mutes has only one color to choose from; do not expect them to produce the palette of mutes a trumpet section can offer.
 
-#### 2.5.4 各件性格
+#### 2.5.4 Character of each instrument
 
-| 乐器 | 性格 | 编曲含义 |
+| Instrument | Character | Orchestration implication |
 |---|---|---|
-| **圆号** | 见 §2.5.1，能融木管 | 铜管里唯一能当"胶水"的一件 |
-| **小号** | 铜管里**最灵巧、语速最快**的一件，强弱都要能吹，整个音域各种音量（p0336、p0343）；**连音一口气吹、断音全用吐音**，单吐双吐三吐都常用（p0343） | 快速断奏句子交给它；写连线就是在写换气 |
-| **长号** | 编制常是 2 次中音加 1 低音；次中音音域 E² 到 B⁴，七个把位，第一把位 B♭ 到第七把位 E♭；低音谱号，G⁴ 以上转次中音谱号（p0351–0352） | ★ **伸缩管滑音的幅度不能超过三全音**，那是同一泛音在不同把位上的最大音程（p0357）；写更大的滑音等于写不出来 |
-| **大号** | 低音区**深沉厚重但发音稍钝**；中音区**非常有力**、平缓圆润、像圆号；高音区稍弱但很紧张，声音变薄（p0361） | 大号的"力"在中音区，低音区给的是重量不是力 |
+| **Horn** | See §2.5.1; can blend with woodwinds | The only brass instrument that can act as "glue" |
+| **Trumpet** | The **most agile and fastest-speaking** of the brass; must play both loud and soft, across the entire range and all volumes (p0336, p0343). **Slurs are played in one breath; staccato is done entirely by tonguing**, with single, double, and triple tonguing all common (p0343) | Give fast staccato phrases to it; writing a slur means writing a breath |
+| **Trombone** | The section is often two tenor trombones plus one bass. The tenor's range is E² to B⁴, with seven positions, from first-position B♭ to seventh-position E♭; bass clef, switching to tenor clef above G⁴ (p0351–0352) | ★ **The extent of a slide glissando must not exceed a tritone**, which is the largest interval the same harmonic can reach across positions (p0357). Writing a larger glissando amounts to writing something unplayable |
+| **Tuba** | The low register is **deep and heavy but slightly blunt**; the middle register is **very powerful**, smooth and round, like a horn; the high register is slightly weaker but very tense, and the sound thins (p0361) | The tuba's "power" lies in its middle register; the low register gives weight, not force |
 
-#### 2.5.5 铜管组的功能
+#### 2.5.5 Functions of the brass section
 
-十九世纪后半期作曲家才开始最大程度发掘铜管，瓦格纳勃拉姆斯还偏好自然小号与圆号（p0368）。四个功能：作为主调音乐单元（单独或与别的组结合）、演奏旋律（独奏、结合、对位里的独立声部）、营造高潮、以及色彩与节奏性强调（p0368–0369）。
-全奏里铜管怎么放见 `mc-arrangement-arch` §2.4，铜管齐奏的"齐奏不齐"见 `mc-style-cinematic` §4。
+Composers did not begin to exploit the brass to the fullest until the second half of the nineteenth century; Wagner and Brahms still favored natural trumpets and horns (p0368). There are four functions: as a unit in homophonic music (alone or combined with other groups), playing melody (solo, combined, or as independent parts in counterpoint), building climaxes, and rhythmic and color emphasis (p0368–0369).
+For how brass is placed in tutti, see `mc-arrangement-arch` §2.4; for the "unison that is not quite together" of brass unisons, see `mc-style-cinematic` §4.
 
-## 3. Adler 下册：配器与改编（`adler-orch-2`）
+## 3. Adler vol. 2: Orchestration and adaptation (`adler-orch-2`)
 
-| 主题 |
+| Topic |
 |---|
-| **第十五章 为管弦乐队配器** |
-| **同度和八度的全奏（Unison and Octave Tutti）** |
-| 勋伯格管弦乐改编曲示例 / 改编风格分析 |
-| 管乐合奏改编为管弦乐的原则 |
-| **改编研究的四个维度** |
-| 米约《法国组曲》改编对比（例 17-15、17-16 含管弦乐版对照） |
-| 音色对比总结 |
+| **Chapter 15: Orchestrating for the orchestra** |
+| **Unison and Octave Tutti** |
+| Schoenberg orchestral adaptation examples / analysis of adaptation styles |
+| Principles for adapting wind ensemble music to orchestra |
+| **Four dimensions of adaptation study** |
+| Milhaud, *Suite française*: adaptation comparison (examples 17-15 and 17-16 include orchestral-version comparisons) |
+| Summary of timbral contrast |
 
-> `SKILL.md` §3.1「同度混合」的教科书依据在「同度和八度的全奏」一节。
-
----
-
-### 3.1 新色彩怎么进来（p0019）
-
-有伴奏的旋律里，伴奏的色彩常与独奏形成对比，有时对比很强；但很多时候成功的伴奏是由**与独奏相同或近似的乐器**担任的（p0019）。换色彩有两条惯用做法：
-1. **把一个新起的乐句（含弱拍起的）分配给一个新的乐器**；
-2. ★ **在新的色彩进入之前安置一个休止**。
-第二条是 AI 编曲最常漏的：音色一层叠一层从不断，新色彩进来时没有"呼吸口"，听感就是一堵墙。接缝的四法在 SKILL §3.6。
-
-## 4. 杨立青中册：线条的三种宽度与木管的气息（p0028–0085）
-
-SKILL §3 的中和现象、演奏法决定融合度、八度叠合、染色、木管透出三条件，出处都在中册第七章（p0028–0045，例 VII-15 到 VII-19）。这里补第七章里 SKILL 没展开的三件事。
-
-### 4.1 十五度（以上）线条（p0048–0051）
-
-古典时期已常见，通常用木管组**不同类的高音与低音乐器对置**（长笛短笛对大管英国管）。音色呈分离状态，音响略显空洞，**带某种诙谐情趣**（p0048）。原型乐器与其变种乐器不同音区作十五度对置有时别出心裁：短笛在中高音区相距十五度重复长笛低音区旋律的骨架音，空旷的音响空间渲染惆怅凄婉（p0050）；短笛与大管相距三个八度叠合，带绮丽的异国情调（p0051）。
-**用法**：要"空"、要"谐"、要"异域"，用十五度而不是八度；要"厚"，别用。
-
-### 4.2 多层八度：同类乐器很少这样写（p0052）
-
-同一类乐器演奏的多层八度线条颇罕见，因为同类乐器在不同音区的特性差异让各层很难在音色与力度上均衡；木管里只有单簧管勉强可以，且下层仍处不利音区（p0052）。多层八度要用不同类乐器分层。
-
-### 4.3 音型化织体里木管的气息（p0081、p0085）
-
-音型化线条绵延不绝、"无隙可寻"时，气息支持力成为问题（p0081）。两条解法：
-- **不同乐器声部交替演奏**同一句型（双层交错的密集分解和声里单簧管与长笛交替），既易奏又解决呼吸，音色始终一致、音质均匀透明（p0081）。
-- ★ **呼吸轮换法**：多层音型化织体里，各声部在不同时间点轮换呼吸，总体音响不断（p0085）。
-配套：把飞速下行的断奏琶音交给木管组最灵活的"炫技型"乐器短笛、长笛、单簧管（p0081）。MIDI 里没有气息问题，但 §5.3 说过要给虚拟乐手留呼吸口，理由相同：没有换气的木管线条听起来不像人吹的。
+> The textbook basis for `SKILL.md` §3.1, "Unison blending," is in the section "Unison and Octave Tutti."
 
 ---
 
-## 5. MIDI 配器速查（Pejrolo）
+### 3.1 How new color enters (p0019)
 
-### 5.1 配器真正会用到的 CC
+In a melody with accompaniment, the accompaniment's color often contrasts with the soloist, sometimes strongly; but in many cases a successful accompaniment is played by **instruments the same as or similar to the soloist's** (p0019). There are two customary ways to change color:
+1. **Assign a newly beginning phrase (including one starting on a weak beat) to a new instrument**;
+2. ★ **Place a rest before the new color enters.**
+The second point is the one AI orchestration most often omits: timbres stack layer upon layer without ever stopping, so when the new color enters there is no "breathing space," and what is heard is a wall. The four methods for seams are in SKILL §3.6.
 
-128 个 CC 的完整规格在 `pejrolo-midi-orch` 的表 1.2（p0027–0031）。
-**做配器只需要下面这几个**：
+## 4. Yang Liqing middle volume: three widths of line and woodwind breath (p0028–0085)
 
-| CC# | 名称 | 配器上的用途 |
+The neutralization phenomenon, playing technique determining blend, octave coupling, coloring, and the three conditions for woodwind projection in SKILL §3 all have their sources in Chapter 7 of the middle volume (p0028–0045, examples VII-15 to VII-19). Here are three things from Chapter 7 that SKILL did not expand on.
+
+### 4.1 Fifteenth (and above) lines (p0048–0051)
+
+Already common in the Classical period, usually using **contrasting high and low instruments of different woodwind types placed in opposition** (flute and piccolo against bassoon and cor anglais). The timbres stay separate, the sound is slightly hollow, **with a certain humorous flavor** (p0048). The original instrument and its variant, placed a fifteenth (two octaves) apart in different registers, can be inventive: the piccolo, in the middle-to-high register and two octaves apart, repeats the skeleton tones of a low-register flute melody, and the open sonic space conveys melancholy and sorrow (p0050). Piccolo and bassoon combined at three octaves apart carry an exotic, colorful flavor (p0051).
+**Usage**: for "emptiness," "wit," or "exoticism," use the fifteenth rather than the octave; for "thickness," do not use it.
+
+### 4.2 Multi-layer octaves: rarely written for same-type instruments (p0052)
+
+Multi-layer octave lines played by one instrument type are rare, because the differing character of each type across registers makes it hard for the layers to balance in timbre and dynamics. Among the woodwinds, only the clarinet can barely manage it, and even then the lower layer sits in an unfavorable register (p0052). Multi-layer octaves should use different instrument types for each layer.
+
+### 4.3 Woodwind breath in figurated textures (p0081, p0085)
+
+When a figurated line flows on without end and "offers no gap," breath support becomes a problem (p0081). Two solutions:
+- **Alternate playing the same phrase between different instrument parts** (in a double-layered, interlaced dense broken harmony, clarinet and flute alternate). This is easy to play, solves the breathing problem, and keeps the timbre consistent and evenly transparent (p0081).
+- ★ **Breath rotation**: in multi-layer figurated textures, each part breathes at different points in time, so the overall sound continues without interruption (p0085).
+Supporting point: give fast descending staccato arpeggios to the most agile "virtuoso" woodwinds: piccolo, flute, and clarinet (p0081). MIDI has no breath problem, but §5.3 notes that virtual players need breath points for the same reason: woodwind lines without breathing do not sound like they were played by a human.
+
+---
+
+## 5. MIDI orchestration quick reference (Pejrolo)
+
+### 5.1 CCs that orchestration actually uses
+
+The full specification of the 128 CCs is in Table 1.2 of `pejrolo-midi-orch` (p0027–0031).
+**For orchestration you need only the following:**
+
+| CC# | Name | Use in orchestration |
 |---|---|---|
-| **1** | 调制 | 通常控制 LFO 产生的**颤音**；某些音色库拿它控音量——**用前必须确认该库的映射** |
-| **2** | 呼吸 | 管乐库常用作气息/力度 |
-| **7** | 音量 | 通道整体音量（**不要用它做乐句内的起伏**，那是 CC11 的事） |
-| **11** | 表情 | **乐句内的力度起伏靠它**——弦乐和管乐的"活"主要来自这条曲线 |
-| **64** | 延音踏板 | 键盘类 |
-| **68** | 连奏踏板开关 | 制造**连奏**（相邻音符间无间断）。只有开关两态：0–63 关，64–127 开 |
-| **71** | 声音控制器 2 | 控制 **VCF 随时间变化的包络**，通常被称为"谐振（Resonance）" |
-| **72** | 声音控制器 3 | 控制 **VCA 的释音阶段**（每个音符的延音时间） |
-| **73** | 声音控制器 4 | 控制 **VCA 的起音阶段**（波形到达最大幅度的时间） |
-| **74** | 声音控制器 5 | 控制 **VCF 截止频率**——**改变声音的亮度** |
-| **84** | 滑音控制 | 控制滑音的大小 |
-| **91** | 效果 1 深度 | 通常是**混响发送量** |
-| **93** | 效果 3 深度 | 通常是合唱发送量 |
+| **1** | Modulation | Usually controls the **vibrato** produced by an LFO; some sample libraries use it to control volume. **Confirm the library's mapping before use** |
+| **2** | Breath | Commonly used by wind libraries for breath/dynamics |
+| **7** | Volume | The channel's overall volume (**do not use it for shaping within a phrase**; that is CC11's job) |
+| **11** | Expression | **Dynamic shaping within a phrase is done with this.** The "life" of strings and winds comes mainly from this curve |
+| **64** | Sustain pedal | Keyboard instruments |
+| **68** | Legato pedal switch | Creates **legato** (no break between adjacent notes). Only two states: 0–63 off, 64–127 on |
+| **71** | Sound controller 2 | Controls the **VCF envelope over time**, commonly called "Resonance" |
+| **72** | Sound controller 3 | Controls the **release stage of the VCA** (the note's sustain time) |
+| **73** | Sound controller 4 | Controls the **attack stage of the VCA** (the time for the waveform to reach maximum amplitude) |
+| **74** | Sound controller 5 | Controls the **VCF cutoff frequency**: **changes the brightness of the sound** |
+| **84** | Portamento control | Controls the amount of glide |
+| **91** | Effect 1 depth | Usually the **reverb send level** |
+| **93** | Effect 3 depth | Usually the chorus send level |
 
-**★ 最要紧的一条**：`CC7` 与 `CC11` 分工不能混。
-CC7 定这一轨在配器里的**位置**（属于 `mc-mix-intent` 的声场决策），
-CC11 定**这一句怎么呼吸**（属于本 skill 的演奏法决策）。
-两个混用就会出现"推了推子但乐句还是死的"。
+**★ The most important rule**: the division of labor between `CC7` and `CC11` must not be confused.
+CC7 sets the **position** of this track in the orchestration (a sound-field decision belonging to `mc-mix-intent`);
+CC11 sets **how this phrase breathes** (a playing-technique decision belonging to this skill).
+Mixing the two produces the result "I pushed the fader, but the phrase is still dead."
 
-### 5.2 其余 CC 分类（备查）
+### 5.2 Other CC categories (for reference)
 
-| 区间 | 内容 |
+| Range | Content |
 |---|---|
-| CC0 / CC32 | 库选择（需联合使用才能发送大于 128 的库编号） |
-| CC69 | 延音踏板 2——踩下时音符**不延长**，但按各自释音时间渐弱消失 |
-| CC75–79 | 声音控制器 6–10，厂商自定义 |
-| CC80–83 | 通用开关控制器（0–63 关 / 64–127 开） |
-| CC85–90、CC102–119 | 未定义 |
-| CC92 / 94 / 95 | 效果 2/4/5 深度（颤音 / 柔音失谐 / 相位） |
-| CC96 / 97 | 数据增量 / 减量 |
-| CC98–101 | NRPN / RPN 的高低有效位 |
-| CC120–127 | 通道模式信息（全部声音关、重置控制器、本地开关、全部音符关、omni、单音/复音） |
+| CC0 / CC32 | Bank select (must be used together to send bank numbers above 128) |
+| CC69 | Sustain pedal 2: when pressed, notes are **not prolonged**, but fade out according to their own release times |
+| CC75–79 | Sound controllers 6–10, manufacturer-defined |
+| CC80–83 | General-purpose switch controllers (0–63 off / 64–127 on) |
+| CC85–90, CC102–119 | Undefined |
+| CC92 / 94 / 95 | Effect 2/4/5 depth (tremolo / celeste detune / phaser) |
+| CC96 / 97 | Data increment / decrement |
+| CC98–101 | NRPN / RPN least and most significant bytes |
+| CC120–127 | Channel mode messages (all sound off, reset controllers, local on/off, all notes off, omni, mono/poly) |
 
-### 5.3 让采样活起来：Pejrolo 的落地清单（p0112–0114、p0138–0142、p0166–0168、p0210–0211）
+### 5.3 Bringing samples to life: Pejrolo's implementation checklist (p0112–0114, p0138–0142, p0166–0168, p0210–0211)
 
-SKILL §7 说 MIDI 假是因为省掉了演奏员的决策，这里是把决策补回去的手段，按"先选音色、再写、再修"排。
+SKILL §7 says MIDI sounds fake because it omits the player's decisions. This section gives the means to restore those decisions, ordered as "choose the timbre first, then write, then fix."
 
-**① 选音色层与切换法（p0138–0141）**
-- 逼真的秘诀是**音色不能静态**：同一个音重复奏时起音、释音、泛音都随力度变。多层采样按力度分层（书中例子 pp 1–39、mf 40–90、ff 91–127），层越多越准，代价是内存与 CPU。
-- ★ **用 CC#1 代替力度做层间交叉淡化**，层与层之间才是无缝的；力度触发是台阶。
-- 琴键切换（延音、拨奏、断奏放在音域外的琴键上）两种录法：**边弹边切**省时间但快句易错；**先用延音录完整个声部、再加录一遍切换**减轻同时做两件事的压力。大制作用后者。
+**① Sample layers and keyswitching methods (p0138–0141)**
+- The secret of realism is that **timbre must not be static**: when the same note is repeated, the attack, release, and overtones all change with velocity. Multi-layer samples are split by velocity (in the book's example: pp 1–39, mf 40–90, ff 91–127). More layers are more accurate, at the cost of memory and CPU.
+- ★ **Use CC#1 instead of velocity for crossfading between layers**; only then are the transitions between layers seamless, whereas velocity triggering produces steps.
+- Keyswitches (sustain, pizzicato, staccato, placed on keys outside the playing range) have two recording methods: **switching while playing** saves time but fast phrases are error-prone; **recording the full part with sustain first, then recording a second pass for the switches**, reduces the pressure of doing two things at once. Large productions use the latter.
 
-**② 叠音色（p0141–0142、p0168）**
-- 一个音色库常不够，把不同库叠在同一声部上，为的是凝聚力、去掉循环感、得到新的泛音。
-- 干湿比：**快而忙的乐段 70% 干 30% 湿；延音与音垫 30% 干 70% 湿**；再叠 5%–10% 老式波表音色，磨掉采样的刺耳、加共鸣。
-- 叠完把各层声像**错开 ±5**（0–127 制），建立自然分割。
-- ★ **每个弦乐组叠一件真乐器**（小提琴组一把真小提琴，中提琴、大提琴同理），真乐器的失谐与杂音给 MIDI 注入生命；别叠十几件。真乐手每人录 3–4 遍。木管同理，萨克斯尤其，它是虚拟环境里最难重现的一件（p0211）。
-- 独奏声部**绝不用合成弦乐**，至少用高级独奏采样库（p0167）。
+**② Layering timbres (p0141–0142, p0168)**
+- One sample library is often not enough. Layering different libraries on the same part gives cohesion, removes the feeling of a loop, and produces new overtones.
+- Wet/dry ratio: **for fast, busy passages, 70% dry and 30% wet; for sustained notes and pads, 30% dry and 70% wet**. Add 5%–10% of an old-style wavetable timbre to smooth out the harshness of the samples and add resonance.
+- After layering, **offset the pan positions of the layers by ±5** (on a 0–127 scale) to establish a natural separation.
+- ★ **Layer one real instrument into each string group** (one real violin in the violin section, and likewise for viola and cello). The detuning and noise of real instruments inject life into MIDI; do not layer a dozen. Real players each record 3–4 takes. The same applies to the winds, and especially the saxophone, which is the hardest to reproduce in a virtual environment (p0211).
+- Solo parts **never use synthetic strings**; use at least a high-end solo sample library (p0167).
 
-**③ 写的时候（p0167、p0210–0211）**
-- 弓法、连线写进谱面，连线比上下弓重要，它规定一弓里有几个音。
-- 平衡上**小提琴永远做得最重**，低弦自带力量；真弦乐队最少 11 人（6-2-2-1），录三遍叠成大编制，乐手换声部让融合更好。
-- 木管写作时把 MIDI 键盘想成**只有这件乐器的那几个音**，不是全键盘的钢琴；齐奏织体最难写真。
-- ★ **给"虚拟乐手"留乐句与停顿让他呼吸**，木管尤其。有条件用呼吸控制器或吹奏控制器（Yamaha WX、AKAI EWI）。
+**③ While writing (p0167, p0210–0211)**
+- Write bowing and slurs into the score. Slurs matter more than up/down bows, because they specify how many notes lie within one bow.
+- For balance, **the violin is always the loudest, since the lower strings carry their own power**. A real string ensemble has at least 11 players (6-2-2-1); record three takes and layer them into a large lineup, and having players switch parts helps the blend.
+- When writing for winds, think of the MIDI keyboard as having only the few notes of that instrument, not as a full piano keyboard. Unison textures are the hardest to make sound real.
+- ★ **Leave phrases and rests for the "virtual player" to breathe**, especially for winds. Where possible, use a breath controller or wind controller (Yamaha WX, AKAI EWI).
 
-**④ 修的时候（p0166、p0211）**
-- **CC#7 与 CC#11 联用重塑动态包络**，避免几个小节停在同一音量；CC#11 可以边弹边录，也可以录完从头回放再画。时间够就用 CC#11 修每个音的起音与释音（把一个声部拆成上弓音与下弓音两个通道）。
-- **力度到起音**：高力度快起音、低力度慢起音；**力度到滤波器**：低力度截止频率低音色暗，高力度打开滤波器音色亮。这两条让同一个采样在不同力度下不只是响度变。
-- 滑音控制器 CC#5（滑速）、CC#65（滑音开关）、CC#84；弱音踏板 CC#67。
-- **量化**：过量僵硬，不量化加懒散演奏就不稳；长音与延音弦乐可以完全不量化。起点用**负灵敏度 -60% 到 -70%、强度 80%**，仍不稳再提强度。
-- **自然噪声**：地板与椅子的吱嘎、翻谱声、木管的呼吸声，少量加进去；过量就成了"一群业余乐手"。
+**④ When fixing (p0166, p0211)**
+- **Use CC#7 and CC#11 together to reshape the dynamic envelope**, avoiding several bars that sit at the same volume. CC#11 can be recorded while playing, or drawn after recording and played back from the beginning. If time allows, use CC#11 to fix the attack and release of each note (splitting one part into a channel for down-bow notes and a channel for up-bow notes).
+- **Velocity to attack**: high velocity gives a fast attack, low velocity a slow one. **Velocity to filter**: at low velocity the cutoff frequency is low and the timbre dark; at high velocity the filter opens and the timbre brightens. These two make the same sample change in more than loudness at different velocities.
+- Pitch-bend controller CC#5 (glide rate), CC#65 (portamento switch), CC#84; soft pedal CC#67.
+- **Quantization**: over-quantizing sounds stiff, while without quantization a loose performance is unstable. Long notes and sustained strings can be left completely unquantized. For start points, use **negative sensitivity of −60% to −70% at 80% strength**; if still unstable, increase the strength.
+- **Natural noise**: floor and chair creaks, page turns, and wind breath sounds, added in small amounts. In excess they make it sound like "a group of amateur players."
 
-**⑤ 节奏组的几条（p0112–0114）**
-- 钢琴：古典爵士选圆润温暖的音色，流行摇滚选锋利明亮；钢琴暴露在前时圆润的更真。用 CC#66 延音踏板、CC#67 弱音踏板。混响古典 2.3–3.2 秒，爵士 2–2.5 秒。
-- 吉他：多采样库最好；琴键切换放滑弦、勾弦；忙碌的背景声部混响 1.5–1.7 秒，独奏或靠前的旋律可到 1.9 秒。
-- 贝司：声像保守放中央，低音区几乎不用混响；时不时加演奏噪声；重放大（reamp）去掉合成器的盒子味。
-- 鼓与打击：**用 MIDI 鼓垫不用键盘**录；每件乐器单独一轨，唯一例外是底鼓与军鼓可以一遍录下来，演奏感自然得多。
+**⑤ A few points on the rhythm section (p0112–0114)**
+- Piano: classical and jazz choose a round, warm timbre; pop and rock choose a sharp, bright one. When the piano is exposed in front, the round timbre is more realistic. Use CC#66 for the sustain pedal and CC#67 for the soft pedal. Reverb: classical 2.3–3.2 seconds, jazz 2–2.5 seconds.
+- Guitar: multi-sample libraries are best; use keyswitches for slides and pull-offs. Busy background parts take reverb of 1.5–1.7 seconds; solo or forward melodies can go up to 1.9 seconds.
+- Bass: keep panning conservative and centered; use almost no reverb in the low register; add performance noise from time to time; re-amp (reamp) to remove the "boxy" quality of the synthesizer.
+- Drums and percussion: **record with a MIDI drum pad, not a keyboard**. Each instrument gets its own track; the only exception is the kick and snare, which can be recorded in one pass for a much more natural feel.
 
 ---
 
-## 7–8. 民族管弦乐（另一个文件）
+## 7–8. Chinese folk orchestra (separate file)
 
-民族乐器法速查与民族管弦乐总谱写法在 [reference-minyue.md](reference-minyue.md)，
-小节号沿用 §7、§8，引用照旧。分开放是因为这两节合计三万余字，与西洋侧放在一个文件里读起来也不方便。
+The quick reference on folk instrument technique and the score-writing conventions for the folk orchestra are in [reference-minyue.md](reference-minyue.md).
+Bar numbers follow §7 and §8, and citations are unchanged. They are separated because these two sections together run over thirty thousand characters, which is also inconvenient to read alongside the Western material in the same file.
 
 ---
 
-## 9. 不在本 skill 的部分
+## 9. What is not part of this skill
 
-| 内容 | 去哪 |
+| Content | Where to go |
 |---|---|
-| 频段预算、谁和谁抢频率、让频 | `mc-texture-layering` |
-| 进场退场时机、能量曲线 | `mc-arrangement-arch` |
-| 合成器音色怎么做 | `mc-sound-design` |
-| 鼓贝吉键的真实化打法 | `mc-rhythm-section` |
-| 采样库的具体产品选型、键位切换（keyswitch）表 | 不归本包（用哪家音源由制作环境定） |
-| 总谱记谱规范、分谱制作 | L4 编译层（`mc-symbolic-score`）；其余不归本包 |
+| Frequency budgets, which parts compete for frequency, frequency carving | `mc-texture-layering` |
+| Timing of entrances and exits, energy curves | `mc-arrangement-arch` |
+| How to build synthesizer timbres | `mc-sound-design` |
+| Realistic drum, bass, guitar, and keys playing | `mc-rhythm-section` |
+| Specific sample-library product selection, keyswitch charts | Not part of this package (which sound source to use is determined by the production environment) |
+| Full-score notation conventions, part preparation | L4 compilation layer (`mc-symbolic-score`); others are not part of this package |

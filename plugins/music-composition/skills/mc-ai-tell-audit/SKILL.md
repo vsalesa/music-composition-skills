@@ -1,250 +1,250 @@
 ---
 name: mc-ai-tell-audit
-description: The post-generation AI-tell audit (AI 味诊断). Run this on every generated track before accepting it. Covers the fourteen enumerable defaults that generative music models fall into, which of them are machine-measurable and which need ears, why compliance rate and AI-tell count are two separate numbers that must never be merged, the zero-point calibration that sets the pass threshold at 82 rather than 60, the ordered diagnostic path from symptom to owning skill, and the remediation list. Use when a generation comes back and must be accepted or rejected, when a track sounds synthetic but you cannot say why, when deciding whether to accept a take, or when a high compliance rate still produced a bad result. AI 味、诊断、验收、听不出来是 AI、照做率、生成后检查。
+description: The post-generation AI-tell audit (AI-tell diagnosis). Run this on every generated track before accepting it. Covers the fourteen enumerable defaults that generative music models fall into, which of them are machine-measurable and which need ears, why compliance rate and AI-tell count are two separate numbers that must never be merged, the zero-point calibration that sets the pass threshold at 82 rather than 60, the ordered diagnostic path from symptom to owning skill, and the remediation list. Use when a generation comes back and must be accepted or rejected, when a track sounds synthetic but you cannot say why, when deciding whether to accept a take, or when a high compliance rate still produced a bad result. AI sound, diagnosis, acceptance, sounds like AI but can't say why, compliance rate, post-generation check.
 ---
 
-# AI 味诊断（AI-Tell Audit）
+# AI-Tell Audit
 
-**生成回来的每一条都要过这个 skill。这是本库的终检。**
+**Every generated take must go through this skill. This is the final check of the library.**
 
-> **核心命题**：AI 味不是玄学。
-> **生成模型不给规格就走默认值，而这些默认值是可枚举的。**
-> 本 skill 就是那份枚举，加上"每一条怎么查、归谁管"。
+> **Core proposition**: the AI sound is not mysticism.
+> **Generative models fall back to default values when no spec is given, and those defaults can be enumerated.**
+> This skill is that enumeration, plus "how to check each one and who owns it".
 
-## 按任务读哪几节
+## Which sections to read for each task
 
-| 任务 | 读 |
+| Task | Read |
 |---|---|
-| 刚生成完，要验收 | §2 十四条 → §3 判定 |
-| "听着像 AI 但说不出哪里" | §2（★ **逐条查，不要凭直觉**） |
-| 照做率很高但结果不好 | §4 |
-| 要定阈值 | §3.2 零点校准 |
-| 查出问题了要改 | §5 整改路径 |
-| 人声的四条怎么查 | §6 |
+| Just generated, need to accept | §2 the fourteen items → §3 judgment |
+| "Sounds like AI but can't say where" | §2 (★ **check item by item, don't rely on intuition**) |
+| High compliance rate but a bad result | §4 |
+| Setting the threshold | §3.2 zero-point calibration |
+| Problems found and need fixing | §5 remediation path |
+| How to check the four vocal items | §6 |
 
-## 边界
+## Boundary
 
-| 不归这里 | 归哪 |
+| Not covered here | Covered by |
 |---|---|
-| 规格**写完**时的检查 | `mc-workflow` §3.0 的 20 条自查表 |
-| 照做率怎么算 | 本 skill §3.1（定义与标定）；honors 三档怎么影响计分见 `mc-render-compile` §6 |
-| 具体怎么改 | 各 L1/L2 skill（§5 给路由） |
-| 后端做不到的字段怎么办 | `mc-render-compile` §6、§7 |
+| Checking the spec **when it is finished being written** | The 20-item self-check table in `mc-workflow` §3.0 |
+| How the compliance rate is calculated | This skill §3.1 (definition and calibration); how the three honors tiers affect scoring is in `mc-render-compile` §6 |
+| Specifically how to fix things | Each L1/L2 skill (§5 gives the routing) |
+| What to do about fields the backend cannot do | `mc-render-compile` §6, §7 |
 
-> ★ **与 20 条自查的分工**：
-> **自查问"规格写完没有"，本 skill 问"生成出来的东西像不像人做的"。**
-> **两边都看过才算完。** 17 条全过的规格照样可能生成出满是 AI 味的音频。
-
----
-
-## 1. 动笔前必填
-
-| 必填 | 问法 |
-|---|---|
-| **① 这一版的规格与种子** | 没记录就没法复现，**审计结果也就没用** |
-| **② 后端的 honors 表** | 哪些项是它做不到的——**那些不算它的账** |
-| **③ 有没有分轨** | 人声四条（§6）需要先分离人声轨 |
+> ★ **Division of labor with the 20-item self-check**:
+> **The self-check asks "is the spec written?"; this skill asks "does the generated output sound like something a human made?"**
+> **Both must be checked to be complete.** A spec that passes all 17 checks can still generate audio full of AI sound.
 
 ---
 
-## 2. ★ 十四条枚举
+## 1. Required before starting
 
-**逐条打勾。不要凭整体印象。**
+| Required | Question to ask |
+|---|---|
+| **① The spec and seed for this version** | Without a record it cannot be reproduced, **so the audit result is also useless** |
+| **② The backend's honors table** | Which items it cannot do — **those are not counted against it** |
+| **③ Whether stems are available** | The four vocal items (§6) need the vocal stem separated first |
 
-| # | AI 味来源（后端默认值） | 对抗的 spec 字段 | 可自动测 | 归谁管 |
+---
+
+## 2. ★ The fourteen enumerated items
+
+**Tick each one. Don't go by overall impression.**
+
+| # | Source of AI sound (backend default) | Spec field it counters | Automatically testable | Owned by |
 |---|---|---|---|---|
-| **1** | 段落全是 8 的整数倍 | `form[].bars` | ✅ 段落边界检测 | `mc-arrangement-arch` §4 |
-| **2** | **能量曲线单调递增，从不减** | `energy_curve`、`subtraction_events` | ✅ 分段 RMS | `mc-arrangement-arch` §2、§3 |
-| **3** | 编制从头到尾不变 | `roster[].entry/exit` | ✅ 分轨 onset 密度 | `mc-arrangement-arch` §5 |
-| **4** | 全曲一个和声循环到底 | bridge 必须离调或转调 | ✅ 和弦识别 | `mc-harmony`、`mc-modulation` |
-| **5** | fill 刻板落在 4 的倍数 | `fill_policy` | ✅ onset 峰值位置 | `mc-rhythm-section` §8 |
-| **6** | 没有非人声记忆点 | `hooks.arrangement_hook` | ⚠️ 半自动（重复段落相似度） | `mc-arrangement-arch` §7 |
-| **7** | **动态压死、频谱质心恒定** | `dynamics`、`width_map` | ✅ DR／LRA、质心时序方差 | `mc-mix-intent` |
-| **8** | **网格化、无 push/pull** | `groove.push_pull` | ✅ onset 相对网格偏移 | `mc-rhythm-section` §3 |
-| **9** | 时长永远 3:30，没有尾巴 | `target_duration` ＋ 结尾处理 | ✅ | `mc-arrangement-arch` §8 |
-| **10** | **每句同样的力度与咬字，没有气声、破音、rubato** | `vocal.delivery`、`dynamics_by_section` | ⚠️ 需分轨后测短时响度方差 | `mc-vocal-direction` §2、§4 |
-| **11** | **副歌三遍唱得一模一样** | `vocal.chorus_variation` | ✅ 人声轨分段相似度 | `mc-vocal-direction` §1④ |
-| **12** | **换气点不自然或听不到换气** | `vocal.breath_points` | ⚠️ 半自动 | `mc-vocal-direction` |
-| **13** | **ad-lib 均匀撒或干脆没有** | `vocal.ad_libs` | ⚠️ 半自动 | `mc-vocal-direction` |
-| **14** | **音准全中** | `vocal.pitch_policy` | ⚠️ 半自动（分轨后测音高偏移分布） | `mc-vocal-direction` §4 |
+| **1** | Sections are all multiples of 8 bars | `form[].bars` | ✅ Section boundary detection | `mc-arrangement-arch` §4 |
+| **2** | **Energy curve rises monotonically, never falls** | `energy_curve`, `subtraction_events` | ✅ Per-section RMS | `mc-arrangement-arch` §2, §3 |
+| **3** | Lineup stays the same from start to finish | `roster[].entry/exit` | ✅ Per-stem onset density | `mc-arrangement-arch` §5 |
+| **4** | One harmonic loop runs through the whole song | The bridge must modulate or change key | ✅ Chord recognition | `mc-harmony`, `mc-modulation` |
+| **5** | Fills mechanically land on multiples of 4 | `fill_policy` | ✅ Onset peak position | `mc-rhythm-section` §8 |
+| **6** | No non-vocal memorable hook | `hooks.arrangement_hook` | ⚠️ Semi-automatic (repeated-section similarity) | `mc-arrangement-arch` §7 |
+| **7** | **Dynamics squashed, spectral centroid constant** | `dynamics`, `width_map` | ✅ DR / LRA, temporal variance of the centroid | `mc-mix-intent` |
+| **8** | **Gridded, no push/pull** | `groove.push_pull` | ✅ Onset offset relative to the grid | `mc-rhythm-section` §3 |
+| **9** | Duration always 3:30, no tail | `target_duration` + ending treatment | ✅ | `mc-arrangement-arch` §8 |
+| **10** | **Every phrase has the same dynamics and articulation, no breathiness, distortion, or rubato** | `vocal.delivery`, `dynamics_by_section` | ⚠️ Needs stems, then measure short-term loudness variance | `mc-vocal-direction` §2, §4 |
+| **11** | **The chorus is sung identically all three times** | `vocal.chorus_variation` | ✅ Segment-level similarity of the vocal stem | `mc-vocal-direction` §1④ |
+| **12** | **Breath points unnatural or breaths inaudible** | `vocal.breath_points` | ⚠️ Semi-automatic | `mc-vocal-direction` |
+| **13** | **Ad-libs scattered evenly or absent entirely** | `vocal.ad_libs` | ⚠️ Semi-automatic | `mc-vocal-direction` |
+| **14** | **Pitch perfect throughout** | `vocal.pitch_policy` | ⚠️ Semi-automatic (distribution of pitch deviation after stem separation) | `mc-vocal-direction` §4 |
 
-> ★ **这张表一张三用**：本 skill 的骨架、AB 实验评判表的骨架、
-> 以及 20 条自查的来源。**改一处要同步三处。**
+> ★ **This table serves three purposes**: the skeleton of this skill, the skeleton of the A/B experiment judging sheet,
+> and the source of the 20-item self-check. **Change one place, and sync all three.**
 
-### 2.1 ★ 三条最容易漏、也最致命的
+### 2.1 ★ The three easiest to miss and most fatal
 
-**不是因为它们最难查，而是因为它们不难听——只是"不像人做的"。**
+**Not because they are the hardest to check, but because they are not hard to hear — they simply "don't sound human-made".**
 
-| # | 为什么致命 |
+| # | Why it is fatal |
 |---|---|
-| **2（能量只升不降）** | 实测 **62/62** 真实编曲都有下降。**这是命中率最高的一条强规则**，也是听感上最像 AI 的一条 |
-| **8（全部对齐网格）** | 实测 **62/62**。注意读法是"**不许全曲每一件都在网格上**"——鼓组绝对量化是允许的（→ `mc-rhythm-section` §2.0） |
-| **6（没有非人声记忆点）** | 它的症状是"听着还行但记不住"，**最容易通过所有其他检查**。缺它的歌听完就忘 |
+| **2 (energy only rises)** | Measured: **62/62** real arrangements all have drops. **This is the strong rule with the highest hit rate**, and the one that sounds most like AI |
+| **8 (everything aligned to the grid)** | Measured: **62/62**. Note the reading: "**not every instrument in the whole song may sit on the grid**" — absolute quantization of the drum kit is allowed (→ `mc-rhythm-section` §2.0) |
+| **6 (no non-vocal memorable hook)** | Its symptom is "sounds fine but is forgettable", and it **most easily passes all other checks**. A song missing it is forgotten as soon as it ends |
 
 ---
 
-## 3. 两个数，不许合并
+## 3. Two numbers, never merged
 
-### 3.1 定义
+### 3.1 Definitions
 
-| | 问什么 | 怎么得 | 范围 |
+| | What it asks | How it is obtained | Range |
 |---|---|---|---|
-| **照做率** | **后端照着规格做了多少** | 逐字段对照规格 | 0–100 |
-| **AI 味旗标数** | **成品有多少条机器指纹** | 本 skill §2 逐条打勾 | 0–14 |
+| **Compliance rate** | **How much the backend followed the spec** | Field-by-field comparison against the spec | 0–100 |
+| **AI-tell flag count** | **How many machine fingerprints the finished product has** | Tick each item in §2 | 0–14 |
 
-★ **绝对不要把它们合成一个分数。** 它们诊断的是不同的病：
+★ **Never combine them into one score.** They diagnose different illnesses:
 
 ```
-照做率高 + 旗标少  → 好，接受
-照做率高 + 旗标多  → ★ 规格本身写得像 AI（见 §4）
-照做率低 + 旗标少  → 后端自己干得不错，但你不可复现（见 §4.2）
-照做率低 + 旗标多  → 编译或后端选择有问题，回 mc-render-compile
+High compliance + few flags  → Good, accept
+High compliance + many flags → ★ The spec itself reads like AI (see §4)
+Low compliance + few flags   → The backend did well on its own, but you can't reproduce it (see §4.2)
+Low compliance + many flags  → Compilation or backend choice is the problem, go back to mc-render-compile
 ```
 
-### 3.2 ★ 零点校准：阈值为什么是 82 不是 60
+### 3.2 ★ Zero-point calibration: why the threshold is 82, not 60
 
-**不相关的、制作精良的成品在照做率表上得 63–66 分。**
+**Unrelated, well-made finished tracks score 63–66 on the compliance scale.**
 
-这是因为任何一首正常的歌都会"碰巧"满足一部分项（有拍速、有段落、有动态）。
-所以：
+This is because any normal song will "happen to" satisfy some items (it has a tempo, sections, dynamics).
+So:
 
-| 线 | 值 |
+| Line | Value |
 |---|---|
-| **零点**（不相关成品） | **63–66** |
-| **及格** | **70** |
-| **合格** | **82** |
+| **Zero point** (unrelated finished product) | **63–66** |
+| **Pass** | **70** |
+| **Qualified** | **82** |
 
-★ 上面三个数是**参考值**：零点是拿一份 City Pop 规格（112 BPM、10 段、114 小节）去比三首与它无关、制作精良的华语成品，按字段加权打分测的（63.4–66.4；同一规格比一段纯 MIDI 渲染的 demo 只有 39.5）。用来理解量级，不是交付门槛；逐字段对照时，照做率就是对照后的一个判断。
+★ The three numbers above are **reference values**: the zero point was measured by taking one City Pop spec (112 BPM, 10 sections, 114 bars), comparing it against three unrelated, well-made Chinese-language finished tracks, and scoring by field weighting (63.4–66.4; the same spec against a plain MIDI-rendered demo scored only 39.5). They serve to convey the order of magnitude, not as a delivery gate; in field-by-field comparison, the compliance rate is one judgment formed after comparing.
 
-★★ **一个踩过的坑**：把权重从**有区分度**的项（`boundaries`）挪到
-**没区分度**的项（`energy_shape`，不相关曲目也能拿 0.8），
-会**抬高所有人的分数**，包括零点基线（66→72）。
-**加权重要加在能区分的项上。**
+★★ **A pitfall I hit**: moving weight from a **discriminating** item (`boundaries`) to a
+**non-discriminating** item (`energy_shape`, which unrelated tracks also score 0.8 on)
+**raised everyone's score**, including the zero-point baseline (66→72).
+**Weight must be added to the items that can discriminate.**
 
-### 3.3 后端做不到的不算它的账
+### 3.3 Items the backend cannot do are not counted against it
 
-`honors: none` 的字段**排除计分，不是给 0 分**。
-详见 `mc-render-compile` §6.1——**这是一个正确性问题，不是口径问题**。
+Fields with `honors: none` are **excluded from scoring, not given a score of 0**.
+See `mc-render-compile` §6.1 for details — **this is a correctness issue, not a matter of accounting convention**.
 
 ---
 
-## 4. ★ 照做率高但仍然像 AI
+## 4. ★ High compliance rate but still sounds like AI
 
-**这是本 skill 存在的主要理由。**
+**This is the main reason this skill exists.**
 
-照做率只衡量"后端有没有照做"，**不衡量"规格本身好不好"**。
-规格写得像 AI，后端忠实执行，结果就是一首照做率 95 的 AI 歌。
+The compliance rate only measures "did the backend follow the spec", **not "is the spec itself good"**.
+If the spec reads like AI, the backend faithfully executes it, and the result is an AI song with a compliance rate of 95.
 
-### 4.1 规格像 AI 的四个征兆
+### 4.1 Four signs that the spec is AI-like
 
-| 征兆 | 查哪 |
+| Sign | Where to check |
 |---|---|
-| `intent.one_thing` 是**为了过 lint 填的**，念出来不像一句人话 | `mc-workflow` §1 的 S0 |
-| `reference_pair` 的 `borrow` 写得很泛（"借它的氛围"） | 同上。**"只借前奏的空"才叫写了** |
-| 每个段落的 `bars` **只是为了避开 8 的倍数**而选的怪数字 | `mc-arrangement-arch` §4——**非对称要有理由** |
-| 用的进行 / 转调命中了**套路警戒线**且没写理由 | `mc-progressions` §3、`mc-modulation` §6 |
+| `intent.one_thing` was **filled in to pass a lint** and doesn't read as a human sentence | S0 in `mc-workflow` §1 |
+| `reference_pair`'s `borrow` is very vague ("borrow its atmosphere") | Same as above. **"Borrow only the space of the intro" is what counts as written** |
+| Each section's `bars` is an odd number **chosen only to avoid multiples of 8** | `mc-arrangement-arch` §4 — **asymmetry needs a reason** |
+| The progression / key change used hits the **cliché warning line** with no reason given | `mc-progressions` §3, `mc-modulation` §6 |
 
-★ **共同点**：**规则被当成了要满足的条件，而不是要做的选择。**
-这正好是 AI 味的定义——**没有人做过选择**。
+★ **Common thread**: **rules were treated as conditions to satisfy, not choices to make.**
+This is exactly the definition of the AI sound — **no one made a choice**.
 
-### 4.2 照做率低但好听
+### 4.2 Low compliance rate but good sound
 
-**说明后端自己发挥得不错。可以接受这个成品，但要意识到：**
-- 你**不可复现**它
-- 你**不知道**是哪个决定让它好
-- 下一首得从头碰运气
+**This shows the backend did well on its own. You can accept this product, but be aware that:**
+- You **cannot reproduce** it
+- You **don't know** which decision made it good
+- The next track has to start from scratch and rely on luck
 
-★ **处理办法**：把这个成品逐字段反推成一份实测 ARR-SPEC（边听边填，测不准的标"估算"），
-看它和你原本的规格差在哪。**那个差值就是你学到的东西。**
+★ **How to handle it**: reverse-engineer this product field by field into a measured ARR-SPEC (fill it in while listening; mark anything you can't measure precisely as "estimated"),
+and see where it differs from your original spec. **That difference is what you have learned.**
 
 ---
 
-## 5. 整改路径
+## 5. Remediation path
 
-**按这个顺序，不要凭直觉跳。**
+**Follow this order. Don't jump by intuition.**
 
 ```
-听着"像 AI"
- └─ ① 逐字段对照规格，拿照做率
- └─ ② 逐条过 §2 的十四条，数出旗标数
-     ├─ 照做率低  → 查 honors
-     │   ├─ 这个字段该后端是 none → 不是它的错。换后端（YuE2 控制力最强）或接受
-     │   └─ 不是 none → 编译问题 → mc-render-compile §3
-     └─ 照做率高但旗标多 → ★ 规格本身的问题 → §4.1
+Sounds "like AI"
+ └─ ① Compare field by field against the spec, get the compliance rate
+ └─ ② Go through the fourteen items in §2 one by one, count the flags
+     ├─ Low compliance → check honors
+     │   ├─ This field is none for this backend → not its fault. Switch backend (YuE2 has the strongest control) or accept
+     │   └─ Not none → compilation issue → mc-render-compile §3
+     └─ High compliance but many flags → ★ problem with the spec itself → §4.1
 ```
 
-### 5.1 症状 → skill（速查）
+### 5.1 Symptom → skill (quick reference)
 
-| 症状 | 先查 |
+| Symptom | Check first |
 |---|---|
-| 平、没起伏 | `mc-arrangement-arch` §2 |
-| 糊、浑 | `mc-texture-layering` §4（★ **先查持续音，不是先怪鼓**） |
-| 主角不突出 | `mc-texture-layering` §3 四条深度线索 |
-| 机械、太准 | `mc-rhythm-section` §2 ＋ `mc-vocal-direction` §4 |
-| 听着还行但记不住 | `mc-arrangement-arch` §7（`arrangement_hook` 是不是空的） |
-| 第二遍副歌和第一遍一样 | `mc-arrangement-arch` §6 ＋ `mc-vocal-direction` §1④ |
-| 人声埋在伴奏里 | **先查音准**（`mc-vocal-direction` §4.1），再查频段 |
-| 贝斯在手机上消失 | `mc-sound-design` §6 差音 |
-| 结尾突兀 / 淡出了事 | `mc-arrangement-arch` §8；★ 检查 `exclude` 里有没有排除 `fade out ending` |
-| 技术上干净但情绪不对 | `mc-mix-intent` §3.1（`mood` 是不是没写） |
-| 和声一个循环到底 | `mc-harmony` §7、`mc-modulation` |
+| Flat, no rise and fall | `mc-arrangement-arch` §2 |
+| Muddy, murky | `mc-texture-layering` §4 (★ **check sustained sounds first, don't blame the drums first**) |
+| Lead isn't prominent | `mc-texture-layering` §3 four depth cues |
+| Mechanical, too precise | `mc-rhythm-section` §2 + `mc-vocal-direction` §4 |
+| Sounds fine but can't remember it | `mc-arrangement-arch` §7 (is `arrangement_hook` empty?) |
+| Second chorus identical to the first | `mc-arrangement-arch` §6 + `mc-vocal-direction` §1④ |
+| Vocal buried in the accompaniment | **Check pitch first** (`mc-vocal-direction` §4.1), then the frequency bands |
+| Bass disappears on phones | `mc-sound-design` §6 difference tones |
+| Abrupt ending / a fade-out that just stops | `mc-arrangement-arch` §8; ★ check whether `exclude` rules out `fade out ending` |
+| Technically clean but the mood is wrong | `mc-mix-intent` §3.1 (was `mood` left unwritten?) |
+| Harmony loops one cycle the whole way | `mc-harmony` §7, `mc-modulation` |
 
 ---
 
-## 6. 人声四条（#10、#12、#13、#14）
+## 6. The four vocal items (#10, #12, #13, #14)
 
-**这四条都需要先把人声轨分离出来。**
+**All four require the vocal stem to be separated first.**
 
-### 6.1 分轨
+### 6.1 Stem separation
 
-用任何分轨工具把人声轨分出来即可（demucs 一类，或用户生成载体自带的分轨，通常分成人声/贝斯/鼓/其余）。
-本 skill 不预设哪一个。
+Use any stem separation tool to isolate the vocal stem (demucs-type, or the stem split that the generation platform itself provides, usually into vocals / bass / drums / other).
+This skill does not presume which one.
 
-> ★ **这是分轨在本库里少数必要的场合之一**：
-> 多轨语料（Cambridge-MT）给不了"Suno 唱出来的人声"，只能从生成结果里分。
+> ★ **This is one of the few places in this library where stem separation is necessary**:
+> multitrack corpora (Cambridge-MT) cannot provide "vocals sung by Suno", so they must be separated from the generated result.
 
-### 6.2 分轨之后测什么
+### 6.2 What to measure after separation
 
-| # | 测什么 | 判据 |
+| # | What to measure | Criterion |
 |---|---|---|
-| **10** 力度 | 人声轨的**短时响度方差** | 方差接近 0 = 全程一个力度 |
-| **11** 副歌雷同 | 各遍副歌人声轨的**分段相似度** | 相似度过高 = 原样复制 |
-| **12** 换气 | 句间的低能量段 | ⚠️ 半自动，目前靠听 |
-| **13** ad-lib | 装饰性发声的分布 | ⚠️ 半自动。**均匀 = 撒的，不是唱的** |
-| **14** 音准 | **音高偏移的分布** | ⚠️ 半自动。**全部落在 ±5 音分内 = 修过头/生成的** |
+| **10** Dynamics | **Short-term loudness variance** of the vocal stem | Variance near 0 = one dynamic level throughout |
+| **11** Chorus similarity | **Segment-level similarity** of the vocal stem across chorus repetitions | Similarity too high = copied as-is |
+| **12** Breaths | Low-energy segments between phrases | ⚠️ Semi-automatic, currently done by ear |
+| **13** Ad-libs | Distribution of decorative vocalizations | ⚠️ Semi-automatic. **Evenly spaced = scattered, not sung** |
+| **14** Pitch | **Distribution of pitch deviation** | ⚠️ Semi-automatic. **All within ±5 cents = over-corrected / generated** |
 
-### 6.3 ⚠ 现状
+### 6.3 ⚠ Current status
 
-**#12、#13、#14 靠人工听，这是刻意的选择，不是漏了一步。**
+**#12, #13 and #14 are checked by ear. This is a deliberate choice, not a missed step.**
 
-这三条测的是换气的能量谷、装饰音的分布、音高偏移的分布，它们的自动判据都要按生成模型分别标定阈值，不同模型的基线差得远，硬套一个统一数字容易把唱得好的判成有问题。人工听一遍这三条本来就很快，也正是耳朵天然比机器灵的地方，不算额外负担。
-
----
-
-## 7. 验收清单
-
-**每一条生成结果都要过。**
-
-- [ ] 记录了**规格版本与种子**
-- [ ] 逐字段对照过规格，照做率心里有数
-- [ ] **逐条**过了 §2 的十四条，**数出了旗标数**（不是凭印象）
-- [ ] `honors: none` 的项**被排除计分**，不是给 0
-- [ ] 照做率高但旗标多的话，查过 §4.1 的四个征兆
-- [ ] 人声四条至少**人工听过一遍**
-- [ ] ★ **耳朵是最后介入的**：A/B 打乱 → 成对比较 → **同一对听两遍看结论稳不稳**
-- [ ] 结论两遍不一致 → **这个差异不存在，别改**
+These three measure energy valleys for breaths, the distribution of ornamentation, and the distribution of pitch deviation. Their automatic criteria would each need thresholds calibrated per generation model, since baselines differ widely between models, and forcing one universal number easily flags well-sung takes as problematic. Listening through these three by ear is quick anyway, and it is where the ear is naturally better than a machine, so it is not an extra burden.
 
 ---
 
-## 附：来源
+## 7. Acceptance checklist
 
-- 实测数据（§2.1 的 62/62、下面的 22% 与 5/7）：在 Cambridge-MT 多轨 62 首自然抽样上统计；5/7 是其中 7 首人工标注段落边界的真值
-- 零点 63–66：见 §3.2
-- 本 skill 的十四条全部可以人工判
-- 十四条里 1–5、7–9、11 有音频分析就能机器算，**6、10、12、13、14 是人工项**
+**Every generated result must pass through this.**
 
-> ★ **一条方法论提醒**（踩过的坑）：
-> 指标测不准时，**不要拿指标去推翻教科书，先问指标测的是不是那回事**。
-> 例：「最高潮前应有能量回落」在全量 62 首里只有 22%，但在 7 首人工标注真值里是 5/7——
-> 差距来自算法用能量峰值定位"最高潮"，而人耳不是。
-> **22% 那个数测的不是这条规则。**
+- [ ] Recorded the **spec version and seed**
+- [ ] Compared field by field against the spec; the compliance rate is clear
+- [ ] **Item by item** went through the fourteen items in §2 and **counted the flag number** (not by impression)
+- [ ] Items with `honors: none` were **excluded from scoring**, not given 0
+- [ ] If the compliance rate is high but flags are many, checked the four signs in §4.1
+- [ ] The four vocal items were **listened to by a human at least once**
+- [ ] ★ **The ear intervenes last**: A/B shuffled → paired comparison → **listen to the same pair twice to see whether the conclusion holds steady**
+- [ ] If the two listens disagree → **the difference does not exist, don't change anything**
+
+---
+
+## Appendix: Sources
+
+- Measured data (the 62/62 in §2.1, the 22% and 5/7 below): statistics over 62 naturally sampled tracks from Cambridge-MT multitracks; 5/7 is the ground truth from 7 tracks whose section boundaries were manually annotated
+- Zero point 63–66: see §3.2
+- All fourteen items in this skill can be judged by a human
+- Among the fourteen, items 1–5, 7–9 and 11 can be computed by machine if audio analysis is available; **6, 10, 12, 13 and 14 are human-judged items**
+
+> ★ **A methodological reminder** (a pitfall I hit):
+> When a metric cannot measure something accurately, **don't use the metric to overturn the textbook; first ask whether the metric is measuring what you think it is.**
+> Example: "a drop in energy should occur before the climax" holds for only 22% of the full set of 62 tracks, but for the ground truth of the 7 manually annotated tracks it holds for 5/7 —
+> the gap comes from the algorithm locating the "climax" by energy peaks, which the human ear does not do.
+> **The 22% figure does not measure this rule.**

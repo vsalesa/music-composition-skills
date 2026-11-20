@@ -1,317 +1,296 @@
 ---
 name: mc-mix-intent
-description: Mix intent as a handoff artifact (混音意图) - stating what a mix must achieve so a human engineer, a DAW, or a generative backend can all act on it, without prescribing EQ or compressor settings. The five domains (time, frequency, level, stereo, depth) and the imagined sound stage, the four goals (mood, balance, definition, interest), where balance is required and where depth must be consistent instead, the two legitimate reasons to be unbalanced, why sustained pads mask far more than short percussive hits, and how to use reference tracks as calibration. Use when writing the mix_intent block of an ARR-SPEC, handing a session to an engineer, deciding what a backend can actually honor, or diagnosing a mix that is technically clean but emotionally wrong. Grounded in masking (low masks high), critical bands, temporal masking, localization cues and the precedence effect. 混音意图、声场、掩蔽、临界频带、平衡、参考曲目、交接。
+description: Mix intent as a handoff artifact - stating what a mix must achieve so a human engineer, a DAW, or a generative backend can all act on it, without prescribing EQ or compressor settings. The five domains (time, frequency, level, stereo, depth) and the imagined sound stage, the four goals (mood, balance, definition, interest), where balance is required and where depth must be consistent instead, the two legitimate reasons to be unbalanced, why sustained pads mask far more than short percussive hits, and how to use reference tracks as calibration. Use when writing the mix_intent block of an ARR-SPEC, handing a session to an engineer, deciding what a backend can actually honor, or diagnosing a mix that is technically clean but emotionally wrong. Grounded in masking (low masks high), critical bands, temporal masking, localization cues and the precedence effect. Keywords: mix intent, sound stage, masking, critical bands, balance, reference tracks, handoff.
 ---
 
-# 混音意图（Mix Intent）
+# Mix Intent
 
-**这个 skill 产出的是意图，不是参数。**
+**What this skill produces is intent, not parameters.**
 
-区别很要紧：
-- "人声 3 kHz +2 dB" 是**参数**——只有 DAW 能执行，换个后端就废了
-- "人声必须在最密的副歌里仍然是最清楚的元素，让路的是 pad 不是吉他" 是**意图**——
-  人类工程师能执行、DAW 能执行、文本后端能部分执行、验收时能逐项核对
+The distinction matters:
+- "Vocals +2 dB at 3 kHz" is a **parameter**. Only a DAW can execute it, and it is useless once the backend changes.
+- "The vocal must stay the clearest element in the densest chorus, and it is the pad that yields, not the guitar" is **intent**. A human engineer can execute it, a DAW can execute it, a text backend can partly execute it, and it can be checked item by item at acceptance.
 
-**本库只到意图为止。** EQ 频点、压缩比、母带链是混音的事，本包只给 `mix_intent` 这份意图。
+**This library stops at intent.** EQ frequencies, compression ratios and the mastering chain belong to mixing. This package supplies only the `mix_intent` block.
 
-## 按任务读哪几节
+## Which sections to read for each task
 
-| 症状／任务 | 读 |
+| Symptom / task | Read |
 |---|---|
-| 填 ARR-SPEC 的 `mix_intent` | §2–§4，然后 §8 |
-| 混音技术上干净但"不对" | §3.1 情绪 |
-| 不知道该不该追求平衡 | §4（**深度是要一致，不是平衡**） |
-| 声部互相盖 | §5 掩蔽（**多半是 pad 的问题，不是鼓的**） |
-| 要交给混音师 | §2 五领域 ＋ §8 的交接格式 |
-| 判断某个后端能吃多少 | §7 |
-| 想找参考曲目 | §6 |
+| Filling in the `mix_intent` of an ARR-SPEC | §2–§4, then §8 |
+| Mix is technically clean but "wrong" | §3.1 Mood |
+| Unsure whether to pursue balance | §4 (**depth should be consistent, not balanced**) |
+| Parts are covering each other | §5 Masking (**usually a pad problem, not a drum problem**) |
+| Handing off to a mix engineer | §2 five domains, plus the handoff format in §8 |
+| Judging how much a backend can take | §7 |
+| Looking for reference tracks | §6 |
 
-## 边界：什么不归这个 skill 管
+## Boundary: what this skill does not cover
 
-| 不归这里 | 归哪 |
+| Not covered here | Where it lives |
 |---|---|
-| EQ 频点、压缩比、混响参数、总线链、母带 | **混音**的事，本包只给 `mix_intent` 这份意图（交出去的字段与读法：`mc-workflow` §5） |
-| 频段冲突的**改写型**解法（换音区、减音符、交替） | `mc-texture-layering`（**先在那儿解，解不掉才来这儿**） |
-| 前景/中景/背景的结构规划 | `mc-texture-layering` §2 |
-| 人声该怎么唱 | `mc-vocal-direction` |
-| 和声/double 的声像具体方案 | `mc-vocal-direction` §6.2 |
-| 音色本身怎么设计 | `mc-sound-design` |
-| 鼓组**内部**各件的左右与高低布局 | `mc-rhythm-section` §6（本 skill 的声场图只定**鼓组整体**坐在哪） |
+| EQ frequencies, compression ratios, reverb parameters, bus chains, mastering | **Mixing**. This package supplies only the `mix_intent` block (for the fields handed off and how to read them, see `mc-workflow` §5) |
+| **Rewriting** solutions to frequency conflicts (changing register, removing notes, alternating) | `mc-texture-layering` (**solve it there first; only bring it here if it cannot be solved there**) |
+| Structural planning of foreground / midground / background | `mc-texture-layering` §2 |
+| How the vocal should be sung | `mc-vocal-direction` |
+| Concrete placement plans for harmony and doubled vocals | `mc-vocal-direction` §6.2 |
+| How to design the timbre itself | `mc-sound-design` |
+| Left/right and high/low layout of the individual pieces **inside** the drum kit | `mc-rhythm-section` §6 (this skill's sound-stage map only decides where the **drum kit as a whole** sits) |
 
-> ★ 与 `mc-texture-layering` 的分界（重复一遍，因为最容易混）：
-> **texture-layering 的解法是"改写"，mix-intent 的解法是"改混"。**
-> 能改写解决的不要留给混音。
-
----
-
-## 1. 动笔前必填
-
-| 必填 | 问法 |
-|---|---|
-| **① 情绪** | 一句话说这首混音要传达什么。**先写这条，它否决后面所有决定** |
-| **② 声场图** | 每件乐器的左右位置和前后位置（§2） |
-| **③ 主角序列** | 逐段写：这一段谁是最清楚的元素 |
-| **④ 让路关系** | 谁给谁让、在什么时候（`ducking_map`） |
-| **⑤ 参考曲目** | 至少一首，且说得出参考它的**哪一个具体方面** |
+> ★ Boundary with `mc-texture-layering` (repeated here because it is the easiest to confuse):
+> **The texture-layering solution is "rewrite"; the mix-intent solution is "remix".**
+> Anything a rewrite can solve should not be left to the mix.
 
 ---
 
-## 2. 五个领域与声场
+## 1. Required before starting
 
-混音过程必须涉及 **5 个主要领域** (p0089)：
-
-| # | 领域 |
+| Required | Question to answer |
 |---|---|
-| 1 | **时间（Time）** |
-| 2 | **频率（Frequency）** |
-| 3 | **电平（Level）** |
-| 4 | **立体声（Stereo）** |
-| 5 | **深度（Depth）** |
+| **① Mood** | One sentence on what this mix must convey. **Write this first; it overrules every later decision** |
+| **② Sound-stage map** | Left/right and front/back position of each instrument (§2) |
+| **③ Lead sequence** | Section by section: who is the clearest element in this section |
+| **④ Yielding relationships** | Who yields to whom, and when (`ducking_map`) |
+| **⑤ Reference tracks** | At least one, and be able to say **which specific aspect** of it you are referencing |
 
-> **立体声和深度共同构成"空间（Space）"** (p0089)。
+---
 
-**声场（Sound stage）**：
-> 混音应该呈现在一个**想象出来的声场**当中，各个乐器具有一定的**左右（立体声）**和
-> **前后（深度）**位置 (p0089)。
+## 2. Five domains and the sound stage
 
-**这就是交接格式的骨架**——一张声场图 + 五个领域各写一句，混音师就能开工。
+The mixing process must address **5 main domains** (p0089):
 
-**左右与前后各靠什么线索**（Howard & Angus）：
-- 声像电位器给的是**声级差**（p0112）；声级差主要对高频定位起作用，时间差主要对低频起作用，
-  **700 Hz–2.8 kHz 是两种线索的过渡区，定位能力最弱**（p0108）。
-  → 低频元素的 pan 基本无效，居中即可；要一件乐器"位置明确"，它得有 3 kHz 以上的成分。
-  失效条件：耳机监听（头中定位，p0109）。
-- 前后靠直达声与混响声的比例和时间间隔（p0261、p0264）；30 ms 内到达的延迟声不被单独听出，
-  定位仍在先导声（优先效应，p0110）；初始延时 10–20 ms 是自然的前后间隔，50 ms 就是回声（p0346）。
-  → 写深度只给"近／中／远"三档，不写毫秒。
+| # | Domain |
+|---|---|
+| 1 | **Time** |
+| 2 | **Frequency** |
+| 3 | **Level** |
+| 4 | **Stereo** |
+| 5 | **Depth** |
 
-**宏观 vs 微观** (p0089)：
+> **Stereo and depth together make up "space"** (p0089).
 
-| | 针对 | 例 |
+**Sound stage**:
+> A mix should be presented within an **imagined sound stage**, in which each instrument has a certain **left/right (stereo)** and
+> **front/back (depth)** position (p0089).
+
+**This is the skeleton of the handoff format**: one sound-stage map plus one sentence for each of the five domains, and the mix engineer can start work.
+
+**What cues place a sound left/right and front/back** (Howard & Angus):
+- A pan pot provides **level differences** (p0112). Level differences mainly work for localizing high frequencies, and time differences mainly work for low frequencies. **700 Hz–2.8 kHz is the transition zone between the two cues, where localization is weakest** (p0108).
+  → Panning low-frequency elements has essentially no effect, so centering them is enough. To make an instrument's position clear, it needs content above 3 kHz.
+  Failure condition: headphone monitoring (in-head localization, p0109).
+- Front/back position depends on the ratio and time gap between direct sound and reverberant sound (p0261, p0264). Delayed sound arriving within 30 ms is not heard separately, and localization stays with the leading sound (precedence effect, p0110). An initial delay of 10–20 ms is a natural front/back spacing; 50 ms is an echo (p0346).
+  → For depth, write only three values, "near / mid / far", not milliseconds.
+
+**Macro vs micro** (p0089):
+
+| | Targets | Example |
 |---|---|---|
-| **宏观混音** | 影响整个混音的元素 | 混音的频率平衡 |
-| **微观混音** | 每一个乐器声部单独处理 | 人声听上去是否自然 |
+| **Macro mixing** | Elements that affect the whole mix | The frequency balance of the mix |
+| **Micro mixing** | Each instrument part handled individually | Whether the vocal sounds natural |
 
-**本 skill 主要写宏观**——微观是混音师的手艺，不该由编曲规格单规定死。
+**This skill mainly specifies the macro level.** Micro work is the mix engineer's craft and should not be fixed by the arrangement spec.
 
 ---
 
-## 3. 四个目标
+## 3. Four goals
 
-混音有 4 个基本目标 (p0089)：
+A mix has 4 basic goals (p0089):
 
-| # | 目标 |
+| # | Goal |
 |---|---|
-| 1 | **情绪（Mood）** |
-| 2 | **平衡（Balance）** |
-| 3 | **清晰（Definition）** |
-| 4 | **趣味（Interest）** |
+| 1 | **Mood** |
+| 2 | **Balance** |
+| 3 | **Definition** |
+| 4 | **Interest** |
 
-> **评价混音时，先看它在各主要领域表现出的连贯性和吸引力，然后再分析对每个目标的完成度** (p0089)。
+> **When evaluating a mix, first look at the coherence and appeal it shows across the main domains, and only then analyze how fully it meets each goal** (p0089).
 
-### 3.1 ★ 情绪：它有否决权
+### 3.1 ★ Mood: it has veto power
 
-> 情绪指混音能否表达出音乐中含有的**情感因素** (p0090)。
+> Mood refers to whether the mix can express the **emotional content** contained in the music (p0090).
 
-两个反例，都很说明问题 (p0090)：
-- **深度压缩、极端均衡、吵闹的失真、军鼓过于强烈的打击感** → 毁掉一首**柔美的爵士**
-- **甜美的人声混响、过于和谐的鼓组、轻柔的吉他** → 毁掉一首**充满愤怒的重金属**
+Two counterexamples make the point clearly (p0090):
+- **Heavy compression, extreme EQ, noisy distortion, a snare that hits too hard** → ruins a **gentle jazz** piece
+- **Sweet vocal reverb, an overly harmonious drum kit, soft guitar** → ruins a piece **full of anger**, i.e. heavy metal
 
-注意第二个例子：**每一项单独看都是"好混音"的标志**，合起来却是错的。
-**技术上正确不等于情绪上正确。**
+Note the second example: **each item on its own looks like a sign of a "good mix", yet taken together they are wrong.**
+**Technically correct does not mean emotionally correct.**
 
-> **只擅长处理某种音乐风格的混音师，遇到其他风格时效果往往不佳** (p0090)。
+> **A mix engineer who is only good at one style of music often performs poorly on other styles** (p0090).
 
-**对本库的意义**：生成模型也是"只擅长某种风格的混音师"——
-它会把任何输入往它见得最多的那种平衡上拉。
-所以 `mix_intent.mood` 必须写死，且**在 prompt 里靠前**。
+**What this means for this library**: a generative model is also "a mix engineer who is only good at one style". It will pull any input toward whatever balance it has seen most.
+So `mix_intent.mood` must be fixed, and **placed near the front of the prompt**.
 
-### 3.2 清晰
+### 3.2 Definition
 
-> **清晰度代表着声音听上去是否清楚、可辨认** (p0090)。
+> **Definition describes whether a sound is heard as clear and identifiable** (p0090).
 
-落到规格单上就是 §1③ 的**主角序列**：逐段说清楚谁必须是可辨认的。
+On the spec sheet this becomes the **lead sequence** in §1③: section by section, state clearly who must be identifiable.
 
-清晰度本质上包含在分离度里：一件乐器清不清晰，看它能不能被听辨出来（可懂度），也看它听着自不自然，跟响不响关系不大 (p0260)。判据可以用两个反例检验：钢琴录得像从海底传出来，或者踩镲缺了基本的高频成分，这两种情况电平都可能正常，清晰度却塌了 (p0260)。
+Definition is essentially part of separation. Whether an instrument is clear depends on whether it can be heard and identified (intelligibility), and also on whether it sounds natural. How loud it is matters little (p0260). Two counterexamples test this: a piano recorded as if it came up from the bottom of the sea, or a hi-hat missing its basic high frequencies. In both cases the level may be normal, yet definition has collapsed (p0260).
 
-电平和清晰度常被当成简单正比："乐器电平越大，清晰度越高" (p0100)。但这条只在乐器本身频率健康时成立；一件频率本身有缺陷的乐器，提升电平只会让它变大，不会让它变清晰 (p0100)。诊断"这个声部不够清晰"时，先判断是响度不够还是频率有洞，再决定该不该推电平。
+Level and definition are often treated as simply proportional, "the louder the instrument, the clearer it is" (p0100). But this holds only when the instrument's own frequency content is healthy. An instrument with a defect in its frequency content only gets bigger when you raise its level, not clearer (p0100). When diagnosing "this part is not clear enough", first decide whether it is not loud enough or has a hole in its frequency content, and only then decide whether to raise the level.
 
-### 3.3 趣味
+### 3.3 Interest
 
-趣味往往来自**违反平衡**（见 §4.3），但违反平衡只是趣味的一种极端形式，趣味的机制更底层：耳朵会适应，声音长时间不变，注意力就会掉，只有变化才能把耳朵重新抓回来 (p0091)。主歌副歌反复、音轨加倍、配器改变，本质上都是靠制造变化撑住这份注意力 (p0091)。
+Interest often comes from **violating balance** (see §4.3), but violating balance is only one extreme form of interest. The underlying mechanism is more basic: the ear adapts, and when a sound stays unchanged for a long time, attention drops. Only change can pull the ear back (p0091). Repeating verses and choruses, doubling tracks, and changing instrumentation all work by creating change to sustain attention (p0091).
 
-混音能在编曲结构之上再叠一层变化，判据是"哪个段落有、哪个段落没有"，不涉及具体参数 (p0092)：
-- 某个声部只在特定乐段自动化推起来
-- 某件乐器只在特定乐段出现（例：小号只在主歌反复时进）
-- 同一件乐器换乐段换处理，让明暗随段落变化
-- 副歌把整体压得更狠，允许贝司失真
-- 军鼓在不同乐段配不同混响
+A mix can add a layer of change on top of the arrangement's structure. The test is "which section has it and which does not", without any specific parameters (p0092):
+- A part is pushed up through automation only in specific sections
+- An instrument appears only in specific sections (example: a trumpet enters only when the verse repeats)
+- The same instrument gets different processing in different sections, so brightness and darkness change with the section
+- The chorus squeezes the overall sound harder and allows the bass to distort
+- The snare gets different reverb in different sections
 
-风格决定该做到什么程度：氛围音乐要让人有兴趣但不能太抓耳朵；trance 靠同一主题反复，变化反而要做得更精细才不腻 (p0092)。
+Style decides how far to go: ambient music should hold interest without being too catchy; trance relies on repeating one theme, so its changes must be finer to avoid becoming tiresome (p0092).
 
-**写法**：这些变化点按段落写进 `focus_by_section[]`，不平衡类的写进 `deliberate_imbalance[]`（§4.3），都不要写成全曲统一的状态。
+**How to write it**: these change points go by section into `focus_by_section[]`. Unbalanced changes go into `deliberate_imbalance[]` (§4.3). None of them should be written as a single state applied to the whole piece.
+
+---
+## 4. Balance: where to seek it, and where not to
+
+### 4.1 Three domains where balance is sought (p0090)
+
+1. **Frequency balance**: a lack of mid and high frequencies makes a mix sound muddy and blurred, and makes the sound stage seem further away (p0090). The test is not to boost to a specific number. It is this: once the listening impression falls into the three words "muddy, blurred, distant", the mid and high frequencies are lacking.
+
+2. **Stereo image balance**: supported by level balance and frequency balance together, aiming for the overall image to be left/right symmetric (for example guitars, shakers, backing vocals) (p0252). "Balance" here refers to the **overall** image distribution. It does not require every single instrument to be centered. Centering is actually the position with the worst definition (see the localization cues in §2).
+
+3. **Level balance**: this means **relative level**, not absolute level. A mix assessment asks "how loud is this instrument relative to the others", not "how loud is this instrument by itself". Turning up the monitoring volume overall does not solve a relative-level problem (p0097). Relative level is usually set by how important the instrument is at that moment, and it must follow the song's progression. For example, the level of a lead guitar solo section should be higher than in the accompaniment sections (p0098).
+   Cost: if you press all the hits down to one level to make relative levels neat, the drum kit will sound like a "drum machine" and lose the timbral variation that comes from natural dynamics. Level balance does not mean uniform levels (p0388).
+
+### 4.2 ★ Depth should be **consistent**, not **balanced**
+
+> **Depth problems should be solved by consistency, not balance** (p0090).
+
+> Example: if the **kick drum sounds as close as an ear-level whisper while the snare sounds as far away as the neighbor's house**, the whole drum kit ends up with an **extremely distorted spatial layout in depth** (p0090).
+
+This is easily misread as "depth should also be centered". It is not.
+**Depth may be uniformly close or uniformly far overall, but within one group of sound sources it must be consistent.**
+
+**Self-check action**: list the instruments by group (drum kit, keyboard group, string group) and their depth values.
+**If the difference within a group is larger than the difference between groups, something is wrong.**
+
+Physically, "the same group" means sharing the same set of early reflections and reverb tail. Early reflections can differ for each position in the image, but the decay rate of the tail must be the same (Howard & Angus p0348–0350).
+
+### 4.3 Two cases where imbalance is allowed (p0090)
+
+1. **Creating a deliberate sonic effect**
+2. **Making the song interesting**
+
+> Example: in Delgados' "The Past That Suits You Best", the mix engineer Dave Fridmann placed the **drum kit and vocals entirely in one channel**, creating an effect that is unbalanced in stereo but compelling (p0090).
+
+> **Interesting imbalance is usually a momentary treatment**, such as doubling some low-frequency signal in a climactic passage of a dance track (p0090).
+
+**The phrase "usually momentary" is the key**: imbalance is an **event**, not a **state**.
+Imbalance across the whole piece is an error. Imbalance at one point is a technique.
+
+**How to write it**: imbalance goes into `mix_intent.deliberate_imbalance[]`, with **start and end bars** and a **reason**. Any imbalance without a bar range is treated as a mistake.
 
 ---
 
-## 4. 平衡：在哪三处求平衡，在哪一处不求
+## 5. Masking: why problems are usually in the pad, not the drums
 
-### 4.1 三个求平衡的领域 (p0090)
+> **Core principle of masking**: a loud sound masks a quiet sound;
+> one instrument's frequency range masks another instrument's frequency range (p0038).
 
-1. **频率平衡**：缺少中高频会让混音听上去浑浊、模糊，声像也显得更远 (p0090)。判据不是补到某个具体数值，是听感一旦落到"浑浊、模糊、变远"这三个词，就说明中高频欠了。
+But the most useful point is the following inference along the **time dimension**:
 
-2. **立体声声像平衡**：靠电平平衡与频率平衡两条撑起来，尽量让乐器整体上左右对称（例如吉他、沙锤、伴唱人声）(p0252)。这里说的"平衡"针对**整体**声像分布，不要求单件乐器必须居中，居中反而是清晰度最差的位置（见 §2 定位线索）。
+> - **Percussive instruments (such as the kick drum) sound for a short time and mask little**
+> - **Instruments that sustain (such as a sawtooth pad) fill the spectrum and the stereo space and mask a great deal** (p0038)
+> - ★ **Raising the level of a dense pad part brings more masking than raising the kick drum's level.
+>   A pad masking the kick is a major problem because it happens continuously** (p0038)
 
-3. **电平平衡**：这里指**相对电平**，不是绝对电平。混音评估问的是"相对于其他乐器，这件乐器有多响"，不是"这件乐器本身有多响"；把监听音量整体开大解决不了相对电平的问题 (p0097)。相对电平通常由乐器在这一刻的重要性决定，随歌曲进展要跟着调，例如主音吉他独奏段的电平就该比伴奏段更高 (p0098)。
-   代价：如果为了让相对电平整齐，把所有敲击都压到同一电平，鼓组会听起来像"鼓机"，丢掉原始力度带来的音色变化，电平平衡不等于电平统一 (p0388)。
+Howard & Angus explain these as mechanisms:
+- **Masking spreads upward: low frequencies readily mask high frequencies**, and the reverse is much weaker (p0239). So a pad's low frequencies do not only cover the kick; they mask everything above them. Hence "leave the low end of the pad empty" is the first cut.
+- Within the critical band containing the masking sound, the masking threshold is only about 20 dB below the masking sound (p0240). So yielding must be effective: a part counts as having "yielded" only when it is more than 20 dB quieter in the same frequency band. Being 3 dB quieter only makes it muddy.
+- **Temporal masking**: for 100–200 ms after a loud sound stops, a quiet onset remains inaudible. Backward masking (post-masking) lasts only about 10 ms and is almost nonexistent (p0241). The perceived loudness of a short hit is also discounted by its duration: sounds under 200 ms sound quieter the shorter they are (p0095).
+  → **When a vocal or hook enters right after a crash or fill, either leave a gap of ≥ 200 ms, or make its first note loud enough on its own.**
+  Self-check: find the entry point of each lead element, and check whether something louder has just ended within the 200 ms before it.
 
-### 4.2 ★ 深度要"一致"，不要"平衡"
+**Corollary (how this library uses it)**:
+When diagnosing "muddiness", **check the sustained sounds first, not the percussion**.
+Intuition always points to "the drums are too big", but by this principle the culprit is more likely the pad or the bed guitar that never stops.
 
-> **深度问题要做到一致，而非平衡** (p0090)。
-
-> 例：如果**底鼓声像近到贴脸，而军鼓远到邻居家**，会使整个鼓组产生
-> **在深度上极其扭曲的声像布局** (p0090)。
-
-这条容易被误读成"深度也要居中"。不是——
-**深度可以整体很近或整体很远，但同一个声源组内部必须一致。**
-
-**自检动作**：把乐器按组（鼓组、键盘组、弦乐组）分别列出深度值，
-**组内差异大于组间差异 → 错了。**
-
-物理上"同一组"就是共享同一套早期反射与混响拖尾：各声像位置的早期反射可以不同，
-但拖尾的衰减率必须相同（Howard & Angus p0348–0350）。
-
-### 4.3 两种可以不平衡的情况 (p0090)
-
-1. **做出创造性的音响效果**
-2. **让歌曲产生趣味**
-
-> 例：Delgados《The Past That Suits You Best》里，混音师 Dave Fridmann
-> 把**鼓组和人声的声像完全设置到一个声道当中**，创造出立体声上不平衡但很有魅力的效果 (p0090)。
-
-> **富于趣味的不平衡通常是瞬间上的处理**——例如舞曲的华彩段落里把一些低频信号加倍 (p0090)。
-
-**"通常是瞬间上的"这句是关键**：不平衡是**事件**，不是**状态**。
-全曲不平衡是错误，某一处不平衡是手法。
-
-**写法**：不平衡要写进 `mix_intent.deliberate_imbalance[]`，
-带**起止小节**和**理由**。没写小节范围的不平衡，一律当成失误。
+**The first-choice solution still lies upstream**: leave the pad's low-frequency range empty (a rewrite, `mc-texture-layering`), rather than pushing it down with sidechaining (a remix). **Sidechaining is for use only when a problem cannot be solved otherwise.**
 
 ---
 
-## 5. 掩蔽：为什么问题多半出在 pad 而不是鼓
+## 6. Reference tracks: this library's calibration tool
 
-> **掩蔽的核心原则**：响度高的声音会掩蔽响度低的声音；
-> 一件乐器的频率范围会掩蔽另一件乐器的频率范围 (p0038)。
+### 6.1 Six uses (p0051–0052)
 
-但真正有用的是下面这条**时间维度**的推论：
-
-> - **打击乐器（如底鼓）发声时间短，掩蔽作用较小**
-> - **持续发声的乐器（如锯齿波 pad）会占满频谱和立体声空间，掩蔽作用大** (p0038)
-> - ★ **提升密集 pad 声部的电平，比提升底鼓电平带来更多的掩蔽；
->   pad 掩蔽底鼓是持续发生的大问题** (p0038)
-
-Howard & Angus 把这几条讲成了机制：
-- **掩蔽向上延展：低频容易掩蔽高频**，反过来弱得多（p0239）→ pad 的低频不只盖底鼓，它往上盖住一切，
-  所以"pad 低频留空"是第一刀。
-- 掩蔽声所在的临界频带内，掩蔽阈只比掩蔽声低约 20 dB（p0240）→ 让路要让到位：
-  同频段轻 20 dB 以上才算"让"，轻 3 dB 只是变糊。
-- **时间掩蔽**：响声停止后 100–200 ms 内，轻的起音仍听不见；反向（后掩蔽）只有约 10 ms，几乎不存在（p0241）。
-  短打击音本身的响度也按时长打折——200 ms 以内的声音越短听着越轻（p0095）。
-  → **人声或 hook 紧跟 crash／fill 进入时，要么留出 ≥ 200 ms，要么让它的第一个音自己够响。**
-  自检：找每个主角的进入点，前 200 ms 内有没有更响的东西刚结束。
-
-**推论（本库的用法）**：
-诊断"糊"的时候，**先查持续音，不要先查打击乐**。
-直觉总是指向"鼓太大了"，但按这条，元凶更可能是那个一直在响的 pad 或垫底吉他。
-
-**首选解法仍然在上游**：让 pad 在低频区留空（改写，`mc-texture-layering`），
-而不是靠侧链把它压下去（改混）。**侧链是解决不掉时才用的。**
-
----
-
-## 6. 参考曲目：本库的校准手段
-
-### 6.1 六种用法 (p0051–0052)
-
-| 用法 | 说明 |
+| Use | Description |
 |---|---|
-| **作为模板仿效** | 极佳的训练方法，但**"模仿是创新最大的敌人"**；且作品类型差异会让模仿失效 |
-| **作为灵感来源** | 混音**开始前**播放，启迪方向 |
-| **陷入困境时的突破口** | 研究自己的混音与参考的**差别** |
-| **作为成品参考** | 完成后对照频响和电平 |
-| **校准耳朵** | 到不熟悉的环境先放熟悉的参考曲，摸清扬声器/房间/座位 |
-| **评估扬声器** | 放自己真正熟悉的作品，比商家放的流行乐管用 |
+| **As a template to imitate** | An excellent training method, but "imitation is the greatest enemy of creativity"; and differences in type of work can make imitation fail |
+| **As a source of inspiration** | Played **before** mixing starts, to spark direction |
+| **As a breakthrough when stuck** | Study the **differences** between your mix and the reference |
+| **As a finished-product reference** | After completion, compare frequency response and levels |
+| **Calibrating your ears** | In an unfamiliar environment, first play a familiar reference track to get to know the speakers, room and seating position |
+| **Evaluating speakers** | Play a work you know well yourself; this is more useful than the pop music a shop plays |
 
-### 6.2 选择与陷阱
+### 6.2 Selection and pitfalls
 
-- 参考曲目要**匹配混音类型**（做弦乐混音就找含弦乐的，做 chill-out 就找同类）(p0051)
-- 存成**无损格式**，不要 MP3 (p0051)
-- 最好包含**事先选好的片段**以便快速比较；可以加入**未经混音的音轨** (p0051)
-- ★ **注意母带处理的影响** (p0052)：经过母带的参考曲通常动态更质密
-  （一致的相对电平 + 更大的压缩），且频率特性可能是按专辑里**最不理想的那首**改过的
-- ★ **对比前先对齐响度**：等响曲线随声压级变形，音量一降，低频和高频相对中频就被抑制，
-  声音变薄变暗（Howard & Angus p0091）；声压级 +10 dB 响度约加倍（p0094）。
-  响一点的那个几乎总"听起来更好"——不对齐响度，比的是音量不是混音。
+- Reference tracks should **match the type of mix** (if you are mixing string music, find ones with strings; if you are doing chill-out, find similar chill-out) (p0051)
+- Store them in **lossless format**, not MP3 (p0051)
+- Ideally include **pre-selected excerpts** for quick comparison; you may add **unmixed stems** (p0051)
+- ★ **Be aware of the effect of mastering** (p0052): a mastered reference track is usually denser in dynamics
+  (consistent relative levels plus heavier compression), and its frequency characteristics may have been altered to suit the **least favorable** song on the album
+- ★ **Match loudness before comparing**: equal-loudness contours change with sound pressure level. When the volume drops, low and high frequencies are suppressed relative to the midrange, and the sound becomes thin and dull (Howard & Angus p0091). A +10 dB increase in sound pressure level roughly doubles perceived loudness (p0094).
+  The louder of two versions almost always "sounds better". If loudness is not matched, you are comparing volume rather than mixes.
 
-**最后这条对本库特别重要**：从成品音频反推指标时，
-测到的动态范围是**母带之后的**。所以拿参考曲的动态值当目标会系统性偏紧——
-同理，量参考曲之前先看它的码率和高频截止：有损编码会削掉高频，不同码率的文件之间不能横比。
+**This last point is especially important for this library**: when deriving metrics from a finished audio file, the measured dynamic range is **after mastering**. So using a reference track's dynamic value as a target systematically biases the target too tight.
+Likewise, before measuring a reference track, first check its bitrate and high-frequency cutoff: lossy encoding removes high frequencies, so files at different bitrates cannot be compared directly.
 
 ---
+## 7. What each backend can take
 
-## 7. 各后端能吃多少
-
-| 后端 | 能吃 | 不能吃 |
+| Backend | Can take | Cannot take |
 |---|---|---|
-| **Suno / MiniMax** | 情绪、整体质感的形容（`warm`、`dry`、`wide chorus`） | 声场图、ducking_map、逐段深度 |
-| **YuE2** | 同上，段落粒度更细 | 精确声像与深度 |
-| **MIDI / DAW** | 全部——直接当 direction sheet | — |
+| **Suno / MiniMax** | Mood and overall texture descriptions (`warm`, `dry`, `wide chorus`) | Sound-stage map, ducking_map, per-section depth |
+| **YuE2** | Same as above, with finer section granularity | Precise stereo placement and depth |
+| **MIDI / DAW** | Everything. Use directly as the direction sheet | — |
 
-**★ 规则**：后端 profile 里标 `honors: none` 的项，
-算照做率时**必须排除，不能给 0 分**。
-否则一个诚实声明"我做不到声像"的后端，会比一个假装做得到的后端得分更低——
-那会把评分体系带向错误的方向。
+**★ Rule**: items marked `honors: none` in a backend profile
+must be **excluded** when calculating the compliance rate, and must **not be given a score of 0**.
+Otherwise, a backend that honestly declares "I cannot do stereo placement" would score lower than one that pretends it can. That would push the scoring system in the wrong direction.
 
 ---
 
-## 8. 与 ARR-SPEC 的字段对应
+## 8. Mapping to ARR-SPEC fields
 
-| 字段 | 本 skill 的哪一节 |
+| Field | Section of this skill |
 |---|---|
-| `mix_intent.mood` | §3.1（**一句话，且放在生成提示词的靠前位置**） |
-| `mix_intent.sound_stage[]` | §2（每件乐器的 pan ＋ depth） |
-| `mix_intent.focus_by_section[]` | §3.2 主角序列 |
-| `mix_intent.ducking_map[]` | §5（谁给谁让、什么时候） |
-| `mix_intent.deliberate_imbalance[]` | §4.3（**必须带起止小节 ＋ 理由**） |
-| `mix_intent.reference_tracks[]` | §6（**必须写参考它的哪个方面**） |
+| `mix_intent.mood` | §3.1 (**one sentence, placed early in the generation prompt**) |
+| `mix_intent.sound_stage[]` | §2 (pan and depth for each instrument) |
+| `mix_intent.focus_by_section[]` | §3.2 lead sequence |
+| `mix_intent.ducking_map[]` | §5 (who yields to whom, and when) |
+| `mix_intent.deliberate_imbalance[]` | §4.3 (**must include start and end bars and a reason**) |
+| `mix_intent.reference_tracks[]` | §6 (**must state which aspect of it is referenced**) |
 
 ---
 
-## 9. 写完后必过
+## 9. Checklist to pass after writing
 
-- [ ] `mood` 写了，**一句话**，且不和后面的决定打架
-- [ ] 五个领域**各写了一句**，不是只写了频率
-- [ ] 声场图里每件乐器**都有左右和前后**两个值
-- [ ] **同组乐器的深度一致**（鼓组内部、弦乐组内部）
-- [ ] 逐段写了**谁是最清楚的元素**
-- [ ] 每处不平衡都带**起止小节和理由**，不是全曲状态
-- [ ] 诊断"糊"时**先查了持续音**，不是先怪鼓
-- [ ] 每个主角的进入点前 200 ms 内，没有更响的事件刚结束（§5）
-- [ ] 低频元素的声像居中；参考曲对比时响度已对齐（§2、§6.2）
-- [ ] 能在作曲层解决的冲突，**已经在 `mc-texture-layering` 解掉了**，没堆到这儿
-- [ ] 参考曲目至少一首，**写明参考它的哪个方面**
-- [ ] 没有在本文件里写 EQ 频点或压缩比（那些是混音的事）
+- [ ] `mood` is written, **in one sentence**, and does not conflict with the later decisions
+- [ ] Each of the five domains **has one sentence**, not just frequency
+- [ ] Every instrument on the sound-stage map **has both a left/right and a front/back value**
+- [ ] **Depth is consistent within each group of instruments** (inside the drum kit, inside the string group)
+- [ ] The **clearest element** is written for each section
+- [ ] Every imbalance has **start and end bars and a reason**, not a whole-piece state
+- [ ] When diagnosing "muddiness", **the sustained sounds were checked first**, not the drums
+- [ ] Within 200 ms before each lead element's entry point, nothing louder has just ended (§5)
+- [ ] Low-frequency elements are centered in the image; loudness is matched when comparing to a reference track (§2, §6.2)
+- [ ] Conflicts that can be resolved at the composition level **were already resolved in `mc-texture-layering`** and not pushed here
+- [ ] At least one reference track, **with the aspect being referenced stated**
+- [ ] No EQ frequencies or compression ratios are written in this file (those belong to mixing)
 
 ---
 
-## 附：来源
+## Appendix: Sources
 
-- **Roey Izhaki《Mixing Audio》（混音指南）**——§2、§3、§4、§5、§6 的主干
-  （6 混音涉及的领域与目标、6.1 混音的目标、2.x 掩蔽、3.4 使用参考曲目）。页码为该书页。
-  **本库只取"领域与目标"和"参考曲目"两部分**；EQ／压缩／混响／母带的实操章节
-  是混音的事，本包不收。
-- **Howard & Angus《音乐声学与心理声学》**（Acoustics and Psychoacoustics）——
-  §2 的定位线索与优先效应、§4.2 的混响拖尾、§5 的掩蔽机制与时间掩蔽、§6.2 的等响曲线。页码为中译本页。
-- **竹内一弘《EDM 制作》**的频率平衡与 Lo-Mid 管理、各声部音量平衡——同样只取意图层，
-  参数整理在 [reference.md](reference.md)。
-- 后端 profile 与 `honors` 的定义见 `mc-render-compile` §6 与 [`backends.yaml`](../mc-workflow/backends.yaml)。
+- **Roey Izhaki, *Mixing Audio*** (a mixing guide). This is the backbone of §2, §3, §4, §5 and §6 (domains and goals of mixing from chapter 6, goals of mixing from 6.1, masking from 2.x, using reference tracks from 3.4). Page numbers refer to the book's pages.
+  **This library takes only the "domains and goals" and "reference tracks" parts.** The practical chapters on EQ, compression, reverb and mastering belong to mixing and are not included in this package.
+- **Howard & Angus, *Acoustics and Psychoacoustics*** (Chinese edition). Covers the localization cues and precedence effect in §2, the reverb tails in §4.2, the masking mechanisms and temporal masking in §5, and the equal-loudness contours in §6.2. Page numbers refer to the Chinese edition's pages.
+- **Takeuchi Kazuhiro, *EDM Production*** (Chinese title: *EDM Zhizuo*). Drawn on for frequency balance and Lo-Mid management, and for balancing volume across parts. Only the intent layer is taken here; the parameter summary is in [reference.md](reference.md).
+- The definitions of backend profiles and `honors` are in `mc-render-compile` §6 and in [`backends.yaml`](../mc-workflow/backends.yaml).

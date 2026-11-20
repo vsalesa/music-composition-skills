@@ -1,114 +1,114 @@
-# mc-symbolic-score 参考：ABC 语法速查与 GM 音色表
+# mc-symbolic-score Reference: ABC Syntax Cheat Sheet and GM Instrument Table
 
-> [SKILL.md](SKILL.md) 讲映射与验证；本文件放**查语法**用的表。
+> [SKILL.md](SKILL.md) covers mapping and validation; this file holds the tables to look up **syntax** in.
 
 ---
 
-## 1. ABC 语法速查
+## 1. ABC Syntax Cheat Sheet
 
-### 1.1 头部字段
+### 1.1 Header fields
 
-| 字段 | 含义 | 例 |
+| Field | Meaning | Example |
 |---|---|---|
-| `X:` | 编号（必需，通常 1） | `X:1` |
-| `T:` | 标题 | `T:Night Drive` |
-| `C:` | 作曲者 | |
-| `M:` | 拍号 | `M:4/4`、`M:6/8`、`M:C`（=4/4）、`M:C|`（=2/2） |
-| `L:` | 默认单位时值 | `L:1/8`、`L:1/16` |
-| `Q:` | 速度 | `Q:1/4=112` |
-| `K:` | 调号（**必须放在头部最后**） | `K:D`、`K:Am`、`K:Dphr`（调式） |
-| `V:` | 声部 | `V:1`、`V:2` |
+| `X:` | Index number (required, usually 1) | `X:1` |
+| `T:` | Title | `T:Night Drive` |
+| `C:` | Composer | |
+| `M:` | Meter | `M:4/4`, `M:6/8`, `M:C` (=4/4), `M:C|` (=2/2) |
+| `L:` | Default unit note length | `L:1/8`, `L:1/16` |
+| `Q:` | Tempo | `Q:1/4=112` |
+| `K:` | Key (**must be the last line of the header**) | `K:D`, `K:Am`, `K:Dphr` (mode) |
+| `V:` | Voice | `V:1`, `V:2` |
 
-### 1.2 音高
-
-```
-C,, C, C c c' c''      ← 低到高；逗号降八度，撇号升八度
-^C  _C  =C             ← 升 / 降 / 还原
-^^C  __C                ← 重升 / 重降（少见，多数流行/影视谱用不到）
-```
-
-★ **大小写是八度记号，不是音名记号**：`C` 到 `B` 是中央附近这一组，
-`c` 到 `b` 是高八度那一组；逗号（`,`）继续往下降，撇号（`'`）继续往上升，
-可以叠加——`C,,` 比 `C,` 再低一个八度。
-
-★ **临时记号在同一小节内持续有效**，直到下一根小节线，
-或者被同一小节里另一个升/降/还原记号覆盖——
-这条规则容易漏，漏了的后果是"谱面写对了但读出来的音高不对"，
-第 8 节的语法检查查不出这种错，只有逐音核对才能查出来。
-跨小节要保持变化音，得在下一小节重复写一次记号（ABC 不会替你延续）。
-
-### 1.3 时值（相对 `L:`）
+### 1.2 Pitch
 
 ```
-C2   两个单位时值
-C/2  半个单位（也可写 C/）
-C3/2 一个半（附点）
-C>D  附点节奏（C 长 D 短）
-C<D  反附点
-z    休止符，长度记法与音符相同：z2、z/2
-Z4   多小节休止（Z 后面跟的是小节数，不是单位时值数）
-(3CDE  三连音——把 3 个音塞进 2 个单位的时长里（等价于 (3:2:3）
+C,, C, C c c' c''      ← low to high; comma lowers an octave, apostrophe raises an octave
+^C  _C  =C             ← sharp / flat / natural
+^^C  __C               ← double sharp / double flat (rare; most pop and film scores do not need these)
 ```
 
-★ **`L:` 定义的是"1"有多长，不是绝对时值**——
-同一份 `C2`，`L:1/8` 下是四分音符，`L:1/16` 下只是八分音符。
-发射器只要头部写的 `L:` 和音符里实际用的时值单位对不上，
-成品的相对节奏关系不会错，但**绝对时长会整体缩放**，
-这类错误在第 8 节的"语法过一遍"里查不出来，
-必须靠"总时长 / 总拍数"这类算术核对，或者渲染出来直接听速度对不对。
+★ **Case is an octave marker, not a pitch-name marker**: `C` to `B` is the octave around middle C,
+`c` to `b` is the octave above. Commas (`,`) keep lowering and apostrophes (`'`) keep raising,
+and they can be stacked: `C,,` is one octave lower than `C,`.
 
-★ **附点链可以连写**：`C>D>E` 是三个音依次附点递减，
-常见于西部/爵士的摇摆感旋律；但连写超过两三个音可读性会掉，
-超过的话拆成小节内多个记号更好维护。
+★ **Accidentals hold for the rest of the bar**, until the next barline,
+or until another sharp, flat or natural in the same bar overrides them.
+This rule is easy to miss. The consequence is that "the score is written correctly but the pitches read back wrong".
+The syntax check in §8 does not catch this kind of error; only note-by-note comparison does.
+To keep a chromatic alteration across a barline, the accidental must be written again in the next bar (ABC will not carry it over for you).
 
-### 1.4 小节与结构
+### 1.3 Durations (relative to `L:`)
 
-| 记号 | 含义 |
+```
+C2   two unit lengths
+C/2  half a unit (also writable as C/)
+C3/2 one and a half (dotted)
+C>D  dotted rhythm (C long, D short)
+C<D  reversed dotted rhythm
+z    rest; length notation is the same as for notes: z2, z/2
+Z4   multi-bar rest (the number after Z is a count of bars, not of unit lengths)
+(3CDE  triplet: fits 3 notes into the time of 2 units (equivalent to (3:2:3)
+```
+
+★ **`L:` defines how long "1" is, not an absolute duration**.
+The same `C2` is a quarter note under `L:1/8` but only an eighth note under `L:1/16`.
+If the `L:` in the header does not match the duration units actually used in the notes,
+the relative rhythm of the finished piece stays correct, but **the absolute length is scaled throughout**.
+This kind of error is not caught by the "syntax pass" in §8.
+It has to be found by arithmetic such as "total duration / total beats", or by rendering the piece and listening to whether the tempo is right.
+
+★ **Dotted chains can be written in a row**: `C>D>E` is three notes with dotted values that step down in turn,
+common in western and jazz melodies with a swing feel. Beyond two or three notes in a row, readability drops;
+past that point, splitting into several notations within the bar is easier to maintain.
+
+### 1.4 Bars and structure
+
+| Notation | Meaning |
 |---|---|
-| `|` | 小节线 |
-| `||` | 双小节线 |
-| `|]` | 终止线 |
-| `|:` `:|` | 反复（★ **副歌不要用**，见 SKILL.md §3.4） |
-| `[1` `[2` | 一房二房 |
-| `%` | 行内注释 |
-| `%%` | 指令 |
+| `|` | Barline |
+| `||` | Double barline |
+| `|]` | Final barline |
+| `|:` `:|` | Repeat (★ **do not use for the chorus**; see SKILL.md §3.4) |
+| `[1` `[2` | First and second endings |
+| `%` | Inline comment |
+| `%%` | Directive |
 
-### 1.5 和弦与装饰
+### 1.5 Chords and ornaments
 
 ```
-"F#m7"C     ← 和弦符号写在音符前的引号里
-(CDE)       ← 连音线（slur）
-C-C         ← 延音线（tie）
-(3CDE       ← 三连音
-~C  .C  HC  ← 装饰音 / 断奏 / 延长
+"F#m7"C     ← chord symbol written in quotes before the note
+(CDE)       ← slur
+C-C         ← tie
+(3CDE       ← triplet
+~C  .C  HC  ← ornament / staccato / fermata
 ```
 
-### 1.6 多声部
+### 1.6 Multiple voices
 
 ```
 V:1 name="Melody"
 V:2 name="Bass" clef=bass
 ```
 
-★ **YuE2 是否支持多声部尚未确认**（SKILL.md §7.2）。先发单声部。
+★ **Whether YuE2 supports multiple voices is not yet confirmed** (SKILL.md §7.2). Send single-voice scores first.
 
 ---
 
-## 2. GM 音色表（常用）
+## 2. GM Instrument Table (common)
 
-`render.midi.instrument_map` 填这些。
+Fill `render.midi.instrument_map` with these.
 
-| # | 音色 | # | 音色 |
+| # | Instrument | # | Instrument |
 |---|---|---|---|
 | 1 | Acoustic Grand Piano | 34 | Electric Bass (finger) |
 | 2 | Bright Acoustic Piano | 35 | Electric Bass (pick) |
-| 5 | **Electric Piano 1**（Rhodes） | 36 | Fretless Bass |
+| 5 | **Electric Piano 1** (Rhodes) | 36 | Fretless Bass |
 | 6 | Electric Piano 2 | 39 | Synth Bass 1 |
 | 17 | Drawbar Organ | 41 | Violin |
 | 19 | Rock Organ | 43 | Cello |
 | 25 | Acoustic Guitar (nylon) | 49 | **String Ensemble 1** |
 | 26 | Acoustic Guitar (steel) | 53 | Choir Aahs |
-| 28 | **Electric Guitar (clean)** | 54 | **Voice Oohs**（人声占位） |
+| 28 | **Electric Guitar (clean)** | 54 | **Voice Oohs** (vocal placeholder) |
 | 30 | Electric Guitar (overdriven) | 57 | Trumpet |
 | 31 | Electric Guitar (distortion) | 66 | Alto Sax |
 | 33 | Acoustic Bass | 67 | **Tenor Sax** |
@@ -116,55 +116,55 @@ V:2 name="Bass" clef=bass
 | | | 82 | **Lead 2 (sawtooth)** |
 | | | 89 | Pad 1 (new age) |
 
-**鼓组**：GM Drum Kit 1，**通道 10**。
+**Drum kit**: GM Drum Kit 1, **channel 10**.
 
-| 音 | GM 音高 | 音 | GM 音高 |
+| Sound | GM pitch | Sound | GM pitch |
 |---|---|---|---|
 | Kick | C1 (36) | Closed HH | F#1 (42) |
 | Snare | D1 (38) | Open HH | A#1 (46) |
 | Toms | F1/G1/A1/B1 | Crash | C#2 (49) |
 | | | Ride | D#2 (51) |
 
-★ **非 GM 音源的映射可能不同**——用采样库时以它的文档为准。
+★ **Mappings on non-GM sound sources may differ**; when using a sample library, follow its documentation.
 
 ---
 
-## 3. 常用 MIDI CC（配器相关）
+## 3. Common MIDI CCs (orchestration-related)
 
-完整表在 `mc-orchestration` [reference.md](../mc-orchestration/reference.md) §5。这里只放最常用的：
+The full table is in `mc-orchestration` [reference.md](../mc-orchestration/reference.md) §5. Only the most common are listed here:
 
-| CC | 用途 | ★ 注意 |
+| CC | Purpose | ★ Note |
 |---|---|---|
-| **1** | 调制（通常颤音） | 某些库拿它控音量，**用前确认映射** |
-| **7** | 音量 | ★ **定这一轨在配器里的位置**，不做乐句起伏 |
-| **11** | 表情 | ★ **定这一句怎么呼吸**——乐句内的起伏靠它 |
-| **64** | 延音踏板 | |
-| **68** | 连奏开关 | 0–63 关 / 64–127 开 |
-| **74** | 滤波器截止（亮度） | |
-| **91** | 混响发送量 | |
+| **1** | Modulation (usually vibrato) | Some libraries use it to control volume; **confirm the mapping before use** |
+| **7** | Volume | ★ **Sets this track's position in the mix**; does not shape phrases |
+| **11** | Expression | ★ **Sets how this phrase breathes**; the swell within a phrase is controlled by this |
+| **64** | Sustain pedal | |
+| **68** | Legato switch | 0–63 off / 64–127 on |
+| **74** | Filter cutoff (brightness) | |
+| **91** | Reverb send level | |
 
-★★ **CC7 与 CC11 混用是管弦 mockup 听着假的头号原因**
-（→ `mc-style-cinematic` §8）。
-
----
-
-## 4. MusicXML 与 MIDI 的取舍
-
-见 [SKILL.md](SKILL.md) §6 的完整对照表。一句话版：
-
-- **要 YuE2 执行 → ABC**
-- **要交给人 → MusicXML**
-- **要表情与律动 → MIDI**
+★★ **Mixing CC7 and CC11 is the number-one reason an orchestral mockup sounds fake**
+(→ `mc-style-cinematic` §8).
 
 ---
 
-## 5. 未确认的后端行为
+## 4. Choosing between MusicXML and MIDI
 
-只有这一项悬而未决，所以只列一条：
+See the full comparison table in [SKILL.md](SKILL.md) §6. The one-line version:
 
-- ⚠ YuE2 的 ABC 方言未确认（SKILL.md §7.2）
+- **For YuE2 to perform it → ABC**
+- **For handing to a human → MusicXML**
+- **For expression and rhythmic feel → MIDI**
 
-**判定它"已确认"的标准**：SKILL.md §7.2 列的三件事（段落标记写法、
-和弦符号方言、是否支持多声部）逐一试出确定答案之后，
-把结论写回这里并删掉"未确认"字样；在此之前，供谱一律走 §7.2
-说的"最保守子集"，不要按其他方言的习惯写。
+---
+
+## 5. Unconfirmed backend behaviour
+
+Only one item is still open, so only one is listed:
+
+- ⚠ YuE2's ABC dialect is not confirmed (SKILL.md §7.2)
+
+**Criteria for marking it "confirmed"**: once the three items listed in SKILL.md §7.2 (how section markers are written,
+the chord-symbol dialect, and whether multiple voices are supported) have each been tested to a definite answer,
+write the conclusions back here and delete the word "unconfirmed". Until then, scores must follow the
+"most conservative subset" described in §7.2; do not write them using the habits of other dialects.

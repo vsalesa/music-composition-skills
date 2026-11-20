@@ -1,262 +1,262 @@
-# 竖琴、拨（击）弦与键盘乐器及其组合（Adler 上册键盘章；杨立青中册第十、十一章）
+# Harp, Plucked and Struck Strings, and Keyboard Instruments in Combination (Adler Vol. I, keyboard chapter; Yang Liqing Vol. II, Chapters 10 and 11)
 
-本文管这一族的两类判断：单件上写得出写不出、听得见听不见，组合上放进乐队承担哪一层、和谁叠。它与 reference 的 §2.2（弦乐各件）、§2.3（为弦乐配器）、§2.4（木管组）、§2.5（铜管组）并列，同属"某一组乐器怎么用"这一层；混合音色的通则仍在 SKILL §2 到 §5。
+This document covers two kinds of judgment for this family: whether a single instrument can be written for and heard, and, in combination, what layer it takes in the orchestra and what it may be doubled with. It sits alongside reference §2.2 (the individual string instruments), §2.3 (orchestrating for strings), §2.4 (the woodwind group), and §2.5 (the brass group), all at the same level of "how to use a given instrument group"; the general principles for mixed timbres remain in SKILL §2 to §5.
 
 ---
 
-## 1. 先判断能不能被听见
+## 1. Judge first whether it can be heard
 
-除钢琴与管风琴外，本族几乎每一件的音量都低于乐队平均水平。顺序是先查力度上限，再定它在织体里的位置，最后写音符。
+Apart from piano and organ, almost every instrument in this family is quieter than the orchestral average. The order is: check the dynamic ceiling first, then decide its place in the texture, and only then write the notes.
 
-| 乐器 | 力度范围 | 起振与衰减 | 页 |
+| Instrument | Dynamic range | Onset and decay | Page |
 |---|---|---|---|
-| **竖琴** | 仅 32–38 分贝（ff≈72、pp≈34 到 40）。琴弦与共鸣箱呈直角，声波强化与传递先天不利，是乐队里最柔弱的乐器之一 | 起振低区 100–200 毫秒、高区约 30 毫秒；愈强愈低残响愈长 | （p0398–0399） |
-| **吉他** | pp 约 30–35、ff 约 65 分贝，比竖琴还低 | 起奏灵敏（10 到 60 毫秒）却很难形成真正稳态；衰减 900–2000 毫秒 | （p0421） |
-| **钢琴** | 约 35 分贝（低区 ff≈85、pp≈50；高区 ff≈80、pp≈45） | 起振 10–60 毫秒；自由衰减 10–12 秒，低区强力度加延音踏板可超 40 秒 | （p0439） |
-| **钢片琴** | pp 约 33、ff 约 68 分贝，高区弱奏有时仅 25 分贝 | 共振箱延长钢片震动，余响甩不掉 | （p0462、p0484） |
-| **羽管键琴** | 平均 55–65 分贝，几乎做不出有实质意义的渐强渐弱 | 拨弦发音，起奏固定 | （p0467） |
-| **管风琴** | 全奏 pp 到 ff 只有约 55–80 分贝，单个音管幅差仅 5–10 分贝 | 唇管高／中／低区起奏约 20／100／500 毫秒，舌管低区约 190 毫秒 | （p0471） |
-| **手风琴** | 低区 53–83、高区 56–83 分贝，幅差 27–30 分贝 | 靠推拉风箱形成长稳态；风箱停动的瞬间发音即止，无明晰余响 | （p0476） |
+| **Harp** | Only 32–38 dB (ff≈72, pp≈34 to 40). The strings sit at right angles to the soundboard, so sound reinforcement and transmission are inherently disadvantaged; it is one of the softest instruments in the orchestra | Onset 100–200 ms in the low register, about 30 ms in the high register; the louder the playing, the shorter the lower-register resonance | (p0398–0399) |
+| **Guitar** | pp about 30–35, ff about 65 dB, lower than the harp | Responds quickly (10 to 60 ms) but rarely forms a true steady state; decay 900–2000 ms | (p0421) |
+| **Piano** | About 35 dB (low register ff≈85, pp≈50; high register ff≈80, pp≈45) | Onset 10–60 ms; free decay 10–12 seconds, and over 40 seconds in the low register with the sustain pedal and strong dynamics | (p0439) |
+| **Celesta** | pp about 33, ff about 68 dB; in the high register soft playing is sometimes only 25 dB | The resonator box prolongs the vibration of the plates, so the afterglow cannot be cut off | (p0462, p0484) |
+| **Harpsichord** | Average 55–65 dB; meaningful crescendo and diminuendo are practically impossible | Plucked sound with a fixed attack | (p0467) |
+| **Organ** | Full range from pp to ff spans only about 55–80 dB; a single pipe varies by only 5–10 dB | Onset of reed pipes in the high, middle, and low registers about 20, 100, and 500 ms; low-register tongue pipes about 190 ms | (p0471) |
+| **Accordion** | Low register 53–83, high register 56–83 dB, a range of 27–30 dB | Long steady states are produced by pushing and pulling the bellows; the sound stops the instant the bellows stop, with no clear afterglow | (p0476) |
 
-三条派生判据：
+Three derived criteria:
 
-1. **穿透力决定它能不能当主角**。音量有限的一件担旋律时，伴奏切忌厚重（p0509），这是 SKILL §5「让某一组透出」在本族上的具体化。
-2. **力度层次靠什么做，各件不同**。管风琴靠音栓与音管数量增减，单音管强弱几乎无用；羽管键琴不要指望力度渐变；手风琴靠风箱，是本族唯一能像弓弦那样连续调节力度的一件。
-3. **低区起奏慢的乐器踩不上精确进入点**。管风琴低区唇管起奏约半秒，竖琴低区起振也要 100 到 200 毫秒，快速乐句与齐奏进入点必须留余量。
+1. **Penetrating power decides whether it can be a soloist.** When a quiet instrument carries the melody, the accompaniment must avoid being thick (p0509). This is the concrete form of SKILL §5, "let one group come through," as applied to this family.
+2. **How dynamic layers are built differs by instrument.** The organ relies on adding or removing stops and pipes; the variation in a single pipe is almost useless. Do not expect dynamic gradation from the harpsichord. The accordion relies on the bellows and is the only instrument in this family that can adjust dynamics continuously, as a bow does on strings.
+3. **Instruments with slow low-register onsets cannot hit precise entry points.** The low-register reed pipes of the organ take about half a second to speak, and the harp's low-register onset also takes 100 to 200 ms. Fast passages and unison entries must allow a margin.
 
-**编曲含义**：本族的默认位置是稀薄织体里的前景，或厚织体里的纯色彩点缀。中间那档（厚织体里要它被清楚听见）通常写不成，除非加电声扩大。
+**Orchestration implication**: this family's default position is the foreground of a sparse texture, or a single colour accent within a dense texture. The middle ground (having it clearly audible within a dense texture) usually cannot be written, unless amplified electronically.
 
 ---
 
-## 2. 竖琴
+## 2. Harp
 
-踏板机制、等音记谱、左右脚分布、弦的红蓝标色见 reference §2.2.4（Adler 侧）。本节补杨立青侧的音区判据、密度上限与非常规奏法体系。
+Pedal mechanics, enharmonic notation, the distribution of the feet, and the red and blue colour marking of the strings are covered in reference §2.2.4 (the Adler side). This section adds Yang Liqing's register criteria, density limits, and system of unconventional techniques.
 
-### 2.1 音区：只有中间一段可用（p0400–0401）
+### 2.1 Register: only the middle section is usable (p0400–0401)
 
-大字组 G 到小字二组 g 发音丰满、表现幅度宽，弱奏柔美强奏华丽，旋律与和声核心都放这里；再往上愈高愈纤细、缺乏共鸣，最高几音略干枯，只宜稀疏点缀；低音区发音喑哑略粗糙、愈低愈浑浊，只适合不复杂的低音线条或加固其他低音乐器（例 X-1、X-2 示范中区表现幅度与左手在低区的取用）。
+From G in the great octave to g in the second small octave, the sound is full and the expressive range wide; soft playing is gentle and loud playing is splendid, so melodic and harmonic cores belong here. Above this, the register grows thinner and lacks resonance, the top few notes are somewhat dry and should be used only sparingly as accents; the low register sounds hoarse and slightly rough, becoming murkier the lower it goes, and suits only uncomplicated bass lines or reinforcing other bass instruments (examples X-1 and X-2 demonstrate the expressive range of the middle register and the use of the left hand in the low register).
 
-**编曲含义**：这是 SKILL §6「音区即性格」在竖琴上的实例，值得单记的是它的可用区比看上去窄，两端都要让出去。
+**Orchestration implication**: this is an instance of SKILL §6, "register is character," applied to the harp. It is worth noting separately that its usable range is narrower than it appears, and both ends should be left to others.
 
-### 2.2 踏板：两处与 Adler 并排（p0401–0403）
+### 2.2 Pedals: two points that run alongside Adler (p0401–0403)
 
-- **哪些弦不可变**。Adler 记最低两根弦 D¹ 与 C¹ 要手动调、最高 G⁷ 由 G 踏板控制；杨立青记最低的降 C 弦，加上部分琴的降 D 弦与最高的降 g 弦未接踏板。并排的用法是对着实际用琴核查这几个端点音，不按记忆假定。
-- **一只脚能否同时换两个踏板**。Adler 要求避免；杨立青条件更松，同侧相邻两踏板（如 F 与 G）若移动方向相同可用一只脚同时踩动。读法是同向相邻可以赌，反向或不相邻按 Adler 的禁令走。换踏板只要不牵涉正在拨弹的弦即可与手同步。
-- **标法随语言而定**：传统调性作品只在开头标调号、临时变化音提前用音名提示；无调性写作必须在开头及大幅度调弦处用图示法精确标明各踏板位置（图 X-7）。
+- **Which strings cannot be changed.** Adler records that the two lowest strings, D¹ and C¹, are tuned by hand, and the highest, G⁷, is controlled by the G pedal. Yang Liqing records that the lowest, the lowered C string, plus on some instruments the lowered D string and the highest lowered g string, are not connected to pedals. When these are used side by side, check these endpoint pitches against the actual instrument rather than assuming them from memory.
+- **Whether one foot can change two pedals at once.** Adler requires avoiding this; Yang Liqing's condition is looser: two adjacent pedals on the same side (such as F and G) may be moved by one foot if they move in the same direction. The reading is that same-direction adjacent pedals may be risked, while opposite-direction or non-adjacent pedals follow Adler's prohibition. Changing pedals is synchronized with the hands only as long as it does not involve strings being plucked.
+- **Notation depends on the language.** In traditionally tonal works, only the key signature is marked at the beginning, and accidentals are indicated in advance by note names; in atonal writing, the position of each pedal must be marked precisely at the beginning and at every major retuning, using a diagram (Fig. X-7).
 
-### 2.3 等音调弦决定刮奏能奏出什么（p0403–0405）
+### 2.3 Enharmonic tuning determines what glissando can produce (p0403–0405)
 
-把相邻两弦调成异名同音，十二个半音里只有 D、G、A 三音取不到异名等音。三类用途并列：拼出全音阶、五声或特殊音阶供快速刮奏（例 X-3、X-4）；拼出属七、减七、小七、大七、九和弦等结构供刮奏（例 X-5）；只为让相邻两弦发同一个音以增强共鸣。
+When two adjacent strings are tuned to enharmonic equivalents of each other, among the twelve semitones only D, G, and A cannot be obtained as enharmonic pairs. Three uses stand side by side: arranging a whole-tone scale, a pentatonic scale, or a special scale for fast glissandi (examples X-3 and X-4); arranging the structures of dominant seventh, diminished seventh, minor seventh, major seventh, and ninth chords for glissando (example X-5); and simply making two adjacent strings sound the same pitch to enhance resonance.
 
-**用法**：刮奏的效果完全取决于调弦（p0410）。先定要什么音列，再倒推踏板与等音安排，写完核对换弦是否来得及。
+**Usage**: the effect of glissando depends entirely on the tuning (p0410). First decide what pitch collection is wanted, then work backward to the pedal and enharmonic arrangement, and when the writing is finished, check whether the string changes can be executed in time.
 
-### 2.4 常规技术的密度上限（p0406–0412）
+### 2.4 Density limits for standard technique (p0406–0412)
 
-| 项 | 上限或条件 |
+| Item | Limit or condition |
 |---|---|
-| 可及范围 | 左手可自如伸展到最低区；右手低于大字组 G 已不便，该区最好限于速度不快的单音。十度的跨度仅相当于钢琴八度 |
-| 音阶与琶音 | 自然音阶发音良好但速度不宜过快；半音阶经过句只能靠连续踏板调弦奏出，难度大效果差。每手各四音组合成的琶音最易演奏，是最典型奏法（例 X-6） |
-| 和弦 | 低区忌密集排列；每手至多 4 音，两手合计超过 8 音只能改两手交替琶音；较快的连续和弦每手不超过 3 音（例 X-7）。和弦默认按琶音奏出，要避免须标 non arpeggiato 或 secco |
-| 颤音与震音 | 以中高区为好，低于小字组 e 发音模糊；两手交替比单手快。同音反复震音在同一弦上发音欠清晰，一般须用等音调弦在相邻两弦交替（例 X-8、X-9）；和弦化震音需扫弦法 bisbigliando（例 X-10） |
-| 刮奏 | 双手多音和弦刮奏每手 2 到 3 音，跨度一般不超过六度（例 X-11 到 X-13）。要更亮可要求近共鸣箱或用指甲，要柔和用掌根，都须文字注明 |
-| 泛音 | 柔和透明但音量异常微弱；一般仅用于肠弦，最佳音域约 A 到 c¹（此范围内第 2 到第 5 泛音都可得），再高八度只能奏第 2、3、4 泛音；右手每次只能奏一音，左手最多可在六度内同时奏 3 到 4 个（例 X-14、X-15） |
+| Accessible range | The left hand can stretch freely down to the lowest register; for the right hand, notes below G in the great octave are awkward, so that region should be limited to single notes played at a moderate tempo. A tenth spans only about the equivalent of a piano octave |
+| Scales and arpeggios | Diatonic scales sound well but should not be too fast; chromatic passing figures can only be achieved through continuous pedal retuning, which is difficult and yields poor results. Arpeggios of four notes per hand are the easiest to play and the most typical technique (example X-6) |
+| Chords | Avoid dense spacing in the low register; at most 4 notes per hand, and if the two hands together exceed 8 notes, the hands must alternate arpeggios instead; faster successive chords should use no more than 3 notes per hand (example X-7). Chords are played arpeggiated by default; to avoid this, mark non arpeggiato or secco |
+| Trills and tremolos | Best in the middle and upper-middle registers; below the e in the small octave the sound is blurred; alternating between the two hands is faster than using one. Repeated-note tremolos sound unclear on a single string, so they generally require enharmonic tuning to alternate between two adjacent strings (examples X-8 and X-9); chordal tremolos require the bisbigliando strumming technique (example X-10) |
+| Glissando | Multi-note chord glissandi in both hands use 2 to 3 notes per hand, with a span generally not exceeding a sixth (examples X-11 to X-13). For a brighter sound, one may request playing near the soundboard or with the fingernail; for a softer sound, the heel of the hand; both must be indicated in words |
+| Harmonics | Gentle and transparent but unusually faint in volume; generally used only on gut strings, with the best range about A to c¹ (within this range the 2nd to 5th harmonics are all available); an octave higher only the 2nd, 3rd, and 4th harmonics can be played; the right hand can play only one note at a time, and the left hand can sound up to 3 to 4 notes simultaneously within a sixth (examples X-14 and X-15) |
 
-**用法**：当写谱前的自检清单。竖琴段落写不响，原因通常是密度超限或音区选错，而非力度记号不够大。
+**Usage**: a self-check list before writing the score. When a harp passage fails to sound, the cause is usually an exceeded density limit or a poorly chosen register, not an insufficiently large dynamic marking.
 
-### 2.5 非常规奏法：按"要哪一种噪音"挑（p0412–0420）
+### 2.5 Unconventional techniques: choose by "which kind of noise is wanted" (p0412–0420)
 
-整套照收，它们互斥，选一个就排除其他。**拨弦点变异**（près de la table，移近共鸣箱，分音增加，色彩更亮更饱满，接近吉他拨弦声，例 X-16）；**煞音**（secco／étouffé，拨弦后迅即用掌或指制振，音阶琶音式经过句速度应限在每分钟 88 拍以内，例 X-17）；**闷击与扫击**（一手按弦一手拨弦得毫无共鸣的打击乐式闷击；和弦扫击用不同手指极快打击某音组内相邻各弦，例 X-18）；**工具变异**（指甲代指端取更亮色彩，拨子代手指，木质或金属小棒近共鸣箱急速扫弦；拇指在弦顶端反复揉压得颤吟，例 X-19）；**弱音器**（弦顶端塞软质材料抑振，变体是塞狭长纸卷，发音短促微弱却有亮度，近似羽管键琴并夹噼啪噪声，例 X-20、X-21）；**踏板滑音与颤音**（拨弦振动同时让踏板在凹槽间快速移位或往返，得半音到全音的滑音与颤音，例 X-22）；**校音器滑奏**（校音器紧压一两根弦沿弦急速滑动得带噪音色彩的滑音，也可让它充当活动琴枕，例 X-23、X-24）；**敲击**（掌侧或掌面在近共鸣箱处击弦得沉重宏亮的"大锣音"，多用于低区，标记为圈中一个 T，例 X-26）。
+All of these are accepted as a set, and they are mutually exclusive: choosing one rules out the others. **Plucking-point variation** (près de la table, plucking near the soundboard; increases partials, makes the colour brighter and fuller, approaching the sound of guitar plucking; example X-16); **damping** (secco / étouffé, where the hand or fingers damp the string immediately after plucking; arpeggiated passing figures should be limited to no more than 88 beats per minute; example X-17); **muted strikes and sweeps** (one hand damps the strings while the other plucks, producing a percussive, resonance-free muted strike; chordal sweeps use different fingers to strike adjacent strings within a pitch group extremely quickly; example X-18); **tool variation** (fingernail tips for a brighter colour, a plectrum in place of the fingers, a wooden or metal stick sweeping rapidly near the soundboard; the thumb pressing repeatedly on the top of the string to produce a shuddering vibrato; example X-19); **mutes** (soft material inserted at the top of the string to damp vibration; a variant is inserting a narrow paper roll, which produces a short, faint but bright sound, close to a harpsichord with a crackling noise; examples X-20 and X-21); **pedal glissando and vibrato** (while the string vibrates, the pedal rapidly shifts or oscillates between notches, producing glissandi and vibrato from a semitone to a whole tone; example X-22); **tuning-key glissando** (pressing a tuning key firmly against one or two strings and sliding it rapidly along the string produces a glissando with a noisy colour; it can also serve as a movable bridge; examples X-23 and X-24); **striking** (striking the string near the soundboard with the palm side or the back of the hand produces a heavy, resonant "gong-like" sound, mostly used in the low register and marked with a T in a circle; example X-26).
 
-★ 同一记号在不同作曲家笔下含义会变：例 X-24 的"大锣音"指拨弦后让弦反弹在指甲上的拍击音响，与例 X-26 的掌击完全不同。**用非常规奏法必须附文字说明，光给符号等于没写。**
+★ The same notation can change meaning in different composers' hands: the "gong-like" sound in example X-24 refers to the percussive sound of plucking the string so that it rebounds off the fingernail, which is entirely different from the palm strike in example X-26. **When using an unconventional technique, a verbal explanation must be attached; a symbol alone is not sufficient.**
 
-### 2.6 乐队里的角色（p0499、p0532–0533）
+### 2.6 The harp's role in the orchestra (p0499, p0532–0533)
 
-印象派把竖琴从浪漫主义的"音型化琶音加装饰性和弦"里解放出来，常用四类奏法：像钢片琴般清澈的泛音、轻扫拂弦的透明和弦滑奏、近共鸣箱拨弦、断音与煞音（例 XI-25 示范双竖琴上下行刮奏轮流配三角铁敲击）。★ **竖琴与高度半音化的十二音写法相克**，踏板换得太频繁，效果常显得表现平平，那种语境下要拨弦色彩就换乐器。传统柱式和弦织体里，它与羽管键琴的常规任务是支持或装饰其他乐器组。
+The Impressionists freed the harp from the Romantic "figured arpeggios plus decorative chords," and commonly used four kinds of technique: clear, flute-like harmonics similar to the celesta; transparent glissando chords produced by lightly sweeping the strings; plucking near the soundboard; and detached and damped notes (example XI-25 demonstrates two harps alternating upward and downward glissandi with triangle strikes). ★ **The harp conflicts with highly chromatic twelve-tone writing**: if the pedals change too frequently, the effect often sounds unremarkable, and in that context a plucked colour should be obtained from a different instrument. In traditional pillar-chord textures, its conventional role, shared with the harpsichord, is to support or decorate other instrument groups.
 
 ---
 
-## 3. 钢琴
+## 3. Piano
 
-### 3.1 先选身份
+### 3.1 First choose its identity
 
-Adler 列乐队里钢琴的五种典型用途（p0479）：协奏曲独奏乐器；作品中不可或缺的声部（需要时用两架）；纯粹的管弦乐队乐器；打击乐器的替代品（代替木琴、马林巴、颤音琴，低区可加强定音鼓或大鼓）；非专业乐团中的填充乐器（代替缺席的双簧管、大管或中提琴）。
+Adler lists five typical uses of the piano in the orchestra (p0479): as the solo instrument of a concerto; as an indispensable part of a work (two pianos when needed); as a purely orchestral instrument; as a substitute for percussion (replacing xylophone, marimba, or vibraphone, and in the low register reinforcing timpani or bass drum); and as a filler instrument in non-professional orchestras (replacing an absent oboe, bassoon, or viola).
 
-杨立青补的是原因：钢琴全音域的发音都带颗粒性，这种颗粒性造成的非线性音响特色，加上"钢琴是与乐队相对置的独奏乐器"这一传统理念，使它未能在浪漫派管弦乐思维里占位，作为乐队普通一员承担色彩装饰或打击性处理是印象主义以后才被开掘的（p0438、p0440–0441）。
+Yang Liqing supplies the reason: every pitch across the piano's full range has a granular quality, and this granularity produces a non-linear timbral character. Together with the traditional concept of the piano as a solo instrument set against the orchestra, this kept it from finding a place in Romantic orchestral thinking. Using it as an ordinary member of the orchestra, for colouristic decoration or percussive treatment, was only explored after Impressionism (p0438, p0440–0441).
 
-**编曲含义**：放进乐队前先答一个问题，它这次是对置的一方，还是乐队内部的一层。答案不同，写法与力度全都不同，混着写会让它既不像独奏也融不进去。
+**Orchestration implication**: before placing it in the orchestra, answer one question: is it this time the opposing party set against the orchestra, or a layer within the orchestra? The answers lead to different writing and dynamics; mixing the two makes it sound neither like a soloist nor like something that blends in.
 
-### 3.2 音域与音区（p0439–0440、p0479）
+### 3.2 Range and register (p0439–0440, p0479)
 
-除管风琴外，钢琴在乐队中音域最宽（例 13-1）。音区性格是低区丰满浓郁、中及中高区华丽辉煌、最高区透明晶莹。三条容易漏的：★ **频谱结构很大程度上取决于击键力度**，力度越大分音越多、起奏噪音越明显，力度在钢琴上改变的是音色而非只是响度；特大型三角钢琴低区可向下延伸到大字二组 F 乃至 C，**即使不弹这几个音，它们与上方琴弦的交应共鸣也能给低区难以置信的饱满度**；声波幅射方向取决于顶盖板反射性能与开启角度，低区均匀四散、中高区方向集中，这条管的是摆位与拾音朝向。
+Apart from the organ, the piano has the widest range in the orchestra (example 13-1). Its register character is full and rich in the low register, brilliant and splendid in the middle and upper-middle registers, and transparent and crystalline in the highest register. Three points are easy to overlook: ★ **spectral structure depends largely on the striking force**: the harder the key is struck, the more partials there are and the more obvious the attack noise; on the piano, dynamics change timbre, not just loudness. The low register of very large grand pianos can extend down to F or even C in the contra-great octave, and **even if these notes are not played, their sympathetic resonance with the strings above gives the low register an incredible fullness**. The direction of sound radiation depends on the reflectivity of the lid and how far it is opened: the low register radiates evenly in all directions, while the middle and upper registers are directionally concentrated; this affects positioning and the direction of microphones.
 
-### 3.3 出音法与踏板：钢琴的"弓法"（p0446–0450、p0480）
+### 3.3 Articulation and pedals: the piano's "bowing" (p0446–0450, p0480)
 
-★ 出音法（连音、各类断音、非连音及连断结合，牵涉触键与踏板的配合）在钢琴写作中的重要性不亚于弦乐的弓法与管乐的句法呼吸，却常被忽视（例 X-47）。它与 reference §2.1、§4.3 是同一条线索上的键盘对应项。
+★ Articulation (legato, various staccatos, non-legato, and combinations of legato and staccato, involving the coordination of key striking and pedaling) is no less important in piano writing than bowing for strings or breathing and phrasing for winds, yet it is often overlooked (example X-47). It is the keyboard counterpart on the same line of thought as reference §2.1 and §4.3.
 
-| 踏板 | 机制与效果 | 用在哪 |
+| Pedal | Mechanism and effect | Where it is used |
 |---|---|---|
-| **延音（制音）踏板** | 抬起全部制音器让弦自由震动，琴键释放后仍起作用；踩下时连最高区那些本无制音器的弦也因下方琴弦谐振而音质改善 | 三者中用得最多；除连音乐句外，对半连音与突强的强调也有辅助作用 |
-| **弱音踏板 una corda** | 机械整体移位改变受击弦数，立式琴上则使琴锤更靠近弦 | 使用频率次之；音量略降、发音变黯淡柔和（例 X-50） |
-| **保持音踏板 sostenuto** | 只延长踩下瞬间正在延续的音或和弦，之后弹的音不受影响 | 用得最少；对低音持续音最有用，**但对中央 C 以上效果不明显**。另有半踏板，制音器略抬得似连非连 |
+| **Sustain (damper) pedal** | Lifts all dampers so the strings vibrate freely; the effect continues after the keys are released; when pressed, even the highest strings, which have no dampers, benefit in tone quality through sympathetic vibration from the strings below | The most frequently used of the three; besides connecting phrases, it also assists with emphasizing semi-legato and sudden accents |
+| **Soft pedal (una corda)** | Mechanically shifts the whole action to change the number of struck strings; on an upright piano, it brings the hammers closer to the strings | Used less often; slightly reduces volume and makes the tone darker and softer (example X-50) |
+| **Sostenuto pedal** | Sustains only the notes or chords that are already sounding at the moment it is pressed; notes played afterward are unaffected | Used least often; most useful for sustained low bass notes, but **has little effect above middle C**. There is also a half-pedal, in which the dampers are lifted partway, so that the sound is partly connected and partly not |
 
-要清晰短促干枯的发音而不用延音踏板时，必须明确标 senza Ped. 或 no Ped.。两个值得单记的技法：强奏后突然踩下延音踏板，借余响制造回声；强奏并踩踏板后突然轻按琴键并迅疾换踏板，形成色彩变幻。
+When a clear, short, dry sound is wanted without the sustain pedal, senza Ped. or no Ped. must be explicitly marked. Two techniques are worth noting separately: after a strong attack, suddenly pressing the sustain pedal to create an echo from the afterglow; and after a strong attack with the pedal down, suddenly playing a key lightly and quickly changing the pedal, producing shifting colours.
 
-### 3.4 打击性与干枯色彩：四档（p0442–0445）
+### 3.4 Percussive and dry colour: four grades (p0442–0445)
 
-四档互斥，选定一档就决定了这段钢琴是什么角色：一，中音区用机械的律动、粗厉的触键，得干涩音色，把打击乐性释放出来（例 X-42、X-43）；二，低区重复低音提琴与大提琴的拨奏，给声部增加重量与金属性色彩（例 X-44）；三，弱音踏板与强力度并用，从低区榨出干巴巴、无人性气息的音色（例 X-45）；四，以 ff 到 fff 敲击式使用，功能退化为纯打击性噪音，给低音铜管、大锣与高音长笛、钟琴、木琴、小号提供支持，此时它不再承担旋律或和声（例 X-46）。
+The four grades are mutually exclusive; choosing one determines what role the piano plays in that passage. (1) In the middle register, use mechanical rhythmic patterns and harsh key attack to obtain a dry tone, releasing its percussive quality (examples X-42 and X-43). (2) In the low register, pizzicato-like plucking that doubles the double basses and cellos, adding weight and metallic colour to the part (example X-44). (3) Combine the soft pedal with strong dynamics to extract a dry, inhuman tone from the low register (example X-45). (4) Use it in fff-like strikes with ff to fff intensity, reducing it to purely percussive noise that supports low brass, gongs, and high flute, celesta, xylophone, and trumpet; at this point it no longer carries melody or harmony (example X-46).
 
-反方向的一条：**利用钢琴极高音区高八度重复弦乐的华彩音型，可增添朦胧柔和的泛音般色彩**，受印象主义"薄雾般的非物质性"启发（p0441，例 X-41）。它与 reference §4.1 的十五度线条是同一思路的分支，那里对置的是木管高低两端，这里是钢琴顶端对弦乐。
+One point in the opposite direction: **using the extremely high register of the piano to double an octave above the string arpeggio figures of a cadenza adds a hazy, soft, harmonic-like colour**, inspired by the Impressionist "misty immateriality" (p0441, example X-41). It is a branch of the same idea as the fifteenth-away line in reference §4.1, where the opposing parties are the high and low ends of the woodwinds; here they are the top of the piano set against the strings.
 
-### 3.5 非常规奏法：整套不收（p0450–0461）
+### 3.5 Unconventional techniques: not accepted as a whole (p0450–0461)
 
-钢琴的先锋派奏法自成一套（键盘上的音束与哑键，琴体内的刮奏、拨奏、泛音、制音、敲击，顶盖板回声与预置钢琴），它把钢琴当作被拆开的音源而非键盘乐器，与本文其余各节的判据不在同一层，整套不放在这里。要用它时记一条选择标准：要保留音高就停在音束、哑键与琴弦拨奏，不要音高就走敲击与预置；既要清楚的和声又要噪音质感的中间地带，需要两层乐器分工，一架钢琴同时给不了。
+The avant-garde techniques of the piano form their own system (sound beams and dead keys on the keyboard; scraping, plucking, harmonics, damping, and striking inside the case; lid echoes and prepared piano). These treat the piano as a dismantled sound source rather than a keyboard instrument, and their criteria are not on the same level as the other sections of this document, so the system as a whole is not included here. When using it, keep one selection standard in mind: to retain pitch, stay with sound beams, dead keys, and string plucking; to dispense with pitch, use striking and preparation. The middle ground of wanting both clear harmony and noise texture requires two layers of instruments working together, which one piano cannot provide at the same time.
 
-### 3.6 乐队里的三种重复用法
+### 3.6 Three ways of repetition in the orchestra
 
-用近似敲击的奏法重复木管声部，既给木管组带来活力，又为整体添一层金属色泽（p0481，例 13-2）；低区重复低音提琴与大提琴的 pizz.，增加重量与金属性（p0443，例 X-44）；极高区高八度重复弦乐华彩音型，得朦胧柔和的泛音般色彩（p0441，例 X-41）。作伴奏乐器时的典型配置是柱式和声托一条独奏旋律，并让低音提琴以极轻拨弦重复钢琴低音（p0482，例 13-3）。三条都属 SKILL §3.9 里"重复以强调"的具体化，区别在于钢琴带来的是金属色泽与起音点，而非音量。
-
----
-
-## 4. 其余键盘乐器
-
-### 4.1 钢片琴（p0461–0466、p0484–0486）
-
-Adler 判断它在乐队中被使用的机会可能比任何一种键盘乐器都频繁。音响与钟琴相似但弱而精致，高频带来穿透力，绝不像钟琴那样尖锐。音域四个八度、实际发音比记谱高八度，用双行联合谱表（例 13-5）。音区性格是低区柔和、中高区透明雅致、最高几音清脆但略尖细。
-
-**断音能力两说并排**：Adler 说因共振箱延长了钢片震动时间，它上面无法真正演奏一个短促的断音（p0484）；杨立青留了余地，说它在断奏或同音反复等需敏捷起奏的乐句中表现略逊于钢琴（p0464）。按严的一说写最安全。
-
-★ **它的精美音质只有在不很复杂、轻盈透明的织体里才显露**，应避免过分臃肿沉重的音墙（p0465），这是 SKILL §5 的具体化。三类用法并列：与弦乐、竖琴、钢琴和弱奏木管结合制造最令人兴奋的片段，带来银光闪闪的感觉（例 13-6）；与钟琴、颤音琴、马林巴等装饰性乐器结合作色彩装饰（例 X-68 到 X-70）；作贯穿全曲的象征性音色标记，每当特定意象出现就伴以它为特色的乐队色彩（例 13-7）。★ 在 fff 到 ffff 的全奏里仍可能加入它再添亮丽一笔，**此时音量贡献可忽略不计，纯属色彩点缀**。
-
-### 4.2 羽管键琴（Adler 称古钢琴，p0467–0470、p0487）
-
-**归类两说并排**：Adler 放在键盘乐器章内、称古钢琴，指出它用羽茎或皮制小钩子拨弦而非琴锤敲击；杨立青按发音原理归入拨弦（弦鸣）乐器，并提醒中文口语的"古钢琴"易与 Clavichord 混淆。实际写作按拨弦乐器的余响与起音去想，按键盘乐器的记谱去写。
-
-音栓可改变音高的八度位置与音质（抑制音量、削减亮度、模拟竖琴或琉特琴音色）；大型乐器有两套键盘，需用连接器把两个键盘的音域综合起来以增加力量；记谱用双行联合谱表按实音记（与钢片琴的移八度记谱不同），音域 F 到 f⁴（例 X-71、例 13-8）。还可指定两排键盘各用不同调律以获得微妙音差（例 X-72 到 X-74）。
-
-两条判断：★ **声音纤细，并非主导性乐器**，最好用于独奏或与适合弱奏的乐器结合（例 13-9），加上力度幅度极小（§1），它承担不了任何需要力度层次的角色。二十世纪的两种定位并列，作特殊色彩性段落，或更多情况下成为仿古的象征，织体常令人想起亨德尔、维瓦尔第式的通奏低音；★ **现代语境里用它带有明确的历史指涉功能**，这层含义会自动附着，不想要就别用。
-
-### 4.3 管风琴（p0470–0474、p0489–0491）
-
-实质属气鸣乐器，靠风箱鼓动音管中的空气柱振动发声，在乐队所有乐器中音域最宽（例 13-10）。★ **最具吸引力之处是能在音量恒定的条件下无限延长一个音**，同时拥有多种音色组合，既可融合也可对比；融入织体的典型做法是用它的延音能力与丰满的弦乐组结合（例 13-11）。
-
-- 记谱与音管长度：8 英尺音管实音等于记谱音，4 英尺高一个八度，2 英尺高十五度；扩展记号向下注明 +16' 或 +32'、向上注明 +4' 或 +2'，**但大部分管风琴没有 32' 功能，有些不具备 2' 能力，写之前必须核实该乐器实际的音栓能力**。谱表两说并排：标准记谱应为三行（两行手键盘加一行脚键盘），许多作曲家仍按钢琴习惯记两行，把键盘选择连同音栓安排交给演奏者。
-- 两条时间代价：低区起奏迟缓（§1）；**更换单个音栓只需四分之一到二分之一秒，改变一组音栓的组合则需 3 到 4 秒**，写快速换色要算进这段延迟。
-- 常规连续弹奏的音在听感上都是连音，无论是否标连线；还可通过突然开关马达、改变风压制造特殊音响（例 X-76）。角色上，巴罗克与古典早期主要作通奏低音，此后或作与常规管弦乐音色形成反差的特殊色彩，也常见于宗教题材（例 X-75、X-77）。
-- ★ **它不是乐团与音乐厅的必备乐器**。许多音乐厅用电子管风琴或小型管风琴替代，但能量与音色调节能力不足。依赖管风琴之前先确认演出场地。
-
-### 4.4 风琴（脚踏式簧风琴，p0481–0482、p0492–0494）
-
-属自由簧气鸣乐器，脚踏风箱鼓风、触动簧片发声，联合谱表记谱，通常五个八度；发音常伴含混的气流声，灵敏性远逊于钢琴。角色窄而明确：通常用来重复管风琴的声部（只是不加踏板），除少数例外只担任和声背景或填充内声部。★ 作者给了一句很重的评价，它最擅长用和弦式的长音为宣叙调伴奏，"除了管风琴之外，没有任何一件键盘乐器可以如此之好地完成这项工作"（例 13-13）。反向的实践证据是，柴科夫斯基让风琴承担重要角色的那一处，实际演出中常改用管风琴代替。
-
-### 4.5 手风琴（p0475–0481）
-
-- **先选类型，这是作曲者的决定**。分键钮式（即巴扬）与键盘式（右手键盘、左手琴钮），键盘式左手排列又分三种。★ 斯特拉岱拉式按四五度循环排列，能奏现成的传统结构和弦、适合大众音乐，但不能适应复杂精致、富独创性的写法；**三排钮半音阶自由低音式可自如奏出任意组合的音阶与和弦，是当代作曲家的最佳选择**。写复杂和声之前必须指定类型。
-- 记谱按惯例像钢琴一样用联合谱表记实音，两侧键盘各约三个半到四个八度；能用音栓模仿长笛、单簧管、双簧管、小提琴等音色。自由低音式的键钮排列密集，手指跨度远超其他键盘乐器，不用拇指可奏不超过十五度的任意音程。
-- ★ **风箱的运作类似弦乐运弓**：连续交替推拉对应分弓，单一推或拉过程中奏出多音对应连弓，同方向连续推或拉对应波弓。这条类比让 reference §2.1 的弓法判断可以直接迁移，也是 SKILL §3.5 在手风琴上的入口。非常规手法有级进滑奏、哑奏（只出气流噪音）、猛力推拉的突强重音、晃动风箱的颤吟与震音（例 X-79、X-80）。
-- ★ **它自带市井联想**，浓郁的本色音响常令人想起街头的民间手风琴手或手摇风琴。不想要这层联想就避开它的本色，想要场景感就直接用。
-
-### 4.6 电鸣键盘与合成器（p0483–0490）
-
-**马特诺电子琴**：★ **单音乐器，即使同时按下多键也只发出其中最低音**，只能写单声部线条；琴键左右微移得四分之一音与颤吟，大幅滑奏由可移动细带产生，按实音记单行谱表，发音接近小提琴与人声，力度幅度很大（例 X-82）。**电子风琴**常用来模拟或代替管风琴，演奏技巧与记谱基本相同。**合成器**能否承担和声材料看振荡器数量，老式演奏用合成器往往只能奏单音；★ 与乐队结合的一条落地做法是把采样音色与拨奏颤音、气流声这类点状与线性要素跟铜管、打击乐器结合，**但依赖极长的混响处理**，谱面上要写明（例 X-84）。音色本身怎么做见 §8。
+Repeating the woodwind parts with a near-percussive technique brings vitality to the woodwind group and adds a layer of metallic lustre to the whole (p0481, example 13-2). Repeating the low register with pizzicato from the double basses and cellos adds weight and metallic quality (p0443, example X-44). Repeating in the very high register with octave doubling of the strings' cadenza figures produces a hazy, soft, harmonic-like colour (p0441, example X-41). As an accompaniment, a typical configuration is pillar chords supporting a solo melody, with the double bass repeating the piano's bass very softly through light plucking (p0482, example 13-3). All three are concrete forms of "repetition for emphasis" in SKILL §3.9; the difference is that the piano brings metallic colour and attack points, not volume.
 
 ---
 
-## 5. 吉他、曼多林与其他拨（击）弦乐器
+## 4. Other keyboard instruments
 
-### 5.1 整类的定位（p0420）
+### 4.1 Celesta (p0461–0466, p0484–0486)
 
-★ 这些乐器"大多只作为补充的（或对比性）色彩出现于作品中，而并未形成固定的编制"。这句话管住整类：吉他、曼多林、大扬琴、琉特琴、齐特尔琴、班卓琴、巴拉莱卡琴，都按特殊色彩点缀安排。reference §2.2.5 给的是它们在 Adler 侧的页码入口，这里给判据。
+Adler judges that it may be used more often in the orchestra than any other keyboard instrument. Its sound is similar to the glockenspiel but weaker and more refined; its high frequencies give it penetrating power, and it never sounds as shrill as a glockenspiel. Its range spans four octaves, and it actually sounds an octave higher than written; it is notated on a grand staff using two lines (example 13-5). Its register character is soft in the low register, transparent and elegant in the middle and upper-middle registers, and its highest few notes are clear but somewhat thin.
 
-### 5.2 吉他（p0420–0425）
+**Two views on articulation, set side by side**: Adler says that because the resonator box prolongs the vibration of the plates, it cannot truly play a short, detached note (p0484); Yang Liqing leaves some room, saying that in detached passages or repeated notes requiring quick attacks, it performs slightly less well than the piano (p0464). Writing according to the stricter view is safest.
 
-交响乐队中多用古典吉他（6 弦尼龙弦，12 到 20 品）。★ **音量不足是它在交响乐队中应用受限的根本原因**：发音雅致柔和但泛音不丰富、穿透力不强，音量甚至低于竖琴（§1）。解决办法是电声扩大，施托克豪森指定使用带电声扩大装置的吉他，并调节扩大装置音量以适应不同力度与织体密度（例 X-29）。
+★ **Its refined sound emerges only in textures that are not very complex and are light and transparent**; thick, heavy walls of sound should be avoided (p0465), which is the concrete form of SKILL §5. Three types of use stand side by side: combined with strings, harp, piano, and soft woodwinds to create the most exciting passages, giving a silvery-bright impression (example 13-6); combined with decorative instruments such as glockenspiel, vibraphone, and marimba for colouristic decoration (examples X-68 to X-70); and as a symbolic timbral marker running through the whole piece, accompanying each recurrence of a particular image with the orchestral colour it characterizes (example 13-7). ★ In a tutti at fff to ffff it can still be added to contribute a further brilliant touch, **but at this point its contribution in volume is negligible; it is purely colouristic decoration**.
 
-- 记谱传统用高音谱表、实际发音低八度，自马勒以来也常按实音记；变调装置可将全部弦音高移高 1 到 3 个半音。
-- 音域取用：20 品的琴，第 I 到 III 弦应用音域以十二或十三度为限；**对一般水平的乐队演奏员，最高音区的使用范围应再移低四到五度**。
-- 可奏 3 到 5 音和弦，利用空弦甚至 6 音，变音较多的和弦常需横按法；超过 4 音的和弦用拇指扫弦或四指并拢以指甲背面扫击。人工泛音一般只用第 2 和第 4 泛音。
-- 色彩奏法：靠马与靠指板相当常见；★ 把靠指板推向极端、在弦正中央拨弦（molto sul tasto）可获极其甜美纯净的声音。另有颤吟、巴托克拨弦、煞音与敲击琴身琴马的奏法。
-- 乐队角色两阶段：十九到二十世纪初多只作色彩性乐器，或与竖琴、曼多林组成小夜曲式的音型化和声伴奏（例 X-27）；二十世纪后半叶起常与钢琴、管钟、钟琴、钢片琴、颤音琴这类音响个性强的乐器组合（例 X-28、X-29）。
+### 4.2 Harpsichord (Adler calls it the "ancient piano", p0467–0470, p0487)
 
-### 5.3 曼多林与其余几件（p0426–0434）
+**Two views on classification, set side by side**: Adler places it in the keyboard chapter and refers to it as an early piano, noting that it plucks the strings with small quills or leather hooks rather than striking them with hammers; Yang Liqing classifies it as a plucked (string-sounding) instrument according to the principle of sound production, and cautions that the colloquial Chinese term "ancient piano" is easily confused with the clavichord. In practice, think of it in terms of the resonance and attack of a plucked instrument, but write for it using keyboard notation.
 
-曼多林属琉特琴家族，四组同音双弦定弦与小提琴相同，按实音记谱。发音较吉他明亮清脆、音量略大，★ **但延续能力差、衰减很快，连音乐句实际演奏时只能用震音方式奏出**（例 X-30）。这一条直接限制旋律写法：给它写歌唱性长线条，拿到的一定是震音质感。它常用于特定场景描绘（如爱情场面），也常作为吉他家族的高音乐器与吉他一起出现。
+Stops change the octave position and tone quality of the pitch (suppressing volume, reducing brightness, or simulating the timbre of the harp or lute). Large instruments have two keyboards, and couplers are used to combine the ranges of the two keyboards for added power. Notation uses a grand staff at actual pitch (unlike the octave-transposed notation of the celesta), with a range of F to f⁴ (examples X-71 and 13-8). Two keyboards may also be assigned different tuning systems to obtain subtle pitch differences (examples X-72 to X-74).
 
-其余几件各有一条决定性判据。**大扬琴**（两根棉绒包头木槌击弦）所有音区都带明显敲击噪音、与乐队融合力稍差，因此只作特殊色彩乐器，典型用法是和声性背景、间插性经过句，或用余韵袅绕的单击点缀弦乐线条的每个出音点；因琴弦排列顺序的差异，它的刮奏音列中会出现断裂（例 X-32、X-33）。**班卓琴**起奏敏锐，★ 音量比其他所有弹拨乐器都大得多，是本节里唯一不必担心被盖住的一件。**琉特琴**的定弦与技术基本与吉他相同；**齐特尔琴**左方按品弦主奏旋律、右方自由弦主奏伴奏；**巴拉莱卡琴**三弦按四度定音，高音型清婉、低音型雄浑。
+Two judgments: ★ **its sound is delicate and it is not a dominant instrument**; it is best used as a soloist or combined with instruments suited to soft playing (example 13-9). Given its extremely small dynamic range (§1), it cannot carry any role that requires dynamic gradation. Two twentieth-century positions stand side by side: as a special colouristic passage, or, more often, as a symbol of archaism, with textures that often recall the basso continuo of Handel or Vivaldi. ★ **In modern contexts, using it carries a clear historical reference function**; this meaning attaches automatically, so do not use it if you do not want that meaning.
 
-**中国民间拨（击）弦乐器**进西方乐队可创造富于个性与地域色彩的乐队语言，其中琵琶最受青睐；例 X-36 到 X-40 示范五种用法，从琵琶扫弦增添气势、古筝击弦强调竖琴琶音和弦，到大三弦刻画反派步态、独弦琴营造静谧、柳琴加中阮模仿弹拨乐队。民族乐器自身的技法见 SKILL §8 指向的民乐一线。
+### 4.3 Organ (p0470–0474, p0489–0491)
+
+Essentially a wind instrument, it produces sound by using bellows to drive air columns in its pipes to vibrate, and it has the widest range of any instrument in the orchestra (example 13-10). ★ **Its most attractive feature is the ability to sustain a note indefinitely at constant volume**, while offering many timbral combinations that can either blend or contrast. The typical way to integrate it into a texture is to combine its sustaining ability with a full string section (example 13-11).
+
+- Notation and pipe length: an 8-foot pipe sounds at written pitch; a 4-foot pipe sounds an octave higher, and a 2-foot pipe a fifteenth higher. Extended stops are indicated by +16' or +32' below and +4' or +2' above; **but most organs do not have a 32' capability, and some lack a 2' capability, so the organ's actual stop capabilities must be verified before writing**. On the staff question, two views stand side by side: standard notation should use three staves (two manual staves plus one pedal staff), but many composers still write on two staves following piano convention, leaving the choice of keyboards together with the stop arrangement to the performer.
+- Two time costs: slow low-register onset (§1); **changing a single stop takes only a quarter to half a second, while changing a whole group of stops takes 3 to 4 seconds**; when writing a rapid change of colour, this delay must be accounted for.
+- Notes played in ordinary continuous fashion are heard as legato, whether or not a slur is marked; special effects can also be produced by suddenly switching the blower motor on and off or changing the wind pressure (example X-76). In terms of role, in the Baroque and early Classical periods it was used mainly as basso continuo; afterwards it became a special colour contrasting with ordinary orchestral timbres, and it is also common in religious subjects (examples X-75 and X-77).
+- ★ **It is not an essential instrument for every orchestra or concert hall.** Many concert halls use electronic organs or small organs as substitutes, but these lack sufficient power and timbral control. Confirm the performance venue before relying on an organ.
+
+### 4.4 Reed organ (harmonium, a foot-pumped free-reed instrument, p0481–0482, p0492–0494)
+
+A free-reed aerophone, it is pumped with the feet and sounds by setting reeds vibrating; it is notated on a grand staff and usually spans five octaves. Its sound is often accompanied by an indistinct airy noise, and its responsiveness is far inferior to that of the piano. Its role is narrow and clear: it usually reproduces the parts of the organ (only without pedals), and with few exceptions it serves only as harmonic background or filler inner voices. ★ One author gives a strongly worded assessment: for accompanying recitative with long chordal notes, "no keyboard instrument other than the organ can do this job so well" (example 13-13). Conversely, in practice, the places where Tchaikovsky gave the reed organ an important role are often performed with a pipe organ instead.
+
+### 4.5 Accordion (p0475–0481)
+
+- **First choose the type; this is the composer's decision.** There are button-keyboard types (the Bayan, or button accordion) and piano-keyboard types (right-hand keyboard, left-hand buttons), and the left-hand arrangement of the piano-keyboard type comes in three varieties. ★ The Stradella system arranges its bass buttons in cycles of fourths and fifths; it can play ready-made traditional structural chords and suits popular music, but cannot accommodate complex, refined, and original writing. **The three-row chromatic free-bass system can play any combination of scales and chords freely and is the best choice for contemporary composers.** The type must be specified before writing complex harmony.
+- Notation follows the convention of piano, using a grand staff at actual pitch; the two keyboards together span about three and a half to four octaves. Stops can imitate the timbres of flute, clarinet, oboe, violin, and others. The free-bass button layout is dense, and the finger spans are far larger than on other keyboard instruments; without the thumb, it can play any interval up to a fifteenth.
+- ★ **The bellows operate in a manner similar to a string bow**: continuous alternating push and pull corresponds to separate bow strokes; playing multiple notes within a single push or pull corresponds to slurred bowing; continuous pushes or pulls in the same direction correspond to long bow strokes. This analogy allows the bowing judgments of reference §2.1 to transfer directly, and is also the entry point for SKILL §3.5 on the accordion. Unconventional techniques include stepwise glissandi, muted playing (producing only air noise), sudden strong accents by pushing and pulling hard, and vibrato and tremolo produced by shaking the bellows (examples X-79 and X-80).
+- ★ **It carries street-music associations**: its strongly idiomatic sound often calls to mind street accordion players or barrel organs. If you do not want this association, avoid its idiomatic colour; if you want a sense of scene, use it directly.
+
+### 4.6 Electric keyboards and synthesizers (p0483–0490)
+
+**Ondes Martenot**: ★ **a monophonic instrument; even when several keys are pressed at once, it sounds only the lowest one**, so it can write only single-voiced lines. Moving the keys slightly left and right produces quarter-tone and vibrato effects, and large glissandi are produced by a movable ribbon. It is notated on a single-line staff at actual pitch, and its sound is close to the violin and the human voice, with very large dynamic range (example X-82). **Electric organs** are often used to imitate or substitute for the pipe organ, and their playing technique and notation are essentially the same. **Synthesizers** can carry harmonic material depending on the number of oscillators; older performance synthesizers could often play only a single note. ★ One practical approach for combining with the orchestra is to pair sampled timbres with point-like and linear elements such as plucked tremolo and breath noise, together with brass and percussion; **but this relies on extremely long reverberation processing, which should be specified in the score** (example X-84). For how to create the timbres themselves, see §8.
 
 ---
 
-## 6. 组内的编制、总谱位置与织体用法
+## 5. Guitar, mandolin, and other plucked and struck string instruments
 
-在管弦乐写作里，打击、拨（击）弦与键盘乐器常被统称为"打击乐器组"，视为与弦乐、木管、铜管同等独立完备的整体（p0492）。本节只收与竖琴、键盘、拨弦相关的部分；无确定音高打击乐器自身的排列顺序与记谱体系另成一套，不收在这里。
+### 5.1 The positioning of the whole category (p0420)
 
-### 6.1 编制与总谱位置
+★ These instruments "appear in works mostly as supplementary (or contrasting) colour, and do not form a fixed lineup." This sentence governs the whole category: guitar, mandolin, hammered dulcimer, lute, zither, banjo, and balalaika are all arranged as special colour accents. reference §2.2.5 provides the Adler-side page entry points for them; here the criteria are given.
 
-定音鼓、竖琴、弹拨乐器及键盘乐器声部须由专职演奏员担任，其余打击乐器可由其他乐手兼任，人数按使用频度、密度与重合度推；Adler 侧的上限是除定音鼓与键盘演奏者外最多三到四名（p0492、p0495）。★ 任务分配与乐器摆放，除非乐谱已预先确定舞台位置或作曲者已有第一手经验，否则最好留给打击乐组首席或演奏员本人处理（p0504）。
+### 5.2 Guitar (p0420–0425)
 
-组内顺序两家直接冲突，写总谱前选一说并贯彻到底：
+In the symphony orchestra, the classical guitar (6 nylon strings, 12 to 20 frets) is most often used. ★ **Insufficient volume is the fundamental reason for its restricted use in the symphony orchestra**: its sound is refined and soft but its overtones are not rich and its penetrating power is weak; its volume is even lower than that of the harp (§1). The solution is electrical amplification; Stockhausen specified a guitar with an electric amplification device, and required adjusting the amplifier's volume to suit different dynamics and texture densities (example X-29).
 
-| | 说法 | 页 |
+- Notation tradition uses the treble staff with actual pitch sounding an octave lower; since Mahler it has often been written at actual pitch. A transposing device can raise all the string pitches by 1 to 3 semitones.
+- Range use: on a 20-fret instrument, the usable range of strings I to III is limited to a twelfth or thirteenth; **for ordinary orchestral players, the use of the highest register should be lowered by a further four to five steps**.
+- It can play chords of 3 to 5 notes, using open strings and sometimes even 6 notes; chords with many accidentals often require barré technique; chords of more than 4 notes are strummed with the thumb, or with four fingers together striking with the back of the nail. Artificial harmonics are generally used only for the 2nd and 4th harmonics.
+- Colour techniques: playing near the bridge and near the fingerboard are both quite common; ★ pushing the fingerboard position to the extreme, plucking at the exact centre of the string (molto sul tasto), produces an extremely sweet and pure sound. Other techniques include vibrato, Bartók pizzicato, damping, and striking the body or bridge.
+- Orchestral role in two phases: in the nineteenth to early twentieth centuries it was mostly used as a colouristic instrument, or as serenade-like figured harmonic accompaniment together with the harp and mandolin (example X-27); from the second half of the twentieth century onward it was often combined with instruments of strong sonic individuality such as piano, tubular bells, celesta, glockenspiel, and vibraphone (examples X-28 and X-29).
+
+### 5.3 Mandolin and the remaining instruments (p0426–0434)
+
+The mandolin belongs to the lute family; its four pairs of doubled strings are tuned like the violin, and it is notated at actual pitch. Its sound is brighter and crisper than the guitar's and slightly louder, but ★ **its sustaining ability is poor and it decays quickly; in practice, sustained passages can only be performed with a tremolo** (example X-30). This directly limits melodic writing: if one writes long singing lines for it, the result will invariably have a tremolo texture. It is often used to depict particular scenes (such as love scenes), and it also often appears alongside the guitar as the higher instrument of the guitar family.
+
+Each of the remaining instruments has one decisive criterion. **The hammered dulcimer** (struck with two wooden hammers wrapped in cotton) has noticeable percussive noise in all registers and blends somewhat poorly with the orchestra, so it is used only as a special colour instrument; its typical uses are harmonic background, interpolated passing figures, or accenting each attack point of a string line with a single lingering strike; because of the difference in string order, its glissando pitch set contains gaps (examples X-32 and X-33). **The banjo** has a sharp attack, and ★ its volume is far greater than that of any other plucked instrument; it is the only one in this section that need not worry about being drowned out. **The lute** has tuning and technique essentially the same as the guitar's; **the zither** plays the melody with its fretted strings on the left and accompanies with its free strings on the right; **the balalaika**, with three strings tuned in fourths, has a light, graceful high figure and a robust low figure.
+
+**Chinese folk plucked and struck string instruments** can create an orchestral language rich in individuality and regional colour when introduced into a Western orchestra, and among them the pipa (lute) is the most favoured; examples X-36 to X-40 demonstrate five uses, from pipa strumming that adds momentum, to guzheng striking that emphasizes the harp's arpeggiated chords, to the dasanxian (large three-string lute) depicting a villain's gait, the duxianqin (single-string zither) for stillness, and the liuqin combined with the zhongruan imitating a plucked-instrument ensemble. The techniques of the folk instruments themselves are covered in the Chinese folk orchestra line that SKILL §8 points to.
+
+---
+
+## 6. Lineup, score placement, and texture usage within the group
+
+In orchestral writing, percussion, plucked and struck strings, and keyboard instruments are often collectively called the "percussion group," and treated as an independent and complete whole on a par with the strings, woodwinds, and brass (p0492). This section covers only the parts related to the harp, keyboards, and plucked strings; the arrangement and notation system of unpitched percussion instruments form a separate system and are not covered here.
+
+### 6.1 Lineup and score placement
+
+The timpani, harp, plucked string instruments, and keyboard parts must be played by dedicated performers, while the remaining percussion instruments may be doubled by other players, with headcount determined by frequency of use, density, and overlap. On the Adler side, the upper limit is three to four performers besides the timpanist and keyboard players (p0492, p0495). ★ Task assignment and instrument placement should, unless the score has already fixed the stage positions or the composer has first-hand experience, be left to the principal percussionist or the performer (p0504).
+
+The order within the group is directly contradictory between the two sources; choose one view before writing the score and apply it consistently:
+
+| | View | Page |
 |---|---|---|
-| **Adler** | 该组通常放在铜管和弦乐之间，定音鼓排第一位；**竖琴在大型作品中放在所有键盘乐器之上**，无确定音高打击乐器在定音鼓之下、竖琴之上；键盘内部按音高降序排 | （p0495–0497） |
-| **杨立青** | 该组几乎总是排在铜管与弦乐之间，定音鼓紧接铜管组、位于组内最上方；**竖琴和钢琴位于组内最下方、紧邻弦乐组上方**；美国当代作曲家的作品可能相反（例 XI-1） | （p0492） |
+| **Adler** | The group is usually placed between the brass and the strings, with the timpani first; **in large works the harp is placed above all keyboard instruments**, unpitched percussion is below the timpani and above the harp, and within the keyboards the order is by descending pitch | (p0495–0497) |
+| **Yang Liqing** | The group is almost always placed between the brass and the strings, with the timpani immediately after the brass, at the top of the group; **the harp and piano are at the bottom of the group, immediately above the string section**; works by contemporary American composers may be the reverse (example XI-1) | (p0492) |
 
-出版惯例本身也会偏离规则（例 14-7）。真正可迁移的一条来自斯特拉文斯基把四架钢琴当作独奏乐器、因而置于定音鼓之上（例 14-10）：**钢琴的位置跟着它的身份走，独奏身份上移，乐队一员身份下沉。**
+Publishing conventions themselves sometimes depart from the rules (example 14-7). The genuinely transferable point comes from Stravinsky treating four pianos as a solo instrument and therefore placing them above the timpani (example 14-10): **the placement of the piano follows its identity; in a soloist role it moves up, and as a member of the orchestra it sinks down.**
 
-### 6.2 同质性织体：本族的短板（p0496–0502）
+### 6.2 Homogeneous texture: the weak point of this family (p0496–0502)
 
-齐奏、和弦、分部写作这三类的前提通常是音响的融合与划一，而本族音色个性独特、力度特性千差万别，用在这里并非所长。可行的做法有限：
+Unison, chordal, and divisi writing all presuppose that the sound blends and is uniform, whereas this family has distinctive timbres and extremely varied dynamic characteristics, so it is not its strength in these contexts. The feasible approaches are limited:
 
-| 织体 | 可行做法 | 代价与条件 | 谱例 |
+| Texture | Feasible approach | Cost and conditions | Musical example |
 |---|---|---|---|
-| 齐奏 | 用有确定音高的打击乐以同度或不同八度重叠其他组的齐奏线条，赋予清晰的起奏与特殊音色个性 | 有异质化的分离倾向；**须选色彩相近、音区相对等的乐器**。推荐配对：钟琴或钢片琴加短笛或弦乐泛音；颤音琴加小提琴、长笛或双簧管；马林巴加中提琴或单簧管；木琴加弦乐拨奏 | 例 XI-2。SKILL §3.1 的具体化 |
-| 齐奏 | 用不同种类的几件交错重复，把一条完整单音线条分割为若干色彩段或音色点 | 得镶嵌画般的音响，线条完整性让位于色彩 | 例 XI-2。SKILL §3.6 的具体化 |
-| 和弦 | 传统柱式写法中用键盘或拨击弦乐器支持或装饰其他组；不协和和弦或音束段落中，用一组音色相近的乐器逐音重叠或只与骨架声部复合 | 要求音质力度均匀且能持续发声的和声性织体本非本族所长；后一种只在不协和与音束语境成立 | 例 XI-4 |
-| 和弦 | 强烈全奏中动用全部有确定音高的打击与装饰性乐器与其他组和弦完全重叠 | ★ 因为有其他乐器组依托，**各件之间音色力度悬殊反倒能扬长避短** | 例 XI-5 |
+| Unison | Use pitched percussion to double other groups' unison lines in unison or at different octaves, giving clear attacks and a distinctive timbre | Tends toward separation through heterogeneity; **choose instruments of similar colour and comparable register**. Recommended pairings: glockenspiel or celesta with piccolo or string harmonics; vibraphone with violin, flute, or oboe; marimba with viola or clarinet; xylophone with pizzicato strings | Example XI-2. A concrete form of SKILL §3.1 |
+| Unison | Alternate several instruments of different kinds in repetition, dividing a single continuous line into several colour segments or timbral points | Produces a mosaic-like sound; the integrity of the line gives way to colour | Example XI-2. A concrete form of SKILL §3.6 |
+| Chords | In traditional pillar-chord writing, use keyboard or plucked and struck instruments to support or decorate other groups; in dissonant chords or cluster passages, use a group of instruments of similar timbre to double each note or to combine only with the skeletal voices | Harmonic textures requiring uniform tone quality and dynamics that can be sustained are not this family's strength to begin with; the latter approach holds only in dissonant and cluster contexts | Example XI-4 |
+| Chords | In strong tutti passages, use all pitched percussion and decorative instruments to double the chords of other groups completely | ★ Because other instrument groups provide support, **the sharp disparities in tone and dynamics among these instruments can instead be turned to advantage** | Example XI-5 |
 
-### 6.3 异质性织体：本族的主场（p0502–0509）
+### 6.3 Heterogeneous texture: the home ground of this family (p0502–0509)
 
-通则是：对比性、模仿性、支声性复调中，色彩各异的乐器都能强化反差、赋予不同线条鲜明的音色个性；★ **但大多数有确定音高的打击乐器力度幅度有限，强力度段落难与其他组匹敌，常需其他音色支持**。同为木质音色的乐器结合（如木琴与弦乐的 col legno 拍击）形成特性互补，得强劲力度与清脆木质色调（例 XI-7）。
+The general principle is: in contrapuntal, imitative, and heterophonic polyphony, instruments of differing colour can reinforce contrast and give different lines sharp timbral individuality. ★ **However, most pitched percussion instruments have limited dynamic range, and they struggle to match other groups in strong dynamic passages, often needing support from other timbres.** Combining instruments of the same wooden timbre (such as xylophone with the strings' col legno clicks) gives complementary characteristics, producing vigorous dynamics and a crisp, wooden tone colour (example XI-7).
 
-★ **线条感会退化，可以当手段用**：纯本族的对比性复调可行，但发音延续能力不强会弱化线条感（例 XI-8）；模仿性复调里线条感不明显，被色彩缤纷的音点交错取代，带点描风格特征（例 XI-9）。非连续性出音法与连贯旋律线的对比可使纯模仿性片段有细腻色彩层次，节奏不规则扩缩可消除卡农写法的同步感，木管连音与打击乐断音的差异还会削弱声部间的同源关系，使段落保持复调性意味却淡化赋格式的书卷气息（例 XI-10）。支声性复调用在本组时可能性最丰富，因为组内各类乐器的性能色彩反差远大于弦乐组与木管组（例 XI-12）；纯节奏性的模仿复调也因此成立（例 XI-11）。
+★ **The sense of line degrades, and this can be used as a device**: purely within this family, contrapuntal polyphony is feasible, but the weak sustaining ability weakens the sense of line (example XI-8); in imitative polyphony the sense of line is less apparent, replaced by interlaced points of colour, giving a pointillist character (example XI-9). The contrast between non-continuous articulation and a continuous melodic line can give pure imitative passages delicate layers of colour; irregular expansion and contraction of rhythm can remove the simultaneity of canon writing; and the difference between sustained woodwind notes and detached percussion notes further weakens the sense of common origin among the parts, so that a passage keeps a sense of polyphony without the bookish flavour of fugue (example XI-10). Heterophonic polyphony has the greatest range of possibilities within this group, because the contrast in tonal colour among the instrument types within the group is far greater than between the string and woodwind groups (example XI-12); purely rhythmic imitative polyphony is therefore also viable (example XI-11).
 
-### 6.4 旋律伴奏、固定音型与点描（p0509–0522）
+### 6.4 Melodic accompaniment, ostinato, and pointillism (p0509–0522)
 
-1. ★ **伴奏织体的厚薄由担旋律者的音量定**。仅用某一件有确定音高的打击乐器担旋律时，伴奏切忌厚重；反之则需其他乐器组支持。
-2. **和声成分一般不单独交给本组**。几乎所有有确定音高的打击乐器（个别键盘乐器除外）只能以滚奏震音形成持续和声，所以多与其他组结合，且常以非打击乐音色为主、本族为辅作色彩。
-3. **染色与柔化是两个方向**。染色如三角铁给木管与弦乐和声添亮度、钹或锣滚奏渲染铜管金属色彩；柔化则用有确定音高的打击乐音色作骨架和声的柔化剂，使和声模糊化（例 XI-13 用钢片琴加钟琴在极高音区作转瞬即逝的镶边式染色）。
-4. **音型化因素常可整体交给本组**。★ 按分解和弦样式写成的和声音型化织体由各类键盘式打击乐器组合演奏时，**技术难度不大却有熠熠生辉的光彩**，与木管的同类型织体结合更辉煌（例 XI-14、XI-15）；也可按线条音型化方式组合，形成色彩闪烁不定的复杂和声背景（例 XI-16）。竖琴、钢琴、钢片琴、马林巴、颤音琴与钟琴在同一弦乐长音背景上可构成的，正是和声音型化与线条音型化这一二分（p0537），与 SKILL §1.1「织体类型总开关」是同一套分类在本族上的落地。
-5. **固定音型**三档规模：少数乐器反复一个简单的三音动机，与总体律动形成节奏性对位并引发地域音乐联想（例 XI-17）；在各声部各自反复的偶然音乐式背景之上按固定间隔反复一个较复杂的音型，作为稳定的常数把错综复杂的结构整合起来（例 XI-18）；复合化音型，由若干基本节奏模式及其逆行构成全乐章的节奏背景（例 XI-19）。
-6. ★ **乐队踏板音**：用定音鼓、大鼓、锣、钹的震音作音响粘合剂，把层次繁多的乐队织体聚合成整体，音响干枯贫乏时添加一重踏板因素是有效的补救（例 XI-20）。它还有横向用途，**用在情绪、形象或织体类型急剧转换的临界点前后，常可获得不着痕迹的自然过渡**；它与 SKILL §3.6 的转接接缝是两条路，那里靠音色接力，这里靠一条持续的粘合层盖住接缝。
-7. **点描型织体**以本组为最合适的载体，它比其他所有乐器组拥有更缤纷斑驳的发音手段与更多音源种类（例 XI-21）。★ 代价写在同一处：**这决不意味着可以漫无边际地任意挥洒**，其中的声部顺序、音区安排、出音法与力度密度，要付出不比常规写作更少的思考。
-
----
-
-## 7. 色调：选不选、选哪一质、怎么布局
-
-三个决定依次做（p0528）：
-
-1. **基本色调的选择**。并非所有音乐都适宜用这一组，更非所有音乐都必须添加。Adler 的告诫同向，配器者常因经验不足而滥用打击乐、往往是为掩盖写作本身的不足，"打击乐写作中一个历久不衰的经验是：越少越好"（p0495）。★ 判据是那条有机性要求：**无论用哪件，它必须是作品的有机部分，声音要有存在的必然性，好似再无其他乐器可以替代**。
-2. **色调性质的选择**。按振动体的物理质地分金属质、竹木质、皮膜质、丝弦质，单一类型构成的是单性色调，两种以上复合的是多性色调；竖琴、钢琴、吉他属丝弦质，钢片琴、钟琴、颤音琴属金属质。
-3. **色调的对比与布局**。不同乐章或段落可分派不同的色调性质（布里顿《战争安魂曲》三个乐章分别以锣加钟、钟琴加颤音琴加古钹、皮膜为主）。★ 不适配的色调会相冲，勃林德尔评瓦列兹《美利坚》结束处木鱼的出现是"一着败招"，因为它与全曲金属质单性色调的布局相冲。**色调布局一旦确立，后面每一次加乐器都要对着它核一遍，单次听感好不构成理由。** 另一种做法见例 XI-22，每次重音出现都改用不同乐器或组合承担。
-
-**设计一段本组主导的音乐**，用"音响实现形式"的六个维度反过来当清单（p0523–0525）：音色（书中那段是金属质向皮膜质转移）、音响样式（长音到震音滚奏到成片的音点再复归震音）、声部数量（多、少、多）、音域幅度（开放、集中、开放的倒橄榄形）、节奏密度（稀朗到密集）、力度（pp 经 mf 到 fff）。六项全是平的，段落就是静止的。
-
-**功能清单**（p0525、p0536–0537）共七项：提供节奏动力；增添音色层次；加强力度变化；提供装饰性手段；提供强调的手段；地域色彩与异国情调的点缀；自然音响的模拟。当代语境再加一项，构成各类织体因素本身。其中"强调"与 SKILL §3.9、"音色层次"与 SKILL §3.3 重合。用法是先答"这次为什么加进来"，答案落不进七项里，通常说明这件乐器不该出现。
+1. ★ **The thickness of an accompanying texture is set by the volume of the melodic carrier.** When a single pitched percussion instrument carries the melody, the accompaniment must avoid being heavy; conversely, other instrument groups are needed for support.
+2. **Harmonic material is generally not entrusted to this group alone.** Almost all pitched percussion instruments (with individual exceptions among the keyboards) can only sustain harmony through rolled tremolos, so they are mostly combined with other groups, and typically serve as colour with non-percussive timbres as the primary sound and this family as secondary.
+3. **Colouring and softening are two different directions.** Colouring, such as using a triangle to add brightness to the harmony of the woodwinds and strings, or cymbal or gong rolls to heighten the metallic colour of the brass; softening, using pitched percussion timbres as a softening agent for the skeletal harmony, blurring the harmony (example XI-13 uses steel-plate celesta combined with glockenspiel in the very high register for fleeting, border-like colouring).
+4. **Figurative elements can often be entrusted to this group as a whole.** ★ When harmony is written in broken-chord figuration and performed by a combination of keyboard-type percussion instruments, **the technical difficulty is modest but the sparkle is striking**, and it is even more brilliant when combined with the same type of figuration in the woodwinds (examples XI-14 and XI-15); it can also be combined in linear figuration, forming a complex harmonic background with shifting colours (example XI-16). The dichotomy between harmonic figuration and linear figuration (p0537), which the harp, piano, celesta, marimba, vibraphone, and glockenspiel can form over a sustained string background, is the same classification that SKILL §1.1, "the master switch for texture types," applies to this family.
+5. **Ostinato** comes in three scales: a few instruments repeat a simple three-note motive, forming rhythmic counterpoint with the overall pulse and evoking regional musical associations (example XI-17); over a background of chance musical elements in which each part repeats independently, a more complex figure is repeated at fixed intervals as a stable constant, integrating an intricate structure (example XI-18); and compound figures, made of several basic rhythmic patterns and their retrogrades, form the rhythmic background for an entire movement (example XI-19).
+6. ★ **Orchestral pedal tones**: using tremolo on timpani, bass drum, gong, and cymbals as a sonic adhesive gathers a layered orchestral texture into a unified whole; when the sound is dry and sparse, adding a layer of pedal is an effective remedy (example XI-20). It also has a horizontal use: **placed before or after a sharp change of mood, image, or texture type, it often produces a seamless, natural transition**. It is a different route from the join in SKILL §3.6, where the seam is crossed by a relay of timbres; here, a continuous adhesive layer covers the seam.
+7. **Pointillist textures** find their most suitable carrier in this group, which has a more varied palette of sound production and more kinds of sound sources than any other instrument group (example XI-21). ★ The cost is written in the same place: **this by no means permits unrestrained, arbitrary display**; the order of parts, register placement, articulation, and dynamic density require no less thought than conventional writing.
 
 ---
 
-## 8. 不在这里的部分
+## 7. Colour: whether to choose, which quality, and how to lay it out
 
-| 内容 | 去哪 |
+Three decisions are made in sequence (p0528):
+
+1. **Choosing the basic colour**. Not all music suits this group, and not all music needs to add it. Adler's warning points the same way: orchestrators with insufficient experience often overuse percussion, frequently to conceal weaknesses in the writing itself. "A long-standing lesson in percussion writing is: the fewer, the better" (p0495). ★ The criterion is the organic requirement: **whichever instrument is used, it must be an organic part of the work, and its sound must have an inevitable reason to exist, as though no other instrument could replace it.**
+2. **Choosing the nature of the colour**. Classified by the physical nature of the vibrating body: metallic, bamboo-wood, membranous, and string. A single type forms a monotype colour; two or more types combined form a polytype colour. The harp, piano, and guitar are string-type; the celesta, glockenspiel, and vibraphone are metallic.
+3. **Colour contrast and layout**. Different movements or sections may be assigned different colour types (Britten's *War Requiem* assigns its three movements respectively to gong with bells, to glockenspiel with vibraphone and ancient cymbals, and to membranophones). ★ Incompatible colours clash: Blindell judged the appearance of the wood block at the end of Varèse's *Américas* to be "a losing move," because it clashes with the layout of the piece's overall metallic monotype colour. **Once a colour layout is established, every subsequent addition of an instrument must be checked against it; a single listening impression is not sufficient justification.** Another approach, see example XI-22, is to have a different instrument or combination carry each accent as it appears.
+
+**Designing a passage led by this group**: use the six dimensions of "how sound realizes form" as a checklist in reverse (p0523–0525): timbre (in the example in the book, a shift from metallic to membranous quality); sound style (sustained notes to rolls to clouds of points, then back to rolls); number of parts (many, few, many); range span (open, concentrated, open in an inverted-olive shape); rhythmic density (sparse to dense); dynamics (pp through mf to fff). If all six are flat, the passage is static.
+
+**Functional checklist** (p0525, p0536–0537), seven items in total: providing rhythmic drive; adding layers of timbre; strengthening dynamic variation; providing decorative devices; providing means of emphasis; adding regional colour and exotic accents; imitating natural sounds. The contemporary context adds one more item: constituting the texture factors themselves. Of these, "emphasis" coincides with SKILL §3.9, and "layers of timbre" coincides with SKILL §3.3. The method is to first answer "why is it being added this time"; if the answer does not fall into the seven items, this usually indicates the instrument should not appear.
+
+---
+
+## 8. What is not covered here
+
+| Content | Where to find it |
 |---|---|
-| 竖琴踏板机制、等音记谱、左右脚分布、弦的标色 | reference §2.2.4 |
-| 弦乐、木管、铜管三组各自的配器 | reference §2.3、§2.4、§2.5 |
-| 混合音色通则（同度、八度、染色、中和、融合度、横向换色、叠合、强调、平衡、透出三条件） | SKILL §3 到 §5 |
-| 织体类型总开关 | SKILL §1.1 |
-| 无确定音高打击乐器的排列顺序与记谱体系、纯打击乐的戏剧性用法 | 打击乐专题 |
-| 钢琴的先锋派奏法（见 §3.5 的整套说明） | 当代技法专题 |
-| 合成器音色本身怎么做 | `mc-sound-design` |
-| 钢琴、吉他、贝司在 MIDI 里的真实化打法 | reference §5.3、`mc-rhythm-section` |
-| 民族乐器自身的定弦、音域与技法 | SKILL §8 指向的民乐一线 |
+| Harp pedal mechanics, enharmonic notation, distribution of the feet, colour marking of strings | reference §2.2.4 |
+| Orchestration of the strings, woodwinds, and brass groups individually | reference §2.3, §2.4, §2.5 |
+| General principles for mixed timbres (unison, octave, doubling, neutralization, fusion degree, horizontal colour change, superimposition, emphasis, balance, the three conditions for a group to come through) | SKILL §3 to §5 |
+| The master switch for texture types | SKILL §1.1 |
+| The arrangement order and notation system of unpitched percussion, and the dramatic uses of pure percussion | Percussion monograph |
+| The avant-garde techniques of piano (see the full explanation in §3.5) | Contemporary technique monograph |
+| How to create synthesizer timbres themselves | `mc-sound-design` |
+| Realistic MIDI playing of piano, guitar, and bass | reference §5.3, `mc-rhythm-section` |
+| The tuning, range, and technique of folk instruments themselves | The Chinese folk orchestra line that SKILL §8 points to |

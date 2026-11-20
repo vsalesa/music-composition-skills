@@ -1,257 +1,257 @@
-# 拉丁风格层细表（mc-style-latin reference）
+# Latin Style Layer: Reference Tables (mc-style-latin reference)
 
-SKILL.md 做分家与决策，这里放查表用的细节。
-**具体鼓型、各肢体落点、各风格的鼓组速度速查，在 `mc-rhythm-section` reference-styles §8.6（Afro-Cuban）、§8.7（Brazilian）、§8.8（Caribbean），这里不重复。**
+SKILL.md covers the family division and the decisions. This file holds the detailed lookup tables.
+**Specific drum patterns, limb placements per instrument, and the quick tempo reference for each style's drum kit are in `mc-rhythm-section` reference-styles §8.6 (Afro-Cuban), §8.7 (Brazilian) and §8.8 (Caribbean); they are not repeated here.**
 
 ---
 
-## 1. 术语：决策时真正会用到的那些
+## 1. Terminology: the terms that actually come up when making decisions
 
-| 词 | 意思 | 页 |
+| Term | Meaning | Page |
 |---|---|---|
-| **Clave** | ① 两小节的节奏型（son 或 rumba），大多数 Afro-Cuban 节奏的基础，分"3"侧（一小节三个音）与"2"侧（一小节两个音），从任一侧起都可以；② 打这条节奏的那件打击乐器 | p0012 |
-| **Son Clave** | 两种 clave 之一。区别特征：**"3"侧第三个音直接落在第 4 拍**。多见于较传统的支系（Mambo、Cha Cha） | p0013 |
-| **Rumba Clave** | 区别特征：**"3"侧第三个音落在第 4 拍的"+"**。多见于较现代的支系（Songo、Mozambique） | p0013 |
-| **Bombo** | ① 落在 clave"3"侧**第 2 拍"+"**上的重音；② 民间 Afro-Cuban 风格里那面大鼓 | p0012 |
-| **Ponche** | 强调 4/4 第 4 拍的重音，通常当过渡图形用 | p0013 |
-| **Tumbao** | ① **主要由贝司演奏**的节奏型，有鼓组时通常由底鼓加倍或用重音加强；② 标准的、重复的 conga 图形，主要打在高音鼓 quinto 上 | p0013 |
-| **Montuno** | ① 通常由钢琴演奏的**重复、切分**的音型；② Afro-Cuban 编曲中**支持即兴的那个段落** | p0013 |
-| **Cascara** | Afro-Cuban 的节奏型，复制一个叫 Palito 的图形。意为"壳"，指打在 timbale 鼓皮/壳上 | p0012、p0034 |
-| **Palito** | ① 原本在 gua gua（挖空的竹子）上演奏的 Afro-Cuban 节奏，后来被认作 Cascara 图形；② 打它用的棒 | p0013、p0048 |
-| **Partido Alto** | ① 巴西最流行的 samba 支系之一；② 在 samba 与 bossa 里都用的节奏型，传统上打在 agogo、cuica、pandeiro、tamborim 上，鼓组上通常落在军鼓 | p0013 |
-| **Baqueteo** | timbale 演奏者的图形，主要用于 Danzon | p0012 |
-| **Abanico** | timbale 的起曲图形：第 3 拍 rim shot，第 4 拍起滚奏到下一小节第 1 拍 | p0012 |
-| **Bateria** | 打击乐声部/乐团 | p0012 |
-| **Comparsa** | 古巴狂欢节里演奏 Conga 节奏的团体，以打击乐为主，常带铜管（主要是小号） | p0012 |
-| **Conguero / Timbolero** | conga 手 / timbale 手 | p0012、p0013 |
-| **In The Crack** | 在摇摆与直拍**之间**的节奏感。★ **底本明说它几乎无法记谱**，只能靠听与练 | p0012 |
-| **Linear** | 音符一个接一个出现，没有任何两肢同时击打 | p0012 |
-| **Marakatu** | 葡萄牙统治下巴西奴隶国王与王后的加冕仪式；大多数现代巴西音乐、节庆、舞蹈由这一传统发展而来 | p0012 |
-| **Yoruba** | 尼日利亚部落，**6/8 clave 型的源头** | p0013 |
-| **Rumba（作为音乐形式）** | 传统 Afro-Cuban 形式，发展出三支：Columbia、Guaguanco、Yambu。北美舞厅那个同名的 rumba 只是松散地取自它 | p0013 |
-| **Salsa** | ★ **广义词**，泛指大多数 Afro-Cuban 风格，尤其是为跳舞演奏的那些 | p0013 |
+| **Clave** | ① A two-bar rhythm pattern (son or rumba), the foundation of most Afro-Cuban rhythms; split into a "3" side (three notes in one bar) and a "2" side (two notes in one bar), and can start from either side; ② the percussion instrument that plays this rhythm | p0012 |
+| **Son clave** | One of the two clave types. Distinguishing feature: **the third note of the "3" side falls directly on beat 4**. Found mostly in more traditional branches (mambo, cha cha) | p0013 |
+| **Rumba clave** | Distinguishing feature: **the third note of the "3" side falls on the "+" of beat 4**. Found mostly in more modern branches (songo, mozambique) | p0013 |
+| **Bombo** | ① The accent on the **"+" of beat 2** on the "3" side of the clave; ② the large drum in folkloric Afro-Cuban styles | p0012 |
+| **Ponche** | An accent emphasising beat 4 of 4/4; usually used as a transitional figure | p0013 |
+| **Tumbao** | ① A rhythm pattern **played mainly by the bass**; when there is a drum kit, usually doubled by the bass drum or reinforced with accents; ② the standard, repeated conga figure, played mainly on the high drum, the quinto | p0013 |
+| **Montuno** | ① A repeated, syncopated pattern usually played on piano; ② the section of an Afro-Cuban arrangement that **supports improvisation** | p0013 |
+| **Cascara** | An Afro-Cuban rhythm pattern that replicates a figure called the palito. Means "shell", referring to playing on the shell or head of a timbale | p0012, p0034 |
+| **Palito** | ① An Afro-Cuban rhythm originally played on the gua gua (a hollowed-out bamboo), later recognised as the cascara figure; ② the stick used to play it | p0013, p0048 |
+| **Partido alto** | ① One of the most popular samba branches in Brazil; ② a rhythm pattern used in both samba and bossa, traditionally played on agogo, cuica, pandeiro and tamborim, usually falling to the snare on the drum kit | p0013 |
+| **Baqueteo** | A timbale player's figure, used mainly in Danzon | p0012 |
+| **Abanico** | A timbale opening figure: rim shot on beat 3, then a roll from beat 4 to beat 1 of the next bar | p0012 |
+| **Bateria** | The percussion section / ensemble | p0012 |
+| **Comparsa** | A group that plays conga rhythms at Cuban carnival, mainly percussion-driven, often with brass (mainly trumpets) | p0012 |
+| **Conguero / timbalero** | Conga player / timbale player | p0012, p0013 |
+| **In the crack** | A sense of feel **between** swing and straight. ★ **The source states explicitly that it is nearly impossible to notate**; it can only be learned by listening and practice | p0012 |
+| **Linear** | Notes that appear one after another, with no two limbs striking simultaneously | p0012 |
+| **Marakatu** | The coronation ceremony of the king and queen of enslaved people in Portuguese-ruled Brazil; most modern Brazilian music, festivals and dance developed from this tradition | p0012 |
+| **Yoruba** | A Nigerian people; **the source of the 6/8 clave pattern** | p0013 |
+| **Rumba (as a musical form)** | The traditional Afro-Cuban form, which developed three branches: Columbia, Guaguanco and Yambu. The ballroom dance of the same name in North America is only loosely derived from it | p0013 |
+| **Salsa** | ★ **A broad term** covering most Afro-Cuban styles, especially those played for dancing | p0013 |
 
-★ **最后一条有编曲上的后果**：在曲目单上写 "salsa" 等于什么都没说。
-要写进 `meta` 的是它下面的具体支系。
+★ **The last entry has consequences for arrangement:** writing "salsa" on a track list says nothing.
+What goes into `meta` is the specific branch beneath it.
 
 ---
 
-## 2. clave 的四种排法
+## 2. The four ways to set the clave
 
-| 排法 | "3"侧最后一音 | 起侧 | 典型支系 |
+| Setting | Last note of "3" side | Starting side | Typical branches |
 |---|---|---|---|
-| **3-2 son** | 第 4 拍 | "3" | 传统支系 |
-| **2-3 son** | 第 4 拍 | "2" | Mambo（p0037）、Pilon（p0049） |
-| **3-2 rumba** | 第 4 拍的"+" | "3" | Guaguanco，且通常从"3"侧起（p0036） |
-| **2-3 rumba** | 第 4 拍的"+" | "2" | Mozambique、Songo（p0039、p0040） |
+| **3-2 son** | Beat 4 | "3" | Traditional branches |
+| **2-3 son** | Beat 4 | "2" | Mambo (p0037), pilon (p0049) |
+| **3-2 rumba** | "+" of beat 4 | "3" | Guaguanco, usually starting from the "3" side (p0036) |
+| **2-3 rumba** | "+" of beat 4 | "2" | Mozambique, songo (p0039, p0040) |
 
-**能从底本确定的音位**：
-- **"3"侧有三个音，"2"侧有两个音**（p0012）
-- **"3"侧的第 2 拍"+"上那个音就是 bombo**（p0012）
-- **"3"侧最后一音**：son 在第 4 拍，rumba 在第 4 拍的"+"（p0030）
+**Note positions that can be confirmed from the source:**
+- **The "3" side has three notes; the "2" side has two notes** (p0012)
+- **The note on the "+" of beat 2 on the "3" side is the bombo** (p0012)
+- **Last note of the "3" side:** beat 4 in son, the "+" of beat 4 in rumba (p0030)
 
-> ⚠ **"2"侧那两个音的确切位置，以及"3"侧第一个音的位置，底本未覆盖**（底本是靠谱例给的，文字只说了上面三条）。
-> 需要逐音写谱时按实际听辨落位，不要照本条推算。
+> ⚠ **The exact positions of the two notes on the "2" side, and the position of the first note on the "3" side, are not covered by the source.** (The source gives representative examples; the text states only the three points above.)
+> When you need to write it note by note, place the notes by actual listening; do not infer them from this entry.
 
 ### 2.1 6/8 clave
 
-- 基于三拍子感，源自尼日利亚约鲁巴人（p0013、p0031），古巴常叫 **Bembe** 或 **Abakwa**（p0031）
-- **有自己的 clave 与自己的 bell 型**（p0012）
-- 常记成 4/4 的三连音分组，**目的是建立它与 4/4 古巴 clave 的关系**（p0031）
-- **6/8 的 bell 型 = 6/8 clave ＋ 两个音**，那两个音通常打得比其他音轻（p0032）
+- Based on a feel of triple metre; originates with the Yoruba people of Nigeria (p0013, p0031), and in Cuba is often called **Bembe** or **Abakwa** (p0031)
+- **Has its own clave and its own bell pattern** (p0012)
+- Often notated as 4/4 triplet groupings, **to establish its relationship to the 4/4 Cuban clave** (p0031)
+- **The 6/8 bell pattern = the 6/8 clave plus two notes**, and those two notes are usually played more softly than the others (p0032)
 
 ---
 
-## 3. 各支的速度、feel 与 clave 归属
+## 3. Tempo, feel and clave assignment for each branch
 
-**只列决策要用的四列。鼓型、各肢体落点见 `mc-rhythm-section` reference-styles §8.6／§8.7／§8.8。**
+**Only the four columns needed for decisions are listed. For drum patterns and limb placements, see `mc-rhythm-section` reference-styles §8.6 / §8.7 / §8.8.**
 
 ### 3.1 Afro-Cuban
 
-| 支系 | clave | 速度 | 守网格的是 | 页 |
+| Branch | Clave | Tempo | What holds the grid | Page |
 |---|---|---|---|---|
-| **6/8 Bembe / Abakwa** | 6/8 clave | ♩=92–120 | hi-hat 脚，每个正拍 | p0032–0034 |
-| **Cascara** | 四种皆可，图形与 clave 的对位不变 | ♩=126–250 | ride 手的 cascara 线 | p0034–0035 |
-| **Guaguanco** | **3-2 rumba**，通常从"3"侧起 | ♩=200 | hi-hat 脚 1&3 | p0036 |
-| **Mambo** | **2-3 son**，两侧起皆可 | ♩=200 | Mambo bell | p0037 |
-| **Cha Cha** | son 系（Mambo 的 half-time 版） | 从 ♩=110 起 | ★ **cha bell 上的持续四分** | p0038–0039 |
-| **Mozambique** | **2-3 rumba** | 从 ♩=200 起 | Mozambique bell | p0039–0040 |
-| **Songo** | **2-3 rumba** | 约 ♩=200 起 | ride 手的稳定脉冲 | p0040–0041 |
-| **Bomba** | ★ **通常无 clave** | 从 ♩=200 起 | 重复的底鼓型 ＋ bell 型 | p0042 |
-| **Merengue** | 无 | 从 ♩=240 起 | four on the floor 底鼓 | p0042–0043 |
-| **Bolero** | 慢抒情，节奏原由响板/maracas 打 | ♩=74–120 | rim 或紧闭 hi-hat 上的复制图形 | p0045 |
-| **Cumbia** | ★ **无 clave** | ♩=160–252（double-time 感） | 军鼓的强 backbeat ＋ 匹配贝司的底鼓 | p0047 |
-| **Danzon** | 早于鼓组，响弦关 | ♩=110 | rim click／指击／棒击的细致结合 | p0048 |
-| **Palito** | 2-3 rumba（该例） | ♩=120–264 | 双手在闭 hi-hat 与 rim click 之间 | p0048–0049 |
-| **Pilon** | **2-3 son**，通常不由鼓手打出 | ♩=172–224 | 脚上的二分音符 | p0049–0050 |
-| **Plena** | ★ **通常不打 clave** | ♩=208–276 | ★ **简单的四分底鼓** | p0050 |
-| **Conga（Comparsa）** | — | ♩=216–264 | — | p0045 |
-| **Beguine** | — | 舞厅 ♩=112；鼓 Beguine 到 ♩=280 | — | p0044 |
+| **6/8 Bembe / Abakwa** | 6/8 clave | ♩=92–120 | Hi-hat foot, on every downbeat | p0032–0034 |
+| **Cascara** | Any of the four; the figure's relationship to the clave stays the same | ♩=126–250 | The cascara line on the ride hand | p0034–0035 |
+| **Guaguanco** | **3-2 rumba**, usually starting from the "3" side | ♩=200 | Hi-hat foot on 1 and 3 | p0036 |
+| **Mambo** | **2-3 son**, either side can start | ♩=200 | Mambo bell | p0037 |
+| **Cha cha** | Son family (the half-time version of mambo) | From ♩=110 | ★ **Sustained quarter notes on the cha bell** | p0038–0039 |
+| **Mozambique** | **2-3 rumba** | From ♩=200 | Mozambique bell | p0039–0040 |
+| **Songo** | **2-3 rumba** | About ♩=200 | Steady pulse on the ride hand | p0040–0041 |
+| **Bomba** | ★ **Usually no clave** | From ♩=200 | Repeated bass drum figure plus bell pattern | p0042 |
+| **Merengue** | None | From ♩=240 | Four on the floor on the bass drum | p0042–0043 |
+| **Bolero** | Slow and lyrical; the rhythm was originally played on claves or maracas | ♩=74–120 | A copied figure on the rim or closed hi-hat | p0045 |
+| **Cumbia** | ★ **No clave** | ♩=160–252 (feels double-time) | Strong snare backbeat plus a bass drum that matches the bass | p0047 |
+| **Danzon** | Predates the drum kit; strings switched off | ♩=110 | A detailed combination of rim click, finger strikes and stick strikes | p0048 |
+| **Palito** | 2-3 rumba (in this example) | ♩=120–264 | Hands between closed hi-hat and rim click | p0048–0049 |
+| **Pilon** | **2-3 son**, usually not played by the drummer | ♩=172–224 | Half-note pulse on the foot | p0049–0050 |
+| **Plena** | ★ **Usually no clave** | ♩=208–276 | ★ **A simple quarter-note bass drum** | p0050 |
+| **Conga (Comparsa)** | — | ♩=216–264 | — | p0045 |
+| **Beguine** | — | Ballroom ♩=112; drum beguine up to ♩=280 | — | p0044 |
 
-**feel**：以上全部为直拍系。
-★ Groove Essentials 另给三条执行感受：Mambo 节奏密度高，目标是做出"一个声音"，不是堆声部（p0102）；
-Mambo 快速版第一小节那个反复出现的合奏型是全书最难对齐的东西之一（p0103）；
-Songo 的签名是每小节最后一个十六分干净收住（p0104）。
+**Feel:** all of the above are in the straight family.
+★ Groove Essentials gives three further performance notes: mambo has high rhythmic density, and the aim is to create "one sound", not to stack parts (p0102);
+the recurring ensemble figure in the first bar of fast mambo is one of the hardest things in the whole book to align (p0103);
+the signature of songo is the last sixteenth of each bar landing clean (p0104).
 
-### 3.2 巴西
+### 3.2 Brazilian
 
-| 支系 | 速度 | feel | 低频逻辑 | 页 |
+| Branch | Tempo | Feel | Low-end logic | Page |
 |---|---|---|---|---|
-| **Samba** | 从 ♩=170 起 | ★ **直中带极轻微摇，从不落定**（Groove Essentials p0092） | 脚模仿 surdo，同时配合贝司手 | p0059 |
-| **Batucada** | 从 ♩=170 起 | 同上，更忙，用于高潮段 | ride 手在落地 tom 复制 surdo（含制音击） | p0061–0062 |
-| **Baião** | 从 ♩=170 起（近 samba，不近 bossa） | 主型直；march 变体打 in the crack | ★ **附点八分接十六分**；主图形 = 巴西 clave 的第一小节；原乐器是 zabumba | p0062–0063 |
-| **Bossa Nova** | ♩=100–168（藤谷示范曲 BPM 120） | straight | ★ **底鼓与 samba 完全相同** | p0063–0064、藤谷 p0108 |
+| **Samba** | From ♩=170 | ★ **Straight with a very slight sway, never settling** (Groove Essentials p0092) | Feet imitate the surdo while coordinating with the bass player | p0059 |
+| **Batucada** | From ♩=170 | As above, busier; used for climactic sections | Ride hand replicates the surdo on the floor tom (including the muted stroke) | p0061–0062 |
+| **Baiao** | From ♩=170 (close to samba, not to bossa) | Main pattern straight; march variant plays in the crack | ★ **Dotted eighth followed by sixteenth**; the main figure = the first bar of the Brazilian clave; the original instrument is the zabumba | p0062–0063 |
+| **Bossa nova** | ♩=100–168 (Fujitani demonstration piece at BPM 120) | Straight | ★ **Bass drum identical to samba** | p0063–0064, Fujitani p0108 |
 
-★ **两说并排（samba 的 feel）**：Jazz Guitar Groove 说 samba 与 bossa 的八分**更接近平直**（p0040）；
-Groove Essentials 说它是直与极轻微摇之间的液态，从不落定（p0092）。
-写 `groove.feel` 填 `straight16`，把"不落定"写进 `quantize_policy` 的说明里。
+★ **Two positions side by side (samba's feel):** Jazz Guitar Groove says samba and bossa eighths are **closer to straight** (p0040);
+Groove Essentials says it is liquid between straight and a very slight sway, never settling (p0092).
+When writing `groove.feel`, enter `straight16`, and record the "never settling" point in the `quantize_policy` note.
 
-**batucada 的 surdo 图形**（这是低频的骨架，值得单记，p0061）：
-- **型 A**：两小节都是第 1 拍制音、第 3 拍击出
-- **型 B**：第一小节第 1 拍制音，第 3 拍、3 的"+"、4 的"+"击出；第二小节第 1 拍制音，第 3 拍与第 4 拍击出
-- ★ **上面所有图形的第一、第二小节都可以对调，看感觉定**（p0062）
+**Batucada surdo figures** (this is the skeleton of the low end, worth recording separately; p0061):
+- **Pattern A:** both bars have a muted stroke on beat 1 and an open stroke on beat 3
+- **Pattern B:** bar one has a muted stroke on beat 1 and open strokes on beat 3, the "+" of 3 and the "+" of 4; bar two has a muted stroke on beat 1 and open strokes on beats 3 and 4
+- ★ **In all of the above figures, the first and second bars can be swapped; decide by feel** (p0062)
 
-★ **读法**：巴西那支的低频有"制音"这一维度，**不响也是一个动作**。
-写 MIDI 时这一下要写成短促的闷击，不是删掉不写。
+★ **How to read this:** the Brazilian low end has a "muted" dimension; **not sounding is also an action.**
+When writing MIDI, write this stroke as a short, dampened hit, not as a deleted note.
 
-### 3.3 加勒比
+### 3.3 Caribbean
 
-| 支系 | 速度 | feel | 与邻居的区别 | 页 |
+| Branch | Tempo | Feel | Difference from neighbours | Page |
 |---|---|---|---|---|
-| **Calypso** | ♩=80–120 | straight | 底鼓比 Soca 更切分，无持续军鼓型，所以 groove 不如 Soca 明显；手更忙（持续十六分 hi-hat） | p0071–0072 |
-| **Soca** | ♩=108–132 | straight | 更重的 four on the floor ＋ 突出的切分军鼓；每个反拍的 hi-hat 重音或开镲推动 | p0072 |
-| **Ska** | ♩=116–192 | straight | ★ **与 Reggae 同样在第 3 拍打 rim click，区别是直拍 ＋ four on the floor** | p0073 |
-| **Reggae / One Drop** | 从 ♩=116 起；快速变体 ♩=160–208 | ★ **in the crack** | 第 3 拍的 rim click 与底鼓**作为一个音同击** | p0074–0075 |
-| **Zouk** | ♩=92–126 | — | 强 four on the floor 感 ＋ 重复的军鼓 rim click | p0171 |
+| **Calypso** | ♩=80–120 | Straight | The bass drum is more syncopated than in soca, with no sustained snare pattern, so the groove is less pronounced than soca's; the hands are busier (sustained sixteenth hi-hat) | p0071–0072 |
+| **Soca** | ♩=108–132 | Straight | Heavier four on the floor plus a prominent syncopated snare; hi-hat accents or open hi-hat on each offbeat drive it | p0072 |
+| **Ska** | ♩=116–192 | Straight | ★ **Like reggae, plays a rim click on beat 3; the difference is straight feel plus four on the floor** | p0073 |
+| **Reggae / one drop** | From ♩=116; fast variant ♩=160–208 | ★ **In the crack** | The rim click on beat 3 and the bass drum are **struck together as one note** | p0074–0075 |
+| **Zouk** | ♩=92–126 | — | Strong four-on-the-floor feel plus repeated snare rim clicks | p0171 |
 
-★ **Reggae 的编曲分工**：贝司线在 groove 里穿梭，**鼓手负责稳住底部**（Groove Essentials p0088）。
-这条在 `arrangement.bass_kick_relation` 里写成"贝司自由、鼓守底"。
+★ **The arrangement division in reggae:** the bass line weaves through the groove, and **the drummer is responsible for holding the bottom** (Groove Essentials p0088).
+This is written into `arrangement.bass_kick_relation` as "bass free, drums hold the bottom".
 
-### 3.4 拉丁摇滚
+### 3.4 Latin rock
 
-| 项 | 内容 | 页 |
+| Item | Content | Page |
 |---|---|---|
-| 定义 | Afro-Cuban 与巴西的节奏融进摇滚曲式，常同时用这三家的打击件 | p0131 |
-| 鼓组型 | ★ **比正宗那两章更不真实、往往更简化**；简化是为了不与其他打击乐手重复 | p0131 |
-| 速度 | ♩=110–120（标准摇滚档）到 ♩=200–232（double-time 的拉丁感档） | p0131 |
-| 现成配方 | 标准摇滚 ＋ Cha Cha（p0131）；Baião ＋ 摇滚感，手在闭 hi-hat 上打交替十六分、底鼓匹配手的重音（p0132）；Mambo 但底鼓改成强调两小节的第 1 拍（p0133）；Blues Rumba 那一型（p0133） | p0131–0133 |
-| 变体走向流行 | Baião 变体 2 最适合流行环境：保留 hi-hat 的十六分感，拆开贝司与军鼓的图形，第 4 拍加一个落地 tom | p0133 |
+| Definition | Afro-Cuban and Brazilian rhythms fused into rock form, often using percussion parts from all three families | p0131 |
+| Drum kit patterns | ★ **Less authentic than the two authentic chapters, and usually simplified**; simplification avoids duplicating other percussionists | p0131 |
+| Tempo | ♩=110–120 (standard rock range) up to ♩=200–232 (double-time Latin feel) | p0131 |
+| Ready-made recipes | Standard rock plus cha cha (p0131); baiao plus a rock feel, with the hand playing alternating sixteenths on closed hi-hat and the bass drum matching the hand accents (p0132); mambo with the bass drum changed to emphasise beat 1 of two-bar units (p0133); the Blues Rumba pattern (p0133) | p0131–0133 |
+| Moving toward pop | Baiao variant 2 suits pop settings best: keep the sixteenth feel of the hi-hat, split the bass and snare figures, and add a floor tom on beat 4 | p0133 |
 
 ---
 
-## 4. 各支的传统件清单
+## 4. Traditional instrument lists for each branch
 
-| 支系 | 传统件 | 页 |
+| Branch | Traditional instruments | Page |
 |---|---|---|
-| **Afro-Cuban 通用** | conguero、timbalero、bongo bell 手三人组是默认；无打击乐手时鼓要一人顶掉三个角色 | p0029 |
-| **Mambo** | 美国 swing 的乐器编制、即兴与和声配置 ＋ 古巴 son 的节奏 | p0036 |
-| **Mozambique（原始规模）** | 12 面 conga、5 名 conga 手、两面底鼓、三个铃、一只煎锅、四把小号、三把长号 | p0039 |
-| **Danzon** | timbale 早于鼓组，**鼓组上重现时关掉响弦**；长笛奏主题，小提琴段 | p0048 |
-| **Merengue** | tambora、güira、手风琴 | p0042 |
-| **Cumbia（根源）** | 仙人掌木双笛（gaitero）、maracas、非洲手鼓 | p0047 |
-| **Plena** | conga、timbale、maracas、güiro、pandero（无金属铃片的小 tambourine）、手风琴、cuatro（四弦吉他）、大型管弦 | p0050 |
-| **Conga Habanera / Oriental** | requinto、quinto、conga、各尺寸大鼓、cowbell、军鼓、小号、煎锅；Oriental 用刹车鼓替代煎锅、用锄片，并用 corneta china 替代传统小号 | p0045 |
-| **Calypso** | ★ 钢鼓（最初是油桶顶）是签名音色 | Groove Essentials p0089 |
-| **Bossa Nova** | 原声鼓组、原音贝斯、**古典吉他（尼龙弦，必需）**、钢琴或电钢；常加沙铃、三角铁、tamborim（六吋单面框鼓）、pandeiro（十吋鈴鼓） | 藤谷 p0104、p0108 |
-| **Baião** | zabumba（大底鼓），以切分节奏在两侧演奏 | p0062 |
+| **Afro-Cuban general** | The default is a three-person group of conguero, timbalero and bongo bell player; without a percussionist, the drum kit must cover all three roles | p0029 |
+| **Mambo** | The instrumentation, improvisation and harmonic setup of American swing, plus the rhythms of Cuban son | p0036 |
+| **Mozambique (original scale)** | 12 conga drums, 5 conga players, two bass drums, three bells, a frying pan, four trumpets, three trombones | p0039 |
+| **Danzon** | Timbale predates the drum kit; **switch off the snares when re-creating it on the drum kit**; flute plays the theme, violin section | p0048 |
+| **Merengue** | Tambora, güira, accordion | p0042 |
+| **Cumbia (roots)** | Gaita (cactus-wood double flute), maracas, African hand drums | p0047 |
+| **Plena** | Conga, timbale, maracas, güiro, pandero (a small tambourine without metal jingles), accordion, cuatro (four-string guitar), large ensemble | p0050 |
+| **Conga Habanera / Oriental** | Requinto, quinto, conga, drums of various sizes, cowbell, snare, trumpet, frying pan; the Oriental version uses brake drums in place of the frying pan, a hoe blade, and a corneta china in place of the traditional trumpet | p0045 |
+| **Calypso** | ★ Steel drum (originally made from oil drums) is the signature timbre | Groove Essentials p0089 |
+| **Bossa nova** | Acoustic drum kit, acoustic bass, **classical guitar (nylon strings, essential)**, piano or electric piano; often adds shaker, triangle, tamborim (six-inch single-headed frame drum), pandeiro (ten-inch frame drum with jingles) | Fujitani p0104, p0108 |
+| **Baiao** | Zabumba (large bass drum), played syncopated on both sides | p0062 |
 
 ---
 
-## 5. 几条图形的骨架（文字描述）
+## 5. Skeletons of several figures (described in text)
 
-★ **底本以谱例给图形，文字只在少数地方给了确切音位。下面只列文字明确给出的那些，其余标未覆盖。**
+★ **The source gives figures as notated examples, and only in a few places gives exact note positions in text. Below, only those items explicitly given in text are listed; everything else is marked as not covered.**
 
-### 5.1 bass tumbao 与底鼓的对应
+### 5.1 Bass tumbao and its correspondence to the bass drum
 
-| 情形 | 底鼓落在哪 | 页 |
+| Situation | Where the bass drum lands | Page |
 |---|---|---|
-| **最正宗的古巴打法** | ★ **只打 bombo（clave"3"侧第 2 拍的"+"）**，或者**两小节都只打第 2 拍的"+"** | p0035 |
-| Songo 的 tumbao 变体 1 | ★ 同上：两小节都只在第 2 拍的"+" | p0041 |
-| Cha Cha | 第 2 拍的"+" 与第 3 拍，配合贝司手 | p0038 |
-| Mambo | 支撑贝司手的 tumbao，**有时齐奏，有时拆分** | p0037 |
-| Cumbia | 重复型，**通常直接匹配贝司手** | p0047 |
-| Samba | 脚模仿 surdo，同时配合贝司手 | p0059 |
+| **Most authentic Cuban approach** | ★ **Plays only the bombo (the "+" of beat 2 on the "3" side of the clave)**, or **only the "+" of beat 2 in both bars** | p0035 |
+| Songo tumbao variant 1 | ★ Same: only the "+" of beat 2 in both bars | p0041 |
+| Cha cha | The "+" of beat 2 and beat 3, coordinating with the bass player | p0038 |
+| Mambo | Supports the bass player's tumbao, **sometimes in unison, sometimes split** | p0037 |
+| Cumbia | Repeated pattern, **usually matches the bass player directly** | p0047 |
+| Samba | Feet imitate the surdo while coordinating with the bass player | p0059 |
 
-★ **读法**：**"第 2 拍的+"是这一层低频的公分母。**
-不确定 tumbao 怎么写时，先把这一下放对，再加别的。
+★ **How to read this:** **the "+" of beat 2 is the common denominator of the low end in this layer.**
+When you are unsure how to write the tumbao, first place this stroke correctly, then add the others.
 
-> ⚠ **贝司自己那条 tumbao 的逐音位置，底本未覆盖**（底本只说底鼓去加倍或加强它）。
+> ⚠ **The note-by-note position of the bass's own tumbao is not covered by the source** (the source says only that the bass drum doubles or reinforces it).
 
-### 5.2 cascara / palito
+### 5.2 Cascara / palito
 
-- 两小节图形，**补 clave 的特定一侧**（p0034、p0048）
-- ★ **无论 3-2 还是 2-3、son 还是 rumba，图形的音相对 clave 的位置保持不变**（p0034、p0048）
-- 打在哪：闭合 hi-hat、落地 tom 的壳或框、cowbell、ride bell，**四选一，挑的时候就是在挑频段**（p0034）
-- 用途：替代 Mambo、Guaguanco 的图形以避免与其他打击乐手重复，或用在编曲较柔和的段落（p0034）
+- A two-bar figure that **completes a specific side of the clave** (p0034, p0048)
+- ★ **Whether 3-2 or 2-3, son or rumba, the notes of the figure keep the same position relative to the clave** (p0034, p0048)
+- Where it can be played: closed hi-hat, the shell or hoop of a floor tom, cowbell or ride bell; **choose one of four, and choosing it is choosing the frequency band** (p0034)
+- Purpose: to replace the figures of mambo and guaguanco, avoiding duplication with other percussionists, or to use in softer sections of the arrangement (p0034)
 
-> ⚠ **逐音位置底本未覆盖。**
+> ⚠ **Note-by-note positions are not covered by the source.**
 
-### 5.3 montuno
+### 5.3 Montuno
 
-- 重复、切分的钢琴音型（p0013）
-- 同时是编曲里**支持即兴的那个段落**（p0013）
-- 历史旁证：真正的 Danzon 有固定编排（paseo、长笛主题、前奏重复、小提琴段），son 进来后多出第四部分，原称 "Nuevo Ritmo"，后来叫 Mambo，**即兴从这里引入**（p0048）
+- A repeated, syncopated piano pattern (p0013)
+- Also **the section that supports improvisation** in the arrangement (p0013)
+- Historical corroboration: the true Danzon had a fixed form (paseo, flute theme, repeated introduction, violin section); when son arrived, a fourth part was added, originally called "Nuevo Ritmo", later known as mambo. **Improvisation was introduced here** (p0048)
 
-> ⚠ **montuno 的具体节奏骨架与常用和弦循环，底本未覆盖。** 和弦循环去 `mc-progressions` 取。
+> ⚠ **The specific rhythmic skeleton of montuno and the common chord loops are not covered by the source.** For chord loops, take them from `mc-progressions`.
 
-### 5.4 partido alto
+### 5.4 Partido alto
 
-- samba 的手部围绕它（p0059）；batucada 的军鼓打它（p0061）；bossa 的 rim click 变体之一是它（p0064）
-- 传统乐器：agogo、cuica、pandeiro、tamborim；鼓组上通常落军鼓（p0013）
+- The samba hands revolve around it (p0059); batucada's snare plays it (p0061); one of bossa's rim-click variants is this pattern (p0064)
+- Traditional instruments: agogo, cuica, pandeiro, tamborim; on the drum kit it usually falls to the snare (p0013)
 
-> ⚠ **逐音位置底本未覆盖。**
+> ⚠ **Note-by-note positions are not covered by the source.**
 
 ---
 
-## 6. 吉他那一侧（samba 与 bossa）
+## 6. The guitar side (samba and bossa)
 
-来自《Jazz Guitar Groove》：
+From *Jazz Guitar Groove*:
 
-| 项 | 内容 | 页 |
+| Item | Content | Page |
 |---|---|---|
-| **samba 与 bossa 的关系** | **samba 的节奏类似 bossa nova，只是速度稍快** | p0029 |
-| **八分音符的处理** | ★ **samba 与 bossa 的八分更接近平直**（对照：swing 与 bop 的八分是三连音的四分接三连音的八分） | p0040 |
-| **先现** | ★ **第 4 拍的"+"上先现，这是巴西音乐的常见特征** | p0037 |
-| **分句单位** | 学 bossa 的和弦时先当独立的东西学，再在心里把 2/2 换算成 4/4；**最终音乐要有"两拍的感觉"** | p0037 |
-| **低音弦** | 即兴伴奏要指弹；合奏中或只用拨片时，**bass 音可以省掉** | p0029、p0037 |
-| **把位选择** | samba 的例子用 A 形态：它在第 5 弦的最低根音之上给出一个大 13 度的范围；A 形态很少被跨越，因为从第 3 弦到第 2 弦时内部把位移到第 3 品 | p0029 |
-| **bossa 的例子用 D 形态** | 第 4 弦是根音，上方有一个纯 11 度，从第 6 弦最低音到主音有一个很大的小 7 度 | p0037 |
-| **静态独奏 ＋ 移动和声** | ★ 和声半音上行而独奏保持在一个调性中心里，张力由此产生；和弦静止时定期把独奏整体上下移半音，这叫**侧滑** | p0029 |
-| **避免冲突的做法** | 独奏要比伴奏（或在它上方的声部）保持**实质上更响** | p0034 |
+| **Relationship of samba and bossa** | **Samba's rhythm is similar to bossa nova's, just a little faster** | p0029 |
+| **Treatment of eighth notes** | ★ **Samba and bossa eighths are closer to straight** (contrast: swing and bop eighths are quarter-note triplets paired with eighth-note triplets) | p0040 |
+| **Anticipation** | ★ **Anticipation on the "+" of beat 4 is a common trait of Brazilian music** | p0037 |
+| **Phrasing unit** | When learning bossa chords, learn them as standalone material first, then mentally convert 2/2 into 4/4; **the final music should have a "two-beat feel"** | p0037 |
+| **Bass strings** | Improvised accompaniment should be fingerpicked; in ensemble playing, or when using only a pick, **the bass notes can be omitted** | p0029, p0037 |
+| **Position choice** | The samba example uses the A shape: it gives a major 13th range above the lowest root on the fifth string; the A shape is rarely crossed, because from the third string to the second, the internal position shifts to the third fret | p0029 |
+| **The bossa example uses the D shape** | The fourth string is the root, with a perfect 11th above it; from the lowest note on the sixth string to the tonic there is a large minor seventh | p0037 |
+| **Static soloing plus moving harmony** | ★ The harmony rises by semitones while the solo stays within one tonal centre, and this creates tension; when the chord is static, the whole solo is moved up or down a semitone at intervals, which is called **sliding** | p0029 |
+| **Avoiding clashes** | The solo should be **substantially louder** than the accompaniment (or the parts above it) | p0034 |
 
-**现成的 bossa 进行（谱例用）**：
-`Gmaj7 – B♭dim7 – Am7 – Cdim7`（伴奏，p0037）；
-独奏段展开为 `Gmaj7 – B♭dim7 – Am7 – D7 – Dm7 – G7 – G7♭5 – Cmaj7 – Cm7 – F7♭9`（p0038）。
-★ **这里有调性中心之外的和弦（两个 dim7、Cm7、F9），所以避免音会制造冲突**（p0038）。
+**Ready-made bossa progression (for notation examples):**
+`Gmaj7 – B♭dim7 – Am7 – Cdim7` (accompaniment, p0037);
+the solo section expanded as `Gmaj7 – B♭dim7 – Am7 – D7 – Dm7 – G7 – G7♭5 – Cmaj7 – Cm7 – F7♭9` (p0038).
+★ **This contains chords outside the tonal centre (two dim7s, Cm7, F9), so avoid notes will create clashes** (p0038).
 
-**bossa 的和声（藤谷 p0103–0104）**：
-`C△7(9) – Am7 – F△7 – Dm7/G – C/E – F△7 – Dm7/G – G7 – D♭△7(9) – C△7(9)`。
-要点：四和音、引伸音、分数和弦大量使用；**旋律与和弦根音距离往往非常远，飘浮感从这里来**；
-第五小节把 C 换成 C/E 做飘浮；结尾用 D♭△7(9) 让安定的 Do 变成 M7，再半音下行回 C△7(9)。
+**Bossa harmony (Fujitani p0103–0104):**
+`C△7(9) – Am7 – F△7 – Dm7/G – C/E – F△7 – Dm7/G – G7 – D♭△7(9) – C△7(9)`.
+Key points: four-note voicings, extended chords and slash chords are used extensively; **the melody and chord root are often very far apart, and the floating feel comes from here**;
+in the fifth bar, C is replaced by C/E for a floating effect; the ending uses D♭△7(9) to turn the stable Do into an M7, then a semitone descent back to C△7(9).
 
 ---
 
-## 7. 速度标注的两说
+## 7. Two positions on tempo marking
 
-| 立场 | 说法 | 页 |
+| Position | Statement | Page |
 |---|---|---|
-| 《The Drummer's Bible》 | **每一支都给出明确的 bpm 区间**，并说 CD 上的音色就是该风格该追求的音色 | p0018，及各支系条目 |
-| 《Groove Essentials》 | ★ **通常不给速度标记**，因为专业谱例里很少见；建议自己用节拍器测出来记下；除非跟 click，指挥通常不希望被锁死在某个数值上，"快"在不同的晚上不一样快 | p0116 |
+| *The Drummer's Bible* | **Gives a specific BPM range for every branch**, and says the timbre heard on the CD is the timbre the style should pursue | p0018, and the entries for each branch |
+| *Groove Essentials* | ★ **Usually gives no tempo marking**, since such markings are rare in professional scores; recommends measuring the tempo yourself with a metronome and noting it down; unless playing to a click, conductors usually do not want to be locked to a specific number, because "fast" feels different on different nights | p0116 |
 
-★ **本库的处理**：`meta.bpm` 照第一说填一个具体值（它可执行），
-同时在注里按第二说写明这是起点不是锁死，**尤其是 samba、songo、merengue 这类靠"感觉对了"定速的支系**。
+★ **This library's approach:** `meta.bpm` is filled with a specific value following the first position (so it is executable),
+and the note states, following the second position, that this is a starting point, not a fixed value, **especially for branches like samba, songo and merengue that depend on "feeling right" to set the speed**.
 
 ---
 
-## 8. 底本未覆盖，需要另找来源的
+## 8. Not covered by the source; to be sought elsewhere
 
-1. **clave 的逐音位置**（"2"侧两个音、"3"侧第一个音）
-2. **bass tumbao 自己的逐音骨架**（只有底鼓的对应落点）
-3. **montuno 的节奏骨架与常用和弦循环**
-4. **cascara、palito、partido alto 的逐音位置**
-5. **cruzado 这个术语本身**（SKILL §3.4 的判据是从"palito 与 clave 对位恒定"反推的）
-6. **salsa／Afro-Cuban 的抢拍贝司说法**（底本只给巴西的先现与 bossa 的和声件先现）
-7. **bossa 相对爵士是否降了和声密度**（底本只说更慢更放松、四和音照用）
-8. **拉丁编曲的频段实测**（本库未实测，SKILL §6.3 与 §6.4 只给相对位置与解法，没有数值）
-9. **铜管 riff、mambo 段的写法**（底本只说 Mambo 借了 swing 的乐器编制与和声配置）
-10. **人声与合唱的分工**（coro／pregón 这一层底本未覆盖）
+1. **Note-by-note positions of the clave** (the two notes on the "2" side, the first note on the "3" side)
+2. **The note-by-note skeleton of the bass tumbao itself** (only the bass drum's corresponding strokes are given)
+3. **The rhythmic skeleton of montuno and its common chord loops**
+4. **Note-by-note positions of cascara, palito and partido alto**
+5. **The term *cruzado* itself** (the test in SKILL §3.4 is inferred from "the palito-to-clave relationship is constant")
+6. **The claim about bass rushing in salsa / Afro-Cuban** (the source gives only the anticipation in Brazilian music and the harmony-instrument anticipation in bossa)
+7. **Whether bossa has lower harmonic density than jazz** (the source says only slower and more relaxed, with four-note voicings used as usual)
+8. **Measured frequency response of Latin arrangements** (not measured in this library; SKILL §6.3 and §6.4 give only relative positions and solutions, with no numbers)
+9. **Writing for brass riffs and mambo sections** (the source says only that mambo borrowed the instrumentation and harmonic setup of swing)
+10. **Division of labour between voices and chorus** (the coro / pregón layer is not covered by the source)

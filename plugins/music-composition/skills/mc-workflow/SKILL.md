@@ -1,401 +1,394 @@
 ---
 name: mc-workflow
-description: Entry point and router for the music composition library (作曲编曲工作流与路由). The S0-S7 stage table from brief to delivered audio, which skill to load for which task, the full-library boundary table that prevents two skills claiming the same decision, the ARR-SPEC gate rules, and the three checks (boundary tables against style bleed, text-layer A/B, compliance rate). Load this FIRST for any request that will produce or change an ARR-SPEC (a whole track, a section rewrite, a generation run). A single knowledge question or a single-part task goes straight to the owning skill without this one. Use when starting a new track, when unsure which skill owns a question, when a spec fails lint, when a generated result sounds wrong and you need the diagnostic path, or when handing the spec to another department (lyrics, mixing, editing). 作曲、编曲、工作流、路由、该读哪个 skill、ARR-SPEC、出歌流程。
+description: Entry point and router for the music composition library (composition and arrangement workflow and routing). The S0-S7 stage table from brief to delivered audio, which skill to load for which task, the full-library boundary table that prevents two skills claiming the same decision, the ARR-SPEC gate rules, and the three checks (boundary tables against style bleed, text-layer A/B, compliance rate). Load this FIRST for any request that will produce or change an ARR-SPEC (a whole track, a section rewrite, a generation run). A single knowledge question or a single-part task goes straight to the owning skill without this one. Use when starting a new track, when unsure which skill owns a question, when a spec fails lint, when a generated result sounds wrong and you need the diagnostic path, or when handing the spec to another department (lyrics, mixing, editing). composition, arrangement, workflow, routing, which skill to read, ARR-SPEC, song production pipeline.
 ---
 
-# 作曲编曲工作流与路由（Workflow & Routing）
+# Workflow & Routing
 
-**任何作曲/编曲请求先读这个 skill，再决定读哪个别的。**
+**For any composition or arrangement request, read this skill first, then decide which other one to read.**
 
-这个库的产出**不是音频，是一份 ARR-SPEC**（编曲规格单）。
-音频由后端生成，规格单决定它长什么样、以及怎么验收它。
+The output of this library is **not audio, it is an ARR-SPEC** (arrangement spec sheet).
+Audio is produced by the backend; the spec determines what it sounds like and how to accept it.
 
-> **本库的根本立场**：AI 味不是音色问题，是**没有人做过选择**。
-> 整套流程就是一台**强迫做选择的机器**。
+> **The fundamental stance of this library**: AI flavor is not a timbre problem; it is **nobody having made a choice**.
+> The entire process is a **machine that forces choices to be made**.
 
 ---
 
-## 0. 三十秒定位：我该去哪
+## 0. Thirty-second orientation: where to go
 
-| 你现在要做的事 | 去 |
+| What you are doing now | Go to |
 |---|---|
-| 从零开始一首歌 | §1 阶段表，从 S0 走。★ S2a 必须先读 `mc-development` 再填 `material` 与 `form[].development`，只照 schema 的字段说明填会把每段写成一个新画面 |
-| 已有 brief，要出规格单 | §1 的 S1–S4（S2 现分 S2a 材料与发展、S2b 和声） |
-| 规格单写完了，要生成 | §1 的 S5 ＋ `mc-render-compile` |
-| 生成回来了，不对劲 | §4 诊断路径 |
-| 不知道某个问题归哪个 skill | §2 全库边界表 |
-| lint 不过 | §3.2 |
-| 要交给作词、混音、剪辑等别的部门 / 别的人 | §5 对外接口 |
-| 要检验：选的 skill 对不对、两版哪个好、后端照做没有 | §6 三个检验办法 |
-| **要混合两种风格**（rap + 中国风、city pop + EDM…） | ★ §2.4 |
+| Starting a song from scratch | §1 stage table, start from S0. ★ Before S2a you must read `mc-development`, then fill `material` and `form[].development`; filling only from the schema field descriptions turns every section into a new picture |
+| You have a brief and need a spec sheet | §1 S1–S4 (S2 is now split into S2a material and development, and S2b harmony) |
+| Spec sheet is written, ready to generate | §1 S5 + `mc-render-compile` |
+| Generated result, something is off | §4 diagnostic path |
+| Not sure which skill owns a question | §2 full-library boundary table |
+| Lint fails | §3.2 |
+| Handing off to lyricists, mixing, editing, or other departments or people | §5 external interfaces |
+| To verify: whether the chosen skill is right, which of two versions is better, whether the backend followed the spec | §6 three verification methods |
+| **Mixing two styles** (rap + Chinese style, city pop + EDM…) | ★ §2.4 |
 
 ---
 
-## 1. 阶段表 S0–S7
+## 1. Stage table S0–S7
 
-**每个阶段有明确的产出物和门禁。门禁不过不许进下一阶段。**
+**Each stage has a clear deliverable and a gate. A gate that does not pass does not allow entry to the next stage.**
 
-| 阶段 | 做什么 | 产出 | 门禁 | 主用 skill |
+| Stage | What it does | Output | Gate | Main skill |
 |---|---|---|---|---|
-| **S0 立意** | 把 brief 变成"只干一件事" | `intent` 四项 | **四项齐全**，`borrow` 不许只写歌名 | 本 skill §3.1 |
-| **S1 骨架** | 定调、拍、速度、曲式表 | `meta` + `form` | 段落首尾相接；**不许全是 8 的倍数** | `mc-form`、`mc-harmony`、`mc-arrangement-arch` |
-| **S2a 材料与发展** | 定主题动机、原始陈述在哪段、每段拿它做什么 | `material` + `form[].development` | **先读 `mc-development` 再填**；motif 与 stated_in 非空；每段 development 都填；填 new 的段不过半 | `mc-development`、`mc-melody` |
-| **S2b 旋律与和声** | 写主旋律、和声进行、必要的对位 | `form[].harmony` + `harmony_letters` | **双记号都要有**；至少一段有调外和弦 | `mc-melody`、`mc-harmony`、`mc-progressions`、`mc-modulation`、`mc-counterpoint` |
-| **S3 编制** | 谁在场、什么时候进退、占什么频段 | `arrangement` 全段 | 能量曲线**必须有下降**；至少一件乐器提前退场；至少一个减法事件 | `mc-arrangement-arch`、`mc-orchestration`、`mc-texture-layering`、`mc-rhythm-section`、`mc-sound-design` |
-| **S4 演唱与混音意图** | 怎么唱、声场怎么摆 | `vocal` + `mix_intent` | 力度**逐段不同**；副歌**逐遍有变化**；宽度至少两种取值 | `mc-vocal-direction`、`mc-mix-intent` |
-| **S5 编译** | 规格单 → 各后端输入 | `render.*` | 按 §3.0 的 20 条自查一遍；不过的条目改掉或写明理由 | `mc-render-compile`、`mc-symbolic-score` |
-| **S6 生成** | 跑后端，取多版 | 音频 | 按 `backends.yaml` 的 `honors` 决定哪些字段可指望 | `mc-render-compile` |
-| **S7 验收** | 先算再听 | 照做率 + AI 味旗标 | 先分开看两件事：后端照做了没有、成品有没有机器指纹；耳朵在这之后介入 | `mc-ai-tell-audit` |
+| **S0 Intent** | Turn the brief into "does exactly one thing" | the four `intent` items | **all four present**; `borrow` may not just write a song title | this skill §3.1 |
+| **S1 Skeleton** | Set key, meter, tempo, form table | `meta` + `form` | sections chain end to end; **not all multiples of 8** | `mc-form`, `mc-harmony`, `mc-arrangement-arch` |
+| **S2a Material & development** | Set the theme motif, which section holds its original statement, what each section does with it | `material` + `form[].development` | **read `mc-development` before filling**; motif and stated_in non-empty; development filled for every section; fewer than half the sections marked as new | `mc-development`, `mc-melody` |
+| **S2b Melody & harmony** | Write the main melody, the harmonic progression, necessary counterpoint | `form[].harmony` + `harmony_letters` | **both notations must be present**; at least one section has a non-diatonic chord | `mc-melody`, `mc-harmony`, `mc-progressions`, `mc-modulation`, `mc-counterpoint` |
+| **S3 Lineup** | Who is present, when they enter and exit, which frequency bands they occupy | full `arrangement` | the energy curve **must drop somewhere**; at least one instrument exits early; at least one subtraction event | `mc-arrangement-arch`, `mc-orchestration`, `mc-texture-layering`, `mc-rhythm-section`, `mc-sound-design` |
+| **S4 Vocals & mix intent** | How to sing, how the soundstage is placed | `vocal` + `mix_intent` | dynamics **differ section by section**; the chorus **changes on every pass**; width takes at least two values | `mc-vocal-direction`, `mc-mix-intent` |
+| **S5 Compile** | Spec sheet → input for each backend | `render.*` | Run the 20 self-check items in §3.0; items that fail are fixed or have their reasons written down | `mc-render-compile`, `mc-symbolic-score` |
+| **S6 Generate** | Run the backend, take several versions | audio | use `backends.yaml` `honors` to decide which fields can be relied on | `mc-render-compile` |
+| **S7 Acceptance** | Compute first, then listen | compliance rate + AI-flavor flags | look at two things separately: did the backend follow the spec, and does the output carry a machine fingerprint; the ear comes in only after that | `mc-ai-tell-audit` |
 
-### 1.1 ★ 三条不许跳的顺序
+### 1.1 ★ Three order rules you must not skip
 
-1. **`intent` 不齐不许写 `form`** —— 这是整套流程唯一的硬门禁
-2. **17 条不过不许编译** —— 不过说明规格没写完，不是挑刺。★ 按 §3.0 逐条自查，**不要为此写 lint 脚本**
-3. **照做率不过不许用耳朵返工** —— 先改规格重生成，耳朵是最后一小步
+1. **Do not write `form` until `intent` is complete.** This is the only hard gate in the whole process.
+2. **Do not compile while any of the 17 items fail.** A failure means the spec is unfinished, not that the checker is being picky. ★ Self-check item by item per §3.0; **do not write a lint script for this**.
+3. **Do not rework by ear until the compliance rate passes.** Fix the spec and regenerate first; the ear is the last small step.
 
-> 第 3 条最容易破。"我听着不对，我调一下混音"——
-> 那一刻你就从**规格驱动**掉回**手感驱动**了，
-> 而手感驱动的产物无法复现、无法 AB、无法积累。
+> Rule 3 breaks most easily. "It sounds wrong to me, so I'll adjust the mix" —
+> at that moment you have dropped from **spec-driven** back to **feel-driven**,
+> and feel-driven output cannot be reproduced, cannot be A/B tested, and cannot accumulate.
 
-### 1.2 耳朵怎么介入（S7 之后）
+### 1.2 How the ear comes in (after S7)
 
-照做率过关后才听，而且要：**A/B 打乱 → 成对比较 → 同一对听两遍看结论稳不稳。**
-两遍不是多余的谨慎：听觉系统会在重复暴露里改变自己的处理策略，同一段声音第二次听可能得到不同的结论，这类判断天然容易不可重复（p0251-p0252）。结论两遍不一致 = 这个差异不存在，别改。
+Listen only after the compliance rate passes, and: **A/B shuffle → paired comparison → listen to the same pair twice to see whether the conclusion holds.**
+Two listens are not excessive caution: the auditory system changes its processing strategy under repeated exposure, so the same sound heard a second time can yield a different conclusion; this kind of judgment is naturally hard to reproduce (p0251-p0252). If the two listens disagree, the difference does not exist; do not change anything.
 
-如果两次听中间隔的时间较长，还要防一种相反的偏差：耳朵会对持续暴露的音色变化逐渐适应，越听越觉得两版差不多，容易把真实存在的差异误判成"不存在"（p0342）。**两次判断之间留出间断，别来回连着切**，能同时防住这两头。
-
----
-
-## 2. 全库边界表
-
-**每一个决策只有一个 owner。** 拿不准就查这张表。
-
-### 2.1 按问题查
-
-| 问题 | Owner |
-|---|---|
-| 这首歌要干什么 | **本 skill** S0 |
-| 用什么曲式、段落多长 | `mc-form`（乐理） ＋ `mc-arrangement-arch`（非对称与能量） |
-| 旋律怎么写、可唱性 | `mc-melody` |
-| 和弦怎么选、怎么配 | `mc-harmony` |
-| 查一个现成进行 | `mc-progressions` |
-| 怎么转调 | `mc-modulation` |
-| 节奏型是什么 | `mc-rhythm-groove` |
-| 声部怎么独立、怎么避免平行 | `mc-counterpoint` |
-| 一个动机怎么长成一段、一段怎么长成一首 | `mc-development`（L1）；旋律本身在 `mc-melody`，段落功能在 `mc-form` |
-| 乐器什么时候进、什么时候退、能量曲线 | `mc-arrangement-arch` |
-| 用哪件乐器、混合音色 | `mc-orchestration` |
-| 频段怎么分、谁和谁抢、前中后景 | `mc-texture-layering` |
-| 打得像不像人、贝司和底鼓怎么配 | `mc-rhythm-section` |
-| 合成器音色怎么做 | `mc-sound-design` |
-| 人声怎么唱、和声怎么加 | `mc-vocal-direction` |
-| 声场怎么摆、谁给谁让路 | `mc-mix-intent` |
-| 这个风格该怎么做 | `mc-style-*`（L3） |
-| 规格单怎么变成 prompt | `mc-render-compile` |
-| 要出 ABC / MIDI / MusicXML | `mc-symbolic-score` |
-| 生成的东西哪里像 AI | `mc-ai-tell-audit` |
-| 找一个真实作品的拆解 | `mc-case-studies` |
-
-### 2.2 六组最容易混的分界（★ 逐条记住）
-
-| A ⇄ B | 分界线 |
-|---|---|
-| `mc-form` ⇄ `mc-arrangement-arch` | **form 管曲式是什么（乐理），arrangement-arch 管这首歌为什么这么切（决策）** |
-| `mc-rhythm-groove` ⇄ `mc-rhythm-section` | **groove 管节奏本身是什么，rhythm-section 管怎么把它打出来像人** |
-| `mc-texture-layering` ⇄ `mc-mix-intent` | **texture 的解法是"改写"（换音区/减音符/交替），mix-intent 的解法是"改混"（让频/侧链/动态）。能改写解决的不许留给混音** |
-| `mc-orchestration` ⇄ `mc-sound-design` | **orchestration 管真实乐器与混合，sound-design 管合成音色的设计** |
-| `mc-sound-design` ⇄ 声音（音效、拟音） | 本库的 sound-design 是**乐音音色**；影视意义的"声音设计"（音效/拟音/空间）是**声音**这一职能的事，同名不同事 |
-| 本库 ⇄ 作词 | **词的一切是作词的事**，包括词曲对齐（符割り、字余り、倒字、协音）——那是词的工序；本库读同一首歌的歌词（`meta.upstream.lyrics`），共享六字段谁定谁读见 §5.1 |
-
-### 2.4 ★ 风格混合：不是调匀，是分维度签字
-
-> ★ **边界是分工，不是禁令。** 隔离的目的是让每个选择都有人签字，不是把风格锁死。写 J-Pop 规格时顺手借一个 city pop 的裏和弦、写中国风时低音走了 hip-hop 的 808——只要在 `style_layers` / `fusion_note` 里写一句为什么，就是合法的混合；**轻微的串音完全可以接受**，真正要防的是「没人选、默认长成那样」。
-
-**污染隔离 ≠ 禁止混合。** 两者的区别只有一条：
-
-> **混合是写下来的选择；污染是没人选。**
-> 一首 rap + 中国风的歌（如汪苏泷《桃花扇》）完全成立——前提是规格单说得出**哪个维度归谁**。
-
-**做法**：`meta.style_layers` 填一张分工表（schema §1.1.1），一个 `base` + 若干 `overlay`，
-每层写明它 `owns` 哪些维度：
-
-| 维度 | 《桃花扇》式的分法（示意） |
-|---|---|
-| `harmony`、`melody`、`color_instruments` | 中国风（五声旋律、民乐采样做色彩层） |
-| （完整分工见 `mc-style-hiphop` §8.1） | |
-| `groove`、`low_end`、`vocal_delivery_verse` | hip-hop（律动、808、主歌 flow） |
-| `vocal_delivery_chorus`、`form` | 中国风副歌唱、结构仍是主副歌 |
-
-★ `owns` 是**封闭集合**，只能从这十四个里选：
-`harmony`　`melody`　`groove`　`low_end`　`fill_policy`　`instrumentation`　`color_instruments`　`timbre`　`arrangement_hook`　`vocal_delivery`（可拆成 `vocal_delivery_verse` / `vocal_delivery_chorus`）　`form`　`mix`。
-要分配的东西不在表里，归到最接近的那个，并在 `fusion_note` 里写一句说明，**不要自造名字**。
-
-**三条规则**（第 18 条自查）：
-1. **每个维度只有一个 owner**——两层都声称 `groove` = 两种默认值叠在一起，谁也没选
-2. **每层至少拥有一个维度**——否则它只是被读了，没起作用
-3. **`fusion_note` 一句话说这个组合为什么成立**——说不出就是硬凑
-
-**怎么用各 L3 的移植表**：overlay 搬进来的，正是它移植表里标"不可搬／会被认出来"的项——
-**那就是你要的辨识度**。但每搬一项都要在 `owns` 里签字，并看 base 风格的移植表是否允许让出那个维度
-（例如 city pop 的移植表说"抢拍贝司可搬"，那 base 是 city pop 时 `groove` 让给别人就要三思）。
-
-**路由上**：混合 brief 应**读全部被点名的 L3 skill**，这不算污染；
-读了**没被点名**的风格才是。
-
-### 2.3 不归本包的东西
-
-| 内容 | 归哪个职能 |
-|---|---|
-| EQ 频点、压缩比、混响参数、总线链、母带 | **声音（混音、母带）**；本包只给 `mix_intent` 这份意图 |
-| 影视音效、Foley、环境声、空间设计 | **声音**（录音、音效） |
-| 跟画面走的配乐结构、cue sheet、spotting | **配乐**（为画面写音乐） |
-| 歌词写作、押韵、意象、叙事人称 | **作词**。★ **词的三种情况**：用户**没提词** → 可出可不出，出了就在 `checks.exemptions` 记一条"词未经作词工序"；用户明确要**纯音乐 / 轻音乐 / 器乐** → 一个字都不加，`vocal` 留空；用户**明确要词** → 必须出词，有同一首歌的歌词（`meta.upstream.lyrics`）就照它，没有就按本库的 `mc-vocal-direction` 写并记豁免。只示意人声节奏（rap 的 flow、副歌字数）时用占位音节（da-da / 拉拉）或 X 标记 |
-| 商业流程（compe、仮歌、版权、分成） | 不做 |
+If a long gap separates the two listens, guard against the opposite bias: under sustained exposure the ear gradually adapts to timbre changes, so the longer you listen, the more the two versions seem alike, and a real difference can be misjudged as nonexistent (p0342). **Leave a break between the two judgments; do not keep switching back and forth**, which guards against both errors at once.
 
 ---
 
-## 3. ARR-SPEC：本库唯一的交接物
+## 2. Full-library boundary table
 
-**完整规范在本 skill 目录下的 [ARR-SPEC.schema.md](ARR-SPEC.schema.md)（v1.0），空模板 [ARR-SPEC.template.yaml](ARR-SPEC.template.yaml)，后端能力档案 [backends.yaml](backends.yaml)。**
-★ **写规格单前先 Read 模板，照它的字段名填**——实测不看模板的话 agent 会自己发明字段（`intent.scene/borrow`、`push_pull` 写成字符串）。
-（这三个文件就是本库随包交付的全部"格式"——除了 Read 它们，不需要任何工具。）
+**Every decision has exactly one owner.** If unsure, check this table.
 
-### 3.1 一物四用
+### 2.1 By question
 
-| 用途 | 怎么用 |
+| Question | Owner |
 |---|---|
-| **对外交接** | 给混音师、乐手、作词和别的部门看的，是这一份（§5） |
-| **AB 测试对象** | 改一个字段 → 重生成 → 比对。**变量可控** |
-| **编译源** | `mc-render-compile` 把它编译成 Suno prompt / YuE 输入 / MIDI |
-| **验收基准** | 生成回来的东西逐字段对照它，看后端照做了多少 |
+| What is this song for | **this skill**, S0 |
+| Which form to use, how long the sections are | `mc-form` (theory) + `mc-arrangement-arch` (asymmetry and energy) |
+| How to write the melody, singability | `mc-melody` |
+| How to choose and voice chords | `mc-harmony` |
+| Look up an existing progression | `mc-progressions` |
+| How to modulate | `mc-modulation` |
+| What the rhythmic pattern is | `mc-rhythm-groove` |
+| How to make parts independent and avoid parallels | `mc-counterpoint` |
+| How a motif grows into a section, and a section into a song | `mc-development` (L1); the melody itself in `mc-melody`, section function in `mc-form` |
+| When instruments enter and exit, the energy curve | `mc-arrangement-arch` |
+| Which instrument to use, blending timbres | `mc-orchestration` |
+| How frequency bands are divided, who competes with whom, foreground / midground / background | `mc-texture-layering` |
+| Whether the playing sounds human, how bass and kick are paired | `mc-rhythm-section` |
+| How to build synth timbres | `mc-sound-design` |
+| How to sing the vocal, how to add harmony | `mc-vocal-direction` |
+| How to place the soundstage, who yields to whom | `mc-mix-intent` |
+| How to approach this style | `mc-style-*` (L3) |
+| How the spec sheet becomes a prompt | `mc-render-compile` |
+| Producing ABC / MIDI / MusicXML | `mc-symbolic-score` |
+| Where the generated output sounds like AI | `mc-ai-tell-audit` |
+| Finding a breakdown of a real work | `mc-case-studies` |
 
-★ 第二和第四条是关键：**没有规格单就没有可控实验，没有可控实验就只能靠感觉。**
+### 2.2 Six boundaries that are most easily confused (★ memorize each)
 
-### 3.0 ★ 写完的 20 条自查
+| A ⇄ B | Dividing line |
+|---|---|
+| `mc-form` ⇄ `mc-arrangement-arch` | **form governs what the form is (theory); arrangement-arch governs why this song is cut this way (decisions)** |
+| `mc-rhythm-groove` ⇄ `mc-rhythm-section` | **groove governs what the rhythm itself is; rhythm-section governs how to play it so it sounds human** |
+| `mc-texture-layering` ⇄ `mc-mix-intent` | **texture is solved by "rewriting" (change register / reduce notes / alternate); mix-intent is solved by "remixing" (frequency carving / sidechain / dynamics). Anything rewriting can solve must not be left to mixing** |
+| `mc-orchestration` ⇄ `mc-sound-design` | **orchestration governs real instruments and their blend; sound-design governs the design of synthesized timbres** |
+| `mc-sound-design` ⇄ sound (sound effects, Foley) | this library's sound-design is **musical timbre**; "sound design" in the film sense (effects / Foley / space) is the job of the **sound** function. Same name, different work |
+| this library ⇄ lyricists | **everything about the words belongs to the lyricist**, including word-to-melody alignment (syllable splitting, extra syllables, inverted syllables, xieyin). That is the words' own workflow; this library reads the same song's lyrics (`meta.upstream.lyrics`); for the shared six-field ownership of who decides and who reads, see §5.1 |
 
-**本库不需要用户机器上有任何工具**——没有 lint、没有脚本、不预设 Python 或 Node。
-写完规格单，自己把下面 20 条逐条过一遍，结果写进 `checks.self_audit`。
-★ **这是判据，不是铁律**：某条不过，要么改，要么一句话写明为什么这首歌就该这样。
-写了理由的偏离就是合法的选择；**没有任何一条会"卡住"后面的编译**。
-★ 不要为了检查去写脚本（实测有 agent 这么干过，白费很多轮）——20 条全部用眼睛就能判。
+### 2.4 ★ Style blending: not an even mix, but signing off by dimension
 
-| # | 自查问法 | 对照字段 |
+> ★ **Boundaries are a division of labor, not a prohibition.** The purpose of isolation is to make sure every choice has someone signing it off, not to lock a style down. When writing a J-Pop spec you may borrow a city-pop ura-chord (backdoor chord) in passing, or when writing a Chinese-style piece the bass may take an 808 from hip-hop. As long as you write one sentence in `style_layers` / `fusion_note` explaining why, that is a legitimate blend; **slight bleed is entirely acceptable**. What really must be guarded against is "nobody chose it, so it defaulted to that."
+
+**Contamination isolation ≠ prohibiting blends.** The two differ on exactly one point:
+
+> **A blend is a choice that was written down; contamination is a choice nobody made.**
+> A song that blends rap and Chinese style (for example Wang Sulong's "Peach Blossom Fan" (桃花扇)) is entirely valid, provided the spec can state **which dimension belongs to whom**.
+
+**How**: `meta.style_layers` holds a division-of-labor table (schema §1.1.1): one `base` plus several `overlay`s, with each layer stating which dimensions it `owns`:
+
+| Dimension | Division in a Peach Blossom Fan-style piece (illustrative) |
+|---|---|
+| `harmony`, `melody`, `color_instruments` | Chinese style (pentatonic melody, folk-instrument samples as a color layer) |
+| (complete division in `mc-style-hiphop` §8.1) | |
+| `groove`, `low_end`, `vocal_delivery_verse` | hip-hop (groove, 808, verse flow) |
+| `vocal_delivery_chorus`, `form` | Chinese-style sung chorus; the structure is still verse/chorus |
+
+★ `owns` is a **closed set**; it may only be chosen from these fourteen:
+`harmony` `melody` `groove` `low_end` `fill_policy` `instrumentation` `color_instruments` `timbre` `arrangement_hook` `vocal_delivery` (may be split into `vocal_delivery_verse` / `vocal_delivery_chorus`) `form` `mix`.
+Anything being allocated that is not in the table goes under the closest match, with one sentence in `fusion_note` explaining it. **Do not invent new names.**
+
+**Three rules** (self-check item 18):
+1. **Each dimension has exactly one owner.** If two layers both claim `groove`, two defaults are stacked on top of each other and nobody chose.
+2. **Each layer owns at least one dimension.** Otherwise it is merely read and does nothing.
+3. **`fusion_note` states in one sentence why this combination holds.** If you cannot say it, it is forced together.
+
+**How to use each L3's porting table**: what an overlay brings in is exactly the items its porting table marks as "not portable / will be recognized". **That recognizability is what you want.** But every item brought in must be signed off in `owns`, and you must check whether the base style's porting table allows giving up that dimension. For example, the city-pop porting table says a rushing bass can be ported; when the base is city pop, handing `groove` to someone else needs careful thought.
+
+**On routing**: a blended brief should **read all of the L3 skills it names**; that is not contamination. Reading a style that was **not named** is what counts as contamination.
+
+### 2.3 Things outside this package
+
+| Content | Which function owns it |
+|---|---|
+| EQ frequencies, compression ratios, reverb parameters, bus chain, mastering | **Sound (mixing, mastering)**; this package only provides the `mix_intent` intent |
+| Film sound effects, Foley, ambience, spatial design | **Sound** (recording, sound effects) |
+| Score structure that follows picture, cue sheets, spotting | **Scoring** (writing music for picture) |
+| Lyric writing, rhyme, imagery, narrative person | **Lyricist**. ★ **Three cases for words**: if the user did not mention words, they are optional; if you output some, record an entry in `checks.exemptions` saying "words not produced by the lyric workflow". If the user explicitly wants **pure music / light music / instrumental**, add not a single word and leave `vocal` empty. If the user **explicitly wants words**, you must produce them: if lyrics for the same song exist (`meta.upstream.lyrics`), follow them; if not, write them per this library's `mc-vocal-direction` and record an exemption. When only indicating vocal rhythm (rap flow, syllable counts per chorus line), use placeholder syllables (da-da / la-la) or X marks |
+| Business workflow (pitch competitions, guide vocals (kari-uta), copyright, revenue splits) | Out of scope |
+
+---
+
+## 3. ARR-SPEC: this library's only handoff artifact
+
+**The full specification is [ARR-SPEC.schema.md](ARR-SPEC.schema.md) (v1.0) in this skill directory; the blank template is [ARR-SPEC.template.yaml](ARR-SPEC.template.yaml); the backend capability profile is [backends.yaml](backends.yaml).**
+★ **Before writing a spec sheet, Read the template and fill in its field names as given.** In testing, without looking at the template the agent invented its own fields (`intent.scene/borrow`, and `push_pull` written as a string).
+(These three files are the entire "format" this library ships with. Beyond reading them, no tools are needed.)
+
+### 3.1 One artifact, four uses
+
+| Use | How it is used |
+|---|---|
+| **External handoff** | The one document that mixing engineers, musicians, lyricists and other departments read (§5) |
+| **AB test subject** | Change one field → regenerate → compare. **Variables are controllable** |
+| **Compile source** | `mc-render-compile` compiles it into a Suno prompt / YuE input / MIDI |
+| **Acceptance baseline** | Compare the generated output field by field against it, to see how much the backend followed |
+
+★ Points two and four are the key ones: **without a spec sheet there are no controllable experiments, and without controllable experiments you can only rely on feel.**
+
+### 3.0 ★ The 20 self-checks after writing
+
+**This library requires no tools on the user's machine**: no lint, no scripts, no assumed Python or Node.
+After writing the spec sheet, go through the 20 items below one by one yourself, and write the results into `checks.self_audit`.
+★ **These are criteria, not iron rules.** If an item fails, either fix it, or state in one sentence why this song should be that way.
+A deviation with a stated reason is a legitimate choice; **no single item will "block" the compile that follows.**
+★ Do not write scripts to do the checking (in testing, some agents did this and wasted many rounds). All 20 items can be judged by eye.
+
+| # | Self-check question | Field checked |
 |---|---|---|
-| 1 | `intent` 四项都填了？`reference_pair` 恰好 2 项且每项写了"借哪一点"？ | `intent` |
-| 2 | 各段 `start_bar` 首尾相接？（上一段 start + bars = 下一段 start） | `form` |
-| 3 | 至少一段的 `bars` 不是 8 的倍数？ | `form[].bars` |
-| 4 | `energy_curve` 的 key 集合 == `form` 的 id 集合？（不多不少） | `energy_curve` |
-| 5 | 能量曲线至少下降一次？ | `energy_curve` |
-| 6 | `subtraction_events` ≥ 1？ | `subtraction_events` |
-| 7 | 每件乐器有 `entry`；至少一件 `exit` 不是 `end`？ | `roster` |
-| 8 | `arrangement_hook.what` 非空？ | `hooks` |
-| 9 | 至少一个非 Intro/Outro 段有调外和弦或转调标记？（小调里 `bIII`／`bVI`／`bVII` 是本调和弦，不算） | `form[].harmony` |
-| 10 | `fill_policy.bars` 不是公差 4 的等差数列？ | `groove` |
-| 11 | `push_pull` 至少一项 `offset_ms ≠ 0`，且每项是 `{part, offset_ms, note}` 字典？ | `groove` |
-| 12 | `width_map` 至少两种取值？ | `mix_intent` |
-| 13 | `style_prompt` 非空且无 epic/emotional/beautiful；`section_tags` 若手填则与 `form` 段数、顺序一致（由 `form[].name` 派生，可不填）？ | `render.suno` |
-| 14 | `Σbars × 每小节拍数 ÷ tempo × 60` 与 `target_duration` 偏差 ≤ 10%？ | `meta` |
-| 15 | 有人声时 `dynamics_by_section` 至少两种取值？（器乐作品跳过） | `vocal` |
-| 16 | 有人声时 `chorus_variation` 非空？（器乐作品跳过） | `vocal` |
-| 17 | 多风格时：恰好一个 base；每个维度只有一个 owner；每层至少一个维度；`fusion_note` 非空？ | `meta.style_layers` |
-| 18 | `material.motif` 与 `stated_in` 非空；每段 `development` 填了；`new` 不过半；至少一段 `repeat` 或 `recap`；副歌各遍不全是 `new`？ | `material` `form[].development` |
-| 19 | 和弦拼写全 ASCII，后缀在封闭集合里（`maj7` `m7b5` `dim`，不写 △ ø ° ♭ ♯ ×）？ | `form[].harmony_letters` `harmony` |
-| 20 | `key` 是"主音 major/minor"；`mode` 在枚举内；段名在封闭集合内；`subtraction_events[].at` 是 `{section, bar_offset}` 这样的结构不是句子？ | `meta` `form[].name` `subtraction_events` |
+| 1 | Are all four `intent` items filled? Does `reference_pair` have exactly 2 items, each stating which point is borrowed? | `intent` |
+| 2 | Do the sections' `start_bar` values chain end to end? (previous start + bars = next start) | `form` |
+| 3 | Is at least one section's `bars` not a multiple of 8? | `form[].bars` |
+| 4 | Does the key set of `energy_curve` equal the id set of `form`? (no more, no less) | `energy_curve` |
+| 5 | Does the energy curve drop at least once? | `energy_curve` |
+| 6 | Is `subtraction_events` ≥ 1? | `subtraction_events` |
+| 7 | Does every instrument have an `entry`, and does at least one have an `exit` that is not `end`? | `roster` |
+| 8 | Is `arrangement_hook.what` non-empty? | `hooks` |
+| 9 | Does at least one section other than Intro/Outro have a non-diatonic chord or a key-change marking? (In minor, `bIII`／`bVI`／`bVII` are the key's own diatonic chords and do not count.) | `form[].harmony` |
+| 10 | Is `fill_policy.bars` not an arithmetic sequence with common difference 4? | `groove` |
+| 11 | Does at least one `push_pull` item have `offset_ms ≠ 0`, and is each item a `{part, offset_ms, note}` dictionary? | `groove` |
+| 12 | Does `width_map` take at least two values? | `mix_intent` |
+| 13 | Is `style_prompt` non-empty and free of epic/emotional/beautiful? If `section_tags` is filled in by hand, does it match the number and order of `form` sections? (It is derived from `form[].name` and may be left blank.) | `render.suno` |
+| 14 | Does `Σbars × beats per bar ÷ tempo × 60` deviate from `target_duration` by ≤ 10%? | `meta` |
+| 15 | With vocals, does `dynamics_by_section` take at least two values? (Skip for instrumental works.) | `vocal` |
+| 16 | With vocals, is `chorus_variation` non-empty? (Skip for instrumental works.) | `vocal` |
+| 17 | With multiple styles: exactly one base; each dimension has only one owner; each layer has at least one dimension; `fusion_note` non-empty? | `meta.style_layers` |
+| 18 | Are `material.motif` and `stated_in` non-empty; is `development` filled for every section; is `new` less than half; at least one section `repeat` or `recap`; are the chorus passes not all `new`? | `material` `form[].development` |
+| 19 | Are chord spellings all ASCII, with suffixes from the closed set (`maj7` `m7b5` `dim`; do not write △ ø ° ♭ ♯ ×)? | `form[].harmony_letters` `harmony` |
+| 20 | Is `key` in the form "tonic major/minor"; is `mode` within the enumeration; are section names within the closed set; is `subtraction_events[].at` a structure like `{section, bar_offset}` rather than a sentence? | `meta` `form[].name` `subtraction_events` |
 
-**YAML 本身的自查**（agent 最常写坏的地方）：
-- 列表字段（`roster` / `sound_stage` / `push_pull` / `emotional_arc` …）的 `- {…}` 条目下面**不能挂 `note:` 键**——要注释用同级 `xxx_note:` 或 `#`
-- 冒号后有空格；值里有冒号的加引号；缩进统一两格
+**YAML self-checks** (where agents most often break things):
+- Under the `- {…}` entries of list fields (`roster` / `sound_stage` / `push_pull` / `emotional_arc` …) you **may not attach a `note:` key**. For a comment, use a sibling `xxx_note:` key or `#`.
+- A space after each colon; quote values that contain colons; uniform two-space indentation.
 
-### 3.2 自查不过怎么办
+### 3.2 What to do when a self-check fails
 
-**不过的条目通常指向一个没读的 skill**，而不是需要硬填：
+**A failing item usually points to a skill you have not read**, rather than something to force-fill:
 
-| 不过的条目 | 多半是哪个 skill 没读 |
+| Failing item | Most likely unread skill |
 |---|---|
-| 1（intent 不齐） | 本 skill §1 的 S0——**回去想清楚，不要硬填** |
-| 2、3、14（段落与时长） | `mc-arrangement-arch` §4 |
-| 4、5（能量曲线） | `mc-arrangement-arch` §2 |
-| 6（减法事件） | `mc-arrangement-arch` §3 |
-| 7（编制进退场） | `mc-arrangement-arch` §5 |
-| 8（arrangement_hook） | `mc-arrangement-arch` §7 |
-| 9（和声单调） | `mc-harmony`、`mc-modulation` |
-| 10、11（fill 与律动） | `mc-rhythm-section` §3、§8 |
-| 12（宽度恒定） | `mc-mix-intent` §2 |
-| 13（编译不完整） | `mc-render-compile` |
-| 15、16（人声） | `mc-vocal-direction` §1、§4 |
+| 1 (intent incomplete) | this skill's §1 S0. **Go back and think it through; do not force-fill** |
+| 2, 3, 14 (sections and duration) | `mc-arrangement-arch` §4 |
+| 4, 5 (energy curve) | `mc-arrangement-arch` §2 |
+| 6 (subtraction event) | `mc-arrangement-arch` §3 |
+| 7 (lineup entries and exits) | `mc-arrangement-arch` §5 |
+| 8 (arrangement_hook) | `mc-arrangement-arch` §7 |
+| 9 (harmonic monotony) | `mc-harmony`, `mc-modulation` |
+| 10, 11 (fills and groove) | `mc-rhythm-section` §3, §8 |
+| 12 (constant width) | `mc-mix-intent` §2 |
+| 13 (incomplete compile) | `mc-render-compile` |
+| 15, 16 (vocals) | `mc-vocal-direction` §1, §4 |
 
-**豁免的规矩**：写进 `checks.exemptions`，**必须带理由**。
-静默跳过 = 没写完。
+**Exemption rule**: record it in `checks.exemptions`, and **a reason is required**.
+A silent skip = unfinished work.
 
-### 3.3 ★ 生成后端的默认值对照表
+### 3.3 ★ Backend default comparison table
 
-**后端在无指令时会滑向左列。ARR-SPEC 的对应字段就是为了把它拉回来。**
+**Without instructions, backends slide toward the left column. The corresponding ARR-SPEC fields exist to pull them back.**
 
-| 后端默认倾向 | 对抗字段 | lint |
+| Backend default tendency | Counter field | lint |
 |---|---|---|
-| 段落等长、都是 8 的倍数 | `form[].bars` | #3 |
-| 能量单调上升到底 | `energy_curve` | #5 |
-| 开场就把乐器铺满 | `roster[].entry` | — |
-| 所有乐器从头响到尾 | `roster[].exit` | #7 |
-| 只加不减 | `subtraction_events` | #6 |
-| 每 4 小节一个过门 | `fill_policy.bars` | #10 |
-| 全声部严格对齐网格 | `groove.push_pull` | #11 |
-| 人声全程一个力度 | `vocal.dynamics_by_section` | #15 |
-| 副歌逐遍原样复制 | `vocal.chorus_variation` | #16 |
-| 人声音准全中 | `vocal.pitch_policy` | 人工项 |
-| 立体声宽度全曲不变 | `mix_intent.width_map` | #12 |
-| 动态被压平 | `mix_intent.dynamics` | 人工项 |
-| 没有非人声记忆点 | `hooks.arrangement_hook` | #8 |
-| 时长永远 3:30 | `meta.target_duration` | #14 |
+| Sections of equal length, all multiples of 8 | `form[].bars` | #3 |
+| Energy rises monotonically to the end | `energy_curve` | #5 |
+| Fills the instruments in at the opening | `roster[].entry` | — |
+| All instruments sound from start to finish | `roster[].exit` | #7 |
+| Only adds, never subtracts | `subtraction_events` | #6 |
+| A fill every 4 bars | `fill_policy.bars` | #10 |
+| All parts strictly aligned to the grid | `groove.push_pull` | #11 |
+| Vocal at a single dynamic level throughout | `vocal.dynamics_by_section` | #15 |
+| Chorus repeated verbatim on each pass | `vocal.chorus_variation` | #16 |
+| Vocal pitch perfect throughout | `vocal.pitch_policy` | manual item |
+| Stereo width constant for the whole song | `mix_intent.width_map` | #12 |
+| Dynamics flattened | `mix_intent.dynamics` | manual item |
+| No non-vocal memorable hook | `hooks.arrangement_hook` | #8 |
+| Duration always 3:30 | `meta.target_duration` | #14 |
 
 ---
 
-## 4. 诊断路径：生成回来不对劲
+## 4. Diagnostic path: the generated result feels wrong
 
-**按这个顺序查，不要凭直觉跳。**
+**Check in this order; do not jump by intuition.**
 
 ```
-听着"像 AI"
- └─ 先分开两个问题：后端照做了没有（照做率）、成品有没有机器指纹（AI 味旗标）
-     ├─ 照做率低  → 后端没照做
-     │   ├─ 查 backends.yaml：这个字段该后端 honors 是 none 吗？
-     │   │   └─ 是 → 不是它的错。换后端（YuE2 控制力最强）或接受
-     │   └─ 否 → 编译问题，查 mc-render-compile
-     └─ 照做率高但仍像 AI → 规格本身不够
-         └─ 走 mc-ai-tell-audit 的清单
+Sounds "like AI"
+ └─ First separate two questions: did the backend follow the spec (compliance rate), and does the output carry a machine fingerprint (AI-flavor flag)
+     ├─ Low compliance → the backend did not follow
+     │   ├─ Check backends.yaml: is this field's `honors` for this backend `none`?
+     │   │   └─ Yes → not its fault. Switch backend (YuE2 has the strongest control) or accept
+     │   └─ No → compile problem; check mc-render-compile
+     └─ High compliance but still sounds like AI → the spec itself is not enough
+         └─ Go through the checklist in mc-ai-tell-audit
 ```
 
-### 4.1 具体症状 → skill
+### 4.1 Specific symptom → skill
 
-| 症状 | 先查 |
+| Symptom | Check first |
 |---|---|
-| 平、没起伏 | `mc-arrangement-arch` §2 能量曲线 |
-| 糊、浑 | `mc-texture-layering` §4 → **先查持续音，不是先怪鼓** |
-| 主角不突出 | `mc-texture-layering` §3 四条深度线索 |
-| 机械、太准 | `mc-rhythm-section` §2 ＋ `mc-vocal-direction` §4 |
-| 听着还行但记不住 | `mc-arrangement-arch` §7 —— `arrangement_hook` 是不是空的 |
-| 第二遍副歌和第一遍一样 | `mc-arrangement-arch` §6 ＋ `mc-vocal-direction` §1④ |
-| 人声埋在伴奏里 | **先查音准**（`mc-vocal-direction` §4.1），再查频段 |
-| 贝斯在手机上消失 | `mc-sound-design` §6 差音 |
-| 结尾很突兀 / 淡出了事 | `mc-arrangement-arch` §8 三种结尾 |
-| 技术上干净但情绪不对 | `mc-mix-intent` §3.1 —— `mood` 是不是没写 |
+| Flat, no contour | `mc-arrangement-arch` §2 energy curve |
+| Muddy, blurry | `mc-texture-layering` §4 → **check the sustained sounds first, not the drums** |
+| The lead does not stand out | `mc-texture-layering` §3, the four depth cues |
+| Mechanical, too precise | `mc-rhythm-section` §2 + `mc-vocal-direction` §4 |
+| Sounds fine but cannot be remembered | `mc-arrangement-arch` §7: is `arrangement_hook` empty? |
+| The second chorus pass is the same as the first | `mc-arrangement-arch` §6 + `mc-vocal-direction` §1④ |
+| Vocal buried in the accompaniment | **check pitch first** (`mc-vocal-direction` §4.1), then the frequency bands |
+| Bass disappears on a phone | `mc-sound-design` §6, difference tones |
+| Ending is abrupt / just fades out | `mc-arrangement-arch` §8, three kinds of ending |
+| Technically clean but the emotion is wrong | `mc-mix-intent` §3.1: was `mood` left unwritten? |
 
-### 4.2 ★ 两个数不许混为一谈
+### 4.2 ★ The two numbers must not be confused
 
-| | 问什么 | 怎么算 |
+| | What it asks | How it is computed |
 |---|---|---|
-| **照做率** | 后端照着规格做了多少 | 逐字段对照规格听/看；0–100 的参考线见 §6.3 |
-| **AI 味旗标** | 成品有没有机器指纹 | `mc-ai-tell-audit` 的清单，独立计数 |
+| **Compliance rate** | How much the backend followed the spec | Check field by field against the spec by listening or looking; the 0–100 reference lines are in §6.3 |
+| **AI-flavor flag** | Whether the output carries a machine fingerprint | The checklist in `mc-ai-tell-audit`, counted independently |
 
-**照做率 100 的东西完全可能满是 AI 味**——那说明规格写得像 AI。
-反过来，照做率 40 但好听，说明后端自己干得不错，但你**不可复现**。
+**A compliance rate of 100 can very well be full of AI flavor**, which means the spec itself reads like AI.
+Conversely, a compliance rate of 40 that still sounds good means the backend did well on its own, but **you cannot reproduce it**.
 
 ---
 
-## 5. 对外接口
+## 5. External interfaces
 
-**本库管一首歌的作曲与编曲决定**（调、速度、段落、和声、主题材料、谁什么时候进退、能量曲线、怎么唱、混音要达到什么），产出是 ARR-SPEC。不假设下游是谁、用什么工具；对外只经规格单：交出去的字段、有就读的上游字段（§5.2）、`messages`（§5.3）。字段怎么理解：`ARR-SPEC.schema.md` §5。
+**This library governs a song's composition and arrangement decisions** (key, tempo, sections, harmony, thematic material, who enters and exits when, the energy curve, how it is sung, and what the mix must achieve). The output is an ARR-SPEC. It does not assume who the downstream is or what tools they use. Externally it communicates only through the spec: the fields it hands over, the upstream fields it reads if present (§5.2), and `messages` (§5.3). For how to read the fields, see `ARR-SPEC.schema.md` §5.
 
-| 职能 | 不归本库的 | 交出去 |
+| Function | What is not in this library | What it is handed |
 |---|---|---|
-| 作词 | 词怎么写：押韵、意象、叙事人称；字怎么安到音上（符割り、字余り、倒字、协音） | 共享六字段（§5.1）；`vocal.phrasing／breath_points`、`hooks.vocal_hook`、`intent.emotional_arc`、`form[].melody_register` |
-| 声音（混音、母带） | EQ 频点、压缩比、混响参数、总线链、母带；录音；影视意义的音效与拟音 | `mix_intent`（只写意图）、`roster`、`depth_map`、`spectrum_budget`、`subtraction_events`、`vocal.pitch_policy／stacking`；`deliverable` 含 `stems` 时交分轨 |
-| 配乐（为画面写音乐） | 跟画面走的结构：spotting、cue sheet、从哪一帧进 | `meta.tempo／tempo_map／target_duration`、`form[].start_bar／bars`、`material`、`hooks.arrangement_hook`、`energy_curve` |
-| 剪辑环节 | 把音乐放到画面上：切在哪、剪短、接缝 | 同上的时间字段、`subtraction_events`、stems |
+| Lyricist | How words are written: rhyme, imagery, narrative person; how words are fitted onto notes (syllable splitting, extra syllables, inverted syllables, xieyin) | Shared six fields (§5.1); `vocal.phrasing／breath_points`, `hooks.vocal_hook`, `intent.emotional_arc`, `form[].melody_register` |
+| Sound (mixing, mastering) | EQ frequencies, compression ratios, reverb parameters, bus chain, mastering; recording; film-sense sound effects and Foley | `mix_intent` (intent only), `roster`, `depth_map`, `spectrum_budget`, `subtraction_events`, `vocal.pitch_policy／stacking`; when `deliverable` includes `stems`, hand over the stems |
+| Scoring (music for picture) | Structure that follows picture: spotting, cue sheets, which frame to enter on | `meta.tempo／tempo_map／target_duration`, `form[].start_bar／bars`, `material`, `hooks.arrangement_hook`, `energy_curve` |
+| Editing | Placing the music against picture: where to cut, shorten, and seams | The same timing fields as above, `subtraction_events`, stems |
 
-镜头设计按放音拍时读速度与段落时间，交出去以后再改要先写消息；商用前的许可看 `backends.yaml` 的 `license`（制片与现场）。小节换算成秒的约定见 schema §5.1。
+Shot design reads the tempo and section timing at the playback point; once handed off, any change must first be sent as a message. Before commercial use, check the `license` in `backends.yaml` (producers and on-set use). The convention for converting bars to seconds is in schema §5.1.
 
-### 5.1 与歌曲另一侧共享的六个字段
+### 5.1 Six fields shared with the other side of the song
 
-`form[].id` / `form[].bars` / `form[].name` / `meta.tempo` / `meta.key` / `vocal.persona`。两边用同一套段落 id。
+`form[].id` / `form[].bars` / `form[].name` / `meta.tempo` / `meta.key` / `vocal.persona`. Both sides use the same section ids.
 
-- **谁先做谁定。** 先曲后词：本库定，写进自己的字段。先词后曲：从 `meta.upstream.lyrics.shared` 原样读进来，当锁死项用；词的字数和句式反过来约束 `form[].bars`。
-- **后做时不改这六项。** 词放不进这几小节、调或速度唱不下来，就写一条 `messages`（`to: lyrics`），说清改哪一项、为什么；对方接受并改了它自己的规格单，本库再重新读。
-- 只有曲、没有歌词那一侧时，这六项由本库自己定。
+- **Whoever goes first decides.** Music first, lyrics second: this library decides and writes into its own fields. Lyrics first, music second: read them in unchanged from `meta.upstream.lyrics.shared` and treat them as locked items; the lyrics' syllable count and phrasing in turn constrain `form[].bars`.
+- **Do not change these six items when working second.** If the words cannot fit these bars, or the key or tempo cannot be sung, write a `messages` entry (`to: lyrics`) saying which item to change and why. Once the other side accepts and changes its own spec, this library re-reads it.
+- When only the music side exists and there are no lyrics, this library sets these six items itself.
 
-完整规则与原文：schema §5.4。
+Full rules and original text: schema §5.4.
 
-### 5.2 上游：有就读
+### 5.2 Upstream: read if present
 
-`meta.upstream.brief／lyrics／picture` 来自谁不重要：有就读（先词后曲时的共享六项是锁死项），没有就按本库自己的分析走——S0 从 brief 起，没有歌词就按 §2.3 的三种情况，没有画面时长就自己定时长。已填的上游字段不改写；冲突时照实写本库的字段，再写消息给来源的职能。
+It does not matter where `meta.upstream.brief／lyrics／picture` comes from: read it if present (in lyrics-first mode the six shared items are locked). If absent, follow this library's own analysis: S0 starts from the brief; with no lyrics, use the three cases in §2.3; with no picture duration, set the duration yourself. Do not rewrite upstream fields that are already filled. On conflict, write this library's field as it stands, then send a message to the originating function.
 
-### 5.3 `messages`：怎么收发
+### 5.3 `messages`: how to send and receive
 
-- **收**：S0 开工与每次改规格前读 `to: music` 的，交给 `about` 所指字段的 owner（§2.1）；改了标 `accepted`、不改标 `rejected`，`reply` 写改了什么或理由。
-- **发**：如 `{from: music, to: sound, about: "mix_intent.dynamics", says: "D 段比 C2 低 6 dB 是唯一的大落差，母带请留住", status: open}`；`to` 取 `lyrics` `sound` `editing` `shot-design` `writing` `production`。
-- **不等待**：读不到回话就当没有；`open` 不挡自查、不停阶段，交付时原样交出去。
-
----
-
-## 6. 三个检验办法
-
-### 6.1 选 skill 时对照边界表
-
-开工前把这首歌要读的 skill 列出来，对照 §2 和各 skill 的边界表看两件事：
-
-1. **该读的读了没有**：brief 里每个要做的决定，都有一个 owner 被选中
-2. **不该读的混进来没有**
-   —— 尤其是 L3 风格层，**多读一个没被点名的风格 skill，最容易把它的默认值带进这首歌**（被点名的混合不算，见 §2.4）
-
-> 这就是为什么每个 skill 都必须有「边界：什么不归这个 skill 管」表——
-> 那张表是给选 skill 时看的，不只是给人看的。
-
-### 6.2 文本层 AB
-
-**评判表在看结果之前定稿。** 改一个字段 → 重生成 → 盲比。
-定稿之后再看结果，否则你会不自觉地把评判标准调向你已经看到的那个。
-
-比响度前先对齐电平，再比内容：声音只要更响，耳朵就倾向觉得它更好，这条偏差会把"哪个字段起了作用"的判断，悄悄换成"哪个版本更响"（p0299-p0300）。两版生成结果如果响度或整体密度对不齐，先拉平这两项再做成对比较，不然字段本身的效果会被响度差盖过去。
-
-### 6.3 先算再听（照做率）
-
-见 §1 的 S7 与 §4.2。
-
-★ **零点校准**（参考值，供理解量级，不是交付门槛）：拿一份 City Pop 规格（112 BPM、10 段、114 小节）去比三首与它无关、制作精良的华语成品，按字段加权打分得 **63–66**，
-所以我们把 **82 / 70** 当"照做得好 / 勉强"的参考线，不是 60。
-逐字段对照时，照做率就是对照后的一个判断，不必算成数。
+- **Receive**: at the start of S0 and before each spec change, read the entries with `to: music`, and hand each to the owner of the field named in `about` (§2.1). Mark it `accepted` if you changed the spec, `rejected` if not, with `reply` stating what changed or why.
+- **Send**: for example `{from: music, to: sound, about: "mix_intent.dynamics", says: "The D section sitting 6 dB below C2 is the only large drop; please keep it through mastering", status: open}`. `to` takes `lyrics`, `sound`, `editing`, `shot-design`, `writing`, or `production`.
+- **Do not wait**: if no reply arrives, treat it as none. `open` does not block the self-check or stop a stage; deliver it as-is at handoff.
 
 ---
 
-## 7. 目录地图
+## 6. Three verification methods
+
+### 6.1 Check the boundary table when choosing skills
+
+Before starting, list the skills this song needs to read, then check against §2 and each skill's boundary table for two things:
+
+1. **Did you read the ones you should?** Every decision in the brief has a chosen owner.
+2. **Did anything you should not read creep in?**
+   — especially with L3 style layers: **reading one extra unnamed style skill is the easiest way to carry its defaults into this song** (named blends do not count; see §2.4)
+
+> This is why every skill must have a "Boundary: what this skill does not govern" table.
+> That table is there for choosing skills, not only for people to read.
+
+### 6.2 Text-layer A/B
+
+**Fix the judging criteria before looking at results.** Change one field → regenerate → blind comparison.
+Once the results are in, do not change the criteria, or you will unconsciously tune them toward the one you have already seen.
+
+Align the levels before comparing loudness, then compare content. If one version is simply louder, the ear tends to judge it better, and this bias quietly replaces the judgment of "which field took effect" with "which version is louder" (p0299-p0300). If the loudness or overall density of the two generated results does not match, level those two first before the paired comparison; otherwise the field's real effect is drowned out by the loudness difference.
+
+### 6.3 Compute first, then listen (compliance rate)
+
+See S7 in §1 and §4.2.
+
+★ **Zero-point calibration** (reference values, to convey the scale, not a delivery threshold): take a City Pop spec (112 BPM, 10 sections, 114 bars) and compare it against three unrelated, well-produced Chinese-language finished tracks. Field-weighted scoring gives **63–66**, so we use **82 / 70** as the reference lines for "followed well / barely", not 60.
+When comparing field by field, the compliance rate is one judgment made after the comparison; it need not be computed as a number.
+
+---
+
+## 7. Directory map
 
 ```
-随包发布（用户拿到的就是这些，全是文本）：
-  skills/<27 个 skill>/SKILL.md, reference.md
-  skills/mc-workflow/ARR-SPEC.schema.md      ★ 规格单定义（v1.0）
-  skills/mc-workflow/ARR-SPEC.template.yaml  空模板
-  skills/mc-workflow/backends.yaml           ★ 各后端的 honors 声明
-  skills/mc-workflow/example-*.yaml          填好的示例（citypop / 混合 / 反面样本）
+Shipped with the package (what the user receives is exactly these, all plain text):
+  skills/<27 skills>/SKILL.md, reference.md
+  skills/mc-workflow/ARR-SPEC.schema.md      ★ spec definition (v1.0)
+  skills/mc-workflow/ARR-SPEC.template.yaml  blank template
+  skills/mc-workflow/backends.yaml           ★ honors declarations for each backend
+  skills/mc-workflow/example-*.yaml          filled examples (citypop / blend / counter-example)
 ```
 
 ---
 
-## 8. 写完一首歌的自检
+## 8. Self-check for a finished song
 
-- [ ] `intent` 四项是**想出来的**，不是为了过 lint 填的
-- [ ] §3.0 的 20 条逐条过了，不过的都写了理由
-- [ ] 每个字段都能说出**是哪个 skill 的哪一节**决定的
-- [ ] 逐字段对照过生成结果，且知道哪些项因 `honors: none` 本来就不指望
-- [ ] 跑过 `mc-ai-tell-audit`
-- [ ] 耳朵是**最后**介入的，且 A/B 结论两遍一致
+- [ ] The four `intent` items were **thought out**, not filled in to pass lint
+- [ ] The 20 items in §3.0 were gone through one by one, and every failing item has a stated reason
+- [ ] Every field can name **which section of which skill** decided it
+- [ ] The generated result was compared field by field, and it is known which items were never expected because of `honors: none`
+- [ ] `mc-ai-tell-audit` has been run
+- [ ] The ear came in **last**, and the A/B conclusion held on both listens
 
 ---
 
-## 附：这个库为什么这样分层
+## Appendix: why this library is layered this way
 
-**分库/分 skill 的判据是四件事全不同**：交接物、裁判、语料、评判方法。
-**按工序切，不按知识领域切。**
+**The criteria for splitting the library into sub-libraries and skills are four things that all differ: handoff artifact, referee, corpus, and evaluation method.**
+**Split by workflow step, not by knowledge domain.**
 
-所以：
-- "和声"是**知识领域**，但它被切进 `mc-harmony`（写的时候）和 `mc-progressions`（查的时候）——
-  因为这是两道工序
-- "city pop"是**风格**，它的鼓型不进 `mc-rhythm-section`，进 `mc-style-citypop-rnb`——
-  因为"打得像人"和"打得像 city pop"是两道工序
-- "混音"横跨三层：意图在 `mc-mix-intent`，改写型解法在 `mc-texture-layering`，
-  参数是**混音**的事——因为它们的裁判不同（作曲判断 / 编曲判断 / 工程判断）
+So:
+- "Harmony" is a **knowledge domain**, but it is cut into `mc-harmony` (when writing) and `mc-progressions` (when looking things up), because these are two workflow steps.
+- "City pop" is a **style**; its drum patterns do not go into `mc-rhythm-section`, they go into `mc-style-citypop-rnb`, because "playing like a human" and "playing like city pop" are two workflow steps.
+- "Mixing" spans three layers: the intent is in `mc-mix-intent`, the rewrite-type solutions are in `mc-texture-layering`, and the parameters are the job of **mixing**. This is because their referees differ (composition judgment / arrangement judgment / engineering judgment).
 
-## 附：来源
+## Appendix: Sources
 
-- **Howard & Angus《音乐声学与心理声学》**（Acoustics and Psychoacoustics）——§1.2 两遍复听的两条心理声学依据：重复听音会改变听觉系统的处理策略、以及持续暴露带来的听觉适应。页码为中译本页。
-- **Roey Izhaki《Mixing Audio》**（混音指南）——§6.2 提醒的响度偏差：更响的版本容易被判定"更好"，与内容本身的差异无关。页码为该书页。
-本库其余各 skill 引用的书目见各自的「附：来源」。
+- **Howard & Angus, *Acoustics and Psychoacoustics***. §1.2 cites two psychoacoustic grounds for listening twice: repeated listening changes the processing strategy of the auditory system, and auditory adaptation follows sustained exposure. Page numbers refer to the Chinese translation.
+- **Roey Izhaki, *Mixing Audio*** (a mixing guide). The loudness bias flagged in §6.2: the louder version tends to be judged "better", regardless of differences in content. Page numbers refer to that book.
+
+Bibliographies cited by the library's other skills are listed under each one's "Appendix: Sources".

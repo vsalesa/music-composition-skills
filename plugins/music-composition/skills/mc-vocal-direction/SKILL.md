@@ -1,307 +1,306 @@
 ---
 name: mc-vocal-direction
-description: Vocal direction and harmony design (演唱指导与和声设计) - specifying how a vocal should be delivered, not just what notes it sings. The two musical criteria, the vocabulary that actually changes a performance (brighter rather than louder, harder consonants rather than louder), consonant/vowel separation and why the beat lives in the vowel, the anti-perfection pitch philosophy that keeps a vocal from sounding machine-made, the four harmony types with their purpose and delivery, double and triple panning, and how all of this maps onto text prompts for Suno / YuE2 / MiniMax. Use when a vocal sounds flat, machine-made, or buried, when planning harmonies or doubles, when writing the vocal block of an ARR-SPEC, or when a generated vocal is too perfectly in tune. 演唱、人声、和声、咬字、音准、双轨、AI 味。
+description: Vocal direction and harmony design - specifying how a vocal should be delivered, not just what notes it sings. The two musical criteria, the vocabulary that actually changes a performance (brighter rather than louder, harder consonants rather than louder), consonant/vowel separation and why the beat lives in the vowel, the anti-perfection pitch philosophy that keeps a vocal from sounding machine-made, the four harmony types with their purpose and delivery, double and triple panning, and how all of this maps onto text prompts for Suno / YuE2 / MiniMax. Use when a vocal sounds flat, machine-made, or buried, when planning harmonies or doubles, when writing the vocal block of an ARR-SPEC, or when a generated vocal is too perfectly in tune. Keywords: singing, vocals, harmony, diction, pitch, double-tracking, AI sound.
 ---
 
-# 演唱指导与和声设计（Vocal Direction）
+# Vocal Direction
 
-**这个 skill 管的是：人声该**怎么唱**，不只是唱什么音。**
+**This skill covers how the vocal should be _sung_, not just which notes it sings.**
 
-对本库尤其重要，因为——
+This matters especially for this library, because—
 
-> **AI 人声最稳定的破绽是"完美"**：音准全中、力度平直、每遍副歌唱得一模一样。
-> 真人做不到这些，也不想做到。
+> **The most consistent giveaway of AI vocals is "perfection"**: every note dead in tune, dynamics perfectly flat, every repetition of the chorus sung identically.
+> Real singers cannot do this, and do not want to.
 
-所以本 skill 有一半内容是在教**怎么要求"不完美"**，以及**怎么把这种要求写成后端能吃的话**。
+So half of this skill teaches **how to ask for "imperfection"**, and **how to write that request in a form a backend can consume**.
 
-## 按任务读哪几节
+## Which sections to read for each task
 
-| 症状／任务 | 读 |
+| Symptom / task | Read |
 |---|---|
-| 人声听着平、没表情 | §2 演唱指导的语汇 |
-| 想让人声更有冲击力 | §2.3 辅音 |
-| 人声"太准了"、像机器 | §4 音准哲学 |
-| 人声推不出来、埋在伴奏里 | §4.1（多半不是音量问题） |
-| 要加和声，不知道加哪种 | §5 四型 |
-| 和声盖过主唱 / 太抢 | §5 对应型号的 delivery ＋ EQ 思路 |
-| 要不要做 double | §6 |
-| 写 Suno/YuE2 的人声提示词 | §7 |
-| 填 ARR-SPEC 的 vocal 块 | §8 ＋ §9 |
+| Vocal sounds flat, expressionless | §2 vocabulary of performance direction |
+| Want the vocal to hit harder | §2.3 Consonants |
+| Vocal is "too in tune", sounds like a machine | §4 Pitch philosophy |
+| Vocal won't push forward, buried in the accompaniment | §4.1 (usually not a volume problem) |
+| Adding harmony, unsure which type | §5 The four types |
+| Harmony overpowers the lead / is too showy | §5, the delivery and EQ approach for the relevant type |
+| Deciding whether to double | §6 |
+| Writing a vocal prompt for Suno / YuE2 | §7 |
+| Filling in the vocal block of an ARR-SPEC | §8 and §9 |
 
-## 边界：什么不归这个 skill 管
+## Boundary: what this skill does not cover
 
-| 不归这里 | 归哪 |
+| Not covered here | Where it lives |
 |---|---|
-| 词怎么写、押韵、倒字/协音 | **作词**的事；同一首歌的歌词从 `meta.upstream.lyrics` 读 |
-| 旋律的音高走向、音域设计 | `mc-melody`（L1） |
-| 字怎么安到音上（符割り/字余り） | **作词**的事——它是词的工序。本 skill 这一侧：`breath_points` 与 `phrasing` 按歌词的行与断句写（一行一个乐句，换气落在断句处）；没有歌词时按旋律的乐句写，词来了再对一遍 |
-| 人声 EQ 的具体频点、压缩参数 | `mc-mix-intent`（意图）／实操是混音的事 |
-| 人声和哪件乐器抢频段 | `mc-texture-layering` |
-| 合成人声音源（Vocaloid、Synthesizer V 的引擎参数） | 不做。本库只写演唱意图（§7 映射到各后端），不写引擎参数 |
+| How lyrics are written, rhyme, inversion / syllable coordination | **Lyric writing**; the lyrics for the same song are read from `meta.upstream.lyrics` |
+| Pitch contour and range design of the melody | `mc-melody` (L1) |
+| How words are fitted onto notes (note-to-syllable fitting, *fushi-wari* / extra-syllable fitting, *ji-amari*) | **Lyric writing**, since it is part of the lyric process. On this skill's side: `breath_points` and `phrasing` follow the lines and phrase breaks of the lyrics (one line per phrase, breaths fall at phrase breaks). Without lyrics, write them to the melody's phrases, and check again once the words arrive |
+| Concrete EQ frequencies and compression parameters for the vocal | `mc-mix-intent` (intent). Practical implementation is mixing |
+| Which instrument the vocal competes with for frequency range | `mc-texture-layering` |
+| Synthetic vocal sources (engine parameters of Vocaloid, Synthesizer V) | Not done. This library writes only performance intent (mapped to each backend in §7), not engine parameters |
 
 ---
 
-## 1. 动笔前必填
+## 1. Required before starting
 
-| 必填 | 问法 |
+| Required | Question to answer |
 |---|---|
-| **① 这是谁在唱** | 声音人设：性别、音区、质感、年代感。**不是"女声"这种程度** |
-| **② 每段的 delivery** | 至少分主歌/副歌/桥。用 §2 的语汇写，不是"有感情" |
-| **③ 力度起伏** | 逐段的相对强弱——**lint #15 查这个，全曲一个力度直接判不合格** |
-| **④ 副歌逐遍差异** | 第二遍、第三遍分别改了什么（lint #16） |
-| **⑤ 和声方案** | 用哪型（§5）、在哪几段、上还是下 |
+| **① Who is singing** | Voice persona: gender, register, texture, sense of era. **Not merely "female voice"** |
+| **② Delivery for each section** | At minimum split verse / chorus / bridge. Write it using the vocabulary in §2, not "emotional" |
+| **③ Dynamic contour** | Relative loudness section by section. **Lint #15 checks this; a single dynamic level across the whole song fails outright** |
+| **④ Chorus variation per repetition** | What changes in the second and third repetitions (lint #16) |
+| **⑤ Harmony plan** | Which type (§5), in which sections, above or below |
 
 ---
 
-## 2. 演唱指导的语汇
+## 2. Vocabulary of performance direction
 
-### 2.1 只有两条音乐上的判据
+### 2.1 Only two musical criteria
 
-> 1. **是否适合这首歌**
-> 2. **是否适合这个歌手（似合っているか）**
+> 1. **Does it suit this song**
+> 2. **Does it suit this singer (*niatte iru ka*, "does it fit")**
 
-就这两条。**技术好不好不是判据**——技术是手段。
-用在本库上，第 2 条变成"**是否适合这个声音人设**"。
+Just these two. **Technical quality is not a criterion**; technique is a means.
+In this library, the second criterion becomes "**does it suit this voice persona**".
 
-### 2.2 ★ 不要说"大声点"
+### 2.2 ★ Do not say "sing louder"
 
-这是整节最实用的一条：
+This is the most practical point in the whole section:
 
-> 宏大的编曲配上含混的人声时，**不要说"唱大声点"**——音量推子能解决音量。
-> 你真正想要的多半是"**更亮的声音**"，所以说"**请唱得亮一点**"更有效。
+> When a grand arrangement is paired with a muddy vocal, **do not say "sing louder"**. The volume fader can solve volume.
+> What you most likely want is a "**brighter sound**", so saying "**sing a little brighter**" is more effective.
 
-**形象化指令**同样有效：
-- "带着笑唱"
-- "嘴角上扬"
-- "往很远的地方唱"
+**Imagery-based instructions** work just as well:
+- "Sing with a smile"
+- "Corners of the mouth turned up"
+- "Sing toward a distant place"
 
-**为什么这条对本库特别重要**：这些正好是**文本后端能吃的词**。
-`sing brighter` / `smiling delivery` / `sung toward a far distance` 是有效提示词，
-而 `louder` 在生成模型那里几乎没有意义——它不控制音量。
+**Why this matters especially for this library**: these are exactly **words a text backend can consume**.
+`sing brighter` / `smiling delivery` / `sung toward a far distance` are effective prompts,
+whereas `louder` has almost no meaning for a generative model, because it does not control volume.
 
-### 2.3 ★ 辅音与元音分开想
+### 2.3 ★ Think of consonants and vowels separately
 
-这是演唱指导和后期编辑共同的基础知识：
+This is shared foundational knowledge for performance direction and post-production editing:
 
-- 一个音节 = **辅音 + 元音**（「か」= K + A，写成罗马字最清楚）
-- **要冲击力时，说"辅音用力"比说"大声"有效**
-- 编辑时要分清：这是**辅音的时机问题**还是**元音的长度问题**
-- 混音里**光是控制辅音的电平**就能改变人声的表情
+- One syllable = **consonant + vowel** (*ka* = K + A, which is clearest when written in romaji)
+- **When you want impact, "hit the consonant harder" works better than "sing louder"**
+- In editing, distinguish: is this a **timing problem with the consonant**, or a **length problem with the vowel**?
+- In mixing, **controlling the level of the consonant alone** can change the expression of a vocal
 
-### 2.4 "S" 这个魔法辅音
+### 2.4 The "S" as a magic consonant
 
-> **S ≈ 用嗓子发出的白噪声——它本质上就是噪声。**
+> **S ≈ white noise produced by the voice: it is essentially noise.**
 
-推论（都很实用）：
-- **可以在 S 的中间剪接，听不出接缝**
-- **它的长度可以自由伸缩而不违和**
-- 从别的 take 移植一个 S 过来基本上无缝
+Corollaries (all practical):
+- **You can splice in the middle of an S, and the seam is inaudible**
+- **Its length can be stretched or shortened freely without sounding wrong**
+- Transplanting an S from another take is essentially seamless
 
-> **★ 拍点活在元音上，不在辅音上。**
-> 「さ」(= S + A) 唱在第 2 拍时，S 实际发生在第 1 拍的尾巴上——
-> **和拍子对齐的是元音 A。**
+> **★ The beat lives in the vowel, not the consonant.**
+> When *sa* (= S + A) is sung on beat 2, the S actually happens at the tail of beat 1.
+> **What aligns with the beat is the vowel A.**
 
-**这条有两个用处**：
-1. 编辑 AI 生成的人声时，**"这里有个 S"= "这里是好剪接点"**
-2. 判断人声"抢拍/拖拍"时，**要看元音的位置**，不是音节的起点——
-   否则你会把所有以 S、SH、TS 开头的字都误判成抢拍
+**This has two uses**:
+1. When editing AI-generated vocals, **"there is an S here" = "this is a good splice point"**
+2. When judging whether a vocal is "rushing / dragging" against the beat, **look at where the vowel falls, not the start of the syllable**.
+   Otherwise you will misjudge every word beginning with S, SH or TS as rushing.
 
 ---
 
-## 3. 制作链条的类比
+## 3. Analogy with the production chain
 
-一个有用的对照（电影 → 流行音乐）：
+A useful comparison (film → popular music):
 
-| 电影 | 音乐 |
+| Film | Music |
 |---|---|
-| 剧本 | 词曲 |
-| 布景与服装 | **编曲** |
-| 演员 | **歌手** |
-| 发型化妆 | **现场演唱指导** |
-| 摄影 | 录音 |
-| 剪辑 | treatment（人声修整） |
-| MA | 混音 |
+| Script | Lyrics and melody |
+| Sets and costumes | **Arrangement** |
+| Actor | **Singer** |
+| Hair and makeup | **Live performance direction** |
+| Cinematography | Recording |
+| Editing | Treatment (vocal correction) |
+| MA | Mixing |
 
-"现场指导 + 录音 + treatment"三者合起来才是**广义的 vocal direction**。
+Live direction + recording + treatment together make up **vocal direction in the broad sense**.
 
-**对本库的意义**：用生成模型时，"录音"这一环消失了，
-但**"发型化妆"（指导）和"剪辑"（修整）两环都还在，而且更重要**——
-因为你唯一能控制模型的地方就是指导，唯一能补救的地方就是修整。
-
----
-
-## 4. ★ 音准哲学：本 skill 最反直觉的一节
-
-### 4.1 两条实测经验
-
-> - **唱低（flat）的人声，推子推到天上也"出不来"**
-> - **稍微偏高（sharp）的人声"抜け"（穿透力）更好**——好歌手会无意识地唱得略高
-
-第一条解释了一个常见误判：**人声埋在伴奏里，先查音准，再查音量**。
-
-### 4.2 不要全修
-
-> "音准对了所以唱得好"是不完整的；反过来说才对：**唱得好的人大体上是准的。**
-
-所以：
-- 伴奏稀疏的地方，偏低或偏高的瞬间**本身就是"韵味"**
-- 想强调的地方**偏高是可以的**——不是事后拉上去，而是**刻意保留**
-  那些歌手"在情绪里忍不住唱高了"的地方
-- > **不是全部对齐，而是刻意留下一部分不动——那才是自然的修音。**
-
-**这条是本库对抗 AI 味的核心人声规则。**
-生成模型输出的人声天然全准，你要做的不是"修得更准"，而是**指定哪里允许不准**。
-
-**写法**：在 ARR-SPEC 的 `vocal.pitch_policy` 里写"哪些位置保留偏移"，
-而不是写"修准"。
-
-**失效条件**：编曲极密、和声堆叠很厚的段落，音准偏差会变成浑浊而不是韵味——
-那些地方该修。**判据是伴奏密度，不是段落名称。**
-
-### 4.3 treatment 的三步顺序
-
-1. **清理多个 take 之间的接点**
-2. **对齐节奏**
-3. **修音准**
-
-> **为什么是这个顺序**：先动节奏（挪时间）再接的话，接点得重做一遍。
+**What this means for this library**: when using a generative model, the "recording" stage disappears,
+but **the "hair and makeup" (direction) and "editing" (treatment) stages both remain, and matter more**,
+because direction is the only place where you can control the model, and treatment is the only place where you can repair it.
 
 ---
 
-## 5. 和声四型
+## 4. ★ Pitch philosophy: the most counterintuitive section of this skill
 
-**每一型都由三件事定义：目的 / delivery / 怎么让它不抢主唱。**
-注意 delivery 是本 skill 的部分，EQ 是 `mc-mix-intent` 的部分——这里只给思路。
+### 4.1 Two empirical observations
 
-### 型 1：歌い上げ上ハモ（全声上方和声，通常三度）
+> - **A flat vocal will not "come through" no matter how high the fader is pushed**
+> - **A vocal that is slightly sharp has better penetration (*nuke*)**, and good singers sing slightly high without thinking about it
 
-- **目的**：保持主旋律不变，让整体**更亮、更辉煌**
-- **内在矛盾**：它比主唱高，天然突出，却不能压过主唱
-- **★ 解法**：**不要靠"唱轻一点"解决**——唱轻就失去辉煌感。
-  **保持全声的唱法，用 EQ 解决**（思路：让和声从主唱的频段里"逃开"——
-  大幅削低频，并挖掉中频的"芯"，必要时反而强调高频）
+The first explains a common misdiagnosis: **when a vocal is buried in the accompaniment, check pitch first, then check volume.**
 
-### 型 2：贴着主唱的上方和声
+### 4.2 Do not correct everything
 
-- **目的**：不是辉煌，而是**制造空气感、把和弦感演出来**
-- **★ 关键在改变唱法**：不是张开的声音，而是**轻的、带气声的干净唱法**
-- **注意**：音量会下降，但**不要靠靠近话筒来补**（近讲效应会抬低频），用增益控制
+> "The singing is good because the pitch is correct" is incomplete. The correct statement is the reverse: **people who sing well are, broadly speaking, in tune.**
 
-### 型 3：内敛的平行下方和声
+So:
+- Where the accompaniment is sparse, the moments of being slightly flat or sharp **are themselves "flavor"**
+- Where you want emphasis, **being sharp is acceptable**. It is not dragged up afterwards; instead, you **deliberately keep** the places where singers "cannot help singing high in the emotion"
+- > **Not everything is aligned; deliberately leaving some parts untouched is what natural tuning looks like.**
 
-- **形象**：**"主唱投下的影子"**。原书配的插画就是歌手和自己的影子：唱法、咬字都尽量贴合主唱，影子本身没有独立的表情 (p0186)
-- **降低存在感**：削低频。原书给的参考 EQ（6 段均衡）：低切约 110 Hz，再叠加 123 Hz 削 −10 dB、247 Hz 削 −4.9 dB、621 Hz 削 −4.2 dB，是低频到中低频的整体削减，不是单点陷波 (p0186)
+**This is this library's core vocal rule against the AI sound.**
+Generative models output vocals that are naturally all in tune. What you should do is not "tune it even more accurately", but **specify where inaccuracy is allowed**.
 
-### 型 4：合いの手（句间的应答短句，2–3 声齐唱）
+**How to write it**: in ARR-SPEC's `vocal.pitch_policy`, state "which positions keep their deviation",
+not "correct to pitch".
 
-- **定位**：和主唱是**"不同的物件"**
-- **做法**：**先伸手去拿 EQ** 来改变质感（收音机音色也行，光削低频就能换气氛）
-- **提高多声部的统一度**：推子＋压缩对齐电平 → **给这一组挂同一个空间效果** →
-  甚至整组共用一个调制效果（链：EQ → 压缩 → 合唱 → 延迟）
+**Failure condition**: in sections where the arrangement is very dense and the harmonies are thickly stacked, pitch deviation turns into muddiness rather than flavor.
+Those places should be corrected. **The criterion is the density of the accompaniment, not the name of the section.**
 
-### 混响也是型号的一部分
+### 4.3 The three-step order of treatment
 
-- 型 1、型 2 可以用**高频成分丰富的混响/延迟**来补辉煌感或空气感，这是把"逃开主唱频段"的思路从 EQ 延伸到空间效果 (p0186)
-- 型 3 **减少直达声、增加混响成分**可以降低存在感，干湿比往湿走，"这个人真的在这里唱"的实体感会跟着变淡 (p0186)
-- 型 4 的空间处理目标是齐整度：给整组配同一个空间效果统一质感，见本节型 4。混响的声像怎么和主唱声像一起摆，见 §6.2
+1. **Clean up the splice points between multiple takes**
+2. **Align the rhythm**
+3. **Correct the pitch**
+
+> **Why this order**: if you move the timing first and splice afterwards, the splice points have to be redone.
 
 ---
 
-## 6. Double 与声像
+## 5. The four harmony types
 
-### 6.1 Double 主唱：一个明确的权衡
+**Each type is defined by three things: purpose / delivery / how to keep it from competing with the lead.**
+Note that delivery belongs to this skill, while EQ belongs to `mc-mix-intent`; here only the approach is given.
 
-> - **给咬字极好的主唱做 double 会稀释字的感觉**
-> - 但 double 特有的立体声扎实感带来**机器复制做不出的温暖与厚度**
+### Type 1: *Utaiage kami-hamo* (sung-up upper harmony, usually a third above)
 
-★ 注意"机器复制做不出"这句——它同时说明了为什么
-**生成模型直接输出的"双轨"听起来是假的**：那是复制，不是第二次演唱。
-要真 double 就得让后端**二次生成**，而不是复制一轨再微调。
+- **Purpose**: keep the main melody unchanged while making the overall sound **brighter and more brilliant**
+- **Inherent tension**: it sits above the lead, so it naturally stands out, yet it must not overpower the lead
+- **★ Solution**: **do not solve this by "singing softer"**, because singing softer loses the brilliance.
+  **Keep the full-voiced singing style and solve it with EQ** (approach: let the harmony "escape" the lead's frequency range,
+  by cutting the lows heavily, hollowing out the core of the midrange, and where necessary boosting the highs instead)
 
-**操作要点**：
-- **主唱 take 必须先选定**，double 是听着主唱贴着唱的
-- 但选得慢会让歌手干等——**趁歌手还记得咬字立刻录 double 更好**（时间 vs 质量的权衡）
-- 咬字复杂的歌：**几句几句分段认真录**
-- **检查手法**：把两轨硬左右，或**把主唱静音**，严格检查 double 有没有贴住
-- **指导原则**：**别让主唱的咬字被抹掉**——让歌手用**强调咬字的唱法**录 double，正好
+### Type 2: Upper harmony close to the lead
 
-### 6.2 声像策略
+- **Purpose**: not brilliance, but **creating a sense of air and conveying the chord feeling**
+- **★ The key is changing the singing style**: not an open voice, but a **light, breathy, clean style**
+- **Note**: the volume will drop, but **do not compensate by moving closer to the microphone** (the proximity effect boosts the lows); use gain control instead
 
-| 形态 | 做法 |
+### Type 3: Subdued parallel lower harmony
+
+- **Image**: **"the shadow the lead casts"**. The illustration in the original book shows a singer and their own shadow: the singing style and diction stay as close to the lead as possible, and the shadow itself has no independent expression (p0186)
+- **Lower the presence**: cut the lows. The reference EQ in the original book (a six-band equalizer): a low cut at about 110 Hz, plus a −10 dB cut at 123 Hz, −4.9 dB at 247 Hz and −4.2 dB at 621 Hz. This is an overall reduction from low to low-mid, not a single notch (p0186)
+
+### Type 4: *Ai no te* (short responsive phrases between lines, sung by 2–3 voices in unison)
+
+- **Positioning**: relative to the lead, these are **"different objects"**
+- **Method**: **reach for EQ first** to change the texture (a radio-like timbre also works; cutting the lows alone can change the atmosphere)
+- **Increase unity within the group**: align levels with fader and compression → **apply one shared spatial effect to the group** →
+  you may even run the whole group through one shared modulation effect (chain: EQ → compression → chorus → delay)
+
+### Reverb is also part of the type
+
+- Types 1 and 2 can use **reverb or delay rich in high-frequency content** to supply brilliance or air. This extends the idea of "escaping the lead's frequency range" from EQ into spatial effects (p0186)
+- Type 3 can **reduce direct sound and increase reverberant content** to lower presence. As the wet/dry ratio shifts toward wet, the sense of a real person singing *here* fades accordingly (p0186)
+- Type 4's spatial treatment aims at uniformity: give the whole group the same spatial effect to unify its texture (see Type 4 above). For how the reverb's stereo placement sits alongside the lead's, see §6.2
+
+---
+
+## 6. Doubles and stereo placement
+
+### 6.1 Doubling the lead: a clear trade-off
+
+> - **Doubling a lead with excellent diction dilutes the sense of the words**
+> - But the stereo solidity unique to doubles brings **warmth and thickness that machine copying cannot produce**
+
+★ Note the phrase "machine copying cannot produce". It also explains why
+**a "double track" output directly by a generative model sounds fake**: it is a copy, not a second performance.
+To get a real double, the backend must **generate it a second time**, rather than copying one track and adjusting it.
+
+**Operational points**:
+- **The lead take must be selected first**, because the double is sung while listening to and hugging the lead
+- But choosing slowly makes the singer wait around. **It is better to record the double immediately, while the singer still remembers the diction** (a trade-off between time and quality)
+- For songs with complex diction: **record them phrase by phrase, carefully**
+- **Check method**: hard-pan the two tracks left and right, or **mute the lead**, and strictly check whether the double is hugging the lead
+- **Guiding principle**: **do not let the lead's diction be erased**. Have the singer record the double in a **style that emphasizes diction**, which is precisely the point
+
+### 6.2 Stereo placement strategy
+
+| Form | Approach |
 |---|---|
-| **Single** | 没有特别理由就放**正中**；用音量、混响、延迟制造与主唱的距离和纵深；极高/极低音区的和声考虑**换一支和主唱不同的话筒** |
-| **Double** | 可左右分开；**甩得越极端越突出，小音量下也被强调**——想强调的甩远。上下和声都有 double 时，**只甩其中一对**，两对都甩元素太多。若编曲里只有和声是宽的会显怪（故意利用可以），**混响的声像要一起考虑** |
-| **Triple** | 理解成"**single + double**"：single 负责纵深，double 负责宽度；**把 single 的音量拉下来**更干净 |
+| **Single** | Without a specific reason, place it **dead center**. Create distance and depth from the lead with volume, reverb and delay. For harmonies in the extreme high or low registers, **use a different microphone from the lead's** |
+| **Double** | Can be panned apart left and right. **The more extreme the pan, the more it stands out, and it is emphasized even at low volume**, so pan far the parts you want emphasized. When both the upper and lower harmonies have doubles, **pan only one pair**; panning both pairs to extremes adds too many elements. If only the harmonies are wide in the arrangement, it sounds odd (deliberate use is fine), so **consider the reverb's stereo placement together** |
+| **Triple** | Think of it as "**single + double**": the single handles depth, the double handles width. **Pulling the single's volume down** gives a cleaner result |
 
-### 6.3 和声录音的指导
+### 6.3 Guidance for recording harmonies
 
-主唱唱主旋律很好、唱和声却意外地难——**因为和声和主旋律微妙地相似，很难记住**。
+Singers who sing the main melody well often find harmonies surprisingly hard, **because harmony lines are subtly similar to the melody and are hard to memorize**.
 
-**导唱轨（ガイド）是最常用的解法**：
-- 新建一轨，用**起音弱的柔和音色**弹出和声线
-- 技巧：**故意高八度弹**更好听清；1 小节的线做成 **2 小节的循环**；可以**只甩到耳机一侧**
-- 歌手熟了之后**逐渐降低导唱音量**，再录正式的
-- **最有效的其实是唱给他听**——乐器音色和人声是完全不同的东西，
-  要一个不弹乐器的主唱"在脑子里把乐器音换成人声"极其困难，
-  尤其在歌词音节安排复杂的时候
+**The guide track (*gaido*) is the most common solution**:
+- Create a new track and play the harmony line on a **soft timbre with a weak attack**
+- Tips: **deliberately play an octave higher** to make it easier to hear clearly; make a 1-bar line into a **2-bar loop**; you may **pan it only to one side of the headphones**
+- Once the singer is familiar, **gradually lower the guide volume**, then record the final take
+- **The most effective approach is actually singing it to them**. Instrument timbre and the voice are completely different things,
+  and it is extremely hard for a lead singer who does not play an instrument to "mentally swap the instrument sound for a voice in their head",
+  especially when the lyric syllables are arranged in complicated ways
 
-> **对本库的映射**：用生成后端时，"导唱轨"对应的是**给模型一条参考旋律或参考音频**。
-> 同一个道理：**给模型听人声比给它看乐器 MIDI 更有效**。
+> **Mapping to this library**: when using generative backends, the "guide track" corresponds to **giving the model a reference melody or reference audio**.
+> The same principle applies: **letting the model hear a voice works better than showing it an instrument MIDI**.
 
 ---
 
-## 7. 映射到各后端
+## 7. Mapping to each backend
 
-| 后端 | 能吃什么 | 写法 |
+| Backend | What it can take | How to write it |
 |---|---|---|
-| **Suno / MiniMax** | 自然语言的 delivery 描述 | 用 §2.2 的词汇：`brighter`、`breathy`、`harder consonants`、`smiling`。**不要写 `louder`** |
-| **YuE2** | 同上，且可逐段不同 | 逐段写 delivery，正好对上 §1 的必填② |
-| **MIDI / DAW（真人录）** | 完整的 §2–§6 | 直接当 direction sheet 用 |
+| **Suno / MiniMax** | Natural-language delivery descriptions | Use the vocabulary in §2.2: `brighter`, `breathy`, `harder consonants`, `smiling`. **Do not write `louder`** |
+| **YuE2** | Same as above, and can vary by section | Write delivery section by section, which matches the required item ② in §1 |
+| **MIDI / DAW (recorded by a real singer)** | The full §2–§6 | Use directly as the direction sheet |
 
-**所有后端共通的两条**：
-1. **力度必须逐段不同**（lint #15）
-2. **副歌每一遍必须有变化**（lint #16）——加和声、改 delivery、加 double，三选一以上
+**Two rules common to all backends**:
+1. **Dynamics must differ from section to section** (lint #15)
+2. **Every repetition of the chorus must change** (lint #16). Choose at least one or more of: add harmony, change delivery, add a double
 
-**后端能力差异的处理**：若某后端根本不接受 delivery 描述（`honors: none`），
-算照做率时应**排除**这些项，而不是给 0 分——详见 L4 的 backend profile 规则。
+**Handling differences in backend capability**: if a backend does not accept delivery descriptions at all (`honors: none`),
+those items should be **excluded** when calculating the compliance rate, rather than given a score of 0. See the backend profile rules in L4 for details.
 
 ---
 
-## 8. 与 ARR-SPEC 的字段对应
+## 8. Mapping to ARR-SPEC fields
 
-| 字段 | 本 skill 的哪一节 |
+| Field | Section of this skill |
 |---|---|
-| `vocal.persona` | §1① |
-| `vocal.delivery`（可逐段） | §2 |
-| `vocal.dynamics_by_section` | §1③，**lint #15** |
-| `vocal.chorus_variation` | §1④，**lint #16** |
-| `vocal.pitch_policy` | §4.2（写**哪里保留偏移**，不是"修准"） |
-| `vocal.stacking` | §5 四型 ＋ §6 double（含 type / 段落 / delivery / 声像） |
+| `vocal.persona` | §1 ① |
+| `vocal.delivery` (can vary by section) | §2 |
+| `vocal.dynamics_by_section` | §1 ③, **lint #15** |
+| `vocal.chorus_variation` | §1 ④, **lint #16** |
+| `vocal.pitch_policy` | §4.2 (write **where deviation is kept**, not "correct to pitch") |
+| `vocal.stacking` | §5 four types and §6 doubles (including type / section / delivery / stereo placement) |
 
 ---
 
-## 9. 写完后必过
+## 9. Checklist to pass after writing
 
-- [ ] 声音人设具体到**能想象出是谁**，不是"女声"
-- [ ] 每段有自己的 **delivery**，用的是"亮/气声/辅音用力"这类可执行的词
-- [ ] **没有写"大声点"**
-- [ ] 力度**逐段不同**（lint #15）
-- [ ] 副歌**每一遍都改了东西**，且说得出改的是什么（lint #16）
-- [ ] `pitch_policy` 写的是**哪里允许不准**，不是"修准"
-- [ ] 和声选了型号，且该型号的 **delivery 和"怎么不抢主唱"都写了**
-- [ ] 型 1 的和声**没有靠"唱轻"来避让**
-- [ ] 做 double 的话，要求的是**二次演唱**，不是复制一轨
-- [ ] 上下和声都有 double 时，**只甩了一对**到极端声像
-- [ ] 判断人声抢拍/拖拍时，看的是**元音**的位置
+- [ ] The voice persona is specific enough that you can imagine **who it is**, not just "female voice"
+- [ ] Each section has its own **delivery**, using actionable terms such as "bright / breathy / consonants hit hard"
+- [ ] **"Sing louder" is not written anywhere**
+- [ ] Dynamics **differ from section to section** (lint #15)
+- [ ] The chorus **changes something in every repetition**, and you can state what changed (lint #16)
+- [ ] `pitch_policy` states **where inaccuracy is allowed**, not "correct to pitch"
+- [ ] A harmony type is chosen, and its **delivery and "how it avoids competing with the lead" are both written**
+- [ ] Type 1 harmony does **not** avoid competing by "singing softer"
+- [ ] If doubling, the requirement is a **second performance**, not a copied track
+- [ ] When both upper and lower harmonies have doubles, **only one pair** is panned to extremes
+- [ ] When judging whether a vocal is rushing or dragging, the position of the **vowel** is what is checked
 
 ---
 
-## 附：来源
+## Appendix: Sources
 
-- **高山博《ポピュラー音楽作曲のための旋律法 増補版》＋《プロの曲作りが分かる本》**——§2、§4、§5、§6 全部主干。
-- §5 型 3 的 EQ 参考例、"混响也是型号的一部分"三条，出自《プロの曲作りが分かる本》(p0186)。
-- **词曲对齐部分（符割り／字余り／イントネーション）不在本 skill**，
-  是**作词**的事，因为它是词的工序。
-- 人声混音链的具体参数（压缩比、EQ 频点、pop noise 消除的 309.6 Hz 实例等）
-  整理在 [reference.md](reference.md)，实操是混音的事。
-- 自查 #15／#16 的判法见 `mc-workflow` §3.0。
+- **Takayama Hiroshi, *Melody Writing for Popular Music Composition*** (*Popular Music Composition Melody Methods*, expanded edition) together with ***A Book That Explains How Professionals Write Songs*** (*Puro no Kyokusaku ga Wakaru Hon*). These form the backbone of §2, §4, §5 and §6.
+- The EQ reference example for Type 3 in §5, and the three points on "reverb is also part of the type", come from ***A Book That Explains How Professionals Write Songs*** (p0186).
+- **The lyric-to-melody alignment part (note-to-syllable fitting, extra-syllable fitting and intonation) is not covered in this skill.**
+  It belongs to **lyric writing**, since it is part of the lyric process.
+- The concrete parameters of the vocal mixing chain (compression ratios, EQ frequencies, the 309.6 Hz example for removing pop noise, etc.)
+  are compiled in [reference.md](reference.md). Practical implementation is mixing.
+- The method for self-checks #15 / #16 is described in `mc-workflow` §3.0.

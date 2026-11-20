@@ -1,275 +1,274 @@
 ---
 name: mc-case-studies
-description: The corpus layer (语料层) - how real recordings are made to testify for or against the textbook rules. Covers the reverse ARR-SPEC as the unit of the corpus, the corroboration table that turns rules times corpus into hit rates and tiers them as strong rule / tendency / not a rule, the two honesty constraints that keep the table from being circular, why naturally sampled corpora beat curated ones, what this corpus can and cannot measure, and how to look up a worked example. Use when checking whether a rule actually holds in real music, when adding a rule, when a rule and the data disagree, when annotating a track, or when you need a real-world example of a technique. 语料、佐证、命中率、实测 ARR-SPEC、反向规格、案例拆解、规则验证。
+description: The corpus layer - how real recordings are made to testify for or against the textbook rules. Covers the reverse ARR-SPEC as the unit of the corpus, the corroboration table that turns rules times corpus into hit rates and tiers them as strong rule / tendency / not a rule, the two honesty constraints that keep the table from being circular, why naturally sampled corpora beat curated ones, what this corpus can and cannot measure, and how to look up a worked example. Use when checking whether a rule actually holds in real music, when adding a rule, when a rule and the data disagree, when annotating a track, or when you need a real-world example of a technique. Keywords - corpus, corroboration, hit rate, measured ARR-SPEC, reverse spec, case breakdown, rule validation.
 ---
 
-# 语料层（Case Studies & Corroboration）
+# Corpus Layer (Case Studies & Corroboration)
 
-**这一层回答一个问题：**
+**This layer answers one question:**
 
-> **教材说的，真实作品到底做不做？**
+> **The textbooks say so, but do real works actually do it?**
 
-本库的规则不是抄来的，是**抄来之后拿 62 首真实多轨验过的**。
-验过的结果分三档，**只有强规则才进 20 条自查表**。
+The rules in this library were not simply copied. **They were copied, then checked against 62 real multitracks.**
+The results of that check fall into three tiers, and **only strong rules go into the 20-item self-check table**.
 
-## 按任务读哪几节
+## Which sections to read for which task
 
-| 任务 | 读 |
+| Task | Read |
 |---|---|
-| 想知道某条规则靠不靠谱 | §4 佐证表 |
-| 要加一条新规则 | §4.3 流程 |
-| 规则和数据打架了 | ★ §5 |
-| 要找一个真实例子 | §6 |
-| 要标注一首曲子 | §3.3 |
-| 想知道这套语料能测什么 | §2.2 |
+| Want to know how reliable a rule is | §4 corroboration table |
+| Adding a new rule | §4.3 process |
+| A rule and the data disagree | ★ §5 |
+| Looking for a real example | §6 |
+| Annotating a track | §3.3 |
+| Want to know what this corpus can measure | §2.2 |
 
-## 边界
+## Boundaries
 
-| 不归这里 | 归哪 |
+| Not handled here | Goes to |
 |---|---|
-| 规则本身的内容 | L1／L2 各 skill |
-| 生成结果的验收 | `mc-ai-tell-audit` |
-| 规格写完的检查 | `mc-workflow` §3.0 |
-| 某个风格的语汇 | `mc-style-*`（L3） |
-| 具体曲目的逐段拆解 | [reference.md](reference.md) |
+| The content of the rules themselves | The L1/L2 skills |
+| Acceptance of generated output | `mc-ai-tell-audit` |
+| Checking a finished spec | `mc-workflow` §3.0 |
+| The vocabulary of a particular style | `mc-style-*` (L3) |
+| Section-by-section breakdown of specific pieces | [reference.md](reference.md) |
 
 ---
 
-## 1. 语料的三条原则
+## 1. Three principles of the corpus
 
-### 1.1 ★ 只存结构与参数，不存作品
+### 1.1 ★ Store only structure and parameters, not works
 
-> **语料条目里没有音频、没有谱面、没有歌词——只有测出来的数值。**
+> **A corpus entry contains no audio, no score, no lyrics, only measured numeric values.**
 
-这既是版权上的必需，也是方法上的正确：
-**我们要的是"真实作品的参数分布"，不是作品本身。**
+This is both a copyright necessity and methodologically correct:
+**what we want is "the parameter distribution of real works", not the works themselves.**
 
-### 1.2 ★ 自然抽样胜过策展
+### 1.2 ★ Natural sampling beats curation
 
-**语料不精选，用自然抽样。**
+**The corpus is not hand-picked; it uses natural sampling.**
 
-> **策展会把语料偏向"规则成立"的那一侧**——
-> 你挑的是你认为的好例子，而你认为的好例子就是符合你已有理论的例子。
+> **Curation skews the corpus toward the side where "the rule holds"**:
+> what you pick are what you consider good examples, and what you consider good examples are the ones that fit your existing theory.
 >
-> **自然抽样自动供给反例。**
+> **Natural sampling supplies counterexamples automatically.**
 
-所以最终用的是 **Cambridge-MT 的 60+ 首自然样本**，不筛选。
-这也顺带取消了另找 MIDI/分轨语料的必要（它原本的唯一用途是给分轨工具做标定，
-而真分轨直接消除了这个需求）。
+So what is finally used is **the 60+ naturally sampled songs of Cambridge-MT**, with no filtering.
+This also removes the need to look for a separate MIDI/stem corpus (whose only original use was calibrating the stem-separation tool,
+and real stems eliminate that need directly).
 
-### 1.3 语料的单元是"反向 ARR-SPEC"
+### 1.3 The unit of the corpus is the "reverse ARR-SPEC"
 
-**不是音频文件，是从音频反推测出来的一份 ARR-SPEC。**
-选这个单元是因为它和我们的产出**用同一套字段**：结构、编制进退场、能量曲线都记在同样的位置，
-所以佐证表能直接拿语料条目和规则判据对齐，不用先做一层格式转换。
-字段长什么样、哪些标记是诚实留白而非漏填，见 §2.1。
+**Not an audio file, but an ARR-SPEC measured by working backwards from the audio.**
+This unit was chosen because it **uses the same fields as our output**: structure, lineup entries and exits, and the energy curve are all recorded in the same places,
+so the corroboration table can line corpus entries up with rule criteria directly, without first converting formats.
+What the fields look like, and which markers are honest blanks rather than omissions, are covered in §2.1.
 
 ---
 
-## 2. 反向 ARR-SPEC
+## 2. The reverse ARR-SPEC
 
-### 2.1 长什么样
+### 2.1 What it looks like
 
-本库的实测语料是 **63 条**（Cambridge-MT 多轨 60 首 ＋ 3 首华语流行成品）。每条头部就写明了性质：
+The library's measured corpus is **63 entries** (60 Cambridge-MT multitrack songs + 3 finished Chinese-language pop songs). Each one states its nature in its header:
 
 ```yaml
-# 实测 ARR-SPEC（语料条目）—— 从音频自动反推生成
-# ★ 只存结构与参数，不存谱面与歌词。intent / hooks 等 TODO 项需人工填。
+# Measured ARR-SPEC (corpus entry) — generated automatically by working backwards from audio
+# ★ Stores only structure and parameters, not scores or lyrics. TODO items such as intent / hooks need to be filled in by a person.
 ```
 
-★ **注意那些 `# TODO` 和 `# 估算，非实测` 的注释**——
-它们是**诚实标注**，不是没做完。
-`intent.one_thing` 这类东西**机器测不出来**，硬填就是造假。
+★ **Note the `# TODO` and `# estimate, not measured` comments**:
+they are **honest labelling**, not unfinished work.
+Things like `intent.one_thing` **cannot be measured by a machine**, and filling them in anyway would be fabrication.
 
-### 2.2 ★ 这套语料能测什么、不能测什么
+### 2.2 ★ What this corpus can and cannot measure
 
-**Cambridge-MT 是未混的原始多轨，不是母带成品。** 所以：
+**Cambridge-MT is raw, unmixed multitrack, not finished masters.** So:
 
-| 能测 | 不能测 |
+| Can measure | Cannot measure |
 |---|---|
-| 段落边界、小节数 | **DR / 响度**（未混） |
-| 拍速 | **立体声宽度**（未混） |
-| 能量曲线、减法事件 | **频谱质心的绝对值**（未混 + 无母带） |
-| 编制进退场（有真分轨！） | 制作质感 |
-| onset 相对网格偏移 | |
-| 和弦（chroma 匹配） | |
+| Section boundaries, bar counts | **DR / loudness** (unmixed) |
+| Tempo | **Stereo width** (unmixed) |
+| Energy curve, subtraction events | **Absolute spectral centroid** (unmixed + unmastered) |
+| Lineup entries and exits (real stems!) | Production feel |
+| Onset offset relative to the grid | |
+| Chords (chroma matching) | |
 
-★ **测不了的规则要标出来，不许硬跑。**
-规则表里这类规则标 `evidence: unusable_here`，
-统计时**跳过而不是给一个假数字**。
+★ **Rules that cannot be measured must be flagged, not run regardless.**
+In the rule table, such rules are marked `evidence: unusable_here`,
+and the statistics **skip them rather than produce a fake number**.
 
-**本库的语料是多轨分轨，不含成品混音，所以这类规则目前没有数字。**
+**This library's corpus is multitrack stems and contains no finished mixes, so these rules currently have no numbers.**
 
 ---
 
-## 3. 真值与标注
+## 3. Ground truth and annotation
 
-### 3.1 为什么需要人工真值
+### 3.1 Why human ground truth is needed
 
-算法测出来的段落边界**本身可信度存疑**（规则表里标 `no_truth`）。
-没有一份独立的真值，就没法判断一个异常的命中率到底是规则不成立，还是算法本身测错了——
-§5.2 那次"硬编码阈值把命中率压到 16%"就是靠人工真值才翻案的实例。
-所以做了一批人工标注当真值，校准结果见 §3.2。
+The section boundaries measured by the algorithm are **themselves of doubtful reliability** (marked `no_truth` in the rule table).
+Without an independent ground truth, there is no way to tell whether an anomalous hit rate means the rule fails or the algorithm itself measured wrongly.
+The case in §5.2 where "a hard-coded threshold pushed the hit rate down to 16%" was overturned only thanks to human ground truth.
+So a batch of human annotations was made to serve as ground truth; calibration results are in §3.2.
 
-### 3.2 ★ 一个被验证过的担心
+### 3.2 ★ A worry that was put to the test
 
-用户担心"我不是专家，标的边界不准"。**实测结果推翻了这个担心：**
+The user worried that "I'm not an expert, so the boundaries I mark won't be accurate." **The measured result overturned that worry:**
 
-> **人工标记与算法的偏差中位数 = 0.0 秒。**
+> **The median deviation between human marks and the algorithm = 0.0 seconds.**
 
-★ **结论**：**段落边界是感知判断，不是品味判断。**
-非专家标出来的边界和算法一致——这说明这件事本来就不需要专家。
-（**能标的和不能标的要分清**：边界能标，"这段好不好听"不能标。）
+★ **Conclusion**: **Section boundaries are a perceptual judgement, not a judgement of taste.**
+Boundaries marked by a non-expert agree with the algorithm, which shows this never needed an expert.
+(**Separate what can be annotated from what cannot**: boundaries can be annotated; "does this section sound good" cannot.)
 
-**校准结果**：7 首人工标注，算法命中 **72%**，偏差中位 **0.0 s**。
+**Calibration result**: 7 songs annotated by hand, the algorithm hits **72%**, median deviation **0.0 s**.
 
-### 3.3 怎么标注
+### 3.3 How to annotate
 
-在任何能看波形、能播放的软件里，边听边记下**每个段落起点的秒数**；段落名可填可不填，主要用的是时间点。
-**只标听得出来的边界，拿不准就别标**——这是要当真值用的，标错比不标更糟。标 5 首就能用。
+In any software that shows the waveform and can play it, listen and note down **the time in seconds of each section start**; the section name is optional, and it is mainly the time points that get used.
+**Mark only the boundaries you can actually hear, and leave out any you are unsure of**, because these are to be used as ground truth, and a wrong mark is worse than none. Annotating 5 songs is enough to be usable.
 
-**本库已标注的 7 首**（Cambridge-MT）：
-AMContra_HeartPeripheral、APZX_CyberMower、DigitalHumans_Electrvm、
-Forkupines_Semantics、MERCMusic_Knockout、MR1103_Flags、SimonLyn_Copper
+**The 7 songs already annotated in this library** (Cambridge-MT):
+AMContra_HeartPeripheral, APZX_CyberMower, DigitalHumans_Electrvm,
+Forkupines_Semantics, MERCMusic_Knockout, MR1103_Flags, SimonLyn_Copper
 
 ---
 
-## 4. ★ 佐证表：规则 × 语料 → 命中率 → 分档
+## 4. ★ The corroboration table: rule × corpus → hit rate → tier
 
-### 4.1 两条诚实约束
+### 4.1 Two honesty constraints
 
-**违反了，佐证表就是自欺：**
+**If they are violated, the corroboration table is self-deception:**
 
-| # | 约束 |
+| # | Constraint |
 |---|---|
-| **1** | ★ **判据不能复用生成器的定义。** 反向 ARR-SPEC 里的 `subtraction_events` 是反推时按"较前段降 >1 dB"自动填的；拿它去验"真编曲有没有减法"是**循环论证**。所以涉及减法的判据一律**直接从 `energy_curve` 重算**，用一个有音乐意义的阈值（≥3 dB），**不读 `subtraction_events` 字段** |
-| **2** | ★ **语料测不了的规则要标出来，不许硬跑**（见 §2.2） |
+| **1** | ★ **The criterion must not reuse the generator's definition.** `subtraction_events` in the reverse ARR-SPEC is filled in automatically during reverse derivation as "drops by more than 1 dB from the previous section"; using it to test "do real arrangements have subtraction" is **circular reasoning**. So every criterion involving subtraction is **recomputed directly from `energy_curve`**, with a threshold that has musical meaning (≥3 dB), and **does not read the `subtraction_events` field** |
+| **2** | ★ **Rules the corpus cannot measure must be flagged, not run regardless** (see §2.2) |
 
-`evidence` 的三个取值：
+The three values of `evidence`:
 
-| 值 | 含义 |
+| Value | Meaning |
 |---|---|
-| `ok` | 本语料能验 |
-| `unusable_here` | 本语料性质不对，需要成品混音语料 |
-| `no_truth` | 缺真值（如段落边界），判据本身可信度存疑 |
+| `ok` | This corpus can verify it |
+| `unusable_here` | This corpus is of the wrong kind; a finished-mix corpus is needed |
+| `no_truth` | Lacks ground truth (e.g. section boundaries), so the criterion itself is of doubtful reliability |
 
-### 4.2 第一轮结果
+### 4.2 First-round results
 
-| 规则 | 命中 | 档 |
+| Rule | Hits | Tier |
 |---|---|---|
-| 能量曲线必须有下降 | **62/62** | **强规则** |
-| 编制必须有乐器中途进场 | **59/59** | **强规则** |
-| 至少一件乐器提前退场 | **59/59** | **强规则** |
-| 不该全声部严格对齐网格 | **62/62** | **强规则** |
-| 开场不该把乐器一次铺满 | **54/59** | **强规则** |
-| 全曲至少一处明显减法 | 36/62 = **70%** | **倾向** |
-| 最高潮前应有能量回落 | 全量 22% ／ 人工真值 5/7 | ★ **矛盾，只当手法** |
-| 编制在最高潮最密 | 25/59 = 42% | **挂起** |
+| The energy curve must have a drop | **62/62** | **Strong rule** |
+| The lineup must have instruments entering mid-song | **59/59** | **Strong rule** |
+| At least one instrument leaves early | **59/59** | **Strong rule** |
+| Not all parts should be strictly aligned to the grid | **62/62** | **Strong rule** |
+| The opening should not lay in all instruments at once | **54/59** | **Strong rule** |
+| At least one clear subtraction in the whole song | 36/62 = **70%** | **Tendency** |
+| There should be an energy fall before the climax | Full set 22% / human ground truth 5/7 | ★ **Contradictory, treat as a technique only** |
+| The lineup is densest at the climax | 25/59 = 42% | **Suspended** |
 
-### 4.3 分档决定什么
+### 4.3 What each tier decides
 
-| 档 | 在 skill 里怎么写 | 进 lint 吗 |
+| Tier | How it is written in a skill | Enters lint? |
 |---|---|---|
-| **强规则** | "必须" | ✅ 硬检查 |
-| **倾向** | "通常应该" | ❌，进"写完后必过"清单 |
-| **手法** | "可以这么做" | ❌，只在诊断路径里出现 |
-| **挂起** | **不写进 skill** | ❌，只在佐证表里列着，等更多数据 |
+| **Strong rule** | "must" | ✅ hard check |
+| **Tendency** | "should usually" | ❌, goes into the "must pass after writing" checklist |
+| **Technique** | "you can do it this way" | ❌, appears only in the diagnostic path |
+| **Suspended** | **not written into a skill** | ❌, only listed in the corroboration table, waiting for more data |
 
-### 4.4 加一条规则的流程
+### 4.4 Process for adding a rule
 
-1. 把规则写成一条：规则 + **可跑的判据** + `evidence`
-2. 检查是否违反 §4.1 的两条约束
-3. 拿判据逐首过一遍语料（自然抽样，§1.2），数命中
-4. 按命中率分档（§4.3）
-5. ★ **先把结果记下来**（哪批语料、什么判据、命中多少、分到哪档），然后才改规格或规则
+1. Write the rule as one item: rule + **a runnable criterion** + `evidence`
+2. Check whether it violates the two constraints in §4.1
+3. Run the criterion over the corpus song by song (natural sampling, §1.2) and count the hits
+4. Assign a tier by hit rate (§4.3)
+5. ★ **Record the result first** (which corpus, what criterion, how many hits, which tier), and only then change the spec or the rule
 
-> **规则集是有版本的**。
-> 改了规则集就要重跑，否则前后轮不可比。
+> **The rule set is versioned.**
+> If the rule set is changed it must be re-run, otherwise one round cannot be compared with the next.
 
 ---
 
-## 5. ★ 规则和数据打架时怎么办
+## 5. ★ What to do when a rule and the data disagree
 
-**这是本 skill 最重要的一节。**
+**This is the most important section of this skill.**
 
-### 5.1 先问：指标测的是不是那回事
+### 5.1 First ask: does the metric measure that thing
 
-**不要拿指标去推翻教科书。**
+**Do not use a metric to overturn a textbook.**
 
-**实例**：「最高潮前应有能量回落」在全量 62 首里只有 **22%**，
-但在 7 首人工标注真值里是 **5/7**。
+**Example**: "There should be an energy fall before the climax" is only **22%** across all 62 songs,
+but **5/7** in the 7 human-annotated ground-truth songs.
 
-**差距的来源**：算法用**能量峰值**定位"最高潮"，而**人耳不是**。
-所以 22% 那个数**测的不是这条规则**，测的是"能量峰值前有没有回落"。
+**Source of the gap**: the algorithm locates "the climax" by **energy peak**, whereas **the human ear does not**.
+So that 22% figure **is not measuring this rule**; it measures "is there a fall before the energy peak".
 
-★ **结论**：这条不降级为伪规则，也不升为强规则——**列为手法**。
+★ **Conclusion**: this one is neither demoted to a false rule nor promoted to a strong rule; **it is listed as a technique**.
 
-### 5.2 另一个实例：硬编码阈值造成的假低命中率
+### 5.2 Another example: a false low hit rate caused by a hard-coded threshold
 
-佐证统计时曾把判据**硬编码成"12 dB 动态范围"**，
-把规则 ARR-R-012 的命中率压到 **16%**，差点被报成"教科书是错的"。
+During corroboration the criterion was once **hard-coded as "12 dB dynamic range"**,
+which pushed the hit rate of rule ARR-R-012 down to **16%** and nearly got reported as "the textbook is wrong".
 
-**证伪方法**：拿 7 首人工标注真值测 → **5/7 = 71%**。
-**修法**：改成在归一化的 0–10 单位上打分，**不假装能还原 dB**。
+**How it was disproved**: test on the 7 human-annotated ground-truth songs → **5/7 = 71%**.
+**The fix**: score on the normalised 0–10 units instead, **without pretending to recover dB**.
 
-★ **通用教训**：**一个异常低的命中率，先怀疑判据，再怀疑规则。**
+★ **General lesson**: **an anomalously low hit rate: suspect the criterion first, then the rule.**
 
-### 5.3 佐证表与 lint 问的不是同一个问题
+### 5.3 The corroboration table and lint do not ask the same question
 
-| | 问什么 |
+| | What it asks |
 |---|---|
-| **佐证表** | **人类一般会不会这么做** |
-| **20 条自查** | **不这么做会不会听起来像 AI** |
+| **Corroboration table** | **Do humans generally do this** |
+| **The 20-item self-check** | **If you don't do this, will it sound like AI** |
 
-★ **所以 70% 的命中率不会机械地把一条 lint 检查降级。**
-一件事可能只有 70% 的人做，但**不做的那 30% 恰好都听起来像机器**。
+★ **So a 70% hit rate does not mechanically demote a lint check.**
+Something may be done by only 70% of people, but **the 30% who don't do it may all happen to sound like machines**.
 
 ---
 
-## 6. 找一个真实例子
+## 6. Finding a real example
 
-| 你要 | 去哪 |
+| You want | Go to |
 |---|---|
-| 某个技法的真实用例 | [reference.md](reference.md) 的逐段拆解 |
-| 某个和弦进行用在哪首歌 | `mc-progressions` [reference.md](../mc-progressions/reference.md) §7 名曲索引 |
-| 各风格的实测参数（中位数） | [reference.md](reference.md) §1.2 |
-| 配器/混合音色的谱例 | `mc-orchestration` [reference.md](../mc-orchestration/reference.md) §4 |
-| 对位的谱例 | `mc-counterpoint` [reference.md](../mc-counterpoint/reference.md) |
+| A real use case of a technique | The section-by-section breakdowns in [reference.md](reference.md) |
+| Which songs use a given chord progression | `mc-progressions` [reference.md](../mc-progressions/reference.md) §7 index of famous pieces |
+| Measured parameters by style (medians) | [reference.md](reference.md) §1.2 |
+| Score examples of orchestration / blended timbre | `mc-orchestration` [reference.md](../mc-orchestration/reference.md) §4 |
+| Score examples of counterpoint | `mc-counterpoint` [reference.md](../mc-counterpoint/reference.md) |
 
-### 6.1 逐段拆解的格式
+### 6.1 Format of a section-by-section breakdown
 
-**四者对齐**：时间码 / 段落 / 编制事件 / 和声。
-格式与反向 ARR-SPEC 一致，人工补上机器测不出的部分（intent、hooks、为什么）。
+**Four-way alignment**: timecode / section / lineup event / harmony.
+The format matches the reverse ARR-SPEC, with a person filling in the parts a machine cannot measure (intent, hooks, why it works).
 
 ---
 
-## 7. 与其他层的接口
+## 7. Interfaces with other layers
 
-| 方向 | 内容 |
+| Direction | Content |
 |---|---|
-| **→ L1/L2 各 skill** | 提供"实测：62/62，强规则"这样的证据等级标注 |
-| **→ 20 条自查** | 只有**强规则**才能进自查表 |
-| **→ `mc-ai-tell-audit`** | 零点校准（不相关成品得 63–66）就是在这套语料上测的 |
-| **← 成品混音语料**（★ **缺**） | §2.2 那些 `unusable_here` 的规则需要它 |
+| **→ L1/L2 skills** | Provides evidence-level labels such as "measured: 62/62, strong rule" |
+| **→ the 20-item self-check** | Only a **strong rule** may enter the self-check table |
+| **→ `mc-ai-tell-audit`** | The zero-point calibration (unrelated finished songs scoring 63–66) was measured on this corpus |
+| **← finished-mix corpus** (★ **missing**) | The `unusable_here` rules in §2.2 need it |
 
 ---
 
-## 8. 用完必过
+## 8. Must pass after use
 
-- [ ] 引用规则时**带了证据等级**（强规则/倾向/手法），不是光说"教材说"
-- [ ] 新加的判据**没有复用生成器的定义**（§4.1 约束 1）
-- [ ] 语料测不了的规则**标了 `unusable_here`**，没有硬跑出假数字
-- [ ] 命中率异常低时，**先怀疑了判据**（§5.2）
-- [ ] 没有拿佐证表的命中率**机械地**给 lint 检查降级（§5.3）
-- [ ] 改了规则集就**重跑，并把这一轮的结果记下来**
+- [ ] When citing a rule, **the evidence level was included** (strong rule / tendency / technique), not just "the textbook says so"
+- [ ] Newly added criteria **do not reuse the generator's definition** (§4.1 constraint 1)
+- [ ] Rules the corpus cannot measure **are marked `unusable_here`** and were not run to produce fake numbers
+- [ ] When a hit rate was anomalously low, **the criterion was suspected first** (§5.2)
+- [ ] The corroboration table's hit rates were not used to **mechanically** demote a lint check (§5.3)
+- [ ] If the rule set was changed, it was **re-run and this round's results were recorded**
 
 ---
 
-## 附：现状
+## Appendix: current state
 
-**本 skill 的数字建立在**：
-- **63 条**实测 ARR-SPEC（Cambridge-MT 多轨 60 首 ＋ 3 首华语流行成品）
-- 一份带版本号的规则集（第一轮佐证表见 §4.2）
-- **7 首**人工标注的段落边界真值（§3）
-- 拍速校准：**56 首真值**
-
+**The numbers in this skill rest on**:
+- **63** measured ARR-SPECs (60 Cambridge-MT multitrack songs + 3 finished Chinese-language pop songs)
+- A versioned rule set (first-round corroboration table in §4.2)
+- Ground truth for the section boundaries of **7** human-annotated songs (§3)
+- Tempo calibration: **56 songs of ground truth**

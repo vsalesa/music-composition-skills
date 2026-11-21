@@ -81,6 +81,8 @@ codex plugin marketplace add jtydhr88/music-composition-skills
 
 Or copy the same files to `~/.agents/skills/` (personal) or `.agents/skills/` (project). The same 29 skill files are shipped through both plugin directories, with no duplication and no rewriting.
 
+**One entry skill.** `music-composition` is a parent skill that indexes all 29 child skills by layer and routes to them (it points to `mc-workflow` as the start). Installing the plugin, or copying the whole `skills/` directory, gives you all of them at once; you never need to add skills one by one.
+
 #### Verify
 
 Skills load automatically when the agent detects relevant context. To list them: `/skills`.

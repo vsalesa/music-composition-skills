@@ -2,7 +2,7 @@
 
 English · [中文版](README_ZH.md) · [日本語](README_JA.md) · [한국어](README_KO.md)
 
-> **English translation fork.** This is an English translation of [jtydhr88/music-composition-skills](https://github.com/jtydhr88/music-composition-skills), whose skill files are written in Chinese. Content and structure follow the original; machine-assisted translation, so check terms and book titles against the cited sources. The original authorship and the MIT license (see LICENSE and NOTICE) apply unchanged.
+> **English-language fork with new Latin music extensions.** This repository builds on [jtydhr88/music-composition-skills](https://github.com/jtydhr88/music-composition-skills). Its original skill material was translated from Chinese into English; v1.1.0 adds 21 Latin genre subskills, a fusion skill, artist references and revised routing developed in this fork. Consult the cited originals for exact quotations and book titles. Original credits and the MIT license remain documented in [LICENSE](LICENSE) and [NOTICE](NOTICE).
 
 **52 skill entrypoints (51 child skills + the parent router)** (for [Claude Code](https://docs.anthropic.com/en/docs/claude-code/skills) and [OpenAI Codex](https://developers.openai.com/codex/)) for composing and arranging popular music, distilled from 50 books on orchestration, harmony, form, counterpoint, mixing and style practice, plus 62 arrangements measured from multitrack recordings.
 
@@ -24,7 +24,7 @@ One audio line, cut into four independent libraries. Each one is usable on its o
 
 | Library | What it does | State |
 |---|---|---|
-| **[music-composition-skills](https://github.com/jtydhr88/music-composition-skills)** | Composing and arranging. A brief becomes an ARR-SPEC: key, tempo, section map, harmony, who enters and leaves when, the energy curve, vocal and mix intent, compiled into input for Suno, YuE2 or music software | **This library** |
+| **[music-composition-skills (this fork)](https://github.com/vsalesa/music-composition-skills)** | Composing and arranging. A brief becomes an ARR-SPEC: key, tempo, section map, harmony, who enters and leaves when, the energy curve, vocal and mix intent, compiled into input for Suno, YuE2 or music software | **This library** |
 | **[lyric-writing-skills](https://github.com/jtydhr88/lyric-writing-skills)** | Lyric writing. The intent gate becomes a LYR-SPEC (lyric spec sheet): structure, imagery, rhyme, narrative, plus the language layer for Mandarin, Cantonese, English, Japanese and Korean | Available |
 | **Film scoring** | Music written to picture: spotting, the relation to cuts, how a cue is written and named, how a theme develops across a film | Planned |
 | **Mixing and sound design** | Turning mix intent into actual moves: EQ, compression, reverb, automation, mastering | Planned |

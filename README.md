@@ -4,9 +4,11 @@ English · [中文版](README_ZH.md) · [日本語](README_JA.md) · [한국어]
 
 > **English translation fork.** This is an English translation of [jtydhr88/music-composition-skills](https://github.com/jtydhr88/music-composition-skills), whose skill files are written in Chinese. Content and structure follow the original; machine-assisted translation, so check terms and book titles against the cited sources. The original authorship and the MIT license (see LICENSE and NOTICE) apply unchanged.
 
-29 agent skills (for [Claude Code](https://docs.anthropic.com/en/docs/claude-code/skills) and [OpenAI Codex](https://developers.openai.com/codex/)) for composing and arranging popular music, distilled from 50 books on orchestration, harmony, form, counterpoint, mixing and style practice, plus 62 arrangements measured from multitrack recordings.
+**52 skill entrypoints (51 child skills + the parent router)** (for [Claude Code](https://docs.anthropic.com/en/docs/claude-code/skills) and [OpenAI Codex](https://developers.openai.com/codex/)) for composing and arranging popular music, distilled from 50 books on orchestration, harmony, form, counterpoint, mixing and style practice, plus 62 arrangements measured from multitrack recordings.
 
 Both agents share the same files: install once and it works in both.
+
+[Explore the v1.1.0 Latin expansion](#latin-music-in-v110-all-21-subskills) · [Install this fork](#install) · [Try contemporary fusion examples](#practical-requests-and-routing)
 
 **The output is a spec sheet.** Ask for a song and the agent fills in an ARR-SPEC (arrangement spec sheet): key, tempo, bar-accurate section map, chord letters and roman numerals, who enters and leaves when, the energy curve, vocal delivery, mix intent. It then compiles that one document into a Suno prompt, a score for YuE2, or a note file that loads into music software. The same document is what you check the result against. The whole design comes down to **one artifact, four uses**: handoff, controlled A/B, compile source, acceptance baseline.
 
@@ -45,6 +47,16 @@ What that buys you is the part prompt engineering cannot reach. A prompt is a se
 
 The model stays the performer and the studio. This is the arranger's chart handed to it.
 
+## What's new in v1.1.0
+
+**21 dedicated Latin genre skills and a fusion composer** join the original music-composition framework. You can now request salsa, timba, bachata, merengue, reggaeton, Dominican dembow, cumbia, corridos tumbados, regional Mexican music, samba, pagode, MPB, Brazilian funk, forró, tango, Latin jazz and other traditions **with their own musical roles**, rather than one generic `mc-style-latin` preset. The new references also distinguish historical foundations from contemporary innovations and artist-led crossovers.
+
+- [Browse all 21 genre skills and the artist/fusion references](#latin-music-in-v110-all-21-subskills)
+- [How contemporary fusion works](#dedicated-fusion-skill)
+- [Copy working brief examples and an ARR-SPEC fragment](#practical-requests-and-routing)
+
+The package now contains **52 `SKILL.md` entrypoints**: one parent index (`music-composition`) and **51 child skills**; 22 children were added for v1.1.0 (21 genres plus fusion). These are guidance files, not music samples or recorded tracks.
+
 ## Install
 
 ### Claude Code
@@ -52,7 +64,7 @@ The model stays the performer and the studio. This is the arranger's chart hande
 #### Plugin marketplace (recommended)
 
 ```
-/plugin marketplace add jtydhr88/music-composition-skills
+/plugin marketplace add vsalesa/music-composition-skills
 /plugin install music-composition@music-composition-skills
 ```
 
@@ -61,7 +73,7 @@ Skills are then invoked as `/music-composition:<skill>`, e.g. `/music-compositio
 #### Personal (all projects)
 
 ```bash
-git clone https://github.com/jtydhr88/music-composition-skills.git
+git clone https://github.com/vsalesa/music-composition-skills.git
 cp -r music-composition-skills/plugins/music-composition/skills/* ~/.claude/skills/
 ```
 
@@ -75,11 +87,11 @@ cp -r music-composition-skills/plugins/music-composition/skills/* .claude/skills
 ### Codex (CLI / ChatGPT desktop app / IDE extension)
 
 ```bash
-codex plugin marketplace add jtydhr88/music-composition-skills
+codex plugin marketplace add vsalesa/music-composition-skills
 # Then: Plugins → select "Music Composition Skills" → Install
 ```
 
-Or copy the same files to `~/.agents/skills/` (personal) or `.agents/skills/` (project). The same 29 skill files are shipped through both plugin directories, with no duplication and no rewriting.
+Or copy the same files to `~/.agents/skills/` (personal) or `.agents/skills/` (project). The same skill directory is used by both plugin manifests; it contains 52 \`SKILL.md\` entrypoints (parent + children), with no duplicated skill tree.
 
 **One entry skill.** `music-composition` is a parent skill that indexes all 51 child skills by layer and routes to them (it points to `mc-workflow` as the start). Installing the plugin, or copying the whole `skills/` directory, gives you all of them at once; you never need to add skills one by one.
 
@@ -104,7 +116,7 @@ Skills load automatically when the agent detects relevant context. To list them:
 # → mc-ai-tell-audit: fourteen enumerated tells, counted one by one
 
 # "What drum pattern and tempo does a bossa nova need?"
-# → mc-rhythm-section: eleven style tables, then the five-step pattern decision
+# → mc-style-latin → mc-style-latin-bossa-mpb + mc-rhythm-section reference tables
 ```
 
 ## Common combinations
@@ -152,7 +164,7 @@ Note: no lyrics, so the lyric library stays out. The criterion lives in mc-devel
 
 > Arrange a Mandarin love song whose melody and lyrics are already written. I want a salsa feel, with brass, medium-fast. Spec only, no Suno prompt.
 
-Walks: mc-workflow (arrangement route) → mc-style-latin → mc-rhythm-section → mc-orchestration (brass) → mc-arrangement-arch → mc-texture-layering
+Walks: mc-workflow (arrangement route) → mc-style-latin (router) → mc-style-latin-salsa → mc-rhythm-section → mc-orchestration (brass) → mc-arrangement-arch → mc-texture-layering
 Produces: ARR-SPEC and a one-page note, nothing else
 
 **7. Fusion: rap verses, Chinese-style chorus**
@@ -179,7 +191,7 @@ The sentences in a brief that actually do something:
 
 | What you say | What it decides |
 |---|---|
-| artist + song title | instrumentation, tempo, vocal persona, section layout are borrowed. Words and melody never are |
+| artist + song title | analyze high-level arrangement, groove, vocal *technique* and section design as references; never copy words, melody, recorded production or a living singer's identifiable voice |
 | female / male, sweet / close-mic | persona and range in mc-vocal-direction |
 | Suno / local YuE2 / spec only | the exit: the Suno pack, a score for YuE2, or ARR-SPEC alone |
 | no storytelling / say it straight, no scenes / not a story | lyric type: attitudinal / attitudinal without objects / situational. Unsaid, situational is the default |
@@ -196,9 +208,9 @@ The plugin is text only, with nothing extra to run. Every check in the library e
 
 ## Multilingual support
 
-**One source tree, every language at runtime.** The skills are written once, in Chinese, and the agent answers in whatever language you asked in. No flag, no separate install, no per-language plugin.
+**One source tree, every language at runtime.** The skill bodies in this English fork are maintained in English; the agent answers in the language you use. No per-language skills installation is required. README translations are separate and may need updates after a release.
 
-The skill bodies will not be forked into other languages, and that is a decision. The sister project [screenwriting-skills](https://github.com/jtydhr88/screenwriting-skills) built a full English edition, merged it, then removed it, and the argument that killed it applies here unchanged: if a reader who cannot read Chinese deserves a translated tree, so does a reader who cannot read English, and the next request is Japanese, then Korean, then French. This pack is 52 files. Four languages makes 208 of them, drifting apart independently, with nothing to tell you which one is stale. Translating is the cheap part. The real cost is that forking once removes any principled ground for refusing the second fork.
+Skills are not duplicated per language: 52 \`SKILL.md\` entrypoints and their supporting references share one implementation. Keeping several translated skill trees synchronized would create substantial maintenance overhead. The new v1.1.0 Latin skill content is documented in English, while agents may respond in Spanish, English or other requested languages.
 
 How the runtime covers it instead:
 
@@ -207,9 +219,9 @@ How the runtime covers it instead:
 - **Terms with no equivalent keep their original form plus a gloss.** 落ちサビ, 符割り, 類音階 and 十三辙 come through as the original plus a short explanation.
 - **Your score and your lyrics stay in their own language.** Discussing a Chinese song in English is normal. What switches is the language of the conversation.
 
-What this trades away is auditability. Unless you read Chinese, what you can read is the agent's account of the instruction file. The file itself stays out of your reach. That is a real cost, and it is the one thing a translated tree would genuinely buy. It is not worth a permanent four-way maintenance burden on a library whose value lies in every rule carrying a verifiable source and page.
+The primary skill files of this fork can be inspected directly in English. For exact musical assertions, verify the cited source or recording rather than relying only on a skill's summary.
 
-**READMEs are a different matter** and are translated, because they are short, stable, and the first thing a newcomer meets.
+**README translations** are provided for convenience, but v1.1.0 Latin additions may not yet be reflected in every translated README.
 
 ## How the skills are organised
 
@@ -219,7 +231,7 @@ Six layers. A layer only knows about the layers below it, and every skill carrie
 L0 workflow      router, the ARR-SPEC contract, fusion ownership, the stage map
 L1 general       melody · harmony · progressions · modulation · rhythm · form · counterpoint
 L2 arrangement   architecture · orchestration · texture · rhythm section · sound design · vocal · mix intent
-L3 style         J-pop · city pop & R&B · jazz · Mandarin pop · EDM · rock band · cinematic · hip-hop
+L3 style         J-pop · city pop & R&B · jazz · Mandarin pop · EDM · rock · cinematic · hip-hop · Latin (21 genre skills + fusion)
 L4 execution     compile to backends · symbolic score · AI-tell audit
 L5 corpus        measured recordings that testify for or against the textbook rules
 ```
@@ -257,7 +269,7 @@ L5 corpus        measured recordings that testify for or against the textbook ru
 
 ### L3: style layers
 
-Each one carries a **transfer table**: what this style can lend to others, and what does not travel.
+Existing style layers carry transfer tables; the new Latin genre layers also describe regional lineage, composition roles, modern artist innovations and testable fusion decisions.
 
 | Skill | What is specific to it | Main sources |
 |---|---|---|
@@ -299,13 +311,108 @@ Text only: 51 child skills plus one parent entry skill, the reference files that
 | Counter-example | What a model writes with no guidance, and which eight checks it fails |
 
 
-### Latin music expansion (v1.1.0)
+## Latin music in v1.1.0: all 21 subskills
 
-Latin composition now uses a *router plus focused genre skills*. `mc-style-latin` chooses which child owns the traditional and contemporary language; `mc-style-latin-fusion` handles deliberate cross-genre work with explicit section/role ownership. The release includes **21 new genre subskills** and a fusion skill (22 additional skills, 51 child skills plus one parent (52 SKILL.md files) total), with an artist-innovation/fusion reference per genre (except the fusion engine, which is a standalone skill). It explicitly distinguishes salsa/timba, Dominican bachata/merengue/dembow, Puerto Rican bomba/plena and reggaeton, Colombian and regional cumbia, regional mexicano and corridos tumbados, Brazilian samba/bossa/MPB/funk/forró, tango, Latin jazz, vallenato, and Andean/Afro-Peruvian scenes. New skill titles and artists are **analytical guidelines**, not transcriptions; a source recording or score is required for exact performance claims.
+The Latin layer was expanded from a single, mostly percussion-focused essay into a **router + 21 focused genre skills + a dedicated fusion skill**. Unlike a generic “Latin” preset, each genre distinguishes its historical lineage, rhythmic grammar, bass role, lead/chorus structure, instrumentation, modern production and characteristic failure cases.
 
-**Routing:** `mc-workflow` → `mc-style-latin` → `mc-style-latin-bachata` (or chosen branch) → `mc-style-latin-fusion` when combining styles → `mc-render-compile`.
+Start with [`mc-style-latin` (router)](plugins/music-composition/skills/mc-style-latin/SKILL.md). It will select one or more of these children; you **do not** need to load them all. Click any subskill below to read the actual composition rules. Each genre also has a `references/artists-fusion.md` file with artists, innovations and compositional A/B exercises.
 
-**Compatibility:** child skills obey ARR-SPEC v1.0. New keys are not introduced: genre decisions use valid `meta.style_layer`, `meta.style_layers`, `meta.fusion_note`, and existing `form[].note` and `arrangement.*` fields. The old Latin essay remains under `mc-style-latin/references/legacy-style-essay.md` and may contain now-superseded prescriptions. The pre-expansion checkpoint is branch `backup/v1.0.0-before-latin-expansion` at commit `b20a9a35a04cb436ac317f0404afda93b9540c49`.
+### Afro-Caribbean, Puerto Rico and Dominican Republic
+
+| Subskill | What it teaches | Artist lenses (examples) |
+|---|---|---|
+| [`mc-style-latin-salsa`](plugins/music-composition/skills/mc-style-latin-salsa/SKILL.md) | Son, mambo, salsa dura / romántica; clave, tumbao, guajeo, brass moñas, coro–pregón | Willie Colón, Rubén Blades, Eddie Palmieri, Celia Cruz, Marc Anthony |
+| [`mc-style-latin-timba`](plugins/music-composition/skills/mc-style-latin-timba/SKILL.md) | Cuban songo and timba; gear changes (marchas), bloques, bass/keyboard/percussion interaction | Los Van Van, Changuito, NG La Banda, Cimafunk |
+| [`mc-style-latin-bachata`](plugins/music-composition/skills/mc-style-latin-bachata/SKILL.md) | Traditional, electric, New York urban and pop bachata; requinto/segunda, bongó, güira | Antony Santos, Juan Luis Guerra, Aventura, Romeo Santos, Prince Royce |
+| [`mc-style-latin-merengue`](plugins/music-composition/skills/mc-style-latin-merengue/SKILL.md) | Merengue típico, orchestral, pop and merengue-house; tambora/güira and horns/accordion | Johnny Ventura, Wilfrido Vargas, Elvis Crespo, Omega |
+| [`mc-style-latin-reggaeton`](plugins/music-composition/skills/mc-style-latin-reggaeton/SKILL.md) | Roots, underground, perreo, melodic and experimental reggaeton; dembow-derived drums, vocal cadence, 808 | Ivy Queen, Daddy Yankee, Tego Calderón, Tainy, Bad Bunny, Rauw Alejandro |
+| [`mc-style-latin-dembow`](plugins/music-composition/skills/mc-style-latin-dembow/SKILL.md) | Dominican dembow and trapbow; rapid beat/vocal exchanges and edited percussion | El Alfa, Tokischa, Chimbala |
+| [`mc-style-latin-bomba-plena`](plugins/music-composition/skills/mc-style-latin-bomba-plena/SKILL.md) | Distinct Afro-Puerto Rican bomba and plena practices; dancer/drum dialogue vs pandereta ensemble | Rafael Cepeda, Plena Libre, Los Pleneros de la Cresta |
+| [`mc-style-latin-caribbean-soca-reggae`](plugins/music-composition/skills/mc-style-latin-caribbean-soca-reggae/SKILL.md) | Calypso, soca, ska, reggae and dancehall; consciously distinct Caribbean traditions | Machel Montano, Bob Marley, Sly & Robbie |
+
+### Colombia, Mexico and regional Latin America
+
+| Subskill | What it teaches | Artist lenses (examples) |
+|---|---|---|
+| [`mc-style-latin-cumbia`](plugins/music-composition/skills/mc-style-latin-cumbia/SKILL.md) | Colombian roots plus regional and electronic cumbia; bass cycle, percussion and regional melodic lead | Totó la Momposina, Los Mirlos, Bomba Estéreo |
+| [`mc-style-latin-cumbia-villera-sonidera`](plugins/music-composition/skills/mc-style-latin-cumbia-villera-sonidera/SKILL.md) | Mexican sonidera and Argentine cumbia villera; DJ/MC, keyboard/accordion and dance bass | Los Ángeles Azules, Damas Gratis |
+| [`mc-style-latin-vallenato`](plugins/music-composition/skills/mc-style-latin-vallenato/SKILL.md) | Paseo, son, merengue vallenato and puya; accordion, caja, guacharaca and pop-rock adaptation | Diomedes Díaz, Carlos Vives, Silvestre Dangond |
+| [`mc-style-latin-regional-mexicano`](plugins/music-composition/skills/mc-style-latin-regional-mexicano/SKILL.md) | Ranchera, mariachi, norteño, banda and sierreño; meters and instrument-specific roles | Vicente Fernández, Los Tigres del Norte, Banda El Recodo, Carín León |
+| [`mc-style-latin-corridos-tumbados`](plugins/music-composition/skills/mc-style-latin-corridos-tumbados/SKILL.md) | Corrido/sierreño songwriting with modern urban rhythm and vocal cadence | Natanael Cano, Junior H, Peso Pluma, Fuerza Regida |
+| [`mc-style-latin-andino-afroperuano`](plugins/music-composition/skills/mc-style-latin-andino-afroperuano/SKILL.md) | Andean huayno and Afro-Peruvian landó/festejo as separate lineages; regional instruments and percussion | Susana Baca, Eva Ayllón, Los Kjarkas |
+
+### Brazil
+
+| Subskill | What it teaches | Artist lenses (examples) |
+|---|---|---|
+| [`mc-style-latin-samba-pagode`](plugins/music-composition/skills/mc-style-latin-samba-pagode/SKILL.md) | Samba, partido alto, samba-enredo and pagode; surdo, pandeiro, cavaquinho and coro | Cartola, Fundo de Quintal, Zeca Pagodinho, Thiaguinho |
+| [`mc-style-latin-bossa-mpb`](plugins/music-composition/skills/mc-style-latin-bossa-mpb/SKILL.md) | Bossa nova, MPB and tropicalismo; guitar–voice counterpoint and Brazilian pop evolution | João Gilberto, Tom Jobim, Elis Regina, Caetano Veloso, Liniker |
+| [`mc-style-latin-funk-brasileiro`](plugins/music-composition/skills/mc-style-latin-funk-brasileiro/SKILL.md) | Funk carioca, tamborzão, funk melody and pop crossover; programmed percussion and bass | DJ Marlboro, Anitta, Ludmilla |
+| [`mc-style-latin-forro-piseiro`](plugins/music-composition/skills/mc-style-latin-forro-piseiro/SKILL.md) | Baião, xote, forró and piseiro; zabumba, triangle, accordion and keyboard-led production | Luiz Gonzaga, Dominguinhos, João Gomes |
+
+### Rio de la Plata, romantic songwriting and cross-regional jazz
+
+| Subskill | What it teaches | Artist lenses (examples) |
+|---|---|---|
+| [`mc-style-latin-tango`](plugins/music-composition/skills/mc-style-latin-tango/SKILL.md) | Tango, milonga, nuevo tango and electrotango; marcato, bandoneon and dramatic phrasing | Carlos Gardel, Astor Piazzolla, Gotan Project, Bajofondo |
+| [`mc-style-latin-bolero-pop`](plugins/music-composition/skills/mc-style-latin-bolero-pop/SKILL.md) | Bolero, romantic Latin pop and rock en español; narrative melody, vocal dynamics and orchestration | Los Panchos, Juan Gabriel, Shakira, Natalia Lafourcade |
+| [`mc-style-latin-latin-jazz`](plugins/music-composition/skills/mc-style-latin-latin-jazz/SKILL.md) | Afro-Cuban, Brazilian and other Latin-jazz branches; interplay with improvisation and jazz harmony | Tito Puente, Chucho Valdés, Paquito D'Rivera, Michel Camilo |
+
+### Dedicated fusion skill
+
+[`mc-style-latin-fusion`](plugins/music-composition/skills/mc-style-latin-fusion/SKILL.md) combines genres **by musical responsibility**, not by stacking complete drum loops. Examples include salsa + reggaeton, bachata + R&B, cumbia + electronic music, corridos tumbados + trap, Brazilian funk + pop, and tango + electronic music.
+
+It distinguishes three compositional strategies:
+
+1. **Superposition:** one genre owns the rhythm and low end; another supplies harmony, vocal phrasing or timbre. Example: bachata guitars + R&B vocal harmonies.
+2. **Alternation:** the song changes rhythmic engine between clearly marked sections. Example: a salsa coro followed by a reggaeton breakdown, joined by a shared melodic motif.
+3. **Transformation:** the same motif changes accent, instrumentation or harmonic function gradually. Example: a regional guitar phrase moving into a programmed urban arrangement.
+
+**Compatibility caveat:** `ARR-SPEC v1.0` assigns style dimensions globally. Section-by-section ownership changes are documented via existing `form[].note`, `form[].events` and `meta.fusion_note`; there is **no** new section-local YAML field. For a complete reference, see [`mc-workflow/ARR-SPEC.schema.md`](plugins/music-composition/skills/mc-workflow/ARR-SPEC.schema.md) and the [fusion skill](plugins/music-composition/skills/mc-style-latin-fusion/SKILL.md).
+
+### What artist studies add
+
+A reference to **Aventura**, **Los Van Van**, **Carlos Vives**, **Bomba Estéreo**, **Tainy**, **Astor Piazzolla**, **Bad Bunny** or **Karol G** should become **explicit arrangement choices**, rather than a generic request to “sound like” the artist. The genre reference describes the historical idea, its impact on groove/harmony/melody/vocal production and a testable way to borrow a **technique** without reproducing the original recording.
+
+The cases are *research and composition prompts*, **not note-for-note transcriptions or a new measured recording corpus**. Track-level BPM, key, performer credits, recording settings and exact rhythmic placements require a primary recording, score, or reliable credited source; do not invent them.
+
+### Practical requests and routing
+
+| Ask the agent | Typical path |
+|---|---|
+| “Compose salsa dura: trombone moñas, piano montuno, coro–pregón and a break before the final coro.” | `mc-workflow` → `mc-style-latin` → `mc-style-latin-salsa` → `mc-arrangement-arch` |
+| “Write a contemporary bachata with a requinto hook and R&B vocal harmonies.” | `mc-workflow` → `mc-style-latin-bachata` + `mc-style-citypop-rnb` + `mc-style-latin-fusion` |
+| “Build psychedelic Amazonian cumbia with electric guitar and electronic transitions, keeping the cumbia bass pattern.” | `mc-workflow` → `mc-style-latin-cumbia` + `mc-style-latin-fusion` |
+| “Compose a corrido tumbado where the guitar drives the verse and trap production enters in a later section.” | `mc-workflow` → `mc-style-latin-corridos-tumbados` + `mc-style-hiphop` + `mc-style-latin-fusion` |
+| “Turn a tango motif into electrotango without losing bandoneon phrasing.” | `mc-workflow` → `mc-style-latin-tango` + `mc-style-latin-fusion` |
+| “Analyze what modern artists changed relative to classic samba or pagode.” | `mc-style-latin-samba-pagode` → `references/artists-fusion.md` (no full workflow needed) |
+
+#### Example: describe a contemporary crossover in ARR-SPEC
+
+This illustrates the **style ownership fragment only**, not a complete ARR-SPEC:
+
+```yaml
+meta:
+  style_layer: mc-style-latin-bachata
+  style_layers:
+    - skill: mc-style-latin-bachata
+      role: base
+      owns: [groove, low_end, instrumentation, arrangement_hook]
+    - skill: mc-style-citypop-rnb
+      role: overlay
+      owns: [harmony, melody, vocal_delivery, timbre]
+  fusion_note: "Bachata guitars and bongó/güira hold the groove; R&B supplies harmony and vocal phrasing."
+```
+
+Keep the selected branch identifiable: specify the lead instrument's musical role, the bass/percussion relationship, a variation of the hook and an instrument subtraction event. Use valid enum values (`arrangement.groove.feel: straight`, not `straight16`; `bass_kick_relation.mode: interlocking`, not `bound`).
+
+### Backward compatibility, provenance and current limitations
+
+- **Existing installations and prompts:** `mc-style-latin` remains available but now routes to its specialized children. Other `mc-*` skills and the ARR-SPEC v1.0 contract remain in place.
+- **Original study retained:** the former book-derived Latin essay is archived within the repo at [`mc-style-latin/references/legacy-style-essay.md`](plugins/music-composition/skills/mc-style-latin/references/legacy-style-essay.md), alongside [`reference.md`](plugins/music-composition/skills/mc-style-latin/reference.md). Older assertions about prohibiting Brazilian/Cuban fusion and outdated ARR-SPEC paths should not override the new routing or schema.
+- **Version:** `plugins/music-composition/.claude-plugin/plugin.json` is `1.1.0`. The v1.0.0 code snapshot is preserved at [`backup/v1.0.0-before-latin-expansion`](https://github.com/vsalesa/music-composition-skills/tree/backup/v1.0.0-before-latin-expansion); this is a **branch**, not a Git tag.
+- **Testing:** structure, skill paths and schema descriptions were checked, but the genre-specific recommendations have **not** been validated by systematically generating and measuring audio for every new skill.
+- **Translated READMEs:** the English README is the source of truth for this fork's v1.1.0 additions; other language README versions may lag until their translations are updated.
 
 ## Source books
 
@@ -327,12 +434,12 @@ Latin composition now uses a *router plus focused genre skills*. `mc-style-latin
 
 ## Conventions
 
-- Each skill opens with a long English description of when to use it, with Chinese keywords appended so routing works in both languages.
-- Skill bodies are Chinese; numbered principles, tables and checklists. Output language follows the user's question.
+- Each skill has YAML frontmatter with its name and an English routing description; genre names and keywords identify the appropriate skill.
+- Skill bodies in this fork are English; principles, tables and checklists are language-neutral in purpose. Output language follows the user's question.
 - **Every rule carries a failure condition or a self-check action.** A rule you cannot test is an opinion.
 - Where the sources disagree, both positions are kept side by side with a note on when each applies: Levine's chord-scale judgement against the Japanese pop practice, the Drummer's Bible tempo bands against Groove Essentials' refusal to print numbers.
 - Chords are always written twice: letter symbols **and** roman numerals, default key C.
-- Citations carry the source and page. Claims that rest on a single source say so.
+- Legacy book-derived citations carry source and page when available; newer genre/artist notes are research guides, not verified song transcriptions. Exact facts require source checking.
 - Long tables and worked examples live in each skill's reference file, so the skill bodies stay short.
 - Agent-neutral by design: the skill files name no agent and use no agent-specific syntax.
 
@@ -342,7 +449,7 @@ Latin composition now uses a *router plus focused genre skills*. `mc-style-latin
 - **Spec files.** An ARR-SPEC is a YAML file (`ARR-SPEC.yaml`); the lyric side's is `LYR-SPEC.yaml`. The six specification files sit in `mc-workflow/`: the definition `ARR-SPEC.schema.md`, the empty template `ARR-SPEC.template.yaml`, the backend capability declarations `backends.yaml`, the examples `example-01-citypop.yaml` and `example-02-fusion.yaml`, and the counter-example `example-00-ai-default.yaml`.
 - **Fields mentioned above.** The mix intent is the `mix_intent` field. The two items mc-development fills in are `material` (motif material) and `form[].development` (per-section development).
 - **Backends and export formats.** What you paste into Suno is packed in `suno-pack.md` (title, style description, section-tagged lyrics, exclusions). The score for YuE2 is ABC, with the vocal line in the lowercase note register and the lyrics on `w:` lines. mc-symbolic-score writes ABC, MusicXML and MIDI from one emitter; the note file that loads into music software is the MIDI. In `backends.yaml` each backend declares `honors: exact / hint / none` for every field, and a field declared none is left out of that backend's score.
-- **Per-skill files.** `SKILL.md` frontmatter holds `name` (kebab-case, matches the folder) and a long English `description` ending in "Use when …", with Chinese keywords appended. `reference.md` holds long tables and worked examples so `SKILL.md` stays under 40 KB.
+- **Per-skill files.** `SKILL.md` frontmatter holds a kebab-case `name` matching the folder and a routing `description`. Many older skills use `reference.md`; new Latin genre skills use `references/artists-fusion.md` for artist lenses and fusion exercises.
 
 ## License
 

@@ -4,11 +4,11 @@ English · [中文版](README_ZH.md) · [日本語](README_JA.md) · [한국어]
 
 > **English-language fork with new Latin music extensions.** This repository builds on [jtydhr88/music-composition-skills](https://github.com/jtydhr88/music-composition-skills). Its original skill material was translated from Chinese into English; v1.1.0 adds 21 Latin genre subskills, a fusion skill, artist references and revised routing developed in this fork. Consult the cited originals for exact quotations and book titles. Original credits and the MIT license remain documented in [LICENSE](LICENSE) and [NOTICE](NOTICE).
 
-**52 skill entrypoints (51 child skills + the parent router)** (for [Claude Code](https://docs.anthropic.com/en/docs/claude-code/skills) and [OpenAI Codex](https://developers.openai.com/codex/)) for composing and arranging popular music, distilled from 50 books on orchestration, harmony, form, counterpoint, mixing and style practice, plus 62 arrangements measured from multitrack recordings.
+**53 skill entrypoints (52 child skills + the parent router)** (for [Claude Code](https://docs.anthropic.com/en/docs/claude-code/skills) and [OpenAI Codex](https://developers.openai.com/codex/)) for composing and arranging popular music, distilled from 50 books on orchestration, harmony, form, counterpoint, mixing and style practice, plus 62 arrangements measured from multitrack recordings.
 
 Both agents share the same files: install once and it works in both.
 
-[Explore the v1.1.0 Latin expansion](#latin-music-in-v110-all-21-subskills) · [Install this fork](#install) · [Try contemporary fusion examples](#practical-requests-and-routing)
+[Tidal Studio & Maestro](#tidal-studio-integration-v120) · [Latin expansion](#latin-music-in-v110-all-21-subskills) · [Install](#install)
 
 **The output is a spec sheet.** Ask for a song and the agent fills in an ARR-SPEC (arrangement spec sheet): key, tempo, bar-accurate section map, chord letters and roman numerals, who enters and leaves when, the energy curve, vocal delivery, mix intent. It then compiles that one document into a Suno prompt, a score for YuE2, or a note file that loads into music software. The same document is what you check the result against. The whole design comes down to **one artifact, four uses**: handoff, controlled A/B, compile source, acceptance baseline.
 
@@ -46,6 +46,12 @@ So what this library hands over is the decisions themselves: which bar the guita
 What that buys you is the part prompt engineering cannot reach. A prompt is a sentence, and you cannot check a sentence field by field. A spec sheet can be compared against what came back, changed one field at a time, and re-run for a controlled comparison. Every decision in it carries a reason and a source, so six months later you can still say why the second chorus is arranged the way it is.
 
 The model stays the performer and the studio. This is the arranger's chart handed to it.
+
+## What's new in v1.2.0: Tidal Studio
+
+New [`mc-tidal-studio`](plugins/music-composition/skills/mc-tidal-studio/SKILL.md): an expert, **music-first composition and sound-selection skill** for [Tidal Studio](https://github.com/vsalesa/tidal-studio) and Maestro. It helps choose the best *original musical ideas* and the right instruments, synths and samples for each style, instead of merely producing plausible Tidal syntax.
+
+The four targeted references explain [genre sound palettes](plugins/music-composition/skills/mc-tidal-studio/references/genre-sound-palettes.md), [sound selection and sourcing](plugins/music-composition/skills/mc-tidal-studio/references/sound-selection-and-acquisition.md), [composition-quality assessment](plugins/music-composition/skills/mc-tidal-studio/references/composition-review.md), and [Maestro's existing JSON/Tidal contract](plugins/music-composition/skills/mc-tidal-studio/references/maestro-contract.md). This release increases the package to **53 `SKILL.md` entrypoints (52 children + one parent)**.
 
 ## What's new in v1.1.0
 
@@ -91,9 +97,9 @@ codex plugin marketplace add vsalesa/music-composition-skills
 # Then: Plugins → select "Music Composition Skills" → Install
 ```
 
-Or copy the same files to `~/.agents/skills/` (personal) or `.agents/skills/` (project). The same skill directory is used by both plugin manifests; it contains 52 \`SKILL.md\` entrypoints (parent + children), with no duplicated skill tree.
+Or copy the same files to `~/.agents/skills/` (personal) or `.agents/skills/` (project). The same skill directory is used by both plugin manifests; it contains 53 `SKILL.md` entrypoints (parent + children), with no duplicated skill tree.
 
-**One entry skill.** `music-composition` is a parent skill that indexes all 51 child skills by layer and routes to them (it points to `mc-workflow` as the start). Installing the plugin, or copying the whole `skills/` directory, gives you all of them at once; you never need to add skills one by one.
+**One entry skill.** `music-composition` is a parent skill that indexes all 52 child skills by layer and routes to them (it points to `mc-workflow` as the start). Installing the plugin, or copying the whole `skills/` directory, gives you all of them at once; you never need to add skills one by one.
 
 #### Verify
 
@@ -210,7 +216,7 @@ The plugin is text only, with nothing extra to run. Every check in the library e
 
 **One source tree, every language at runtime.** The skill bodies in this English fork are maintained in English; the agent answers in the language you use. No per-language skills installation is required. README translations are separate and may need updates after a release.
 
-Skills are not duplicated per language: 52 \`SKILL.md\` entrypoints and their supporting references share one implementation. Keeping several translated skill trees synchronized would create substantial maintenance overhead. The new v1.1.0 Latin skill content is documented in English, while agents may respond in Spanish, English or other requested languages.
+Skills are not duplicated per language: 53 `SKILL.md` entrypoints and their supporting references share one implementation. Keeping several translated skill trees synchronized would create substantial maintenance overhead. The new v1.1.0 Latin skill content is documented in English, while agents may respond in Spanish, English or other requested languages.
 
 How the runtime covers it instead:
 
@@ -290,6 +296,7 @@ Existing style layers carry transfer tables; the new Latin genre layers also des
 | `mc-render-compile` | One compiler, many backends. What each backend can and cannot honour is kept as **data** in a capability declaration, so a field the backend cannot act on is never held against it. Adding a model only takes adding a data block |
 | `mc-symbolic-score` | Compiles ARR-SPEC straight into scores and note files, every format written by the same converter. On this path the spec is **executed** |
 | `mc-ai-tell-audit` | Fourteen enumerable tells of machine-made music, counted individually. Keeps two questions apart on purpose: *did the backend do what the spec said*, and *does the result carry machine fingerprints*. A track can pass the first and fail the second |
+| [`mc-tidal-studio`](plugins/music-composition/skills/mc-tidal-studio/SKILL.md) | Musical quality and genre-specific instrument, synthesizer and sample decisions for Maestro in Tidal Studio; uses existing JSON, downloads and A/B variants |
 
 ### L5: corpus
 
@@ -299,7 +306,7 @@ Existing style layers carry transfer tables; the new Latin genre layers also des
 
 ## What ships in the package
 
-Text only: 51 child skills plus one parent entry skill, the reference files that hold the long tables, and six specification files inside `mc-workflow`:
+Text only: 52 child skills plus one parent entry skill, the reference files that hold the long tables, and six specification files inside `mc-workflow`:
 
 | File | What it is |
 |---|---|
@@ -309,6 +316,46 @@ Text only: 51 child skills plus one parent entry skill, the reference files that
 | Example 1: city pop | A complete worked spec, all twenty checks passing |
 | Example 2: fusion | Rap over a Chinese-style base, with the ownership table |
 | Counter-example | What a model writes with no guidance, and which eight checks it fails |
+
+
+## Tidal Studio integration (v1.2.0)
+
+[Tidal Studio](https://github.com/vsalesa/tidal-studio) already runs TidalCycles + SuperDirt + SuperCollider, provides a music-teaching AI named **Maestro**, plays auditionable options, and has a sound library with downloaded sample packs, optional Freesound and built-in synths. The new [mc-tidal-studio skill](plugins/music-composition/skills/mc-tidal-studio/SKILL.md) gives Maestro *expert musical judgment* for making the **best possible original composition for the selected style**.
+
+### What the skill actually does
+
+| Decision | Music-first rule | Existing Studio feature |
+|---|---|---|
+| Style | Choose the exact regional/era idiom and its bass–percussion / instrument relationships, not a generic "Latin beat" | Plugin's genre subskills and Maestro context |
+| Composition | Write a memorable original motif, meaningful chord/voice-leading decisions and a clear groove | Tidal patterns, tracks, melody and harmony tools |
+| Arrangement | Assign every instrument a job; develop sections with response, subtraction, tension and payoff | Timeline, arrangement, mixer |
+| Sonic palette | Specify attack, release, articulation, register and timbre before choosing a bank | Available Dirt-Samples, synths, user banks |
+| Missing sounds | Use an existing resource first, request a specifically justified licensed sample if essential | Studio's already supported \`descargar\` and sample library |
+| Revision | Test musical A/B choices and fix structural flaws before polishing effects | Existing \`variantes\` and listening interface |
+
+**Selection sequence:** musical role → rhythmic/melodic behaviour → timbre/articulation → installed playable source → fallback → audible revision. For traditional bachata, for example, Maestro should build a recognisable requinto/segunda–bongó–güira–bass dialogue before adding R&B colours. For reggaeton sub-bass or techno, a controlled synth envelope may be better than downloading an acoustic loop. For cumbia or salsa percussion, a well-recorded licensed one-shot may significantly improve stylistic identity.
+
+The [genre palettes](plugins/music-composition/skills/mc-tidal-studio/references/genre-sound-palettes.md) cover salsa, timba, bachata, merengue, reggaeton, Dominican dembow, cumbia, regional Mexican, corridos tumbados, samba, pagode, bossa, MPB, Brazilian funk, forró, tango, Latin jazz, Andean/Afro-Peruvian traditions, plus electronic, jazz, hip-hop, rock and cinematic music. For the full lineage and artist case studies, pair this skill with a genre-specific \`mc-style-*\` skill.
+
+### Downloads and synthesizers: two different capabilities
+
+- **Audio samples:** Maestro can already request them using the existing \`descargar\` JSON fields (\`nombre\`, \`busqueda\`, \`tipo\`, \`duracion\`, \`alternativa\`, \`por_que\`). The *app* handles catalog search, license/credits, asking permission for large downloads, loading into SuperDirt and fallbacks. The skill itself performs **no downloads**.
+- **Synthesizers:** Studio already loads suitable SuperDirt synths and its own [\`studio-synths.scd\`](https://github.com/vsalesa/tidal-studio/blob/main/supercollider/studio-synths.scd). The skill chooses musical synthesis characteristics and a **runtime-confirmed working** instrument. **It cannot download, vet, compile or install third-party SuperCollider SynthDefs**: no such automatic host workflow exists yet.
+
+### Real examples to ask Maestro
+
+- "Compose an original modern bachata with R&B harmony and the best guitar sound already available; download a licensed requinto only if needed."
+- "My salsa feels generic: fix the clave-aware bass, piano and brass conversation before adding instruments."
+- "Write a melodic techno build with an original hook, evolving synthesizer timbre and an intentional breakdown."
+- "Make three *musically different* cumbia variations, preserving the Colombian bass groove while exploring distinct lead instruments."
+
+**Routing:** Maestro → \`mc-tidal-studio\` + the most relevant genre or craft skill → compatible \`cambios\`, \`variantes\`, optional \`descargar\` → playback and revision. A full ARR-SPEC is optional planning material; Studio does **not** directly accept its YAML as changes. Consult the [Maestro compatibility guide](plugins/music-composition/skills/mc-tidal-studio/references/maestro-contract.md).
+
+### Installing and updating in Tidal Studio
+
+The application already lists \`https://github.com/vsalesa/music-composition-skills\` as a default plugin. **New installations** can download v1.2.0, but **previously installed copies do not automatically update** just because GitHub changed (the studio tracks completed default installs). Open Studio's **Plugins** panel, remove the old Music Composition plugin and reinstall from the repository URL, then check that \`mc-tidal-studio\` is enabled in the **Skills** panel. Keep the agent's skill context budget in mind: Studio currently loads up to **two unpinned skills** per response and limits each loaded skill/reference to 9,000 characters (24,000 total).
+
+**Verified scope:** this adds a skill and documentation to \`music-composition-skills\`, **not** a new Tidal Studio server feature. There is no automatic SynthDef installation, guaranteed acoustic sound fidelity, or comprehensive playback test. The existing studio's code/JSON validation and actual sound availability remain authoritative.
 
 
 ## Latin music in v1.1.0: all 21 subskills

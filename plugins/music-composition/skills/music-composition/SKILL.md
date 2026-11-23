@@ -1,6 +1,6 @@
 ---
 name: music-composition
-description: Parent entry point for the whole music composition library (51 mc-* skills). Use for any request to compose, arrange, orchestrate, produce or critique popular music - writing a song from a brief, arranging for a band or orchestra, choosing chords or modulations, designing a vocal, turning an idea into a Suno / YuE2 / MIDI prompt, or auditing generated music. It indexes every child skill by layer and says which to load for which task, so none has to be added one by one. Keywords - song, arrangement, ARR-SPEC, composition, orchestration, harmony, melody, mix intent, Suno, style.
+description: Parent entry point for the whole music composition library (52 child mc-* skills). Use for any request to compose, arrange, orchestrate, produce or critique popular music - writing a song from a brief, arranging for a band or orchestra, choosing chords or modulations, designing a vocal, turning an idea into a Suno / YuE2 / MIDI prompt, or auditing generated music. It indexes every child skill by layer and says which to load for which task, so none has to be added one by one. Keywords - song, arrangement, ARR-SPEC, composition, orchestration, harmony, melody, mix intent, Suno, Tidal Studio, Maestro, samples, synths, style.
 ---
 
 # Music Composition: parent skill
@@ -12,7 +12,8 @@ This skill is the front door to the whole library. It does not hold the rules it
 1. **Start with `mc-workflow`.** It is the entry point and router: the S0-S7 stages from brief to delivered audio, the ARR-SPEC contract (the spec sheet every other skill reads and writes), and the full boundary table that says which skill owns which decision.
 2. Follow its routing and load only the child skills the current stage needs. Each child has its own `SKILL.md`, and most have a `reference.md` for lookups.
 3. For an isolated question (one chord progression, one modulation, one vocal problem), skip the workflow and go straight to the matching child skill in the index below.
-4. Before accepting generated output, run `mc-ai-tell-audit`.
+4. For **Tidal Studio / Maestro** composing and sound selection, load `mc-tidal-studio` plus at most the one most relevant genre/craft skill that fits the host's context. Existing studio JSON and Tidal rules always win.
+5. Before accepting AI-generated audio, run `mc-ai-tell-audit` when relevant.
 
 All child skills live next to this one under `skills/`, in directories named after the skill (for example `mc-melody/SKILL.md`). If the host lists them as separate skills, invoke them by name; otherwise read the file at that path.
 
@@ -96,6 +97,7 @@ When two styles are mixed, `mc-workflow` and the style skills' fusion-ownership 
 | `mc-render-compile` | Compiling an ARR-SPEC into a prompt for Suno, YuE2 or other backends |
 | `mc-symbolic-score` | Emitting ABC, MusicXML and MIDI from the spec |
 | `mc-ai-tell-audit` | Auditing generated tracks for the default habits of generation models |
+| `mc-tidal-studio` | Quality-first original composition, instrument/synth/sample decisions, source selection and sound palette for Tidal Studio Maestro |
 
 ### Corpus
 | Skill | Use it for |

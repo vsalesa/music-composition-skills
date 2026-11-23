@@ -1,6 +1,6 @@
 # Composition and sound palette by genre
 
-Select the **specific regional/era variant**, not a continent-wide preset. For each line: preserve its musical *function*; choose sound attributes first, only then identify an actually available sample or synth. These are guide rails, not universal rules or exact artist transcriptions. Deep genre rules belong to the corresponding \`mc-style-*\` skill.
+Select the **specific regional/era variant**, not a continent-wide preset. For each line: preserve its musical *function*; choose sound attributes first, only then identify an actually available sample or synth. These are guide rails, not universal rules or exact artist transcriptions. Deep genre rules belong to the corresponding `mc-style-*` skill.
 
 | Genre and variants | Core interaction that makes it recognizable | What an ideal sound must do | Typical compositional improvement |
 |---|---|---|---|

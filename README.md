@@ -330,17 +330,17 @@ Text only: 52 child skills plus one parent entry skill, the reference files that
 | Composition | Write a memorable original motif, meaningful chord/voice-leading decisions and a clear groove | Tidal patterns, tracks, melody and harmony tools |
 | Arrangement | Assign every instrument a job; develop sections with response, subtraction, tension and payoff | Timeline, arrangement, mixer |
 | Sonic palette | Specify attack, release, articulation, register and timbre before choosing a bank | Available Dirt-Samples, synths, user banks |
-| Missing sounds | Use an existing resource first, request a specifically justified licensed sample if essential | Studio's already supported \`descargar\` and sample library |
-| Revision | Test musical A/B choices and fix structural flaws before polishing effects | Existing \`variantes\` and listening interface |
+| Missing sounds | Use an existing resource first, request a specifically justified licensed sample if essential | Studio's already supported `descargar` and sample library |
+| Revision | Test musical A/B choices and fix structural flaws before polishing effects | Existing `variantes` and listening interface |
 
 **Selection sequence:** musical role → rhythmic/melodic behaviour → timbre/articulation → installed playable source → fallback → audible revision. For traditional bachata, for example, Maestro should build a recognisable requinto/segunda–bongó–güira–bass dialogue before adding R&B colours. For reggaeton sub-bass or techno, a controlled synth envelope may be better than downloading an acoustic loop. For cumbia or salsa percussion, a well-recorded licensed one-shot may significantly improve stylistic identity.
 
-The [genre palettes](plugins/music-composition/skills/mc-tidal-studio/references/genre-sound-palettes.md) cover salsa, timba, bachata, merengue, reggaeton, Dominican dembow, cumbia, regional Mexican, corridos tumbados, samba, pagode, bossa, MPB, Brazilian funk, forró, tango, Latin jazz, Andean/Afro-Peruvian traditions, plus electronic, jazz, hip-hop, rock and cinematic music. For the full lineage and artist case studies, pair this skill with a genre-specific \`mc-style-*\` skill.
+The [genre palettes](plugins/music-composition/skills/mc-tidal-studio/references/genre-sound-palettes.md) cover salsa, timba, bachata, merengue, reggaeton, Dominican dembow, cumbia, regional Mexican, corridos tumbados, samba, pagode, bossa, MPB, Brazilian funk, forró, tango, Latin jazz, Andean/Afro-Peruvian traditions, plus electronic, jazz, hip-hop, rock and cinematic music. For the full lineage and artist case studies, pair this skill with a genre-specific `mc-style-*` skill.
 
 ### Downloads and synthesizers: two different capabilities
 
-- **Audio samples:** Maestro can already request them using the existing \`descargar\` JSON fields (\`nombre\`, \`busqueda\`, \`tipo\`, \`duracion\`, \`alternativa\`, \`por_que\`). The *app* handles catalog search, license/credits, asking permission for large downloads, loading into SuperDirt and fallbacks. The skill itself performs **no downloads**.
-- **Synthesizers:** Studio already loads suitable SuperDirt synths and its own [\`studio-synths.scd\`](https://github.com/vsalesa/tidal-studio/blob/main/supercollider/studio-synths.scd). The skill chooses musical synthesis characteristics and a **runtime-confirmed working** instrument. **It cannot download, vet, compile or install third-party SuperCollider SynthDefs**: no such automatic host workflow exists yet.
+- **Audio samples:** Maestro can already request them using the existing `descargar` JSON fields (`nombre`, `busqueda`, `tipo`, `duracion`, `alternativa`, `por_que`). The *app* handles catalog search, license/credits, asking permission for large downloads, loading into SuperDirt and fallbacks. The skill itself performs **no downloads**.
+- **Synthesizers:** Studio already loads suitable SuperDirt synths and its own [`studio-synths.scd`](https://github.com/vsalesa/tidal-studio/blob/main/supercollider/studio-synths.scd). The skill chooses musical synthesis characteristics and a **runtime-confirmed working** instrument. **It cannot download, vet, compile or install third-party SuperCollider SynthDefs**: no such automatic host workflow exists yet.
 
 ### Real examples to ask Maestro
 
@@ -349,13 +349,13 @@ The [genre palettes](plugins/music-composition/skills/mc-tidal-studio/references
 - "Write a melodic techno build with an original hook, evolving synthesizer timbre and an intentional breakdown."
 - "Make three *musically different* cumbia variations, preserving the Colombian bass groove while exploring distinct lead instruments."
 
-**Routing:** Maestro → \`mc-tidal-studio\` + the most relevant genre or craft skill → compatible \`cambios\`, \`variantes\`, optional \`descargar\` → playback and revision. A full ARR-SPEC is optional planning material; Studio does **not** directly accept its YAML as changes. Consult the [Maestro compatibility guide](plugins/music-composition/skills/mc-tidal-studio/references/maestro-contract.md).
+**Routing:** Maestro → `mc-tidal-studio` + the most relevant genre or craft skill → compatible `cambios`, `variantes`, optional `descargar` → playback and revision. A full ARR-SPEC is optional planning material; Studio does **not** directly accept its YAML as changes. Consult the [Maestro compatibility guide](plugins/music-composition/skills/mc-tidal-studio/references/maestro-contract.md).
 
 ### Installing and updating in Tidal Studio
 
-The application already lists \`https://github.com/vsalesa/music-composition-skills\` as a default plugin. **New installations** can download v1.2.0, but **previously installed copies do not automatically update** just because GitHub changed (the studio tracks completed default installs). Open Studio's **Plugins** panel, remove the old Music Composition plugin and reinstall from the repository URL, then check that \`mc-tidal-studio\` is enabled in the **Skills** panel. Keep the agent's skill context budget in mind: Studio currently loads up to **two unpinned skills** per response and limits each loaded skill/reference to 9,000 characters (24,000 total).
+The application already lists `https://github.com/vsalesa/music-composition-skills` as a default plugin. **New installations** can download v1.2.0, but **previously installed copies do not automatically update** just because GitHub changed (the studio tracks completed default installs). Open Studio's **Plugins** panel, remove the old Music Composition plugin and reinstall from the repository URL, then check that `mc-tidal-studio` is enabled in the **Skills** panel. Keep the agent's skill context budget in mind: Studio currently loads up to **two unpinned skills** per response and limits each loaded skill/reference to 9,000 characters (24,000 total).
 
-**Verified scope:** this adds a skill and documentation to \`music-composition-skills\`, **not** a new Tidal Studio server feature. There is no automatic SynthDef installation, guaranteed acoustic sound fidelity, or comprehensive playback test. The existing studio's code/JSON validation and actual sound availability remain authoritative.
+**Verified scope:** this adds a skill and documentation to `music-composition-skills`, **not** a new Tidal Studio server feature. There is no automatic SynthDef installation, guaranteed acoustic sound fidelity, or comprehensive playback test. The existing studio's code/JSON validation and actual sound availability remain authoritative.
 
 
 ## Latin music in v1.1.0: all 21 subskills

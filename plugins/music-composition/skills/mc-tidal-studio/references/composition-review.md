@@ -19,7 +19,7 @@ Assess **identity, hook, harmony, groove, instrument roles, development, timbre 
 
 ## Three meaningful variation modes
 
-For a creative request where the app enables \`variantes\` (normally 3–4 choices), compare:
+For a creative request where the app enables `variantes` (normally 3–4 choices), compare:
 1. **Fidelity:** reinforce the genre's most essential rhythmic/lead instrument. Often subtract a part.
 2. **Development:** keep the core motif but add a call-response or harmonically motivated second section.
 3. **Contrast:** introduce a purposeful bridge/drop, borrowing another genre's timbre/voicing while keeping song identity.
@@ -29,7 +29,7 @@ Do not make "more reverb", "less reverb" and "slightly different reverb" three v
 
 ## Quality before resources
 
-**Bad melody + expensive synth = still a bad melody.** First decide if the weakness is pitch contour, rhythm, harmony, phrasing, density or instrument choice. If sound selection truly is the bottleneck, define the sound's attack, decay, tone and articulation before browsing. The \`descargar\` interface cannot replace missing compositional purpose.
+**Bad melody + expensive synth = still a bad melody.** First decide if the weakness is pitch contour, rhythm, harmony, phrasing, density or instrument choice. If sound selection truly is the bottleneck, define the sound's attack, decay, tone and articulation before browsing. The `descargar` interface cannot replace missing compositional purpose.
 
 ## Example: a salsa chorus feels weak
 

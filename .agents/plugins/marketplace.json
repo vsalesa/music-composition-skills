@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "music-composition",
-      "description": "51 child skills plus one parent entry skill in six layers: workflow and ARR-SPEC; general composition and arrangement craft; original style layers plus 21 Latin genre subskills (salsa, timba, bachata, merengue, reggaeton, dembow, cumbia, regional Mexican, corridos tumbados, Brazilian, tango, Latin jazz and more), a Latin fusion engine, execution and corpus. Includes artist innovation studies, historical lineage and contemporary crossovers. Plain text; output in the question language.",
+      "description": "52 child skills plus one parent: song composition, ARR-SPEC and expert genre arranging including 21 Latin styles, a fusion engine, and mc-tidal-studio for quality-first composition and instrument, synth and sample choice in Tidal Studio Maestro.",
       "source": "./plugins/music-composition",
       "policy": {
         "installation": "AVAILABLE",

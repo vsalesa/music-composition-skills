@@ -287,7 +287,7 @@ Each one carries a **transfer table**: what this style can lend to others, and w
 
 ## What ships in the package
 
-Text only: 51 skills, the reference files that hold the long tables, and six specification files inside `mc-workflow`:
+Text only: 51 child skills plus one parent entry skill, the reference files that hold the long tables, and six specification files inside `mc-workflow`:
 
 | File | What it is |
 |---|---|
@@ -301,7 +301,7 @@ Text only: 51 skills, the reference files that hold the long tables, and six spe
 
 ### Latin music expansion (v1.1.0)
 
-Latin composition now uses a *router plus focused genre skills*. `mc-style-latin` chooses which child owns the traditional and contemporary language; `mc-style-latin-fusion` handles deliberate cross-genre work with explicit section/role ownership. The release includes **21 new genre subskills** and a fusion skill (22 additional skills, 51 total), with an artist-innovation/fusion reference per genre (except the fusion engine, which is a standalone skill). It explicitly distinguishes salsa/timba, Dominican bachata/merengue/dembow, Puerto Rican bomba/plena and reggaeton, Colombian and regional cumbia, regional mexicano and corridos tumbados, Brazilian samba/bossa/MPB/funk/forró, tango, Latin jazz, vallenato, and Andean/Afro-Peruvian scenes. New skill titles and artists are **analytical guidelines**, not transcriptions; a source recording or score is required for exact performance claims.
+Latin composition now uses a *router plus focused genre skills*. `mc-style-latin` chooses which child owns the traditional and contemporary language; `mc-style-latin-fusion` handles deliberate cross-genre work with explicit section/role ownership. The release includes **21 new genre subskills** and a fusion skill (22 additional skills, 51 child skills plus one parent (52 SKILL.md files) total), with an artist-innovation/fusion reference per genre (except the fusion engine, which is a standalone skill). It explicitly distinguishes salsa/timba, Dominican bachata/merengue/dembow, Puerto Rican bomba/plena and reggaeton, Colombian and regional cumbia, regional mexicano and corridos tumbados, Brazilian samba/bossa/MPB/funk/forró, tango, Latin jazz, vallenato, and Andean/Afro-Peruvian scenes. New skill titles and artists are **analytical guidelines**, not transcriptions; a source recording or score is required for exact performance claims.
 
 **Routing:** `mc-workflow` → `mc-style-latin` → `mc-style-latin-bachata` (or chosen branch) → `mc-style-latin-fusion` when combining styles → `mc-render-compile`.
 

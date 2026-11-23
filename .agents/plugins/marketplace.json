@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "music-composition",
-      "description": "29 skills in six layers: workflow and the ARR-SPEC contract; general craft (melody, harmony, progressions, modulation, rhythm, form, counterpoint, motivic development); arrangement craft (architecture, orchestration including Chinese folk orchestra, texture, rhythm section, sound design, vocal direction, mix intent); nine style layers (J-pop, city pop & R&B, jazz, Latin, Mandarin pop, EDM, rock band, cinematic, hip-hop) each with a transfer table and declared fusion ownership; execution (compile to Suno/YuE2/MIDI, symbolic score, AI-tell audit); and a corpus layer of measured recordings. Plain text, no tooling required; answers in the language you ask in",
+      "description": "51 child skills plus one parent entry skill in six layers: workflow and ARR-SPEC; general composition and arrangement craft; original style layers plus 21 Latin genre subskills (salsa, timba, bachata, merengue, reggaeton, dembow, cumbia, regional Mexican, corridos tumbados, Brazilian, tango, Latin jazz and more), a Latin fusion engine, execution and corpus. Includes artist innovation studies, historical lineage and contemporary crossovers. Plain text; output in the question language.",
       "source": "./plugins/music-composition",
       "policy": {
         "installation": "AVAILABLE",

@@ -1,6 +1,6 @@
 ---
 name: music-composition
-description: Parent entry point for the whole music composition library (29 mc-* skills). Use for any request to compose, arrange, orchestrate, produce or critique popular music - writing a song from a brief, arranging for a band or orchestra, choosing chords or modulations, designing a vocal, turning an idea into a Suno / YuE2 / MIDI prompt, or auditing generated music. It indexes every child skill by layer and says which to load for which task, so none has to be added one by one. Keywords - song, arrangement, ARR-SPEC, composition, orchestration, harmony, melody, mix intent, Suno, style.
+description: Parent entry point for the whole music composition library (51 mc-* skills). Use for any request to compose, arrange, orchestrate, produce or critique popular music - writing a song from a brief, arranging for a band or orchestra, choosing chords or modulations, designing a vocal, turning an idea into a Suno / YuE2 / MIDI prompt, or auditing generated music. It indexes every child skill by layer and says which to load for which task, so none has to be added one by one. Keywords - song, arrangement, ARR-SPEC, composition, orchestration, harmony, melody, mix intent, Suno, style.
 ---
 
 # Music Composition: parent skill
@@ -52,12 +52,41 @@ All child skills live next to this one under `skills/`, in directories named aft
 | `mc-style-jpop` | J-pop, chorus-centred design |
 | `mc-style-citypop-rnb` | City pop and R&B |
 | `mc-style-jazz` | Jazz harmony and practice |
-| `mc-style-latin` | Afro-Cuban, Brazilian and Caribbean styles (kept separate) |
+| `mc-style-latin` | Latin genre router: Afro-Caribbean, Brazil, Mexico, Colombia, tango, urban styles and contemporary fusion |
 | `mc-style-chinese-pop` | Mandarin and Cantonese pop |
 | `mc-style-edm` | EDM and club music |
 | `mc-style-rock-band` | Rock and band-format music |
 | `mc-style-cinematic` | Cinematic and hybrid orchestral |
 | `mc-style-hiphop` | Hip-hop and trap |
+
+
+### Latin genre subskills (L3 — route via `mc-style-latin`)
+| Skill | Use it for |
+|---|---|
+| `mc-style-latin-salsa` | salsa composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-timba` | timba composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-bachata` | bachata composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-merengue` | merengue composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-reggaeton` | reggaeton composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-dembow` | dembow composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-cumbia` | cumbia composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-regional-mexicano` | regional mexicano composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-corridos-tumbados` | corridos tumbados composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-samba-pagode` | samba pagode composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-bossa-mpb` | bossa mpb composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-funk-brasileiro` | funk brasileiro composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-forro-piseiro` | forro piseiro composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-tango` | tango composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-bolero-pop` | bolero pop composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-vallenato` | vallenato composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-bomba-plena` | bomba plena composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-latin-jazz` | latin jazz composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-andino-afroperuano` | andino afroperuano composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-caribbean-soca-reggae` | caribbean soca reggae composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-cumbia-villera-sonidera` | cumbia villera sonidera composition, contemporary artist lenses and fusion boundaries |
+| `mc-style-latin-fusion` | fusion composition, contemporary artist lenses and fusion boundaries |
+
+Do not load every Latin child for a single brief; select the branch and load the fusion skill only when more than one tradition is intentionally combined.
 
 When two styles are mixed, `mc-workflow` and the style skills' fusion-ownership rules decide which style owns which dimension.
 

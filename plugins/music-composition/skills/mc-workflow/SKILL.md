@@ -90,7 +90,7 @@ If a long gap separates the two listens, guard against the opposite bias: under 
 | How to build synth timbres | `mc-sound-design` |
 | How to sing the vocal, how to add harmony | `mc-vocal-direction` |
 | How to place the soundstage, who yields to whom | `mc-mix-intent` |
-| How to approach this style | `mc-style-*` (L3) |
+| How to approach this style | `mc-style-*` (L3); for Latin American styles read `mc-style-latin` router then the selected `mc-style-latin-*` child |
 | How the spec sheet becomes a prompt | `mc-render-compile` |
 | Producing ABC / MIDI / MusicXML | `mc-symbolic-score` |
 | Where the generated output sounds like AI | `mc-ai-tell-audit` |
@@ -108,6 +108,9 @@ If a long gap separates the two listens, guard against the opposite bias: under 
 | this library ⇄ lyricists | **everything about the words belongs to the lyricist**, including word-to-melody alignment (syllable splitting, extra syllables, inverted syllables, xieyin). That is the words' own workflow; this library reads the same song's lyrics (`meta.upstream.lyrics`); for the shared six-field ownership of who decides and who reads, see §5.1 |
 
 ### 2.4 ★ Style blending: not an even mix, but signing off by dimension
+
+**Latin substyle routing:** `mc-style-latin` is an L3 index to specific genre skills. When salsa, bachata, dembow, cumbia, samba, regional mexicano or other Latin idioms are requested, read the corresponding `mc-style-latin-*` child. For deliberate Latin crossover read `mc-style-latin-fusion` as well. Historical Afro-Cuban and Brazilian drum notes do not override regional substyles. The existing global `meta.style_layers[].owns` contract is not section-local: state deliberate sectional handoffs in `form[].note`, `form[].events` and `meta.fusion_note` instead of adding new schema keys.
+
 
 > ★ **Boundaries are a division of labor, not a prohibition.** The purpose of isolation is to make sure every choice has someone signing it off, not to lock a style down. When writing a J-Pop spec you may borrow a city-pop ura-chord (backdoor chord) in passing, or when writing a Chinese-style piece the bass may take an 808 from hip-hop. As long as you write one sentence in `style_layers` / `fusion_note` explaining why, that is a legitimate blend; **slight bleed is entirely acceptable**. What really must be guarded against is "nobody chose it, so it defaulted to that."
 

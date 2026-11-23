@@ -81,7 +81,7 @@ codex plugin marketplace add jtydhr88/music-composition-skills
 
 Or copy the same files to `~/.agents/skills/` (personal) or `.agents/skills/` (project). The same 29 skill files are shipped through both plugin directories, with no duplication and no rewriting.
 
-**One entry skill.** `music-composition` is a parent skill that indexes all 29 child skills by layer and routes to them (it points to `mc-workflow` as the start). Installing the plugin, or copying the whole `skills/` directory, gives you all of them at once; you never need to add skills one by one.
+**One entry skill.** `music-composition` is a parent skill that indexes all 51 child skills by layer and routes to them (it points to `mc-workflow` as the start). Installing the plugin, or copying the whole `skills/` directory, gives you all of them at once; you never need to add skills one by one.
 
 #### Verify
 
@@ -264,7 +264,7 @@ Each one carries a **transfer table**: what this style can lend to others, and w
 | `mc-style-jpop` | Chorus-centred design discipline, 落ちサビ, the section-contrast rules | Japanese arranging practice |
 | `mc-style-citypop-rnb` | Borrowed jazz harmony over pop form plus a specific timbre set; the worked example spec is this style | measured corpus, L1 harmony |
 | `mc-style-jazz` | What is jazz-specific: head form, standards, comping, modal thinking | Levine, Valerio, 爵士和声 |
-| `mc-style-latin` | Latin as three families that must not be blended (Afro-Cuban, Brazilian, Caribbean): the clave grammar (son/rumba, 2-3/3-2), who holds the grid, where bossa's lightness comes from, the percussion register discipline, and a transfer table | The Drummer's Bible, Groove Essentials, Fujitani, Jazz Guitar Groove |
+| `mc-style-latin` | Router for 21 specialized Latin style skills, from Afro-Caribbean rhythms to regional Mexican, Brazil, tango and contemporary urban/fusion; preserves legacy rhythm references | Drummer's Bible, Groove Essentials, selected genre studies and ongoing recording analysis |
 | `mc-style-chinese-pop` | Mandarin and Cantonese pop: what the tone system does to arrangement, the Cantonese layer, era differences | 同一首歌 corpus, 黄志华 |
 | `mc-style-edm` | Form built on layer addition and subtraction: build, drop, tension devices | 竹內一弘, 野崎, measured corpus |
 | `mc-style-rock-band` | What changes when five people in a room must play it: the roster as a hard constraint, riff as primary hook (Rooksby's 30 riff types, the 3+1 repetition pattern, riff versus vocal), twin guitars, drop D | Rooksby *Riffs*, measured corpus |
@@ -287,7 +287,7 @@ Each one carries a **transfer table**: what this style can lend to others, and w
 
 ## What ships in the package
 
-Text only: 29 skills, the reference files that hold the long tables, and six specification files inside `mc-workflow`:
+Text only: 51 skills, the reference files that hold the long tables, and six specification files inside `mc-workflow`:
 
 | File | What it is |
 |---|---|
@@ -297,6 +297,15 @@ Text only: 29 skills, the reference files that hold the long tables, and six spe
 | Example 1: city pop | A complete worked spec, all twenty checks passing |
 | Example 2: fusion | Rap over a Chinese-style base, with the ownership table |
 | Counter-example | What a model writes with no guidance, and which eight checks it fails |
+
+
+### Latin music expansion (v1.1.0)
+
+Latin composition now uses a *router plus focused genre skills*. `mc-style-latin` chooses which child owns the traditional and contemporary language; `mc-style-latin-fusion` handles deliberate cross-genre work with explicit section/role ownership. The release includes **21 new genre subskills** and a fusion skill (22 additional skills, 51 total), with an artist-innovation/fusion reference per genre (except the fusion engine, which is a standalone skill). It explicitly distinguishes salsa/timba, Dominican bachata/merengue/dembow, Puerto Rican bomba/plena and reggaeton, Colombian and regional cumbia, regional mexicano and corridos tumbados, Brazilian samba/bossa/MPB/funk/forró, tango, Latin jazz, vallenato, and Andean/Afro-Peruvian scenes. New skill titles and artists are **analytical guidelines**, not transcriptions; a source recording or score is required for exact performance claims.
+
+**Routing:** `mc-workflow` → `mc-style-latin` → `mc-style-latin-bachata` (or chosen branch) → `mc-style-latin-fusion` when combining styles → `mc-render-compile`.
+
+**Compatibility:** child skills obey ARR-SPEC v1.0. New keys are not introduced: genre decisions use valid `meta.style_layer`, `meta.style_layers`, `meta.fusion_note`, and existing `form[].note` and `arrangement.*` fields. The old Latin essay remains under `mc-style-latin/references/legacy-style-essay.md` and may contain now-superseded prescriptions. The pre-expansion checkpoint is branch `backup/v1.0.0-before-latin-expansion` at commit `b20a9a35a04cb436ac317f0404afda93b9540c49`.
 
 ## Source books
 

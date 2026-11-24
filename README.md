@@ -8,7 +8,7 @@ English · [中文版](README_ZH.md) · [日本語](README_JA.md) · [한국어]
 
 Both agents share the same files: install once and it works in both.
 
-[Tidal Studio & Maestro](#tidal-studio-integration-v120) · [Latin expansion](#latin-music-in-v110-all-21-subskills) · [Install](#install)
+[Professional Latin arranger v1.3](#professional-arranger-in-v130) · [Tidal Studio & Maestro](#tidal-studio-integration-v130) · [Latin expansion](#latin-music-in-v110-all-21-subskills) · [Install](#install)
 
 **The output is a spec sheet.** Ask for a song and the agent fills in an ARR-SPEC (arrangement spec sheet): key, tempo, bar-accurate section map, chord letters and roman numerals, who enters and leaves when, the energy curve, vocal delivery, mix intent. It then compiles that one document into a Suno prompt, a score for YuE2, or a note file that loads into music software. The same document is what you check the result against. The whole design comes down to **one artifact, four uses**: handoff, controlled A/B, compile source, acceptance baseline.
 
@@ -46,6 +46,34 @@ So what this library hands over is the decisions themselves: which bar the guita
 What that buys you is the part prompt engineering cannot reach. A prompt is a sentence, and you cannot check a sentence field by field. A spec sheet can be compared against what came back, changed one field at a time, and re-run for a controlled comparison. Every decision in it carries a reason and a source, so six months later you can still say why the second chorus is arranged the way it is.
 
 The model stays the performer and the studio. This is the arranger's chart handed to it.
+
+## Professional arranger in v1.3.0
+
+Version **1.3.0** turns `mc-tidal-studio` from a general checklist into a **genre-specific professional arranger knowledge layer**. It adds **11 in-depth reference files** (while preserving the earlier four), covering Dominican merengue, salsa/timba, bachata/cumbia, Brazilian/urban music, melody and harmony, groove, instrumental performance, musical form, sound direction, objective checks, source quality and Tidal Studio's actual generator contract.
+
+**Motivation:** The deterministic `server/midigen.py` currently selects from a small number of rhythmic/accompaniment templates and uses nearby scale/chord notes for melodies. For genres where **interaction** among tambora, güira, bass, piano, guitars and horns defines the style, this is not a substitute for arranging. The `style_profiles.json` merengue summary contains only three MIDI songs; it is useful evidence but not representative of the whole tradition. More samples or a more sophisticated synth will not correct a weak melody or a mismatched rhythmic section.
+
+### Deep technical and musical references
+
+| Reference | Professional capability |
+|---|---|
+| [Merengue](plugins/music-composition/skills/mc-tidal-studio/references/genre-merengue-professional.md) | Típico / orquesta / electronic branches, two-sided tambora, scraping articulations, bass anticipation, brass mambo and section writing |
+| [Salsa & timba](plugins/music-composition/skills/mc-tidal-studio/references/genre-salsa-timba-professional.md) | Two-bar clave orientation, bass/piano/conga interaction, montuno voice leading and coordinated timba gear changes |
+| [Bachata & cumbia](plugins/music-composition/skills/mc-tidal-studio/references/genre-bachata-cumbia-professional.md) | Requinto/segunda role separation and regional cumbia variants rather than one generic Latin preset |
+| [Brazil & Latin urban](plugins/music-composition/skills/mc-tidal-studio/references/genre-brazil-urban-professional.md) | Samba, pagode, bossa, forró, piseiro, reggaeton, Dominican dembow and Brazilian funk distinctions |
+| [Original melody & harmony](plugins/music-composition/skills/mc-tidal-studio/references/professional-melody-harmony.md) | Motifs, memorable phrase design, chord-target notes, voice leading, answers and idiomatic counterlines |
+| [Groove & human performance](plugins/music-composition/skills/mc-tidal-studio/references/professional-rhythm-performance.md) | Sixteenth-note grids, role-specific accent and articulation, precise meter vs microtiming |
+| [Arrangement form](plugins/music-composition/skills/mc-tidal-studio/references/professional-arrangement-form.md) | Section grammar, musical arc, subtraction, meaningful transitions, fixed-rhythm/regenerate-melody courses |
+| [Sound direction](plugins/music-composition/skills/mc-tidal-studio/references/professional-sound-direction.md) | Detailed acoustic/multisample/synth decisions and new Studio instrument-library / optional synth-engine knowledge |
+| [Review and tests](plugins/music-composition/skills/mc-tidal-studio/references/professional-critique-and-tests.md) | Structural, editorial and audible gates; genre acceptance fixtures and regression plan |
+| [Evidence and provenance](plugins/music-composition/skills/mc-tidal-studio/references/professional-research-evidence.md) | Berklee, authorized salsa/timba pedagogy, Smithsonian resources, genre sample-size and licensing cautions |
+| [Host generator contract](plugins/music-composition/skills/mc-tidal-studio/references/professional-generator-contract.md) | Actual Maestro/Studio features vs proposed musical-plan compiler, melody regeneration, locked tracks and validation |
+
+**Why separate documents instead of one giant SKILL.md?** Tidal Studio currently caps each skill/reference file at 9,000 characters and its total prompt skills budget at 24,000 characters. Its loader picks one relevant reference per skill; the skill entrypoint therefore remains compact and routes to the best deep specialist. Reading every document at once would cause truncation.
+
+**Audited inspiration (not copied files):** [sb-dev/music-production-skills](https://github.com/sb-dev/music-production-skills) for composition/review lifecycle; [T-Rzeznik/reaper-composer](https://github.com/T-Rzeznik/reaper-composer) for motif development and genre-specific agent layout; [tomascabralh/prod-skills](https://github.com/tomascabralh/prod-skills) for rhythm and self-review test practice; [auto-duan/supercollider-skill](https://github.com/auto-duan/supercollider-skill) for synthesis/runtime distinctions. Musical source hierarchy and citation links live in the [evidence reference](plugins/music-composition/skills/mc-tidal-studio/references/professional-research-evidence.md).
+
+**Current boundary:** this release adds expert decision support and documentation, **not** new sound-rendering or MIDI generation code. To achieve a measurable jump in sound quality, implement constrained melody regeneration, true genre-specific arrangement, phrase/section state, instrument articulation support and actual playback-based A/B evaluation in Tidal Studio. See the [technical audit and prioritized roadmap](docs/TIDAL_STUDIO_PRO_AUDIT.md).
 
 ## What's new in v1.2.0: Tidal Studio
 
@@ -318,7 +346,7 @@ Text only: 52 child skills plus one parent entry skill, the reference files that
 | Counter-example | What a model writes with no guidance, and which eight checks it fails |
 
 
-## Tidal Studio integration (v1.2.0)
+## Tidal Studio integration (v1.3.0)
 
 [Tidal Studio](https://github.com/vsalesa/tidal-studio) already runs TidalCycles + SuperDirt + SuperCollider, provides a music-teaching AI named **Maestro**, plays auditionable options, and has a sound library with downloaded sample packs, optional Freesound and built-in synths. The new [mc-tidal-studio skill](plugins/music-composition/skills/mc-tidal-studio/SKILL.md) gives Maestro *expert musical judgment* for making the **best possible original composition for the selected style**.
 
@@ -340,7 +368,7 @@ The [genre palettes](plugins/music-composition/skills/mc-tidal-studio/references
 ### Downloads and synthesizers: two different capabilities
 
 - **Audio samples:** Maestro can already request them using the existing `descargar` JSON fields (`nombre`, `busqueda`, `tipo`, `duracion`, `alternativa`, `por_que`). The *app* handles catalog search, license/credits, asking permission for large downloads, loading into SuperDirt and fallbacks. The skill itself performs **no downloads**.
-- **Synthesizers:** Studio already loads suitable SuperDirt synths and its own [`studio-synths.scd`](https://github.com/vsalesa/tidal-studio/blob/main/supercollider/studio-synths.scd). The skill chooses musical synthesis characteristics and a **runtime-confirmed working** instrument. **It cannot download, vet, compile or install third-party SuperCollider SynthDefs**: no such automatic host workflow exists yet.
+- **Synthesizers:** Studio loads suitable SuperDirt synths and its own [`studio-synths.scd`](https://github.com/vsalesa/tidal-studio/blob/main/supercollider/studio-synths.scd), and newer releases expose optional engines (sc3-plugins, Mi-UGens, VSTPlugin and Surge XT). The skill chooses musical synthesis characteristics and a **runtime-confirmed working** instrument. A skill cannot itself vet or execute arbitrary downloaded SuperCollider SynthDefs; such code installation is distinct from existing vetted engine installers.
 
 ### Real examples to ask Maestro
 
@@ -353,7 +381,7 @@ The [genre palettes](plugins/music-composition/skills/mc-tidal-studio/references
 
 ### Installing and updating in Tidal Studio
 
-The application already lists `https://github.com/vsalesa/music-composition-skills` as a default plugin. **New installations** can download v1.2.0, but **previously installed copies do not automatically update** just because GitHub changed (the studio tracks completed default installs). Open Studio's **Plugins** panel, remove the old Music Composition plugin and reinstall from the repository URL, then check that `mc-tidal-studio` is enabled in the **Skills** panel. Keep the agent's skill context budget in mind: Studio currently loads up to **two unpinned skills** per response and limits each loaded skill/reference to 9,000 characters (24,000 total).
+The application already lists `https://github.com/vsalesa/music-composition-skills` as a default plugin. **New installations** can download the latest plugin. Recent Tidal Studio versions also support checking/updating plugins and configurable automatic updates: use the **Plugins** panel to update the existing Music Composition plugin, or enable auto-updates where available. Confirm that `mc-tidal-studio` is enabled in the **Skills** panel; older Studio versions may still require manual reinstallation. Keep the agent's skill context budget in mind: Studio currently loads up to **two unpinned skills** per response and limits each loaded skill/reference to 9,000 characters (24,000 total).
 
 **Verified scope:** this adds a skill and documentation to `music-composition-skills`, **not** a new Tidal Studio server feature. There is no automatic SynthDef installation, guaranteed acoustic sound fidelity, or comprehensive playback test. The existing studio's code/JSON validation and actual sound availability remain authoritative.
 

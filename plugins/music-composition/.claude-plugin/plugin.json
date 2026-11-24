@@ -1,7 +1,7 @@
 {
   "name": "music-composition",
-  "description": "52 child skills plus one parent: song composition, ARR-SPEC and expert genre arranging including 21 Latin styles, a fusion engine, and mc-tidal-studio for quality-first composition and instrument, synth and sample choice in Tidal Studio Maestro.",
-  "version": "1.2.0",
+  "description": "52 child skills plus one parent: arrangement, ARR-SPEC, 21 Latin styles and fusion, plus mc-tidal-studio v1.3 with deep professional merengue/salsa/timba/bachata/cumbia/Brazilian/urban arranging, motif and harmony craft, instrument/sample/synth selection, QA and Maestro integration.",
+  "version": "1.3.0",
   "author": {
     "name": "terry"
   },
@@ -19,7 +19,14 @@
     "supercollider",
     "superdirt",
     "samples",
-    "synthesizers"
+    "synthesizers",
+    "producer",
+    "merengue",
+    "latin",
+    "timba",
+    "bachata",
+    "groove",
+    "music-quality"
   ],
   "skills": "./skills"
 }
